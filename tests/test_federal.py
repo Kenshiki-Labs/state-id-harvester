@@ -7,12 +7,36 @@ from pathlib import Path
 
 import pytest
 
-from state_id_harvester.cli import harvest_options, parser, selected_collections
+from state_id_harvester.cli import (
+    harvest_options,
+    parser,
+    resolve_harvest_paths,
+    selected_collections,
+)
 from state_id_harvester.extract import extract
 from state_id_harvester.library import coverage, federal_coverage
 from state_id_harvester.models import Manifest, Options, Source
 from state_id_harvester.paths import managed_path
 from state_id_harvester.seeds import FEDERAL_CODE, STATE_DOMAINS, collection_pdf_seeds
+
+
+def test_federal_reviews_default_is_isolated_and_explicit_path_is_preserved(tmp_path: Path) -> None:
+    federal = parser().parse_args(["harvest", "--federal", "--output", str(tmp_path / "federal")])
+    state = parser().parse_args(["harvest", "--states", "WA"])
+    explicit = parser().parse_args(
+        [
+            "harvest",
+            "--federal",
+            "--reviews",
+            str(tmp_path / "chosen-reviews.json"),
+        ]
+    )
+    for args in (federal, state, explicit):
+        resolve_harvest_paths(args)
+    assert federal.reviews == tmp_path / "federal" / "reviews.json"
+    assert federal.reviews != state.reviews
+    assert state.reviews == Path("reviews.json").resolve()
+    assert explicit.reviews == tmp_path / "chosen-reviews.json"
 
 
 def test_federal_is_separate_from_the_51_states_and_format_is_unclassified() -> None:

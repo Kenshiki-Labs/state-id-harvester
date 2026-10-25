@@ -29,7 +29,7 @@ def parser() -> argparse.ArgumentParser:
         "--federal", action="store_true", help="Separate US_FED collection; no ID-1 normalization"
     )
     run.add_argument("--output", type=managed_path)
-    run.add_argument("--reviews", type=managed_path, default="reviews.json")
+    run.add_argument("--reviews", type=managed_path)
     run.add_argument(
         "--refresh", action="store_true", help="Refetch sources; unchanged bytes reuse extraction"
     )
@@ -90,11 +90,17 @@ def locked_harvest(args: argparse.Namespace, states: list[str], options: Options
         return asyncio.run(harvest(states, args.output, options, args.reviews))
 
 
-def run_harvest(args: argparse.Namespace) -> None:
-    states = selected_collections(args)
+def resolve_harvest_paths(args: argparse.Namespace) -> None:
     args.output = managed_path(args.output or ("output/federal" if args.federal else "output"))
     if args.federal and args.output == managed_path("output"):
         raise ValueError("Federal collection requires a separate output directory")
+    default_reviews = args.output / "reviews.json" if args.federal else "reviews.json"
+    args.reviews = managed_path(args.reviews or default_reviews)
+
+
+def run_harvest(args: argparse.Namespace) -> None:
+    states = selected_collections(args)
+    resolve_harvest_paths(args)
     manifest = locked_harvest(args, states, harvest_options(args))
     rows = [federal_coverage(manifest, [])] if args.federal else coverage(manifest, [])
     requested = [row for row in rows if row["jurisdiction"] in states]
