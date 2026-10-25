@@ -7,6 +7,7 @@ import json
 import logging
 import os
 import sys
+from pathlib import Path
 
 from .catalog import export_catalog
 from .library import coverage, federal_coverage, read_manifest, verify, write_reports
@@ -47,6 +48,21 @@ def parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Fail unless each requested collection has a parsed source",
     )
+    images = commands.add_parser(
+        "harvest-images", help="Independent private HTML gallery originals"
+    )
+    image_selection = images.add_mutually_exclusive_group()
+    image_selection.add_argument("--all", action="store_true", help="All supplied gallery leads")
+    image_selection.add_argument(
+        "--states", nargs="+", choices=sorted([*STATE_DOMAINS, FEDERAL_CODE])
+    )
+    images.add_argument("--output", type=managed_path, default="output/gallery")
+    images.add_argument("--import-manifest", type=Path, action="append", default=[])
+    images.add_argument("--max-pages", type=int, default=40)
+    images.add_argument("--max-assets", type=int, default=200)
+    images.add_argument("--max-pixels", type=int, default=20_000_000)
+    images.add_argument("--max-total-bytes", type=int, default=256_000_000)
+    images.add_argument("--concurrency", type=int, default=2)
     for command, help_text in (
         ("verify", "Rehash all manifest sources and assets"),
         ("report", "Regenerate the private contact sheet and coverage"),
@@ -137,6 +153,37 @@ def run_export(args: argparse.Namespace) -> None:
     )
 
 
+def run_gallery(args: argparse.Namespace) -> None:
+    from .gallery import GalleryOptions, harvest_images
+    from .gallery_seeds import HTML_GALLERY_SEEDS
+
+    collections = sorted(HTML_GALLERY_SEEDS) if args.all else sorted(set(args.states or []))
+    if not collections and not args.import_manifest:
+        raise ValueError("Choose --all, --states, or --import-manifest for gallery harvest")
+    output = managed_path(args.output)
+    if (
+        output == managed_path("output")
+        or (output / "manifest.json").exists()
+        and json.loads((output / "manifest.json").read_text()).get("track") != "html_gallery"
+    ):
+        raise ValueError("Gallery requires a separate private output directory")
+    options = GalleryOptions(
+        max_pages=args.max_pages,
+        max_assets=args.max_assets,
+        max_pixels=args.max_pixels,
+        max_total_bytes=args.max_total_bytes,
+        concurrency=args.concurrency,
+    )
+    output.mkdir(parents=True, exist_ok=True)
+    with (output / ".gallery.lock").open("w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        manifest = asyncio.run(harvest_images(collections, output, options, args.import_manifest))
+    print(
+        f"Gallery originals: {len(manifest['assets'])}; aliases: {len(manifest['aliases'])}; "
+        f"events: {len(manifest['events'])}; accepted cohorts: 0"
+    )
+
+
 def main() -> None:
     args_list = sys.argv[1:]
     if args_list and args_list[0].startswith("--") and args_list[0] not in ("--help", "-h"):
@@ -147,6 +194,7 @@ def main() -> None:
         args = parser().parse_args(args_list)
         handlers = {
             "harvest": run_harvest,
+            "harvest-images": run_gallery,
             "verify": run_verify,
             "report": run_report,
             "export-catalog": run_export,
