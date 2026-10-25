@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Browse reference library",
+      "type": "shell",
+      "command": ".venv/bin/python -m http.server 8765 --bind 127.0.0.1 --directory output",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Harvest all 51 jurisdictions",
+      "type": "shell",
+      "command": ".venv/bin/state-id-harvester harvest --all --ocr",
+      "problemMatcher": []
+    },
+    {
+      "label": "Verify library integrity",
+      "type": "shell",
+      "command": ".venv/bin/state-id-harvester verify",
+      "problemMatcher": []
+    }
+  ]
+}

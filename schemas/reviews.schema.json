@@ -1,0 +1,88 @@
+{
+  "$defs": {
+    "Review": {
+      "additionalProperties": false,
+      "properties": {
+        "asset_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Asset Sha256",
+          "type": "string"
+        },
+        "credential_type": {
+          "enum": [
+            "driver_license",
+            "identification_card",
+            "learner_permit"
+          ],
+          "title": "Credential Type",
+          "type": "string"
+        },
+        "depicted_jurisdiction": {
+          "pattern": "^[A-Z]{2}$",
+          "title": "Depicted Jurisdiction",
+          "type": "string"
+        },
+        "design_generation": {
+          "minLength": 1,
+          "title": "Design Generation",
+          "type": "string"
+        },
+        "evidence": {
+          "minLength": 1,
+          "title": "Evidence",
+          "type": "string"
+        },
+        "reviewed_at": {
+          "title": "Reviewed At",
+          "type": "string"
+        },
+        "reviewer": {
+          "minLength": 1,
+          "title": "Reviewer",
+          "type": "string"
+        },
+        "side": {
+          "enum": [
+            "front",
+            "back",
+            "both",
+            "detail"
+          ],
+          "title": "Side",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "accepted",
+            "rejected"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_sha256",
+        "asset_sha256",
+        "depicted_jurisdiction",
+        "credential_type",
+        "design_generation",
+        "side",
+        "status",
+        "reviewer",
+        "reviewed_at",
+        "evidence"
+      ],
+      "title": "Review",
+      "type": "object"
+    }
+  },
+  "items": {
+    "$ref": "#/$defs/Review"
+  },
+  "type": "array"
+}

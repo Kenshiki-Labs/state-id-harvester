@@ -1,0 +1,77 @@
+name: Build reference library
+on:
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: Refetch existing PDFs as well as discovering new sources
+        type: boolean
+        default: true
+  schedule:
+    - cron: '17 9 * * 1'
+permissions:
+  contents: read
+concurrency:
+  group: reference-library
+  cancel-in-progress: false
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+      BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install uv==0.13.5
+      - run: uv sync --locked
+      - name: Install local OCR
+        run: sudo apt-get update && sudo apt-get install -y tesseract-ocr
+      - name: Restore last published library
+        run: |
+          mkdir -p "$RUNNER_TEMP/previous"
+          if gh release view --json tagName > "$RUNNER_TEMP/last-release.json"; then
+            gh release download --pattern 'library-*.tar.gz' --pattern library-index.json --dir "$RUNNER_TEMP/previous"
+            python scripts/unpack_library.py "$RUNNER_TEMP/previous" output
+          fi
+      - name: Harvest all 51 jurisdictions
+        env:
+          REFRESH: ${{ github.event_name == 'schedule' || inputs.refresh }}
+        run: |
+          refresh_args=()
+          if [ "$REFRESH" = true ]; then refresh_args+=(--refresh); fi
+          uv run state-id-harvester harvest --all --workers 2 --ocr "${refresh_args[@]}"
+      - run: uv run state-id-harvester verify
+      - run: uv run state-id-harvester export-catalog
+      - run: uv run state-id-harvester publish-metadata
+      - name: Record searchable library metadata
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add library
+          if ! git diff --cached --quiet; then
+            git commit -m "Update public reference library catalog"
+            git push origin HEAD:main
+          fi
+      - name: Package immutable snapshot
+        run: uv run python scripts/package_library.py output dist
+      - name: Publish library release
+        run: |
+          tag="library-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          gh release create "$tag" dist/library-*.tar.gz dist/library-index.json dist/SHA256SUMS output/coverage.md output/pulse_state_catalog_v1.json --target "$GITHUB_SHA" --title "Reference library ${GITHUB_RUN_NUMBER}" --notes-file output/coverage.md
+      - name: Retain run ledger and coverage
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: reference-library-run-${{ github.run_id }}
+          path: |
+            output/coverage.*
+            output/events.json
+            output/runs/*/events.json
+          retention-days: 90

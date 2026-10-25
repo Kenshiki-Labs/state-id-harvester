@@ -1,0 +1,218 @@
+{
+  "$defs": {
+    "BoundaryCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "aspect_error": {
+          "title": "Aspect Error",
+          "type": "number"
+        },
+        "aspect_ratio": {
+          "title": "Aspect Ratio",
+          "type": "number"
+        },
+        "candidate_id": {
+          "title": "Candidate Id",
+          "type": "string"
+        },
+        "crop_path": {
+          "title": "Crop Path",
+          "type": "string"
+        },
+        "method": {
+          "enum": [
+            "image_placement",
+            "vector_rectangle",
+            "contour"
+          ],
+          "title": "Method",
+          "type": "string"
+        },
+        "metric_accuracy_mm": {
+          "default": null,
+          "title": "Metric Accuracy Mm",
+          "type": "null"
+        },
+        "nominal_height_mm": {
+          "default": 53.98,
+          "title": "Nominal Height Mm",
+          "type": "number"
+        },
+        "nominal_width_mm": {
+          "default": 85.6,
+          "title": "Nominal Width Mm",
+          "type": "number"
+        },
+        "page_bbox": {
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Page Bbox",
+          "type": "array"
+        },
+        "page_corners": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Page Corners",
+          "type": "array"
+        },
+        "page_number": {
+          "title": "Page Number",
+          "type": "integer"
+        },
+        "physical_calibration": {
+          "const": "none",
+          "default": "none",
+          "title": "Physical Calibration",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "unreviewed",
+          "default": "unreviewed",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "score": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Score",
+          "type": "number"
+        },
+        "text_regions": {
+          "items": {
+            "$ref": "#/$defs/NormalizedRegion"
+          },
+          "title": "Text Regions",
+          "type": "array"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "candidate_id",
+        "page_number",
+        "method",
+        "page_bbox",
+        "page_corners",
+        "aspect_ratio",
+        "aspect_error",
+        "score",
+        "crop_path",
+        "text_regions",
+        "warnings"
+      ],
+      "title": "BoundaryCandidate",
+      "type": "object"
+    },
+    "NormalizedRegion": {
+      "additionalProperties": false,
+      "properties": {
+        "bbox_mm_nominal": {
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Bbox Mm Nominal",
+          "type": "array"
+        },
+        "bbox_uv": {
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Bbox Uv",
+          "type": "array"
+        },
+        "evidence_page_bbox": {
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Evidence Page Bbox",
+          "type": "array"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "bbox_uv",
+        "bbox_mm_nominal",
+        "text",
+        "evidence_page_bbox"
+      ],
+      "title": "NormalizedRegion",
+      "type": "object"
+    }
+  },
+  "items": {
+    "$ref": "#/$defs/BoundaryCandidate"
+  },
+  "type": "array"
+}
