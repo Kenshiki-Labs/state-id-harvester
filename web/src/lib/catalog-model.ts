@@ -158,7 +158,7 @@ export function normalizeCatalog(value: unknown): Jurisdiction[] {
 }
 export function normalizeFederal(value: unknown): FederalCollection | null {
   const data = object(value);
-  if (data.federal === undefined) return null;
+  if (data.federal === undefined || data.federal === null) return null;
   const federal = object(data.federal);
   if (federal.code !== "US_FED" || federal.credential_format !== "unclassified")
     throw new Error("Invalid federal source index");

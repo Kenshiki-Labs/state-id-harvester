@@ -4,6 +4,7 @@ import worker from "../src/worker";
 import schema from "../migrations/0001_access.sql?raw";
 import { AUP_TEXT, AUP_VERSION } from "../src/core/policy";
 import { withPngReceipt } from "../src/core/png";
+import { sendDomainVerification } from "../src/lib/access-model";
 const origin = "https://cadastre.kenshikilabs.com";
 const hash = async (s: string) =>
   [
@@ -82,6 +83,51 @@ beforeAll(async () => {
   testEnv.CADASTRE_INGEST_KEY_HASH = await hash("test-ingest-token");
 });
 describe("server-side access authority", () => {
+  it("accepts the frontend proof helper contract while keeping organization review pending", async () => {
+    const result = await create();
+    const spy = vi
+      .spyOn(globalThis, "fetch")
+      .mockResolvedValue(
+        Response.json({
+          Status: 0,
+          Answer: [
+            {
+              name: result.domain_challenge.name,
+              type: 16,
+              data: `"${result.domain_challenge.value}"`,
+            },
+          ],
+        }),
+      );
+    const transport = (async (input, init) =>
+      worker.fetch(
+        new Request(origin + String(input), {
+          ...init,
+          headers: {
+            ...Object.fromEntries(new Headers(init?.headers)),
+            Origin: origin,
+          },
+        }),
+        testEnv,
+      )) as typeof fetch;
+    try {
+      expect(await sendDomainVerification(result, transport)).toMatchObject({
+        request_id: result.request_id,
+        status: "pending_review",
+        domain_verified: true,
+        approval_granted: false,
+      });
+    } finally {
+      spy.mockRestore();
+    }
+    expect(
+      (
+        await call(`/v1/access-requests/${result.request_id}/claim-key`, {
+          claim_token: result.claim_token,
+        })
+      ).status,
+    ).toBe(403);
+  });
   it("publishes the exact accepted policy and opaque health response", async () => {
     expect(await (await call("/v1/policy")).json()).toEqual({
       version: AUP_VERSION,

@@ -12,6 +12,12 @@ export interface AccessResult {
   claim_token: string;
   attestation_receipt: unknown;
 }
+export interface DomainVerification {
+  request_id: string;
+  status: "pending_review" | "approved";
+  domain_verified: true;
+  approval_granted: false;
+}
 export function parsePolicy(value: unknown): AccessPolicy {
   const data = object(value);
   if (
@@ -98,13 +104,29 @@ const RESPONSE_ERRORS: ReadonlyMap<string, string> = new Map([
     "service_unavailable",
     "The access service is temporarily unavailable. Please try again later.",
   ],
+  [
+    "domain_proof_not_found",
+    "The TXT record is not visible yet. Check its name and value, allow time for DNS propagation, then try again.",
+  ],
+  [
+    "dns_unavailable",
+    "DNS verification is temporarily unavailable. Please try again.",
+  ],
+  [
+    "invalid_claim",
+    "This claim token could not verify the request. Use the token from your saved receipt.",
+  ],
+  [
+    "request_rejected",
+    "This access request cannot proceed. Contact the Cadastre team about a new request.",
+  ],
 ]);
 export function responseError(value: unknown): string {
   const body = object(value);
+  const error = object(body.error);
+  const code = typeof body.error === "string" ? body.error : error.code;
   const message =
-    typeof body.error === "string"
-      ? RESPONSE_ERRORS.get(body.error)
-      : undefined;
+    typeof code === "string" ? RESPONSE_ERRORS.get(code) : undefined;
   return message ?? "Your request could not be submitted. Please try again.";
 }
 export function accessButtonLabel(
@@ -135,4 +157,54 @@ export function submissionError(error: unknown): string {
   return error instanceof AccessSubmissionError
     ? error.message
     : "The access service is unavailable. Please try again.";
+}
+export function parseDomainVerification(
+  value: unknown,
+  requestId: string,
+): DomainVerification {
+  const body = object(value);
+  if (
+    body.request_id !== requestId ||
+    body.domain_verified !== true ||
+    body.approval_granted !== false ||
+    (body.status !== "pending_review" && body.status !== "approved")
+  )
+    throw new AccessSubmissionError(
+      "The server returned an incomplete domain verification. Please try again.",
+    );
+  return {
+    request_id: requestId,
+    status: body.status,
+    domain_verified: true,
+    approval_granted: false,
+  };
+}
+export async function sendDomainVerification(
+  claim: Pick<AccessResult, "request_id" | "claim_token">,
+  transport: typeof fetch = fetch,
+): Promise<DomainVerification> {
+  const response = await transport(
+    `/v1/access-requests/${encodeURIComponent(claim.request_id)}/verify-domain`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ claim_token: claim.claim_token }),
+    },
+  );
+  const body = await response.json();
+  if (!response.ok) throw new AccessSubmissionError(responseError(body));
+  return parseDomainVerification(body, claim.request_id);
+}
+export function domainVerificationError(error: unknown): string {
+  return error instanceof AccessSubmissionError
+    ? error.message
+    : "Domain verification is unavailable. Please try again.";
+}
+export function domainVerificationLabel(
+  busy: boolean,
+  verified: boolean,
+): string {
+  if (verified) return "Domain control verified";
+  if (busy) return "Checking DNS…";
+  return "Verify domain";
 }

@@ -1,5 +1,92 @@
-import { accessButtonLabel } from "../lib/access-model";
+import {
+  accessButtonLabel,
+  domainVerificationLabel,
+  type AccessResult,
+} from "../lib/access-model";
 import { useAccessRequest } from "../lib/access";
+interface AccessReceiptProps {
+  result: AccessResult;
+  verificationBusy: boolean;
+  verificationError: string;
+  domainVerified: boolean;
+  verifyDomain: () => void;
+}
+export function AccessReceipt({
+  result,
+  verificationBusy,
+  verificationError,
+  domainVerified,
+  verifyDomain,
+}: AccessReceiptProps) {
+  return (
+    <div className="access-result">
+      <output className="sr-only">
+        Request received. Pending organization and authority review.
+      </output>
+      <span className="result-icon" aria-hidden="true">
+        ✓
+      </span>
+      <p className="eyebrow">REQUEST RECEIVED</p>
+      <h3>Pending review.</h3>
+      <p>
+        Your request is recorded. Domain control and organization eligibility
+        are reviewed separately; submitting this form does not grant access.
+      </p>
+      <dl>
+        <dt>Request ID</dt>
+        <dd>
+          <code>{result.request_id}</code>
+        </dd>
+      </dl>
+      <h4>Prove domain control</h4>
+      <p>
+        Add this TXT record at your DNS provider. Keep your claim token private.
+      </p>
+      <dl className="dns-record">
+        <dt>Type</dt>
+        <dd>TXT</dd>
+        <dt>Name</dt>
+        <dd>
+          <code>{result.domain_challenge.name}</code>
+        </dd>
+        <dt>Value</dt>
+        <dd>
+          <code>{result.domain_challenge.value}</code>
+        </dd>
+      </dl>
+      <button
+        className="button button-primary"
+        type="button"
+        onClick={verifyDomain}
+        disabled={verificationBusy || domainVerified}
+      >
+        {domainVerificationLabel(verificationBusy, domainVerified)}
+      </button>
+      <p className="form-note">
+        <output aria-live="polite">
+          {domainVerified &&
+            "Domain control verified. Organization and authority review are separate; this step does not grant access."}
+        </output>
+      </p>
+      {verificationError && (
+        <p className="form-error" role="alert">
+          {verificationError}
+        </p>
+      )}
+      <details className="receipt">
+        <summary>Save your claim token and attestation receipt</summary>
+        <p>Claim token</p>
+        <code>{result.claim_token}</code>
+        <p>Attestation receipt</p>
+        <pre>{JSON.stringify(result.attestation_receipt, null, 2)}</pre>
+      </details>
+      <p className="form-note">
+        Save these details. The token belongs to this request and does not
+        authorize access.
+      </p>
+    </div>
+  );
+}
 export default function AccessForm() {
   const {
     busy,
@@ -9,57 +96,20 @@ export default function AccessForm() {
     setRegistrationType,
     policy,
     submit,
+    verifyDomain,
+    verificationBusy,
+    verificationError,
+    domainVerified,
   } = useAccessRequest();
   if (result)
     return (
-      <div className="access-result">
-        <output className="sr-only">
-          Request received. Pending organization and authority review.
-        </output>
-        <span className="result-icon" aria-hidden="true">
-          ✓
-        </span>
-        <p className="eyebrow">REQUEST RECEIVED</p>
-        <h3>Pending review.</h3>
-        <p>
-          Your request is recorded. Domain control and organization eligibility
-          are reviewed separately; submitting this form does not grant access.
-        </p>
-        <dl>
-          <dt>Request ID</dt>
-          <dd>
-            <code>{result.request_id}</code>
-          </dd>
-        </dl>
-        <h4>Prove domain control</h4>
-        <p>
-          Add this TXT record at your DNS provider. Keep your claim token
-          private.
-        </p>
-        <dl className="dns-record">
-          <dt>Type</dt>
-          <dd>TXT</dd>
-          <dt>Name</dt>
-          <dd>
-            <code>{result.domain_challenge.name}</code>
-          </dd>
-          <dt>Value</dt>
-          <dd>
-            <code>{result.domain_challenge.value}</code>
-          </dd>
-        </dl>
-        <details className="receipt">
-          <summary>Save your claim token and attestation receipt</summary>
-          <p>Claim token</p>
-          <code>{result.claim_token}</code>
-          <p>Attestation receipt</p>
-          <pre>{JSON.stringify(result.attestation_receipt, null, 2)}</pre>
-        </details>
-        <p className="form-note">
-          Save these details. The token belongs to this request and does not
-          authorize access.
-        </p>
-      </div>
+      <AccessReceipt
+        result={result}
+        verificationBusy={verificationBusy}
+        verificationError={verificationError}
+        domainVerified={domainVerified}
+        verifyDomain={verifyDomain}
+      />
     );
   return (
     <form className="access-form" onSubmit={submit}>

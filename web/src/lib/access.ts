@@ -4,6 +4,8 @@ import {
   parsePolicy,
   sendApplication,
   submissionError,
+  sendDomainVerification,
+  domainVerificationError,
   type AccessPolicy,
   type AccessResult,
 } from "./access-model";
@@ -15,6 +17,10 @@ export function useAccessRequest() {
   const [registrationType, setRegistrationType] =
     useState("state_registration");
   const [policy, setPolicy] = useState<AccessPolicy | null>(null);
+  const verifying = useRef(false);
+  const [verificationBusy, setVerificationBusy] = useState(false);
+  const [verificationError, setVerificationError] = useState("");
+  const [domainVerified, setDomainVerified] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
     fetch("/v1/policy", { signal: controller.signal })
@@ -55,6 +61,21 @@ export function useAccessRequest() {
       setBusy(false);
     }
   }
+  async function verifyDomain() {
+    if (!result || verifying.current || domainVerified) return;
+    verifying.current = true;
+    setVerificationBusy(true);
+    setVerificationError("");
+    try {
+      await sendDomainVerification(result);
+      setDomainVerified(true);
+    } catch (error) {
+      setVerificationError(domainVerificationError(error));
+    } finally {
+      verifying.current = false;
+      setVerificationBusy(false);
+    }
+  }
   return {
     busy,
     error,
@@ -63,5 +84,9 @@ export function useAccessRequest() {
     setRegistrationType,
     policy,
     submit,
+    verifyDomain,
+    verificationBusy,
+    verificationError,
+    domainVerified,
   };
 }

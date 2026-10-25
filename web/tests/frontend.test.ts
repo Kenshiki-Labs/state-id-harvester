@@ -2,6 +2,7 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import CatalogDetail from "../src/components/CatalogDetail";
 import FederalCatalog from "../src/components/FederalCatalog";
+import { AccessReceipt } from "../src/components/AccessForm";
 import { describe, expect, it } from "vitest";
 import {
   blankCatalog,
@@ -18,6 +19,11 @@ import {
   responseError,
   sendApplication,
   submissionError,
+  sendDomainVerification,
+  parseDomainVerification,
+  domainVerificationError,
+  domainVerificationLabel,
+  type AccessResult,
 } from "../src/lib/access-model";
 const fingerprint = "a".repeat(64);
 const policy = {
@@ -285,6 +291,14 @@ describe("access application boundary", () => {
     );
   });
   it("does not echo arbitrary server errors or sensitive data into the page", () => {
+    expect(
+      responseError({ error: { code: "work_email_domain_mismatch" } }),
+    ).toContain("work email");
+    expect(
+      responseError({
+        error: { code: "rate_limited", message: "secret diagnostics" },
+      }),
+    ).toBe("Too many requests. Please wait before trying again.");
     expect(responseError({ error: "work_email_domain_mismatch" })).toContain(
       "work email",
     );
@@ -345,6 +359,8 @@ describe("federal collection boundary", () => {
   });
   it("supports an absent collection and rejects federal ID1 classification", () => {
     expect(normalizeFederal(manifest)).toBeNull();
+    expect(normalizeFederal({ ...manifest, federal: null })).toBeNull();
+    expect(normalizeCatalog({ ...manifest, federal: null })).toHaveLength(51);
     expect(
       renderToStaticMarkup(createElement(FederalCatalog, { collection: null })),
     ).toBe("");
@@ -364,6 +380,9 @@ describe("frontend control boundaries", () => {
       expect(responseError({ error })).toBe(
         "Your request could not be submitted. Please try again.",
       );
+      expect(responseError({ error: { code: error } })).toBe(
+        "Your request could not be submitted. Please try again.",
+      );
     },
   );
   it("uses authored submit labels across policy and request states", () => {
@@ -380,5 +399,123 @@ describe("frontend control boundaries", () => {
     expect(catalogFilter("constructor")).toBe("all");
     expect(catalogFilter("sources")).toBe("sources");
     expect(catalogFilter("awaiting")).toBe("awaiting");
+  });
+});
+describe("domain proof application boundary", () => {
+  const receipt: AccessResult = {
+    request_id: "12345678-1234-4234-8234-123456789abc",
+    status: "pending_review",
+    domain_challenge: {
+      name: "_cadastre-verification.example.gov",
+      value: "cadastre=challenge",
+    },
+    claim_token: "private-claim-token",
+    attestation_receipt: "signed-receipt",
+  };
+  const proof = {
+    request_id: receipt.request_id,
+    status: "pending_review",
+    domain_verified: true,
+    approval_granted: false,
+  };
+  it("sends the claim token in a JSON POST body and validates proof without granting access", async () => {
+    const transport = (async (input, init) => {
+      expect(input).toBe(
+        `/v1/access-requests/${receipt.request_id}/verify-domain`,
+      );
+      expect(String(input)).not.toContain(receipt.claim_token);
+      expect(init?.method).toBe("POST");
+      expect(new Headers(init?.headers).get("Content-Type")).toBe(
+        "application/json",
+      );
+      expect(new Headers(init?.headers).has("Authorization")).toBe(false);
+      expect(JSON.parse(String(init?.body))).toEqual({
+        claim_token: receipt.claim_token,
+      });
+      return Response.json(proof);
+    }) as typeof fetch;
+    expect(await sendDomainVerification(receipt, transport)).toEqual(proof);
+  });
+  it("maps actual nested DNS errors to authored feedback and never displays arbitrary response diagnostics", async () => {
+    for (const code of [
+      "domain_proof_not_found",
+      "dns_unavailable",
+      "invalid_claim",
+    ]) {
+      const transport = (async () =>
+        Response.json(
+          { error: { code, message: "private diagnostics" } },
+          { status: 409 },
+        )) as typeof fetch;
+      let failure: unknown;
+      try {
+        await sendDomainVerification(receipt, transport);
+      } catch (error) {
+        failure = error;
+      }
+      expect(domainVerificationError(failure)).toBe(
+        responseError({ error: { code } }),
+      );
+      expect(domainVerificationError(failure)).not.toContain(
+        "private diagnostics",
+      );
+    }
+    expect(domainVerificationError(new Error("secret response"))).toBe(
+      "Domain verification is unavailable. Please try again.",
+    );
+  });
+  it("rejects forged, incomplete and cross-request proof responses", () => {
+    for (const invalid of [
+      null,
+      {},
+      { ...proof, request_id: "other-request" },
+      { ...proof, domain_verified: false },
+      { ...proof, approval_granted: true },
+      { ...proof, status: "rejected" },
+    ])
+      expect(() =>
+        parseDomainVerification(invalid, receipt.request_id),
+      ).toThrow();
+    expect(
+      parseDomainVerification(
+        { ...proof, status: "approved" },
+        receipt.request_id,
+      ).approval_granted,
+    ).toBe(false);
+  });
+  it("renders an actionable proof button, native feedback and a separate organization review requirement", () => {
+    const props = {
+      result: receipt,
+      verificationBusy: false,
+      verificationError: "",
+      domainVerified: false,
+      verifyDomain: () => {},
+    };
+    const pending = renderToStaticMarkup(createElement(AccessReceipt, props));
+    expect(pending).toContain('type="button"');
+    expect(pending).toContain("Verify domain");
+    const verified = renderToStaticMarkup(
+      createElement(AccessReceipt, { ...props, domainVerified: true }),
+    );
+    expect(verified).toContain(
+      '<output aria-live="polite">Domain control verified.',
+    );
+    expect(verified).toContain("this step does not grant access.");
+    expect(verified).toContain('disabled=""');
+    expect(verified).toContain("Pending review.");
+    const failed = renderToStaticMarkup(
+      createElement(AccessReceipt, {
+        ...props,
+        verificationError: responseError({
+          error: { code: "domain_proof_not_found" },
+        }),
+      }),
+    );
+    expect(failed).toContain('role="alert"');
+    expect(failed).toContain("TXT record is not visible yet");
+    expect(domainVerificationLabel(true, false)).toBe("Checking DNS…");
+    expect(domainVerificationLabel(false, true)).toBe(
+      "Domain control verified",
+    );
   });
 });
