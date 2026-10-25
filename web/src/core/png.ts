@@ -1,4 +1,5 @@
 /** Insert a removable opaque audit receipt without decoding or buffering a raster. */
+import { PngFraming } from "./png-framing";
 const SIGNATURE = [137, 80, 78, 71, 13, 10, 26, 10];
 function crc32(bytes: Uint8Array): number {
   let crc = 0xffffffff;
@@ -16,10 +17,7 @@ export function receiptChunk(receipt: string): Uint8Array {
   view.setUint32(0, data.length);
   output.set([116, 69, 88, 116], 4);
   output.set(data, 8);
-  view.setUint32(
-    output.length - 4,
-    crc32(output.subarray(4, output.length - 4)),
-  );
+  view.setUint32(output.length - 4, crc32(output.subarray(4, -4)));
   return output;
 }
 function pngHeaderStream(
@@ -29,9 +27,11 @@ function pngHeaderStream(
   const prefix = new Uint8Array(33);
   let count = 0;
   let inserted = false;
-  return body.pipeThrough(
+  const framing = new PngFraming();
+  const validated = body.pipeThrough(
     new TransformStream<Uint8Array, Uint8Array>({
       transform(chunk, controller) {
+        framing.write(chunk);
         if (inserted) {
           controller.enqueue(chunk);
           return;
@@ -44,6 +44,8 @@ function pngHeaderStream(
         if (
           !SIGNATURE.every((v, i) => prefix[i] === v) ||
           view.getUint32(8) !== 13 ||
+          view.getUint32(16) === 0 ||
+          view.getUint32(20) === 0 ||
           new TextDecoder().decode(prefix.subarray(12, 16)) !== "IHDR" ||
           crc32(prefix.subarray(12, 29)) !== view.getUint32(29)
         )
@@ -54,7 +56,28 @@ function pngHeaderStream(
         inserted = true;
       },
       flush() {
+        framing.finish();
         if (!inserted) throw new Error("invalid_png");
+      },
+    }),
+  );
+  return holdFinalByte(validated);
+}
+/** Known-length sinks can commit when the last byte arrives, before flush(). */
+function holdFinalByte(
+  body: ReadableStream<Uint8Array>,
+): ReadableStream<Uint8Array> {
+  let tail: Uint8Array | undefined;
+  return body.pipeThrough(
+    new TransformStream<Uint8Array, Uint8Array>({
+      transform(chunk, controller) {
+        if (chunk.length === 0) return;
+        if (tail) controller.enqueue(tail);
+        if (chunk.length > 1) controller.enqueue(chunk.subarray(0, -1));
+        tail = chunk.slice(-1);
+      },
+      flush(controller) {
+        if (tail) controller.enqueue(tail);
       },
     }),
   );
@@ -65,7 +88,7 @@ export function withPngReceipt(
 ): ReadableStream<Uint8Array> {
   return pngHeaderStream(body, receipt);
 }
-/** Validate the header before R2 commits the stream; this does not decode IDAT. */
+/** Validate the header and complete chunk framing before R2 commits; never decode IDAT. */
 export function validatePngHeader(
   body: ReadableStream<Uint8Array>,
 ): ReadableStream<Uint8Array> {

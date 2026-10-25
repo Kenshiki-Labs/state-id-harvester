@@ -42,17 +42,14 @@ export default function Catalog() {
         </label>
       </div>
       <div className="catalog-workspace">
-        <div
-          className="jurisdiction-list"
-          role="group"
-          aria-label="Jurisdiction catalog"
-        >
+        <fieldset className="jurisdiction-list">
+          <legend className="sr-only">Jurisdiction catalog</legend>
           <div className="list-heading">
             <span>Jurisdiction</span>
             <span>Public sources</span>
           </div>
           <CatalogRows catalog={catalog} />
-        </div>
+        </fieldset>
         <CatalogDetail
           detail={detail}
           unavailable={catalog.loading || catalog.error}

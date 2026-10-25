@@ -136,6 +136,7 @@ export function specimenIndex(input: unknown): Specimen[] {
   const list = Array.isArray(input) ? input : record(input).specimens;
   if (!Array.isArray(list) || list.length > 10000)
     throw new PolicyError("invalid_specimen_index", 503);
+  const identities = new Set<string>();
   return list.map((item) => {
     const r = record(item);
     if (
@@ -154,6 +155,10 @@ export function specimenIndex(input: unknown): Specimen[] {
       r.review_status !== "reference_only"
     )
       throw new PolicyError("invalid_specimen_index", 503);
+    const identity = `${r.state}/${r.id}`;
+    if (identities.has(identity))
+      throw new PolicyError("invalid_specimen_index", 503);
+    identities.add(identity);
     return {
       id: r.id,
       state: r.state,

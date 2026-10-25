@@ -20,8 +20,10 @@ into the extraction core or a renderer. Application keys never become frontend b
 inputs. Private media does not enter Astro's public assets or its build graph.
 
 Typed observations preserve source hash, asset hash, page and extraction lineage.
-Normalization yields nominal unit-square coordinates; calibration requires independent
-physical evidence. A source match or barcode routing candidate cannot authorize complete
+Normalization yields nominal unit-square coordinates. Evidence is evaluated per claim:
+sourced topology, normative formats, and tested computations do not require a physical-card
+collection to publish. Claimed measurement error and detection performance require ground
+truth and evaluation appropriate to those particular claims. A source match or barcode routing candidate cannot authorize complete
 identity acceptance. Barcode fields remain untrusted claims and routing may return more
 than one design. DAJ is a cardholder address jurisdiction, not an issuer identifier.
 

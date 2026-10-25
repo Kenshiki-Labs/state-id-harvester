@@ -153,20 +153,18 @@ describe("server-side access authority", () => {
   });
   it("proves only DNS possession; approval needs entity and authorization evidence", async () => {
     const result = await create();
-    const spy = vi
-      .spyOn(globalThis, "fetch")
-      .mockResolvedValue(
-        Response.json({
-          Status: 0,
-          Answer: [
-            {
-              name: result.domain_challenge.name + ".",
-              type: 16,
-              data: `"${result.domain_challenge.value}"`,
-            },
-          ],
-        }),
-      );
+    const spy = vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      Response.json({
+        Status: 0,
+        Answer: [
+          {
+            name: result.domain_challenge.name + ".",
+            type: 16,
+            data: `"${result.domain_challenge.value}"`,
+          },
+        ],
+      }),
+    );
     const proof = await call(
       `/v1/access-requests/${result.request_id}/verify-domain`,
       { claim_token: result.claim_token },
@@ -481,20 +479,18 @@ describe("server-side access authority", () => {
   it("a valid DNS proof still cannot list private specimens or claim an unapproved key", async () => {
     const result = await create();
     const half = result.domain_challenge.value.length / 2;
-    const spy = vi
-      .spyOn(globalThis, "fetch")
-      .mockResolvedValue(
-        Response.json({
-          Status: 0,
-          Answer: [
-            {
-              name: result.domain_challenge.name,
-              type: 16,
-              data: `"${result.domain_challenge.value.slice(0, half)}" "${result.domain_challenge.value.slice(half)}"`,
-            },
-          ],
-        }),
-      );
+    const spy = vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      Response.json({
+        Status: 0,
+        Answer: [
+          {
+            name: result.domain_challenge.name,
+            type: 16,
+            data: `"${result.domain_challenge.value.slice(0, half)}" "${result.domain_challenge.value.slice(half)}"`,
+          },
+        ],
+      }),
+    );
     try {
       expect(
         (
@@ -759,6 +755,14 @@ describe("server-side access authority", () => {
         },
         body: JSON.stringify(app()),
       }),
+      ...["application/jsonp", "application/json-unsafe"].map(
+        (type) =>
+          new Request(origin + "/v1/access-requests", {
+            method: "POST",
+            headers: { Origin: origin, "Content-Type": type },
+            body: JSON.stringify(app()),
+          }),
+      ),
     ])
       expect(
         (await worker.fetch(request, testEnv)).status,
@@ -838,6 +842,11 @@ describe("adversarial private catalog delivery", () => {
     review_status: "reference_only",
   };
   beforeAll(async () => {
+    entry.asset_sha256 = [
+      ...new Uint8Array(await crypto.subtle.digest("SHA-256", png)),
+    ]
+      .map((x) => x.toString(16).padStart(2, "0"))
+      .join("");
     const result = await create();
     requestId = result.request_id;
     await env.DB.prepare(
@@ -906,6 +915,7 @@ describe("adversarial private catalog delivery", () => {
   });
   it("delivers no PNG if the mandatory audit transaction fails", async () => {
     await env.VAULT.put(entry.key, png, {
+      sha256: entry.asset_sha256,
       httpMetadata: { contentType: "image/png" },
       customMetadata: {
         cadastreReferenceOnly: "true",
@@ -940,10 +950,136 @@ describe("adversarial private catalog delivery", () => {
     expect(response.status).toBe(200);
     await response.arrayBuffer();
   });
+  it("refuses forged hash metadata and duplicate asset identities before delivering private bytes", async () => {
+    const metadata = {
+      cadastreReferenceOnly: "true",
+      sha256: entry.asset_sha256,
+      sourceSha256: entry.source_sha256,
+    };
+    await env.VAULT.put(entry.key, png, {
+      httpMetadata: { contentType: "image/png" },
+      customMetadata: metadata,
+    });
+    expect(
+      (await call("/v1/specimens/TX/adversarial", undefined, apiKey)).status,
+    ).toBe(503);
+    const forged = "c".repeat(64);
+    await env.VAULT.put(entry.key, png, {
+      sha256: entry.asset_sha256,
+      httpMetadata: { contentType: "image/png" },
+      customMetadata: { ...metadata, sha256: forged },
+    });
+    await env.VAULT.put(
+      "indexes/specimens.json",
+      JSON.stringify([{ ...entry, asset_sha256: forged }]),
+    );
+    expect(
+      (await call("/v1/specimens/TX/adversarial", undefined, apiKey)).status,
+    ).toBe(503);
+    await env.VAULT.put(
+      "indexes/specimens.json",
+      JSON.stringify([
+        entry,
+        { ...entry, key: "specimens/elsewhere/flat.png" },
+      ]),
+    );
+    expect((await call("/v1/specimens", undefined, apiKey)).status).toBe(503);
+    await env.VAULT.put("indexes/specimens.json", JSON.stringify([entry]));
+    await env.VAULT.put(entry.key, png, {
+      sha256: entry.asset_sha256,
+      httpMetadata: { contentType: "image/png" },
+      customMetadata: metadata,
+    });
+  });
+  it("rechecks revocation, expiry and organization authority after awaited R2 reads at the audit boundary", async () => {
+    const updates = [
+      "UPDATE api_keys SET revoked_at='2026-01-01' WHERE request_id=?",
+      "UPDATE api_keys SET expires_at='2000-01-01' WHERE request_id=?",
+      "UPDATE access_requests SET status='rejected' WHERE id=?",
+      "UPDATE access_requests SET domain_verified_at=NULL WHERE id=?",
+      "UPDATE access_requests SET aup_hash='invalid' WHERE id=?",
+    ];
+    const originalGet = env.VAULT.get.bind(env.VAULT);
+    for (const sql of updates) {
+      await env.DB.prepare(
+        "UPDATE api_keys SET revoked_at=NULL,expires_at='2099-01-01' WHERE request_id=?",
+      )
+        .bind(requestId)
+        .run();
+      await env.DB.prepare(
+        "UPDATE access_requests SET status='approved',domain_verified_at=?,aup_hash=? WHERE id=?",
+      )
+        .bind(new Date().toISOString(), await hash(AUP_TEXT), requestId)
+        .run();
+      const spy = vi
+        .spyOn(env.VAULT, "get")
+        .mockImplementation(async (key, options) => {
+          const object = await originalGet(key, options);
+          if (key === entry.key)
+            await env.DB.prepare(sql).bind(requestId).run();
+          return object;
+        });
+      const before = await env.DB.prepare(
+        "SELECT COUNT(*) AS count FROM audit_events WHERE request_id=? AND event='specimen_delivered'",
+      )
+        .bind(requestId)
+        .first();
+      try {
+        const response = await call(
+          "/v1/specimens/TX/adversarial",
+          undefined,
+          apiKey,
+        );
+        expect(response.status).toBe(401);
+        expect(await response.json()).toEqual({
+          error: { code: "unauthorized" },
+        });
+      } finally {
+        spy.mockRestore();
+      }
+      const after = await env.DB.prepare(
+        "SELECT COUNT(*) AS count FROM audit_events WHERE request_id=? AND event='specimen_delivered'",
+      )
+        .bind(requestId)
+        .first();
+      expect(after?.count).toBe(before?.count);
+    }
+    await env.DB.prepare("UPDATE access_requests SET aup_hash=? WHERE id=?")
+      .bind(await hash(AUP_TEXT), requestId)
+      .run();
+    const spy = vi
+      .spyOn(env.VAULT, "get")
+      .mockImplementation(async (key, options) => {
+        const object = await originalGet(key, options);
+        if (key === "indexes/specimens.json")
+          await env.DB.prepare(
+            "UPDATE api_keys SET revoked_at=? WHERE request_id=?",
+          )
+            .bind(new Date().toISOString(), requestId)
+            .run();
+        return object;
+      });
+    try {
+      expect((await call("/v1/specimens", undefined, apiKey)).status).toBe(401);
+    } finally {
+      spy.mockRestore();
+    }
+    await env.DB.prepare(
+      "UPDATE api_keys SET revoked_at=NULL WHERE request_id=?",
+    )
+      .bind(requestId)
+      .run();
+  });
   it("rejects truncated or corrupted PNG headers before committing ingest objects", async () => {
     const corrupted = png.slice();
     corrupted[29] ^= 1;
-    for (const [index, bytes] of [png.subarray(0, 15), corrupted].entries()) {
+    for (const [index, bytes] of [
+      png.subarray(0, 15),
+      png.subarray(0, 33),
+      png.subarray(0, 45),
+      png.subarray(0, png.length - 12),
+      corrupted,
+    ].entries()) {
       const digest = [
         ...new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)),
       ]

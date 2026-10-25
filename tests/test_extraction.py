@@ -295,8 +295,10 @@ def test_polygon_deduplication_keeps_separate_card_positions() -> None:
 
 def test_pixel_budget_and_asset_budget_cleanup_leave_no_partial_stage(tmp_path: Path) -> None:
     download = fixture_pdf(tmp_path)
+    options = Options(dpi=72, max_asset_bytes=100)
+    root_string = str(tmp_path)
     with pytest.raises(ExtractionLimit, match="byte budget"):
-        extract(download, str(tmp_path), Options(dpi=72, max_asset_bytes=100))
+        extract(download, root_string, options)
     assert not list(tmp_path.rglob(".extract-*"))
     assert not list(tmp_path.rglob("derived/*/*/document.json"))
     assert digest(tmp_path / download.path) == download.sha256

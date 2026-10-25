@@ -34,8 +34,9 @@ def test_federal_is_separate_from_the_51_states_and_format_is_unclassified() -> 
             discovered_via="test",
             credential_format="ID1",
         )
+    selection_parser = parser()
     with pytest.raises(SystemExit):
-        parser().parse_args(["harvest", "--all", "--federal"])
+        selection_parser.parse_args(["harvest", "--all", "--federal"])
 
 
 def test_federal_extractor_blocks_id1_normalization_even_if_options_request_it(
@@ -78,7 +79,8 @@ def test_public_federal_subsection_does_not_change_state_statistics() -> None:
     spec = importlib.util.spec_from_file_location(
         "federal_export_test", "scripts/build_public_catalog.py"
     )
-    assert spec is not None and spec.loader is not None
+    assert spec is not None
+    assert spec.loader is not None
     exporter = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = exporter
     spec.loader.exec_module(exporter)

@@ -6,6 +6,7 @@ import {
   record,
   safeObjectKey,
   specimenIndex,
+  type Specimen,
   validateApplication,
 } from "./core/policy";
 import { validatePngHeader, withPngReceipt } from "./core/png";
@@ -22,10 +23,10 @@ const hex = (bytes: ArrayBuffer | Uint8Array) =>
     .join("");
 const randomHex = (n: number) => hex(crypto.getRandomValues(new Uint8Array(n)));
 const base64url = (bytes: Uint8Array) =>
-  btoa(String.fromCharCode(...bytes))
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/, "");
+  btoa(String.fromCodePoint(...bytes))
+    .replaceAll("+", "-")
+    .replaceAll("/", "_")
+    .split("=", 1)[0];
 const sha = async (value: string) =>
   hex(await crypto.subtle.digest("SHA-256", encoder.encode(value)));
 function secureEqual(left: string, right: string): boolean {
@@ -57,22 +58,14 @@ async function boundedBytes(
   limit: number,
 ): Promise<Uint8Array> {
   if (!body) throw new PolicyError("body_required");
-  const reader = body.getReader();
   const chunks: Uint8Array[] = [];
   let size = 0;
-  try {
-    for (;;) {
-      const next = await reader.read();
-      if (next.done) break;
-      size += next.value.length;
-      if (size > limit) {
-        await reader.cancel();
-        throw new PolicyError("body_too_large", 413);
-      }
-      chunks.push(next.value);
-    }
-  } finally {
-    reader.releaseLock();
+  // Async iteration preserves the stream's sequential dependency and cancels
+  // the reader automatically on an oversized body or interrupted operation.
+  for await (const chunk of body) {
+    size += chunk.length;
+    if (size > limit) throw new PolicyError("body_too_large", 413);
+    chunks.push(chunk);
   }
   const bytes = new Uint8Array(size);
   let offset = 0;
@@ -83,12 +76,12 @@ async function boundedBytes(
   return bytes;
 }
 async function bodyJson(request: Request): Promise<Record<string, unknown>> {
-  if (
-    !request.headers
-      .get("Content-Type")
-      ?.toLowerCase()
-      .startsWith("application/json")
-  )
+  const mediaType = request.headers
+    .get("Content-Type")
+    ?.split(";", 1)[0]
+    .trim()
+    .toLowerCase();
+  if (mediaType !== "application/json")
     throw new PolicyError("json_required", 415);
   const length = request.headers.get("Content-Length");
   if (length && Number(length) > JSON_LIMIT)
@@ -328,6 +321,54 @@ async function activeKey(
     throw new PolicyError("unauthorized", 401);
   return row;
 }
+async function auditAuthorizedAccess(
+  env: Env,
+  key: { id: string; request_id: string },
+  event: "specimens_listed" | "specimen_delivered",
+  entry?: Specimen,
+  receipt?: string,
+): Promise<void> {
+  const timestamp = now();
+  const evidence = entry
+    ? JSON.stringify({
+        collection: entry.state,
+        source_sha256: entry.source_sha256,
+        asset_sha256: entry.asset_sha256,
+      })
+    : null;
+  // This INSERT is the delivery authorization boundary. A key may have expired,
+  // been revoked, or its organization rejected while private R2 reads awaited.
+  const result = await env.DB.prepare(
+    `INSERT INTO audit_events(id,request_id,key_id,event,asset_id,receipt,evidence,created_at) SELECT ?,k.request_id,k.id,?,?,?,?,? FROM api_keys k JOIN access_requests r ON r.id=k.request_id WHERE k.id=? AND k.request_id=? AND k.revoked_at IS NULL AND k.expires_at>? AND r.status='approved' AND r.domain_verified_at IS NOT NULL AND r.aup_version=? AND r.aup_hash=?`,
+  )
+    .bind(
+      id(),
+      event,
+      entry?.id ?? null,
+      receipt ?? null,
+      evidence,
+      timestamp,
+      key.id,
+      key.request_id,
+      timestamp,
+      AUP_VERSION,
+      await sha(AUP_TEXT),
+    )
+    .run();
+  if (result.meta.changes !== 1) throw new PolicyError("unauthorized", 401);
+}
+function matchesSpecimen(asset: R2ObjectBody, entry: Specimen): boolean {
+  const checksum = asset.checksums.sha256;
+  return (
+    asset.size <= OBJECT_LIMIT &&
+    asset.httpMetadata?.contentType === "image/png" &&
+    asset.customMetadata?.cadastreReferenceOnly === "true" &&
+    asset.customMetadata?.sha256 === entry.asset_sha256 &&
+    asset.customMetadata?.sourceSha256 === entry.source_sha256 &&
+    !!checksum &&
+    hex(checksum) === entry.asset_sha256
+  );
+}
 async function specimens(
   request: Request,
   env: Env,
@@ -345,35 +386,20 @@ async function specimens(
     ),
   );
   if (path === "/v1/specimens") {
-    await audit(env, "specimens_listed", key.request_id, key.id);
+    await auditAuthorizedAccess(env, key, "specimens_listed");
     return json({ specimens: index.map(({ key: _key, ...entry }) => entry) });
   }
-  const match = path.match(
-    /^\/v1\/specimens\/([A-Z]{2}|US_FED)\/([A-Za-z0-9_-]{1,150})$/,
-  );
+  const match =
+    /^\/v1\/specimens\/([A-Z]{2}|US_FED)\/([A-Za-z0-9_-]{1,150})$/.exec(path);
   const entry =
     match &&
     index.find((item) => item.state === match[1] && item.id === match[2]);
   if (!entry) throw new PolicyError("not_found", 404);
   const asset = await env.VAULT.get(entry.key);
-  if (
-    !asset ||
-    asset.size > OBJECT_LIMIT ||
-    asset.httpMetadata?.contentType !== "image/png" ||
-    asset.customMetadata?.cadastreReferenceOnly !== "true" ||
-    asset.customMetadata?.sha256 !== entry.asset_sha256 ||
-    asset.customMetadata?.sourceSha256 !== entry.source_sha256
-  )
+  if (!asset || !matchesSpecimen(asset, entry))
     throw new PolicyError("asset_unavailable", 503);
   const receipt = await sign(env, `dl1.${id()}.${Date.now()}`);
-  await audit(
-    env,
-    "specimen_delivered",
-    key.request_id,
-    key.id,
-    entry.id,
-    receipt,
-  );
+  await auditAuthorizedAccess(env, key, "specimen_delivered", entry, receipt);
   return new Response(withPngReceipt(asset.body, receipt), {
     headers: {
       "Content-Type": "image/png",
@@ -480,12 +506,11 @@ async function admin(
     ).all();
     return json({ requests: rows.results });
   }
-  const match = path.match(
-    /^\/admin\/access-requests\/([a-f0-9-]{36})\/(approve|reject)$/,
-  );
+  const match =
+    /^\/admin\/access-requests\/([a-f0-9-]{36})\/(approve|reject)$/.exec(path);
   if (match && request.method === "POST")
     return reviewApplication(request, env, match[1], match[2]);
-  const revoke = path.match(/^\/admin\/keys\/([a-f0-9]{24})\/revoke$/);
+  const revoke = /^\/admin\/keys\/([a-f0-9]{24})\/revoke$/.exec(path);
   if (revoke && request.method === "POST")
     return revokeKey(request, env, revoke[1]);
   throw new PolicyError("not_found", 404);
@@ -590,9 +615,10 @@ async function accessRoute(
 ): Promise<Response> {
   sameOrigin(request, env);
   if (path === "/v1/access-requests") return createApplication(request, env);
-  const match = path.match(
-    /^\/v1\/access-requests\/([a-f0-9-]{36})\/(verify-domain|status|claim-key)$/,
-  );
+  const match =
+    /^\/v1\/access-requests\/([a-f0-9-]{36})\/(verify-domain|status|claim-key)$/.exec(
+      path,
+    );
   if (!match) throw new PolicyError("not_found", 404);
   const row = await application(env, match[1], await bodyJson(request));
   if (match[2] === "verify-domain") return verifyDomain(env, row);

@@ -13,14 +13,15 @@ import os
 import re
 import secrets
 import struct
-import subprocess
-import sys
 import tempfile
 from datetime import UTC, datetime
 from pathlib import Path
 from urllib.parse import urlsplit
 
 import httpx
+
+from state_id_harvester.paths import contained_path, managed_path
+from state_id_harvester.snapshots import restore_library
 
 CHUNK_BYTES = 40 * 1024 * 1024
 INDEX_LIMIT = 4 * 1024 * 1024
@@ -116,7 +117,7 @@ def push_snapshot(vault: Vault, directory: Path, *, chunk_bytes: int = CHUNK_BYT
     result = []
     for archive in archives:
         name = archive["name"]
-        if not re.fullmatch(r"library-[0-9]{3,}\.tar\.gz", name):
+        if not re.fullmatch(r"library-\d{3,}\.tar\.gz", name, flags=re.ASCII):
             raise ValueError("Invalid snapshot archive name")
         path = directory / name
         if digest(path) != archive["sha256"] or path.stat().st_size != archive["size_bytes"]:
@@ -186,7 +187,7 @@ def validate_snapshot_index(encoded: bytes) -> list[dict]:
         raise ValueError("Invalid private snapshot index")
     total_budget = 30 * 1024 * 1024 * 1024
     for archive in index["archives"]:
-        if not re.fullmatch(r"library-[0-9]{3,}\.tar\.gz", archive["name"]):
+        if not re.fullmatch(r"library-\d{3,}\.tar\.gz", archive["name"], flags=re.ASCII):
             raise ValueError("Invalid snapshot archive name")
         if (
             not HEX_SHA256.fullmatch(archive["sha256"])
@@ -209,15 +210,7 @@ def pull_snapshot(vault: Vault, directory: Path, output: Path, *, missing_ok: bo
         restore_archive(vault, directory, archive)
         archives.append({key: archive[key] for key in ("name", "sha256", "size_bytes")})
     (directory / "library-index.json").write_text(json.dumps(archives, indent=2) + "\n")
-    subprocess.run(
-        [
-            sys.executable,
-            str(Path(__file__).with_name("unpack_library.py")),
-            str(directory),
-            str(output),
-        ],
-        check=True,
-    )
+    restore_library(managed_path(directory), managed_path(output))
     print(f"Restored {len(archives)} verified private archives")
 
 
@@ -253,7 +246,7 @@ def marked_reference(image) -> tuple[bytes, dict] | None:
     )
     cv2.putText(
         canvas,
-        "UNREVIEWED CROP - SOURCE GEOMETRY IS NOT PHYSICAL CALIBRATION",
+        "UNREVIEWED REFERENCE - SOURCE GEOMETRY IS NOT PHYSICAL CALIBRATION",
         (20, h + 79),
         cv2.FONT_HERSHEY_SIMPLEX,
         0.54,
@@ -279,7 +272,11 @@ def read_candidate_image(source: Path, asset):
     import cv2
     import numpy as np
 
-    path = source / asset.path
+    source = managed_path(source)
+    unresolved = source / asset.path
+    if unresolved.is_symlink():
+        raise ValueError("Specimen source must not be a symlink")
+    path = contained_path(source, asset.path)
     if (
         path.is_symlink()
         or not path.resolve().is_relative_to(source.resolve())
@@ -304,12 +301,14 @@ def read_candidate_image(source: Path, asset):
     return image
 
 
-def candidate_assets(manifest):
+def candidate_assets(
+    manifest, *, kinds: frozenset[str] = frozenset({"card_candidate"}), relevant_only: bool = True
+):
     for document in manifest.documents:
-        if document.relevance != "candidate":
+        if relevant_only and document.relevance != "candidate":
             continue
         for asset in document.assets:
-            if asset.kind == "card_candidate":
+            if asset.kind in kinds:
                 yield document, asset
 
 
@@ -322,7 +321,7 @@ def prepare_specimen(source: Path, destination: Path, document, asset) -> dict |
         return None
     data, transform = marked
     checksum = hashlib.sha256(data).hexdigest()
-    (destination / f"{checksum}.png").write_bytes(data)
+    contained_path(managed_path(destination), f"{checksum}.png").write_bytes(data)
     return {
         "id": f"sp_{checksum[:32]}",
         # This is the discovery jurisdiction, never a depicted-state review.
@@ -333,20 +332,26 @@ def prepare_specimen(source: Path, destination: Path, document, asset) -> dict |
         "page_number": asset.page_number,
         "review_status": "reference_only",
         "depicted_jurisdiction": None,
+        "reference_kind": "page_plate" if asset.kind == "page_render" else "crop_candidate",
+        "source_collection": document.download.source.discovery_jurisdiction,
+        "credential_format": document.download.source.credential_format,
+        "source_relevance": document.relevance,
         "transform": transform,
     }
 
 
-def prepare_specimens(source: Path, destination: Path, limit: int) -> list[dict]:
+def prepare_collection(source: Path, destination: Path, limit: int, *, federal: bool) -> list[dict]:
     from state_id_harvester.library import read_manifest
 
-    if not 1 <= limit <= 1000:
-        raise ValueError("Specimen limit must be between 1 and 1000")
+    if not 0 <= limit <= 1000:
+        raise ValueError("Reference limit must be between 0 and 1000")
+    source, destination = managed_path(source), managed_path(destination)
     manifest = read_manifest(source)
     destination.mkdir(parents=True, exist_ok=True)
     items = []
     seen: set[str] = set()
-    for document, asset in candidate_assets(manifest):
+    kinds = frozenset({"page_render"}) if federal else frozenset({"card_candidate"})
+    for document, asset in candidate_assets(manifest, kinds=kinds, relevant_only=not federal):
         if len(items) >= limit:
             break
         if asset.sha256 in seen:
@@ -355,8 +360,30 @@ def prepare_specimens(source: Path, destination: Path, limit: int) -> list[dict]
         if item is not None:
             items.append(item)
             seen.add(asset.sha256)
-    (destination / "specimens.json").write_text(json.dumps({"specimens": items}, indent=2) + "\n")
-    print(f"Prepared {len(items)} visibly marked private specimen candidates")
+    return items
+
+
+def prepare_specimens(
+    source: Path, destination: Path, limit: int, *, federal_limit: int = 30
+) -> list[dict]:
+    from state_id_harvester.library import read_manifest
+
+    source, destination = managed_path(source), managed_path(destination)
+    manifest = read_manifest(source)
+    primary_federal = manifest.requested_jurisdictions == ["US_FED"]
+    primary_limit = federal_limit if primary_federal else limit
+    items = prepare_collection(source, destination, primary_limit, federal=primary_federal)
+    federal_source = contained_path(source, "federal")
+    if not primary_federal and (federal_source / "manifest.json").is_file():
+        items.extend(prepare_collection(federal_source, destination, federal_limit, federal=True))
+    contained_path(destination, "specimens.json").write_text(
+        json.dumps({"specimens": items}, indent=2) + "\n"
+    )
+    federal_count = sum(item["source_collection"] == "US_FED" for item in items)
+    print(
+        f"Prepared {len(items)} visibly marked private references "
+        f"({federal_count} federal page plates)"
+    )
     return items
 
 
@@ -385,19 +412,22 @@ def main() -> None:
     )
     commands = parser.add_subparsers(dest="command", required=True)
     push = commands.add_parser("push")
-    push.add_argument("archives", type=Path)
+    push.add_argument("archives", type=managed_path)
     pull = commands.add_parser("pull")
-    pull.add_argument("output", type=Path)
+    pull.add_argument("output", type=managed_path)
     pull.add_argument("--missing-ok", action="store_true")
     prepare = commands.add_parser("prepare-specimens")
-    prepare.add_argument("source", type=Path)
-    prepare.add_argument("destination", type=Path)
+    prepare.add_argument("source", type=managed_path)
+    prepare.add_argument("destination", type=managed_path)
     prepare.add_argument("--limit", type=int, default=100)
+    prepare.add_argument("--federal-limit", type=int, default=30)
     specimens = commands.add_parser("push-specimens")
-    specimens.add_argument("directory", type=Path)
+    specimens.add_argument("directory", type=managed_path)
     args = parser.parse_args()
     if args.command == "prepare-specimens":
-        prepare_specimens(args.source, args.destination, args.limit)
+        prepare_specimens(
+            args.source, args.destination, args.limit, federal_limit=args.federal_limit
+        )
         return
     vault = Vault(args.url, os.environ.get("CADASTRE_INGEST_KEY", ""))
     try:

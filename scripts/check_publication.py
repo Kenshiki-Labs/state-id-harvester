@@ -13,13 +13,15 @@ from urllib.parse import unquote, urlsplit
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
 
+PUBLIC_LABEL_PATTERN = r"^[^\x00-\x1f<>]+$"
+
 
 class PublicRecord(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
 
 class Citation(PublicRecord):
-    title: str = Field(min_length=1, max_length=240, pattern=r"^[^\x00-\x1f<>]+$")
+    title: str = Field(min_length=1, max_length=240, pattern=PUBLIC_LABEL_PATTERN)
     url: str = Field(max_length=4096)
     sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
     retrieved_at: str = Field(max_length=64)
@@ -88,7 +90,7 @@ class CitationManifest(PublicRecord):
 
 
 class Zone(PublicRecord):
-    name: str = Field(min_length=1, max_length=64, pattern=r"^[^\x00-\x1f<>]+$")
+    name: str = Field(min_length=1, max_length=64, pattern=PUBLIC_LABEL_PATTERN)
     bbox_uv: tuple[float, float, float, float]
     geometry_basis: str = Field(pattern=r"^(reviewed_specimen|physical_calibration)$")
     measured_error_mm: float | None = Field(gt=0)
@@ -112,7 +114,7 @@ class GeometryCohort(PublicRecord):
     iins: list[str]
     issue_date_start: str | None = Field(max_length=10)
     issue_date_end: str | None = Field(max_length=10)
-    design_generation: str = Field(min_length=1, max_length=128, pattern=r"^[^\x00-\x1f<>]+$")
+    design_generation: str = Field(min_length=1, max_length=128, pattern=PUBLIC_LABEL_PATTERN)
     review_status: str = Field(pattern="^accepted$")
     source_sha256s: list[str]
     zones: list[Zone]

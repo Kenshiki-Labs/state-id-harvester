@@ -72,16 +72,13 @@ async def test_redirect_is_checked_before_request(tmp_path: Path) -> None:
         return httpx.Response(302, headers={"Location": "https://localhost/secret"})
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
+        source = Source(
+            discovery_jurisdiction="CA", url="https://dmv.ca.gov/a.pdf", discovered_via="test"
+        )
+        options = Options()
         with pytest.raises(FetchError):
-            await Transport(client, check_dns=False).download(
-                Source(
-                    discovery_jurisdiction="CA",
-                    url="https://dmv.ca.gov/a.pdf",
-                    discovered_via="test",
-                ),
-                tmp_path,
-                Options(),
-            )
+            await transport.download(source, tmp_path, options)
     assert not any("localhost" in u for u in visited)
     assert not list(tmp_path.rglob(".download-*"))
 
@@ -93,16 +90,13 @@ async def test_stream_limit_cleans_partial_download(tmp_path: Path) -> None:
         return httpx.Response(200, stream=Chunks([b"%PDF-1.7\n", b"x" * 2000]))
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
+        source = Source(
+            discovery_jurisdiction="CA", url="https://dmv.ca.gov/a.pdf", discovered_via="test"
+        )
+        options = Options(max_pdf_bytes=1024)
         with pytest.raises(FetchError, match="byte limit"):
-            await Transport(client, check_dns=False).download(
-                Source(
-                    discovery_jurisdiction="CA",
-                    url="https://dmv.ca.gov/a.pdf",
-                    discovered_via="test",
-                ),
-                tmp_path,
-                Options(max_pdf_bytes=1024),
-            )
+            await transport.download(source, tmp_path, options)
     assert not list(tmp_path.rglob("*.pdf"))
     assert not list(tmp_path.rglob(".download-*"))
 
@@ -115,16 +109,15 @@ async def test_robots_disallow_is_honored(tmp_path: Path) -> None:
         return httpx.Response(200, text="User-agent: *\nDisallow: /private/\n")
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
+        source = Source(
+            discovery_jurisdiction="CA",
+            url="https://dmv.ca.gov/private/a.pdf",
+            discovered_via="test",
+        )
+        options = Options()
         with pytest.raises(FetchError, match="robots"):
-            await Transport(client, check_dns=False).download(
-                Source(
-                    discovery_jurisdiction="CA",
-                    url="https://dmv.ca.gov/private/a.pdf",
-                    discovered_via="test",
-                ),
-                tmp_path,
-                Options(),
-            )
+            await transport.download(source, tmp_path, options)
     assert visited == ["/robots.txt"]
 
 
@@ -147,8 +140,9 @@ async def test_redirect_policy_rejects_before_following(location: str) -> None:
         return httpx.Response(302, headers={"Location": location})
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
         with pytest.raises((FetchError, ValueError, httpx.RemoteProtocolError)):
-            await Transport(client, check_dns=False).bytes("https://dmv.ca.gov/start")
+            await transport.bytes("https://dmv.ca.gov/start")
     assert requests == ["https://dmv.ca.gov/start"]
 
 
@@ -162,8 +156,9 @@ async def test_dns_policy_rejects_nonpublic_addresses(
 
     monkeypatch.setattr(socket, "getaddrinfo", lambda *_: [(2, 1, 6, "", (address, 443))])
     async with httpx.AsyncClient() as client:
+        transport = Transport(client)
         with pytest.raises(FetchError, match="non-public"):
-            await Transport(client).validate("https://dmv.ca.gov/file.pdf")
+            await transport.validate("https://dmv.ca.gov/file.pdf")
 
 
 async def test_dns_failure_is_explicit_and_no_request_is_sent(
@@ -182,8 +177,9 @@ async def test_dns_failure_is_explicit_and_no_request_is_sent(
         return httpx.Response(200)
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client)
         with pytest.raises(FetchError, match="DNS resolution failed"):
-            await Transport(client).bytes("https://dmv.ca.gov/start")
+            await transport.bytes("https://dmv.ca.gov/start")
     assert visited == []
 
 
@@ -204,8 +200,9 @@ async def test_same_host_redirect_revalidates_dns(monkeypatch: pytest.MonkeyPatc
 
     monkeypatch.setattr(socket, "getaddrinfo", resolver)
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client)
         with pytest.raises(FetchError, match="non-public"):
-            await Transport(client).bytes("https://dmv.ca.gov/start")
+            await transport.bytes("https://dmv.ca.gov/start")
     assert resolutions == ["dmv.ca.gov", "dmv.ca.gov"]
     assert visited == ["/start"]
 
@@ -237,16 +234,13 @@ async def test_bad_length_is_rejected_before_reading_and_cleans_file(
         return httpx.Response(200, stream=body, headers={"Content-Length": length})
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
+        source = Source(
+            discovery_jurisdiction="CA", url="https://dmv.ca.gov/a.pdf", discovered_via="test"
+        )
+        options = Options(max_pdf_bytes=50000)
         with pytest.raises(FetchError, match="Content-Length"):
-            await Transport(client, check_dns=False).download(
-                Source(
-                    discovery_jurisdiction="CA",
-                    url="https://dmv.ca.gov/a.pdf",
-                    discovered_via="test",
-                ),
-                tmp_path,
-                Options(max_pdf_bytes=50_000),
-            )
+            await transport.download(source, tmp_path, options)
     assert body.read_count == 0
     assert body.closed
     assert not list(tmp_path.rglob("*.pdf"))
@@ -262,16 +256,13 @@ async def test_forged_small_length_cannot_mask_a_larger_stream(tmp_path: Path) -
         return httpx.Response(200, stream=body, headers={"Content-Length": "8"})
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
+        source = Source(
+            discovery_jurisdiction="CA", url="https://dmv.ca.gov/a.pdf", discovered_via="test"
+        )
+        options = Options()
         with pytest.raises(FetchError, match="does not match"):
-            await Transport(client, check_dns=False).download(
-                Source(
-                    discovery_jurisdiction="CA",
-                    url="https://dmv.ca.gov/a.pdf",
-                    discovered_via="test",
-                ),
-                tmp_path,
-                Options(),
-            )
+            await transport.download(source, tmp_path, options)
     assert body.closed
     assert not list(tmp_path.rglob("*.pdf"))
     assert not list(tmp_path.rglob(".download-*"))
@@ -290,16 +281,13 @@ async def test_chunked_or_forged_stream_cannot_exceed_limit(
         return httpx.Response(200, stream=body, headers=headers)
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
+        source = Source(
+            discovery_jurisdiction="CA", url="https://dmv.ca.gov/a.pdf", discovered_via="test"
+        )
+        options = Options(max_pdf_bytes=1024)
         with pytest.raises(FetchError, match="byte limit"):
-            await Transport(client, check_dns=False).download(
-                Source(
-                    discovery_jurisdiction="CA",
-                    url="https://dmv.ca.gov/a.pdf",
-                    discovered_via="test",
-                ),
-                tmp_path,
-                Options(max_pdf_bytes=1024),
-            )
+            await transport.download(source, tmp_path, options)
     assert body.read_count == 3
     assert body.closed
     assert not list(tmp_path.rglob("*.pdf"))
@@ -332,8 +320,9 @@ async def test_429_retry_budget_and_delay_are_bounded(
 
     monkeypatch.setattr(asyncio, "sleep", sleep)
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
         with pytest.raises(httpx.HTTPStatusError):
-            await Transport(client, check_dns=False).bytes("https://dmv.ca.gov/file.pdf")
+            await transport.bytes("https://dmv.ca.gov/file.pdf")
     assert len(visited) == 3
     assert delays == expected
 
@@ -350,16 +339,13 @@ async def test_redirect_obeys_destination_origin_robots(tmp_path: Path) -> None:
         return httpx.Response(302, headers={"Location": "https://second.gov/secret/card.pdf"})
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
+        source = Source(
+            discovery_jurisdiction="CA", url="https://first.gov/card.pdf", discovered_via="test"
+        )
+        options = Options()
         with pytest.raises(FetchError, match="robots"):
-            await Transport(client, check_dns=False).download(
-                Source(
-                    discovery_jurisdiction="CA",
-                    url="https://first.gov/card.pdf",
-                    discovered_via="test",
-                ),
-                tmp_path,
-                Options(),
-            )
+            await transport.download(source, tmp_path, options)
     assert visited == [
         ("first.gov", "/robots.txt"),
         ("first.gov", "/card.pdf"),
@@ -393,8 +379,9 @@ async def test_redirect_limit_closes_each_response() -> None:
         return httpx.Response(302, stream=body, headers={"Location": f"/hop-{len(bodies)}"})
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
         with pytest.raises(FetchError, match="Redirect limit"):
-            await Transport(client, check_dns=False).bytes("https://dmv.ca.gov/start")
+            await transport.bytes("https://dmv.ca.gov/start")
     assert len(bodies) == 6
     assert all(body.closed for body in bodies)
 
@@ -511,16 +498,13 @@ async def test_deadline_cleans_partial_download(
         )
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
+        source = Source(
+            discovery_jurisdiction="CA", url="https://dmv.ca.gov/a.pdf", discovered_via="test"
+        )
+        options = Options()
         with pytest.raises(TimeoutError):
-            await Transport(client, check_dns=False).download(
-                Source(
-                    discovery_jurisdiction="CA",
-                    url="https://dmv.ca.gov/a.pdf",
-                    discovered_via="test",
-                ),
-                tmp_path,
-                Options(),
-            )
+            await transport.download(source, tmp_path, options)
     assert body.closed
     assert not list(tmp_path.rglob(".download-*"))
     assert not list(tmp_path.rglob("*.pdf"))
@@ -537,16 +521,13 @@ async def test_invalid_prefix_rejects_before_consuming_remaining_chunks(tmp_path
         )
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        transport = Transport(client, check_dns=False)
+        source = Source(
+            discovery_jurisdiction="CA", url="https://dmv.ca.gov/a.pdf", discovered_via="test"
+        )
+        options = Options()
         with pytest.raises(FetchError, match="PDF signature"):
-            await Transport(client, check_dns=False).download(
-                Source(
-                    discovery_jurisdiction="CA",
-                    url="https://dmv.ca.gov/a.pdf",
-                    discovered_via="test",
-                ),
-                tmp_path,
-                Options(),
-            )
+            await transport.download(source, tmp_path, options)
     assert body.read_count == 1
     assert body.closed
     assert not list(tmp_path.rglob(".download-*"))

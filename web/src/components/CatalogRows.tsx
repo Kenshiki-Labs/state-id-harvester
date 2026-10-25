@@ -6,11 +6,7 @@ export default function CatalogRows({
   readonly catalog: CatalogController;
 }) {
   if (catalog.loading)
-    return (
-      <p className="catalog-message" role="status">
-        Loading source index…
-      </p>
-    );
+    return <output className="catalog-message">Loading source index…</output>;
   if (catalog.error)
     return (
       <p className="catalog-message" role="alert">

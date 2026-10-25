@@ -180,6 +180,14 @@ describe("adversarial policy contracts", () => {
     ).toThrow();
     expect(() => specimenIndex([{ ...federal, state: "ZZ" }])).toThrow();
   });
+  it("rejects duplicate collection/asset identities while allowing identical ids in separate collections", () => {
+    expect(() =>
+      specimenIndex([specimen, { ...specimen, key: "specimens/other.png" }]),
+    ).toThrow("invalid_specimen_index");
+    expect(
+      specimenIndex([specimen, { ...specimen, state: "US_FED" }]),
+    ).toHaveLength(2);
+  });
   it.each([
     { key: "https://evil.invalid/x.png" },
     { key: "snapshots/x.png" },

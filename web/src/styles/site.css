@@ -528,7 +528,7 @@ button:disabled {
 }
 .diagram-caption {
   font-size: 8px;
-  color: #808680;
+  color: #636b64;
   padding: 0 23px 15px;
   background: #fff;
   margin: 0;
@@ -667,6 +667,9 @@ h2 > span {
   min-height: 470px;
 }
 .jurisdiction-list {
+  margin: 0;
+  padding: 0;
+  border: 0;
   border-right: 1px solid var(--line);
   min-width: 0;
   background: #fafbfa;
@@ -756,6 +759,7 @@ h2 > span {
   border-top: 1px solid var(--line);
 }
 .catalog-message {
+  display: block;
   padding: 25px;
   font-size: 12px;
   color: var(--muted);
@@ -2091,6 +2095,9 @@ h2 > span {
     display: block;
   }
   .jurisdiction-list {
+    margin: 0;
+    padding: 0;
+    border: 0;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
@@ -2391,9 +2398,16 @@ h2 > span {
     scroll-behavior: auto;
   }
   *,
-  *:before,
-  *:after {
-    animation: none !important;
-    transition: none !important;
+  *::before,
+  *::after {
+    animation: none;
+  }
+  .site-header nav a,
+  .header-access,
+  .button,
+  .text-link,
+  .state-row,
+  .foundation-cards > a {
+    transition: none;
   }
 }

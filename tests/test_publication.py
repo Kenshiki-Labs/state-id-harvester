@@ -13,10 +13,14 @@ from types import SimpleNamespace
 import httpx
 import pytest
 
+from state_id_harvester.extract import extract
+from state_id_harvester.models import Manifest, Options, Source
+
 
 def script(name: str):
     spec = importlib.util.spec_from_file_location(name, Path("scripts") / f"{name}.py")
-    assert spec is not None and spec.loader is not None
+    assert spec is not None
+    assert spec.loader is not None
     module = importlib.util.module_from_spec(spec)
     sys.modules[name] = module
     spec.loader.exec_module(module)
@@ -373,9 +377,67 @@ def test_candidate_dimension_budget_is_checked_before_decode(
         vault_sync.read_candidate_image(tmp_path, asset)
 
 
+@pytest.mark.parametrize("attack", ["parent_traversal", "symlink"])
+def test_private_preparation_refuses_assets_outside_its_manifest_root(
+    tmp_path: Path, attack: str
+) -> None:
+    source = tmp_path / "collection"
+    source.mkdir()
+    outside = tmp_path / "outside.png"
+    outside.write_bytes(b"private image outside the collection")
+    if attack == "symlink":
+        (source / "linked.png").symlink_to(outside)
+        relative = "linked.png"
+    else:
+        relative = "../outside.png"
+    asset = SimpleNamespace(path=relative, sha256=hashlib.sha256(outside.read_bytes()).hexdigest())
+    with pytest.raises(ValueError, match="symlink|escapes"):
+        vault_sync.read_candidate_image(source, asset)
+
+
 def test_visual_publication_is_absent_from_the_collection_job() -> None:
     workflow = Path(".github/workflows/harvest.yml").read_text()
     assert "vault_sync.py push" in workflow
     assert "check_publication.py" in workflow
     assert "gh release create" not in workflow
     assert "uses: actions/upload-artifact" not in workflow
+
+
+def test_private_preparation_includes_quarantined_federal_plates_without_id1_claims(
+    tmp_path: Path,
+) -> None:
+    from test_extraction import fixture_pdf
+
+    source = tmp_path / "collection"
+    state_download = fixture_pdf(source)
+    state_doc = extract(state_download, str(source), Options(dpi=72, max_render_pages=1))
+    federal = source / "federal"
+    original = fixture_pdf(federal)
+    federal_source = Source(
+        discovery_jurisdiction="US_FED", url=original.source.url, discovered_via="synthetic_test"
+    )
+    federal_download = original.model_copy(update={"source": federal_source})
+    federal_doc = extract(federal_download, str(federal), Options(dpi=72, max_render_pages=1))
+    federal_doc = federal_doc.model_copy(update={"relevance": "quarantined"})
+    for root, code, document in [(source, "CA", state_doc), (federal, "US_FED", federal_doc)]:
+        manifest = Manifest(
+            generated_at="2026-10-25T00:00:00Z",
+            run_id="test",
+            source_revision="test",
+            requested_jurisdictions=[code],
+            options=Options(),
+            documents=[document],
+            reviews=[],
+        )
+        (root / "manifest.json").write_text(manifest.model_dump_json())
+    destination = tmp_path / "prepared"
+    items = vault_sync.prepare_specimens(source, destination, 1, federal_limit=1)
+    assert len(items) == 2
+    federal_item = next(item for item in items if item["state"] == "US_FED")
+    assert federal_item["reference_kind"] == "page_plate"
+    assert federal_item["credential_format"] == "unclassified"
+    assert federal_item["source_relevance"] == "quarantined"
+    assert federal_item["depicted_jurisdiction"] is None
+    assert federal_item["review_status"] == "reference_only"
+    assert federal_item["source_sha256"] == federal_download.sha256
+    assert (destination / f"{federal_item['asset_sha256']}.png").is_file()

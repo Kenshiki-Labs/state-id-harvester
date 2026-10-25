@@ -46,8 +46,12 @@ uv run python scripts/vault_sync.py prepare-specimens output tmp/private-specime
 uv run python scripts/vault_sync.py push-specimens tmp/private-specimens
 ```
 
-Prepared specimens come only from relevance-candidate documents and remain unreviewed
-crop proposals. A visible **SPECIMEN / VERIFICATION REFERENCE ONLY** footer is added
+Prepared state crops come from relevance-candidate documents and remain unreviewed
+proposals. A separately bounded federal pass includes source page plates even when a
+state-specific relevance filter quarantines their document. These are labeled
+`reference_kind: page_plate`, `source_collection: US_FED` and `credential_format: unclassified`;
+they are never represented as reviewed card crops. `--federal-limit` defaults to 30.
+A visible **SPECIMEN / VERIFICATION REFERENCE ONLY** footer is added
 outside the source raster. The original is preserved separately. A bounded resize may
 be used for delivery; scale, padding, original-asset hash, derivative hash, source hash,
 and source page are recorded. The `state` field denotes discovery jurisdiction, not an

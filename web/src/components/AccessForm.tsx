@@ -12,7 +12,10 @@ export default function AccessForm() {
   } = useAccessRequest();
   if (result)
     return (
-      <div className="access-result" role="status">
+      <div className="access-result">
+        <output className="sr-only">
+          Request received. Pending organization and authority review.
+        </output>
         <span className="result-icon" aria-hidden="true">
           ✓
         </span>
@@ -62,7 +65,7 @@ export default function AccessForm() {
     <form className="access-form" onSubmit={submit}>
       <div className="form-grid">
         <label>
-          Full name
+          Full name{" "}
           <input
             name="name"
             autoComplete="name"
@@ -73,7 +76,7 @@ export default function AccessForm() {
           />
         </label>
         <label>
-          Work email
+          Work email{" "}
           <input
             type="email"
             name="email"
@@ -84,7 +87,7 @@ export default function AccessForm() {
           />
         </label>
         <label>
-          Organization
+          Organization{" "}
           <input
             name="organization"
             autoComplete="organization"
@@ -95,7 +98,7 @@ export default function AccessForm() {
           />
         </label>
         <label>
-          Organization domain
+          Organization domain{" "}
           <input
             name="domain"
             required
@@ -106,7 +109,7 @@ export default function AccessForm() {
           />
         </label>
         <label>
-          Organization registration
+          Organization registration{" "}
           <select
             name="registration_type"
             value={registrationType}
@@ -124,7 +127,7 @@ export default function AccessForm() {
         <label>
           {["government", "education"].includes(registrationType)
             ? "Public entity / charter reference"
-            : "Registration ID"}
+            : "Registration ID"}{" "}
           <input
             name="registration_id"
             maxLength={150}
@@ -134,7 +137,7 @@ export default function AccessForm() {
           />
         </label>
         <label className="registration-wide">
-          Registration jurisdiction
+          Registration jurisdiction{" "}
           <input
             name="registration_jurisdiction"
             required
@@ -145,7 +148,7 @@ export default function AccessForm() {
         </label>
       </div>
       <label>
-        Intended use
+        Intended use{" "}
         <textarea
           name="use_case"
           required
