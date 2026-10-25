@@ -1,6 +1,17 @@
 """Gallery leads supplied for investigation, not verified specimen/cohort claims."""
 
 HTML_GALLERY_SEEDS: dict[str, list[str]] = {
+    "CA": [
+        "https://www.dmv.ca.gov/portal/news-and-media/dmv-to-release-new-california-drivers-license-and-identification-card-design-with-advanced-security-features/",
+    ],
+    "CO": ["https://dmv.colorado.gov/real-id-and-colorado"],
+    "GA": [
+        "https://dds.georgia.gov/sample-licenses-june-2019",
+        "https://dds.georgia.gov/sample-licenses-prior-june-2019",
+        "https://dds.georgia.gov/partners/license-barcode",
+    ],
+    "IL": ["https://www.ilsos.gov/departments/drivers/drivers-license/central-issuance.html"],
+    "NJ": ["https://www.nj.gov/mvc/realid/"],
     "WA": [
         "https://dol.wa.gov/driver-licenses-and-permits/driver-license-designs",
         "https://dol.wa.gov/id-cards/id-card-designs",
