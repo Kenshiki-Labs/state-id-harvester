@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
+from check_publication import Catalog, GeometryBundle
 from pydantic import TypeAdapter
 
 from state_id_harvester.catalog import Cohort
@@ -19,6 +20,8 @@ def main() -> None:
         "boundary-candidates": TypeAdapter(list[BoundaryCandidate]).json_schema(),
         "reviews": TypeAdapter(list[Review]).json_schema(),
         "cohorts": TypeAdapter(list[Cohort]).json_schema(),
+        "public-catalog": Catalog.model_json_schema(),
+        "public-cohorts": GeometryBundle.model_json_schema(),
     }
     Path("schemas").mkdir(exist_ok=True)
     for name, schema in schemas.items():

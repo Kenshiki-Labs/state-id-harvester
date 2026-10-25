@@ -1,0 +1,271 @@
+{
+  "$defs": {
+    "Cohort": {
+      "additionalProperties": false,
+      "properties": {
+        "cohort_id": {
+          "pattern": "^[A-Z0-9_]+$",
+          "title": "Cohort Id",
+          "type": "string"
+        },
+        "credential_type": {
+          "enum": [
+            "driver_license",
+            "identification_card",
+            "learner_permit"
+          ],
+          "title": "Credential Type",
+          "type": "string"
+        },
+        "design_generation": {
+          "minLength": 1,
+          "title": "Design Generation",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "iins": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Iins",
+          "type": "array"
+        },
+        "invariants": {
+          "items": {
+            "$ref": "#/$defs/Invariant"
+          },
+          "title": "Invariants",
+          "type": "array"
+        },
+        "issue_date_end": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Issue Date End"
+        },
+        "issue_date_start": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Issue Date Start"
+        },
+        "jurisdiction": {
+          "title": "Jurisdiction",
+          "type": "string"
+        },
+        "orientation": {
+          "enum": [
+            "horizontal",
+            "vertical"
+          ],
+          "title": "Orientation",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "accepted",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "reviewer": {
+          "minLength": 1,
+          "title": "Reviewer",
+          "type": "string"
+        },
+        "zones": {
+          "items": {
+            "$ref": "#/$defs/Zone"
+          },
+          "title": "Zones",
+          "type": "array"
+        }
+      },
+      "required": [
+        "cohort_id",
+        "jurisdiction",
+        "credential_type",
+        "orientation",
+        "iins",
+        "design_generation",
+        "review_status",
+        "reviewer",
+        "evidence",
+        "zones",
+        "invariants"
+      ],
+      "title": "Cohort",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "asset_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Asset Sha256",
+          "type": "string"
+        },
+        "explanation": {
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "page_number": {
+          "minimum": 1,
+          "title": "Page Number",
+          "type": "integer"
+        },
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_sha256",
+        "asset_sha256",
+        "page_number",
+        "explanation"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "Invariant": {
+      "additionalProperties": false,
+      "properties": {
+        "decision_use": {
+          "const": "observation_only",
+          "default": "observation_only",
+          "title": "Decision Use",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "observation_modality": {
+          "enum": [
+            "visible",
+            "tilt",
+            "transmitted_light",
+            "uv",
+            "tactile",
+            "barcode"
+          ],
+          "title": "Observation Modality",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "observation_modality",
+        "evidence"
+      ],
+      "title": "Invariant",
+      "type": "object"
+    },
+    "Zone": {
+      "additionalProperties": false,
+      "properties": {
+        "bbox_uv": {
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Bbox Uv",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "geometry_basis": {
+          "enum": [
+            "reviewed_specimen",
+            "physical_calibration"
+          ],
+          "title": "Geometry Basis",
+          "type": "string"
+        },
+        "measured_error_mm": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Measured Error Mm"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "bbox_uv",
+        "geometry_basis",
+        "evidence"
+      ],
+      "title": "Zone",
+      "type": "object"
+    }
+  },
+  "items": {
+    "$ref": "#/$defs/Cohort"
+  },
+  "type": "array"
+}

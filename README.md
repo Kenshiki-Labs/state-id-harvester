@@ -1,77 +1,95 @@
-# State ID Harvester
+# Cadastre
 
-An open, auditable reference-library builder for US driver licenses and identification
-cards across the 50 states and Washington, DC. It collects public official documents,
-preserves source bytes, extracts images and geometry, and proposes card crops for review.
+An auditable reference-library builder for US driver licenses and identification cards
+across the 50 states and Washington, DC. The public project contains extraction code,
+schemas, official-source citations and hashes, coverage metadata, and reviewed normalized
+geometry. Original documents and visual derivatives stay in a separate private vault.
+Federal credentials are collected separately under `US_FED`; see [federal collection](docs/federal.md).
 
-The library supports document research and topology analysis. Publication on an official
-website establishes provenance; it does not establish specimen scale, current design,
-complete coverage, or the authenticity of a presented credential.
+Website: <https://cadastre.kenshikilabs.com> · Repository:
+<https://github.com/Kenshiki-Labs/state-id-harvester>
 
-## Run locally
+Collection, visual review, physical calibration, and credential acceptance are separate
+checkpoints. A downloaded brochure does not establish a current design, a complete design
+family, or the authenticity of a presented credential. The catalog reports actual gaps;
+zero reviewed cohorts means no reviewed runtime template is available.
+
+## Run the collector
 
 Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/). No browser or model is used.
 
 ```sh
 uv sync --locked --dev
-uv run state-id-harvester harvest --all
+uv run state-id-harvester harvest --all --ocr
 uv run state-id-harvester verify
-uv run state-id-harvester report
-open output/index.html
+uv run state-id-harvester export-catalog
+uv run python scripts/build_public_catalog.py
+uv run python scripts/check_publication.py
 ```
 
-Use `--states FL TX WA VA PA NE AK` for a bounded smoke test. The compatibility command
-`uv run python harvester.py --states FL TX WA` also works. See `--help` for budgets.
-An optional `SERPER_API_KEY` or `BRAVE_API_KEY` enables four searches per selected
-jurisdiction. Without a key, curated PDFs and bounded official-page discovery still run.
+Use `--states FL TX WA VA PA NE AK` for a bounded collection. Optional `SERPER_API_KEY`
+or `BRAVE_API_KEY` enables four searches per selected jurisdiction. Without a key,
+curated PDFs and bounded official-page discovery still run. Install Tesseract for `--ocr`
+(`brew install tesseract` or `sudo apt-get install tesseract-ocr`). Raw OCR observations
+retain their origin and confidence and never automatically become runtime rules.
 
-For raster callouts and hybrid PDFs, install local Tesseract (`brew install tesseract`
-on macOS, `sudo apt-get install tesseract-ocr` on Ubuntu) and add `--ocr`. The scheduled
-job enables OCR. Extracted text retains its native/OCR origin and confidence.
-
-Browse at <http://localhost:8765/> after starting:
+For the private local review surface, start:
 
 ```sh
 uv run python -m http.server 8765 --bind 127.0.0.1 --directory output
 ```
 
-VS Code tasks provide the same server, full harvest, and integrity check.
+Open <http://localhost:8765/>. This directory contains original source media and must
+remain local or in the private vault. The public Astro website lives in `web/` and
+consumes only the allowlisted export in `web/public/data/`.
 
-## Published library and job
+## Publication and scheduled collection
 
-[Coverage](library/coverage.md) and the compact [manifest](library/manifest.json) are
-committed separately from bulky source PDFs and images. Download all `library-*.tar.gz`
-parts and `library-index.json` from the [latest release](https://github.com/Kenshiki-Labs/state-id-harvester/releases/latest),
-then restore and verify:
+[Coverage](library/coverage.md) and [citations](library/manifest.json) are public metadata.
+`scripts/build_public_catalog.py` exports an explicit field allowlist; it does not copy
+PDFs, raster images, extracted source text, seals, font outlines, or raw PDF resources.
+Only accepted, hash-bound cohorts can contribute public normalized geometry. The public
+artifact guard checks the static tree before publication.
+
+The **Build reference library** workflow is configured for manual execution and Mondays
+at 09:17 UTC. Its enabled/disabled state in GitHub is an operational setting, separate
+from this configuration. It requires `CADASTRE_INGEST_KEY`; optional search keys are
+repository secrets. It restores private archives, collects all 51 jurisdictions with
+OCR, verifies hashes, exports reviewed cohorts, uploads a private snapshot, and commits
+only public metadata. It publishes no visual GitHub releases or Actions artifacts.
+
+Private compressed archives are split into at most 40 MiB authenticated transport chunks.
+Every chunk and reconstructed archive is hash checked. The latest private pointer changes
+only after all archive parts have uploaded. To restore an authorized private collection:
 
 ```sh
-uv run python scripts/unpack_library.py path/to/downloads output
+# Obtain CADASTRE_INGEST_KEY through the operator's secret manager; never paste it in Git.
+uv run python scripts/vault_sync.py pull output
 uv run state-id-harvester verify
 ```
 
-The **Build reference library** workflow runs weekly on Mondays at 09:17 UTC, or manually
-from the Actions tab. It restores the prior release, refreshes sources, discovers new
-PDFs, extracts, verifies, updates coverage, and publishes a new immutable snapshot.
-Archives are split below release asset limits. The index contains each part's hash and
-byte size; restore verifies these before extraction. Prior extractor derivatives are not
-duplicated in a newer snapshot. Historical snapshots remain in their original releases.
-GitHub may disable schedules after 60 days without repository activity; check Actions
-if a scheduled run stops. Configure optional search credentials as repository secrets.
+Authorized visual access is a separate workflow: an application, entity and applicant
+authorization review, accepted reference-use terms, and an individually scoped key.
+Domain and registration checks support that review; they do not constitute completed KYB.
+Automated KYB provider integration and operational authorization remain separate work.
+Visible specimen marking and keyed response metadata support attribution; they do not
+guarantee tracing after transformation or create statutory immunity.
 
-Defaults bound discovery and extraction. Missing, blocked, oversized, and unprocessed
-sources are visible in run ledgers. `--refresh` refetches URLs; `--fail-on-gap` requires a
-parsed source for every requested jurisdiction. Neither implies reviewed design coverage.
+## Evidence and architecture
 
-## Evidence and review
+The extraction engine preserves original bytes, page geometry, repeated image placements,
+PDF masks, native/OCR provenance, composed-page crops, and extraction fingerprints.
+Boundary candidates remain unreviewed until a reviewer binds a decision to source and
+asset hashes. Nominal ID-1 coordinates do not imply measured physical accuracy.
 
-Publisher jurisdiction, discovery jurisdiction, and depicted credential jurisdiction
-are separate. Extracted images, card-boundary proposals, and feature text start unreviewed.
-Accepted depicted-state coverage requires a hash-bound record in `reviews.json`.
-Nominal ID-1 coordinates do not imply measured physical accuracy. See `SPEC.md` for the
-pipeline contracts and `docs/review.md` for review and cohort export.
+See [pipeline contracts](SPEC.md), [review instructions](docs/review.md),
+[publication boundaries](docs/publication.md), and [architecture alignment](docs/architecture.md).
+The website follows the headless core and host separation used by Kenshiki SDKs and
+Gateway: static Astro presentation, typed observations, isolated Worker storage, and
+server-side authorization. It does not integrate a credential acceptance policy into an SDK.
 
 ## License
 
-Code is MIT licensed. Downloaded source documents and derived images retain their
-respective rights and attribution; the code license does not relicense third-party material.
+Code is MIT licensed. The code license does not relicense third-party documents or images.
+Official publication establishes provenance, not unrestricted redistribution rights.
 This project has no affiliation with state issuing authorities or AAMVA.

@@ -6,18 +6,28 @@ import asyncio
 import os
 import re
 from html.parser import HTMLParser
+from typing import Literal
 from urllib.parse import unquote, urljoin
 
 import httpx
 
 from .models import Event, Source
 from .network import FetchError, Transport, official_url
-from .seeds import DORK_TEMPLATES, GOLDEN_SEED_PDFS, LANDING_PAGES, STATE_DOMAINS
+from .seeds import (
+    COLLECTION_DOMAINS,
+    DORK_TEMPLATES,
+    FEDERAL_CODE,
+    collection_landing_pages,
+    collection_pdf_seeds,
+)
 from .storage import now
 
 RELEVANT = re.compile(
     r"secur|credential|new.?design|new.?card|sample|brochure|fraud|identif|driver|licen[cs]e|retail|train",
     re.I,
+)
+FEDERAL_RELEVANT = re.compile(
+    RELEVANT.pattern + r"|passport|resident|employment|\bPIV\b|personal.identity|carrier", re.I
 )
 
 
@@ -50,6 +60,54 @@ def pdf_link(url: str, label: str) -> bool:
     )
 
 
+def discovery_event(
+    state: str, url: str, status: Literal["ok", "failed", "cached", "skipped"], detail: str
+) -> Event:
+    return Event(
+        at=now(), jurisdiction=state, url=url, stage="discovery", status=status, detail=detail
+    )
+
+
+def official_sources(state: str, urls: list[str], via: str) -> list[Source]:
+    found: list[Source] = []
+    for url in urls:
+        try:
+            found.append(
+                Source(discovery_jurisdiction=state, url=official_url(url), discovered_via=via)
+            )
+        except FetchError:
+            continue
+    return found
+
+
+async def search_urls(client: httpx.AsyncClient, provider: str, key: str, query: str) -> list[str]:
+    if provider == "serper":
+        response = await client.post(
+            "https://google.serper.dev/search",
+            headers={"X-API-KEY": key},
+            json={"q": query, "num": 10},
+        )
+    else:
+        response = await client.get(
+            "https://api.search.brave.com/res/v1/web/search",
+            headers={"X-Subscription-Token": key},
+            params={"q": query, "count": 10},
+        )
+    response.raise_for_status()
+    payload = response.json()
+    results = (
+        payload.get("organic", [])
+        if provider == "serper"
+        else payload.get("web", {}).get("results", [])
+    )
+    link_key = "link" if provider == "serper" else "url"
+    return [
+        item[link_key]
+        for item in results
+        if isinstance(item, dict) and isinstance(item.get(link_key), str)
+    ]
+
+
 async def search(
     state: str,
     client: httpx.AsyncClient,
@@ -59,63 +117,70 @@ async def search(
     sources: list[Source] = []
     events: list[Event] = []
     for template in DORK_TEMPLATES:
-        query = template.format(domain=STATE_DOMAINS[state])
+        query = template.format(domain=COLLECTION_DOMAINS[state])
         try:
-            # discover_all serializes provider requests, including across states.
-            if provider == "serper":
-                response = await client.post(
-                    "https://google.serper.dev/search",
-                    headers={"X-API-KEY": key},
-                    json={"q": query, "num": 10},
-                )
-                response.raise_for_status()
-                urls = [item.get("link", "") for item in response.json().get("organic", [])]
-            else:
-                response = await client.get(
-                    "https://api.search.brave.com/res/v1/web/search",
-                    headers={"X-Subscription-Token": key},
-                    params={"q": query, "count": 10},
-                )
-                response.raise_for_status()
-                urls = [
-                    item.get("url", "")
-                    for item in response.json().get("web", {}).get("results", [])
-                ]
-            for url in urls:
-                try:
-                    sources.append(
-                        Source(
-                            discovery_jurisdiction=state,
-                            url=official_url(url),
-                            discovered_via=f"search:{provider}:{query}",
-                        )
-                    )
-                except (FetchError, ValueError):
-                    continue
+            # discover_all serializes provider requests, including across collections.
+            urls = await search_urls(client, provider, key, query)
+            sources.extend(official_sources(state, urls, f"search:{provider}:{query}"))
             events.append(
-                Event(
-                    at=now(),
-                    jurisdiction=state,
-                    url=provider,
-                    stage="discovery",
-                    status="ok",
-                    detail=f"Search returned {len(urls)} results: {query}",
+                discovery_event(
+                    state, provider, "ok", f"Search returned {len(urls)} results: {query}"
                 )
             )
-        except (httpx.HTTPError, ValueError, KeyError, TypeError):
+        except (httpx.HTTPError, ValueError, KeyError, TypeError, AttributeError):
             # Never include provider request headers/keys in an error ledger.
             events.append(
-                Event(
-                    at=now(),
-                    jurisdiction=state,
-                    url=provider,
-                    stage="discovery",
-                    status="failed",
-                    detail=f"Search request failed: {query}",
-                )
+                discovery_event(state, provider, "failed", f"Search request failed: {query}")
             )
         await asyncio.sleep(1.1)
     return sources, events
+
+
+def classify_links(
+    state: str, final_url: str, parser: Links, seen: set[str]
+) -> tuple[list[Source], list[str]]:
+    found: list[Source] = []
+    next_pages: list[tuple[int, str]] = []
+    relevant = FEDERAL_RELEVANT if state == FEDERAL_CODE else RELEVANT
+    for href, label in parser.links:
+        try:
+            candidate = official_url(urljoin(final_url, href))
+        except (ValueError, FetchError):
+            continue
+        description = unquote(candidate) + " " + label
+        if not relevant.search(description):
+            continue
+        if pdf_link(candidate, label):
+            found.append(
+                Source(
+                    discovery_jurisdiction=state,
+                    url=candidate,
+                    discovered_via=final_url,
+                    link_text=label,
+                )
+            )
+        elif candidate not in seen:
+            score = len(re.findall(r"secur|sample|new.?design|brochure|fraud", description, re.I))
+            next_pages.append((-score, candidate))
+    return found, [url for _, url in sorted(next_pages)]
+
+
+async def discover_page(
+    state: str, url: str, transport: Transport, seen: set[str]
+) -> tuple[list[Source], list[str], str]:
+    data, final_url, content_type = await transport.bytes(url, obey_robots=True)
+    if b"%PDF-" in data[:1024]:
+        return (
+            [Source(discovery_jurisdiction=state, url=url, discovered_via="official_page")],
+            [],
+            "Entry point returned a PDF",
+        )
+    if "html" not in content_type.lower():
+        raise FetchError("Entry point did not return HTML or a PDF")
+    parser = Links()
+    parser.feed(data.decode("utf-8", errors="replace"))
+    found, next_pages = classify_links(state, final_url, parser, seen)
+    return found, next_pages, f"Parsed {len(parser.links)} official-page links"
 
 
 async def discover(
@@ -123,12 +188,9 @@ async def discover(
     transport: Transport,
     crawl_pages: int,
 ) -> tuple[list[Source], list[Event]]:
-    found = [
-        Source(discovery_jurisdiction=state, url=url, discovered_via="curated_seed")
-        for url in GOLDEN_SEED_PDFS.get(state, [])
-    ]
+    found = official_sources(state, collection_pdf_seeds(state), "curated_seed")
     events: list[Event] = []
-    queue = list(LANDING_PAGES[state])
+    queue = list(collection_landing_pages(state))
     seen: set[str] = set()
     for _ in range(crawl_pages):
         if not queue:
@@ -138,74 +200,17 @@ async def discover(
             continue
         seen.add(url)
         try:
-            if not await transport.allowed(url):
-                raise FetchError("robots.txt disallows this URL")
-            data, final_url, content_type = await transport.bytes(url)
-            if b"%PDF-" in data[:1024]:
-                found.append(
-                    Source(discovery_jurisdiction=state, url=url, discovered_via="official_page")
-                )
-                continue
-            if "html" not in content_type.lower():
-                raise FetchError("Entry point did not return HTML or a PDF")
-            parser = Links()
-            parser.feed(data.decode("utf-8", errors="replace"))
-            next_pages: list[tuple[int, str]] = []
-            for href, label in parser.links:
-                try:
-                    candidate = official_url(urljoin(final_url, href))
-                except (ValueError, FetchError):
-                    continue
-                description = unquote(candidate) + " " + label
-                if not RELEVANT.search(description):
-                    continue
-                if pdf_link(candidate, label):
-                    found.append(
-                        Source(
-                            discovery_jurisdiction=state,
-                            url=candidate,
-                            discovered_via=final_url,
-                            link_text=label,
-                        )
-                    )
-                elif candidate not in seen and candidate not in queue:
-                    score = len(
-                        re.findall(r"secur|sample|new.?design|brochure|fraud", description, re.I)
-                    )
-                    next_pages.append((-score, candidate))
-            queue = [u for _, u in sorted(next_pages)] + queue
-            queue = list(dict.fromkeys(queue))[:100]
-            events.append(
-                Event(
-                    at=now(),
-                    jurisdiction=state,
-                    url=url,
-                    stage="discovery",
-                    status="ok",
-                    detail=f"Parsed {len(parser.links)} official-page links",
-                )
-            )
-        except (FetchError, httpx.HTTPError, OSError, TimeoutError, ValueError) as exc:
-            events.append(
-                Event(
-                    at=now(),
-                    jurisdiction=state,
-                    url=url,
-                    stage="discovery",
-                    status="failed",
-                    detail=f"{type(exc).__name__}: {exc}",
-                )
-            )
+            sources, next_pages, detail = await discover_page(state, url, transport, seen)
+            found.extend(sources)
+            queue = list(dict.fromkeys(next_pages + queue))[:100]
+            events.append(discovery_event(state, url, "ok", detail))
+        except (FetchError, httpx.HTTPError, OSError, ValueError) as exc:
+            events.append(discovery_event(state, url, "failed", f"{type(exc).__name__}: {exc}"))
         await asyncio.sleep(0.2)
     if not crawl_pages:
         events.append(
-            Event(
-                at=now(),
-                jurisdiction=state,
-                url="",
-                stage="discovery",
-                status="skipped",
-                detail="Official-page discovery disabled by configuration",
+            discovery_event(
+                state, "", "skipped", "Official-page discovery disabled by configuration"
             )
         )
     return found, events
@@ -229,13 +234,11 @@ async def discover_all(
             events.extend(ledger)
     else:
         events.extend(
-            Event(
-                at=now(),
-                jurisdiction=s,
-                url="",
-                stage="discovery",
-                status="skipped",
-                detail="No search API key; using curated seeds and bounded official pages",
+            discovery_event(
+                s,
+                "",
+                "skipped",
+                "No search API key; using curated seeds and bounded official pages",
             )
             for s in states
         )

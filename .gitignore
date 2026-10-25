@@ -11,3 +11,15 @@ dist/
 tmp/
 *.egg-info/
 .DS_Store
+node_modules/
+web/dist/
+web/.astro/
+.wrangler/
+.dev.vars
+.dev.vars.*
+.playwright-cli/
+*.log
+.private/
+.coverage
+coverage.xml
+web/coverage/

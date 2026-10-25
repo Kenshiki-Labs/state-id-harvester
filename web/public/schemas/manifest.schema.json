@@ -1,0 +1,554 @@
+{
+  "$defs": {
+    "Asset": {
+      "additionalProperties": false,
+      "properties": {
+        "height": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Height"
+        },
+        "kind": {
+          "enum": [
+            "extracted_image",
+            "raw_stream",
+            "page_render",
+            "thumbnail",
+            "text",
+            "geometry",
+            "card_candidate"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "page_number": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page Number"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "size_bytes": {
+          "minimum": 0,
+          "title": "Size Bytes",
+          "type": "integer"
+        },
+        "width": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Width"
+        },
+        "xref": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Xref"
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "size_bytes",
+        "kind"
+      ],
+      "title": "Asset",
+      "type": "object"
+    },
+    "Document": {
+      "additionalProperties": false,
+      "properties": {
+        "assets": {
+          "items": {
+            "$ref": "#/$defs/Asset"
+          },
+          "title": "Assets",
+          "type": "array"
+        },
+        "download": {
+          "$ref": "#/$defs/Download"
+        },
+        "extraction_fingerprint": {
+          "title": "Extraction Fingerprint",
+          "type": "string"
+        },
+        "extractor_version": {
+          "title": "Extractor Version",
+          "type": "string"
+        },
+        "matched_features": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Matched Features",
+          "type": "array"
+        },
+        "page_count": {
+          "title": "Page Count",
+          "type": "integer"
+        },
+        "pymupdf_version": {
+          "title": "Pymupdf Version",
+          "type": "string"
+        },
+        "relevance": {
+          "enum": [
+            "candidate",
+            "quarantined"
+          ],
+          "title": "Relevance",
+          "type": "string"
+        },
+        "relevance_reason": {
+          "title": "Relevance Reason",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "unreviewed",
+          "default": "unreviewed",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "download",
+        "extractor_version",
+        "extraction_fingerprint",
+        "pymupdf_version",
+        "title",
+        "page_count",
+        "matched_features",
+        "relevance",
+        "relevance_reason",
+        "assets",
+        "warnings"
+      ],
+      "title": "Document",
+      "type": "object"
+    },
+    "Download": {
+      "additionalProperties": false,
+      "properties": {
+        "content_type": {
+          "title": "Content Type",
+          "type": "string"
+        },
+        "etag": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Etag"
+        },
+        "final_url": {
+          "title": "Final Url",
+          "type": "string"
+        },
+        "last_modified": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Modified"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "publisher_host": {
+          "title": "Publisher Host",
+          "type": "string"
+        },
+        "publisher_jurisdiction": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Publisher Jurisdiction"
+        },
+        "retrieved_at": {
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "size_bytes": {
+          "minimum": 1,
+          "title": "Size Bytes",
+          "type": "integer"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        }
+      },
+      "required": [
+        "source",
+        "final_url",
+        "retrieved_at",
+        "sha256",
+        "size_bytes",
+        "path",
+        "content_type",
+        "publisher_host"
+      ],
+      "title": "Download",
+      "type": "object"
+    },
+    "Options": {
+      "additionalProperties": false,
+      "properties": {
+        "crawl_pages": {
+          "default": 6,
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Crawl Pages",
+          "type": "integer"
+        },
+        "detect_boundaries": {
+          "default": true,
+          "title": "Detect Boundaries",
+          "type": "boolean"
+        },
+        "dpi": {
+          "default": 600,
+          "maximum": 600,
+          "minimum": 72,
+          "title": "Dpi",
+          "type": "integer"
+        },
+        "max_asset_bytes": {
+          "default": 500000000,
+          "minimum": 1,
+          "title": "Max Asset Bytes",
+          "type": "integer"
+        },
+        "max_image_pixels": {
+          "default": 40000000,
+          "minimum": 1,
+          "title": "Max Image Pixels",
+          "type": "integer"
+        },
+        "max_pages": {
+          "default": 250,
+          "minimum": 1,
+          "title": "Max Pages",
+          "type": "integer"
+        },
+        "max_pdf_bytes": {
+          "default": 36700160,
+          "minimum": 1,
+          "title": "Max Pdf Bytes",
+          "type": "integer"
+        },
+        "max_pdfs_per_state": {
+          "default": 8,
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Max Pdfs Per State",
+          "type": "integer"
+        },
+        "max_pixels": {
+          "default": 40000000,
+          "minimum": 1,
+          "title": "Max Pixels",
+          "type": "integer"
+        },
+        "max_render_pages": {
+          "default": 12,
+          "minimum": 0,
+          "title": "Max Render Pages",
+          "type": "integer"
+        },
+        "max_tiles_per_page": {
+          "default": 16,
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Max Tiles Per Page",
+          "type": "integer"
+        },
+        "min_pdf_bytes": {
+          "default": 25000,
+          "minimum": 1,
+          "title": "Min Pdf Bytes",
+          "type": "integer"
+        },
+        "ocr": {
+          "default": false,
+          "title": "Ocr",
+          "type": "boolean"
+        },
+        "refresh": {
+          "default": false,
+          "title": "Refresh",
+          "type": "boolean"
+        },
+        "workers": {
+          "default": 2,
+          "maximum": 8,
+          "minimum": 1,
+          "title": "Workers",
+          "type": "integer"
+        }
+      },
+      "title": "Options",
+      "type": "object"
+    },
+    "Review": {
+      "additionalProperties": false,
+      "properties": {
+        "asset_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Asset Sha256",
+          "type": "string"
+        },
+        "credential_type": {
+          "enum": [
+            "driver_license",
+            "identification_card",
+            "learner_permit"
+          ],
+          "title": "Credential Type",
+          "type": "string"
+        },
+        "depicted_jurisdiction": {
+          "pattern": "^[A-Z]{2}$",
+          "title": "Depicted Jurisdiction",
+          "type": "string"
+        },
+        "design_generation": {
+          "minLength": 1,
+          "title": "Design Generation",
+          "type": "string"
+        },
+        "evidence": {
+          "minLength": 1,
+          "title": "Evidence",
+          "type": "string"
+        },
+        "reviewed_at": {
+          "title": "Reviewed At",
+          "type": "string"
+        },
+        "reviewer": {
+          "minLength": 1,
+          "title": "Reviewer",
+          "type": "string"
+        },
+        "side": {
+          "enum": [
+            "front",
+            "back",
+            "both",
+            "detail"
+          ],
+          "title": "Side",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "accepted",
+            "rejected"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_sha256",
+        "asset_sha256",
+        "depicted_jurisdiction",
+        "credential_type",
+        "design_generation",
+        "side",
+        "status",
+        "reviewer",
+        "reviewed_at",
+        "evidence"
+      ],
+      "title": "Review",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "credential_format": {
+          "anyOf": [
+            {
+              "enum": [
+                "ID1",
+                "unclassified"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Credential Format"
+        },
+        "discovered_via": {
+          "title": "Discovered Via",
+          "type": "string"
+        },
+        "discovery_jurisdiction": {
+          "pattern": "^(?:[A-Z]{2}|US_FED)$",
+          "title": "Discovery Jurisdiction",
+          "type": "string"
+        },
+        "link_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Link Text"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "discovery_jurisdiction",
+        "url",
+        "discovered_via"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "documents": {
+      "items": {
+        "$ref": "#/$defs/Document"
+      },
+      "title": "Documents",
+      "type": "array"
+    },
+    "generated_at": {
+      "title": "Generated At",
+      "type": "string"
+    },
+    "options": {
+      "$ref": "#/$defs/Options"
+    },
+    "requested_jurisdictions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Requested Jurisdictions",
+      "type": "array"
+    },
+    "reviews": {
+      "items": {
+        "$ref": "#/$defs/Review"
+      },
+      "title": "Reviews",
+      "type": "array"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "source_revision": {
+      "title": "Source Revision",
+      "type": "string"
+    }
+  },
+  "required": [
+    "generated_at",
+    "run_id",
+    "source_revision",
+    "requested_jurisdictions",
+    "options",
+    "documents",
+    "reviews"
+  ],
+  "title": "Manifest",
+  "type": "object"
+}

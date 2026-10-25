@@ -1,10 +1,12 @@
-# Public state ID reference library
+# Cadastre state ID reference library
 
 ## Purpose
 
 Build a repeatable public-source reference collection for all 50 US states and DC.
-The deliverable is a harvesting job, retained evidence, inspectable topology proposals,
-and a separately reviewed cohort interchange. It is not a document-authenticity verdict.
+The public deliverable is code, schemas, citation metadata, and reviewed normalized
+geometry. A private vault retains original evidence and visual reference derivatives.
+The harvesting job produces inspectable topology proposals and a separately reviewed
+cohort interchange. It is not a document-authenticity verdict.
 
 ## Discovery and transport
 
@@ -100,9 +102,12 @@ physical-card qualification are separate downstream work.
 GitHub Actions validates lint, formatting, strict application types, behavioral tests,
 generated JSON schemas, and package build. A separate weekly/manual job restores the last
 published snapshot, harvests all 51 jurisdictions with local OCR, rehashes the result,
-exports reviewed cohorts, commits compact metadata, and publishes an immutable release.
-Search API keys are optional repository secrets. Failure ledgers are retained as artifacts.
-Bulky third-party source and derivative assets are released separately from code.
+exports reviewed cohorts, commits allowlisted metadata, and publishes a private immutable
+snapshot through an authenticated Worker into private R2. There are no visual GitHub
+releases or Actions artifacts. Search API keys are optional repository secrets; the vault
+ingestion key is required. Private failure ledgers stay in the snapshot. Source media,
+OCR text, seals, font outlines and raster derivatives never enter public static artifacts.
+See `docs/publication.md` for transport, visual access and manual authorization boundaries.
 
 ## Acceptance
 

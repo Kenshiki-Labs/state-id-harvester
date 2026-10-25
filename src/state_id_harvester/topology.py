@@ -112,14 +112,13 @@ def proposals(page: Any) -> list[tuple[Method, FloatArray, float]]:
     return candidates
 
 
-def detect(
-    page: Any,
-    blocks: list[TextBlock],
-    page_number: int,
-) -> list[tuple[BoundaryCandidate, bytes]]:
+RankedProposal = tuple[float, Method, FloatArray, float, float, float]
+
+
+def rank_proposals(page: Any) -> list[RankedProposal]:
     import pymupdf
 
-    ranked: list[tuple[float, Method, FloatArray, float, float, float]] = []
+    ranked: list[RankedProposal] = []
     for method, corners, base in proposals(page):
         width, height, error = shape(corners)
         if min(width, height) < 35 or error > 0.12:
@@ -131,66 +130,102 @@ def detect(
         if any(not page.rect.contains(pymupdf.Point(float(p[0]), float(p[1]))) for p in corners):
             continue
         ranked.append((max(0.0, base - error), method, corners, width, height, error))
+    return sorted(ranked, key=lambda candidate: -candidate[0])
+
+
+def overlaps_existing(corners: FloatArray, accepted: list[FloatArray]) -> bool:
+    area = abs(float(cv2.contourArea(corners)))
+    for existing in accepted:
+        overlap, _ = cv2.intersectConvexConvex(corners, existing)
+        union = area + abs(float(cv2.contourArea(existing))) - float(overlap)
+        if union > 0 and float(overlap) / union > 0.85:
+            return True
+    return False
+
+
+def crop_proposal(
+    page: Any, corners: FloatArray, width: float, height: float
+) -> tuple[bytes, tuple[float, float, float, float]] | None:
+    import pymupdf
+
+    x0, y0 = (float(x) for x in corners.min(axis=0))
+    x1, y1 = (float(x) for x in corners.max(axis=0))
+    clip = pymupdf.Rect(x0, y0, x1, y1)
+    scale = min(600 / 72, math.sqrt(4_000_000 / max(clip.get_area(), 1)))
+    pix = page.get_pixmap(
+        matrix=pymupdf.Matrix(scale, scale),
+        clip=clip,
+        colorspace=pymupdf.csRGB,
+        alpha=False,
+        annots=False,
+    )
+    raster = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, 3)
+    crop_width = max(1, round(width * scale))
+    crop_height = max(1, round(height * scale))
+    src = corners * scale - np.array([pix.x, pix.y], dtype=np.float32)
+    dst = np.array(
+        [[0, 0], [crop_width - 1, 0], [crop_width - 1, crop_height - 1], [0, crop_height - 1]],
+        dtype=np.float32,
+    )
+    crop = cv2.warpPerspective(
+        raster, cv2.getPerspectiveTransform(src, dst), (crop_width, crop_height)
+    )
+    ok, encoded = cv2.imencode(".png", cv2.cvtColor(crop, cv2.COLOR_RGB2BGR))
+    if not ok:
+        return None
+    return encoded.tobytes(), (x0, y0, x1, y1)
+
+
+def boundary_candidate(
+    proposal: RankedProposal,
+    bbox: tuple[float, float, float, float],
+    blocks: list[TextBlock],
+    page_number: int,
+    candidate_number: int,
+) -> BoundaryCandidate:
+    score, method, corners, width, height, error = proposal
+    nominal_width, nominal_height = (85.60, 53.98) if width >= height else (53.98, 85.60)
+    return BoundaryCandidate(
+        candidate_id=f"p{page_number}-c{candidate_number}",
+        page_number=page_number,
+        method=method,
+        page_bbox=bbox,
+        page_corners=[(float(p[0]), float(p[1])) for p in corners],
+        aspect_ratio=width / height,
+        aspect_error=error,
+        score=score,
+        crop_path="",
+        text_regions=normalize_regions(corners, blocks, nominal_width, nominal_height),
+        warnings=[
+            "Boundary is a proposal; specimen may be stretched, composite, or watermarked",
+            "ID-1 millimeters are nominal; physical metric accuracy is unmeasured",
+            "Orientation, credential identity, and internal layout require review",
+        ],
+        nominal_width_mm=nominal_width,
+        nominal_height_mm=nominal_height,
+    )
+
+
+def detect(
+    page: Any,
+    blocks: list[TextBlock],
+    page_number: int,
+) -> list[tuple[BoundaryCandidate, bytes]]:
     output: list[tuple[BoundaryCandidate, bytes]] = []
     accepted_polygons: list[FloatArray] = []
-    for score, method, corners, width, height, error in sorted(ranked, key=lambda x: -x[0]):
-        area = abs(float(cv2.contourArea(corners)))
-        duplicate = False
-        for existing in accepted_polygons:
-            overlap, _ = cv2.intersectConvexConvex(corners, existing)
-            union = area + abs(float(cv2.contourArea(existing))) - float(overlap)
-            if union > 0 and float(overlap) / union > 0.85:
-                duplicate = True
-                break
-        if duplicate:
+    for proposal in rank_proposals(page):
+        _, _, corners, width, height, _ = proposal
+        if overlaps_existing(corners, accepted_polygons):
             continue
+        # Preserve the original geometric deduplication order, even if encoding
+        # later fails: another method must not silently replace that observation.
         accepted_polygons.append(corners)
-        x0, y0 = (float(x) for x in corners.min(axis=0))
-        x1, y1 = (float(x) for x in corners.max(axis=0))
-        clip = pymupdf.Rect(x0, y0, x1, y1)
-        scale = min(600 / 72, math.sqrt(4_000_000 / max(clip.get_area(), 1)))
-        pix = page.get_pixmap(
-            matrix=pymupdf.Matrix(scale, scale),
-            clip=clip,
-            colorspace=pymupdf.csRGB,
-            alpha=False,
-            annots=False,
-        )
-        raster = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, 3)
-        crop_width = max(1, round(width * scale))
-        crop_height = max(1, round(height * scale))
-        src = corners * scale - np.array([pix.x, pix.y], dtype=np.float32)
-        dst = np.array(
-            [[0, 0], [crop_width - 1, 0], [crop_width - 1, crop_height - 1], [0, crop_height - 1]],
-            dtype=np.float32,
-        )
-        crop = cv2.warpPerspective(
-            raster, cv2.getPerspectiveTransform(src, dst), (crop_width, crop_height)
-        )
-        ok, encoded = cv2.imencode(".png", cv2.cvtColor(crop, cv2.COLOR_RGB2BGR))
-        if not ok:
+        cropped = crop_proposal(page, corners, width, height)
+        if cropped is None:
             continue
-        nominal_width, nominal_height = (85.60, 53.98) if width >= height else (53.98, 85.60)
-        candidate = BoundaryCandidate(
-            candidate_id=f"p{page_number}-c{len(output) + 1}",
-            page_number=page_number,
-            method=method,
-            page_bbox=(x0, y0, x1, y1),
-            page_corners=[(float(p[0]), float(p[1])) for p in corners],
-            aspect_ratio=width / height,
-            aspect_error=error,
-            score=score,
-            crop_path="",
-            text_regions=normalize_regions(corners, blocks, nominal_width, nominal_height),
-            warnings=[
-                "Boundary is a proposal; specimen may be stretched, composite, or watermarked",
-                "ID-1 millimeters are nominal; physical metric accuracy is unmeasured",
-                "Orientation, credential identity, and internal layout require review",
-            ],
-            nominal_width_mm=nominal_width,
-            nominal_height_mm=nominal_height,
-        )
-        output.append((candidate, encoded.tobytes()))
+        png, bbox = cropped
+        candidate = boundary_candidate(proposal, bbox, blocks, page_number, len(output) + 1)
+        output.append((candidate, png))
         if len(output) == 12:
             break
     return output

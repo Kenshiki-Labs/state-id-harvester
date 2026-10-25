@@ -1,0 +1,193 @@
+{
+  "$defs": {
+    "GeometryCohort": {
+      "additionalProperties": false,
+      "properties": {
+        "cohort_id": {
+          "maxLength": 128,
+          "pattern": "^[A-Z0-9_]+$",
+          "title": "Cohort Id",
+          "type": "string"
+        },
+        "credential_type": {
+          "pattern": "^(driver_license|identification_card|learner_permit)$",
+          "title": "Credential Type",
+          "type": "string"
+        },
+        "design_generation": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[^\\x00-\\x1f<>]+$",
+          "title": "Design Generation",
+          "type": "string"
+        },
+        "iins": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Iins",
+          "type": "array"
+        },
+        "issue_date_end": {
+          "anyOf": [
+            {
+              "maxLength": 10,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Issue Date End"
+        },
+        "issue_date_start": {
+          "anyOf": [
+            {
+              "maxLength": 10,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Issue Date Start"
+        },
+        "jurisdiction": {
+          "pattern": "^[A-Z]{2}$",
+          "title": "Jurisdiction",
+          "type": "string"
+        },
+        "orientation": {
+          "pattern": "^(horizontal|vertical)$",
+          "title": "Orientation",
+          "type": "string"
+        },
+        "review_status": {
+          "pattern": "^accepted$",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "source_sha256s": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Sha256S",
+          "type": "array"
+        },
+        "zones": {
+          "items": {
+            "$ref": "#/$defs/Zone"
+          },
+          "title": "Zones",
+          "type": "array"
+        }
+      },
+      "required": [
+        "cohort_id",
+        "jurisdiction",
+        "credential_type",
+        "orientation",
+        "iins",
+        "issue_date_start",
+        "issue_date_end",
+        "design_generation",
+        "review_status",
+        "source_sha256s",
+        "zones"
+      ],
+      "title": "GeometryCohort",
+      "type": "object"
+    },
+    "Zone": {
+      "additionalProperties": false,
+      "properties": {
+        "bbox_uv": {
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Bbox Uv",
+          "type": "array"
+        },
+        "geometry_basis": {
+          "pattern": "^(reviewed_specimen|physical_calibration)$",
+          "title": "Geometry Basis",
+          "type": "string"
+        },
+        "measured_error_mm": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Measured Error Mm"
+        },
+        "name": {
+          "maxLength": 64,
+          "minLength": 1,
+          "pattern": "^[^\\x00-\\x1f<>]+$",
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "bbox_uv",
+        "geometry_basis",
+        "measured_error_mm"
+      ],
+      "title": "Zone",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "cohorts": {
+      "items": {
+        "$ref": "#/$defs/GeometryCohort"
+      },
+      "title": "Cohorts",
+      "type": "array"
+    },
+    "coordinate_convention": {
+      "maxLength": 128,
+      "title": "Coordinate Convention",
+      "type": "string"
+    },
+    "routing": {
+      "maxLength": 128,
+      "title": "Routing",
+      "type": "string"
+    },
+    "schema_version": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "schema_version",
+    "coordinate_convention",
+    "routing",
+    "cohorts"
+  ],
+  "title": "GeometryBundle",
+  "type": "object"
+}
