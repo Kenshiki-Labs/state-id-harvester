@@ -4,7 +4,10 @@ from __future__ import annotations
 
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+
+SHA256_PATTERN = r"^[a-f0-9]{64}$"
+COLLECTION_PATTERN = r"^(?:[A-Z]{2}|US_FED)$"
 
 
 class Record(BaseModel):
@@ -12,17 +15,36 @@ class Record(BaseModel):
 
 
 class Source(Record):
-    discovery_jurisdiction: str = Field(pattern=r"^[A-Z]{2}$")
+    discovery_jurisdiction: str = Field(pattern=COLLECTION_PATTERN)
     url: str
     discovered_via: str
     link_text: str | None = None
+    credential_format: Literal["ID1", "unclassified"] | None = None
+
+    @field_validator("discovery_jurisdiction")
+    @classmethod
+    def known_collection(cls, value: str) -> str:
+        from .seeds import COLLECTION_DOMAINS
+
+        if value not in COLLECTION_DOMAINS:
+            raise ValueError("Unknown source collection")
+        return value
+
+    @model_validator(mode="after")
+    def resolve_credential_format(self) -> Source:
+        federal = self.discovery_jurisdiction == "US_FED"
+        if self.credential_format is None:
+            self.credential_format = "unclassified" if federal else "ID1"
+        if federal and self.credential_format == "ID1":
+            raise ValueError("Mixed federal source documents cannot be normalized as ID-1")
+        return self
 
 
 class Download(Record):
     source: Source
     final_url: str
     retrieved_at: str
-    sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
+    sha256: str = Field(pattern=SHA256_PATTERN)
     size_bytes: int = Field(ge=1)
     path: str
     content_type: str
@@ -34,7 +56,7 @@ class Download(Record):
 
 class Asset(Record):
     path: str
-    sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
+    sha256: str = Field(pattern=SHA256_PATTERN)
     size_bytes: int = Field(ge=0)
     kind: Literal[
         "extracted_image",
@@ -109,8 +131,8 @@ class Document(Record):
 
 
 class Review(Record):
-    source_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
-    asset_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
+    source_sha256: str = Field(pattern=SHA256_PATTERN)
+    asset_sha256: str = Field(pattern=SHA256_PATTERN)
     depicted_jurisdiction: str = Field(pattern=r"^[A-Z]{2}$")
     credential_type: Literal["driver_license", "identification_card", "learner_permit"]
     design_generation: str = Field(min_length=1)

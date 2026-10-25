@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import html
-import json
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -11,7 +10,8 @@ from typing import Any
 from pydantic import TypeAdapter
 
 from .models import Document, Event, Manifest, Review
-from .seeds import STATE_DOMAINS
+from .paths import managed_path
+from .seeds import FEDERAL_CODE, STATE_DOMAINS
 from .storage import atomic_json, digest, within
 
 
@@ -30,6 +30,7 @@ def validate_document(document: Document, root: Path) -> list[str]:
 
 
 def load_reviews(path: Path, documents: list[Document]) -> list[Review]:
+    path = managed_path(path)
     reviews = TypeAdapter(list[Review]).validate_json(path.read_text()) if path.exists() else []
     assets = {
         (d.download.sha256, a.sha256)
@@ -48,54 +49,61 @@ def load_reviews(path: Path, documents: list[Document]) -> list[Review]:
     return reviews
 
 
-def coverage(manifest: Manifest, events: list[Event]) -> list[dict[str, Any]]:
-    result: list[dict[str, Any]] = []
-    for state in sorted(STATE_DOMAINS):
-        documents = [
-            d for d in manifest.documents if d.download.source.discovery_jurisdiction == state
-        ]
-        ledger = [e for e in events if e.jurisdiction == state]
-        kinds = Counter(a.kind for d in documents for a in d.assets)
-        reviewed = sum(
-            r.status == "accepted" and r.depicted_jurisdiction == state for r in manifest.reviews
-        )
-        result.append(
+def coverage_status(reviewed: int, document_count: int) -> str:
+    if reviewed:
+        return "reviewed_assets_available"
+    return "unreviewed_sources_available" if document_count else "gap"
+
+
+def coverage_row(state: str, manifest: Manifest, events: list[Event]) -> dict[str, Any]:
+    documents = [d for d in manifest.documents if d.download.source.discovery_jurisdiction == state]
+    ledger = [e for e in events if e.jurisdiction == state]
+    kinds = Counter(a.kind for d in documents for a in d.assets)
+    reviewed = sum(
+        r.status == "accepted" and r.depicted_jurisdiction == state for r in manifest.reviews
+    )
+    return {
+        "jurisdiction": state,
+        "requested_this_run": state in manifest.requested_jurisdictions,
+        "discovery_events_this_run": sum(e.stage == "discovery" for e in ledger),
+        "fetch_failures_this_run": sum(e.stage == "fetch" and e.status == "failed" for e in ledger),
+        "extraction_failures_this_run": sum(
+            e.stage == "extract" and e.status == "failed" for e in ledger
+        ),
+        "source_documents": len(documents),
+        "relevance_candidates": sum(d.relevance == "candidate" for d in documents),
+        "quarantined_documents": sum(d.relevance == "quarantined" for d in documents),
+        "native_images": kinds["extracted_image"],
+        "rendered_pages": len(
             {
-                "jurisdiction": state,
-                "requested_this_run": state in manifest.requested_jurisdictions,
-                "discovery_events_this_run": sum(e.stage == "discovery" for e in ledger),
-                "fetch_failures_this_run": sum(
-                    e.stage == "fetch" and e.status == "failed" for e in ledger
-                ),
-                "extraction_failures_this_run": sum(
-                    e.stage == "extract" and e.status == "failed" for e in ledger
-                ),
-                "source_documents": len(documents),
-                "relevance_candidates": sum(d.relevance == "candidate" for d in documents),
-                "quarantined_documents": sum(d.relevance == "quarantined" for d in documents),
-                "native_images": kinds["extracted_image"],
-                "rendered_pages": len(
-                    {
-                        (d.download.sha256, a.page_number)
-                        for d in documents
-                        for a in d.assets
-                        if a.kind == "page_render"
-                    }
-                ),
-                "rendered_plate_files": kinds["page_render"],
-                "card_boundary_candidates": kinds["card_candidate"],
-                "accepted_reference_assets": reviewed,
-                "coverage_status": "reviewed_assets_available"
-                if reviewed
-                else ("unreviewed_sources_available" if documents else "gap"),
+                (d.download.sha256, a.page_number)
+                for d in documents
+                for a in d.assets
+                if a.kind == "page_render"
             }
-        )
-    return result
+        ),
+        "rendered_plate_files": kinds["page_render"],
+        "card_boundary_candidates": kinds["card_candidate"],
+        "accepted_reference_assets": reviewed,
+        "coverage_status": coverage_status(reviewed, len(documents)),
+    }
+
+
+def coverage(manifest: Manifest, events: list[Event]) -> list[dict[str, Any]]:
+    """Exactly 51 state/DC rows; federal coverage is always reported separately."""
+    return [coverage_row(state, manifest, events) for state in sorted(STATE_DOMAINS)]
+
+
+def federal_coverage(manifest: Manifest, events: list[Event]) -> dict[str, Any]:
+    return {**coverage_row(FEDERAL_CODE, manifest, events), "credential_format": "unclassified"}
 
 
 def write_reports(root: Path, manifest: Manifest, events: list[Event]) -> None:
+    root = managed_path(root)
     rows = coverage(manifest, events)
     atomic_json(root / "coverage.json", rows)
+    federal = federal_coverage(manifest, events)
+    atomic_json(root / "federal-coverage.json", federal)
     lines = [
         "# Reference library coverage",
         "",
@@ -113,6 +121,16 @@ def write_reports(root: Path, manifest: Manifest, events: list[Event]) -> None:
             f"{row['rendered_pages']} | {row['card_boundary_candidates']} | "
             f"{row['accepted_reference_assets']} | {row['coverage_status']} |"
         )
+    lines.extend(
+        [
+            "",
+            "## Separate federal collection",
+            "",
+            f"US_FED: {federal['source_documents']} source documents; "
+            f"{federal['coverage_status']}. Format remains unclassified; "
+            "ID-1 normalization is disabled.",
+        ]
+    )
     (root / "coverage.md").write_text("\n".join(lines) + "\n")
     e = html.escape
     cards: list[str] = []
@@ -145,10 +163,13 @@ def write_reports(root: Path, manifest: Manifest, events: list[Event]) -> None:
                 f"<p>Publisher: {e(d.publisher_host)}. Retrieved: {e(d.retrieved_at)}</p>"
                 f"<p>Features: {e(', '.join(document.matched_features))}</p></details></article>"
             )
-    states = "".join(f'<option value="{s}">{s}</option>' for s in sorted(STATE_DOMAINS))
+    codes = sorted(
+        {*STATE_DOMAINS, *(d.download.source.discovery_jurisdiction for d in manifest.documents)}
+    )
+    states = "".join(f'<option value="{s}">{s}</option>' for s in codes)
     page_html = f"""<!doctype html><html lang="en"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>State ID Reference Library</title><style>
+<title>State and Federal ID Reference Library</title><style>
 :root {{font-family: system-ui; color: #182735; background: #f4f6f7;}}
 body {{margin: 0 auto; max-width: 1400px; padding: 24px;}}
 h1 {{font-size: 2rem;}} h2 {{font-size: 1rem;}} a {{color: #07558c;}}
@@ -157,11 +178,14 @@ article {{background: white; padding: 18px; border: 1px solid #ccd5db; border-ra
 img {{width: 100%; height: 210px; object-fit: contain; background: #eef1f3;}}
 details {{overflow-wrap: anywhere; font-size: .8rem;}} select {{padding: 8px; margin: 16px 0;}}
 [hidden] {{display: none;}}
-</style><header><h1>State ID Reference Library</h1>
-<p>Public official sources · 50 states + DC · source-linked extraction</p>
+</style><header><h1>State and Federal ID Reference Library</h1>
+<p>Public official sources · 50 states + DC and a separate federal collection</p>
 <p>These are <strong>unreviewed proposals</strong>. Publisher location does not identify the
-depicted credential. Nominal ID-1 coordinates do not establish physical accuracy.</p>
-<p><a href="coverage.md">51-jurisdiction coverage</a> · <a href="manifest.json">Manifest</a></p>
+depicted credential. Source geometry does not establish physical accuracy;
+mixed federal pages are not normalized to ID-1.</p>
+<p><a href="coverage.md">51-state/DC coverage</a> ·
+<a href="federal-coverage.json">Separate federal coverage</a> ·
+<a href="manifest.json">Manifest</a></p>
 <label>Discovery jurisdiction
 <select id="state"><option value="">All</option>{states}</select></label>
 </header><main>{"".join(cards)}</main><script>
@@ -194,21 +218,3 @@ def verify(root: Path) -> list[str]:
     except ValueError as exc:
         errors.append(str(exc))
     return errors
-
-
-def publish_metadata(root: Path, target: Path) -> None:
-    """Commit small searchable metadata; bulky source and derivative assets live in releases."""
-    target.mkdir(parents=True, exist_ok=True)
-    for name in ("manifest.json", "coverage.json", "coverage.md"):
-        (target / name).write_bytes((root / name).read_bytes())
-    atomic_json(
-        target / "summary.json",
-        {
-            "schema_version": 1,
-            "note": (
-                "Download all library archive parts from the latest release to resolve asset paths"
-            ),
-            "release_url": "https://github.com/Kenshiki-Labs/state-id-harvester/releases/latest",
-            "coverage": json.loads((root / "coverage.json").read_text()),
-        },
-    )

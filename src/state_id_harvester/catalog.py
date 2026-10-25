@@ -9,14 +9,15 @@ from typing import Literal
 
 from pydantic import Field, TypeAdapter, field_validator, model_validator
 
-from .models import Manifest, Record
+from .models import SHA256_PATTERN, Document, Manifest, Record, Review
+from .paths import managed_path
 from .seeds import STATE_DOMAINS
 from .storage import atomic_json
 
 
 class Evidence(Record):
-    source_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
-    asset_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
+    source_sha256: str = Field(pattern=SHA256_PATTERN)
+    asset_sha256: str = Field(pattern=SHA256_PATTERN)
     page_number: int = Field(ge=1)
     explanation: str = Field(min_length=1)
 
@@ -96,8 +97,40 @@ class Cohort(Record):
         return self
 
 
-def export_catalog(manifest: Manifest, cohorts_path: Path, destination: Path) -> None:
-    cohorts = TypeAdapter(list[Cohort]).validate_json(cohorts_path.read_text())
+def cohort_evidence(cohort: Cohort) -> list[Evidence]:
+    return [
+        *cohort.evidence,
+        *(e for zone in cohort.zones for e in zone.evidence),
+        *(e for invariant in cohort.invariants for e in invariant.evidence),
+    ]
+
+
+def validate_evidence(
+    cohort: Cohort,
+    evidence: Evidence,
+    documents: dict[str, Document],
+    accepted: dict[tuple[str, str], Review],
+) -> None:
+    document = documents.get(evidence.source_sha256)
+    if document is None or evidence.page_number > document.page_count:
+        raise ValueError("Cohort evidence does not resolve to a retained source page")
+    review = accepted.get((evidence.source_sha256, evidence.asset_sha256))
+    if review is None:
+        raise ValueError("Cohort evidence requires an accepted, hash-bound visual review")
+    if (
+        review.depicted_jurisdiction != cohort.jurisdiction
+        or review.credential_type != cohort.credential_type
+        or review.design_generation != cohort.design_generation
+    ):
+        raise ValueError("Cohort identity conflicts with its accepted visual review")
+    if not any(
+        a.sha256 == evidence.asset_sha256 and a.page_number == evidence.page_number
+        for a in document.assets
+    ):
+        raise ValueError("Cohort evidence page does not match the accepted visual asset")
+
+
+def validate_cohorts(manifest: Manifest, cohorts: list[Cohort]) -> None:
     documents = {d.download.sha256: d for d in manifest.documents}
     accepted = {
         (r.source_sha256, r.asset_sha256): r for r in manifest.reviews if r.status == "accepted"
@@ -107,26 +140,15 @@ def export_catalog(manifest: Manifest, cohorts_path: Path, destination: Path) ->
         if cohort.cohort_id in seen:
             raise ValueError("Duplicate cohort identifier")
         seen.add(cohort.cohort_id)
-        evidences = cohort.evidence + [e for z in cohort.zones for e in z.evidence]
-        evidences.extend(e for invariant in cohort.invariants for e in invariant.evidence)
-        for evidence in evidences:
-            document = documents.get(evidence.source_sha256)
-            if document is None or evidence.page_number > document.page_count:
-                raise ValueError("Cohort evidence does not resolve to a retained source page")
-            review = accepted.get((evidence.source_sha256, evidence.asset_sha256))
-            if review is None:
-                raise ValueError("Cohort evidence requires an accepted, hash-bound visual review")
-            if (
-                review.depicted_jurisdiction != cohort.jurisdiction
-                or review.credential_type != cohort.credential_type
-                or review.design_generation != cohort.design_generation
-            ):
-                raise ValueError("Cohort identity conflicts with its accepted visual review")
-            if not any(
-                a.sha256 == evidence.asset_sha256 and a.page_number == evidence.page_number
-                for a in document.assets
-            ):
-                raise ValueError("Cohort evidence page does not match the accepted visual asset")
+        for evidence in cohort_evidence(cohort):
+            validate_evidence(cohort, evidence, documents, accepted)
+
+
+def export_catalog(manifest: Manifest, cohorts_path: Path, destination: Path) -> None:
+    cohorts_path = managed_path(cohorts_path)
+    destination = managed_path(destination)
+    cohorts = TypeAdapter(list[Cohort]).validate_json(cohorts_path.read_text())
+    validate_cohorts(manifest, cohorts)
     atomic_json(
         destination,
         {

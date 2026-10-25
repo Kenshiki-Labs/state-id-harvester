@@ -54,6 +54,41 @@ STATE_DOMAINS: dict[str, str] = {
     "WY": "wyoming.gov",
 }
 
+# Federal is a separate collection, not a 52nd state jurisdiction.
+FEDERAL_CODE = "US_FED"
+COLLECTION_DOMAINS = {**STATE_DOMAINS, FEDERAL_CODE: "gov"}
+FEDERAL_PUBLISHER_HOSTS = frozenset(
+    {
+        "nvlpubs.nist.gov",
+        "csrc.nist.gov",
+        "www.cbp.gov",
+        "cbp.gov",
+        "www.uscis.gov",
+        "uscis.gov",
+    }
+)
+FEDERAL_LANDING_PAGES = [
+    "https://csrc.nist.gov/pubs/fips/201-3/final",
+    "https://www.cbp.gov/travel/travel-industry-personnel",
+    "https://www.uscis.gov/i-9-central/form-i-9-acceptable-documents",
+]
+FEDERAL_SEED_PDFS = [
+    "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.201-3.pdf",
+    "https://www.cbp.gov/sites/default/files/assets/documents/2023-Nov/Carrier%20Information%20Guide%20ENGLISH.pdf",
+    "https://www.uscis.gov/sites/default/files/document/guides/GreenCard_Comparison_EN.PDF",
+    "https://www.uscis.gov/sites/default/files/document/guides/EAD_Comparison_EN.pdf",
+    "https://www.txdmv.gov/sites/default/files/body-files/FDR_Level_I_Job_Aid_2018.pdf",
+]
+
+
+def collection_landing_pages(code: str) -> list[str]:
+    return FEDERAL_LANDING_PAGES if code == FEDERAL_CODE else LANDING_PAGES[code]
+
+
+def collection_pdf_seeds(code: str) -> list[str]:
+    return FEDERAL_SEED_PDFS if code == FEDERAL_CODE else GOLDEN_SEED_PDFS.get(code, [])
+
+
 # Official issuer entry points. The crawler only follows public HTTPS .gov links.
 LANDING_PAGES: dict[str, list[str]] = {
     "AL": ["https://www.alea.gov/dps/driver-license"],

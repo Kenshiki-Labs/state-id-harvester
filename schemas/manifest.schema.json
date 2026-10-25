@@ -444,12 +444,28 @@
     "Source": {
       "additionalProperties": false,
       "properties": {
+        "credential_format": {
+          "anyOf": [
+            {
+              "enum": [
+                "ID1",
+                "unclassified"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Credential Format"
+        },
         "discovered_via": {
           "title": "Discovered Via",
           "type": "string"
         },
         "discovery_jurisdiction": {
-          "pattern": "^[A-Z]{2}$",
+          "pattern": "^(?:[A-Z]{2}|US_FED)$",
           "title": "Discovery Jurisdiction",
           "type": "string"
         },

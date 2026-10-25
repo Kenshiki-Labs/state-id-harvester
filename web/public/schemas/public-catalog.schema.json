@@ -1,0 +1,374 @@
+{
+  "$defs": {
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "credential_format": {
+          "default": "ID1",
+          "pattern": "^(?:ID1|unclassified)$",
+          "title": "Credential Format",
+          "type": "string"
+        },
+        "discovery_jurisdiction": {
+          "pattern": "^(?:[A-Z]{2}|US_FED)$",
+          "title": "Discovery Jurisdiction",
+          "type": "string"
+        },
+        "page_count": {
+          "minimum": 0,
+          "title": "Page Count",
+          "type": "integer"
+        },
+        "publisher_host": {
+          "maxLength": 253,
+          "title": "Publisher Host",
+          "type": "string"
+        },
+        "publisher_jurisdiction": {
+          "anyOf": [
+            {
+              "pattern": "^(?:[A-Z]{2}|US_FED)$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Publisher Jurisdiction"
+        },
+        "relevance": {
+          "pattern": "^(candidate|quarantined)$",
+          "title": "Relevance",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "maxLength": 64,
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "review_status": {
+          "pattern": "^(unreviewed|accepted|rejected)$",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 240,
+          "minLength": 1,
+          "pattern": "^[^\\x00-\\x1f<>]+$",
+          "title": "Title",
+          "type": "string"
+        },
+        "url": {
+          "maxLength": 4096,
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "url",
+        "sha256",
+        "retrieved_at",
+        "publisher_host",
+        "publisher_jurisdiction",
+        "discovery_jurisdiction",
+        "relevance",
+        "review_status",
+        "page_count"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "Counts": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted_cohorts": {
+          "minimum": 0,
+          "title": "Accepted Cohorts",
+          "type": "integer"
+        },
+        "crop_candidates": {
+          "minimum": 0,
+          "title": "Crop Candidates",
+          "type": "integer"
+        },
+        "embedded_images": {
+          "minimum": 0,
+          "title": "Embedded Images",
+          "type": "integer"
+        },
+        "relevant_sources": {
+          "minimum": 0,
+          "title": "Relevant Sources",
+          "type": "integer"
+        },
+        "rendered_pages": {
+          "minimum": 0,
+          "title": "Rendered Pages",
+          "type": "integer"
+        },
+        "sources": {
+          "minimum": 0,
+          "title": "Sources",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sources",
+        "relevant_sources",
+        "embedded_images",
+        "rendered_pages",
+        "crop_candidates",
+        "accepted_cohorts"
+      ],
+      "title": "Counts",
+      "type": "object"
+    },
+    "FederalCollection": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "pattern": "^US_FED$",
+          "title": "Code",
+          "type": "string"
+        },
+        "counts": {
+          "$ref": "#/$defs/Counts"
+        },
+        "credential_format": {
+          "pattern": "^unclassified$",
+          "title": "Credential Format",
+          "type": "string"
+        },
+        "extraction_failures": {
+          "minimum": 0,
+          "title": "Extraction Failures",
+          "type": "integer"
+        },
+        "fetch_failures": {
+          "minimum": 0,
+          "title": "Fetch Failures",
+          "type": "integer"
+        },
+        "name": {
+          "maxLength": 32,
+          "minLength": 1,
+          "pattern": "^[A-Za-z ]+$",
+          "title": "Name",
+          "type": "string"
+        },
+        "review_status": {
+          "pattern": "^(reviewed|unreviewed)$",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "title": "Sources",
+          "type": "array"
+        },
+        "status": {
+          "pattern": "^(sources_available|gap)$",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "status",
+        "review_status",
+        "counts",
+        "fetch_failures",
+        "extraction_failures",
+        "sources",
+        "credential_format"
+      ],
+      "title": "FederalCollection",
+      "type": "object"
+    },
+    "Jurisdiction": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "pattern": "^[A-Z]{2}$",
+          "title": "Code",
+          "type": "string"
+        },
+        "counts": {
+          "$ref": "#/$defs/Counts"
+        },
+        "extraction_failures": {
+          "minimum": 0,
+          "title": "Extraction Failures",
+          "type": "integer"
+        },
+        "fetch_failures": {
+          "minimum": 0,
+          "title": "Fetch Failures",
+          "type": "integer"
+        },
+        "name": {
+          "maxLength": 32,
+          "minLength": 1,
+          "pattern": "^[A-Za-z ]+$",
+          "title": "Name",
+          "type": "string"
+        },
+        "review_status": {
+          "pattern": "^(reviewed|unreviewed)$",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "title": "Sources",
+          "type": "array"
+        },
+        "status": {
+          "pattern": "^(sources_available|gap)$",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "status",
+        "review_status",
+        "counts",
+        "fetch_failures",
+        "extraction_failures",
+        "sources"
+      ],
+      "title": "Jurisdiction",
+      "type": "object"
+    },
+    "Stats": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted_cohorts": {
+          "minimum": 0,
+          "title": "Accepted Cohorts",
+          "type": "integer"
+        },
+        "crop_candidates": {
+          "minimum": 0,
+          "title": "Crop Candidates",
+          "type": "integer"
+        },
+        "embedded_images": {
+          "minimum": 0,
+          "title": "Embedded Images",
+          "type": "integer"
+        },
+        "jurisdictions": {
+          "maximum": 51,
+          "minimum": 0,
+          "title": "Jurisdictions",
+          "type": "integer"
+        },
+        "jurisdictions_with_accepted_cohorts": {
+          "maximum": 51,
+          "minimum": 0,
+          "title": "Jurisdictions With Accepted Cohorts",
+          "type": "integer"
+        },
+        "jurisdictions_with_sources": {
+          "maximum": 51,
+          "minimum": 0,
+          "title": "Jurisdictions With Sources",
+          "type": "integer"
+        },
+        "relevant_sources": {
+          "minimum": 0,
+          "title": "Relevant Sources",
+          "type": "integer"
+        },
+        "rendered_pages": {
+          "minimum": 0,
+          "title": "Rendered Pages",
+          "type": "integer"
+        },
+        "sources": {
+          "minimum": 0,
+          "title": "Sources",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "sources",
+        "relevant_sources",
+        "embedded_images",
+        "rendered_pages",
+        "crop_candidates",
+        "accepted_cohorts",
+        "jurisdictions",
+        "jurisdictions_with_sources",
+        "jurisdictions_with_accepted_cohorts"
+      ],
+      "title": "Stats",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "federal": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/FederalCollection"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "generated_at": {
+      "maxLength": 64,
+      "title": "Generated At",
+      "type": "string"
+    },
+    "jurisdictions": {
+      "items": {
+        "$ref": "#/$defs/Jurisdiction"
+      },
+      "maxItems": 51,
+      "minItems": 51,
+      "title": "Jurisdictions",
+      "type": "array"
+    },
+    "library_run_id": {
+      "maxLength": 128,
+      "title": "Library Run Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "stats": {
+      "$ref": "#/$defs/Stats"
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "library_run_id",
+    "stats",
+    "jurisdictions"
+  ],
+  "title": "Catalog",
+  "type": "object"
+}

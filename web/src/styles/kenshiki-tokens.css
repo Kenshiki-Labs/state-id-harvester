@@ -1,0 +1,80 @@
+/* Vendored verbatim from Kenshiki-Labs/pulse-website src/styles/theme.css, generated there from
+   design/tokens.jsonc at a9bc5df (2026-10-17). Do not edit here: change the website tokens, rebuild, recopy. */
+/* Generated from design/tokens.jsonc by scripts/build-css-tokens.ts — do not edit by hand. */
+@theme {
+  --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --text-display-1: clamp(2.75rem, 8vw, 5.25rem);
+  --text-display-2: clamp(2.125rem, 5.4vw, 3.5rem);
+  --text-title: clamp(1.875rem, 4.8vw, 3.125rem);
+  --text-heading: clamp(1.625rem, 4.2vw, 2.625rem);
+  --text-body-lg: clamp(1.0625rem, 2.1vw, 1.3125rem);
+  --text-body: 1.0625rem;
+  --text-caption: 0.9375rem;
+  --text-receipt: 0.9375rem;
+  --tracking-display: -0.022em;
+  --tracking-tight: -0.01em;
+  --tracking-caps: 0.08em;
+  --leading-tight: 1.08;
+  --leading-snug: 1.15;
+  --leading-body: 1.5;
+  --leading-relaxed: 1.65;
+  --radius-card: 1rem;
+  --radius-control: 0.5rem;
+  --container-prose: 34rem;
+  --container-panel: 40rem;
+  --container-reading: 46rem;
+  --container-wide: 76rem;
+  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@theme inline {
+  --color-canvas: var(--s-canvas);
+  --color-canvas-alt: var(--s-canvas-alt);
+  --color-ink: var(--s-ink);
+  --color-ink-soft: var(--s-ink-soft);
+  --color-edge: var(--s-edge);
+  --color-pulse: var(--s-pulse);
+  --color-pulse-contrast: var(--s-pulse-contrast);
+  --color-danger: var(--s-danger);
+  --color-chart-1: var(--s-chart-1);
+  --color-chart-2: var(--s-chart-2);
+  --color-chart-3: var(--s-chart-3);
+  --color-chart-4: var(--s-chart-4);
+}
+
+:root {
+  --duration-reveal: 700ms;
+  --duration-beat: 2200ms;
+}
+
+:root,
+.surface-paper {
+  --s-canvas: #FFFFFF;
+  --s-canvas-alt: #F5F5F7;
+  --s-ink: #1D1D1F;
+  --s-ink-soft: #6E6E73;
+  --s-edge: #E3E3E6;
+  --s-pulse: oklch(0.52 0.10 175);
+  --s-pulse-contrast: #FFFFFF;
+  --s-danger: #C0272E;
+  --s-chart-1: #2a78d6;
+  --s-chart-2: #c98500;
+  --s-chart-3: #4a3aa7;
+  --s-chart-4: #d95926;
+}
+
+.surface-ink {
+  --s-canvas: #1D1D1F;
+  --s-canvas-alt: #29292D;
+  --s-ink: #F5F5F7;
+  --s-ink-soft: #B0B0B8;
+  --s-edge: #3A3A3F;
+  --s-pulse: oklch(0.76 0.13 170);
+  --s-pulse-contrast: #06231C;
+  --s-danger: #F4787D;
+  --s-chart-1: #3987e5;
+  --s-chart-2: #c98500;
+  --s-chart-3: #9085e9;
+  --s-chart-4: #d95926;
+}

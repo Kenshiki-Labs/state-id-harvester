@@ -144,3 +144,159 @@ def test_source_paths_cannot_escape_library(tmp_path: Path) -> None:
 def test_source_hash_is_of_retained_bytes(tmp_path: Path) -> None:
     download = fixture_pdf(tmp_path)
     assert download.sha256 == hashlib.sha256((tmp_path / download.path).read_bytes()).hexdigest()
+
+
+def test_failed_refresh_keeps_previous_derivatives_and_cleans_staging(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    from state_id_harvester.extraction_pages import PageRenderer
+
+    download = fixture_pdf(tmp_path)
+    options = Options(dpi=72, detect_boundaries=False)
+    previous = extract(download, str(tmp_path), options)
+    receipt = next(tmp_path.rglob("derived/*/*/document.json"))
+    previous_bytes = receipt.read_bytes()
+    previous_hashes = {asset.path: digest(tmp_path / asset.path) for asset in previous.assets}
+
+    def fail(*args: object, **kwargs: object) -> str:
+        raise RuntimeError("Injected renderer failure")
+
+    monkeypatch.setattr(PageRenderer, "_plate", fail)
+    with pytest.raises(RuntimeError, match="Injected renderer failure"):
+        extract(download, str(tmp_path), options)
+    assert receipt.read_bytes() == previous_bytes
+    assert {path: digest(tmp_path / path) for path in previous_hashes} == previous_hashes
+    assert digest(tmp_path / download.path) == download.sha256
+    assert not list(tmp_path.rglob(".extract-*"))
+
+
+def test_each_new_extraction_helper_invalidates_cache(monkeypatch: pytest.MonkeyPatch) -> None:
+    from state_id_harvester.extract import fingerprint
+
+    original_read = Path.read_bytes
+    baseline = fingerprint(Options())
+    for module in ("extraction_assets.py", "extraction_pages.py", "extraction_text.py"):
+
+        def changed(path: Path, changed_module: str = module) -> bytes:
+            data = original_read(path)
+            return data + b"\n# changed implementation" if path.name == changed_module else data
+
+        with monkeypatch.context() as patch:
+            patch.setattr(Path, "read_bytes", changed)
+            assert fingerprint(Options()) != baseline
+    assert fingerprint(Options(workers=8, refresh=True)) == baseline
+
+
+def test_cross_page_image_reuse_keeps_each_placement_but_one_stream(tmp_path: Path) -> None:
+    download = fixture_pdf(tmp_path)
+    path = tmp_path / download.path
+    with pymupdf.open(path) as doc:
+        xref = doc[1].get_images(full=True)[0][0]
+        doc.new_page().insert_image(pymupdf.Rect(50, 50, 350, 240), xref=xref)
+        doc.saveIncr()
+    download = download.model_copy(
+        update={"sha256": digest(path), "size_bytes": path.stat().st_size}
+    )
+    result = extract(download, str(tmp_path), Options(max_render_pages=0))
+    geometry = next(a for a in result.assets if a.path.endswith("geometry/pages.json"))
+    pages = json.loads((tmp_path / geometry.path).read_text())
+    first, second = pages[1]["images"][0], pages[2]["images"][0]
+    assert len(first["placements"]) == 2
+    assert len(second["placements"]) == 1
+    assert first["raw_stream_path"] == second["raw_stream_path"]
+    assert len([a for a in result.assets if a.kind == "extracted_image"]) == 1
+    assert not any(a.kind in {"page_render", "card_candidate"} for a in result.assets)
+    assert not validate_document(result, tmp_path)
+
+
+def test_oversized_native_image_is_not_decoded_or_lost_from_source(tmp_path: Path) -> None:
+    download = fixture_pdf(tmp_path)
+    result = extract(
+        download,
+        str(tmp_path),
+        Options(max_image_pixels=1, max_render_pages=0, detect_boundaries=False),
+    )
+    assert not any(a.kind in {"raw_stream", "extracted_image"} for a in result.assets)
+    assert any("image pixel limit exceeded" in warning for warning in result.warnings)
+    assert digest(tmp_path / download.path) == download.sha256
+
+
+def test_ocr_runs_unrotated_and_retains_source_rotation_and_observations(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    download = fixture_pdf(tmp_path, rotated=True, scanned=True)
+    observed_rotations: list[int] = []
+
+    def local_ocr(page: pymupdf.Page, number: int) -> tuple[list[TextBlock], bytes]:
+        observed_rotations.append(page.rotation)
+        return [
+            TextBlock(
+                page_number=number,
+                bbox=(80.0, 170.0, 160.0, 190.0),
+                text="Ultraviolet microprinting",
+                method="local_ocr",
+                ocr_confidence=95.0,
+            )
+        ], b"synthetic mechanics-only OCR TSV"
+
+    monkeypatch.setattr("state_id_harvester.extract.ocr_page", local_ocr)
+    result = extract(
+        download,
+        str(tmp_path),
+        Options(
+            dpi=72,
+            max_render_pages=1,
+            ocr=True,
+            detect_boundaries=False,
+        ),
+    )
+    assert observed_rotations == [0]
+    assert result.relevance == "candidate"
+    geometry = next(a for a in result.assets if a.path.endswith("geometry/pages.json"))
+    pages = json.loads((tmp_path / geometry.path).read_text())
+    assert pages[1]["rotation"] == 90
+    blocks_asset = next(a for a in result.assets if a.path.endswith("text_blocks/blocks.json"))
+    blocks = json.loads((tmp_path / blocks_asset.path).read_text())
+    assert blocks[0]["bbox"] == [80.0, 170.0, 160.0, 190.0]
+    assert blocks[0]["method"] == "local_ocr"
+    assert any(a.path.endswith("p2_ocr.tsv") for a in result.assets)
+
+
+def test_boundary_proposals_reject_off_page_distorted_and_degenerate_shapes(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    from state_id_harvester.topology import rank_proposals
+
+    good = np.array([[40, 50], [211.2, 50], [211.2, 157.96], [40, 157.96]], dtype=np.float32)
+    invalid = [good - 200, np.zeros((4, 2), dtype=np.float32), good * [0.3, 1]]
+    monkeypatch.setattr(
+        "state_id_harvester.topology.proposals",
+        lambda page: [
+            ("image_placement", good, 0.65),
+            *(("contour", corners.astype(np.float32), 0.45) for corners in invalid),
+        ],
+    )
+    with pymupdf.open() as doc:
+        page = doc.new_page(width=400, height=400)
+        ranked = rank_proposals(page)
+    assert len(ranked) == 1
+    assert np.array_equal(ranked[0][2], good)
+
+
+def test_polygon_deduplication_keeps_separate_card_positions() -> None:
+    from state_id_harvester.topology import overlaps_existing
+
+    first = np.array([[0, 0], [200, 0], [200, 126], [0, 126]], dtype=np.float32)
+    assert overlaps_existing(first + np.array([1, 1], dtype=np.float32), [first])
+    assert not overlaps_existing(first + np.array([300, 0], dtype=np.float32), [first])
+
+
+def test_pixel_budget_and_asset_budget_cleanup_leave_no_partial_stage(tmp_path: Path) -> None:
+    download = fixture_pdf(tmp_path)
+    with pytest.raises(ExtractionLimit, match="byte budget"):
+        extract(download, str(tmp_path), Options(dpi=72, max_asset_bytes=100))
+    assert not list(tmp_path.rglob(".extract-*"))
+    assert not list(tmp_path.rglob("derived/*/*/document.json"))
+    assert digest(tmp_path / download.path) == download.sha256

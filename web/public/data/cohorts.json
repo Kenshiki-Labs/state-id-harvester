@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "coordinate_convention": "unit square; nominal ID-1; no inferred metric accuracy",
+  "routing": "candidate_set; barcode fields remain untrusted claims",
+  "cohorts": []
+}

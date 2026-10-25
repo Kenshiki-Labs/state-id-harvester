@@ -1,0 +1,38 @@
+/* Self-hosted from Fontshare (free licence), the same files pulse-console ships. Cabinet Grotesk is the
+   display face, Satoshi the body face. Vite fingerprints them into /ui/_astro, so they cache as immutable and the CSP's font-src 'self' holds. */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../assets/fonts/cabinet-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../assets/fonts/cabinet-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../assets/fonts/cabinet-800.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}

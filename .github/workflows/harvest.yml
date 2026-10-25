@@ -20,58 +20,56 @@ jobs:
     permissions:
       contents: write
     env:
-      GH_TOKEN: ${{ github.token }}
-      GH_REPO: ${{ github.repository }}
       SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
       BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+      CADASTRE_INGEST_KEY: ${{ secrets.CADASTRE_INGEST_KEY }}
+      PYTHONPATH: src
+      CADASTRE_VAULT_URL: https://cadastre.kenshikilabs.com
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
-      - run: python -m pip install uv==0.13.5
-      - run: uv sync --locked
+      - run: python -m pip install --only-binary=:all: uv==0.13.5
+      - run: uv sync --locked --no-install-project --no-build
+      - name: Require private publication credentials
+        run: test -n "$CADASTRE_INGEST_KEY"
       - name: Install local OCR
         run: sudo apt-get update && sudo apt-get install -y tesseract-ocr
-      - name: Restore last published library
-        run: |
-          mkdir -p "$RUNNER_TEMP/previous"
-          if gh release view --json tagName > "$RUNNER_TEMP/last-release.json"; then
-            gh release download --pattern 'library-*.tar.gz' --pattern library-index.json --dir "$RUNNER_TEMP/previous"
-            python scripts/unpack_library.py "$RUNNER_TEMP/previous" output
-          fi
+      - name: Restore last private snapshot
+        run: uv run --locked --no-sync --no-build python scripts/vault_sync.py pull output --missing-ok
       - name: Harvest all 51 jurisdictions
         env:
           REFRESH: ${{ github.event_name == 'schedule' || inputs.refresh }}
         run: |
           refresh_args=()
           if [ "$REFRESH" = true ]; then refresh_args+=(--refresh); fi
-          uv run state-id-harvester harvest --all --workers 2 --ocr "${refresh_args[@]}"
-      - run: uv run state-id-harvester verify
-      - run: uv run state-id-harvester export-catalog
-      - run: uv run state-id-harvester publish-metadata
-      - name: Record searchable library metadata
+          uv run --locked --no-sync --no-build python -m state_id_harvester harvest --all --workers 2 --ocr "${refresh_args[@]}"
+      - name: Collect federal sources separately
+        run: uv run --locked --no-sync --no-build python -m state_id_harvester harvest --federal --output output/federal --workers 2 --ocr --crawl-pages 3
+      - run: uv run --locked --no-sync --no-build python -m state_id_harvester verify --output output/federal
+      - run: uv run --locked --no-sync --no-build python -m state_id_harvester verify
+      - run: uv run --locked --no-sync --no-build python -m state_id_harvester export-catalog
+      - name: Export citation metadata and reviewed geometry
+        run: uv run --locked --no-sync --no-build python scripts/build_public_catalog.py
+      - name: Check public publication boundary
+        run: uv run --locked --no-sync --no-build python scripts/check_publication.py
+      - name: Package and upload private snapshot
+        run: |
+          uv run --locked --no-sync --no-build python scripts/package_library.py output "$RUNNER_TEMP/cadastre-snapshot"
+          uv run --locked --no-sync --no-build python scripts/vault_sync.py push "$RUNNER_TEMP/cadastre-snapshot"
+      - name: Prepare visibly marked private specimen candidates
+        run: |
+          uv run --locked --no-sync --no-build python scripts/vault_sync.py prepare-specimens output "$RUNNER_TEMP/cadastre-specimens" --limit 100
+          uv run --locked --no-sync --no-build python scripts/vault_sync.py push-specimens "$RUNNER_TEMP/cadastre-specimens"
+      - name: Record public metadata only
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add library
+          git add library/federal.json library/manifest.json library/coverage.json library/summary.json library/coverage.md web/public/data web/public/schemas web/public/wireframes
           if ! git diff --cached --quiet; then
-            git commit -m "Update public reference library catalog"
+            git commit -m "Update Cadastre public metadata and reviewed geometry"
             git push origin HEAD:main
           fi
-      - name: Package immutable snapshot
-        run: uv run python scripts/package_library.py output dist
-      - name: Publish library release
-        run: |
-          tag="library-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          gh release create "$tag" dist/library-*.tar.gz dist/library-index.json dist/SHA256SUMS output/coverage.md output/pulse_state_catalog_v1.json --target "$GITHUB_SHA" --title "Reference library ${GITHUB_RUN_NUMBER}" --notes-file output/coverage.md
-      - name: Retain run ledger and coverage
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
-        with:
-          name: reference-library-run-${{ github.run_id }}
-          path: |
-            output/coverage.*
-            output/events.json
-            output/runs/*/events.json
-          retention-days: 90
+      # Source PDFs, crops, OCR, archives, and private ledgers never enter GitHub
+      # releases or Actions artifacts. Failure stops before public commit.

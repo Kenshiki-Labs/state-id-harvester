@@ -18,7 +18,14 @@ dependencies = [
 state-id-harvester = "state_id_harvester.cli:main"
 
 [dependency-groups]
-dev = ["pytest>=8,<10", "pytest-asyncio>=0.24,<2", "mypy>=1.13,<2", "ruff>=0.9,<1"]
+dev = [
+    "pytest>=8,<10",
+    "pytest-asyncio>=0.24,<2",
+    "mypy>=1.13,<2",
+    "ruff>=0.9,<1",
+    "pytest-cov>=6,<8",
+    "hatchling>=1.27,<2",
+]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/state_id_harvester"]
