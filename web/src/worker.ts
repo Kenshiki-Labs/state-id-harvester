@@ -241,7 +241,7 @@ async function verifyDomain(env: Env, row: ApplicationRow): Promise<Response> {
     const result = await fetch(endpoint, {
       headers: { Accept: "application/dns-json" },
       signal: AbortSignal.timeout(5000),
-      redirect: "error",
+      redirect: "manual",
     });
     if (!result.ok) throw new PolicyError("dns_unavailable", 503);
     const dns = record(

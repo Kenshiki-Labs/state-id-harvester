@@ -83,6 +83,29 @@ beforeAll(async () => {
   testEnv.CADASTRE_INGEST_KEY_HASH = await hash("test-ingest-token");
 });
 describe("server-side access authority", () => {
+  it.each([200, 302])("uses the edge-supported redirect policy and rejects missing proof or a redirect (%i)", async (status) => {
+    const result = await create();
+    const spy = vi.spyOn(globalThis, "fetch").mockImplementation(async (_input, init) => {
+      // The real Cloudflare edge rejects redirect:error even though a local
+      // mocked fetch accepts it. Reproduce that platform constraint here.
+      if (init?.redirect !== "manual") throw new TypeError("Unsupported edge redirect policy");
+      return status === 200
+        ? Response.json({ Status: 0, Answer: [] })
+        : new Response(null, { status, headers: { Location: "https://untrusted.invalid/" } });
+    });
+    try {
+      const response = await call(`/v1/access-requests/${result.request_id}/verify-domain`, {
+        claim_token: result.claim_token,
+      });
+      expect(response.status).toBe(status === 200 ? 409 : 503);
+      expect(spy).toHaveBeenCalledTimes(1);
+      const row = await env.DB.prepare("SELECT domain_verified_at FROM access_requests WHERE id=?")
+        .bind(result.request_id).first();
+      expect(row?.domain_verified_at).toBeNull();
+    } finally {
+      spy.mockRestore();
+    }
+  });
   it("accepts the frontend proof helper contract while keeping organization review pending", async () => {
     const result = await create();
     const spy = vi
