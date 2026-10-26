@@ -70,7 +70,7 @@ jobs:
           uv run --locked --no-sync --no-build python scripts/vault_sync.py push "$RUNNER_TEMP/cadastre-snapshot"
       - name: Prepare visibly marked private specimen candidates
         run: |
-          uv run --locked --no-sync --no-build python scripts/vault_sync.py prepare-specimens output "$RUNNER_TEMP/cadastre-specimens" --limit 100
+          uv run --locked --no-sync --no-build python scripts/vault_sync.py prepare-specimens output "$RUNNER_TEMP/cadastre-specimens" --limit 1000
           uv run --locked --no-sync --no-build python scripts/vault_sync.py push-specimens "$RUNNER_TEMP/cadastre-specimens"
       - name: Record public metadata only
         run: |

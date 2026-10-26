@@ -375,13 +375,16 @@ def test_audit_input_paths_cannot_escape_managed_roots(
         requested.symlink_to(outside)
     monkeypatch.chdir(checkout)
     monkeypatch.setattr("state_id_harvester.paths.tempfile.gettempdir", lambda: str(temporary))
+    operations = {
+        "json": lambda: script.read_json_file(requested),
+        "native_inventory": lambda: script.load_inventories(
+            checkout / "source.pdf", [1], requested, False
+        ),
+        "document": lambda: analyze_document(requested, [1]),
+    }
+    operation = operations[reader]
     with pytest.raises(ValueError, match="managed temporary directory"):
-        if reader == "json":
-            script.read_json_file(requested)
-        elif reader == "native_inventory":
-            script.load_inventories(checkout / "source.pdf", [1], requested, False)
-        else:
-            analyze_document(requested, [1])
+        operation()
 
 
 @pytest.mark.parametrize("route", ["traversal", "absolute", "symlink"])

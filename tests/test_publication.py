@@ -360,14 +360,24 @@ def test_visible_marking_preserves_original_pixels_and_records_padding() -> None
     assert np.count_nonzero(decoded[100:] > 240) > 100  # The footer contains visible lettering.
 
 
-def test_candidate_dimension_budget_is_checked_before_decode(
-    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
-) -> None:
+def raster_frame(image_format: str, width: int, height: int) -> bytes:
     import struct
+    import zlib
 
-    data = b"\x89PNG\r\n\x1a\n" + b"\x00\x00\x00\x0dIHDR" + struct.pack(">II", 100_000, 100_000)
-    (tmp_path / "bomb.png").write_bytes(data)
-    asset = SimpleNamespace(path="bomb.png", sha256=hashlib.sha256(data).hexdigest())
+    if image_format == "jpeg":
+        return b"\xff\xd8\xff\xc0" + struct.pack(">HBHHBBBB", 11, 8, height, width, 1, 1, 0x11, 0)
+    body = b"IHDR" + struct.pack(">IIBBBBB", width, height, 8, 2, 0, 0, 0)
+    return b"\x89PNG\r\n\x1a\n\x00\x00\x00\x0d" + body + struct.pack(">I", zlib.crc32(body))
+
+
+@pytest.mark.parametrize("image_format", ["png", "jpeg"])
+@pytest.mark.parametrize("dimensions", [(10000, 10000), (0, 100), (20001, 1)])
+def test_candidate_dimension_budget_is_checked_before_decode(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path, image_format: str, dimensions: tuple[int, int]
+) -> None:
+    data = raster_frame(image_format, *dimensions)
+    (tmp_path / "bomb.bin").write_bytes(data)
+    asset = SimpleNamespace(path="bomb.bin", sha256=hashlib.sha256(data).hexdigest())
 
     def forbidden_decode(*args, **kwargs):
         pytest.fail("An oversized source reached the image decoder")
@@ -375,6 +385,124 @@ def test_candidate_dimension_budget_is_checked_before_decode(
     monkeypatch.setattr("cv2.imdecode", forbidden_decode)
     with pytest.raises(ValueError, match="pixel budget"):
         vault_sync.read_candidate_image(tmp_path, asset)
+
+
+@pytest.mark.parametrize(
+    "data,reason",
+    [
+        (b"<svg><image/></svg>", "Unsupported raster"),
+        (b"<!doctype html><img src='pretend.png'>", "Unsupported raster"),
+        (b"RIFF\0\0\0\0WEBP", "Unsupported raster"),
+        (b"\xff\xd8\xff\xe1\xff\xff" + b"x" * 65533, "header budget"),
+        (raster_frame("png", 100, 100)[:-1] + b"\xff", "checksum mismatch"),
+    ],
+)
+def test_candidate_unsupported_or_unbounded_headers_never_reach_decoder(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, data: bytes, reason: str
+) -> None:
+    path = tmp_path / "pretend.png"
+    path.write_bytes(data)
+    asset = SimpleNamespace(path=path.name, sha256=hashlib.sha256(data).hexdigest())
+    monkeypatch.setattr("cv2.imdecode", lambda *args: pytest.fail("Unsafe header reached decoder"))
+    with pytest.raises(ValueError, match=reason):
+        vault_sync.read_candidate_image(tmp_path, asset)
+
+
+def test_candidate_byte_budget_is_checked_before_hash_or_decode(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    path = tmp_path / "large.jpg"
+    with path.open("wb") as stream:
+        stream.truncate(50_000_001)
+    asset = SimpleNamespace(path=path.name, sha256="not-read")
+    monkeypatch.setattr(
+        "cv2.imdecode", lambda *args: pytest.fail("Oversized bytes reached decoder")
+    )
+    with pytest.raises(ValueError, match="byte budget"):
+        vault_sync.read_candidate_image(tmp_path, asset)
+
+
+def test_candidate_decoded_dimensions_must_match_checked_header(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    import numpy as np
+
+    data = raster_frame("jpeg", 100, 100)
+    (tmp_path / "mismatch.jpg").write_bytes(data)
+    asset = SimpleNamespace(path="mismatch.jpg", sha256=hashlib.sha256(data).hexdigest())
+    monkeypatch.setattr("cv2.imdecode", lambda *args: np.zeros((101, 100, 3), dtype=np.uint8))
+    with pytest.raises(ValueError, match="dimensions disagree"):
+        vault_sync.read_candidate_image(tmp_path, asset)
+
+
+def test_native_jpeg_proposal_prepares_png_derivative_without_changing_original(
+    tmp_path: Path,
+) -> None:
+    import cv2
+    import numpy as np
+    import pymupdf
+
+    from state_id_harvester.models import Download
+
+    source = tmp_path / "collection"
+    path = source / "WA/raw_pdfs/native-jpeg.pdf"
+    path.parent.mkdir(parents=True)
+    pixels = np.zeros((190, 300, 3), dtype=np.uint8)
+    pixels[:, :, 1] = np.arange(300, dtype=np.uint16) % 256
+    ok, encoded = cv2.imencode(".jpg", pixels)
+    assert ok
+    jpeg = encoded.tobytes()
+    with pymupdf.open() as pdf:
+        page = pdf.new_page()
+        page.insert_text((70, 130), "Driver license SPECIMEN - microprinting and ultraviolet")
+        page.insert_image(pymupdf.Rect(70, 160, 370, 350), stream=jpeg)
+        pdf.save(path)
+    download = Download(
+        source=Source(
+            discovery_jurisdiction="WA",
+            url="https://dol.wa.gov/test.pdf",
+            discovered_via="synthetic_mechanics_test",
+        ),
+        final_url="https://dol.wa.gov/test.pdf",
+        retrieved_at="2026-10-25T00:00:00Z",
+        sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+        size_bytes=path.stat().st_size,
+        path=path.relative_to(source).as_posix(),
+        content_type="application/pdf",
+        publisher_host="dol.wa.gov",
+        publisher_jurisdiction="WA",
+    )
+    document = extract(download, str(source), Options(dpi=72, max_render_pages=1))
+    candidate = next(asset for asset in document.assets if asset.kind == "card_candidate")
+    original = source / candidate.path
+    assert original.read_bytes() == jpeg
+    manifest = Manifest(
+        generated_at="2026-10-25T00:00:00Z",
+        run_id="jpeg-test",
+        source_revision="test",
+        requested_jurisdictions=["WA"],
+        options=Options(),
+        documents=[document],
+        reviews=[],
+    )
+    (source / "manifest.json").write_text(manifest.model_dump_json())
+    destination = tmp_path / "prepared"
+    items = vault_sync.prepare_specimens(source, destination, 1, federal_limit=0)
+    assert len(items) == 1
+    item = items[0]
+    assert item["original_asset_sha256"] == hashlib.sha256(jpeg).hexdigest()
+    assert item["source_sha256"] == download.sha256
+    assert item["review_status"] == "reference_only"
+    assert item["transform"]["footer_height_px"] == 110
+    prepared = (destination / f"{item['asset_sha256']}.png").read_bytes()
+    assert prepared.startswith(b"\x89PNG\r\n\x1a\n")
+    decoded = cv2.imdecode(np.frombuffer(prepared, dtype=np.uint8), cv2.IMREAD_COLOR)
+    native = cv2.imdecode(np.frombuffer(jpeg, dtype=np.uint8), cv2.IMREAD_COLOR)
+    offset = item["transform"]["offset_x_px"]
+    assert np.array_equal(decoded[:190, offset : offset + 300], native)
+    assert decoded.shape == (300, 900, 3)
+    assert original.read_bytes() == jpeg
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == download.sha256
 
 
 @pytest.mark.parametrize("attack", ["parent_traversal", "symlink"])
