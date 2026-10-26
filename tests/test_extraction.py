@@ -104,16 +104,20 @@ def test_image_only_pdf_is_quarantined_and_preserved(tmp_path: Path) -> None:
 
 def test_page_budget_keeps_source_and_cleans_partial_derivatives(tmp_path: Path) -> None:
     download = fixture_pdf(tmp_path)
+    root_string = str(tmp_path)
+    options = Options(max_pages=1)
     with pytest.raises(ExtractionLimit, match="pages"):
-        extract(download, str(tmp_path), Options(max_pages=1))
+        extract(download, root_string, options)
     assert (tmp_path / download.path).exists()
     assert not list(tmp_path.rglob(".extract-*"))
 
 
 def test_asset_byte_budget_keeps_source(tmp_path: Path) -> None:
     download = fixture_pdf(tmp_path)
+    root_string = str(tmp_path)
+    options = Options(max_asset_bytes=1)
     with pytest.raises(ExtractionLimit, match="byte budget"):
-        extract(download, str(tmp_path), Options(max_asset_bytes=1))
+        extract(download, root_string, options)
     assert (tmp_path / download.path).exists()
 
 

@@ -17,7 +17,7 @@ export function AccessReceipt({
   verificationError,
   domainVerified,
   verifyDomain,
-}: AccessReceiptProps) {
+}: Readonly<AccessReceiptProps>) {
   return (
     <div className="access-result">
       <output className="sr-only">
@@ -115,7 +115,7 @@ export default function AccessForm() {
       />
     );
   return (
-    <form className="access-form" onSubmit={submit}>
+    <form className="access-form" method="post" action="/" onSubmit={submit}>
       <div className="form-grid">
         <label>
           Full name{" "}

@@ -5,6 +5,7 @@ import {
   type RequestStatus,
 } from "../lib/manager-model";
 import { useRequestManager } from "../lib/manager";
+import { useEffect, useState } from "react";
 
 export function KeyReceipt({ receipt }: Readonly<{ receipt: ClaimedKey }>) {
   return (
@@ -37,13 +38,23 @@ export function KeyReceipt({ receipt }: Readonly<{ receipt: ClaimedKey }>) {
 
 export function AccessManagerView({
   manager,
+  ready,
 }: Readonly<{
   manager: ReturnType<typeof useRequestManager>;
+  ready: boolean;
 }>) {
+  const submitLabel = ready
+    ? "Check request status"
+    : "Preparing request manager…";
   return (
     <section className="access-form" aria-label="Manage research request">
       {!manager.claim && (
-        <form onSubmit={manager.submit} autoComplete="off">
+        <form
+          method="post"
+          action="/access"
+          onSubmit={manager.submit}
+          autoComplete="off"
+        >
           <div className="form-grid">
             <label>
               Saved request ID{" "}
@@ -55,7 +66,7 @@ export function AccessManagerView({
                 autoComplete="off"
                 autoCapitalize="none"
                 spellCheck={false}
-                disabled={manager.busy}
+                disabled={manager.busy || !ready}
               />
             </label>
             <label>
@@ -69,17 +80,23 @@ export function AccessManagerView({
                 autoComplete="off"
                 autoCapitalize="none"
                 spellCheck={false}
-                disabled={manager.busy}
+                disabled={manager.busy || !ready}
               />
             </label>
           </div>
           <button
             className="button button-primary"
             type="submit"
-            disabled={manager.busy}
+            disabled={manager.busy || !ready}
           >
-            {manager.busy ? "Checking request…" : "Check request status"}
+            {manager.busy ? "Checking request…" : submitLabel}
           </button>
+          <noscript>
+            <p>
+              Enable JavaScript to manage your request. Keep your saved receipt
+              private.
+            </p>
+          </noscript>
         </form>
       )}
       {manager.status && (
@@ -181,5 +198,8 @@ function RequestStatusPanel({
 }
 
 export default function AccessManager() {
-  return <AccessManagerView manager={useRequestManager()} />;
+  const manager = useRequestManager();
+  const [ready, setReady] = useState(false);
+  useEffect(() => setReady(true), []);
+  return <AccessManagerView manager={manager} ready={ready} />;
 }

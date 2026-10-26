@@ -56,6 +56,79 @@ async function auditManager(page) {
     return { promise, release: () => release() };
   };
 
+  async function beforeJavaScript() {
+    const browser = page.context().browser();
+    assert(browser, "A browser is required for the JavaScript-disabled audit");
+    const context = await browser.newContext({ javaScriptEnabled: false });
+    const probe = await context.newPage();
+    const fake = {
+      request_id: "00000000-0000-0000-0000-000000000000",
+      claim_token: "A".repeat(43),
+    };
+    try {
+      await probe.goto(origin + "/access");
+      assert(
+        await probe.getByLabel("Saved request ID").isDisabled(),
+        "SSR request ID was enabled before React mounted",
+      );
+      assert(
+        await probe.getByLabel("Private claim token").isDisabled(),
+        "SSR claim token was enabled before React mounted",
+      );
+      assert(
+        await probe
+          .getByRole("button", { name: "Preparing request manager…" })
+          .isDisabled(),
+        "SSR submission was enabled before React mounted",
+      );
+      assert(
+        (await probe.locator("form").getAttribute("method")) === "post",
+        "Native form fallback was GET",
+      );
+      assert(
+        (await probe.locator("body").innerText()).includes(
+          "Enable JavaScript to manage your request.",
+        ),
+        "No-script recovery guidance was missing",
+      );
+      const navigation = probe.waitForResponse(
+        (response) =>
+          response.request().isNavigationRequest() &&
+          response.request().method() === "POST",
+      );
+      // Force the native fallback even though a visitor cannot interact with the
+      // disabled controls. This covers accidental re-enablement without React.
+      await probe.evaluate((claim) => {
+        const form = document.querySelector("form");
+        for (const name of ["request_id", "claim_token"]) {
+          const input = form.elements.namedItem(name);
+          input.disabled = false;
+          input.value = claim[name];
+        }
+        form.submit();
+      }, fake);
+      const response = await navigation;
+      const url = new URL(response.url());
+      assert(
+        response.status() === 405,
+        "Native POST fallback was not safely rejected by the Worker",
+      );
+      assert(
+        !url.search && !url.hash && !url.href.includes(fake.claim_token),
+        "Native fallback exposed credentials in URL",
+      );
+      assert(
+        response.request().postData().includes(fake.claim_token),
+        "Forced native fallback did not retain credentials in body",
+      );
+      reports.push(
+        "Before JavaScript: SSR controls disabled; forced native fallback POST rejected405 with no query credentials",
+      );
+    } finally {
+      await context.close();
+    }
+  }
+
   async function realPendingWorker() {
     await page.goto(origin + "/access");
     await page.getByLabel("Saved request ID").waitFor();
@@ -375,6 +448,7 @@ async function auditManager(page) {
     );
   }
 
+  await beforeJavaScript();
   await realPendingWorker();
   await page.route("https://manager-attacker.invalid/**", async (route) => {
     forwarded++;
