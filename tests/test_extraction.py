@@ -26,7 +26,7 @@ def fixture_pdf(root: Path, *, rotated: bool = False, scanned: bool = False) -> 
         card = pymupdf.Rect(70, 160, 412.4, 375.92)
         page.draw_rect(card, color=(0, 0, 0), fill=(0.94, 0.96, 0.98))
         if not scanned:
-            page.insert_text((80, 185), "SPECIMEN - microprinting and ultraviolet")
+            page.insert_text((80, 185), "Driver license SPECIMEN - microprinting and ultraviolet")
         raster = np.full((190, 300, 4), 170, dtype=np.uint8)
         raster[:, :, 3] = 220
         _, png = cv2.imencode(".png", raster)
@@ -83,6 +83,10 @@ def test_native_stream_masks_placements_and_rotated_geometry(tmp_path: Path) -> 
     assert all(c["metric_accuracy_mm"] is None for c in proposals)
     assert all(c["review_status"] == "unreviewed" for c in proposals)
     assert all(c["physical_calibration"] == "none" for c in proposals)
+    assert all(c["boundary_scope"] == "native_image_extent" for c in proposals)
+    assert all(c["text_regions"] == [] for c in proposals)
+    assert all(c["native_provenance"]["output_scale"] == [1.0, 1.0] for c in proposals)
+    assert all(c["native_provenance"]["resampling"] == "none" for c in proposals)
     # Tampering must invalidate a resume receipt.
     first = document.assets[0]
     (tmp_path / first.path).write_bytes(b"tampered")
@@ -176,7 +180,13 @@ def test_each_new_extraction_helper_invalidates_cache(monkeypatch: pytest.Monkey
 
     original_read = Path.read_bytes
     baseline = fingerprint(Options())
-    for module in ("extraction_assets.py", "extraction_pages.py", "extraction_text.py"):
+    for module in (
+        "extraction_assets.py",
+        "extraction_pages.py",
+        "extraction_text.py",
+        "pdf_objects.py",
+        "pdf_components.py",
+    ):
 
         def changed(path: Path, changed_module: str = module) -> bytes:
             data = original_read(path)
@@ -217,7 +227,8 @@ def test_oversized_native_image_is_not_decoded_or_lost_from_source(tmp_path: Pat
         str(tmp_path),
         Options(max_image_pixels=1, max_render_pages=0, detect_boundaries=False),
     )
-    assert not any(a.kind in {"raw_stream", "extracted_image"} for a in result.assets)
+    assert not any(a.kind == "extracted_image" or "/native_xrefs/" in a.path for a in result.assets)
+    assert any("/native_objects/" in a.path for a in result.assets)
     assert any("image pixel limit exceeded" in warning for warning in result.warnings)
     assert digest(tmp_path / download.path) == download.sha256
 

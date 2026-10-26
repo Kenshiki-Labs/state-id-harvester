@@ -11,8 +11,22 @@
           "title": "Aspect Ratio",
           "type": "number"
         },
+        "boundary_scope": {
+          "default": "unreviewed_boundary",
+          "enum": [
+            "unreviewed_boundary",
+            "native_image_extent"
+          ],
+          "title": "Boundary Scope",
+          "type": "string"
+        },
         "candidate_id": {
           "title": "Candidate Id",
+          "type": "string"
+        },
+        "crop_format": {
+          "default": "png",
+          "title": "Crop Format",
           "type": "string"
         },
         "crop_path": {
@@ -32,6 +46,19 @@
           "default": null,
           "title": "Metric Accuracy Mm",
           "type": "null"
+        },
+        "native_provenance": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Native Provenance"
         },
         "nominal_height_mm": {
           "default": 53.98,

@@ -30,7 +30,9 @@ class NativeImages:
         seen: set[int] = set()
         for entry in page.get_images(full=True):
             xref, smask, width, height = entry[:4]
-            if xref in seen or width < 280 or height < 160:
+            # Preservation is independent of credential classification. Small cards,
+            # logos and decorative images all retain their native source evidence.
+            if xref in seen or width <= 0 or height <= 0:
                 continue
             seen.add(xref)
             if width * height > self.options.max_image_pixels:
@@ -126,7 +128,7 @@ class PageRenderer:
 
     def render(self, page: Any, number: int, selected: bool, has_slot: bool) -> RenderResult:
         if not selected:
-            return RenderResult(skip_reason="No text feature or sufficiently large placed image")
+            return RenderResult(skip_reason="No text feature or placed native image")
         if not has_slot:
             return RenderResult(skip_reason="Per-document render page budget")
         pixels = math.ceil(page.rect.width * self.options.dpi / 72) * math.ceil(
