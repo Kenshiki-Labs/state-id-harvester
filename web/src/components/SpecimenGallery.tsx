@@ -21,7 +21,7 @@ function ReferenceCard({ item, source, number, name }: Readonly<{ item: PublicSp
 export default function SpecimenGallery({ state, name, sources, gallery }: Readonly<{ state: string; name: string; sources: Source[]; gallery: GalleryState }>) {
   const items = gallery.items.filter((item) => item.state === state);
   return <section className="reference-gallery" aria-label={`${name} reference images`} aria-busy={gallery.loading}>
-    <div className="reference-gallery-heading"><h4>Reference images</h4>{!gallery.loading && !gallery.error && <span>{items.length} available</span>}</div>
+    <div className="reference-gallery-heading"><h2>Reference images</h2>{!gallery.loading && !gallery.error && <span>{items.length} available</span>}</div>
     {gallery.loading ? <p role="status" className="reference-message">Loading reference images…</p> : gallery.error ? <div className="reference-message" role="alert"><p>Reference images could not be loaded. This does not establish a coverage gap.</p><button className="text-link" type="button" onClick={gallery.retry}>Try again ↻</button></div> : items.length === 0 ? <p className="reference-message">No reference images are published for this collection yet. See the source trail for available documents.</p> : <><p className="reference-caption">Open any image at full size. These source references may include annotations, partial images or publication pages; they are not accepted verification templates.</p><div className="reference-grid">{items.map((item, index) => <ReferenceCard key={`${item.state}/${item.id}`} item={item} number={index + 1} name={name} source={sources.find((source) => source.sha256 === item.source_sha256)} />)}</div></>}
   </section>;
 }

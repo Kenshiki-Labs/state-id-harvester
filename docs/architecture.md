@@ -36,3 +36,13 @@ raw sources remain in a protected vault; ingestion and administration remain aut
 operator operations. It makes no claim of a complete 51-state reviewed design catalog, native
 SDK integration, physical-card acceptance, optical-feature qualification, or an automatic
 fraud verdict. Those require independent implementation and validation checkpoints.
+
+## Website navigation
+
+Astro builds separate HTML documents for the home page, `/catalog` directory,
+`/catalog/{jurisdiction}` collection pages, `/catalog/federal`, and `/method`.
+The home page contains the introduction and navigation, without catalog hydration
+or image requests. The directory renders all 51 jurisdiction links before hydration;
+search filters those links. Native document navigation opens each collection, whose
+React island loads its public reference images through the Worker. Each collection
+has a stable URL, breadcrumb navigation, and ordinary page scrolling.

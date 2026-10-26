@@ -53,7 +53,7 @@ export default function CatalogDetail({
           {detail.sources.length ? "Sources indexed" : "Discovery pending"}
         </span>
       </div>
-      <h3>{detail.name}</h3>
+      <h2 className="collection-heading">Collection overview</h2>
       <p className="detail-description">
         {detail.sources.length
           ? "Public documents discovered for this jurisdiction. Publishing jurisdiction, relevance, depicted credentials, and design generations require separate review."
@@ -75,9 +75,9 @@ export default function CatalogDetail({
       </div>
       {gallery && <SpecimenGallery state={detail.code} name={detail.name} sources={detail.sources} gallery={gallery} />}
       <div className="detail-divider" />
-      <h4>
+      <h2 className="collection-heading">
         Source trail <span>↗</span>
-      </h4>
+      </h2>
       <SourceTrail sources={detail.sources} />
       <div className="review-note">
         <span aria-hidden="true">◇</span>

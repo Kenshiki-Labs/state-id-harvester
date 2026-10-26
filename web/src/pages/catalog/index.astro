@@ -1,0 +1,8 @@
+---
+import Site from '../../layouts/Site.astro';
+import Directory from '../../components/Directory';
+import { normalizeCatalog } from '../../lib/catalog-model';
+import data from '../../../public/data/catalog.json';
+const rows = normalizeCatalog(data);
+---
+<Site title="Reference catalog — Cadastre" description="Browse identity-document research for all 50 states, Washington DC, and the federal collection."><div class="shell directory-page section-space"><nav class="page-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> / </span><span>Catalog</span></nav><div class="page-intro"><p class="eyebrow">THE REFERENCE CATALOG</p><h1>Choose a collection.</h1><p>Each jurisdiction has its own page for reference images, source publications, and research status.</p></div><a class="federal-entry entry-card" href="/catalog/federal"><span class="eyebrow">SEPARATE COLLECTION</span><h2>United States federal <span aria-hidden="true">↗</span></h2><p>Federal credential sources and reference images.</p></a><Directory rows={rows} client:load/><p class="directory-note">Source counts track discovery, not coverage of every active design. <a href="/data/catalog.json">Download the source index ↗</a></p></div></Site>

@@ -670,7 +670,7 @@ describe("server-side access authority", () => {
         method,
       );
       expect(response.status).toBe(301);
-      expect(response.headers.get("Location")).toBe(origin + "/#catalog");
+      expect(response.headers.get("Location")).toBe(origin + "/catalog");
       expect(await response.text()).toBe("");
     },
   );

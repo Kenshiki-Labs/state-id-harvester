@@ -1,0 +1,11 @@
+---
+import '../styles/site.css';
+interface Props { title: string; description?: string; }
+const { title, description = 'Open identity-document references, source publications, and research from Kenshiki Labs.' } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="theme-color" content="#ffffff"/><title>{title}</title><link rel="canonical" href={canonical}/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/><meta property="og:url" content={canonical}/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/></head><body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell"><a class="wordmark" href="/" aria-label="Cadastre home"><svg data-cadastre-diagram="independent" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 5h14v5H10v12h12v-9h5v14H5Z"/><path d="M15 15h12M21 9v12"/></svg><span>cadastre<span class="wordmark-dot">.</span></span></a><nav aria-label="Main navigation"><a href="/catalog">The catalog</a><a href="/method">Our method</a><a class="nav-github" href="https://github.com/Kenshiki-Labs/state-id-harvester">Open source <span aria-hidden="true">↗</span></a></nav><a class="header-access" href="/catalog">Browse images <span aria-hidden="true">↗</span></a></header>
+<main id="main"><slot/></main>
+<footer class="site-footer shell"><div class="footer-top"><a class="wordmark" href="/">cadastre<span class="wordmark-dot">.</span></a><p>Reference begins with evidence.</p><a href="https://kenshikilabs.com">A Kenshiki Labs initiative <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><p>© 2026 Kenshiki Labs. Public research infrastructure.</p><nav aria-label="Legal navigation"><a href="/acceptable-use">Acceptable use</a><a href="/privacy">Privacy</a><a href="https://github.com/Kenshiki-Labs/state-id-harvester">GitHub ↗</a></nav></div><p class="footer-disclaimer">Independent research project. Not affiliated with or endorsed by any issuing jurisdiction. Public specimens and source documents do not establish authenticity.</p></footer>
+</body></html>

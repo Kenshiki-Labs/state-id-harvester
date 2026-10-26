@@ -630,7 +630,7 @@ export default {
       if (!["GET", "HEAD"].includes(request.method))
         throw new PolicyError("method_not_allowed", 405);
       if (path === "/access" || path === "/access/")
-        return headers(Response.redirect(`${env.PUBLIC_ORIGIN}/#catalog`, 301));
+        return headers(Response.redirect(`${env.PUBLIC_ORIGIN}/catalog`, 301));
       return headers(await env.ASSETS.fetch(request));
     } catch (error) {
       const failure =

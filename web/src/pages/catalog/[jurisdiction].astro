@@ -1,0 +1,16 @@
+---
+import Site from '../../layouts/Site.astro';
+import Collection from '../../components/Collection';
+import { normalizeCatalog, normalizeFederal } from '../../lib/catalog-model';
+import data from '../../../public/data/catalog.json';
+export function getStaticPaths() {
+  const rows = normalizeCatalog(data);
+  const federal = normalizeFederal(data);
+  return [
+    ...rows.map((detail) => ({ params: { jurisdiction: detail.code.toLowerCase() }, props: { detail, federal: undefined } })),
+    ...(federal ? [{ params: { jurisdiction: 'federal' }, props: { detail: federal, federal } }] : []),
+  ];
+}
+const { detail, federal } = Astro.props;
+---
+<Site title={`${detail.name} references — Cadastre`} description={`Browse ${detail.name} reference images, source publications, provenance, and research status.`}><div class="shell collection-page section-space"><nav class="page-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> / </span><a href="/catalog">Catalog</a><span aria-hidden="true"> / </span><span aria-current="page">{detail.name}</span></nav><div class="page-intro"><p class="eyebrow">{federal ? 'FEDERAL COLLECTION' : `JURISDICTION / ${detail.code}`}</p><h1>{detail.name}</h1><p>Reference images, source publications, and the evidence behind this collection.</p></div><Collection detail={detail} federal={federal} client:load/><a class="text-link collection-back" href="/catalog">← All collections</a></div></Site>

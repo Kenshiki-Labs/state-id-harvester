@@ -61,6 +61,6 @@ describe("public gallery rendering", () => {
   it("removes the visitor application and directs legacy entry to the catalog", () => {
     const page = homepage;
     expect(page).not.toMatch(/AccessForm|Request access|DNS TXT|restricted research materials/i);
-    expect(accessPage).toContain('Astro.redirect("/#catalog", 301)');
+    expect(accessPage).toContain('Astro.redirect("/catalog", 301)');
   });
 });

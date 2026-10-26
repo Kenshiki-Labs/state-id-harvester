@@ -22,7 +22,7 @@ export default function FederalCatalog({
           {collection.sources.length ? "Sources indexed" : "Discovery pending"}
         </span>
       </div>
-      <h3>{collection.name}</h3>
+      <h2 className="collection-heading">Collection overview</h2>
       <p className="detail-description">
         Federal source publications form a separate collection from the 51 state
         jurisdictions. These publications can cover several credential formats
@@ -51,9 +51,9 @@ export default function FederalCatalog({
       </div>
       {gallery && <SpecimenGallery state="US_FED" name={collection.name} sources={collection.sources} gallery={gallery} />}
       <div className="detail-divider" />
-      <h4>
+      <h2 className="collection-heading">
         Federal source trail <span>↗</span>
-      </h4>
+      </h2>
       <SourceTrail sources={collection.sources} />
       <div className="review-note">
         <span aria-hidden="true">◇</span>
