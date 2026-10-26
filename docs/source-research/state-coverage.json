@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-26T19:58:51.019465+00:00",
+  "publication_revision": "7aa697bd2f1898174ed3dfac75148678d6a39423",
+  "measurement": "Anonymous public image-index membership; every image downloaded and SHA-256 verified. Source-publication counts do not imply credential-image coverage.",
+  "state_jurisdictions_with_images": 24,
+  "state_jurisdictions_without_images": 27,
+  "state_reference_images": 274,
+  "federal_reference_images": 30,
+  "jurisdictions": [
+    {
+      "code": "AL",
+      "name": "Alabama",
+      "source_publications": 8,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maine"
+    },
+    {
+      "code": "AK",
+      "name": "Alaska",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maine"
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona",
+      "source_publications": 14,
+      "published_reference_images": 18,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/AZ-2026-10-26.json"
+    },
+    {
+      "code": "AR",
+      "name": "Arkansas",
+      "source_publications": 7,
+      "published_reference_images": 8,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/AR-2026-10-26.json"
+    },
+    {
+      "code": "CA",
+      "name": "California",
+      "source_publications": 3,
+      "published_reference_images": 7,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maine"
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut",
+      "source_publications": 12,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maine"
+    },
+    {
+      "code": "DE",
+      "name": "Delaware",
+      "source_publications": 9,
+      "published_reference_images": 18,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "DC",
+      "name": "District of Columbia",
+      "source_publications": 1,
+      "published_reference_images": 5,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "source_publications": 3,
+      "published_reference_images": 13,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "GA",
+      "name": "Georgia",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maine"
+    },
+    {
+      "code": "HI",
+      "name": "Hawaii",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maine"
+    },
+    {
+      "code": "ID",
+      "name": "Idaho",
+      "source_publications": 1,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maine"
+    },
+    {
+      "code": "IL",
+      "name": "Illinois",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maine"
+    },
+    {
+      "code": "IN",
+      "name": "Indiana",
+      "source_publications": 4,
+      "published_reference_images": 17,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/IN-2026-10-26.json"
+    },
+    {
+      "code": "IA",
+      "name": "Iowa",
+      "source_publications": 2,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maine"
+    },
+    {
+      "code": "KS",
+      "name": "Kansas",
+      "source_publications": 7,
+      "published_reference_images": 10,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/KS-2026-10-26.json"
+    },
+    {
+      "code": "KY",
+      "name": "Kentucky",
+      "source_publications": 7,
+      "published_reference_images": 12,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/KY-2026-10-26.json"
+    },
+    {
+      "code": "LA",
+      "name": "Louisiana",
+      "source_publications": 6,
+      "published_reference_images": 7,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/LA-2026-10-26.json"
+    },
+    {
+      "code": "ME",
+      "name": "Maine",
+      "source_publications": 6,
+      "published_reference_images": 7,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/ME-2026-10-26.json"
+    },
+    {
+      "code": "MD",
+      "name": "Maryland",
+      "source_publications": 3,
+      "published_reference_images": 10,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/MD-2026-10-26.json"
+    },
+    {
+      "code": "MA",
+      "name": "Massachusetts",
+      "source_publications": 5,
+      "published_reference_images": 14,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "MI",
+      "name": "Michigan",
+      "source_publications": 5,
+      "published_reference_images": 12,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/MI-2026-10-26.json"
+    },
+    {
+      "code": "MN",
+      "name": "Minnesota",
+      "source_publications": 1,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_michigan"
+    },
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "source_publications": 6,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_michigan"
+    },
+    {
+      "code": "MO",
+      "name": "Missouri",
+      "source_publications": 3,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_michigan"
+    },
+    {
+      "code": "MT",
+      "name": "Montana",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_michigan"
+    },
+    {
+      "code": "NE",
+      "name": "Nebraska",
+      "source_publications": 10,
+      "published_reference_images": 6,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_michigan"
+    },
+    {
+      "code": "NH",
+      "name": "New Hampshire",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_michigan"
+    },
+    {
+      "code": "NJ",
+      "name": "New Jersey",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_michigan"
+    },
+    {
+      "code": "NM",
+      "name": "New Mexico",
+      "source_publications": 2,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_michigan"
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "source_publications": 20,
+      "published_reference_images": 18,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "NC",
+      "name": "North Carolina",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_michigan"
+    },
+    {
+      "code": "ND",
+      "name": "North Dakota",
+      "source_publications": 3,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maryland"
+    },
+    {
+      "code": "OH",
+      "name": "Ohio",
+      "source_publications": 5,
+      "published_reference_images": 9,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "OK",
+      "name": "Oklahoma",
+      "source_publications": 3,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maryland"
+    },
+    {
+      "code": "OR",
+      "name": "Oregon",
+      "source_publications": 4,
+      "published_reference_images": 3,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "source_publications": 1,
+      "published_reference_images": 1,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "RI",
+      "name": "Rhode Island",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maryland"
+    },
+    {
+      "code": "SC",
+      "name": "South Carolina",
+      "source_publications": 2,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maryland"
+    },
+    {
+      "code": "SD",
+      "name": "South Dakota",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maryland"
+    },
+    {
+      "code": "TN",
+      "name": "Tennessee",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maryland"
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "source_publications": 3,
+      "published_reference_images": 15,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "UT",
+      "name": "Utah",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maryland"
+    },
+    {
+      "code": "VT",
+      "name": "Vermont",
+      "source_publications": 0,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maryland"
+    },
+    {
+      "code": "VA",
+      "name": "Virginia",
+      "source_publications": 1,
+      "published_reference_images": 18,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "WA",
+      "name": "Washington",
+      "source_publications": 29,
+      "published_reference_images": 34,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "WV",
+      "name": "West Virginia",
+      "source_publications": 13,
+      "published_reference_images": 11,
+      "research_status": "published_references_available",
+      "research_record": null
+    },
+    {
+      "code": "WI",
+      "name": "Wisconsin",
+      "source_publications": 1,
+      "published_reference_images": 0,
+      "research_status": "bounded_search_in_progress",
+      "research_record": null,
+      "research_assignment": "research_maryland"
+    },
+    {
+      "code": "WY",
+      "name": "Wyoming",
+      "source_publications": 9,
+      "published_reference_images": 1,
+      "research_status": "published_references_available",
+      "research_record": null
+    }
+  ]
+}
