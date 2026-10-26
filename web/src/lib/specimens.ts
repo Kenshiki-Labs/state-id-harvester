@@ -53,7 +53,7 @@ export function joinNormalizations(items: PublicSpecimen[], normalizations: ID1N
   const index = new Map(normalizations.map((row) => [`${row.state}/${row.id}`, row]));
   return items.map(({ normalization: ignored, ...item }) => {
     const row = index.get(`${item.state}/${item.id}`);
-    return row && row.source_sha256 === item.source_sha256 && row.original_reference_sha256 === item.asset_sha256 ? { ...item, normalization: row } : item;
+    return row?.source_sha256 === item.source_sha256 && row.original_reference_sha256 === item.asset_sha256 ? { ...item, normalization: row } : item;
   });
 }
 export function normalizationUrl(item: PublicSpecimen): string {

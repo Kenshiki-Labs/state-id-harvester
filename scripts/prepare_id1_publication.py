@@ -27,6 +27,8 @@ HASH = re.compile(r"[a-f0-9]{64}")
 MAX_JSON = 8 * 1024 * 1024
 MAX_CANONICAL_BYTES = 50 * 1024 * 1024
 BOUNDARY_BASES = {"visual_native_extent", "visual_card_corners"}
+INDEX_NAME = "index.json"
+UPLOAD_RECEIPT_NAME = "upload-receipt.json"
 DIMENSIONS = {(4280, 2699), (2699, 4280)}
 
 
@@ -126,53 +128,53 @@ def prepare(source: Path, original_index: Path, destination: Path) -> dict[str, 
         _, width, height = raster_header(delivery)
         contained_path(images, f"{digest}.png").write_bytes(delivery)
         records.append(
-            dict(
-                id=row["id"],
-                state=row["state"],
-                source_sha256=row["source_sha256"],
-                asset_sha256=digest,
-                review_status="reference_only",
-                key=f"specimens/id1/{batch_hash}/{digest}.png",
-                original_reference_sha256=row["original_reference_sha256"],
-                canonical_asset_sha256=row["asset_sha256"],
-                width_px=row["width_px"],
-                height_px=row["height_px"],
-                boundary_basis=row["boundary_basis"],
-            )
+            {
+                "id": row["id"],
+                "state": row["state"],
+                "source_sha256": row["source_sha256"],
+                "asset_sha256": digest,
+                "review_status": "reference_only",
+                "key": f"specimens/id1/{batch_hash}/{digest}.png",
+                "original_reference_sha256": row["original_reference_sha256"],
+                "canonical_asset_sha256": row["asset_sha256"],
+                "width_px": row["width_px"],
+                "height_px": row["height_px"],
+                "boundary_basis": row["boundary_basis"],
+            }
         )
         lineage.append(
-            dict(
-                id=row["id"],
-                state=row["state"],
-                canonical_sha256=row["asset_sha256"],
-                canonical_width_px=row["width_px"],
-                canonical_height_px=row["height_px"],
-                delivery_sha256=digest,
-                delivery_transform=transform,
-                delivery_size_bytes=len(delivery),
-                delivery_width_px=width,
-                delivery_height_px=height,
-                canonical_resampling_calls=0,
-                delivery_resampling_calls=1,
-            )
+            {
+                "id": row["id"],
+                "state": row["state"],
+                "canonical_sha256": row["asset_sha256"],
+                "canonical_width_px": row["width_px"],
+                "canonical_height_px": row["height_px"],
+                "delivery_sha256": digest,
+                "delivery_transform": transform,
+                "delivery_size_bytes": len(delivery),
+                "delivery_width_px": width,
+                "delivery_height_px": height,
+                "canonical_resampling_calls": 0,
+                "delivery_resampling_calls": 1,
+            }
         )
         if count % 25 == 0:
             print(f"Prepared {count}/{len(results)} delivery images", flush=True)
-    result = dict(specimens=records)
-    write_json(contained_path(destination, "index.json"), result)
+    result = {"specimens": records}
+    write_json(contained_path(destination, INDEX_NAME), result)
     write_json(
         contained_path(destination, "preparation-receipt.json"),
-        dict(
-            prepared_at=datetime.now(UTC).isoformat(),
-            batch_sha256=batch_hash,
-            normalization_manifest_sha256=sha(manifest_raw),
-            original_index_sha256=sha(original_raw),
-            index_sha256=sha(contained_path(destination, "index.json").read_bytes()),
-            original_reference_count=len(old["specimens"]),
-            prepared_reference_count=len(records),
-            originals_and_canonical_unchanged=True,
-            lineage=lineage,
-        ),
+        {
+            "prepared_at": datetime.now(UTC).isoformat(),
+            "batch_sha256": batch_hash,
+            "normalization_manifest_sha256": sha(manifest_raw),
+            "original_index_sha256": sha(original_raw),
+            "index_sha256": sha(contained_path(destination, "index.json").read_bytes()),
+            "original_reference_count": len(old["specimens"]),
+            "prepared_reference_count": len(records),
+            "originals_and_canonical_unchanged": True,
+            "lineage": lineage,
+        },
     )
     return result
 
@@ -221,20 +223,20 @@ def transfer_blob(destination: Path, vault: Vault, row: dict[str, Any]) -> dict[
     returned = vault.get(row["key"])
     if returned is None or sha(returned) != row["asset_sha256"]:
         raise ValueError("Uploaded display readback mismatch")
-    return dict(
-        id=row["id"],
-        state=row["state"],
-        key=row["key"],
-        asset_sha256=row["asset_sha256"],
-        size_bytes=len(raw),
-    )
+    return {
+        "id": row["id"],
+        "state": row["state"],
+        "key": row["key"],
+        "asset_sha256": row["asset_sha256"],
+        "size_bytes": len(raw),
+    }
 
 
 def upload_blobs(destination: Path, vault: Vault) -> dict[str, Any]:
     destination = managed_path(destination)
-    _, index = read_metadata(contained_path(destination, "index.json"))
+    _, index = read_metadata(contained_path(destination, INDEX_NAME))
     _, receipt = read_metadata(contained_path(destination, "preparation-receipt.json"))
-    if sha(contained_path(destination, "index.json").read_bytes()) != receipt["index_sha256"]:
+    if sha(contained_path(destination, INDEX_NAME).read_bytes()) != receipt["index_sha256"]:
         raise ValueError("Prepared index changed")
     # Prevalidate all blobs and immutable keys before the first network mutation.
     batch_hash = receipt["batch_sha256"]
@@ -246,16 +248,18 @@ def upload_blobs(destination: Path, vault: Vault) -> dict[str, Any]:
         if sha(raw) != digest or len(raw) > CHUNK_BYTES:
             raise ValueError("Prepared display checksum mismatch")
     verified = []
-    receipt_path = contained_path(destination, "upload-receipt.json")
+    receipt_path = contained_path(destination, UPLOAD_RECEIPT_NAME)
     if receipt_path.exists():
         _, prior = read_metadata(receipt_path)
         if prior["index_sha256"] != receipt["index_sha256"]:
             raise ValueError("Upload receipt belongs to another index")
         verified = prior["verified"]
     completed = {(row["state"], row["id"], row["asset_sha256"]) for row in verified}
-    upload_receipt = dict(
-        index_sha256=receipt["index_sha256"], pointer_published=False, verified=verified
-    )
+    upload_receipt = {
+        "index_sha256": receipt["index_sha256"],
+        "pointer_published": False,
+        "verified": verified,
+    }
     pending = [
         row
         for row in index["specimens"]
@@ -265,14 +269,14 @@ def upload_blobs(destination: Path, vault: Vault) -> dict[str, Any]:
         futures = [pool.submit(transfer_blob, destination, vault, row) for row in pending]
         for future in as_completed(futures):
             verified.append(future.result())
-            write_json(contained_path(destination, "upload-receipt.json"), upload_receipt)
+            write_json(contained_path(destination, UPLOAD_RECEIPT_NAME), upload_receipt)
             if len(verified) % 20 == 0:
                 print(
                     f"Uploaded and hash-verified {len(verified)}/{len(index['specimens'])}",
                     flush=True,
                 )
     upload_receipt["completed_at"] = datetime.now(UTC).isoformat()
-    write_json(contained_path(destination, "upload-receipt.json"), upload_receipt)
+    write_json(contained_path(destination, UPLOAD_RECEIPT_NAME), upload_receipt)
     return upload_receipt
 
 

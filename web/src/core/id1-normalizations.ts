@@ -35,14 +35,13 @@ export function id1NormalizationIndex(
     const canonicalHash = raw.canonical_asset_sha256;
     if (
       entry.state === "US_FED" ||
-      !parent ||
-      entry.source_sha256 !== parent.source_sha256 ||
+      entry.source_sha256 !== parent?.source_sha256 ||
       raw.original_reference_sha256 !== parent.asset_sha256 ||
       typeof canonicalHash !== "string" ||
       !HASH.test(canonicalHash) ||
       !validGeometry(raw) ||
       !new RegExp(
-        `^specimens/id1/[a-f0-9]{64}/${entry.asset_sha256}\\.png$`,
+        String.raw`^specimens/id1/[a-f0-9]{64}/${entry.asset_sha256}\.png$`,
       ).test(entry.key)
     )
       throw new PolicyError("invalid_id1_normalization_index", 503);

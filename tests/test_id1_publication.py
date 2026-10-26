@@ -12,7 +12,8 @@ import pytest
 spec = importlib.util.spec_from_file_location(
     "id1_publication", "scripts/prepare_id1_publication.py"
 )
-assert spec and spec.loader
+assert spec is not None
+assert spec.loader is not None
 publication = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(publication)
 

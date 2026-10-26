@@ -3,6 +3,12 @@ import ImageViewer from "./ImageViewer";
 import type { Source } from "../lib/catalog-model";
 import { normalizationUrl, specimenUrl, type GalleryState, type PublicSpecimen } from "../lib/specimens";
 
+function referenceStatus(normalized: boolean, normalizedFailed: boolean, state: string): string {
+  if (normalized) return "ID-1 normalized · review pending";
+  if (normalizedFailed) return "Original · ID-1 image unavailable";
+  if (state === "US_FED") return "Original · review pending";
+  return "Original · ID-1 pending";
+}
 function ReferenceCard({ item, source, number, name, onOpen }: Readonly<{ item: PublicSpecimen; source?: Source; number: number; name: string; onOpen: () => void }>) {
   const [failedUrls, setFailedUrls] = useState<string[]>([]);
   const failed = failedUrls.includes(specimenUrl(item));
@@ -15,7 +21,7 @@ function ReferenceCard({ item, source, number, name, onOpen }: Readonly<{ item: 
       {failed ? <span className="reference-image-failure">Image unavailable. Open the viewer to try again.</span> : <img src={url} alt={`${name} source reference ${number}; research specimen, review pending`} loading="lazy" decoding="async" onError={() => setFailedUrls((previous) => previous.includes(url) ? previous : [...previous, url])} />}
       <span className="reference-open">View image <span aria-hidden="true">⤢</span></span>
     </button>
-    <figcaption><strong>Reference {String(number).padStart(2, "0")}</strong><span className="reference-status">{normalized ? "ID-1 normalized · review pending" : normalizedFailed ? "Original · ID-1 image unavailable" : item.state === "US_FED" ? "Original · review pending" : "Original · ID-1 pending"}</span>
+    <figcaption><strong>Reference {String(number).padStart(2, "0")}</strong><span className="reference-status">{referenceStatus(normalized, normalizedFailed, item.state)}</span>
       <details className="reference-provenance"><summary>Image provenance</summary>
         {source ? <p><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} ↗</a><br/><span>{source.hostname}</span></p> : <p>Source publication fingerprint retained. A matching citation is not available in this source index.</p>}
         <dl><dt>Collection</dt><dd>{item.state}</dd><dt>Reference ID</dt><dd>{item.id}</dd><dt>Source SHA-256</dt><dd>{item.source_sha256}</dd><dt>Image SHA-256</dt><dd>{normalization?.asset_sha256 ?? item.asset_sha256}</dd>{normalization && <><dt>Original image SHA-256</dt><dd>{item.asset_sha256}</dd><dt>Geometry basis</dt><dd>{normalization.boundary_basis === "visual_native_extent" ? "Native image extent (approximate)" : "Visually identified card corners"}</dd><dt>Canonical card grid</dt><dd>{normalization.width_px} × {normalization.height_px} px</dd></>}</dl>

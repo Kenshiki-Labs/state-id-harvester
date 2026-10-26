@@ -2534,5 +2534,5 @@ button.reference-image-link { width: 100%; border: 0; text-align: left; font: in
 .viewer-footer a { color: var(--teal); }
 @media (max-width: 480px) { .image-viewer { margin: auto; width: 96vw; max-width: 96vw; height: 96dvh; max-height: 96dvh; border-radius: 10px; } .viewer-header, .viewer-toolbar, .viewer-footer { padding: 12px; } .viewer-toolbar { justify-content: center; } .viewer-canvas { padding: 12px; } }
 
-.viewer-variants { display: flex; align-items: center; gap: 6px; }
+.viewer-variants { display: flex; align-items: center; gap: 6px; border: 0; padding: 0; margin: 0; min-width: 0; }
 .viewer-variants button[aria-pressed="true"] { background: var(--teal); color: white; border-color: var(--teal); }

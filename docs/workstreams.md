@@ -11,12 +11,15 @@ checks pass; a commit, local artifact, or green build alone does not make it rel
 - [x] Wire a reusable normalization gate into publication preparation.
 - [x] Pass normalization code CI and SonarCloud on `c54a65c`.
 - [x] Prepare marked public display derivatives and verify their source lineage.
-- [ ] Upload and read back all 414 immutable display objects before publishing
+- [x] Upload and read back all 414 immutable display objects before publishing
   their index pointer.
 - [x] Add public normalized delivery and an in-modal Original / ID-1 control.
   Local validation: 253 web tests, 46 targeted normalization/publication tests,
   Astro and TypeScript checks, production build, and bundled-publication guard pass.
-- [ ] Pass combined release CI, SonarCloud, and artifact-publication checks.
+- [x] Pass combined release CI, SonarCloud, and artifact-publication checks
+  on `ef0b3f2` (Validate run `40411379483`; Sonar analysis
+  `350a4fba-dc26-4723-a3fd-fb99c9cd17c1`, gate OK).
+  Final maintainability cleanup will be checked on the release revision.
 - [ ] Deploy and verify every normalized public image hash; verify the original
   658-reference index remains unchanged.
 - [ ] Verify live collection pages, image switching, citations, keyboard/focus

@@ -35,7 +35,8 @@ export default function ImageViewer({ items, index, name, onNavigate, onClose }:
   const identity = item ? `${item.state}/${item.id}` : "";
   const [originalSelection, setOriginalSelection] = useState<string | null>(null);
   const normalized = Boolean(item?.normalization) && originalSelection !== identity;
-  const imageUrl = item && normalized ? normalizationUrl(item) : item ? specimenUrl(item) : "";
+  let imageUrl = "";
+  if (item) imageUrl = normalized ? normalizationUrl(item) : specimenUrl(item);
   useEffect(() => {
     const dialog = dialogRef.current;
     if (!dialog) return;
@@ -92,7 +93,7 @@ export default function ImageViewer({ items, index, name, onNavigate, onClose }:
     <header className="viewer-header"><h2 id={title}>{name} <span>Reference {index + 1} of {items.length}</span></h2><button className="viewer-close" type="button" onClick={onClose} aria-label="Close image viewer">Close <span aria-hidden="true">×</span></button></header>
     <div className="viewer-toolbar" aria-label="Image controls">
       <div className="viewer-paging"><button type="button" aria-label="Previous reference" disabled={index === 0} onClick={() => navigate(index - 1)}>← Previous</button><button type="button" aria-label="Next reference" disabled={index === items.length - 1} onClick={() => navigate(index + 1)}>Next →</button></div>
-      {item.normalization && <div className="viewer-variants" role="group" aria-label="Image version"><button type="button" aria-pressed={normalized} onClick={() => { setOriginalSelection(null); changeZoom(0); }}>ID-1</button><button type="button" aria-pressed={!normalized} onClick={() => { setOriginalSelection(identity); changeZoom(0); }}>Original</button></div>}
+      {item.normalization && <fieldset className="viewer-variants" aria-label="Image version"><button type="button" aria-pressed={normalized} onClick={() => { setOriginalSelection(null); changeZoom(0); }}>ID-1</button><button type="button" aria-pressed={!normalized} onClick={() => { setOriginalSelection(identity); changeZoom(0); }}>Original</button></fieldset>}
       <div className="viewer-zoom"><button type="button" aria-label="Zoom out" disabled={zoom === 0} onClick={() => changeZoom(zoom - 1)}>−</button><output aria-live="polite">{zoom === 0 ? "Fit" : `${zoomLevels[zoom] * 100}%`}</output><button type="button" aria-label="Zoom in" disabled={zoom === zoomLevels.length - 1} onClick={() => changeZoom(zoom + 1)}>+</button><button type="button" disabled={zoom === 0} onClick={() => changeZoom(0)}>Fit</button></div>
     </div>
     <div ref={canvasRef} className="viewer-canvas" data-zoom={zoomLevels[zoom]}><ViewerImage key={imageUrl} url={imageUrl} name={name} number={index + 1} /></div>
