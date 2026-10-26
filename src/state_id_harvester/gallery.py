@@ -14,6 +14,7 @@ import httpx
 from pydantic import Field
 
 from .gallery_html import discover_images, lead_priority
+from .gallery_inventory import GalleryInventory
 from .gallery_raster import validate_raster
 from .gallery_seeds import HTML_GALLERY_SEEDS
 from .models import Record
@@ -28,6 +29,9 @@ def error_reason(error: Exception) -> str:
     if isinstance(error, (FetchError, ValueError)):
         return type(error).__name__ + ":" + str(error)[:300]
     return type(error).__name__
+
+
+HTML_MEDIA_TYPE = "text/html"
 
 
 class GalleryOptions(Record):
@@ -67,6 +71,7 @@ def retain(root: Path, folder: str, data: bytes, extension: str) -> tuple[str, s
 class GalleryJob:
     def __init__(self, root: Path, options: GalleryOptions, transport: Transport) -> None:
         self.root, self.options, self.transport = root, options, transport
+        self.inventory = GalleryInventory(root)
         self.remaining = options.max_total_bytes
         self.manifest: dict[str, Any] = {
             "schema_version": 1,
@@ -74,9 +79,10 @@ class GalleryJob:
             "run_id": str(uuid.uuid4()),
             "started_at": now(),
             "options": options.model_dump(),
-            "pages": [],
-            "assets": [],
-            "aliases": [],
+            "pages": self.inventory.records["pages"],
+            "assets": self.inventory.records["assets"],
+            "aliases": self.inventory.records["aliases"],
+            "inventory_parent_run_id": self.inventory.previous_run_id,
             "events": [],
             "page_links": [],
             "run_status": "running",
@@ -85,7 +91,6 @@ class GalleryJob:
                 "Unreviewed source observations; no cleanliness, pairing, or cohort-date claims"
             ),
         }
-        self.assets: set[str] = set()
         self.requested_assets = 0
         self.queue: list[tuple[str, str]] = []
         self.seen: set[str] = set()
@@ -101,7 +106,7 @@ class GalleryJob:
             media = response.headers.get("content-type", "").partition(";")[0].lower().strip()
             limit = (
                 self.options.max_html_bytes
-                if media == "text/html"
+                if media == HTML_MEDIA_TYPE
                 else self.options.max_image_bytes
             )
             allowed = min(limit, self.remaining)
@@ -129,7 +134,8 @@ class GalleryJob:
         self, collection: str, data: bytes, final_url: str, method: str
     ) -> list[dict[str, str]]:
         path, checksum = retain(self.root, "html", data, "html")
-        self.manifest["pages"].append(
+        self.inventory.observe(
+            "pages",
             {
                 "collection": collection,
                 "url": final_url,
@@ -139,7 +145,7 @@ class GalleryJob:
                 "retrieved_at": now(),
                 "acquisition_method": method,
                 "review_status": "unreviewed",
-            }
+            },
         )
         leads, rejected = discover_images(data, final_url, self.options.max_links)
         for failure in rejected:
@@ -159,7 +165,7 @@ class GalleryJob:
         async with self.limiter:
             try:
                 data, final_url, media = await self.fetch(lead["url"])
-                if media.partition(";")[0].strip().lower() == "text/html":
+                if media.partition(";")[0].strip().lower() == HTML_MEDIA_TYPE:
                     self.queue.append((lead["collection"], final_url))
                     self.manifest["page_links"].append({**lead, "target_page_url": final_url})
                     self.event(
@@ -184,7 +190,8 @@ class GalleryJob:
         path, checksum = await asyncio.to_thread(
             retain, self.root, "originals", data, dimensions["format"]
         )
-        self.manifest["aliases"].append(
+        self.inventory.observe(
+            "aliases",
             {
                 **lead,
                 "final_url": final_url,
@@ -192,23 +199,22 @@ class GalleryJob:
                 "retrieved_at": now(),
                 "acquisition_method": method,
                 "review_status": "unreviewed",
-            }
+            },
         )
-        if checksum not in self.assets:
-            self.assets.add(checksum)
-            self.manifest["assets"].append(
-                {
-                    "sha256": checksum,
-                    "path": path,
-                    "size_bytes": len(data),
-                    "content_type": media,
-                    **dimensions,
-                    "review_status": "unreviewed",
-                    "plate_composition": "unreviewed",
-                    "accepted_cohort": False,
-                    "altered": False,
-                }
-            )
+        self.inventory.observe(
+            "assets",
+            {
+                "sha256": checksum,
+                "path": path,
+                "size_bytes": len(data),
+                "content_type": media,
+                **dimensions,
+                "review_status": "unreviewed",
+                "plate_composition": "unreviewed",
+                "accepted_cohort": False,
+                "altered": False,
+            },
+        )
 
     async def run(self, collections: list[str]) -> None:
         self.queue.extend(
@@ -226,7 +232,7 @@ class GalleryJob:
     async def visit(self, collection: str, url: str) -> None:
         try:
             data, final_url, media = await self.fetch(url)
-            if media.partition(";")[0].strip().lower() != "text/html":
+            if media.partition(";")[0].strip().lower() != HTML_MEDIA_TYPE:
                 raise ValueError("Gallery entry must return HTML")
             leads = self.page(collection, data, final_url, "http_transport")
             remaining = max(0, self.options.max_assets - self.requested_assets)
@@ -240,6 +246,7 @@ class GalleryJob:
 
     def finish(self) -> dict[str, Any]:
         self.manifest["finished_at"] = now()
+        self.manifest["run_observations"] = self.inventory.run_counts()
         atomic_json(self.root / "runs" / f"{self.manifest['run_id']}.json", self.manifest)
         atomic_json(self.root / "manifest.json", self.manifest)
         return self.manifest
