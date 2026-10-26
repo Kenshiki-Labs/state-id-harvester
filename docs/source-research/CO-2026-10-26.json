@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "CO",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:04:46.628306+00:00",
+  "source_publications": [
+    {
+      "file": "legislature-2021-design-presentation.pdf",
+      "source_url": "https://content.leg.colorado.gov/sites/default/files/images/dmv_tlrc_presentation_october_5_2021.pdf",
+      "final_url": "https://content.leg.colorado.gov/sites/default/files/images/dmv_tlrc_presentation_october_5_2021.pdf",
+      "retrieved_at": "2026-10-26T20:03:57.363027+00:00",
+      "bytes": 7439065,
+      "sha256": "2daae2a333505a9ef06fa64909063637e4cd6bf7faf6f9a63da1ee770b664526",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "2016-design-poster-mirror.pdf",
+      "source_url": "https://tokenworks-com.s3.amazonaws.com/wp-content/uploads/2016/03/09172516/Colorado-DL-Poster.pdf",
+      "final_url": "https://tokenworks-com.s3.amazonaws.com/wp-content/uploads/2016/03/09172516/Colorado-DL-Poster.pdf",
+      "retrieved_at": "2026-10-26T20:03:58.528465+00:00",
+      "bytes": 1656447,
+      "sha256": "09178fc357d5c65da6da67e6b66a8099c5c2984cb07b240e9aecb5a0513d00dd",
+      "mime_type": "application/pdf",
+      "source_class": "third_party",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "press-2022-redesign.html",
+      "source_url": "https://coloradosun.com/2022/02/28/colorado-new-drivers-license-design/",
+      "final_url": "https://coloradosun.com/2022/02/28/colorado-new-drivers-license-design/",
+      "retrieved_at": "2026-10-26T20:03:59.850366+00:00",
+      "bytes": 273776,
+      "sha256": "f3485f0097b71c082639af303ecc36aca60985356e0b4764cea120cecef2891f",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "press",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "press-2022-front.png",
+      "source_url": "https://newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-28-at-1.28.13-PM.png",
+      "final_url": "https://newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-28-at-1.28.13-PM.png",
+      "retrieved_at": "2026-10-26T20:04:30.693411+00:00",
+      "bytes": 458206,
+      "sha256": "b9023cc52411c562a2766f6341963601b8ce0b3590aa56f70434250c15934453",
+      "mime_type": "image/png",
+      "source_class": "press",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "press-2022-redesign.html"
+    },
+    {
+      "file": "press-2022-back.png",
+      "source_url": "https://newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-28-at-1.28.18-PM.png",
+      "final_url": "https://newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-28-at-1.28.18-PM.png",
+      "retrieved_at": "2026-10-26T20:04:31.807209+00:00",
+      "bytes": 413204,
+      "sha256": "8154c3e3c02137eb133f7dec2c0aad4c963bf836a5ea7c7162e86634e1ee5a2d",
+      "mime_type": "image/png",
+      "source_class": "press",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "press-2022-redesign.html"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "legislature-2021-design-presentation-xref-147.jpeg",
+      "source_file": "legislature-2021-design-presentation.pdf",
+      "source_sha256": "2daae2a333505a9ef06fa64909063637e4cd6bf7faf6f9a63da1ee770b664526",
+      "pdf_object_xref": 147,
+      "page_number": 20,
+      "width_px": 234,
+      "height_px": 152,
+      "sha256": "c055d917c15ff565c9aaa58e939c846f4b29649bf613c7b18e631a20fb735492"
+    },
+    {
+      "file": "legislature-2021-design-presentation-xref-148.jpeg",
+      "source_file": "legislature-2021-design-presentation.pdf",
+      "source_sha256": "2daae2a333505a9ef06fa64909063637e4cd6bf7faf6f9a63da1ee770b664526",
+      "pdf_object_xref": 148,
+      "page_number": 20,
+      "width_px": 236,
+      "height_px": 150,
+      "sha256": "b0b1f4a466e8977141dc9092f610eb60d3baf986f12e1e8971943fa8d889b7fd"
+    },
+    {
+      "file": "legislature-2021-design-presentation-xref-149.jpeg",
+      "source_file": "legislature-2021-design-presentation.pdf",
+      "source_sha256": "2daae2a333505a9ef06fa64909063637e4cd6bf7faf6f9a63da1ee770b664526",
+      "pdf_object_xref": 149,
+      "page_number": 20,
+      "width_px": 150,
+      "height_px": 234,
+      "sha256": "27ed4ae259d7b5e1b76f6f1fb5b03a95b5d2348b2fe52556788612a0e1cd2324"
+    },
+    {
+      "file": "legislature-2021-design-presentation-xref-150.jpeg",
+      "source_file": "legislature-2021-design-presentation.pdf",
+      "source_sha256": "2daae2a333505a9ef06fa64909063637e4cd6bf7faf6f9a63da1ee770b664526",
+      "pdf_object_xref": 150,
+      "page_number": 20,
+      "width_px": 373,
+      "height_px": 237,
+      "sha256": "70ac7f2e762a364e6edb07fab7d903fa3f4b68adb1638ec45bc2436d976c0497"
+    },
+    {
+      "file": "legislature-2021-design-presentation-xref-151.jpeg",
+      "source_file": "legislature-2021-design-presentation.pdf",
+      "source_sha256": "2daae2a333505a9ef06fa64909063637e4cd6bf7faf6f9a63da1ee770b664526",
+      "pdf_object_xref": 151,
+      "page_number": 20,
+      "width_px": 296,
+      "height_px": 184,
+      "sha256": "0149bee8833aec8e679bc663fef4b280a5b47f5bd8b76e27da13f0b91d2368c3"
+    },
+    {
+      "file": "legislature-2021-design-presentation-xref-152.jpeg",
+      "source_file": "legislature-2021-design-presentation.pdf",
+      "source_sha256": "2daae2a333505a9ef06fa64909063637e4cd6bf7faf6f9a63da1ee770b664526",
+      "pdf_object_xref": 152,
+      "page_number": 20,
+      "width_px": 147,
+      "height_px": 233,
+      "sha256": "6e12ad06ad703a0e0a3c954b493f2f4021fa456ac5691c8d4592d9690ee78e3f"
+    },
+    {
+      "file": "2016-design-poster-mirror-xref-70.jpeg",
+      "source_file": "2016-design-poster-mirror.pdf",
+      "source_sha256": "09178fc357d5c65da6da67e6b66a8099c5c2984cb07b240e9aecb5a0513d00dd",
+      "pdf_object_xref": 70,
+      "page_number": 1,
+      "width_px": 1112,
+      "height_px": 702,
+      "sha256": "098bc9df69b9970975845a5bf03783c42d428addbe85119593b2311a344f81e3"
+    },
+    {
+      "file": "2016-design-poster-mirror-xref-41.jpeg",
+      "source_file": "2016-design-poster-mirror.pdf",
+      "source_sha256": "09178fc357d5c65da6da67e6b66a8099c5c2984cb07b240e9aecb5a0513d00dd",
+      "pdf_object_xref": 41,
+      "page_number": 1,
+      "width_px": 1128,
+      "height_px": 706,
+      "sha256": "9bd926a7e910806f43c2a6c4e1edc14e34ced4c8cc58a1990292505480245352"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "dmv-real-id.html",
+      "source_url": "https://dmv.colorado.gov/real-id",
+      "final_url": "https://dmv.colorado.gov/real-id",
+      "retrieved_at": "2026-10-26T20:02:12.735610+00:00",
+      "bytes": 5481,
+      "sha256": "127c81737d320326f7f87aaf60bb7ad0db0170eaa3abccca457d1d10c327eb62",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 403
+    },
+    {
+      "file": "dmv-new-look.html",
+      "source_url": "https://dmv.colorado.gov/newlook",
+      "final_url": "https://dmv.colorado.gov/newlook",
+      "retrieved_at": "2026-10-26T20:02:12.901588+00:00",
+      "bytes": 5481,
+      "sha256": "70d4a73d43f5908104082940ecb549779cd607e7d639d53e6d085e3ab96ca329",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 403
+    },
+    {
+      "file": "dmv-documents.html",
+      "source_url": "https://dmv.colorado.gov/documents",
+      "final_url": "https://dmv.colorado.gov/documents",
+      "retrieved_at": "2026-10-26T20:02:13.116070+00:00",
+      "bytes": 5487,
+      "sha256": "356bd51cbfee798d64b8476a7dc75a2d1b8d821421517c082a4b3941f89078d7",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 403
+    },
+    {
+      "file": "dmv-real-id-and-colorado.html",
+      "source_url": "https://dmv.colorado.gov/real-id-and-colorado",
+      "final_url": "https://dmv.colorado.gov/real-id-and-colorado",
+      "retrieved_at": "2026-10-26T20:02:50.988597+00:00",
+      "bytes": 5541,
+      "sha256": "81b07183b9efbb84bd74a6b842a0f84bae567aa07795928303d7cae7d3cccfb2",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 403
+    }
+  ],
+  "remaining_gaps": [
+    "Current minorDL/ID and CDL/temporarypaper specimens remain incomplete.",
+    "Issuer DMV pages currently403 in both normalHTTP and browser; state-library2017handbook connection timed out.",
+    "2021 legislativepresentation includes future-design examples; those images do not establish final issuance intervals."
+  ],
+  "notes": [
+    "Recovered6native photographed specimen depictions from a2021 legislature-hosted DMV presentation and2native legacy fronts/backs from an issuer2016poster mirrored byTokenWorks, explicitly labelledthirdparty.",
+    "2022launch press front/back retained with originalpublication parent; decorativelogo and silhouette contestmockups excluded."
+  ],
+  "catalog_integrated": true,
+  "review_status": "reference_research_only",
+  "preservation": {
+    "jurisdiction": "CO",
+    "verified_at": "2026-10-26T20:04:59.836795+00:00",
+    "private_snapshot_index_key": "snapshots/research/CO/b0b61194255de243eb99a7b1e215ff6b251561583b513664bedfa79c025781e6/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/CO.json",
+    "archive_sha256": "b0b61194255de243eb99a7b1e215ff6b251561583b513664bedfa79c025781e6",
+    "archive_size_bytes": 16503796,
+    "verified_restored_files": 29,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/CO",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 10,
+    "review_status": "reference_only"
+  }
+}

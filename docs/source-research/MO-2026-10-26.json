@@ -1,0 +1,531 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "MO",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:05:24.675324+00:00",
+  "scope": "Bounded manual state research; useful finds and gaps, no completeness requirement.",
+  "source_publications": [
+    {
+      "file": "dor-design-hub.html",
+      "source_url": "https://dor.mo.gov/driver-license/resources/license.html",
+      "final_url": "https://dor.mo.gov/driver-license/resources/license.html",
+      "sha256": "907bf062fdedb97a113a3e122e35636d7814b99e555ae502af8328390cf74cb0",
+      "bytes": 86115,
+      "mime_type": "text/html",
+      "retrieved_at": "2026-10-26T20:04:06.655436+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "atc-retailer-hub.html",
+      "source_url": "https://atc.dps.mo.gov/enforcement/mo-drivers-license.php",
+      "final_url": "https://atc.dps.mo.gov/enforcement/mo-drivers-license.php",
+      "sha256": "3bc18d755bf0a24a05e5ea295b4d2c2027c08fe877a45c264c40816f7b123b13",
+      "bytes": 29415,
+      "mime_type": "text/html; charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:04:07.332561+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dor-2020-design.pdf",
+      "source_url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf",
+      "final_url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf",
+      "sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "bytes": 2672052,
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:04:10.284932+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "atc-tobacco-training.pdf",
+      "source_url": "https://atc.dps.mo.gov/documents/tobacco_merchant_education_training.pdf",
+      "final_url": "https://atc.dps.mo.gov/documents/tobacco_merchant_education_training.pdf",
+      "sha256": "63152c40d058180e61284e3515ba41482187546f513ef4be76aa7066745e3439",
+      "bytes": 565572,
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:04:11.039500+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "atc-legacy-under21.png",
+      "source_url": "https://atc.dps.mo.gov/img/under_21.png",
+      "final_url": "https://atc.dps.mo.gov/img/under_21.png",
+      "sha256": "f0dd071806efbece219f68ec0d003f2b1343b933ce7202895d55b58701670c77",
+      "bytes": 209109,
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:04:22.665179+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dor-legacy-design.pdf",
+      "source_url": "https://dor.mo.gov/forms/5443.pdf",
+      "final_url": "https://dor.mo.gov/forms/5443.pdf",
+      "sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "bytes": 1198110,
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:04:34.965009+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "dor-2020-design-xref200.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 200,
+      "resource_page_number": 1,
+      "width_px": 253,
+      "height_px": 162,
+      "sha256": "cee5799941f0e1d2e71dc28b04ab8d52b0648e87b773fa477b462a4cad8bc6a5",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "2020-generation REALID adultDL front."
+    },
+    {
+      "file": "dor-2020-design-xref202.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 202,
+      "resource_page_number": 1,
+      "width_px": 253,
+      "height_px": 162,
+      "sha256": "52644ac2ad1ba6513d3cd2d693078b27195f8967334ebd322a6fe2a6dbbf2210",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Nonfederal commercial learner permit adultfront."
+    },
+    {
+      "file": "dor-2020-design-xref204.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 204,
+      "resource_page_number": 1,
+      "width_px": 162,
+      "height_px": 253,
+      "sha256": "53b276c4d086eb9c5335a1c7ba7778f089ad50921c6a08f0ec76e6d619094aa0",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Limited-term REALID under21 nondriverID front."
+    },
+    {
+      "file": "dor-2020-design-xref206.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 206,
+      "resource_page_number": 1,
+      "width_px": 162,
+      "height_px": 253,
+      "sha256": "73e33f624fef5d0929d6eac9001440e124dec6e7d5a2ec3569511cc58f28b2a2",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Nonfederal intermediateDL under21front."
+    },
+    {
+      "file": "dor-2020-design-xref182.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 182,
+      "resource_page_number": 1,
+      "width_px": 2407,
+      "height_px": 2099,
+      "sha256": "36ebe313a9f505c9e35213bc0d52652cdd96f802d5f0a803cdc8130d42fcae5c"
+    },
+    {
+      "file": "dor-2020-design-xref185.png",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 185,
+      "resource_page_number": 1,
+      "width_px": 560,
+      "height_px": 789,
+      "sha256": "7f20f8b1af4d42bdebddfc7e0416fc8816a4ccda2434471a2428f5e1f106c413"
+    },
+    {
+      "file": "dor-2020-design-xref40.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 40,
+      "resource_page_number": 2,
+      "width_px": 246,
+      "height_px": 154,
+      "sha256": "0cd8ec9863f5d8e7b26e0971d027a841f07b7a7e54c956b1f668fb7f3f0c4206",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Nonfederal adult commercialDL front."
+    },
+    {
+      "file": "dor-2020-design-xref42.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 42,
+      "resource_page_number": 2,
+      "width_px": 246,
+      "height_px": 155,
+      "sha256": "60a37cc562908754e438f0595d4dcfbbc78cb60366ff0f62dd27bc4b7ff1028f"
+    },
+    {
+      "file": "dor-2020-design-xref44.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 44,
+      "resource_page_number": 2,
+      "width_px": 247,
+      "height_px": 155,
+      "sha256": "7d20c464e957329d564ad5bf8a9c54ed31b2401daa4556ce3f9f2e1c995c6f9f"
+    },
+    {
+      "file": "dor-2020-design-xref46.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 46,
+      "resource_page_number": 2,
+      "width_px": 247,
+      "height_px": 155,
+      "sha256": "8a11a9d3f759ec61f4fecc9ba67e5d3ebf7d42ecd07ea647a81e2b54f4094d4e",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Limited-term nondomiciledCDL adultfront."
+    },
+    {
+      "file": "dor-2020-design-xref48.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 48,
+      "resource_page_number": 2,
+      "width_px": 247,
+      "height_px": 155,
+      "sha256": "f29c68d9773b31c35d6eb28d576b4d7936550294e64e4c8edee7325bdaab328f"
+    },
+    {
+      "file": "dor-2020-design-xref50.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 50,
+      "resource_page_number": 2,
+      "width_px": 155,
+      "height_px": 246,
+      "sha256": "191510945a1ad324f95be8a858d1931a1857ceeaa9d8476768762de2149e6091"
+    },
+    {
+      "file": "dor-2020-design-xref54.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 54,
+      "resource_page_number": 2,
+      "width_px": 247,
+      "height_px": 156,
+      "sha256": "efdd0cbce6bee5f41f6caae3cf6d2d7d7575c3072828cb986992937b60c130ca",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Published static-front UV illustration; not independently observed optical test."
+    },
+    {
+      "file": "dor-2020-design-xref64.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 64,
+      "resource_page_number": 2,
+      "width_px": 243,
+      "height_px": 152,
+      "sha256": "06bf24df689e43497d5c983ff481ecc41fb71395f0736ca9cd588939aa4338b8",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Complete native back with published UV variabledata and donor-sticker illustration."
+    },
+    {
+      "file": "dor-2020-design-xref66.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 66,
+      "resource_page_number": 2,
+      "width_px": 247,
+      "height_px": 156,
+      "sha256": "c1c9989f6e3d550c8cea38930a448d8d4f11c31a3300a9133889ade5cd565f60",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Published front-laminate optical artwork illustration."
+    },
+    {
+      "file": "dor-2020-design-xref68.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 68,
+      "resource_page_number": 2,
+      "width_px": 247,
+      "height_px": 155,
+      "sha256": "c43e0979d9c5d254ec3f817dada310ec8696443887e2e79cb91f25d9e4ce3ddb"
+    },
+    {
+      "file": "dor-2020-design-xref70.jpeg",
+      "source_file": "dor-2020-design.pdf",
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "pdf_object_xref": 70,
+      "resource_page_number": 2,
+      "width_px": 247,
+      "height_px": 155,
+      "sha256": "3a47658fe930113766acf967dc7a7d98f788d6b3c188a2030c7d610a3c9c185d",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Adult nondriverID front."
+    },
+    {
+      "file": "atc-tobacco-training-xref78.jpeg",
+      "source_file": "atc-tobacco-training.pdf",
+      "source_sha256": "63152c40d058180e61284e3515ba41482187546f513ef4be76aa7066745e3439",
+      "pdf_object_xref": 78,
+      "resource_page_number": 37,
+      "width_px": 269,
+      "height_px": 168,
+      "sha256": "bd755ca104360e3639e115dca237ee329e03ff1e26929ba5da64360f125126c8",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Historical retailertraining specimen: adultDLfront"
+    },
+    {
+      "file": "atc-tobacco-training-xref79.jpeg",
+      "source_file": "atc-tobacco-training.pdf",
+      "source_sha256": "63152c40d058180e61284e3515ba41482187546f513ef4be76aa7066745e3439",
+      "pdf_object_xref": 79,
+      "resource_page_number": 37,
+      "width_px": 271,
+      "height_px": 168,
+      "sha256": "2533091b24180aae97a65e86dbc2ef07db22cdebceef947cf35541a10dfaa5e4",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Historical retailertraining specimen: under21DLfront"
+    },
+    {
+      "file": "atc-tobacco-training-xref80.jpeg",
+      "source_file": "atc-tobacco-training.pdf",
+      "source_sha256": "63152c40d058180e61284e3515ba41482187546f513ef4be76aa7066745e3439",
+      "pdf_object_xref": 80,
+      "resource_page_number": 37,
+      "width_px": 332,
+      "height_px": 210,
+      "sha256": "2079e0ba2d6a11a9e9a118c27c2e47f1e67bd9b2c70495d64a1872d386d1bcec",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Historical retailertraining specimen: completeback"
+    },
+    {
+      "file": "atc-tobacco-training-xref83.jpeg",
+      "source_file": "atc-tobacco-training.pdf",
+      "source_sha256": "63152c40d058180e61284e3515ba41482187546f513ef4be76aa7066745e3439",
+      "pdf_object_xref": 83,
+      "resource_page_number": 38,
+      "width_px": 436,
+      "height_px": 196,
+      "sha256": "8f31e3dffc0f36f7a562884f1c6588e2ae837c22ffc528197b3f3c1a5311e3c9",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Historical retailertraining specimen: laminate/UVillustration"
+    },
+    {
+      "file": "dor-legacy-design-xref1365.png",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 1365,
+      "resource_page_number": 1,
+      "width_px": 1999,
+      "height_px": 1077,
+      "sha256": "ba8b0113d150788122330ef5be803808a73d8d1afa5eb5568eb85fa5a15947c9",
+      "mask": {
+        "file": "dor-legacy-design-mask1364.png",
+        "pdf_object_xref": 1364,
+        "sha256": "1d60b21eacfd991cc9b2c8865d98f3cffc85f846df19b2b55ccd4ae27a0398f0"
+      },
+      "preview_file": "dor-legacy-design-xref1365-preview.png"
+    },
+    {
+      "file": "dor-legacy-design-xref450.jpeg",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 450,
+      "resource_page_number": 1,
+      "width_px": 282,
+      "height_px": 448,
+      "sha256": "6f2e4ce5094e12d5e88ff9733db1100902ea10bbaa4d603f7ecb3426e06c8c20",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Legacy under21 REALID DL complete front; intrinsicSAMPLE retained."
+    },
+    {
+      "file": "dor-legacy-design-xref1366.jpeg",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 1366,
+      "resource_page_number": 1,
+      "width_px": 379,
+      "height_px": 244,
+      "sha256": "e15319efa5a6434d51b4bbc064d9b62afe520b0403021a31215f2f753f0cbf6e"
+    },
+    {
+      "file": "dor-legacy-design-xref1368.jpeg",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 1368,
+      "resource_page_number": 1,
+      "width_px": 379,
+      "height_px": 244,
+      "sha256": "81cdd020456cf4e2f7a83d13552401bcca2646c16da29ff673a0717dfc004da5"
+    },
+    {
+      "file": "dor-legacy-design-xref1371.png",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 1371,
+      "resource_page_number": 1,
+      "width_px": 497,
+      "height_px": 316,
+      "sha256": "0447e26e33adbab3130d9d605be4b54241add980424bdd68532d63a1112b72e6",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Legacy laminate UV artwork illustration."
+    },
+    {
+      "file": "dor-legacy-design-xref1372.jpeg",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 1372,
+      "resource_page_number": 1,
+      "width_px": 506,
+      "height_px": 321,
+      "sha256": "de11a16e09453aee1f382d5ba995952ff313e4694336a1caae186ca89c6d8e21",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Legacy native completeback including restrictions/donorpanel."
+    },
+    {
+      "file": "dor-legacy-design-xref34.png",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 34,
+      "resource_page_number": 2,
+      "width_px": 2000,
+      "height_px": 1106,
+      "sha256": "888bc0fcd572dc50dda7c9ae85568470b0bf7a4292b3a3da66d72e04b65a4b2b",
+      "mask": {
+        "file": "dor-legacy-design-mask33.png",
+        "pdf_object_xref": 33,
+        "sha256": "0ed1473ec16be735fe514cdcb1c1b331aefdff1834d92ca86913d4097f5c03c5"
+      },
+      "preview_file": "dor-legacy-design-xref34-preview.png"
+    },
+    {
+      "file": "dor-legacy-design-xref35.jpeg",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 35,
+      "resource_page_number": 2,
+      "width_px": 391,
+      "height_px": 244,
+      "sha256": "fc87471222ab6a394ad6c2db5b80a264a0e1896296e86937325bc7d0e4cac232",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Legacy adult nonphoto militaryDL specimen front."
+    },
+    {
+      "file": "dor-legacy-design-xref37.png",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 37,
+      "resource_page_number": 2,
+      "width_px": 688,
+      "height_px": 294,
+      "sha256": "976edf190ad03741ff7ccd363d6e64d7e26e63178e6a8a50c1e91ae775462326",
+      "mask": {
+        "file": "dor-legacy-design-mask36.png",
+        "pdf_object_xref": 36,
+        "sha256": "ace932e0e3383d3a75740ff3775a090c07ea8e9c582e2fe0463edd565843a662"
+      },
+      "preview_file": "dor-legacy-design-xref37-preview.png"
+    },
+    {
+      "file": "dor-legacy-design-xref41.jpeg",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 41,
+      "resource_page_number": 2,
+      "width_px": 325,
+      "height_px": 510,
+      "sha256": "faa7e2c5aac2f28e8dbb29066ba6075b240c9a3cc1fc13546299e85957bd4ee0",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Legacy under21 nonphoto religiousDL specimen front."
+    },
+    {
+      "file": "dor-legacy-design-xref43.jpeg",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 43,
+      "resource_page_number": 2,
+      "width_px": 324,
+      "height_px": 100,
+      "sha256": "e82a4116347b32a5f0f58fa6d850691075d4b6e917a5f474d89d54d841ab10a6"
+    },
+    {
+      "file": "dor-legacy-design-xref45.jpeg",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 45,
+      "resource_page_number": 2,
+      "width_px": 324,
+      "height_px": 100,
+      "sha256": "499a5f2678a97f8a2644398d68d32ed646c31f633423857edd7aaeb9ee7d5638"
+    },
+    {
+      "file": "dor-legacy-design-xref47.jpeg",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 47,
+      "resource_page_number": 2,
+      "width_px": 324,
+      "height_px": 100,
+      "sha256": "36a3b7b11fd10cbe9bde8b092a6da86498d10596561a26d8bee29cfd91113995"
+    },
+    {
+      "file": "dor-legacy-design-xref50.jpeg",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 50,
+      "resource_page_number": 2,
+      "width_px": 343,
+      "height_px": 343,
+      "sha256": "cfec020e4589ec67b614a0362a698ff3e222ee55b630b05812e9dc87b8617064"
+    },
+    {
+      "file": "dor-legacy-design-xref53.png",
+      "source_file": "dor-legacy-design.pdf",
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "pdf_object_xref": 53,
+      "resource_page_number": 2,
+      "width_px": 476,
+      "height_px": 620,
+      "sha256": "acd973b4e81e8d8a8906a202f47565c7e8a1dee6584c4d75ee4c9abc1e9b1cda",
+      "mask": {
+        "file": "dor-legacy-design-mask52.png",
+        "pdf_object_xref": 52,
+        "sha256": "05373675f84b436fa8564756495e3be35c44b7493dfe811d616d713a5c2a819e"
+      },
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Legacy interim paper driverlicense."
+    }
+  ],
+  "unresolved_downloads": [],
+  "remaining_gaps": [
+    "No independent physical/optical measurements or verified issuance boundaries.",
+    "Document-specific backs for everyvariant not established.",
+    "Native legacyadultcard backgrounds requirepublication vector/text overlays; full annotatedplate retained instead of claimingbackgroundiscomplete."
+  ],
+  "review_status": "reference_research_only",
+  "accepted_cohorts": 0,
+  "catalog_integrated": true,
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "MO",
+    "verified_at": "2026-10-26T20:05:40.666998+00:00",
+    "local_directory": "output/research/MO",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/MO/a7b7208e601876cb6b13277729bd88e27fa71c64406d45970f953c5af95d7aa2/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/MO.json",
+    "archive_sha256": "a7b7208e601876cb6b13277729bd88e27fa71c64406d45970f953c5af95d7aa2",
+    "archive_size_bytes": 13957000,
+    "transport_chunks": 1,
+    "verified_restored_files": 63,
+    "verification": "Downloaded archive restored with existing helpers and every file compared byte-for-byte.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/MO"
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 27,
+    "review_status": "reference_only"
+  }
+}

@@ -1,30 +1,28 @@
 {
   "schema_version": 1,
-  "observed_at": "2026-10-26T19:58:51.019465+00:00",
-  "publication_revision": "7aa697bd2f1898174ed3dfac75148678d6a39423",
+  "observed_at": "2026-10-26T20:05:30.069349+00:00",
+  "publication_revision": "79b277abdd1dd5856a3a493cc5af05a529618bdf",
   "measurement": "Anonymous public image-index membership; every image downloaded and SHA-256 verified. Source-publication counts do not imply credential-image coverage.",
-  "state_jurisdictions_with_images": 24,
-  "state_jurisdictions_without_images": 27,
-  "state_reference_images": 274,
+  "state_jurisdictions_with_images": 27,
+  "state_jurisdictions_without_images": 24,
+  "state_reference_images": 290,
   "federal_reference_images": 30,
   "jurisdictions": [
     {
       "code": "AL",
       "name": "Alabama",
-      "source_publications": 8,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": null,
-      "research_assignment": "research_maine"
+      "source_publications": 11,
+      "published_reference_images": 4,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/AL-2026-10-26.json"
     },
     {
       "code": "AK",
       "name": "Alaska",
-      "source_publications": 0,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": null,
-      "research_assignment": "research_maine"
+      "source_publications": 5,
+      "published_reference_images": 10,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/AK-2026-10-26.json"
     },
     {
       "code": "AZ",
@@ -56,7 +54,7 @@
       "source_publications": 0,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/CO-2026-10-26.json",
       "research_assignment": "research_maine"
     },
     {
@@ -65,7 +63,7 @@
       "source_publications": 12,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/CT-2026-10-26.json",
       "research_assignment": "research_maine"
     },
     {
@@ -204,11 +202,10 @@
     {
       "code": "MN",
       "name": "Minnesota",
-      "source_publications": 1,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": null,
-      "research_assignment": "research_michigan"
+      "source_publications": 3,
+      "published_reference_images": 2,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/MN-2026-10-26.json"
     },
     {
       "code": "MS",
@@ -216,7 +213,7 @@
       "source_publications": 6,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/MS-2026-10-26.json",
       "research_assignment": "research_michigan"
     },
     {
@@ -225,7 +222,7 @@
       "source_publications": 3,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/MO-2026-10-26.json",
       "research_assignment": "research_michigan"
     },
     {
@@ -304,7 +301,7 @@
       "source_publications": 3,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/ND-2026-10-26.json",
       "research_assignment": "research_maryland"
     },
     {
@@ -321,7 +318,7 @@
       "source_publications": 3,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/OK-2026-10-26.json",
       "research_assignment": "research_maryland"
     },
     {

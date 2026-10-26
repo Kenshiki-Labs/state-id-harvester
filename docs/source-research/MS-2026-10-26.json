@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "MS",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:03:40.066243+00:00",
+  "scope": "Bounded manual state research; useful finds and gaps, no completeness requirement.",
+  "source_publications": [
+    {
+      "file": "dps-2024-redesign.html",
+      "source_url": "https://www.dps.ms.gov/node/1518",
+      "final_url": "https://www.dps.ms.gov/node/1518",
+      "sha256": "ddbe8ec02218ccd9e66d310a6b599a5a7d71ddb50df4cd83c45c12baf3d24ace",
+      "bytes": 54932,
+      "mime_type": "text/html; charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:01:39.365676+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dps-first-responders.html",
+      "source_url": "https://www.driverservicebureau.dps.ms.gov/FirstResponders",
+      "final_url": "https://www.driverservicebureau.dps.ms.gov/FirstResponders",
+      "sha256": "f261806f83ce154fd8c79e7a99a0f11fe7f06e2c4670ffbff5708cedf745ddfc",
+      "bytes": 63094,
+      "mime_type": "text/html; charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:01:40.364870+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "desoto-2024-redesign.html",
+      "source_url": "https://desotocountynews.com/mississippi-news/new-drivers-license-card-design-revealed/",
+      "final_url": "https://desotocountynews.com/mississippi-news/new-drivers-license-card-design-revealed/",
+      "sha256": "9943cc8d053e4fb3a4e87dd5739640d439c656050fb2f2a5ad33961f2dac8eed",
+      "bytes": 122590,
+      "mime_type": "text/html",
+      "retrieved_at": "2026-10-26T20:01:41.212902+00:00",
+      "status": "downloaded",
+      "source_class": "press"
+    },
+    {
+      "file": "dps-2024-adult.jpg",
+      "source_url": "https://www.dps.ms.gov/sites/dps/files/inline-images/AdultDL_LargeScaleImage.jpg",
+      "final_url": "https://www.dps.ms.gov/sites/dps/files/inline-images/AdultDL_LargeScaleImage.jpg",
+      "sha256": "421d7c166f57470aca591b00e657232d46f5732bf2f735de668cc96824921a71",
+      "bytes": 2871073,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:02:01.738991+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dps-2024-under21.jpg",
+      "source_url": "https://www.dps.ms.gov/sites/dps/files/inline-images/Minor_DL_300dpi.jpg",
+      "final_url": "https://www.dps.ms.gov/sites/dps/files/inline-images/Minor_DL_300dpi.jpg",
+      "sha256": "f06a0355bd6187a4cb47eed25077c3382fa8efd04ad333143e7d919e5de483ad",
+      "bytes": 492867,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:02:02.895595+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dps-2025-manual.pdf",
+      "source_url": "https://www.driverservicebureau.dps.ms.gov/sites/default/files/2025-02/1.15.2025%20Revised%20MDPS%20Driver%27s%20Manual.pdf",
+      "final_url": "https://www.driverservicebureau.dps.ms.gov/sites/default/files/2025-02/1.15.2025%20Revised%20MDPS%20Driver%27s%20Manual.pdf",
+      "sha256": "6fd2b3dda657c340fd6a0a571ec5f91e33cb54d529eaef531774007620b4f3e0",
+      "bytes": 6817075,
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:02:54.069167+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dps-legacy-realid-front.jpg",
+      "source_url": "https://www.driverservicebureau.dps.ms.gov/sites/default/files/inline-images/New%20RealID%20Card%20Revised2%204.1.20%20-TemC%20Front_0.jpg",
+      "final_url": "https://www.driverservicebureau.dps.ms.gov/sites/default/files/inline-images/New%20RealID%20Card%20Revised2%204.1.20%20-TemC%20Front_0.jpg",
+      "sha256": "9e35efd71510011ea2159681ea2e38efded0fa20da483424d4421160da244f44",
+      "bytes": 193533,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:03:17.794114+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dps-legacy-realid-back.jpg",
+      "source_url": "https://www.driverservicebureau.dps.ms.gov/sites/default/files/inline-images/New%20RealID%20Card%20Revised2%204.1.20%20-TemC%20Back.jpg",
+      "final_url": "https://www.driverservicebureau.dps.ms.gov/sites/default/files/inline-images/New%20RealID%20Card%20Revised2%204.1.20%20-TemC%20Back.jpg",
+      "sha256": "8937684ff79cfd9e953d44c6f342d4a882d8577c8168adf1e0a93450c4232ed0",
+      "bytes": 252609,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:03:17.794260+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "dps-2025-manual-xref33.jpeg",
+      "source_file": "dps-2025-manual.pdf",
+      "source_sha256": "6fd2b3dda657c340fd6a0a571ec5f91e33cb54d529eaef531774007620b4f3e0",
+      "pdf_object_xref": 33,
+      "resource_page_number": 10,
+      "width_px": 666,
+      "height_px": 420,
+      "sha256": "27d3f264587a581ca5643f49958a55190dad913a6aff3401e1fee9ad5aa103cc",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "AdultDL complete native specimen with secondaryportrait."
+    },
+    {
+      "file": "dps-2025-manual-xref37.png",
+      "source_file": "dps-2025-manual.pdf",
+      "source_sha256": "6fd2b3dda657c340fd6a0a571ec5f91e33cb54d529eaef531774007620b4f3e0",
+      "pdf_object_xref": 37,
+      "resource_page_number": 11,
+      "width_px": 1280,
+      "height_px": 801,
+      "sha256": "4dff7375702ad876476796619783649b7baadbb0cdaf02f8397c0e15b25d6dfd",
+      "mask": {
+        "file": "dps-2025-manual-mask36.png",
+        "pdf_object_xref": 36,
+        "sha256": "b637a6b23f439286f17902bc15412737321b8b6faec154526f4f155a4153e782"
+      },
+      "preview_file": "dps-2025-manual-xref37-preview.png"
+    },
+    {
+      "file": "dps-2025-manual-xref46.png",
+      "source_file": "dps-2025-manual.pdf",
+      "source_sha256": "6fd2b3dda657c340fd6a0a571ec5f91e33cb54d529eaef531774007620b4f3e0",
+      "pdf_object_xref": 46,
+      "resource_page_number": 12,
+      "width_px": 2191,
+      "height_px": 624,
+      "sha256": "7b4dc05bd2f9aff89c210936724fffccae823bdf2c070e504d7728beac894319",
+      "mask": {
+        "file": "dps-2025-manual-mask45.png",
+        "pdf_object_xref": 45,
+        "sha256": "6ea8ba858c39f2399daff8afa1631d80307b4063233eeb4b4fb77a6aa9e11b69"
+      },
+      "preview_file": "dps-2025-manual-xref46-preview.png"
+    },
+    {
+      "file": "dps-2025-manual-xref51.jpeg",
+      "source_file": "dps-2025-manual.pdf",
+      "source_sha256": "6fd2b3dda657c340fd6a0a571ec5f91e33cb54d529eaef531774007620b4f3e0",
+      "pdf_object_xref": 51,
+      "resource_page_number": 13,
+      "width_px": 431,
+      "height_px": 682,
+      "sha256": "83b157de66631dbf953ea7feee8169c14bfd03b41a6ebe4f347d871ede5935bf",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Under21DL native front."
+    },
+    {
+      "file": "dps-2025-manual-xref52.png",
+      "source_file": "dps-2025-manual.pdf",
+      "source_sha256": "6fd2b3dda657c340fd6a0a571ec5f91e33cb54d529eaef531774007620b4f3e0",
+      "pdf_object_xref": 52,
+      "resource_page_number": 13,
+      "width_px": 697,
+      "height_px": 439,
+      "sha256": "7f3488657de10001ddcf2cd791aef7278030dd10ef8f4e34cb3ac96edb669441",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Native complete card back as pairedwith under21DL in issuer manual."
+    },
+    {
+      "file": "dps-2025-manual-xref56.png",
+      "source_file": "dps-2025-manual.pdf",
+      "source_sha256": "6fd2b3dda657c340fd6a0a571ec5f91e33cb54d529eaef531774007620b4f3e0",
+      "pdf_object_xref": 56,
+      "resource_page_number": 13,
+      "width_px": 2191,
+      "height_px": 804,
+      "sha256": "fe93c9310b075cf2387eb16bb814e97ca30b0fc202143e295a88762c01a73147",
+      "mask": {
+        "file": "dps-2025-manual-mask55.png",
+        "pdf_object_xref": 55,
+        "sha256": "34a39dd75df1441ce1eeb0a1dd7764f1305ed8a114782e3b9634142581b3752b"
+      },
+      "preview_file": "dps-2025-manual-xref56-preview.png"
+    },
+    {
+      "file": "dps-2025-manual-xref59.jpeg",
+      "source_file": "dps-2025-manual.pdf",
+      "source_sha256": "6fd2b3dda657c340fd6a0a571ec5f91e33cb54d529eaef531774007620b4f3e0",
+      "pdf_object_xref": 59,
+      "resource_page_number": 14,
+      "width_px": 687,
+      "height_px": 423,
+      "sha256": "d65c3c9d205e2241c11d9111d4d3412998f56950a15868bb811ca774ce3a1ec8"
+    },
+    {
+      "file": "dps-2025-manual-xref70.png",
+      "source_file": "dps-2025-manual.pdf",
+      "source_sha256": "6fd2b3dda657c340fd6a0a571ec5f91e33cb54d529eaef531774007620b4f3e0",
+      "pdf_object_xref": 70,
+      "resource_page_number": 15,
+      "width_px": 747,
+      "height_px": 948,
+      "sha256": "5d4500beda4c504f96306f23bd6f86b4e3e4cb74486cffe1643fb60b6bc73af6",
+      "mask": {
+        "file": "dps-2025-manual-mask69.png",
+        "pdf_object_xref": 69,
+        "sha256": "bf585988cc7a83b65a28a8bb401c7857260e8bb1dd3eb8863a18d0b6789becaa"
+      },
+      "preview_file": "dps-2025-manual-xref70-preview.png"
+    }
+  ],
+  "unresolved_downloads": [],
+  "remaining_gaps": [
+    "Standalone identification/CDL/currentlearnerpermit specimens not acquired.",
+    "Older-generation cleanback/minor examples and UV/optical photographs remain gaps.",
+    "Manual cartoon demonstration card, state-map illustration and text/background nativeobjects excluded from publication.",
+    "Issuance intervals and physical geometry unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "accepted_cohorts": 0,
+  "catalog_integrated": true,
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "MS",
+    "verified_at": "2026-10-26T20:03:48.160860+00:00",
+    "local_directory": "output/research/MS",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/MS/d694278d4bc0d30a6857a1bbc8d7eaba864b06b6a03f22c2e7f6b93f08f882e2/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/MS.json",
+    "archive_sha256": "d694278d4bc0d30a6857a1bbc8d7eaba864b06b6a03f22c2e7f6b93f08f882e2",
+    "archive_size_bytes": 12839231,
+    "transport_chunks": 1,
+    "verified_restored_files": 35,
+    "verification": "Downloaded archive restored with existing helpers and every file compared byte-for-byte.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/MS"
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 7,
+    "review_status": "reference_only"
+  }
+}

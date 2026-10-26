@@ -1,0 +1,878 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "ND",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:04:00.601363+00:00",
+  "scope": "Bounded manual state source research. Useful finds retained, remaining gaps recorded; no completeness or runtime acceptance claim.",
+  "source_publications": [
+    {
+      "file": "dot-card-indicators.html",
+      "source_url": "https://www.dot.nd.gov/driver/identification-card-indicators",
+      "final_url": "https://www.dot.nd.gov/driver/identification-card-indicators",
+      "mime_type": "text/html; charset=UTF-8",
+      "retrieved_at": "2026-10-26T19:59:40.186272+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "5017338af25d3599f6f62bd2cfd2bf97143b31fce8774055d0e4817e185f6fe3",
+      "bytes": 105008,
+      "coverage": [
+        "Official regular/permanent current and legacy DL/ID specimens"
+      ]
+    },
+    {
+      "file": "fargo-2019-server-training.pdf",
+      "source_url": "https://download.fargond.gov/0/server_training_presentation_9-3-19.pdf",
+      "final_url": "https://download.fargond.gov/0/server_training_presentation_9-3-19.pdf",
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T19:59:44.177935+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "bytes": 9121675,
+      "coverage": [
+        "Legacy ND adult/minor DL and non-driver ID specimens with annotation context"
+      ]
+    },
+    {
+      "file": "dot-indicator-1.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Regular%20Drivers%20License%20-%20ND_D100_PR_Adult_1_DL_Compliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Regular%20Drivers%20License%20-%20ND_D100_PR_Adult_1_DL_Compliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:00:27.724508+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "3348071a8bbe0d2fe62ddbb120f9e8a3d531a14aa9084b1f40a60764a3f92d1a",
+      "bytes": 98315,
+      "discovery_file": "dot-card-indicators.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-indicator-2.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Regular%20Non-driver%20Identification%20Card%20ND_D100_PR_Adult_2_ID_Compliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Regular%20Non-driver%20Identification%20Card%20ND_D100_PR_Adult_2_ID_Compliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:00:28.234689+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "2e62acb0690aaa2f3a80451858c5a85dc935208aa74d50488cd3ab2e81c056a3",
+      "bytes": 97319,
+      "discovery_file": "dot-card-indicators.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-indicator-3.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Permanent%20Drivers%20License%20ND_D100_PR_Adult_1_DL_Compliant-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Permanent%20Drivers%20License%20ND_D100_PR_Adult_1_DL_Compliant-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:00:28.818012+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "b4a0b5c949f4c4e36a3ca59f863d9019215417c35cd6f9d0bfa4caef1433cb65",
+      "bytes": 86148,
+      "discovery_file": "dot-card-indicators.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-indicator-4.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Permanent%20Non-driver%20Identification%20Card%20ND_D100_PR_Adult_2_ID_NCompliant-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Permanent%20Non-driver%20Identification%20Card%20ND_D100_PR_Adult_2_ID_NCompliant-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:00:30.013076+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "a987340d118d1c799544e156b64ad853e7309312f6ad9e5c46dbbadffd51123b",
+      "bytes": 85879,
+      "discovery_file": "dot-card-indicators.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-indicator-5.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Regular%20Drivers%20License%20prior%20to%20Aug%202023.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Regular%20Drivers%20License%20prior%20to%20Aug%202023.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:00:30.408612+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "3bf86255f4d6604643fdd05c75e2b2795644e4780637840ae9ab5cf858153747",
+      "bytes": 45597,
+      "discovery_file": "dot-card-indicators.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-indicator-6.gif",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Regular%20Non-driver%20Identification%20Card%20Prior%20to%20Aug%202023.gif",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Regular%20Non-driver%20Identification%20Card%20Prior%20to%20Aug%202023.gif",
+      "mime_type": "image/gif",
+      "retrieved_at": "2026-10-26T20:00:30.928206+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "2bac9bfeae805fb68bc54990026cb328f48d74ba764c64da1d5da6d7f2d38e56",
+      "bytes": 83454,
+      "discovery_file": "dot-card-indicators.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-indicator-7.gif",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Permanent%20Drivers%20License%20Prior%20to%20Aug%202023.gif",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Permanent%20Drivers%20License%20Prior%20to%20Aug%202023.gif",
+      "mime_type": "image/gif",
+      "retrieved_at": "2026-10-26T20:00:31.472119+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "76618d9438943ff1ed53013f182c9428696c469a516a3c992e05ebeecc2d0605",
+      "bytes": 108334,
+      "discovery_file": "dot-card-indicators.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-indicator-8.gif",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Permanent%20Non-driver%20Identification%20Card%20Prior%20to%20Aug%202023.gif",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Permanent%20Non-driver%20Identification%20Card%20Prior%20to%20Aug%202023.gif",
+      "mime_type": "image/gif",
+      "retrieved_at": "2026-10-26T20:00:32.042761+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "df2b91f49c1e375d871f09df2234ef18a097a25033255f2ea794c625f324f331",
+      "bytes": 175553,
+      "discovery_file": "dot-card-indicators.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-indicator-9.gif",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Temporary%20Drivers%20License%20Prior%20to%20Aug%202023.gif",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Temporary%20Drivers%20License%20Prior%20to%20Aug%202023.gif",
+      "mime_type": "image/gif",
+      "retrieved_at": "2026-10-26T20:00:33.212112+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "a31ff2bbf724c2b21a2c60dfcfcd3ad3a0a47f2b7468294ed2710127fceb7753",
+      "bytes": 108406,
+      "discovery_file": "dot-card-indicators.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-indicator-10.gif",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Temporary%20Non-driver%20Identification%20Card%20Prior%20to%20Aug%202023.gif",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Temporary%20Non-driver%20Identification%20Card%20Prior%20to%20Aug%202023.gif",
+      "mime_type": "image/gif",
+      "retrieved_at": "2026-10-26T20:00:34.027833+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "af82ca320ffa210c030724a94c432fa81b6b90c85d47d6985cc402ff5a9cdd04",
+      "bytes": 175494,
+      "discovery_file": "dot-card-indicators.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-card-gallery.html",
+      "source_url": "https://www.dot.nd.gov/driver/driver-license-and-non-driver-id",
+      "final_url": "https://www.dot.nd.gov/driver/driver-license-and-non-driver-id",
+      "mime_type": "text/html; charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:01:15.544265+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "cbf24071a7e71d00bf5491d32b8582c950c234a0f1069f318a9425d50fa4e87e",
+      "bytes": 131781,
+      "coverage": [
+        "Official current and pre-August-2023 driver, ID, CDL, permit, legal-presence variants and backs"
+      ]
+    },
+    {
+      "file": "dot-gallery-1.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Under%2018%20-%20ND_D100_PR_Minor_13_DL_Compliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Under%2018%20-%20ND_D100_PR_Minor_13_DL_Compliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:16.193787+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "6db9c9268c5c4e52efb5b70dd8fb03891563d02df059aa72f2df8d1e8221d2af",
+      "bytes": 87528,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-2.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%2018%20to%2021%20-%20ND_D100_PR_Minor_16_CDL_Compliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%2018%20to%2021%20-%20ND_D100_PR_Minor_16_CDL_Compliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:18.848927+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "ed5d0d6d023f6098c99f5cae9b0e38fede140279b4c9797019715572102f0c96",
+      "bytes": 87555,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-3.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Under%2018%20-%20ND_D100_PR_Minor_10_ID_Compliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Under%2018%20-%20ND_D100_PR_Minor_10_ID_Compliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:19.400649+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "0d7f7e655fae522f6e6261ea173f91ba47d08f719ea71dbc8658f75d8bbe5287",
+      "bytes": 86835,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-4.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Under%2018%20Operator%20Permit%20-%20ND_D100_PR_Minor_11_OP_Compliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Under%2018%20Operator%20Permit%20-%20ND_D100_PR_Minor_11_OP_Compliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:19.960614+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "f8ef0c0c8d2d9b75463ea7361448e15f92b5398096d63d7809add6ba12f11ac5",
+      "bytes": 86934,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-5.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20-%20Under%2018%20Operator%20Permit%20-%20ND_D100_PR_Minor_15_OP_NCompliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20-%20Under%2018%20Operator%20Permit%20-%20ND_D100_PR_Minor_15_OP_NCompliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:20.603143+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "f9ead2bb77d45da7fe2f372f8a4058a4f0c3099b11554c5527d9ca90f5c924bb",
+      "bytes": 88515,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-6.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Regular%20Drivers%20License%20-%20ND_D100_PR_Adult_1_DL_Compliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Regular%20Drivers%20License%20-%20ND_D100_PR_Adult_1_DL_Compliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:21.175039+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "3348071a8bbe0d2fe62ddbb120f9e8a3d531a14aa9084b1f40a60764a3f92d1a",
+      "bytes": 98315,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-7.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Permanent%20Drivers%20License%20ND_D100_PR_Adult_1_DL_Compliant-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Permanent%20Drivers%20License%20ND_D100_PR_Adult_1_DL_Compliant-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:21.651797+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "b4a0b5c949f4c4e36a3ca59f863d9019215417c35cd6f9d0bfa4caef1433cb65",
+      "bytes": 86148,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-8.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20Driver%20License%20-%20ND_D100_PR_Adult_1_DL_NCompliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20Driver%20License%20-%20ND_D100_PR_Adult_1_DL_NCompliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:22.173840+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "a05cf3c89614891314866fa9ae7f35ed42454a25191f6a1f96235a5c2fabb538",
+      "bytes": 99010,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-9.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20Non-Driver%20Identification%20Card%20-%20ND_D100_PR_Adult_2_ID_Compliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20Non-Driver%20Identification%20Card%20-%20ND_D100_PR_Adult_2_ID_Compliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:22.775733+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "2e62acb0690aaa2f3a80451858c5a85dc935208aa74d50488cd3ab2e81c056a3",
+      "bytes": 97319,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-10.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20Non-Driver%20Identification%20Card%20-%20ND_D100_PR_Adult_2_ID_NCompliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20Non-Driver%20Identification%20Card%20-%20ND_D100_PR_Adult_2_ID_NCompliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:23.291708+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "878762c7e27e8ab779a14d83a8feda75dd5c2957b8497a3652cd8d6de7909132",
+      "bytes": 97897,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-11.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20Permanent%20Non-Driver%20-%20ND_D100_PR_Adult_2_ID_NCompliant-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20Permanent%20Non-Driver%20-%20ND_D100_PR_Adult_2_ID_NCompliant-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:23.918297+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "a987340d118d1c799544e156b64ad853e7309312f6ad9e5c46dbbadffd51123b",
+      "bytes": 85879,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-12.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20Commercial%20Driver%20License%20-%20ND_D100_PR_Adult_4_CDL_Compliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20Commercial%20Driver%20License%20-%20ND_D100_PR_Adult_4_CDL_Compliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:24.559064+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "a81683f5bd4dfd198989d50db52427f900c007ad39498f1df3daf4a2dda2d6d6",
+      "bytes": 97929,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-13.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20-%20Temporary%20Driver%20License%20-%20ND_D100_PR_Adult_5_DL_NCompliant.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20-%20Temporary%20Driver%20License%20-%20ND_D100_PR_Adult_5_DL_NCompliant.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:25.141065+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "751446daf9588c45b2ad7b842aceac0a9a51710004ea088e865d4e772f746dab",
+      "bytes": 86186,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-14.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20-%20Temporary%20Non-Driver%20Identification%20Card%20-%20ND_D100_PR_Adult_6_ID_NCompliant.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20-%20Temporary%20Non-Driver%20Identification%20Card%20-%20ND_D100_PR_Adult_6_ID_NCompliant.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:25.845681+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "b1e50151f80f006629ea6927ccebdd95e8eebd9b91031c75c92c2e6500351580",
+      "bytes": 85375,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-15.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20Commercial%20driver%20License%20-%20ND_D100_PR_Adult_8_CDL_NCompliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20Commercial%20driver%20License%20-%20ND_D100_PR_Adult_8_CDL_NCompliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:26.460329+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "abec713eee388ca24f3b0f7577c87fb91b344217efa73d39a1f1a7fccaaa6b1f",
+      "bytes": 98822,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-16.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/ND_D100_PR_Adult_4_CDL_Compliant_Sample.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/ND_D100_PR_Adult_4_CDL_Compliant_Sample.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:01:27.126846+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "58f67bf5b5e05173bd2310a73557dfa77e9affbacd96d4e97ea8fbe832e25d92",
+      "bytes": 82023,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-17.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/ND_D100_PR_Adult_8_CDL_Compliant_Sample.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/ND_D100_PR_Adult_8_CDL_Compliant_Sample.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:01:27.793822+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "29c6723d514773853fe8007454d714863fd695ea4f18f43b18685234e07038c0",
+      "bytes": 82335,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-18.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20Operator%20Permit%20-%20ND_D100_PR_Adult_7_OP_Compliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20Operator%20Permit%20-%20ND_D100_PR_Adult_7_OP_Compliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:28.345250+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "a76c746fbac4aac9c09809e81d794285025f9dc7089192a0b447a299b3769ac0",
+      "bytes": 97700,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-19.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Driver%20License%20-%20Back%20-%20new-back.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Driver%20License%20-%20Back%20-%20new-back.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:28.810311+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "6617dd035883276d180d3d64be033f2e18b4bfe5f0e2d05582501204c7edc4ef",
+      "bytes": 56415,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-20.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20Operator%20Permit%20-%20ND_D100_PR_Adult_7_OP_Compliant_NLT-SAMPLE.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20Operator%20Permit%20-%20ND_D100_PR_Adult_7_OP_Compliant_NLT-SAMPLE.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:29.334758+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "a76c746fbac4aac9c09809e81d794285025f9dc7089192a0b447a299b3769ac0",
+      "bytes": 97700,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-21.png",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Driver%20License%20Back%202%20-%20old-back.png",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Driver%20License%20Back%202%20-%20old-back.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:01:29.775283+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "8aead2d8a923b8870459e18f4c446be2a27ed29a7bbee8da95a18062c19d6ffe",
+      "bytes": 62266,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-22.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Permanent%20Commercial%20Driver%20License%20-%2014-ND_D201PR_H_CDL.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Permanent%20Commercial%20Driver%20License%20-%2014-ND_D201PR_H_CDL.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:01:30.301367+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "6bc7e55f682aaed836d8f7aa04b0f03ce0cea3d44588ab56a4c36f87be8c7c07",
+      "bytes": 57216,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-23.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20Commercial%20Driver%20License%20-%2012-ND_D201PR_H_CDL.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20Commercial%20Driver%20License%20-%2012-ND_D201PR_H_CDL.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:01:30.784227+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "e5c28e3ffc2514dd9ed9d1e58751dad1964a784dc21ab211132915a3b4ac0be3",
+      "bytes": 56813,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-24.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20ID%20Non%20Driver%20ID%20-%202-ND_D201PR_H_ID.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20ID%20Non%20Driver%20ID%20-%202-ND_D201PR_H_ID.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:01:31.246922+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "a8d19d3a8977fa354b738c89e02d8c51923b2bea4ac942fce929ee97573114bf",
+      "bytes": 61142,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-25.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20ID%20-%20Temporary%20Non-Driver%20ID%20-%207-ND_D201PR_H_ID.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20ID%20-%20Temporary%20Non-Driver%20ID%20-%207-ND_D201PR_H_ID.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:01:31.735211+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "048f5f9c65982b502f72ea7ef0a3464601f083a0dc384c526a71dc8e2e206405",
+      "bytes": 61562,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-26.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Permanent%20Non-Driver%20ID%20-%205-ND_D201PR_H_ID.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Permanent%20Non-Driver%20ID%20-%205-ND_D201PR_H_ID.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:01:32.342111+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "6a5da9d389ff17943390c682bc5c172f1293eb672e72031c8c0948edb2508c09",
+      "bytes": 57539,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-additional-151.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Under%20Age%2018%20-%204-ND_D201PR_V_DL.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Under%20Age%2018%20-%204-ND_D201PR_V_DL.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:02:52.424025+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "8118ca85025778c9da4972498dbcd84315a391b8a9c9344719f274b276e56a88",
+      "bytes": 60631,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-additional-152.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Ages%2018%20to%2021%20-%203-ND_D201PR_V_DL.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Ages%2018%20to%2021%20-%203-ND_D201PR_V_DL.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:02:52.875762+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "7e0fa803e602c35bc1a55693cdfcbd4a6f68aff5c5c2587a5217572961171fd9",
+      "bytes": 59992,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-additional-153.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20ID%20-%20Temporary%20-%206-ND_D201PR_H_DL.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20ID%20-%20Temporary%20-%206-ND_D201PR_H_DL.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:02:53.443852+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "372f4d8b560e1876c36180cffd2537ca3773477a2db31e76ca6b58b944d7d59f",
+      "bytes": 57657,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-additional-154.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Permanent%20-%208-ND_D201PR_H_DL.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Permanent%20-%208-ND_D201PR_H_DL.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:02:55.819136+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "d52699f00be5f6a80f3f3307db8e577582584ba3676ad3c0ad8f7f4f3db62d48",
+      "bytes": 56655,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-additional-155.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%201-ND_D201PR_H_DL.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%201-ND_D201PR_H_DL.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:02:56.666580+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "7f7a447fe0bb4b27b2b2098d0386428756c3bf5830a7bdf361c9ac64d0c42f65",
+      "bytes": 57018,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-additional-156.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20ID%20-%20Temporary%20Option%202%20-%2015-ND_D201PR_H_DL.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20ID%20-%20Temporary%20Option%202%20-%2015-ND_D201PR_H_DL.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:02:57.365533+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "3f978a036cce62e48481f4514b3a28b8b6eac25f53db844deb719a0fe25bbba5",
+      "bytes": 58162,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-additional-158.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Temporary%20Operator%20Permit%20-%2011-ND_D201PR_H_P.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%20-%20Temporary%20Operator%20Permit%20-%2011-ND_D201PR_H_P.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:02:57.841316+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "7b1aa5659501bf3e5095983f9e45cbadc5d092323f7f7fa2137cab6164aa43ab",
+      "bytes": 57401,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-additional-159.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%202%20-%20Permanent%20-%2010-ND_D201PR_H_P.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/REAL%20ID%202%20-%20Permanent%20-%2010-ND_D201PR_H_P.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:02:58.280437+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "4302db2b28f01d30273147719c8367f65ff9972f4ffb123088721e85c2e40830",
+      "bytes": 61352,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dot-gallery-additional-161.jpg",
+      "source_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20ID%20-%20Non-Domiciled%20-%2013-ND_D201PR_H_CDL.jpg",
+      "final_url": "https://www.dot.nd.gov/sites/www/files/documents/Images/Driving%20and%20Drives/Non-Federal%20ID%20-%20Non-Domiciled%20-%2013-ND_D201PR_H_CDL.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:02:58.762941+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "94c63f461f44cf89a99d734afe9ca40a019d73fd402b8a607ec2785ae90bee2d",
+      "bytes": 57325,
+      "discovery_file": "dot-card-gallery.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "fargo-2019-server-training-xref-16259.jpeg",
+      "source_file": "fargo-2019-server-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 16259,
+      "resource_page_number": 84,
+      "width_px": 499,
+      "height_px": 302,
+      "sha256": "218717344750fdf48ada6de8a4606be04d6d4fc665771de66d349af9c5fe97c0",
+      "reference_kind": "complete_or_composite_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "fargo-2019-server-training-xref-9874.jpeg",
+      "source_file": "fargo-2019-server-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 9874,
+      "resource_page_number": 84,
+      "width_px": 246,
+      "height_px": 156,
+      "sha256": "98e49ae5d3ebb1edc552b0be4a1a622e1ab939b385d600f37a21de71c4f14095",
+      "reference_kind": "complete_or_composite_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "fargo-2019-server-training-xref-10109.jpeg",
+      "source_file": "fargo-2019-server-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 10109,
+      "resource_page_number": 86,
+      "width_px": 288,
+      "height_px": 175,
+      "sha256": "57380c2f3a7418af80708c0ca875e995c039cf52ac1918e5e6745e76d193887c",
+      "reference_kind": "complete_or_composite_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "fargo-2019-server-training-xref-10110.jpeg",
+      "source_file": "fargo-2019-server-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 10110,
+      "resource_page_number": 86,
+      "width_px": 175,
+      "height_px": 288,
+      "sha256": "1b535f53e32c6aa0cc42aef7c23c2ec3f4bd8e794f1847de16a4e3d36abcdfa9",
+      "reference_kind": "complete_or_composite_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "fargo-2019-server-training-xref-10228.jpeg",
+      "source_file": "fargo-2019-server-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 10228,
+      "resource_page_number": 87,
+      "width_px": 233,
+      "height_px": 367,
+      "sha256": "f48b6a0558663f9199b8c9700f18ae71e44f78653368b9d8920c7bac97219e4f",
+      "reference_kind": "complete_or_composite_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "fargo-2019-server-training-xref-9756.jpeg",
+      "source_file": "fargo-2019-server-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 9756,
+      "resource_page_number": 83,
+      "width_px": 156,
+      "height_px": 246,
+      "sha256": "0c9f98f4263d2bcab8414ab0d89008917ffde64d3e3c0b581e4b9f8bfd4c1b94",
+      "reference_kind": "complete_or_composite_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    }
+  ],
+  "unresolved_downloads": [],
+  "remaining_gaps": [
+    "Clean current under-21-specific backs and UV photography not acquired.",
+    "Design issuance intervals, geometry and reference completeness unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": true,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "ND",
+    "verified_at": "2026-10-26T20:04:22.301498+00:00",
+    "local_directory": "output/research/ND",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/ND/658d9509be4dd1ed2600e3d0f410d665dc6288208de90011d4bd0fcb0c9da5bb/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/ND.json",
+    "archive_sha256": "658d9509be4dd1ed2600e3d0f410d665dc6288208de90011d4bd0fcb0c9da5bb",
+    "archive_size_bytes": 22875538,
+    "transport_chunks": 1,
+    "verified_restored_files": 69,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/ND",
+    "verification": "Downloaded archive, safe restored and compared EVERY retained file byte-for-byte.",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 51,
+    "review_status": "reference_only"
+  }
+}

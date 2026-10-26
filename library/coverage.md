@@ -9,8 +9,8 @@ Source collection and reviewed design coverage are separate.
 | Arkansas (AR) | 7 | 6 | 0 |
 | Arizona (AZ) | 14 | 14 | 0 |
 | California (CA) | 3 | 1 | 0 |
-| Colorado (CO) | 0 | 0 | 0 |
-| Connecticut (CT) | 12 | 0 | 0 |
+| Colorado (CO) | 4 | 4 | 0 |
+| Connecticut (CT) | 15 | 3 | 0 |
 | District of Columbia (DC) | 1 | 1 | 0 |
 | Delaware (DE) | 9 | 1 | 0 |
 | Florida (FL) | 3 | 1 | 0 |
@@ -28,11 +28,11 @@ Source collection and reviewed design coverage are separate.
 | Maine (ME) | 6 | 6 | 0 |
 | Michigan (MI) | 5 | 5 | 0 |
 | Minnesota (MN) | 3 | 2 | 0 |
-| Missouri (MO) | 3 | 0 | 0 |
-| Mississippi (MS) | 6 | 0 | 0 |
+| Missouri (MO) | 7 | 4 | 0 |
+| Mississippi (MS) | 10 | 4 | 0 |
 | Montana (MT) | 0 | 0 | 0 |
 | North Carolina (NC) | 0 | 0 | 0 |
-| North Dakota (ND) | 3 | 0 | 0 |
+| North Dakota (ND) | 44 | 41 | 0 |
 | Nebraska (NE) | 10 | 1 | 0 |
 | New Hampshire (NH) | 0 | 0 | 0 |
 | New Jersey (NJ) | 0 | 0 | 0 |

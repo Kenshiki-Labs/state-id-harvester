@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "CT",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:06:37.230028+00:00",
+  "source_publications": [
+    {
+      "file": "dmv-real-id.html",
+      "source_url": "https://portal.ct.gov/dmv/licenses-permits-ids/get-real-id",
+      "final_url": "https://portal.ct.gov/dmv/licenses-permits-ids/get-real-id",
+      "retrieved_at": "2026-10-26T20:05:14.603492+00:00",
+      "bytes": 291215,
+      "sha256": "1dd6e04f30e46a59be203832a789be197bcaeceb51ca2a9ff9d61eb8d2ce6eee",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dmv-central-issuance.html",
+      "source_url": "https://portal.ct.gov/dmv/licenses-permits-ids/get-a-drivers-license-ct/protect-your-identity-central-issuance-ct",
+      "final_url": "https://portal.ct.gov/dmv/licenses-permits-ids/get-a-drivers-license-ct/protect-your-identity-central-issuance-ct",
+      "retrieved_at": "2026-10-26T20:05:17.162662+00:00",
+      "bytes": 264156,
+      "sha256": "280a75626622afb300888bc8b3bcdaa6cf6bb8f36cb4860128f9c10ef7f7497b",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dmv-2017-central-issuance.pdf",
+      "source_url": "https://portal.ct.gov/-/media/DMV/CentralIssuanceBrochurepdf.pdf?la=en",
+      "final_url": "https://portal.ct.gov/-/media/DMV/CentralIssuanceBrochurepdf.pdf?la=en",
+      "retrieved_at": "2026-10-26T20:05:48.511097+00:00",
+      "bytes": 527124,
+      "sha256": "e4cc5d2ed48ac1e27d515680bfa77b04bfc7d315ccdd89582c61133bc9793c87",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dmv-real-id-front.jpg",
+      "source_url": "https://portal.ct.gov/dmv/-/media/dmv/images/real-id.jpg",
+      "final_url": "https://portal.ct.gov/dmv/-/media/dmv/images/real-id.jpg",
+      "retrieved_at": "2026-10-26T20:05:50.800534+00:00",
+      "bytes": 829338,
+      "sha256": "90363d8f8feedd073f153d391e6a0b40587d68337f9511a53d0f169de90d63fe",
+      "mime_type": "image/jpeg",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dmv-real-id.html"
+    },
+    {
+      "file": "dmv-drive-only.html",
+      "source_url": "https://portal.ct.gov/dmv/licenses-permits-ids/get-drive-only-license",
+      "final_url": "https://portal.ct.gov/dmv/licenses-permits-ids/get-drive-only-license",
+      "retrieved_at": "2026-10-26T20:06:15.251324+00:00",
+      "bytes": 246105,
+      "sha256": "9b5f3e169ab9474930122d443533b683db0bb2d4bd157ac39953d6a23528099c",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "ctpublic-drive-only.html",
+      "source_url": "https://www.ctpublic.org/2025-08-22/what-to-know-about-a-nh-law-that-invalidates-drivers-licenses-for-undocumented-immigrants",
+      "final_url": "https://www.ctpublic.org/2025-08-22/what-to-know-about-a-nh-law-that-invalidates-drivers-licenses-for-undocumented-immigrants",
+      "retrieved_at": "2026-10-26T20:06:16.105008+00:00",
+      "bytes": 328012,
+      "sha256": "448ddd3ba61d55c235cbdf94813fdb62f181f7de28e1eeceba1894a45abdb14e",
+      "mime_type": "text/html;charset=UTF-8",
+      "source_class": "press",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "press-drive-only-front.png",
+      "source_url": "https://npr-brightspot.s3.amazonaws.com/88/5b/a2e600e14f6498d2776e502cea56/driver-license-sample.png",
+      "final_url": "https://npr-brightspot.s3.amazonaws.com/88/5b/a2e600e14f6498d2776e502cea56/driver-license-sample.png",
+      "retrieved_at": "2026-10-26T20:06:23.318750+00:00",
+      "bytes": 1244237,
+      "sha256": "2a63a23d0bef33cc58801d40c7127ebad258bdad5d081565c2705acabb026ccb",
+      "mime_type": "image/png",
+      "source_class": "press",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "ctpublic-drive-only.html"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "dmv-2017-central-issuance-xref-331.jpeg",
+      "source_file": "dmv-2017-central-issuance.pdf",
+      "source_sha256": "e4cc5d2ed48ac1e27d515680bfa77b04bfc7d315ccdd89582c61133bc9793c87",
+      "pdf_object_xref": 331,
+      "page_number": 1,
+      "width_px": 243,
+      "height_px": 153,
+      "sha256": "2f4dcf5e69a1c56e1608fa38b5e547e17b866132ad3f4485892ea66b1d639338"
+    },
+    {
+      "file": "dmv-2017-central-issuance-xref-330.jpeg",
+      "source_file": "dmv-2017-central-issuance.pdf",
+      "source_sha256": "e4cc5d2ed48ac1e27d515680bfa77b04bfc7d315ccdd89582c61133bc9793c87",
+      "pdf_object_xref": 330,
+      "page_number": 1,
+      "width_px": 153,
+      "height_px": 243,
+      "sha256": "af77a1892c7b194a0d38ee9766b77dcacf228a05b2ed1cc6f26f2e99486e3193"
+    },
+    {
+      "file": "dmv-2017-central-issuance-xref-13.png",
+      "source_file": "dmv-2017-central-issuance.pdf",
+      "source_sha256": "e4cc5d2ed48ac1e27d515680bfa77b04bfc7d315ccdd89582c61133bc9793c87",
+      "pdf_object_xref": 13,
+      "page_number": 2,
+      "width_px": 243,
+      "height_px": 153,
+      "sha256": "b19498a582a2da214b81fa4bf83a52d76d2803c857f536e34084d21a87dc48ee"
+    }
+  ],
+  "unresolved_downloads": [],
+  "remaining_gaps": [
+    "Non-driver ID/CDL-specific specimens and more recent minor variants remain incomplete.",
+    "Reverse-side variations and exact design intervals not established."
+  ],
+  "notes": [
+    "Three native2017DL adult/minor/back resources; current issueradultREALID front; legacyDriveOnly front fromDFA-credited publicradio article.",
+    "Temporarypaper nativeJPEG resource has inverted Decode semantics; raw bytes preserved but public reference uses correctly rendered sourcepage instead of a miscolored nativeasset. No cleanup.",
+    "DCP/liquor searches mainly found permits/application guides rather than credential specimens."
+  ],
+  "catalog_integrated": true,
+  "review_status": "reference_research_only",
+  "preservation": {
+    "jurisdiction": "CT",
+    "verified_at": "2026-10-26T20:06:44.995592+00:00",
+    "private_snapshot_index_key": "snapshots/research/CT/bafa5a53fd9028c4e6beecc1cf846eb4da89fbeaea4cfb8670cbd47237b799cc/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/CT.json",
+    "archive_sha256": "bafa5a53fd9028c4e6beecc1cf846eb4da89fbeaea4cfb8670cbd47237b799cc",
+    "archive_size_bytes": 4308987,
+    "verified_restored_files": 17,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/CT",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 7,
+    "review_status": "reference_only"
+  }
+}
