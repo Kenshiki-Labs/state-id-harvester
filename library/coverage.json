@@ -2,19 +2,85 @@
   {
     "code": "AK",
     "name": "Alaska",
-    "status": "gap",
+    "status": "sources_available",
     "review_status": "unreviewed",
     "counts": {
-      "sources": 0,
-      "relevant_sources": 0,
-      "embedded_images": 0,
-      "rendered_pages": 0,
+      "sources": 5,
+      "relevant_sources": 5,
+      "embedded_images": 5,
+      "rendered_pages": 2,
       "crop_candidates": 0,
       "accepted_cohorts": 0
     },
     "fetch_failures": 1,
     "extraction_failures": 0,
-    "sources": []
+    "sources": [
+      {
+        "title": "dmv card types",
+        "url": "https://dmv.alaska.gov/media/uhdfeog2/card-types-purpose-limitations-data-flyer.pdf",
+        "sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+        "retrieved_at": "2026-10-26T20:00:56.873755+00:00",
+        "publisher_host": "dmv.alaska.gov",
+        "publisher_jurisdiction": "AK",
+        "discovery_jurisdiction": "AK",
+        "credential_format": "ID1",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 1
+      },
+      {
+        "title": "temporary dl",
+        "url": "https://dmv.alaska.gov/media/ylggqlvj/temporary-lic-id-draft-nov-16-18_dl.png",
+        "sha256": "132c529d179973633530e3d72aae32597755203d2223d4370f1464404952abbe",
+        "retrieved_at": "2026-10-26T20:01:11.788868+00:00",
+        "publisher_host": "dmv.alaska.gov",
+        "publisher_jurisdiction": "AK",
+        "discovery_jurisdiction": "AK",
+        "credential_format": "ID1",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 0
+      },
+      {
+        "title": "temporary id",
+        "url": "https://dmv.alaska.gov/media/yyrfldm2/temporary-lic-id-draft-nov-16-18_id2.png",
+        "sha256": "1e91e41967898f47cef7338c65e1b92683fba7b2f89a319854aad0a47f955166",
+        "retrieved_at": "2026-10-26T20:01:12.118465+00:00",
+        "publisher_host": "dmv.alaska.gov",
+        "publisher_jurisdiction": "AK",
+        "discovery_jurisdiction": "AK",
+        "credential_format": "ID1",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 0
+      },
+      {
+        "title": "dmv new id security",
+        "url": "https://dmv.alaska.gov/media/uqpbnrdq/new_id_security.png",
+        "sha256": "a7243064884e866484b04370a71d4b00e572b274261a2e9386410f9722f26591",
+        "retrieved_at": "2026-10-26T20:01:18.687984+00:00",
+        "publisher_host": "dmv.alaska.gov",
+        "publisher_jurisdiction": "AK",
+        "discovery_jurisdiction": "AK",
+        "credential_format": "ID1",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 0
+      },
+      {
+        "title": "dmv secure card features",
+        "url": "https://dmv.alaska.gov/media/szxjxo0b/onepager_alaska-hd.pdf",
+        "sha256": "ea15daf6db693f67205eb61472fdcddec4e7af54c510b45e1f0ae1ff6fccb7ff",
+        "retrieved_at": "2026-10-26T20:00:35.567697+00:00",
+        "publisher_host": "dmv.alaska.gov",
+        "publisher_jurisdiction": "AK",
+        "discovery_jurisdiction": "AK",
+        "credential_format": "ID1",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 1
+      }
+    ]
   },
   {
     "code": "AL",
@@ -22,9 +88,9 @@
     "status": "sources_available",
     "review_status": "unreviewed",
     "counts": {
-      "sources": 8,
-      "relevant_sources": 0,
-      "embedded_images": 180,
+      "sources": 11,
+      "relevant_sources": 3,
+      "embedded_images": 182,
       "rendered_pages": 46,
       "crop_candidates": 5,
       "accepted_cohorts": 0
@@ -135,6 +201,45 @@
         "review_status": "unreviewed",
         "page_count": 28,
         "credential_format": "ID1"
+      },
+      {
+        "title": "alea star standard flyer",
+        "url": "https://www.alea.gov/sites/default/files/inline-files/STAR%20ID%20NFFI%20Flyer%20%28002%29_0.pdf",
+        "sha256": "ff071a30174a5cc1308991955175cdbd64550dba3776caa071824aca21f99920",
+        "retrieved_at": "2026-10-26T19:59:20.698074+00:00",
+        "publisher_host": "www.alea.gov",
+        "publisher_jurisdiction": "AL",
+        "discovery_jurisdiction": "AL",
+        "credential_format": "ID1",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 1
+      },
+      {
+        "title": "baldwin license comparison",
+        "url": "https://www.baldwincountyal.gov/images/default-source/cis-citizen-services-rotator/star-id.png?sfvrsn=7ef5465a_1",
+        "sha256": "6c57daa808403bda24bf32be54edfb181af555485eeb38edd0933fc7609dada1",
+        "retrieved_at": "2026-10-26T19:59:51.068033+00:00",
+        "publisher_host": "www.baldwincountyal.gov",
+        "publisher_jurisdiction": "AL",
+        "discovery_jurisdiction": "AL",
+        "credential_format": "ID1",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 0
+      },
+      {
+        "title": "alea official flyer",
+        "url": "https://www.alea.gov/sites/default/files/inline-images/STAR%20ID%20Flyer%20updated_1.png",
+        "sha256": "07d0d7921e7f64af180cca610367d58b680794e51e56ba2b303f395774352974",
+        "retrieved_at": "2026-10-26T19:59:51.334567+00:00",
+        "publisher_host": "www.alea.gov",
+        "publisher_jurisdiction": "AL",
+        "discovery_jurisdiction": "AL",
+        "credential_format": "ID1",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 0
       }
     ]
   },
@@ -1753,8 +1858,8 @@
     "status": "sources_available",
     "review_status": "unreviewed",
     "counts": {
-      "sources": 1,
-      "relevant_sources": 0,
+      "sources": 3,
+      "relevant_sources": 2,
       "embedded_images": 3,
       "rendered_pages": 2,
       "crop_candidates": 0,
@@ -1775,6 +1880,32 @@
         "review_status": "unreviewed",
         "page_count": 4,
         "credential_format": "ID1"
+      },
+      {
+        "title": "MN: pbs adult front.jpg",
+        "url": "https://lptv.org/wp-content/uploads/2018/07/mn-adult-dl.jpg",
+        "sha256": "a2b7ae17a8bf37015f1a619134d9319f05a23cba53a166a6fae84d35b06bc5d3",
+        "retrieved_at": "2026-10-26T20:00:45.708057+00:00",
+        "publisher_host": "lptv.org",
+        "publisher_jurisdiction": null,
+        "discovery_jurisdiction": "MN",
+        "credential_format": "ID1",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 0
+      },
+      {
+        "title": "MN: pbs under21 front.jpg",
+        "url": "https://lptv.org/wp-content/uploads/2018/07/mn-minor-dl.jpg",
+        "sha256": "15b49030540cd8ad67495444ba6cdd6592eb002ac419df382c28399412057738",
+        "retrieved_at": "2026-10-26T20:00:46.119707+00:00",
+        "publisher_host": "lptv.org",
+        "publisher_jurisdiction": null,
+        "discovery_jurisdiction": "MN",
+        "credential_format": "ID1",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 0
       }
     ]
   },

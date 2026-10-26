@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "AK",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:01:37.201249+00:00",
+  "source_publications": [
+    {
+      "file": "dmv-secure-card-features.pdf",
+      "source_url": "https://dmv.alaska.gov/media/szxjxo0b/onepager_alaska-hd.pdf",
+      "final_url": "https://dmv.alaska.gov/media/szxjxo0b/onepager_alaska-hd.pdf",
+      "retrieved_at": "2026-10-26T20:00:35.567697+00:00",
+      "bytes": 918103,
+      "sha256": "ea15daf6db693f67205eb61472fdcddec4e7af54c510b45e1f0ae1ff6fccb7ff",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dmv-card-types.pdf",
+      "source_url": "https://dmv.alaska.gov/media/uhdfeog2/card-types-purpose-limitations-data-flyer.pdf",
+      "final_url": "https://dmv.alaska.gov/media/uhdfeog2/card-types-purpose-limitations-data-flyer.pdf",
+      "retrieved_at": "2026-10-26T20:00:56.873755+00:00",
+      "bytes": 937742,
+      "sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dmv-temporary.html",
+      "source_url": "https://dmv.alaska.gov/credential-services/temporary-license/",
+      "final_url": "https://dmv.alaska.gov/credential-services/temporary-license/",
+      "retrieved_at": "2026-10-26T20:00:57.968027+00:00",
+      "bytes": 24639,
+      "sha256": "dedc1347abe0126f07e7dbc66fb69becd9ccd51387f4f4f3e2403a2b6b154d67",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dmv-realid.html",
+      "source_url": "https://dmv.alaska.gov/credential-services/realidupdate/",
+      "final_url": "https://dmv.alaska.gov/credential-services/realidupdate/",
+      "retrieved_at": "2026-10-26T20:00:58.587132+00:00",
+      "bytes": 86129,
+      "sha256": "4a1602cad545dd03f499ac85a53856b4a8c937e0303dd27222d243ac53fc269d",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "temporary-dl.png",
+      "source_url": "https://dmv.alaska.gov/media/ylggqlvj/temporary-lic-id-draft-nov-16-18_dl.png",
+      "final_url": "https://dmv.alaska.gov/media/ylggqlvj/temporary-lic-id-draft-nov-16-18_dl.png",
+      "retrieved_at": "2026-10-26T20:01:11.788868+00:00",
+      "bytes": 158134,
+      "sha256": "132c529d179973633530e3d72aae32597755203d2223d4370f1464404952abbe",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dmv-temporary.html"
+    },
+    {
+      "file": "temporary-id.png",
+      "source_url": "https://dmv.alaska.gov/media/yyrfldm2/temporary-lic-id-draft-nov-16-18_id2.png",
+      "final_url": "https://dmv.alaska.gov/media/yyrfldm2/temporary-lic-id-draft-nov-16-18_id2.png",
+      "retrieved_at": "2026-10-26T20:01:12.118465+00:00",
+      "bytes": 147739,
+      "sha256": "1e91e41967898f47cef7338c65e1b92683fba7b2f89a319854aad0a47f955166",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dmv-temporary.html"
+    },
+    {
+      "file": "dmv-new-id-security.png",
+      "source_url": "https://dmv.alaska.gov/media/uqpbnrdq/new_id_security.png",
+      "final_url": "https://dmv.alaska.gov/media/uqpbnrdq/new_id_security.png",
+      "retrieved_at": "2026-10-26T20:01:18.687984+00:00",
+      "bytes": 4572310,
+      "sha256": "a7243064884e866484b04370a71d4b00e572b274261a2e9386410f9722f26591",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dmv-realid.html"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "dmv-card-types-xref-35.jpeg",
+      "source_file": "dmv-card-types.pdf",
+      "source_sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+      "pdf_object_xref": 35,
+      "page_number": 1,
+      "width_px": 935,
+      "height_px": 585,
+      "sha256": "4882cfea7dd56ac78bb913f038bfe244fa30dc681bfd72e59301c5ec2416185f"
+    },
+    {
+      "file": "dmv-card-types-xref-36.jpeg",
+      "source_file": "dmv-card-types.pdf",
+      "source_sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+      "pdf_object_xref": 36,
+      "page_number": 1,
+      "width_px": 225,
+      "height_px": 372,
+      "sha256": "f695c270c436cd071692a02647083c0b02761dab10749ffde6e8e92e74c709c0"
+    },
+    {
+      "file": "dmv-card-types-xref-47.jpeg",
+      "source_file": "dmv-card-types.pdf",
+      "source_sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+      "pdf_object_xref": 47,
+      "page_number": 1,
+      "width_px": 233,
+      "height_px": 371,
+      "sha256": "1b5277a6283885050db9110cf966bbd198eafa8ff1ea0aedb807c50ad718be30"
+    },
+    {
+      "file": "dmv-card-types-xref-58.jpeg",
+      "source_file": "dmv-card-types.pdf",
+      "source_sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+      "pdf_object_xref": 58,
+      "page_number": 1,
+      "width_px": 942,
+      "height_px": 587,
+      "sha256": "9290918a1ffb87ec860d6c5570e0794cb7d7b9b1ae1807148650d0721b91ddba"
+    },
+    {
+      "file": "dmv-card-types-xref-69.jpeg",
+      "source_file": "dmv-card-types.pdf",
+      "source_sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+      "pdf_object_xref": 69,
+      "page_number": 1,
+      "width_px": 583,
+      "height_px": 933,
+      "sha256": "74c9021321114186c45ea03161fd5be3d38be7403065171435e4907029e25a13"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "amco-2017-training.pdf",
+      "source_url": "https://www.commerce.alaska.gov/web/Portals/9/pub/MCB/Minutes/2017/7.12/Tab13.pdf",
+      "final_url": "https://www.commerce.alaska.gov/web/Portals/9/pub/MCB/Minutes/2017/7.12/Tab13.pdf",
+      "retrieved_at": "2026-10-26T20:00:35.865990+00:00",
+      "bytes": 1245,
+      "sha256": "dc1d54dab6ec8c00f70137927504e4f222c8395f10760b6beecfcfa94e08249f",
+      "mime_type": "text/html",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 404
+    },
+    {
+      "file": "amco-2016-training.pdf",
+      "source_url": "https://www.commerce.alaska.gov/web/Portals/9/pub/MCB/Minutes/2016/4.27/Tab16.pdf",
+      "final_url": "https://www.commerce.alaska.gov/web/Portals/9/pub/MCB/Minutes/2016/4.27/Tab16.pdf",
+      "retrieved_at": "2026-10-26T20:00:36.136523+00:00",
+      "bytes": 1245,
+      "sha256": "dc1d54dab6ec8c00f70137927504e4f222c8395f10760b6beecfcfa94e08249f",
+      "mime_type": "text/html",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 404
+    },
+    {
+      "file": "doa-2014-issuance.html",
+      "source_url": "https://doa.alaska.gov/newsEvents/PR14-11-DMV-central-issuance.html",
+      "final_url": "https://doa.alaska.gov/newsEvents/PR14-11-DMV-central-issuance.html",
+      "retrieved_at": "2026-10-26T20:00:59.261259+00:00",
+      "bytes": 770,
+      "sha256": "dba8e22bd56fc9b7f9594cae6746e0a799918f4ed07c4e9866ee0573cbcfefa6",
+      "mime_type": "text/html;charset=utf-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 403
+    }
+  ],
+  "remaining_gaps": [
+    "Clean separately extracted current backs, confirmed under21 specimens, and legacy2014 variants remain gaps.",
+    "AMCO2016/2017 board-training PDF links returned404;2014 DOA release blocked403."
+  ],
+  "notes": [
+    "Current DMV resources supply REAL ID/nonfederal, limited-term, provisional/alcohol-restricted examples and temporaryDL/ID. Vertical orientation alone is not treated as proof of under21.",
+    "Card-features native background resource is a full decorative composition with blank areas; public delivery uses relevant rendered source plate instead. No pixel cleanup."
+  ],
+  "catalog_integrated": true,
+  "review_status": "reference_research_only",
+  "preservation": {
+    "jurisdiction": "AK",
+    "verified_at": "2026-10-26T20:01:47.338288+00:00",
+    "private_snapshot_index_key": "snapshots/research/AK/72091a9506494ab0c96e22a9f3d32f6a2572006e00d08a0e8db4bfeeba0fb169/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/AK.json",
+    "archive_sha256": "72091a9506494ab0c96e22a9f3d32f6a2572006e00d08a0e8db4bfeeba0fb169",
+    "archive_size_bytes": 15731099,
+    "verified_restored_files": 22,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/AK",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 10,
+    "review_status": "reference_only"
+  }
+}

@@ -4,8 +4,8 @@ Source collection and reviewed design coverage are separate.
 
 | Jurisdiction | Sources | Relevant candidates | Reviewed cohorts |
 | --- | ---: | ---: | ---: |
-| Alaska (AK) | 0 | 0 | 0 |
-| Alabama (AL) | 8 | 0 | 0 |
+| Alaska (AK) | 5 | 5 | 0 |
+| Alabama (AL) | 11 | 3 | 0 |
 | Arkansas (AR) | 7 | 6 | 0 |
 | Arizona (AZ) | 14 | 14 | 0 |
 | California (CA) | 3 | 1 | 0 |
@@ -27,7 +27,7 @@ Source collection and reviewed design coverage are separate.
 | Maryland (MD) | 3 | 2 | 0 |
 | Maine (ME) | 6 | 6 | 0 |
 | Michigan (MI) | 5 | 5 | 0 |
-| Minnesota (MN) | 1 | 0 | 0 |
+| Minnesota (MN) | 3 | 2 | 0 |
 | Missouri (MO) | 3 | 0 | 0 |
 | Mississippi (MS) | 6 | 0 | 0 |
 | Montana (MT) | 0 | 0 | 0 |

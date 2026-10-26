@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "AL",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:00:05.248811+00:00",
+  "source_publications": [
+    {
+      "file": "alea-star-id.html",
+      "source_url": "https://www.alea.gov/dps/driver-license/star-id",
+      "final_url": "https://www.alea.gov/dps/driver-license/star-id",
+      "retrieved_at": "2026-10-26T19:59:19.891946+00:00",
+      "bytes": 75486,
+      "sha256": "aefb34c9af0cb9ce059160a0b2c4f02b49d6e15b4813ff9254164db074535f92",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "alea-star-standard-flyer.pdf",
+      "source_url": "https://www.alea.gov/sites/default/files/inline-files/STAR%20ID%20NFFI%20Flyer%20%28002%29_0.pdf",
+      "final_url": "https://www.alea.gov/sites/default/files/inline-files/STAR%20ID%20NFFI%20Flyer%20%28002%29_0.pdf",
+      "retrieved_at": "2026-10-26T19:59:20.698074+00:00",
+      "bytes": 490002,
+      "sha256": "ff071a30174a5cc1308991955175cdbd64550dba3776caa071824aca21f99920",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "alea-license-information.html",
+      "source_url": "https://www.alea.gov/dps/driver-license/driver-license-information",
+      "final_url": "https://www.alea.gov/dps/driver-license/driver-license-information",
+      "retrieved_at": "2026-10-26T19:59:35.751317+00:00",
+      "bytes": 79510,
+      "sha256": "8bba7550a3cb359e24ea7c311336222a0fb9d5f5245eb3672008b92e14dd6504",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "baldwin-star-id.html",
+      "source_url": "https://www.baldwincountyal.gov/permits-and-licenses/driving-state-id/star-id",
+      "final_url": "https://www.baldwincountyal.gov/permits-and-licenses/driving-state-id/star-id",
+      "retrieved_at": "2026-10-26T19:59:36.634316+00:00",
+      "bytes": 72563,
+      "sha256": "0f7e15da3cdf8300ded6a3b65269afe3c0ab82cd451b3e914180d9dfd482d38c",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "alea-licenses.html",
+      "source_url": "https://www.alea.gov/dps/driver-license/license-and-id-cards",
+      "final_url": "https://www.alea.gov/dps/driver-license/license-and-id-cards",
+      "retrieved_at": "2026-10-26T19:59:36.881754+00:00",
+      "bytes": 84809,
+      "sha256": "a30265b5bcaa51fa5d52bc7af6e2339ae67590d4f273c8e10a7e2afb7c219ad1",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "baldwin-license-comparison.png",
+      "source_url": "https://www.baldwincountyal.gov/images/default-source/cis-citizen-services-rotator/star-id.png?sfvrsn=7ef5465a_1",
+      "final_url": "https://www.baldwincountyal.gov/images/default-source/cis-citizen-services-rotator/star-id.png?sfvrsn=7ef5465a_1",
+      "retrieved_at": "2026-10-26T19:59:51.068033+00:00",
+      "bytes": 551931,
+      "sha256": "6c57daa808403bda24bf32be54edfb181af555485eeb38edd0933fc7609dada1",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "baldwin-star-id.html"
+    },
+    {
+      "file": "alea-official-flyer.png",
+      "source_url": "https://www.alea.gov/sites/default/files/inline-images/STAR%20ID%20Flyer%20updated_1.png",
+      "final_url": "https://www.alea.gov/sites/default/files/inline-images/STAR%20ID%20Flyer%20updated_1.png",
+      "retrieved_at": "2026-10-26T19:59:51.334567+00:00",
+      "bytes": 128190,
+      "sha256": "07d0d7921e7f64af180cca610367d58b680794e51e56ba2b303f395774352974",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "alea-star-id.html"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "alea-star-standard-flyer-xref-108.jpeg",
+      "source_file": "alea-star-standard-flyer.pdf",
+      "source_sha256": "ff071a30174a5cc1308991955175cdbd64550dba3776caa071824aca21f99920",
+      "pdf_object_xref": 108,
+      "page_number": 1,
+      "width_px": 400,
+      "height_px": 225,
+      "sha256": "3c0d022d65a4f55b149943550ab2de3c2299d7c36e93b6ddde5317fbacd53454"
+    },
+    {
+      "file": "alea-star-standard-flyer-xref-114.jpeg",
+      "source_file": "alea-star-standard-flyer.pdf",
+      "source_sha256": "ff071a30174a5cc1308991955175cdbd64550dba3776caa071824aca21f99920",
+      "pdf_object_xref": 114,
+      "page_number": 1,
+      "width_px": 973,
+      "height_px": 598,
+      "sha256": "39f25d8442f3d600a72088c8030b8f79040130e8ba9706b793d406b7d7bbf451"
+    }
+  ],
+  "unresolved_downloads": [],
+  "remaining_gaps": [
+    "Under21/non-driver ID specimens and clean backs not acquired in bounded pass.",
+    "Exact issuance/revision intervals not established."
+  ],
+  "notes": [
+    "Issuer STAR ID brochure contains adult STAR DL and nonfederal CDL fronts as separate native objects. County comparison and issuer flyer corroborate same specimens, not additional cohorts.",
+    "ABC search primarily yielded permit/application text; no ABC credential gallery acquired."
+  ],
+  "catalog_integrated": true,
+  "review_status": "reference_research_only",
+  "preservation": {
+    "jurisdiction": "AL",
+    "verified_at": "2026-10-26T20:00:09.108942+00:00",
+    "private_snapshot_index_key": "snapshots/research/AL/76d6873418f6ab0a94dbdd775879ea385073d683257f6657fe7a83d10b920968/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/AL.json",
+    "archive_sha256": "76d6873418f6ab0a94dbdd775879ea385073d683257f6657fe7a83d10b920968",
+    "archive_size_bytes": 3544158,
+    "verified_restored_files": 19,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/AL",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 4,
+    "review_status": "reference_only"
+  }
+}

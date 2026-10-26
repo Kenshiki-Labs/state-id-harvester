@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "MN",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:01:27.414078+00:00",
+  "scope": "Bounded manual state research; useful finds and gaps, no completeness requirement.",
+  "source_publications": [
+    {
+      "file": "house-2018-redesign.html",
+      "source_url": "https://www.house.mn.gov/members/profile/news/15448/33651",
+      "final_url": "https://www.house.mn.gov/members/profile/news/15448/33651",
+      "sha256": "c356a232b9cfcb3aa8c6e5bc05bf3fb48095d31b7dbf6b0804ba5762f77b9653",
+      "bytes": 73888,
+      "mime_type": "text/html; charset=utf-8",
+      "retrieved_at": "2026-10-26T19:59:59.238257+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "pbs-2018-redesign.html",
+      "source_url": "https://lptv.org/new-mn-ids-make-debut/",
+      "final_url": "https://lptv.org/new-mn-ids-make-debut/",
+      "sha256": "c3611d682fce916da10a625f54184debcf72e2040590b180ce7ee48a09b3da5a",
+      "bytes": 175783,
+      "mime_type": "text/html; charset=utf-8",
+      "retrieved_at": "2026-10-26T20:00:20.610084+00:00",
+      "status": "downloaded",
+      "source_class": "press"
+    },
+    {
+      "file": "pbs-adult-front.jpg",
+      "source_url": "https://lptv.org/wp-content/uploads/2018/07/mn-adult-dl.jpg",
+      "final_url": "https://lptv.org/wp-content/uploads/2018/07/mn-adult-dl.jpg",
+      "sha256": "a2b7ae17a8bf37015f1a619134d9319f05a23cba53a166a6fae84d35b06bc5d3",
+      "bytes": 113276,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:00:45.708057+00:00",
+      "status": "downloaded",
+      "source_class": "press"
+    },
+    {
+      "file": "pbs-under21-front.jpg",
+      "source_url": "https://lptv.org/wp-content/uploads/2018/07/mn-minor-dl.jpg",
+      "final_url": "https://lptv.org/wp-content/uploads/2018/07/mn-minor-dl.jpg",
+      "sha256": "15b49030540cd8ad67495444ba6cdd6592eb002ac419df382c28399412057738",
+      "bytes": 115864,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:00:46.119707+00:00",
+      "status": "downloaded",
+      "source_class": "press"
+    }
+  ],
+  "native_pdf_objects": [],
+  "unresolved_downloads": [
+    {
+      "file": "legislature-adult-front.jpg",
+      "source_url": "https://www.house.mn.gov/houseimages/f4197259-a206-4297-b6be-00e89eb858ff.jpg",
+      "status": "failed",
+      "error": "Client error '404 Not Found' for url 'https://www.house.mn.gov/houseimages/f4197259-a206-4297-b6be-00e89eb858ff.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+    },
+    {
+      "file": "legislature-under21-front.jpg",
+      "source_url": "https://www.house.mn.gov/houseimages/aa06b811-d059-4e32-9d51-511ce0fdee52.jpg",
+      "status": "failed",
+      "error": "Client error '404 Not Found' for url 'https://www.house.mn.gov/houseimages/aa06b811-d059-4e32-9d51-511ce0fdee52.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+    },
+    {
+      "file": "agent-2018-updates.pdf",
+      "source_url": "https://dvsinfohub.dps.mn.gov/resources/Documents/DLAgentUpdates-2018.pdf",
+      "status": "failed",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'dvsinfohub.dps.mn.gov'. (_ssl.c:1010)"
+    },
+    {
+      "file": "legislature-adult-front.jpg",
+      "source_url": "https://www.house.leg.state.mn.us/houseimages/f4197259-a206-4297-b6be-00e89eb858ff.jpg",
+      "status": "failed",
+      "error": "Client error '404 Not Found' for url 'https://www.house.mn.gov/houseimages/f4197259-a206-4297-b6be-00e89eb858ff.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+    },
+    {
+      "file": "legislature-under21-front.jpg",
+      "source_url": "https://www.house.leg.state.mn.us/houseimages/aa06b811-d059-4e32-9d51-511ce0fdee52.jpg",
+      "status": "failed",
+      "error": "Client error '404 Not Found' for url 'https://www.house.mn.gov/houseimages/aa06b811-d059-4e32-9d51-511ce0fdee52.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+    },
+    {
+      "file": "idscanner-2018-redesign.html",
+      "source_url": "https://www.idscanner.com/drivers-license-news/minnesota-drivers-license-and-id-card/",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://www.idscanner.com/drivers-license-news/minnesota-drivers-license-and-id-card/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "source_url": "https://www.lyonco.org/home/showpublisheddocument/5035/637112194444270000",
+      "status": "failed",
+      "error": "HTTP403 in direct download and ordinary browser; indexed brochure not acquired."
+    }
+  ],
+  "remaining_gaps": [
+    "Clean backs, REAL ID/enhanced, ID/CDL and older-generation specimens not acquired.",
+    "Government brochure indexed but live download blocked; no native PDF assets acquired.",
+    "Issuance intervals and physical geometry unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "accepted_cohorts": 0,
+  "catalog_integrated": true,
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "MN",
+    "verified_at": "2026-10-26T20:01:30.039358+00:00",
+    "local_directory": "output/research/MN",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/MN/4a5e45d34d1306834837d145c98c2a9cd6e182d07e1502a568fe48ce6ab8737a/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/MN.json",
+    "archive_sha256": "4a5e45d34d1306834837d145c98c2a9cd6e182d07e1502a568fe48ce6ab8737a",
+    "archive_size_bytes": 372953,
+    "transport_chunks": 1,
+    "verified_restored_files": 8,
+    "verification": "Downloaded archive restored with existing helpers and every file compared byte-for-byte.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/MN"
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 2,
+    "review_status": "reference_only"
+  }
+}

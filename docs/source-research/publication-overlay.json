@@ -2,6 +2,236 @@
   "schema_version": 1,
   "collections": [
     {
+      "code": "AK",
+      "citations": [
+        {
+          "title": "dmv card types",
+          "url": "https://dmv.alaska.gov/media/uhdfeog2/card-types-purpose-limitations-data-flyer.pdf",
+          "sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+          "retrieved_at": "2026-10-26T20:00:56.873755+00:00",
+          "publisher_host": "dmv.alaska.gov",
+          "publisher_jurisdiction": "AK",
+          "discovery_jurisdiction": "AK",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "temporary dl",
+          "url": "https://dmv.alaska.gov/media/ylggqlvj/temporary-lic-id-draft-nov-16-18_dl.png",
+          "sha256": "132c529d179973633530e3d72aae32597755203d2223d4370f1464404952abbe",
+          "retrieved_at": "2026-10-26T20:01:11.788868+00:00",
+          "publisher_host": "dmv.alaska.gov",
+          "publisher_jurisdiction": "AK",
+          "discovery_jurisdiction": "AK",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "temporary id",
+          "url": "https://dmv.alaska.gov/media/yyrfldm2/temporary-lic-id-draft-nov-16-18_id2.png",
+          "sha256": "1e91e41967898f47cef7338c65e1b92683fba7b2f89a319854aad0a47f955166",
+          "retrieved_at": "2026-10-26T20:01:12.118465+00:00",
+          "publisher_host": "dmv.alaska.gov",
+          "publisher_jurisdiction": "AK",
+          "discovery_jurisdiction": "AK",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "dmv new id security",
+          "url": "https://dmv.alaska.gov/media/uqpbnrdq/new_id_security.png",
+          "sha256": "a7243064884e866484b04370a71d4b00e572b274261a2e9386410f9722f26591",
+          "retrieved_at": "2026-10-26T20:01:18.687984+00:00",
+          "publisher_host": "dmv.alaska.gov",
+          "publisher_jurisdiction": "AK",
+          "discovery_jurisdiction": "AK",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "dmv secure card features",
+          "url": "https://dmv.alaska.gov/media/szxjxo0b/onepager_alaska-hd.pdf",
+          "sha256": "ea15daf6db693f67205eb61472fdcddec4e7af54c510b45e1f0ae1ff6fccb7ff",
+          "retrieved_at": "2026-10-26T20:00:35.567697+00:00",
+          "publisher_host": "dmv.alaska.gov",
+          "publisher_jurisdiction": "AK",
+          "discovery_jurisdiction": "AK",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_66732687080d948019e3ae7b26068f6c",
+          "source_sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+          "asset_sha256": "66732687080d948019e3ae7b26068f6c783c53326bdbcaa0cb36b0b1c4495dd4",
+          "original_asset_sha256": "4882cfea7dd56ac78bb913f038bfe244fa30dc681bfd72e59301c5ec2416185f",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_74a988a253ee6b7bf45d154dbd790308",
+          "source_sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+          "asset_sha256": "74a988a253ee6b7bf45d154dbd790308e4509096fadb8f5a55b858e5e5895f5c",
+          "original_asset_sha256": "f695c270c436cd071692a02647083c0b02761dab10749ffde6e8e92e74c709c0",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_9821fbb5e518f5d31408182f26e7d53c",
+          "source_sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+          "asset_sha256": "9821fbb5e518f5d31408182f26e7d53c944063e277989a034729bf6947d14a29",
+          "original_asset_sha256": "1b5277a6283885050db9110cf966bbd198eafa8ff1ea0aedb807c50ad718be30",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_68b8a695a4aee928bb519e8d271fe2e7",
+          "source_sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+          "asset_sha256": "68b8a695a4aee928bb519e8d271fe2e720d9771cd8d3470b6c77d2b463337543",
+          "original_asset_sha256": "9290918a1ffb87ec860d6c5570e0794cb7d7b9b1ae1807148650d0721b91ddba",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_85abbd168d8270a2c21dd4e79c0e9d3b",
+          "source_sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+          "asset_sha256": "85abbd168d8270a2c21dd4e79c0e9d3b1c9bea08c99d6846883618ca055ffb2e",
+          "original_asset_sha256": "74c9021321114186c45ea03161fd5be3d38be7403065171435e4907029e25a13",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_0cea41cece2f15160b38cc0d23d5bce3",
+          "source_sha256": "132c529d179973633530e3d72aae32597755203d2223d4370f1464404952abbe",
+          "asset_sha256": "0cea41cece2f15160b38cc0d23d5bce301ea8c820ec4d244e37bfe5ff6d256b2",
+          "original_asset_sha256": "132c529d179973633530e3d72aae32597755203d2223d4370f1464404952abbe",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_bea8efb6841627b8c39fb1f2ddfed0bb",
+          "source_sha256": "1e91e41967898f47cef7338c65e1b92683fba7b2f89a319854aad0a47f955166",
+          "asset_sha256": "bea8efb6841627b8c39fb1f2ddfed0bb6105b9169ea9f055bbc7107cb7fd2ae5",
+          "original_asset_sha256": "1e91e41967898f47cef7338c65e1b92683fba7b2f89a319854aad0a47f955166",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_ede7161b060957825ea5044c60cfeeb5",
+          "source_sha256": "a7243064884e866484b04370a71d4b00e572b274261a2e9386410f9722f26591",
+          "asset_sha256": "ede7161b060957825ea5044c60cfeeb538ce78839bb468bdb3a099c765cc01ac",
+          "original_asset_sha256": "a7243064884e866484b04370a71d4b00e572b274261a2e9386410f9722f26591",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_146f71da73f379079e067f3b0814e280",
+          "source_sha256": "ea15daf6db693f67205eb61472fdcddec4e7af54c510b45e1f0ae1ff6fccb7ff",
+          "asset_sha256": "146f71da73f379079e067f3b0814e28039f26d1d87ae870b0e3a68a59b6b4d34",
+          "original_asset_sha256": "a534d17acad877a19e2edf5fb82c33763376d5408a57cdab55a64a0a29d782f2",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_14cf37ba74203a5279e75efd34958844",
+          "source_sha256": "fbb3bf1c19cb111ed4a149fbccf4e3550a6627471f8e45f2c04ccd7e4e5fbc00",
+          "asset_sha256": "14cf37ba74203a5279e75efd349588449b499b9f84a5673861f5a8ef7abd1b8b",
+          "original_asset_sha256": "474ffdb9e2b0ea25763b897e9d500998eac033f5a72b2f087ecfa3f8df7266c8",
+          "page_number": 1,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "AL",
+      "citations": [
+        {
+          "title": "alea star standard flyer",
+          "url": "https://www.alea.gov/sites/default/files/inline-files/STAR%20ID%20NFFI%20Flyer%20%28002%29_0.pdf",
+          "sha256": "ff071a30174a5cc1308991955175cdbd64550dba3776caa071824aca21f99920",
+          "retrieved_at": "2026-10-26T19:59:20.698074+00:00",
+          "publisher_host": "www.alea.gov",
+          "publisher_jurisdiction": "AL",
+          "discovery_jurisdiction": "AL",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "baldwin license comparison",
+          "url": "https://www.baldwincountyal.gov/images/default-source/cis-citizen-services-rotator/star-id.png?sfvrsn=7ef5465a_1",
+          "sha256": "6c57daa808403bda24bf32be54edfb181af555485eeb38edd0933fc7609dada1",
+          "retrieved_at": "2026-10-26T19:59:51.068033+00:00",
+          "publisher_host": "www.baldwincountyal.gov",
+          "publisher_jurisdiction": "AL",
+          "discovery_jurisdiction": "AL",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "alea official flyer",
+          "url": "https://www.alea.gov/sites/default/files/inline-images/STAR%20ID%20Flyer%20updated_1.png",
+          "sha256": "07d0d7921e7f64af180cca610367d58b680794e51e56ba2b303f395774352974",
+          "retrieved_at": "2026-10-26T19:59:51.334567+00:00",
+          "publisher_host": "www.alea.gov",
+          "publisher_jurisdiction": "AL",
+          "discovery_jurisdiction": "AL",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_6578a58a788be1e304d88b02dc1618f0",
+          "source_sha256": "ff071a30174a5cc1308991955175cdbd64550dba3776caa071824aca21f99920",
+          "asset_sha256": "6578a58a788be1e304d88b02dc1618f08732cdc5ab04d36a80036fde61889668",
+          "original_asset_sha256": "3c0d022d65a4f55b149943550ab2de3c2299d7c36e93b6ddde5317fbacd53454",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_8230214119a9fe4e52155c5c35fcc277",
+          "source_sha256": "ff071a30174a5cc1308991955175cdbd64550dba3776caa071824aca21f99920",
+          "asset_sha256": "8230214119a9fe4e52155c5c35fcc27714fc6bcc3acb4a13b663b314ee39bd6b",
+          "original_asset_sha256": "39f25d8442f3d600a72088c8030b8f79040130e8ba9706b793d406b7d7bbf451",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_84603eac3cb664664201b46e6f6d7e2a",
+          "source_sha256": "6c57daa808403bda24bf32be54edfb181af555485eeb38edd0933fc7609dada1",
+          "asset_sha256": "84603eac3cb664664201b46e6f6d7e2ad8df6eec3d5edf9ad0d987902b5fc54c",
+          "original_asset_sha256": "6c57daa808403bda24bf32be54edfb181af555485eeb38edd0933fc7609dada1",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_b0fd5c2dc1a76bdab6eddf2bf044f666",
+          "source_sha256": "07d0d7921e7f64af180cca610367d58b680794e51e56ba2b303f395774352974",
+          "asset_sha256": "b0fd5c2dc1a76bdab6eddf2bf044f66675cfcafb3ee8437bd5ad35ec045125d2",
+          "original_asset_sha256": "07d0d7921e7f64af180cca610367d58b680794e51e56ba2b303f395774352974",
+          "page_number": null,
+          "kind": "direct_image"
+        }
+      ]
+    },
+    {
       "code": "AR",
       "citations": [
         {
@@ -1761,6 +1991,55 @@
           "original_asset_sha256": "750743f0ebd8739a3f4dbeb0aea2f86abe84c5908ae0ac98af6cb18fa6c77a57",
           "page_number": 1,
           "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "MN",
+      "citations": [
+        {
+          "title": "MN: pbs adult front.jpg",
+          "url": "https://lptv.org/wp-content/uploads/2018/07/mn-adult-dl.jpg",
+          "sha256": "a2b7ae17a8bf37015f1a619134d9319f05a23cba53a166a6fae84d35b06bc5d3",
+          "retrieved_at": "2026-10-26T20:00:45.708057+00:00",
+          "publisher_host": "lptv.org",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "MN",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "MN: pbs under21 front.jpg",
+          "url": "https://lptv.org/wp-content/uploads/2018/07/mn-minor-dl.jpg",
+          "sha256": "15b49030540cd8ad67495444ba6cdd6592eb002ac419df382c28399412057738",
+          "retrieved_at": "2026-10-26T20:00:46.119707+00:00",
+          "publisher_host": "lptv.org",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "MN",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_25418f3922d2b9127d237de397ff0732",
+          "source_sha256": "a2b7ae17a8bf37015f1a619134d9319f05a23cba53a166a6fae84d35b06bc5d3",
+          "asset_sha256": "25418f3922d2b9127d237de397ff07329ed6849d60caa9d2cac6bf788785103a",
+          "original_asset_sha256": "a2b7ae17a8bf37015f1a619134d9319f05a23cba53a166a6fae84d35b06bc5d3",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_592341c1940e4c478ccb2463cbad8a1b",
+          "source_sha256": "15b49030540cd8ad67495444ba6cdd6592eb002ac419df382c28399412057738",
+          "asset_sha256": "592341c1940e4c478ccb2463cbad8a1bc4c67de085c865f39feeff3f138a4c62",
+          "original_asset_sha256": "15b49030540cd8ad67495444ba6cdd6592eb002ac419df382c28399412057738",
+          "page_number": null,
+          "kind": "direct_image"
         }
       ]
     },

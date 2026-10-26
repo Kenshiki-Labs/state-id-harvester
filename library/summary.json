@@ -1,11 +1,11 @@
 {
   "jurisdictions": 51,
-  "jurisdictions_with_sources": 36,
+  "jurisdictions_with_sources": 37,
   "jurisdictions_with_accepted_cohorts": 0,
-  "sources": 219,
-  "relevant_sources": 122,
-  "embedded_images": 2047,
-  "rendered_pages": 404,
+  "sources": 229,
+  "relevant_sources": 132,
+  "embedded_images": 2054,
+  "rendered_pages": 406,
   "crop_candidates": 159,
   "accepted_cohorts": 0
 }
