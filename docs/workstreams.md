@@ -66,20 +66,35 @@ recovered. Native image extents are approximate source geometry. This pass does
 not certify physical perimeter precision, remove embedded annotations, or accept
 runtime authentication templates.
 
-## Paused: source classification
+## Active: document ontology and source classification
 
-Preserve the source-register implementation and its artifacts. The current local
-register accounts for 599 source identities: 584 retained, 15 locally missing.
-Retained media include 177 PDFs, 117 HTML documents, and 290 original images.
-Classification is partial and has not been released. Its document-role labels
-remain provisional until the AAMVA reference vocabulary is assessed. No Docling,
-Unstructured, OCR, new source downloads, or vector database was introduced.
+Resumed at the user's request after ID-1/WebP publication. The bounded design and
+next delivery are in [document-ontology.md](document-ontology.md).
 
-Resume this delivery after the ID-1 release is accepted. Its next artifact is an
-evidence-backed document/section classification register and exception report,
-not a claim that all downloaded material is credential-security guidance.
+- [x] Audit the preserved source register and all 177 PDF source hashes/packets.
+- [x] Validate all 302 evidence links in the 63 provisional PDF classifications.
+- [x] Verify current AAMVA 2026 authority and distinguish publication roles from
+  standards-grounded credential concepts; retain edition-specific references.
+- [x] Record ontology entities, domain extraction routes, evidence contracts and
+  concrete mixed-document examples.
+- [ ] Implement the validated document/section classification contract and
+  standards crosswalk, then complete the corpus register with explicit exceptions.
+- [ ] Extract domain-specific statements with exact source anchors and applicability.
+
+The source register accounts for 599 identities: 584 retained and 15 missing
+originals. Retained media include 177 PDFs (4,074 pages), 117 HTML documents and
+290 original images. Existing 63 classifications remain provisional, not complete
+corpus coverage. One source mislabeled unreadable is a valid image-only PDF;
+correct its processing status when importing the old classifications.
+
+The audit and previous extraction artifacts are preserved under
+`output/domain-classification/`. The inventory implementation remains uncommitted
+until its classification interface is ready for the next bounded code delivery.
+No Docling, Unstructured, OCR, new harvesting sweep or vector database is active.
 
 ## Deferred dependencies
 
-Domain-specific claim extraction depends on classification. Embedding/vector
-index construction depends on validated structured records. Neither is active.
+Embedding/vector index construction depends on validated structured records.
+Pixel annotation cleanup is deferred: retain original, mask and cleaned derivative;
+limit removal to reviewed annotations and exclude reconstructed regions from matching.
+Neither workstream is active.
