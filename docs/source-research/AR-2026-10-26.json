@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "AR",
+  "research_date": "2026-10-26",
+  "status": "sources_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "AR",
+    "verified_at": "2026-10-26T16:37:47.446528+00:00",
+    "local_directory": "output/research/AR",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/AR/a92bde1431673ea4a52b95866e3801089bcb80be00489763774c95a49d419544/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/AR.json",
+    "archive_sha256": "a92bde1431673ea4a52b95866e3801089bcb80be00489763774c95a49d419544",
+    "archive_size_bytes": 26324430,
+    "verified_restored_files": 20,
+    "verification": "Downloaded archive from private vault, reconstructed and restored with existing snapshot helpers, compared every restored file byte-for-byte with durable local copy.",
+    "public_media": false
+  },
+  "sources": [
+    {
+      "file": "dfa-under21-legacy-brochure.pdf",
+      "source_url": "https://www.dfa.arkansas.gov/wp-content/uploads/idCardBrochure.pdf",
+      "publisher": "Arkansas DFA / Tobacco Control",
+      "source_class": "government",
+      "design_context": "Brochure explicitly announces December 11, 2006 vertical-card introduction. Historical material; current hosting date is not design date.",
+      "visual_review": [
+        "legacy-under21-1.png",
+        "legacy-under21-2.png"
+      ],
+      "coverage": [
+        "under-18 and under-21 ID fronts",
+        "intermediate and learner fronts",
+        "horizontal DL front",
+        "vertical CDL examples",
+        "portrait/date-band detail"
+      ],
+      "limitations": [
+        "Repeated or enlarged depictions are not distinct templates.",
+        "Some callouts and angled examples.",
+        "No complete reverse-side coverage established."
+      ],
+      "bytes": 653969,
+      "sha256": "1346af690c335139a6c263285d205f0bc028832772be625cadea2b110d567abb"
+    },
+    {
+      "file": "little-rock-2011-dfa-id-brochure.pdf",
+      "source_url": "https://www.littlerock.gov/%21userfiles/editor/docs/commprograms/ID%20Brochure.pdf",
+      "publisher": "Arkansas Office of Driver Services; copy hosted by City of Little Rock",
+      "source_class": "government",
+      "design_context": "Cover and interior say Spring 2011. PDF metadata title ARDLANDIDBROCHURE.pdf, created September 29, 2011.",
+      "visual_review": [
+        "little-rock-2011-1.png",
+        "little-rock-2011-2.png"
+      ],
+      "coverage": [
+        "adult DL front",
+        "CDL front",
+        "under-21 DL front",
+        "intermediate front",
+        "learner front",
+        "horizontal and vertical non-driver ID fronts",
+        "separate DL back and ID back",
+        "laminate and background illustrations"
+      ],
+      "limitations": [
+        "Annotated brochure plates.",
+        "Native object inventory is heavily fragmented; file size does not imply clean high-resolution card flats.",
+        "Recovered from municipal host after old state URL returned 410."
+      ],
+      "bytes": 16232649,
+      "sha256": "955685972f341b0fdefe9c5ee7820084d51e261634ca7e13ad2649ed58f6e8ac"
+    },
+    {
+      "file": "2016-real-id-comparison-tokenworks.jpg",
+      "source_url": "https://tokenworks-com.s3.amazonaws.com/wp-content/uploads/2016/09/30003136/new-arkansas-drivers-license.jpg",
+      "context_url": "https://www.idscanner.com/news/new-enhanced-arkansas-drivers-license-design-coming-october-3/",
+      "publisher": "TokenWorks / IDscanner.com",
+      "source_class": "third-party reproduction",
+      "design_context": "Article dated September 30, 2016 describes October 3 REAL ID rollout. Government original not recovered in this pass.",
+      "visual_review": [
+        "2016-real-id-comparison-tokenworks.jpg"
+      ],
+      "coverage": [
+        "adult DL compliant and non-compliant fronts",
+        "under-18 ID compliant and non-compliant fronts"
+      ],
+      "limitations": [
+        "584 x 528 composite image; small card depictions.",
+        "Secondary source; not an authenticated issuer original.",
+        "No backs."
+      ],
+      "bytes": 112320,
+      "sha256": "90c6f18e14d6b1bdc5ecf20cd9b5b85f385fa00caa6eb6f1bc0d24fb72e63efd"
+    },
+    {
+      "file": "dfa-2018-card-design-brochure.pdf",
+      "source_url": "https://www.dfa.arkansas.gov/wp-content/uploads/Brochure.pdf",
+      "discovery_url": "https://www.dfa.arkansas.gov/office/arkansas-tobacco-control/",
+      "publisher": "Arkansas DFA / Office of Driver Services",
+      "source_class": "government",
+      "design_context": "Brochure says Starting July 9th, 2018.",
+      "visual_review": [
+        "dfa-2018-page2.png"
+      ],
+      "coverage": [
+        "adult DL front",
+        "CDL front",
+        "under-18/21 intermediate front",
+        "under-21 learner front",
+        "vertical and horizontal non-driver ID fronts",
+        "one shared BACK OF CARD specimen"
+      ],
+      "limitations": [
+        "Seven card depictions in six panels on page 2; not seven distinct document families.",
+        "Callout lines are visible; not clean flats.",
+        "Shared back illustration does not prove all reverse-side variants match."
+      ],
+      "bytes": 699930,
+      "sha256": "76ca208c1a970f288293bcc6ac574e8997a843cc21545c2b4afb96eea4aec969"
+    },
+    {
+      "file": "dfa-2018-press-front-kuar.jpg",
+      "source_url": "https://npr-brightspot.s3.amazonaws.com/legacy/sites/kuar/files/201806/2018-06-26-new_ar_driver_s_license.jpg",
+      "context_url": "https://www.ualrpublicradio.org/local-regional-news/2018-06-26/arkansas-unveils-new-design-for-ids-and-drivers-licenses",
+      "publisher": "KUAR / UA Little Rock Public Radio; image explicitly credited to DFA",
+      "source_class": "issuer-credited press reproduction",
+      "design_context": "Article published June 26, 2018 about 2018 redesign.",
+      "visual_review": [
+        "dfa-2018-press-front-kuar.jpg"
+      ],
+      "coverage": [
+        "adult REAL ID DL front"
+      ],
+      "limitations": [
+        "1035 x 662 image with edge shadow; SAMPLE marking retained.",
+        "No exterior brochure callouts, but not a physical metrology master.",
+        "Same design family as 2018 brochure; corroborating source, not another cohort."
+      ],
+      "bytes": 1102147,
+      "sha256": "1e8cb267d3dab51f9410041e43a6bb1c328a92056bd545337973fcc941295d9a"
+    },
+    {
+      "file": "atc-2024-retailer-brochure.pdf",
+      "source_url": "https://www.dfa.arkansas.gov/wp-content/uploads/ATC-Brochure-21-REVISED-1-05-24.pdf",
+      "discovery_url": "https://www.dfa.arkansas.gov/office/arkansas-tobacco-control/retailers/",
+      "publisher": "Arkansas Tobacco Control / DFA",
+      "source_class": "government",
+      "design_context": "Filename indicates January 5, 2024 revision; specimen visually belongs to 2018 design family. This is not evidence of a 2024 card redesign.",
+      "visual_review": [
+        "atc-2024-page1.png"
+      ],
+      "coverage": [
+        "under-18/21 intermediate REAL ID front"
+      ],
+      "limitations": [
+        "Small image with arrows and date-band callouts.",
+        "Corroborates intermediate design, not a new template."
+      ],
+      "bytes": 297179,
+      "sha256": "6a8cca2e644feecfd23da7e7b61655fcf0ccec502c04c8d119fa73999cc1ca80"
+    }
+  ],
+  "unresolved_leads": [
+    {
+      "url": "https://www.arkansas.gov/atcb/pdf/ARDLANDIDBROCHURE.pdf",
+      "status": "410 Gone at original state URL; recovered government copy from City of Little Rock above."
+    },
+    {
+      "url": "https://banking.arkansas.gov/public/userfiles/Important_Info/Arkansas_Barcode_Specifications_2018.pdf",
+      "status": "Search index contains DFA memo and barcode-specification attachment text. Live URL returned 404. Not acquired."
+    },
+    {
+      "url": "https://www.atc.arkansas.gov/wp-content/uploads/2020/05/NEW-2019-SAMPLE-POLICY-1-2019-FDA-21.pdf",
+      "status": "Live URL redirects to HTML Tobacco Control hub; cached search text describes card checks. Actual policy PDF not acquired.",
+      "file": "atc-hub-from-stale-policy-url.html"
+    },
+    {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/Sample-Policy-Manual-for-Sales-to-Minors.pdf",
+      "status": "Live retailer-page link downloads a 14-page FDA presentation dated February 13, 2020, not the named Arkansas sample policy. Excluded from specimen coverage.",
+      "file": "fda-2020-presentation-mislinked-as-policy-manual.pdf"
+    },
+    {
+      "url": "https://cdnsm5-hosted.civiclive.com/userfiles/Servers/Server_63092/file/City%20Clerk/E-Newsletters/eLetter%20June%202018.pdf",
+      "status": "Search/web cache exposes North Little Rock June 2018 city newsletter page 6 with pre-2018 REAL ID comparison. Direct download returned 404; not acquired."
+    },
+    {
+      "url": "https://www.dfa.arkansas.gov/offices/driverServices/Pages/samples.aspx",
+      "status": "Historical sample-gallery link returned 403. Not acquired."
+    }
+  ],
+  "remaining_gaps": [
+    "Government-hosted original of 2016 REAL ID comparison.",
+    "Clean native fronts for each vertical and ID variant; current verified downloads include annotated plates.",
+    "Clean backs and mapping of reverse-side differences to document variants.",
+    "Full issuance/revision boundaries not established; no completeness claim."
+  ]
+}

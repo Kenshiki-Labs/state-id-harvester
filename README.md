@@ -58,6 +58,10 @@ consumes only the allowlisted export in `web/public/data/`.
 ## Publication and scheduled collection
 
 [Coverage](library/coverage.md) and [citations](library/manifest.json) are public metadata.
+Manually recovered sources are recorded separately until catalog integration:
+[Arkansas research and preservation record](docs/source-research/AR-2026-10-26.json).
+Its originals, discovery pages, review previews, and research notes are retained under
+`output/research/AR/` and in a separately indexed private vault backup.
 `scripts/build_public_catalog.py` exports an explicit field allowlist; it does not copy
 PDFs, raster images, extracted source text, seals, font outlines, or raw PDF resources.
 Only accepted, hash-bound cohorts can contribute public normalized geometry. The public
