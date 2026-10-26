@@ -204,6 +204,7 @@ def test_image_budget_skips_digest_lookup_keeps_resource_identity(
         assert not inv.images
         assert any(obj.xref == xref and obj.raw_stream_sha256 for obj in inv.objects)
         assert any("pixel budget exceeded" in limitation for limitation in inv.limitations)
+        assert not detect(page, [], 1, max_image_pixels=1)
 
 
 def test_cropped_rotated_page_geometry_is_unrotated() -> None:

@@ -14,7 +14,7 @@ from numpy.typing import NDArray
 
 from .models import BoundaryCandidate, NormalizedRegion, TextBlock
 from .pdf_components import NativeComponentGroup, component_groups
-from .pdf_objects import NativeImagePlacement, PageObjectInventory, inventory_page
+from .pdf_objects import InventoryLimits, NativeImagePlacement, PageObjectInventory, inventory_page
 
 ID1_RATIO = 85.60 / 53.98
 FloatArray = NDArray[np.float32]
@@ -131,7 +131,12 @@ def detect(
     Native text is kept as source context and overlapping components. It is not
     silently interpreted as a field zone or flattened into the underlying image.
     """
-    inventory = inventory or inventory_page(page, source_sha256="0" * 64, page_number=page_number)
+    inventory = inventory or inventory_page(
+        page,
+        source_sha256="0" * 64,
+        page_number=page_number,
+        limits=InventoryLimits(max_image_pixels=max_image_pixels),
+    )
     groups = (
         groups
         if groups is not None
@@ -143,6 +148,8 @@ def detect(
         if group.status != "reference_candidate":
             continue
         image = images[group.image_placement_id]
+        if image.width_px * image.height_px > max_image_pixels:
+            continue
         encoded = page.parent.extract_image(image.xref)
         if not encoded:
             continue
