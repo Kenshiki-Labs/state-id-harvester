@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "KY",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T18:06:10.569933+00:00",
+  "scope": "Bounded Kentucky source research; useful findings preserved with gaps, no completeness requirement or catalog integration.",
+  "source_publications": [
+    {
+      "file": "kytc-2018-announcement.html",
+      "source_url": "https://content.govdelivery.com/accounts/KYTC/bulletins/20efbac",
+      "final_url": "https://content.govdelivery.com/accounts/KYTC/bulletins/20efbac",
+      "status_code": 200,
+      "mime_type": "text/html; charset=utf-8",
+      "sha256": "181537a9afdff9605a3e3d9f2258bcdd6cdcbbf9d85b8c3f6b3703e5b4f9d7e4",
+      "bytes": 37742,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "dated 2018 government announcement of 2019 generation; historical descriptive context"
+      ],
+      "review_status": "discovery_context_reviewed",
+      "limitations": [
+        "Sample images do not establish issuance intervals or physical geometry."
+      ]
+    },
+    {
+      "file": "legislature-2019-presentation.pdf",
+      "source_url": "https://apps.legislature.ky.gov/CommitteeDocuments/163/11618/022519-3-ConfIDentKY.pdf",
+      "final_url": "https://apps.legislature.ky.gov/CommitteeDocuments/163/11618/022519-3-ConfIDentKY.pdf",
+      "status_code": 200,
+      "mime_type": "application/pdf",
+      "sha256": "79aa48c3a2e7900cb86525ed46217d59d481c08313f34a17872c371d2051672e",
+      "bytes": 1866210,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "legacy 2012-generation adult DL front",
+        "2019-generation REAL ID and standard adult DL fronts"
+      ],
+      "review_status": "visually_inspected",
+      "limitations": [
+        "Sample images do not establish issuance intervals or physical geometry."
+      ]
+    },
+    {
+      "file": "transportation-2012-newsletter.pdf",
+      "source_url": "https://transportation.ky.gov/HighwaySafety/Newsletters/KOHS-Voice-Aug-2012.pdf",
+      "final_url": "https://transportation.ky.gov/HighwaySafety/Newsletters/KOHS-Voice-Aug-2012.pdf",
+      "status_code": 200,
+      "mime_type": "application/pdf",
+      "sha256": "83340d72d55f24f1061ec91d7810b567f378a72e0aabce815556a6c86eab6f91",
+      "bytes": 3930430,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "2012-generation adult DL front with exterior feature callouts"
+      ],
+      "review_status": "visually_inspected",
+      "limitations": [
+        "Sample images do not establish issuance intervals or physical geometry."
+      ]
+    },
+    {
+      "file": "kytc-kaco-2021-presentation.pdf",
+      "source_url": "https://kaco.org/media/3531/power-point-real-id-kytc-staff-presentation-updated-4-28-21-003.pdf",
+      "final_url": "https://kaco.org/media/3531/power-point-real-id-kytc-staff-presentation-updated-4-28-21-003.pdf",
+      "status_code": 200,
+      "mime_type": "application/pdf",
+      "sha256": "56bda825032dadd52dff3df6bdb3b49007d35d0d7fa98d378188564331eba89d",
+      "bytes": 2308540,
+      "status": "downloaded",
+      "source_class": "government_document_association_mirror",
+      "coverage": [
+        "KYTC-authored historical presentation hosted by Kentucky Association of Counties",
+        "legacy adult DL front",
+        "annotated 2019-generation adult DL front and back"
+      ],
+      "review_status": "visually_inspected",
+      "limitations": [
+        "Sample images do not establish issuance intervals or physical geometry."
+      ]
+    },
+    {
+      "file": "drive-card-comparison.html",
+      "source_url": "https://drive.ky.gov/RealID/Pages/What-is-Changing.aspx",
+      "final_url": "https://drive.ky.gov/RealID/Pages/What-is-Changing.aspx",
+      "status_code": 200,
+      "mime_type": "text/html; charset=utf-8",
+      "acquisition_method": "normal_browser_same_origin_fetch",
+      "sha256": "01892d19680baa3fd3c37c2393808cdc5e9dcf2c6207b8ef5bb7543c0eb3a686",
+      "bytes": 68800,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "parent gallery context for adult Standard and REAL ID images"
+      ],
+      "review_status": "discovery_context_reviewed",
+      "limitations": [
+        "Sample images do not establish issuance intervals or physical geometry."
+      ]
+    },
+    {
+      "file": "drive-under21.html",
+      "source_url": "https://drive.ky.gov/RealID/Pages/Under-21.aspx",
+      "final_url": "https://drive.ky.gov/RealID/Pages/Under-21.aspx",
+      "status_code": 200,
+      "mime_type": "text/html; charset=utf-8",
+      "acquisition_method": "normal_browser_same_origin_fetch",
+      "sha256": "81802d84005d19d810daab992770814adbe0bba4a694159ccd90826cc2fd1cf1",
+      "bytes": 56429,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "parent gallery context for under21 DL and instruction permit images"
+      ],
+      "review_status": "discovery_context_reviewed",
+      "limitations": [
+        "Sample images do not establish issuance intervals or physical geometry."
+      ]
+    },
+    {
+      "file": "drive-standard-dl.png",
+      "source_url": "https://drive.ky.gov/RealID/PublishingImages/Standard-DL.png",
+      "final_url": "https://drive.ky.gov/RealID/PublishingImages/Standard-DL.png",
+      "status_code": 200,
+      "mime_type": "image/png",
+      "acquisition_method": "normal_browser_same_origin_fetch",
+      "sha256": "5c79bc2c2a4307069aa3edfcfbbba33ed950fa9b828835d986d71c484d0b2262",
+      "bytes": 287412,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "current agency-hosted standard adult DL front"
+      ],
+      "review_status": "visually_inspected",
+      "limitations": [
+        "Sample images do not establish issuance intervals or physical geometry."
+      ]
+    },
+    {
+      "file": "drive-real-id.png",
+      "source_url": "https://drive.ky.gov/RealID/PublishingImages/REAL-ID.png",
+      "final_url": "https://drive.ky.gov/RealID/PublishingImages/REAL-ID.png",
+      "status_code": 200,
+      "mime_type": "image/png",
+      "acquisition_method": "normal_browser_same_origin_fetch",
+      "sha256": "bbd1704802a3da341c41e3c0c43f8f84a7a07a101b6e97618d4015c0cf0b06b8",
+      "bytes": 280803,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "current agency-hosted REAL ID adult DL front"
+      ],
+      "review_status": "visually_inspected",
+      "limitations": [
+        "Sample images do not establish issuance intervals or physical geometry."
+      ]
+    },
+    {
+      "file": "drive-realid-u21.jpg",
+      "source_url": "https://drive.ky.gov/RealID/PublishingImages/REALID-U21.jpg",
+      "final_url": "https://drive.ky.gov/RealID/PublishingImages/REALID-U21.jpg",
+      "status_code": 200,
+      "mime_type": "image/jpeg",
+      "acquisition_method": "normal_browser_same_origin_fetch",
+      "sha256": "900cbe1ee8b359cbb72c88d75c6b4277a492c4850cae2f8fcbbd55c8eb6d9496",
+      "bytes": 40847,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "current agency-hosted under21 REAL ID DL front"
+      ],
+      "review_status": "visually_inspected",
+      "limitations": [
+        "Sample images do not establish issuance intervals or physical geometry."
+      ]
+    },
+    {
+      "file": "drive-realid-permit-u21.jpg",
+      "source_url": "https://drive.ky.gov/RealID/PublishingImages/REALID-IP-U21.jpg",
+      "final_url": "https://drive.ky.gov/RealID/PublishingImages/REALID-IP-U21.jpg",
+      "status_code": 200,
+      "mime_type": "image/jpeg",
+      "acquisition_method": "normal_browser_same_origin_fetch",
+      "sha256": "7566ce4ee8aedfd6f475df39e5c621f3c41f06b57bee56a081d8532ad3a3dd42",
+      "bytes": 42741,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "current agency-hosted under21 REAL ID instruction permit front"
+      ],
+      "review_status": "visually_inspected",
+      "limitations": [
+        "Sample images do not establish issuance intervals or physical geometry."
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "legislature-2019-presentation-p3-xref-30.jpeg",
+      "source_file": "legislature-2019-presentation.pdf",
+      "source_sha256": "79aa48c3a2e7900cb86525ed46217d59d481c08313f34a17872c371d2051672e",
+      "pdf_object_xref": 30,
+      "resource_page_number": 3,
+      "width_px": 742,
+      "height_px": 469,
+      "sha256": "336a5c5e801faf44eb934456af9a8b918ed45f8358b30a9caafcbc01cd22e3e8",
+      "visual_review": "native_resource_visually_inspected",
+      "reference_kind": "complete_sample_front"
+    },
+    {
+      "file": "legislature-2019-presentation-p8-xref-49.jpeg",
+      "source_file": "legislature-2019-presentation.pdf",
+      "source_sha256": "79aa48c3a2e7900cb86525ed46217d59d481c08313f34a17872c371d2051672e",
+      "pdf_object_xref": 49,
+      "resource_page_number": 8,
+      "width_px": 742,
+      "height_px": 469,
+      "sha256": "2dc1c3b1156b45e74ba6d1ef39ef56c19a935e65753868552c50b371c6c91c33",
+      "visual_review": "native_resource_visually_inspected",
+      "reference_kind": "complete_sample_front"
+    },
+    {
+      "file": "legislature-2019-presentation-p8-xref-50.jpeg",
+      "source_file": "legislature-2019-presentation.pdf",
+      "source_sha256": "79aa48c3a2e7900cb86525ed46217d59d481c08313f34a17872c371d2051672e",
+      "pdf_object_xref": 50,
+      "resource_page_number": 8,
+      "width_px": 742,
+      "height_px": 469,
+      "sha256": "2956881e236fc566309b0da9a8edb95f0947f5c06c6cfc48f94bece6fe69531c",
+      "visual_review": "native_resource_visually_inspected",
+      "reference_kind": "complete_sample_front"
+    },
+    {
+      "file": "kytc-kaco-2021-presentation-p6-xref-23.jpeg",
+      "source_file": "kytc-kaco-2021-presentation.pdf",
+      "source_sha256": "56bda825032dadd52dff3df6bdb3b49007d35d0d7fa98d378188564331eba89d",
+      "pdf_object_xref": 23,
+      "resource_page_number": 6,
+      "width_px": 645,
+      "height_px": 407,
+      "sha256": "59c4a2336a4ac4494478ec5be8dc26f672dd43895dd2493511e21ed964a5890c",
+      "visual_review": "native_resource_visually_inspected",
+      "mask": {
+        "file": "kytc-kaco-2021-presentation-mask-22.png",
+        "pdf_object_xref": 22,
+        "sha256": "ce9f47772e880e566c01eb53c5fb8c5b0ebb1b118783f2703030a09e2822b6ba"
+      },
+      "reference_kind": "complete_sample_front"
+    },
+    {
+      "file": "kytc-kaco-2021-presentation-p8-xref-30.jpeg",
+      "source_file": "kytc-kaco-2021-presentation.pdf",
+      "source_sha256": "56bda825032dadd52dff3df6bdb3b49007d35d0d7fa98d378188564331eba89d",
+      "pdf_object_xref": 30,
+      "resource_page_number": 8,
+      "width_px": 1315,
+      "height_px": 833,
+      "sha256": "44d78d83123c9feb938f94bc494cd4d01c62ecb7a3573fa20ddd1c0525832812",
+      "visual_review": "native_resource_visually_inspected",
+      "reference_kind": "annotated_sample_front"
+    },
+    {
+      "file": "kytc-kaco-2021-presentation-p9-xref-33.jpeg",
+      "source_file": "kytc-kaco-2021-presentation.pdf",
+      "source_sha256": "56bda825032dadd52dff3df6bdb3b49007d35d0d7fa98d378188564331eba89d",
+      "pdf_object_xref": 33,
+      "resource_page_number": 9,
+      "width_px": 1344,
+      "height_px": 851,
+      "sha256": "f84b2fc076fec4075004f2d9fb6f31f2043c22368536bfb98b87a9d1e793d7a9",
+      "visual_review": "native_resource_visually_inspected",
+      "reference_kind": "annotated_sample_back"
+    },
+    {
+      "file": "transportation-2012-newsletter-p5-xref-263.jpeg",
+      "source_file": "transportation-2012-newsletter.pdf",
+      "source_sha256": "83340d72d55f24f1061ec91d7810b567f378a72e0aabce815556a6c86eab6f91",
+      "pdf_object_xref": 263,
+      "resource_page_number": 5,
+      "width_px": 292,
+      "height_px": 165,
+      "sha256": "4094e11dcf7cafeb516baae90c0706749f86cbbf7a1e321fa81c04b45a98f2e7",
+      "visual_review": "native_resource_visually_inspected",
+      "mask": {
+        "file": "transportation-2012-newsletter-mask-262.jpeg",
+        "pdf_object_xref": 262,
+        "sha256": "51144ebcdad8a43c9354afdb87bc3ef80daa59c5351d661ef1e2076cfa03868b"
+      },
+      "reference_kind": "annotated_sample_front"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "source_url": "https://content.govdelivery.com/attachments/KYTC/2018/09/21/file_attachments/1076754/Voluntary%2BTravel%2BID%2Bunder%2B21%2Blicense.png",
+      "status": "failed",
+      "error": "HTTP404; related 2018 attachment links likewise404; current issuer gallery supplied under21 resources"
+    }
+  ],
+  "other_routes_checked": [
+    {
+      "url": "https://abc.ky.gov/new_docs.aspx?cat=82",
+      "result": "ABC indexed guidance found; no useful specimen file retained from this route."
+    }
+  ],
+  "remaining_gaps": [
+    "Standalone populated clean backs; retained back reference has baked numbered callouts.",
+    "Separate personal identification-card and commercial-license samples.",
+    "UV plates and interim paper credential specimens.",
+    "Physical geometry, authenticity rules and complete issuance intervals remain unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": false,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "KY",
+    "verified_at": "2026-10-26T18:06:36.726157+00:00",
+    "local_directory": "output/research/KY",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/KY/a8bcccff7ff00e6e688909c4c5ecbe5127c24d9ccff2733717ddc71f53e98aaf/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/KY.json",
+    "archive_sha256": "a8bcccff7ff00e6e688909c4c5ecbe5127c24d9ccff2733717ddc71f53e98aaf",
+    "archive_size_bytes": 10925823,
+    "transport_chunks": 1,
+    "verified_restored_files": 30,
+    "verification": "Downloaded private vault archive, restored with existing snapshot helpers, and compared every restored file byte-for-byte with durable local copies.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/KY",
+    "parent_verified_at": "2026-10-26T18:09:52.702642+00:00"
+  }
+}

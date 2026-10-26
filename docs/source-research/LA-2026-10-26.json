@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "LA",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T18:05:19.259560+00:00",
+  "scope": "Bounded manual Louisiana source research; useful findings preserved with gaps. No completeness requirement or catalog integration.",
+  "source_publications": [
+    {
+      "file": "omv-real-id.html",
+      "source_url": "https://www.expresslane.org/drivers/personal-driver-s-licenses/real-id/",
+      "final_url": "https://expresslane.la.gov/omv/drivers/personal-driver-s-licenses/real-id/",
+      "mime_type": "text/html; charset=utf-8",
+      "sha256": "91483ad7c55bbbd9928e5fb55b5c3dac6f3af8da840815ffd8e73ee3e662e77a",
+      "bytes": 132397,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Discovery context"
+      ],
+      "kind": "discovery_context"
+    },
+    {
+      "file": "omv-2015-redesign-release.pdf",
+      "source_url": "https://expresslane.dps.louisiana.gov/pdf/OMVNewDL2015.pdf",
+      "final_url": "https://expresslane.dps.louisiana.gov/pdf/OMVNewDL2015.pdf",
+      "mime_type": "application/pdf",
+      "sha256": "4aef39c66ec2b7d1fdc4e18a2947c63aa39dc72df2afb8c303857a40ce6b72ed",
+      "bytes": 55613,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Dated issuer transition context; no card specimen"
+      ],
+      "kind": "discovery_context"
+    },
+    {
+      "file": "scanner-2015-design.html",
+      "source_url": "https://www.idscanner.com/drivers-license-news/louisiana-begins-issuing-new-drivers-license-id-card-design/",
+      "final_url": "https://www.idscanner.com/drivers-license-news/louisiana-begins-issuing-new-drivers-license-id-card-design/",
+      "mime_type": "text/html; charset=UTF-8",
+      "sha256": "9f49ec2b084f1799fa9745732de695c98877d42731096f7960bf3ca2ecf2bcbc",
+      "bytes": 702063,
+      "status": "downloaded",
+      "source_class": "third_party",
+      "coverage": [
+        "Discovery context"
+      ],
+      "kind": "discovery_context"
+    },
+    {
+      "file": "atc-home.html",
+      "source_url": "https://atc.louisiana.gov/",
+      "final_url": "https://atc.louisiana.gov/",
+      "mime_type": "text/html; charset=utf-8",
+      "sha256": "341a970b7746d524d4ab45edf9888dc03f14678ef4c1acfb5ab1e73aec392968",
+      "bytes": 65931,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Discovery context"
+      ],
+      "kind": "discovery_context"
+    },
+    {
+      "file": "omv-real-id-front.jpg",
+      "source_url": "https://expresslane.la.gov/omv/media/zomdwng4/real-id.jpg",
+      "final_url": "https://expresslane.la.gov/omv/media/zomdwng4/real-id.jpg",
+      "mime_type": "image/jpeg",
+      "sha256": "67994991bb69c40d9d5a611dc838837f793da3fa62700cc2f7b7a614ce5d3890",
+      "bytes": 1027610,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Adult REAL ID front; high-resolution agency specimen"
+      ],
+      "kind": "image_bearing"
+    },
+    {
+      "file": "responsible-vendor-handbook.pdf",
+      "source_url": "https://burtonservicesinc.com/pdf/rv-handbook.pdf",
+      "final_url": "https://burtonservicesinc.com/pdf/rv-handbook.pdf",
+      "mime_type": "application/pdf",
+      "sha256": "faa599c84b5616a214f677ccb5a8521b536db98841f8ca7b6a0619e7d3798229",
+      "bytes": 773011,
+      "status": "downloaded",
+      "source_class": "third_party",
+      "coverage": [
+        "Historical under-21 vertical front on PDF page 12; third-party preserved ATC handbook"
+      ],
+      "kind": "image_bearing"
+    },
+    {
+      "file": "atc-vertical-gallery.html",
+      "source_url": "https://atc.louisiana.gov/resources/vertical-driver-s-license-information/",
+      "final_url": "https://atc.louisiana.gov/resources/vertical-driver-s-license-information/",
+      "mime_type": "text/html; charset=utf-8",
+      "sha256": "4a7adad040195b6857aa0d43b441f60893829786fef738ebc9473ee48e9aec48",
+      "bytes": 54060,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Discovery context"
+      ],
+      "kind": "discovery_context"
+    },
+    {
+      "file": "atc-vertical-guidelines.pdf",
+      "source_url": "https://atc.louisiana.gov/media/qupb5j3d/vertical-drivers-license-guidelines.pdf",
+      "final_url": "https://atc.louisiana.gov/media/qupb5j3d/vertical-drivers-license-guidelines.pdf",
+      "mime_type": "application/pdf",
+      "sha256": "d3f28d8705b93f17d7eaa57276a8ea1efaa804f4bbdac0161bc896224b569dfc",
+      "bytes": 502569,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Adult and under-21 REAL ID fronts, one-page annotated agency guide"
+      ],
+      "kind": "image_bearing"
+    },
+    {
+      "file": "atc-minor-front-annotated.png",
+      "source_url": "https://atc.louisiana.gov/media/gfjlgyl4/minor-license-with-comment.png",
+      "final_url": "https://atc.louisiana.gov/media/gfjlgyl4/minor-license-with-comment.png",
+      "mime_type": "image/png",
+      "sha256": "33269a53de5be1b35631e7fe71e518835e38ea804a4d605e30e8ece8a2760571",
+      "bytes": 195898,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Under-21 REAL ID front with baked arrow and explanatory panel"
+      ],
+      "kind": "image_bearing"
+    },
+    {
+      "file": "atc-adult-front.png",
+      "source_url": "https://atc.louisiana.gov/media/rrkfmazw/adult-license.png",
+      "final_url": "https://atc.louisiana.gov/media/rrkfmazw/adult-license.png",
+      "mime_type": "image/png",
+      "sha256": "a2ed48ac4043128f05d1988a8c4025938acea2e2b2d435a61e9536d9004793d9",
+      "bytes": 179995,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Adult REAL ID front, same specimen as OMV"
+      ],
+      "kind": "image_bearing"
+    },
+    {
+      "file": "scanner-legacy-front.jpg",
+      "source_url": "https://idscanner.com/wp-content/uploads/2015/03/Old-LA-drivers-license-300x188.jpg",
+      "final_url": "https://idscanner.com/wp-content/uploads/2015/03/Old-LA-drivers-license-300x188.jpg",
+      "mime_type": "image/jpeg",
+      "sha256": "c3ecc1b459e5380e883beb071f308cd80092b74b903ac82aff76f3a9d28df3ed",
+      "bytes": 13179,
+      "status": "downloaded",
+      "source_class": "third_party",
+      "coverage": [
+        "Legacy adult front, small 300-pixel reproduction"
+      ],
+      "kind": "image_bearing"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "atc-vertical-guidelines-xref-20.png",
+      "source_file": "atc-vertical-guidelines.pdf",
+      "source_sha256": "d3f28d8705b93f17d7eaa57276a8ea1efaa804f4bbdac0161bc896224b569dfc",
+      "pdf_object_xref": 20,
+      "resource_page_number": 1,
+      "width_px": 489,
+      "height_px": 325,
+      "sha256": "00d4f3ce04bbea7e9e51346eaee525e964bef7c90abc6147d3d2bd19eef47000",
+      "mask": {
+        "file": "atc-vertical-guidelines-mask-21.png",
+        "pdf_object_xref": 21,
+        "sha256": "643887e9890d6fff519ef89bfc1bb9263869a12e4f4dcba2b07658bd5e591048"
+      },
+      "reference_kind": "annotated_under21_front",
+      "visual_review": "native_resource_visually_inspected"
+    },
+    {
+      "file": "atc-vertical-guidelines-xref-22.png",
+      "source_file": "atc-vertical-guidelines.pdf",
+      "source_sha256": "d3f28d8705b93f17d7eaa57276a8ea1efaa804f4bbdac0161bc896224b569dfc",
+      "pdf_object_xref": 22,
+      "resource_page_number": 1,
+      "width_px": 325,
+      "height_px": 205,
+      "sha256": "db2e03aeabb503b7743c17a655ce965fdd34fb682aa63d6c22e24a4f829a04af",
+      "mask": {
+        "file": "atc-vertical-guidelines-mask-23.png",
+        "pdf_object_xref": 23,
+        "sha256": "85d0649263134ccaa47840f0b9ad45744bf76f01adbfaa70b2a5d0e8d22e85e7"
+      },
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_visually_inspected"
+    },
+    {
+      "file": "responsible-vendor-handbook-xref-34.jpeg",
+      "source_file": "responsible-vendor-handbook.pdf",
+      "source_sha256": "faa599c84b5616a214f677ccb5a8521b536db98841f8ca7b6a0619e7d3798229",
+      "pdf_object_xref": 34,
+      "resource_page_number": 12,
+      "width_px": 424,
+      "height_px": 677,
+      "sha256": "8000e1aa4952479c68d25ab26f48b0fee93b82e6f2361788e013adefda839802",
+      "reference_kind": "legacy_under21_front",
+      "visual_review": "native_resource_visually_inspected",
+      "limitations": [
+        "Third-party preserved handbook; historical and low-resolution specimen, not current rules."
+      ]
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "atc-special-event.pdf",
+      "source_url": "https://atc.louisiana.gov/media/p1dnkjne/special-event-packet.pdf",
+      "status": "failed",
+      "error": "Client error '404 Not Found' for url 'https://atc.louisiana.gov/media/p1dnkjne/special-event-packet.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+    },
+    {
+      "file": "scanner-2015-front.jpg",
+      "source_url": "https://idscanner.com/wp-content/uploads/2015/03/2015-la-drivers-license-sample-fb56db88a33649bd.jpg",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://idscanner.com/wp-content/uploads/2015/03/2015-la-drivers-license-sample-fb56db88a33649bd.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "file": "scanner-legacy-front.jpg",
+      "source_url": "https://idscanner.com/wp-content/uploads/2015/03/Old-LA-drivers-license.jpg",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://idscanner.com/wp-content/uploads/2015/03/Old-LA-drivers-license.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "file": "scanner-2015-front.jpg",
+      "source_url": "https://idscanner.com/wp-content/uploads/2015/03/2015-la-drivers-license-sample-fb56db88a33649bd-300x193.jpg",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://idscanner.com/wp-content/uploads/2015/03/2015-la-drivers-license-sample-fb56db88a33649bd-300x193.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "file": "vendor-id-supplement-2018.pdf",
+      "source_url": "https://aacea.com/louisiana/images/Louisiana-ID-Supplement-2018.pdf",
+      "status": "failed",
+      "error": "Client error '404 Not Found' for url 'https://aacea.com/louisiana/images/Louisiana-ID-Supplement-2018.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+    }
+  ],
+  "remaining_gaps": [
+    "No card backs acquired.",
+    "No separate identification-card, CDL, interim paper or clean current under-21 front acquired.",
+    "No UV or physical optical feature photographs acquired.",
+    "Precise issue intervals, physical geometry and current training-rule validity unreviewed."
+  ],
+  "other_routes_checked": [
+    {
+      "url": "https://www.lsp.org/",
+      "result": "Law-enforcement search did not produce another specimen source in this bounded pass."
+    },
+    {
+      "url": "https://www.expresslane.org/resources/driver-manuals/",
+      "result": "Driver-manual hub checked; useful specimens acquired directly from OMV and ATC instead."
+    }
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": false,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "LA",
+    "verified_at": "2026-10-26T18:05:44.656271+00:00",
+    "local_directory": "output/research/LA",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/LA/69d68c660e1e647641a89b14821e0e3cbc7674660f9c60ad36f5b7c49737b1ab/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/LA.json",
+    "archive_sha256": "69d68c660e1e647641a89b14821e0e3cbc7674660f9c60ad36f5b7c49737b1ab",
+    "archive_size_bytes": 4728220,
+    "transport_chunks": 1,
+    "verified_restored_files": 24,
+    "verification": "Downloaded private vault archive, restored using existing snapshot helpers, and compared every restored file byte-for-byte with durable local copies.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/LA",
+    "parent_verified_at": "2026-10-26T18:09:54.197042+00:00"
+  }
+}

@@ -60,8 +60,11 @@ consumes only the allowlisted export in `web/public/data/`.
 [Coverage](library/coverage.md) and [citations](library/manifest.json) are public metadata.
 Manually recovered sources are recorded separately until catalog integration:
 [Arkansas research and preservation record](docs/source-research/AR-2026-10-26.json),
-[Arizona research and preservation record](docs/source-research/AZ-2026-10-26.json), and
-[Indiana research and preservation record](docs/source-research/IN-2026-10-26.json).
+[Arizona research and preservation record](docs/source-research/AZ-2026-10-26.json),
+[Indiana research and preservation record](docs/source-research/IN-2026-10-26.json),
+[Kansas research and preservation record](docs/source-research/KS-2026-10-26.json),
+[Kentucky research and preservation record](docs/source-research/KY-2026-10-26.json), and
+[Louisiana research and preservation record](docs/source-research/LA-2026-10-26.json).
 Their originals, discovery pages, review previews, and research notes are retained under
 `output/research/{STATE}/` and in separately indexed private vault backups.
 `scripts/build_public_catalog.py` exports an explicit field allowlist; it does not copy

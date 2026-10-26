@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "KS",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T18:05:42.293551+00:00",
+  "scope": "Bounded Kansas manual source research. Useful finds retained and gaps recorded; no completeness requirement or catalog integration.",
+  "source_publications": [
+    {
+      "file": "dor-2012-redesign-release.pdf",
+      "source_url": "https://www.ksrevenue.gov/CMS/content/10-16-2012-New-DL-Design.pdf",
+      "final_url": "https://www.ksrevenue.gov/CMS/content/10-16-2012-New-DL-Design.pdf",
+      "sha256": "7b5859379ed071d2bc707c0a4a17c34ab8c190d8f8999e3b5fb16b0b8d26ee18",
+      "bytes": 101134,
+      "mime_type": "application/pdf",
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "2012 official redesign textual context; no specimen image claimed"
+      ]
+    },
+    {
+      "file": "dor-real-id.html",
+      "source_url": "https://www.ksrevenue.gov/dovrealid.html",
+      "final_url": "https://www.ksrevenue.gov/dovrealid.html",
+      "mime_type": "text/html",
+      "sha256": "821b5ff2f73f329826edfc9eae97366435cc72acdadeebb020dce17677d573aa",
+      "bytes": 23591,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Issuer parent page for Real ID ID-card and nonfederal DL fronts"
+      ]
+    },
+    {
+      "file": "state-library-2017-design.pdf",
+      "source_url": "https://kgi.contentdm.oclc.org/digital/api/collection/p16884coll67/id/326/download",
+      "final_url": "https://kgi.contentdm.oclc.org/digital/api/collection/p16884coll67/id/326/download",
+      "mime_type": "application/pdf",
+      "sha256": "755f3a7b2cf74142b8ac3c4ab00b10c664fe1513f5066d4e1b21dc74b37e81cf",
+      "bytes": 528173,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "2017 announced DL front/back",
+        "illustrative perforation detail"
+      ],
+      "publisher_note": "Kansas State Library digital government-publications collection preserving Department of Revenue design guide."
+    },
+    {
+      "file": "law-enforcement-2017-updated.pdf",
+      "source_url": "https://kslawenforcementinfo.com/uploads/3/4/3/3/34330059/new_dl_notice_20170814.pdf",
+      "final_url": "https://kslawenforcementinfo.com/uploads/3/4/3/3/34330059/new_dl_notice_20170814.pdf",
+      "mime_type": "application/pdf",
+      "sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+      "bytes": 561796,
+      "status": "downloaded",
+      "source_class": "law_enforcement_association",
+      "coverage": [
+        "2017 Real ID DL front",
+        "2017 DL back",
+        "limited-term nonfederal ID front",
+        "native separate watermark and annotation layers"
+      ]
+    },
+    {
+      "file": "legislature-2006-www.pdf",
+      "source_url": "https://www.kslegislature.gov/b2025_26/archive/historical/minutes/2006/2006_H_Min_TRA_0307.pdf",
+      "final_url": "https://www.kslegislature.gov/b2025_26/archive/historical/minutes/2006/2006_H_Min_TRA_0307.pdf",
+      "mime_type": "application/pdf",
+      "sha256": "39d0efd64cb0e8e1ebc7efbff9c899b21e0c846fa663cdeebba35ffaa64ea894",
+      "bytes": 8939130,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "legacy adult DL and ID fronts",
+        "legacy under18/under21 DL and ID fronts",
+        "shared back",
+        "temporary receipt"
+      ]
+    },
+    {
+      "file": "REALID-SAMPLE2.png",
+      "source_url": "https://www.ksrevenue.gov/img/REALID-SAMPLE2.png",
+      "final_url": "https://www.ksrevenue.gov/img/REALID-SAMPLE2.png",
+      "mime_type": "image/png",
+      "bytes": 266443,
+      "sha256": "e3ff4be64272167f2dc12b41af470cbe3b4e5835c93b82f92278ff5bd06695b8",
+      "status": "downloaded",
+      "discovery_file": "dor-real-id.html",
+      "source_class": "government",
+      "coverage": [
+        "2017-generation Real ID identification-card adult front"
+      ]
+    },
+    {
+      "file": "NOT-FOR-FEDERAL-USE-SAMPLE2.png",
+      "source_url": "https://www.ksrevenue.gov/img/NOT-FOR-FEDERAL-USE-SAMPLE2.png",
+      "final_url": "https://www.ksrevenue.gov/img/NOT-FOR-FEDERAL-USE-SAMPLE2.png",
+      "mime_type": "image/png",
+      "bytes": 1644614,
+      "sha256": "ceb9fb4f95e99df663e705582414fad2b73270b7c38df75c98b1afe040e3844b",
+      "status": "downloaded",
+      "discovery_file": "dor-real-id.html",
+      "source_class": "government",
+      "coverage": [
+        "2017-generation nonfederal driver-license adult front"
+      ]
+    },
+    {
+      "file": "kmbc-2012-redesign.html",
+      "source_url": "https://www.kmbc.com/article/kansas-rolls-out-new-driver-s-license/3672707",
+      "final_url": "https://www.kmbc.com/article/kansas-rolls-out-new-driver-s-license/3672707",
+      "status": "downloaded",
+      "bytes": 428007,
+      "sha256": "bc681a491e708b38abdab63d5df2055c1ef378716d104dc8d4a427ae1faf96ab",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "press",
+      "coverage": [
+        "Press parent page for historical specimen"
+      ]
+    },
+    {
+      "file": "kmbc-2012-redesign-specimen.jpg",
+      "source_url": "https://kubrick.htvapps.com/htv-prod/ibmig/cms/image/kmbc/17008620-17008620.jpg",
+      "final_url": "https://kubrick.htvapps.com/htv-prod/ibmig/cms/image/kmbc/17008620-17008620.jpg",
+      "sha256": "2636600f0b390d61e76ef3f1c439f64f5a560c079811dc906c27d915e72c7411",
+      "bytes": 123055,
+      "status": "downloaded",
+      "mime_type": "image/jpeg",
+      "discovery_file": "kmbc-2012-redesign.html",
+      "source_class": "press",
+      "coverage": [
+        "2012 adult license specimen front"
+      ],
+      "limitations": [
+        "Third-party press reproduction; no agency original provenance asserted beyond linked parent report."
+      ]
+    },
+    {
+      "file": "abc-licensee-training.html",
+      "source_url": "https://www.ksrevenue.gov/abclicenseetraining.html",
+      "final_url": "https://www.ksrevenue.gov/abclicenseetraining.html",
+      "mime_type": "text/html",
+      "sha256": "092117d3e801728e7306bb03be4b3231d33d24ba69b69a96ee5fda424832b62f",
+      "bytes": 21581,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Official ABC identification guidance; text only"
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "law-enforcement-2017-updated-xref-12.jpeg",
+      "source_file": "law-enforcement-2017-updated.pdf",
+      "source_sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+      "pdf_object_xref": 12,
+      "resource_page_number": 1,
+      "width_px": 694,
+      "height_px": 441,
+      "sha256": "d610fc74898f22ae9b842dd3ad158efbcf324ead3683af6bbb67befd6a1e0d9d",
+      "reference_kind": "complete_sample_front",
+      "review_note": "2017 Real ID DL front, annotation arrows and large SAMPLE overlay are separate PDF objects.",
+      "visual_review": "visually_inspected_native_resource_or_full_page_preview"
+    },
+    {
+      "file": "law-enforcement-2017-updated-xref-13.jpeg",
+      "source_file": "law-enforcement-2017-updated.pdf",
+      "source_sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+      "pdf_object_xref": 13,
+      "resource_page_number": 1,
+      "width_px": 693,
+      "height_px": 441,
+      "sha256": "16f8d663732a50c613a3610bd9dfe74b340d83cc6c4ddf2a643b365e2a71bb47",
+      "reference_kind": "complete_sample_front",
+      "review_note": "2017 limited-term nonfederal identification card front; intrinsic SAMPLE watermark retained.",
+      "visual_review": "visually_inspected_native_resource_or_full_page_preview"
+    },
+    {
+      "file": "law-enforcement-2017-updated-xref-14.jpeg",
+      "source_file": "law-enforcement-2017-updated.pdf",
+      "source_sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+      "pdf_object_xref": 14,
+      "resource_page_number": 1,
+      "width_px": 763,
+      "height_px": 487,
+      "sha256": "60744360d367a5a365680b4331bc2308c1d59da4072f2f104bab18442292639e",
+      "reference_kind": "complete_sample_back",
+      "review_note": "2017 DL back. Blue leaders and large SAMPLE watermark are separate PDF objects.",
+      "visual_review": "visually_inspected_native_resource_or_full_page_preview"
+    },
+    {
+      "file": "law-enforcement-2017-updated-xref-25.png",
+      "source_file": "law-enforcement-2017-updated.pdf",
+      "source_sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+      "pdf_object_xref": 25,
+      "resource_page_number": 1,
+      "width_px": 387,
+      "height_px": 151,
+      "sha256": "3c5ae8bee9ab216670834c59840a43c778fe16798b1565226fac5e6572cd8ee4",
+      "mask": {
+        "file": "law-enforcement-2017-updated-mask-26.png",
+        "pdf_object_xref": 26,
+        "sha256": "bbbe59aad45f469145fd9a4775926a708d9e22017ec723437a62f5e769f13dba"
+      },
+      "reference_kind": "annotation_layer",
+      "review_note": "Separate publication overlay retained with mask; not a specimen.",
+      "visual_review": "visually_inspected_native_resource_or_full_page_preview"
+    },
+    {
+      "file": "law-enforcement-2017-updated-xref-27.png",
+      "source_file": "law-enforcement-2017-updated.pdf",
+      "source_sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+      "pdf_object_xref": 27,
+      "resource_page_number": 1,
+      "width_px": 313,
+      "height_px": 264,
+      "sha256": "f29ff4ae730d260b0760eec77e4513dc609e0ba383b0867b5e27f79a568cf61d",
+      "mask": {
+        "file": "law-enforcement-2017-updated-mask-28.png",
+        "pdf_object_xref": 28,
+        "sha256": "e9b8c6f3ee26da353fcfe3f2c76b3a53504faf2a6f3e40a7719716074dc332bc"
+      },
+      "reference_kind": "annotation_layer",
+      "review_note": "Separate large blue SAMPLE watermark retained with mask; not a specimen.",
+      "visual_review": "visually_inspected_native_resource_or_full_page_preview"
+    },
+    {
+      "file": "law-enforcement-2017-updated-xref-31.png",
+      "source_file": "law-enforcement-2017-updated.pdf",
+      "source_sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+      "pdf_object_xref": 31,
+      "resource_page_number": 1,
+      "width_px": 207,
+      "height_px": 175,
+      "sha256": "97c99d22ee7db6122065e91a5221e0581b0131a432d8d9ee531996659d456e96",
+      "mask": {
+        "file": "law-enforcement-2017-updated-mask-32.png",
+        "pdf_object_xref": 32,
+        "sha256": "1bbd363a23f60ef7f322791d68a69c88580fa93cc3cec5f9e877af740dde8dd2"
+      },
+      "reference_kind": "annotation_layer",
+      "review_note": "Separate publication overlay retained with mask; not a specimen.",
+      "visual_review": "visually_inspected_native_resource_or_full_page_preview"
+    },
+    {
+      "file": "state-library-2017-design-xref-24.jpeg",
+      "source_file": "state-library-2017-design.pdf",
+      "source_sha256": "755f3a7b2cf74142b8ac3c4ab00b10c664fe1513f5066d4e1b21dc74b37e81cf",
+      "pdf_object_xref": 24,
+      "resource_page_number": 2,
+      "width_px": 2202,
+      "height_px": 1708,
+      "sha256": "df2c7d5111e2162a28115ff23e50130b01c182dd905011408116cc736ecf3c1c",
+      "reference_kind": "annotated_page_composite",
+      "review_note": "Entire rasterized design guide page with front/back and exaggerated turtle detail; not individual native card flats.",
+      "visual_review": "visually_inspected_native_resource_or_full_page_preview"
+    },
+    {
+      "file": "legislature-2006-www-xref-24.jpeg",
+      "source_file": "legislature-2006-www.pdf",
+      "source_sha256": "39d0efd64cb0e8e1ebc7efbff9c899b21e0c846fa663cdeebba35ffaa64ea894",
+      "pdf_object_xref": 24,
+      "resource_page_number": 21,
+      "width_px": 1700,
+      "height_px": 2200,
+      "sha256": "de4220eee8562b37e0bb98a080ebfbb922a4df1edd85fcc7503f6325b8ae0251",
+      "reference_kind": "annotated_page_composite",
+      "review_note": "Entire scanned legislative attachment page 21 containing legacy adult/minor DL/ID, back and temporary receipt. Native resource is page scan, not separate card objects.",
+      "visual_review": "visually_inspected_native_resource_or_full_page_preview"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "ks-law-enforcement-2017-notice.pdf",
+      "source_url": "https://www.kslawenforcementinfo.com/uploads/3/4/3/3/34330059/new_dl_notice.pdf",
+      "status": "failed",
+      "error": "HTTP Error 465: "
+    },
+    {
+      "file": "legislature-2017-design-testimony.pdf",
+      "source_url": "https://kslegislature.gov/li/b2017_18/committees/ctte_s_trnsprt_1/documents/testimony/20170118_03.pdf",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "legislature-2006-security-reference.pdf",
+      "source_url": "https://kslegislature.gov/b2025_26/archive/historical/minutes/2006/2006_H_Min_TRA_0307.pdf",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "legislature-2017-www.pdf",
+      "source_url": "https://www.kslegislature.gov/li/b2017_18/committees/ctte_s_trnsprt_1/documents/testimony/20170118_03.pdf",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "remaining_gaps": [
+    "Current-generation under-21 DL/ID and CDL specimen fronts.",
+    "Separate document-specific ID and CDL backs.",
+    "Standalone UV plates or optical photographs.",
+    "2012-generation backs and minors.",
+    "Full issuance intervals and physical geometry remain unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": false,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "KS",
+    "verified_at": "2026-10-26T18:06:06.838352+00:00",
+    "local_directory": "output/research/KS",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/KS/0e886481b7d49189dc980088f266a69d3b21afd39b48f4b0bdcdae0254b28c63/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/KS.json",
+    "archive_sha256": "0e886481b7d49189dc980088f266a69d3b21afd39b48f4b0bdcdae0254b28c63",
+    "archive_size_bytes": 17382956,
+    "transport_chunks": 1,
+    "verified_restored_files": 36,
+    "verification": "Downloaded private vault archive, restored with existing snapshot helpers, and compared every restored file byte-for-byte with durable local copies.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/KS",
+    "parent_verified_at": "2026-10-26T18:09:49.806959+00:00"
+  }
+}
