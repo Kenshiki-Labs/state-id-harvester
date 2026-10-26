@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "AZ",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T16:50:40.270797+00:00",
+  "scope": "Bounded Arizona source research. Preserve useful findings and known gaps; no completeness requirement, catalog integration, or accepted runtime templates.",
+  "publisher": "Arizona Department of Transportation / Motor Vehicle Division",
+  "source_publications": [
+    {
+      "file": "adot-evolution-2024.html",
+      "source_url": "https://azdot.gov/adot-blog/evolution-arizonas-driver-license",
+      "status": "downloaded",
+      "retrieval_method": "browser_fetch_original_response",
+      "final_url": "https://azdot.gov/adot-blog/evolution-arizonas-driver-license",
+      "mime_type": "text/html; charset=UTF-8",
+      "bytes": 128691,
+      "sha256": "3b3b09595c432ab38e2b26ef9117c96edbb701e7e1771f5c923dd273a2051daf",
+      "kind": "image_bearing",
+      "coverage": [
+        "1993 historical front",
+        "1997 manual plate with adult and under-21 examples",
+        "2001 historical front",
+        "2016 non-Travel front"
+      ],
+      "images": [
+        "legacy-1993-front.png",
+        "legacy-1997-manual-plate.png",
+        "legacy-2001-front.png",
+        "legacy-2016-non-travel-front.png"
+      ],
+      "note": "1980s images on this page are explicitly described as recreated mockups and were not collected. Historical labels do not establish current validity."
+    },
+    {
+      "file": "adot-2014-launch.html",
+      "source_url": "https://azdot.gov/blog-article/adot-launch-new-driver-license-process-and-design",
+      "status": "downloaded",
+      "retrieval_method": "browser_fetch_original_response",
+      "final_url": "https://azdot.gov/blog-article/adot-launch-new-driver-license-process-and-design",
+      "mime_type": "text/html; charset=UTF-8",
+      "bytes": 125206,
+      "sha256": "adf3937d5a467e1ac588bd45bf01d1df498319bdef4568282ac65801402e4d7d",
+      "kind": "image_bearing",
+      "coverage": [
+        "legacy adult front",
+        "legacy adult/under-21 fronts and back composite",
+        "temporary paper credential"
+      ],
+      "images": [
+        "legacy-2014-adult-front-small.jpg",
+        "legacy-2014-temporary-credential.jpg",
+        "legacy-2014-front-back-under21-composite.jpg"
+      ]
+    },
+    {
+      "file": "adot-2023-makeover.html",
+      "source_url": "https://azdot.gov/adot-blog/arizona-driver-license-and-id-card-gets-makeover",
+      "status": "downloaded",
+      "retrieval_method": "browser_fetch_original_response",
+      "final_url": "https://azdot.gov/adot-blog/arizona-driver-license-and-id-card-gets-makeover",
+      "mime_type": "text/html; charset=UTF-8",
+      "bytes": 122344,
+      "sha256": "12b73b01d490195d3d6162b748aba779ec3fa89876ad0e362227c6f2e7c05bcb",
+      "kind": "image_bearing",
+      "coverage": [
+        "2023 Travel DL front with diagonal SAMPLE marking",
+        "announcement graphic with same specimen"
+      ],
+      "images": [
+        "current-2023-travel-front-watermarked.jpg",
+        "current-2023-announcement-graphic.png"
+      ]
+    },
+    {
+      "file": "adot-2023-announcement.html",
+      "source_url": "https://azdot.gov/adot-news/arizona-license-and-id-cards-are-getting-updated-look",
+      "status": "downloaded",
+      "retrieval_method": "browser_fetch_original_response",
+      "final_url": "https://azdot.gov/adot-news/arizona-license-and-id-cards-are-getting-updated-look",
+      "mime_type": "text/html; charset=UTF-8",
+      "bytes": 40787,
+      "sha256": "cf61a99ac8609b41aab514ca7454960622e5ad0e98c68b0e7744cb3c2b15c1f4",
+      "kind": "image_bearing_context",
+      "coverage": [
+        "release announcement for March 2023 design"
+      ],
+      "images": [
+        "current-2023-travel-front-watermarked.jpg"
+      ],
+      "note": "Same image URL appears on the makeover page; not another cohort."
+    },
+    {
+      "file": "adot-2025-uv-features.html",
+      "source_url": "https://azdot.gov/shining-light-lesser-known-arizona-driver-license-feature",
+      "status": "downloaded",
+      "retrieval_method": "browser_fetch_original_response",
+      "final_url": "https://azdot.gov/shining-light-lesser-known-arizona-driver-license-feature",
+      "mime_type": "text/html; charset=UTF-8",
+      "bytes": 124405,
+      "sha256": "172fa0ec5f5b6e950324f9cfa3093b9bc5b61e719ca2cc12e93163148ac3a6b3",
+      "kind": "image_bearing",
+      "coverage": [
+        "photograph of current front and back under blacklight",
+        "front coyote UV artwork",
+        "back scorpion UV artwork"
+      ],
+      "images": [
+        "current-uv-front-back-photo.png",
+        "current-uv-front-artwork.png",
+        "current-uv-back-artwork.png"
+      ],
+      "note": "UV illustrations and photograph are not clean visible-light back specimens or calibrated physical measurements."
+    },
+    {
+      "file": "adot-driver-id-information.html",
+      "source_url": "https://azdot.gov/mvd/services/driver-services/driver-license-and-identification-information",
+      "status": "downloaded",
+      "retrieval_method": "browser_fetch_original_response",
+      "final_url": "https://azdot.gov/mvd/services/driver-services/driver-license-and-identification-information",
+      "mime_type": "text/html; charset=UTF-8",
+      "bytes": 124949,
+      "sha256": "ff41b587bd93299f22ac7b477e080d1608bf7da7f8f5678f390258bba521f176",
+      "kind": "image_bearing",
+      "coverage": [
+        "current Travel DL front without diagonal brochure watermark",
+        "current non-Travel DL front"
+      ],
+      "images": [
+        "current-travel-front.jpg",
+        "current-non-travel-front.jpg"
+      ]
+    },
+    {
+      "file": "adot-id-card.html",
+      "source_url": "https://azdot.gov/mvd/services/driver-license-ID/id-card",
+      "status": "downloaded",
+      "retrieval_method": "browser_fetch_original_response",
+      "final_url": "https://azdot.gov/mvd/services/driver-license-ID/id-card",
+      "mime_type": "text/html; charset=UTF-8",
+      "bytes": 124998,
+      "sha256": "84bdc24d1c0adf369b2375f1e909124286b25a17944b3f2c2bde90a8da37ff39",
+      "kind": "context_only",
+      "coverage": [],
+      "note": "No specimen image retained from this page."
+    },
+    {
+      "file": "adot-native-american-designation.html",
+      "source_url": "https://azdot.gov/news/native-american-designation-now-available-state-ids-mvd",
+      "status": "downloaded",
+      "retrieval_method": "browser_fetch_original_response",
+      "final_url": "https://azdot.gov/news/native-american-designation-now-available-state-ids-mvd",
+      "mime_type": "text/html; charset=UTF-8",
+      "bytes": 123794,
+      "sha256": "e6adc6b45ecf7be9b97a5af749471ea52826b94e707740695d89ba6b29ce9a78",
+      "kind": "context_only",
+      "coverage": [
+        "January 20, 2026 issuer announcement describing optional Native American designation"
+      ],
+      "note": "No corresponding specimen image found on the announcement; do not synthesize a variant."
+    },
+    {
+      "file": "adot-legacy-central-issuance.pdf",
+      "source_url": "https://azdot.gov/sites/default/files/2019/07/central-credential-issuance-mvd-English.pdf",
+      "status": "downloaded",
+      "retrieval_method": "browser_fetch_original_response",
+      "final_url": "https://azdot.gov/sites/default/files/2019/07/central-credential-issuance-mvd-English.pdf",
+      "mime_type": "application/pdf",
+      "bytes": 381744,
+      "sha256": "b7ee33fac997108b4d415860529bc27c374632a13f421f1b25c017dae9f45597",
+      "kind": "image_bearing",
+      "coverage": [
+        "legacy adult front",
+        "legacy under-21 front",
+        "legacy back",
+        "temporary credential"
+      ],
+      "review_previews": [
+        "legacy-central-issuance-page2.png"
+      ],
+      "native_objects": [
+        "legacy-native-xref-231.png",
+        "legacy-native-xref-232.jpeg",
+        "legacy-native-xref-70.jpeg"
+      ],
+      "note": "Brochure says R04/14; native object references retained separately from numbered page callouts. Native card images are low resolution."
+    },
+    {
+      "file": "adot-driver-manual.pdf",
+      "source_url": "https://apps.azdot.gov/files/mvd/mvd-forms-lib/99-0117.pdf",
+      "status": "downloaded",
+      "browser_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "final_url": "https://apps.azdot.gov/files/mvd/mvd-forms-lib/99-0117.pdf",
+      "mime_type": "application/pdf",
+      "bytes": 3195207,
+      "sha256": "3f9f8f938671a1d927b080bacf4a1ec1e7b30b3010cb828088a31638e7c86fdf",
+      "kind": "image_bearing",
+      "coverage": [
+        "current-design under-21 Travel identification card front on PDF page 16"
+      ],
+      "review_previews": [
+        "driver-manual-page-16.png"
+      ],
+      "native_objects": [
+        "current-under21-id-native-xref-77.jpeg"
+      ],
+      "note": "Manual contains pre-May 7, 2025 deadline language. Retrieval date does not make every statement current."
+    }
+  ],
+  "original_agency_images": [
+    {
+      "file": "legacy-2014-adult-front-small.jpg",
+      "source_url": "https://azdot.gov/sites/default/files/2019/01/2014-0501-license.jpg",
+      "parent_file": "adot-2014-launch.html",
+      "parent_sha256": "adf3937d5a467e1ac588bd45bf01d1df498319bdef4568282ac65801402e4d7d",
+      "publisher_alt": "",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/jpeg",
+      "sha256": "624e9abf72dde75f6fb6609f86f6b1e9ccbff477588f88068d0360781a4ac074",
+      "bytes": 16288,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "legacy-2014-temporary-credential.jpg",
+      "source_url": "https://azdot.gov/sites/default/files/2019/01/2014-0501-license3.jpg",
+      "parent_file": "adot-2014-launch.html",
+      "parent_sha256": "adf3937d5a467e1ac588bd45bf01d1df498319bdef4568282ac65801402e4d7d",
+      "publisher_alt": "2014-0501-license3",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/jpeg",
+      "sha256": "9716f7d689e44dafafb993d7aa34f0c65c68725e6a872ff9c6c04bcf37834dee",
+      "bytes": 57868,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "legacy-2014-front-back-under21-composite.jpg",
+      "source_url": "https://azdot.gov/sites/default/files/2019/01/2014-0501-license2.jpg",
+      "parent_file": "adot-2014-launch.html",
+      "parent_sha256": "adf3937d5a467e1ac588bd45bf01d1df498319bdef4568282ac65801402e4d7d",
+      "publisher_alt": "",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/jpeg",
+      "sha256": "0eb50f3be4ed7fa8b257b214f1699320fab6ec9330243cdacc27abd496cc9d08",
+      "bytes": 58457,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "current-2023-travel-front-watermarked.jpg",
+      "source_url": "https://azdot.gov/sites/default/files/2023-04/DL%20Front_0.jpg",
+      "parent_file": "adot-2023-makeover.html",
+      "parent_sha256": "12b73b01d490195d3d6162b748aba779ec3fa89876ad0e362227c6f2e7c05bcb",
+      "publisher_alt": "DL Front_0",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/jpeg",
+      "sha256": "5ef398e1673dd8ab0e52d2a0b18333f903702ed30547661c2c7e77f4230f0802",
+      "bytes": 315939,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "current-2023-announcement-graphic.png",
+      "source_url": "https://azdot.gov/sites/default/files/2023-04/AZ%20driver%20license%20new%20look%20%281%29_0.png",
+      "parent_file": "adot-2023-makeover.html",
+      "parent_sha256": "12b73b01d490195d3d6162b748aba779ec3fa89876ad0e362227c6f2e7c05bcb",
+      "publisher_alt": "Arizona driver license",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/png",
+      "sha256": "1f9deba583cf5569769179de90e8ff4b2b8ea1ddf8ff4ad84578e2b1beb4244b",
+      "bytes": 976113,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "current-travel-front.jpg",
+      "source_url": "https://azdot.gov/sites/default/files/2023-07/driver-license-donor-veteran-travel-id-star.jpg",
+      "parent_file": "adot-driver-id-information.html",
+      "parent_sha256": "ff41b587bd93299f22ac7b477e080d1608bf7da7f8f5678f390258bba521f176",
+      "publisher_alt": "Arizona Driver License",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/jpeg",
+      "sha256": "e325922e53985aab2efbf436c731b05552949fb81c84f92d9b29a1c80a0c87d2",
+      "bytes": 76142,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "current-non-travel-front.jpg",
+      "source_url": "https://azdot.gov/sites/default/files/2026-04/Arizona-Non-Travel-Driver-License.jpg",
+      "parent_file": "adot-driver-id-information.html",
+      "parent_sha256": "ff41b587bd93299f22ac7b477e080d1608bf7da7f8f5678f390258bba521f176",
+      "publisher_alt": "Arizona Non-Travel Driver License",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/jpeg",
+      "sha256": "6a839e3e70ac58ae9345e4bb6f6e1babd2f99995d7cbb01e1a4977a212af98ac",
+      "bytes": 152331,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "legacy-1993-front.png",
+      "source_url": "https://azdot.gov/sites/default/files/inline-images/image%20%281%29.png2__0.png",
+      "parent_file": "adot-evolution-2024.html",
+      "parent_sha256": "3b3b09595c432ab38e2b26ef9117c96edbb701e7e1771f5c923dd273a2051daf",
+      "publisher_alt": "Sample driver license from 1993.",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/png",
+      "sha256": "480c9f23448c778215daa4a62d03ee4b20750c128db230054f21523c189cb176",
+      "bytes": 142058,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "legacy-1997-manual-plate.png",
+      "source_url": "https://azdot.gov/sites/default/files/inline-images/2024-01-12_19-17-46.png",
+      "parent_file": "adot-evolution-2024.html",
+      "parent_sha256": "3b3b09595c432ab38e2b26ef9117c96edbb701e7e1771f5c923dd273a2051daf",
+      "publisher_alt": "Scanned page from a 1997 driver license manual listing features of the license design.",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/png",
+      "sha256": "57f7454b36a78d578120e415c36f2940202f443ccb8d300ab88b344b6d69258f",
+      "bytes": 348730,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "legacy-2001-front.png",
+      "source_url": "https://azdot.gov/sites/default/files/inline-images/image%20%282%29.png2__1.png",
+      "parent_file": "adot-evolution-2024.html",
+      "parent_sha256": "3b3b09595c432ab38e2b26ef9117c96edbb701e7e1771f5c923dd273a2051daf",
+      "publisher_alt": "Sample driver license from 2001.",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/png",
+      "sha256": "83d4f17f64276c6db7ae69ef9398cab39b3ad641e9d9b33c2b7805629bde9da6",
+      "bytes": 123443,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "legacy-2016-non-travel-front.png",
+      "source_url": "https://azdot.gov/sites/default/files/inline-images/image%20%283%29.png2__0.png",
+      "parent_file": "adot-evolution-2024.html",
+      "parent_sha256": "3b3b09595c432ab38e2b26ef9117c96edbb701e7e1771f5c923dd273a2051daf",
+      "publisher_alt": "Sample driver license from 2016.",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/png",
+      "sha256": "cfb153fc74ed0006b5a80fa4de004e3d604bfb89b3e26ce5c59b2381b06036b9",
+      "bytes": 168220,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "current-uv-front-back-photo.png",
+      "source_url": "https://azdot.gov/sites/default/files/2025-04/Untitled%20design%20-%202025-04-21T152145.065.png",
+      "parent_file": "adot-2025-uv-features.html",
+      "parent_sha256": "172fa0ec5f5b6e950324f9cfa3093b9bc5b61e719ca2cc12e93163148ac3a6b3",
+      "publisher_alt": "Sample driver licenses under a blacklight.",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/png",
+      "sha256": "ea90d691a7e2ade5587cbfa82fb585d6eb72b90c2c01cbee7c98f4e21704e705",
+      "bytes": 4368811,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "current-uv-front-artwork.png",
+      "source_url": "https://azdot.gov/sites/default/files/inline-images/coyote%20transparent.png",
+      "parent_file": "adot-2025-uv-features.html",
+      "parent_sha256": "172fa0ec5f5b6e950324f9cfa3093b9bc5b61e719ca2cc12e93163148ac3a6b3",
+      "publisher_alt": "Front blacklight design.",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/png",
+      "sha256": "2c91402f881abeff104aa009f8a0c256f111ffeecb6cab7b030f4af9618ce97b",
+      "bytes": 380720,
+      "visual_review": "inspected_original_image"
+    },
+    {
+      "file": "current-uv-back-artwork.png",
+      "source_url": "https://azdot.gov/sites/default/files/inline-images/scorpion%20transparent.png",
+      "parent_file": "adot-2025-uv-features.html",
+      "parent_sha256": "172fa0ec5f5b6e950324f9cfa3093b9bc5b61e719ca2cc12e93163148ac3a6b3",
+      "publisher_alt": "Back blacklight design.",
+      "http_status": 200,
+      "retrieval_method": "browser_fetch_original_response",
+      "mime_type": "image/png",
+      "sha256": "72dc660f43ef3acf401da3ca2adc7e1e6366e35a507bca25f03498b999699227",
+      "bytes": 177367,
+      "visual_review": "inspected_original_image"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "legacy-native-xref-231.png",
+      "source_file": "adot-legacy-central-issuance.pdf",
+      "source_sha256": "b7ee33fac997108b4d415860529bc27c374632a13f421f1b25c017dae9f45597",
+      "pdf_object_xref": 231,
+      "page_number": 2,
+      "width_px": 257,
+      "height_px": 162,
+      "sha256": "5259f3ab4e8f28b9e1e805f94668f8261f5d68400ae50e16d8d7e28f987e508b",
+      "visual_review": "inspected_native_image_without_page_callout_overlays",
+      "source_resolution": "low_resolution_reference",
+      "mask": {
+        "file": "legacy-native-mask-xref-241.png",
+        "pdf_object_xref": 241,
+        "sha256": "49c39c0d37b999751697edf57a3fdc9a6bb5d8cab61b56a86044ce00d289be2a"
+      }
+    },
+    {
+      "file": "legacy-native-xref-232.jpeg",
+      "source_file": "adot-legacy-central-issuance.pdf",
+      "source_sha256": "b7ee33fac997108b4d415860529bc27c374632a13f421f1b25c017dae9f45597",
+      "pdf_object_xref": 232,
+      "page_number": 2,
+      "width_px": 257,
+      "height_px": 162,
+      "sha256": "c656bfccb2608c8c0db9f5446558864fa47172fa6d6f591f5a6efd4e8435c007",
+      "visual_review": "inspected_native_image_without_page_callout_overlays",
+      "source_resolution": "low_resolution_reference",
+      "mask": {
+        "file": "legacy-native-mask-xref-244.png",
+        "pdf_object_xref": 244,
+        "sha256": "4f0f02ae8d3d6ddd44240999c6a2b541f2ccb1ae7f9929163f4ecc1870d62804"
+      }
+    },
+    {
+      "file": "legacy-native-xref-70.jpeg",
+      "source_file": "adot-legacy-central-issuance.pdf",
+      "source_sha256": "b7ee33fac997108b4d415860529bc27c374632a13f421f1b25c017dae9f45597",
+      "pdf_object_xref": 70,
+      "page_number": 2,
+      "width_px": 172,
+      "height_px": 272,
+      "sha256": "be5a6b7427cb43f18f03653ce6ce79f75774c5d7dc730647c7c58324a7a1783c",
+      "visual_review": "inspected_native_image_without_page_callout_overlays",
+      "source_resolution": "low_resolution_reference",
+      "mask": {
+        "file": "legacy-native-mask-xref-69.png",
+        "pdf_object_xref": 69,
+        "sha256": "ad48ba29857b9807b832bc7889744922dbb326fee847d309a905dc577fb68e91"
+      }
+    },
+    {
+      "file": "current-under21-id-native-xref-77.jpeg",
+      "source_file": "adot-driver-manual.pdf",
+      "source_sha256": "3f9f8f938671a1d927b080bacf4a1ec1e7b30b3010cb828088a31638e7c86fdf",
+      "pdf_object_xref": 77,
+      "page_number": 16,
+      "width_px": 372,
+      "height_px": 600,
+      "sha256": "176b90cfaaa9743a27440a9b7e1a516c8f21f59ba56904b586bf1f9c9e740221",
+      "mask": {
+        "file": "current-under21-id-mask-xref-76.png",
+        "pdf_object_xref": 76,
+        "sha256": "b8e9db80b318aa2f81a7c4f41d5aa24ffe8bc0fbd8ccc24f25b4ba4d481edd52"
+      },
+      "visual_review": "corresponding specimen inspected on rendered source page 16"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "adot-2023-credential-flyer.pdf",
+      "source_url": "https://azdot.gov/sites/default/files/2023-03/15-0710-Final-New-Arizona-Credential-Features.pdf",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden",
+      "browser_status": 404
+    },
+    {
+      "file": "adot-2025-credential-flyer.pdf",
+      "source_url": "https://apps.azdot.gov/files/mvd/mvd-forms-lib/15-0710.pdf",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden",
+      "browser_status": 404
+    }
+  ],
+  "other_routes_checked": [
+    {
+      "url": "https://liquor.az.gov/public-safety/age-verification",
+      "result": "Search result and web-open checked; no image-bearing source retained from liquor agency in this pass."
+    }
+  ],
+  "remaining_gaps": [
+    "Clean visible-light back for current design; retained UV photo shows an overlapping back and UV illustration is not equivalent.",
+    "Current under-21 driver-license front, distinct from under-21 identification card.",
+    "Current horizontal identification card and CDL-specific specimens.",
+    "Specimen showing optional 2026 Native American designation.",
+    "Full revision boundaries and physical dimensions remain unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": false,
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "AZ",
+    "verified_at": "2026-10-26T16:51:33.689595+00:00",
+    "local_directory": "output/research/AZ",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/AZ/c643b23f25eb04e829bece7aaa0ef2f35f624442f939f718189d4508deeb98ec/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/AZ.json",
+    "archive_sha256": "c643b23f25eb04e829bece7aaa0ef2f35f624442f939f718189d4508deeb98ec",
+    "archive_size_bytes": 12835208,
+    "verified_restored_files": 40,
+    "verification": "Downloaded private vault archive, restored with existing snapshot helpers, and compared all restored files byte-for-byte with durable local copies.",
+    "public_media": false
+  },
+  "status": "bounded_research_pass_preserved_not_catalog_integrated"
+}
