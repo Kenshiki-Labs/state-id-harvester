@@ -77,9 +77,15 @@ next delivery are in [document-ontology.md](document-ontology.md).
   standards-grounded credential concepts; retain edition-specific references.
 - [x] Record ontology entities, domain extraction routes, evidence contracts and
   concrete mixed-document examples.
-- [ ] Implement the validated document/section classification contract and
-  standards crosswalk, then complete the corpus register with explicit exceptions.
-- [ ] Extract domain-specific statements with exact source anchors and applicability.
+- [x] Implement strict, frozen Pydantic contracts for ontology records, native PDF
+  packets, private storage manifests and registry projections; export JSON schemas.
+- [x] Pass 140 focused adversarial tests, including actual-PDF packet comparison.
+- [x] Extract a first batch of eight documents across seven collections: 164
+  statements, 177 exact anchors and 15 subject scopes, all explicitly unreviewed.
+- [ ] Complete final independent correction checks and private R2 upload/readback.
+- [ ] Pass full CI and SonarCloud for the typed extraction/storage code.
+- [ ] Complete the edition-specific standards crosswalk and corpus classification
+  register with explicit exceptions; the rest of the corpus is not yet extracted.
 
 The source register accounts for 599 identities: 584 retained and 15 missing
 originals. Retained media include 177 PDFs (4,074 pages), 117 HTML documents and
@@ -90,7 +96,10 @@ correct its processing status when importing the old classifications.
 The audit and previous extraction artifacts are preserved under
 `output/domain-classification/`. The inventory implementation remains uncommitted
 until its classification interface is ready for the next bounded code delivery.
-No Docling, Unstructured, OCR, new harvesting sweep or vector database is active.
+Private storage is specified in [document-ontology.md](document-ontology.md):
+R2 retains originals, native packets and validated JSON; D1 registry projection is
+prepared without a production migration. Vectorize remains deferred.
+No Docling, Unstructured, OCR or new harvesting sweep is active.
 
 ## Deferred dependencies
 

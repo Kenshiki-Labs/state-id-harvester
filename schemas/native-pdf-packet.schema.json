@@ -1,0 +1,125 @@
+{
+  "$defs": {
+    "NativeBlock": {
+      "additionalProperties": false,
+      "properties": {
+        "bbox": {
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Bbox",
+          "type": "array"
+        },
+        "block_id": {
+          "minimum": 0,
+          "title": "Block Id",
+          "type": "integer"
+        },
+        "text": {
+          "maxLength": 1000000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "block_id",
+        "bbox",
+        "text"
+      ],
+      "title": "NativeBlock",
+      "type": "object"
+    },
+    "NativePage": {
+      "additionalProperties": false,
+      "properties": {
+        "blocks": {
+          "items": {
+            "$ref": "#/$defs/NativeBlock"
+          },
+          "maxItems": 10000,
+          "title": "Blocks",
+          "type": "array"
+        },
+        "height_pt": {
+          "exclusiveMinimum": 0,
+          "title": "Height Pt",
+          "type": "number"
+        },
+        "page_number": {
+          "minimum": 1,
+          "title": "Page Number",
+          "type": "integer"
+        },
+        "width_pt": {
+          "exclusiveMinimum": 0,
+          "title": "Width Pt",
+          "type": "number"
+        }
+      },
+      "required": [
+        "page_number",
+        "width_pt",
+        "height_pt",
+        "blocks"
+      ],
+      "title": "NativePage",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "coordinate_system": {
+      "const": "PDF page points; top-left origin",
+      "title": "Coordinate System",
+      "type": "string"
+    },
+    "extraction": {
+      "const": "native_pdf_text_no_ocr",
+      "title": "Extraction",
+      "type": "string"
+    },
+    "pages": {
+      "items": {
+        "$ref": "#/$defs/NativePage"
+      },
+      "maxItems": 2000,
+      "minItems": 1,
+      "title": "Pages",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": 1,
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "source_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Source Sha256",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_sha256",
+    "extraction",
+    "coordinate_system",
+    "pages"
+  ],
+  "title": "NativePdfPacket",
+  "type": "object"
+}
