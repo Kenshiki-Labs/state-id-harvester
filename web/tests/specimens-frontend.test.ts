@@ -48,7 +48,7 @@ describe("public gallery rendering", () => {
   });
   it("shows loading and retrieval errors without stale images or false coverage counts", () => {
     const loading = render({ ...ready, loading: true });
-    expect(loading).toContain('role="status"');
+    expect(loading).toContain('<output class="reference-message">Loading reference images…</output>');
     expect(loading).not.toContain("<img");
     const error = render({ ...ready, error: true });
     expect(error).toContain('role="alert"');

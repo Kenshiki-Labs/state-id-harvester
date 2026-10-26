@@ -2447,7 +2447,7 @@ h2 > span {
 .reference-gallery-heading h2 { margin: 0; }
 .reference-gallery-heading > span, .reference-caption, .reference-message { color: var(--muted); font-size: 13px; line-height: 1.65; }
 .reference-caption { margin: 0 0 18px; }
-.reference-message { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: #fafafa; }
+.reference-message { display: block; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: #fafafa; }
 .reference-message p { margin-top: 0; }
 .reference-message button { border: 0; background: transparent; padding: 0; color: var(--teal); }
 .reference-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 18px; }
@@ -2480,6 +2480,7 @@ h2 > span {
 .entry-card p { color: var(--muted); font-size: 14px; line-height: 1.7; margin-bottom: 0; }
 .directory-search { display: flex; flex-direction: column; gap: 10px; max-width: 560px; font-size: 13px; }
 .directory-search input { border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; width: 100%; background: white; color: var(--graphite); }
+.directory-count { display: block; }
 .directory-count, .directory-note { font-size: 12px; color: var(--muted); margin: 20px 0; line-height: 1.7; }
 .directory-note a { color: var(--teal); }
 .directory-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
