@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "IN",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T17:28:01.607029+00:00",
+  "scope": "Bounded Indiana source research. Useful findings preserved with gaps; no completeness requirement or catalog integration.",
+  "publisher": "Indiana Bureau of Motor Vehicles",
+  "source_publications": [
+    {
+      "file": "bmv-legacy-security-flyer-old.pdf",
+      "source_url": "https://www.in.gov/bmv/files/DL_Security_and_Authenticity_flyer.pdf",
+      "final_url": "https://www.in.gov/bmv/files/DL_Security_and_Authenticity_flyer.pdf",
+      "mime_type": "application/pdf",
+      "sha256": "0654387bc838d0ea8d32b7e18540a028cacbe1838c95a9f867aaa962139d1108",
+      "bytes": 4683248,
+      "status": "downloaded",
+      "source_class": "government",
+      "kind": "image_bearing",
+      "coverage": [
+        "legacy adult and under-21 fronts",
+        "legacy back",
+        "older interim/extension front and back"
+      ],
+      "review_previews": [
+        "bmv-legacy-security-flyer-old-page-1.png",
+        "bmv-legacy-security-flyer-old-page-2.png"
+      ],
+      "limitations": [
+        "Historical SecureID-era guidance; not current policy.",
+        "Card callouts are baked into the full-page native image on page 1."
+      ]
+    },
+    {
+      "file": "bmv-security-flyer.pdf",
+      "source_url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf",
+      "final_url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf",
+      "mime_type": "application/pdf",
+      "sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+      "bytes": 2083574,
+      "status": "downloaded",
+      "source_class": "government",
+      "kind": "image_bearing",
+      "coverage": [
+        "current and legacy adult/under-21 fronts and backs",
+        "interim/extension front and back"
+      ],
+      "review_previews": [
+        "bmv-security-flyer-page-1.png",
+        "bmv-security-flyer-page-2.png",
+        "bmv-security-flyer-page-3.png"
+      ],
+      "limitations": [
+        "Native card groups retain annotation callouts.",
+        "Footnote describes title wording change after 2022-01-01; specimen dates are illustrative and do not establish runtime issuance intervals."
+      ]
+    },
+    {
+      "file": "bmv-driver-manual.pdf",
+      "source_url": "https://www.in.gov/bmv/licenses-permits-ids/files/drivers-manual.pdf",
+      "final_url": "https://www.in.gov/bmv/licenses-permits-ids/files/drivers-manual.pdf",
+      "mime_type": "application/pdf",
+      "sha256": "6e60b06a2e4837b01ab27aec8f4053da23bc2d5f50582cb8229e0432717ebfdd",
+      "bytes": 37519849,
+      "status": "downloaded",
+      "source_class": "government",
+      "kind": "image_bearing",
+      "coverage": [
+        "current-generation adult and under-21 Driver\u2019s License fronts",
+        "donor and military-indicator front/back plates",
+        "separate native background layers"
+      ],
+      "review_previews": [
+        "manual-page-06.png",
+        "manual-page-22.png"
+      ],
+      "limitations": [
+        "Only relevant specimen pages inspected in this 84-page manual.",
+        "Background-only resources are not complete specimens.",
+        "PDF page numbers differ from printed page numbers."
+      ]
+    },
+    {
+      "file": "bmv-legal-professionals.html",
+      "source_url": "https://www.in.gov/bmv/resources/legal/legal-professionals/",
+      "final_url": "https://www.in.gov/bmv/resources/legal/legal-professionals/",
+      "mime_type": "text/html;charset=UTF-8",
+      "sha256": "ea1b3470d7e98dbd2cfb318447768fd041eb21ba58943cdfbf780d6d01d2428b",
+      "bytes": 45453,
+      "status": "downloaded",
+      "source_class": "government",
+      "kind": "discovery_context",
+      "coverage": [
+        "Parent page linking Top 10 credential reference"
+      ],
+      "limitations": []
+    },
+    {
+      "file": "bmv-top10-credential.pdf",
+      "source_url": "https://www.in.gov/dA/502c1794a3/Top-10-Things-to-Know_Final.pdf?language_id=1",
+      "final_url": "https://www.in.gov/dA/502c1794a3/Top-10-Things-to-Know_Final.pdf?language_id=1",
+      "mime_type": "application/pdf",
+      "sha256": "c15e229ea8b6b939df7e390dd1ba364bcf921d05e50aa5cc7dc3ceb8059aff62",
+      "bytes": 1270565,
+      "status": "downloaded",
+      "source_class": "government",
+      "kind": "image_bearing",
+      "discovery_file": "bmv-legal-professionals.html",
+      "coverage": [
+        "2019-generation adult Operator License front",
+        "legacy adult Operator License front",
+        "design-feature explanatory artwork"
+      ],
+      "review_previews": [
+        "bmv-top10-page1.png"
+      ],
+      "limitations": [
+        "Two new-style native fronts are renditions of one specimen, not separate cohorts."
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "bmv-driver-manual-xref-56.jpeg",
+      "source_file": "bmv-driver-manual.pdf",
+      "source_sha256": "6e60b06a2e4837b01ab27aec8f4053da23bc2d5f50582cb8229e0432717ebfdd",
+      "pdf_object_xref": 56,
+      "resource_page_number": 6,
+      "width_px": 397,
+      "height_px": 251,
+      "sha256": "3de8f0eb44c1553109e25ceb5c58f39a844968e81e11a366a411bfaa3c5de664",
+      "mask": {
+        "file": "bmv-driver-manual-mask-55.png",
+        "pdf_object_xref": 55,
+        "sha256": "49c9a90da8c446df77b00acb04980875e61169627b3c1071f4cf7be29cddf23e"
+      },
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_visually_inspected"
+    },
+    {
+      "file": "bmv-driver-manual-xref-58.jpeg",
+      "source_file": "bmv-driver-manual.pdf",
+      "source_sha256": "6e60b06a2e4837b01ab27aec8f4053da23bc2d5f50582cb8229e0432717ebfdd",
+      "pdf_object_xref": 58,
+      "resource_page_number": 6,
+      "width_px": 256,
+      "height_px": 399,
+      "sha256": "8e502fc63ce9936e5974ab0748b77e2e8e4f962baef7fb9c2fcf11c29f7bf811",
+      "mask": {
+        "file": "bmv-driver-manual-mask-57.png",
+        "pdf_object_xref": 57,
+        "sha256": "33bbf2afb4a26d87fcdf63e65388f4225cf67b0227aca7c410da4f58c3005233"
+      },
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_visually_inspected",
+      "review_note": "Vertical Driver\u2019s License with TEMPORARY marking, distinct from paper interim credential."
+    },
+    {
+      "file": "bmv-driver-manual-xref-275.png",
+      "source_file": "bmv-driver-manual.pdf",
+      "source_sha256": "6e60b06a2e4837b01ab27aec8f4053da23bc2d5f50582cb8229e0432717ebfdd",
+      "pdf_object_xref": 275,
+      "resource_page_number": 22,
+      "width_px": 1010,
+      "height_px": 637,
+      "sha256": "2cbfc01fceabbea7686590202572c2aa6fb27a83c27cdcd9110261729263d364",
+      "reference_kind": "background_artwork_only",
+      "visual_review": "native_resource_visually_inspected",
+      "review_note": "Separate native artwork layer without populated holder data; not a complete card specimen."
+    },
+    {
+      "file": "bmv-driver-manual-xref-276.png",
+      "source_file": "bmv-driver-manual.pdf",
+      "source_sha256": "6e60b06a2e4837b01ab27aec8f4053da23bc2d5f50582cb8229e0432717ebfdd",
+      "pdf_object_xref": 276,
+      "resource_page_number": 22,
+      "width_px": 1012,
+      "height_px": 638,
+      "sha256": "5b05043c61c0370fb1499a4d6024edc51e5cb3c68197be24080bc4a11fa0f8da",
+      "reference_kind": "background_artwork_only",
+      "visual_review": "native_resource_visually_inspected",
+      "review_note": "Separate native artwork layer without populated holder data; not a complete card specimen."
+    },
+    {
+      "file": "bmv-driver-manual-xref-278.png",
+      "source_file": "bmv-driver-manual.pdf",
+      "source_sha256": "6e60b06a2e4837b01ab27aec8f4053da23bc2d5f50582cb8229e0432717ebfdd",
+      "pdf_object_xref": 278,
+      "resource_page_number": 22,
+      "width_px": 637,
+      "height_px": 1010,
+      "sha256": "b0cb2e335304b459f2e13c80a9ca73c778d165bdbd76c2aa483bf720ddd39e9c",
+      "reference_kind": "background_artwork_only",
+      "visual_review": "native_resource_visually_inspected",
+      "review_note": "Separate native artwork layer without populated holder data; not a complete card specimen."
+    },
+    {
+      "file": "bmv-security-flyer-xref-111.jpeg",
+      "source_file": "bmv-security-flyer.pdf",
+      "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+      "pdf_object_xref": 111,
+      "resource_page_number": 1,
+      "width_px": 735,
+      "height_px": 223,
+      "sha256": "58464a8a473e60101941cebb634659f552cceb2e816de34a90f592df7aec8068",
+      "mask": {
+        "file": "bmv-security-flyer-mask-110.png",
+        "pdf_object_xref": 110,
+        "sha256": "22345a42fd83553e3bd8194ab032fa95d1abc63f29fadea0b0e4ca75366e194a"
+      },
+      "reference_kind": "annotated_legacy_card_composite",
+      "visual_review": "native_resource_visually_inspected",
+      "review_note": "Adult front, vertical front and back with callout annotations retained."
+    },
+    {
+      "file": "bmv-security-flyer-xref-7.png",
+      "source_file": "bmv-security-flyer.pdf",
+      "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+      "pdf_object_xref": 7,
+      "resource_page_number": 2,
+      "width_px": 610,
+      "height_px": 266,
+      "sha256": "449a8928b4bf3207b752700dcf27eb3c9fafbec0373bc7fe5df04c3de2a5d391",
+      "mask": {
+        "file": "bmv-security-flyer-mask-6.jpeg",
+        "pdf_object_xref": 6,
+        "sha256": "9e4dfe99c58188d0efd398883ea202fa96792e9f72aca96b1fb00c01973596c7"
+      },
+      "reference_kind": "interim_paper_front",
+      "visual_review": "native_resource_visually_inspected"
+    },
+    {
+      "file": "bmv-security-flyer-xref-11.png",
+      "source_file": "bmv-security-flyer.pdf",
+      "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+      "pdf_object_xref": 11,
+      "resource_page_number": 2,
+      "width_px": 612,
+      "height_px": 264,
+      "sha256": "8f7d46497d84b5697bf36946924360c028b1488f7313c2bc992bc599b90d24ec",
+      "mask": {
+        "file": "bmv-security-flyer-mask-10.jpeg",
+        "pdf_object_xref": 10,
+        "sha256": "feeb79a7dcb2d8ff19bc798fa48d5c8a536fcdcbbd78446cefe021ce26f7b200"
+      },
+      "reference_kind": "interim_paper_back",
+      "visual_review": "native_resource_visually_inspected"
+    },
+    {
+      "file": "bmv-security-flyer-xref-23.jpeg",
+      "source_file": "bmv-security-flyer.pdf",
+      "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+      "pdf_object_xref": 23,
+      "resource_page_number": 3,
+      "width_px": 735,
+      "height_px": 223,
+      "sha256": "6018a94dcfb0d855cd826322408afaf4da4babeca7a8dcce5a5515ee9d7d0365",
+      "mask": {
+        "file": "bmv-security-flyer-mask-22.png",
+        "pdf_object_xref": 22,
+        "sha256": "bc73da8f6d52e941f364955a577af3941dfb8544f1a866c413b5538713a250f3"
+      },
+      "reference_kind": "annotated_current_card_composite",
+      "visual_review": "native_resource_visually_inspected",
+      "review_note": "Adult front, vertical front and back with callout annotations retained."
+    },
+    {
+      "file": "bmv-top10-credential-xref-31.png",
+      "source_file": "bmv-top10-credential.pdf",
+      "source_sha256": "c15e229ea8b6b939df7e390dd1ba364bcf921d05e50aa5cc7dc3ceb8059aff62",
+      "pdf_object_xref": 31,
+      "resource_page_number": 1,
+      "width_px": 357,
+      "height_px": 225,
+      "sha256": "366417499ffd21e4cd27b472ad1877c0349eebfb1e39deeb0906a31b8fa4ebf3",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_visually_inspected",
+      "review_note": "2019-generation Operator License specimen; these two resources are renditions of the same specimen."
+    },
+    {
+      "file": "bmv-top10-credential-xref-32.png",
+      "source_file": "bmv-top10-credential.pdf",
+      "source_sha256": "c15e229ea8b6b939df7e390dd1ba364bcf921d05e50aa5cc7dc3ceb8059aff62",
+      "pdf_object_xref": 32,
+      "resource_page_number": 1,
+      "width_px": 303,
+      "height_px": 191,
+      "sha256": "aa3c410573b571b9458460024d99040be051c7192178eeacb952f6920d01a3ec",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_visually_inspected",
+      "review_note": "2019-generation Operator License specimen; these two resources are renditions of the same specimen."
+    },
+    {
+      "file": "bmv-top10-credential-xref-33.png",
+      "source_file": "bmv-top10-credential.pdf",
+      "source_sha256": "c15e229ea8b6b939df7e390dd1ba364bcf921d05e50aa5cc7dc3ceb8059aff62",
+      "pdf_object_xref": 33,
+      "resource_page_number": 1,
+      "width_px": 304,
+      "height_px": 192,
+      "sha256": "f3e593108ed726f9bcfc6a76da26f7b6d85c7bdd8f092b6a3b4842fadc733e03",
+      "mask": {
+        "file": "bmv-top10-credential-mask-47.png",
+        "pdf_object_xref": 47,
+        "sha256": "53b6067bf516d583706f2a55a79fbc235f507bd82f66ba94c2ac4cc18a3122d9"
+      },
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_visually_inspected"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "bmv-design-hub.html",
+      "source_url": "https://www.in.gov/bmv/2895.htm",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "bmv-media-hub.html",
+      "source_url": "https://www.in.gov/bmv/2787.htm",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "bmv-2019-launch-release.pdf",
+      "source_url": "https://www.in.gov/bmv/files/PR-New-Credential-Final.pdf",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "recorder-2019-redesign.html",
+      "source_url": "https://indianapolisrecorder.com/1f0cdee4-9d9c-11e9-838b-1fa5786375e9/",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "recorder-2019-provided-specimen.jpg",
+      "source_url": "https://indianapolisrecorder.com/wp-content/uploads/2020/11/887e4b80799ebe2f5c8776f40b4a6b71.jpg",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "other_routes_checked": [
+    {
+      "url": "https://www.in.gov/atc/tobacco-resources/tobacco-information/",
+      "result": "Tobacco/alcohol agency search found policy and permit resources; no specimen file retained from this route."
+    },
+    {
+      "url": "https://indianapublicmedia.org/news/state-updating-licenses%2C-ids-for-first-time-since-2007.php",
+      "result": "Press lead redirects to ipm.org; no image acquired."
+    }
+  ],
+  "remaining_gaps": [
+    "Separate current identification-card and CDL specimens, including document-specific backs.",
+    "Clean individually composed populated backs; flyer composites and source pages retain back references.",
+    "Standalone UV reference plates or photographs.",
+    "Full issuance intervals and physical geometry remain unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": false,
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "IN",
+    "verified_at": "2026-10-26T17:29:08.131884+00:00",
+    "local_directory": "output/research/IN",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/IN/c5bba432eaa1f4093dae40b85e6b543b1ae8168a400218783cda5a12dbfdaa02/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/IN.json",
+    "archive_sha256": "c5bba432eaa1f4093dae40b85e6b543b1ae8168a400218783cda5a12dbfdaa02",
+    "archive_size_bytes": 42156392,
+    "transport_chunks": 2,
+    "verified_restored_files": 37,
+    "verification": "Downloaded private vault archive, restored with existing snapshot helpers, and compared every restored file byte-for-byte with durable local copies.",
+    "public_media": false
+  },
+  "status": "bounded_research_pass_preserved_not_catalog_integrated"
+}
