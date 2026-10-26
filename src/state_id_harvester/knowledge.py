@@ -10,6 +10,8 @@ from pydantic import AwareDatetime, ConfigDict, Field, HttpUrl, StringConstraint
 
 from .models import SHA256_PATTERN, Record
 
+PDF_MEDIA_TYPE = "application/pdf"
+
 Identifier = Annotated[str, StringConstraints(pattern=r"^[A-Za-z0-9_-]{1,80}$")]
 Digest = Annotated[str, StringConstraints(pattern=SHA256_PATTERN)]
 Text = Annotated[str, StringConstraints(min_length=1, max_length=2000, pattern=r"\S")]
@@ -89,20 +91,20 @@ class SourcePublication(KnowledgeRecord):
             self.processing != "pending" or self.page_count is not None
         ):
             raise ValueError("Missing originals cannot have extracted page metadata")
-        if self.media_type != "application/pdf" and self.page_count is not None:
+        if self.media_type != PDF_MEDIA_TYPE and self.page_count is not None:
             raise ValueError("Only PDFs have physical PDF page counts")
-        if self.media_type == "application/pdf" and self.processing in {
-            "native_text",
-            "image_only",
-        }:
-            if self.page_count is None:
-                raise ValueError("Parsed PDFs require page counts")
+        if (
+            self.media_type == PDF_MEDIA_TYPE
+            and self.processing in {"native_text", "image_only"}
+            and self.page_count is None
+        ):
+            raise ValueError("Parsed PDFs require page counts")
         if self.processing == "native_text" and self.media_type not in {
-            "application/pdf",
+            PDF_MEDIA_TYPE,
             "text/html",
         }:
             raise ValueError("Native text requires PDF or HTML content")
-        if self.processing == "image_only" and self.media_type != "application/pdf":
+        if self.processing == "image_only" and self.media_type != PDF_MEDIA_TYPE:
             raise ValueError("Image-only is a PDF processing state")
         return self
 
@@ -326,7 +328,7 @@ class DocumentKnowledge(KnowledgeRecord):
             if isinstance(item, PdfEvidence):
                 count = self.source.page_count
                 if (
-                    self.source.media_type != "application/pdf"
+                    self.source.media_type != PDF_MEDIA_TYPE
                     or count is None
                     or item.page_number > count
                 ):
@@ -346,7 +348,7 @@ class DocumentKnowledge(KnowledgeRecord):
         self, section: DocumentSection, evidence: dict[str, Evidence]
     ) -> None:
         self.validate_references(section.evidence_ids, evidence)
-        if self.source.media_type != "application/pdf":
+        if self.source.media_type != PDF_MEDIA_TYPE:
             if section.page_start is not None:
                 raise ValueError("Non-PDF sections cannot have PDF page bounds")
             return

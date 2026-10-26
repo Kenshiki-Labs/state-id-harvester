@@ -11,7 +11,7 @@ import pymupdf
 from pydantic import Field, StringConstraints, field_validator, model_validator
 
 from .knowledge import Digest, Index, KnowledgeRecord, PositiveInt, Role
-from .knowledge_evidence import NativePdfPacket, load_grounded_pdf_knowledge
+from .knowledge_evidence import NativePage, NativePdfPacket, load_grounded_pdf_knowledge
 from .paths import contained_path, managed_path
 
 MAX_SOURCE_BYTES = 128 * 1024 * 1024
@@ -172,18 +172,24 @@ def verify_native_pdf(source: bytes, packet: NativePdfPacket) -> None:
             raise ValueError("PDF encryption or page count mismatch")
         text_bytes = 0
         for page, supplied in zip(document, packet.pages, strict=True):
-            if (page.rect.width, page.rect.height) != (supplied.width_pt, supplied.height_pt):
-                raise ValueError("Native packet page dimensions differ from PDF")
-            actual = []
-            for block in page.get_text("blocks"):
-                if block[6] == 0 and block[4].strip():
-                    text_bytes += len(block[4].encode())
-                    if text_bytes > MAX_PACKET_BYTES:
-                        raise ValueError("Native PDF text exceeds admission budget")
-                    actual.append((int(block[5]), tuple(block[:4]), block[4]))
-            claimed = [(block.block_id, block.bbox, block.text) for block in supplied.blocks]
-            if actual != claimed:
-                raise ValueError("Native packet blocks differ from actual PDF")
+            text_bytes = verify_native_page(page, supplied, text_bytes)
+
+
+def verify_native_page(page: pymupdf.Page, supplied: NativePage, text_bytes: int) -> int:
+    """Check one full page while carrying the document-wide native text budget."""
+    if (page.rect.width, page.rect.height) != (supplied.width_pt, supplied.height_pt):
+        raise ValueError("Native packet page dimensions differ from PDF")
+    actual = []
+    for block in page.get_text("blocks"):
+        if block[6] == 0 and block[4].strip():
+            text_bytes += len(block[4].encode())
+            if text_bytes > MAX_PACKET_BYTES:
+                raise ValueError("Native PDF text exceeds admission budget")
+            actual.append((int(block[5]), tuple(block[:4]), block[4]))
+    claimed = [(block.block_id, block.bbox, block.text) for block in supplied.blocks]
+    if actual != claimed:
+        raise ValueError("Native packet blocks differ from actual PDF")
+    return text_bytes
 
 
 def immutable_write(root: Path, key: str, data: bytes) -> None:

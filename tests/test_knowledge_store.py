@@ -270,19 +270,22 @@ def test_manifest_rejects_invalid_types_keys_and_cross_source_bindings(
     for key in path[:-1]:
         target = target[key]
     target[path[-1]] = value
+    serialized = json.dumps(raw)
     with pytest.raises(ValueError):
-        store.PreparedManifest.model_validate_json(json.dumps(raw))
+        store.PreparedManifest.model_validate_json(serialized)
 
 
 def test_manifest_rejects_duplicate_artifacts_and_unknown_fields(inputs, tmp_path):
     raw = prepare(inputs, tmp_path / "prepared")
     raw["artifacts"][1] = raw["artifacts"][0]
+    serialized = json.dumps(raw)
     with pytest.raises(ValueError, match="each artifact kind"):
-        store.PreparedManifest.model_validate_json(json.dumps(raw))
+        store.PreparedManifest.model_validate_json(serialized)
     raw = prepare(inputs, tmp_path / "prepared")
     raw["registry_projection"]["quote"] = "This does not belong in the registry"
+    serialized = json.dumps(raw)
     with pytest.raises(ValueError):
-        store.PreparedManifest.model_validate_json(json.dumps(raw))
+        store.PreparedManifest.model_validate_json(serialized)
 
 
 def test_prepared_manifest_models_are_frozen_and_validate_roundtrip(inputs, tmp_path):
@@ -302,5 +305,6 @@ def test_knowledge_index_has_one_typed_current_record_per_source(inputs, tmp_pat
         store.KnowledgeIndex(documents=(projection, projection))
     raw = index.model_dump(mode="json")
     raw["documents"][0]["statement_count"] = "0"
+    serialized = json.dumps(raw)
     with pytest.raises(ValueError):
-        store.KnowledgeIndex.model_validate_json(json.dumps(raw))
+        store.KnowledgeIndex.model_validate_json(serialized)

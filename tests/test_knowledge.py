@@ -110,22 +110,25 @@ def test_valid_record_roundtrips_and_grounding_preserves_unreviewed_status(docum
 @pytest.mark.parametrize("value", ["2", True, 2.0, 0, -1, None])
 def test_pdf_page_count_is_a_real_positive_integer(document, value):
     document["source"]["page_count"] = value
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
 
 
 @pytest.mark.parametrize("value", [True, 1.0, "1", 0, 2, None])
 def test_schema_version_cannot_be_coerced(document, value):
     document["schema_version"] = value
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
 
 
 @pytest.mark.parametrize("value", [True, "1", 1.5, 0, 4])
 def test_inspection_levels_are_strict_and_bounded(document, value):
     document["statements"][0]["content"]["inspection_level"] = value
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
 
 
 @pytest.mark.parametrize(
@@ -160,8 +163,9 @@ def test_nested_data_types_and_vocabulary_are_enforced(document, path, value):
     for key in path[:-1]:
         target = target[key]
     target[path[-1]] = value
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
 
 
 @pytest.mark.parametrize(
@@ -178,8 +182,9 @@ def test_unknown_fields_cannot_hide_executable_policy_or_geometry(document, part
         "content": document["statements"][0]["content"],
     }
     targets[part]["executable_rule"] = "reject()"
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError, match="extra_forbidden"):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
 
 
 @pytest.mark.parametrize(
@@ -215,26 +220,30 @@ def test_inconsistent_evidence_graphs_fail_admission(document, path, value):
     for key in path[:-1]:
         target = target[key]
     target[path[-1]] = value
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
 
 
 @pytest.mark.parametrize("collection", ["evidence", "sections", "subjects", "statements"])
 def test_duplicate_entity_identifiers_are_rejected(document, collection):
     document[collection].append(copy.deepcopy(document[collection][0]))
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError, match="Duplicate"):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
 
 
 def test_same_page_does_not_authorize_cross_section_or_subject_leakage(document):
     document["evidence"].append({**document["evidence"][0], "evidence_id": "e2"})
     document["statements"][0]["evidence_ids"] = ["e2"]
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError, match="section's evidence scope"):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
     document["statements"][0]["evidence_ids"] = ["e1"]
     document["subjects"][0]["evidence_ids"] = ["e2"]
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError, match="subject outside"):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
 
 
 def test_text_only_policy_has_no_fabricated_image_or_credential_target(document):
@@ -263,8 +272,9 @@ def test_text_only_policy_has_no_fabricated_image_or_credential_target(document)
     assert record.statements[0].subject_id is None
     assert record.source.page_count is None
     document["evidence"][0]["page_number"] = 1
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
 
 
 @pytest.mark.parametrize(
@@ -294,10 +304,9 @@ def test_supported_date_precision_is_retained(precision, value):
     ],
 )
 def test_invalid_or_overprecise_dates_fail(precision, value):
+    validation_input_0 = wire({"precision": precision, "value": value, "evidence_ids": ["e1"]})
     with pytest.raises(ValidationError):
-        EffectiveDate.model_validate_json(
-            wire({"precision": precision, "value": value, "evidence_ids": ["e1"]})
-        )
+        EffectiveDate.model_validate_json(validation_input_0)
 
 
 @pytest.mark.parametrize("failure", ["hash", "count", "block", "invented_quote", "fuzzy_quote"])
@@ -312,8 +321,10 @@ def test_grounding_rejects_exact_quote_and_packet_identity_attacks(document, pac
         document["evidence"][0]["quote"] = "Unstated security feature"
     else:
         document["evidence"][0]["quote"] = QUOTE.lower()
+    validation_input_0 = wire(document)
+    validation_input_1 = wire(packet)
     with pytest.raises(ValueError):
-        load_grounded_pdf_knowledge(wire(document), wire(packet))
+        load_grounded_pdf_knowledge(validation_input_0, validation_input_1)
 
 
 @pytest.mark.parametrize(
@@ -334,14 +345,16 @@ def test_native_packet_types_and_geometry_cannot_be_corrupted(packet, failure):
         page["blocks"][0]["bbox"] = [500.0, 100.0, 72.0, 72.0]
     else:
         page["width_pt"] = "612.0"
+    validation_input_0 = wire(packet)
     with pytest.raises(ValidationError):
-        NativePdfPacket.model_validate_json(wire(packet))
+        NativePdfPacket.model_validate_json(validation_input_0)
 
 
 def test_discriminated_payload_cannot_mix_policy_with_security_fields(document):
     document["statements"][0]["content"]["domain"] = "acceptance_policy"
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
 
 
 def test_missing_originals_can_remain_explicit_without_invented_extraction(document):
@@ -386,8 +399,9 @@ def test_preconstructed_nested_models_are_revalidated(document):
 )
 def test_source_metadata_types_and_timestamp_timezone_are_enforced(document, field, value):
     document["source"][field] = value
+    validation_input_0 = wire(document)
     with pytest.raises(ValidationError):
-        load_knowledge(wire(document))
+        load_knowledge(validation_input_0)
 
 
 @pytest.mark.parametrize(
@@ -450,8 +464,9 @@ def test_duplicate_json_fields_are_rejected_before_last_value_wins(raw):
 
 def test_native_packet_cannot_hide_duplicate_fields(document, packet):
     raw = wire(packet).replace(b'"page_number": 1', b'"page_number": 999, "page_number": 1')
+    validation_input_0 = wire(document)
     with pytest.raises(ValueError, match="Duplicate JSON"):
-        load_grounded_pdf_knowledge(wire(document), raw)
+        load_grounded_pdf_knowledge(validation_input_0, raw)
 
 
 def test_admission_rejects_python_objects_instead_of_json_bytes(document):
