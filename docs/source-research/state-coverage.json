@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "observed_at": "2026-10-26T20:21:54.827114+00:00",
-  "publication_revision": "2c029670a958906de7cd951b9b64d30f86971bef",
+  "observed_at": "2026-10-26T20:38:31.546195+00:00",
+  "publication_revision": "7e0359b20d801ecd5d53ce6f40ea64e777244e91",
   "measurement": "Anonymous public image-index membership; every image downloaded and SHA-256 verified. Source-publication counts do not imply credential-image coverage.",
-  "state_jurisdictions_with_images": 42,
-  "state_jurisdictions_without_images": 9,
-  "state_reference_images": 514,
+  "state_jurisdictions_with_images": 51,
+  "state_jurisdictions_without_images": 0,
+  "state_reference_images": 628,
   "federal_reference_images": 30,
   "jurisdictions": [
     {
@@ -115,11 +115,10 @@
     {
       "code": "IL",
       "name": "Illinois",
-      "source_publications": 0,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/IL-2026-10-26.json",
-      "research_assignment": "research_maine"
+      "source_publications": 2,
+      "published_reference_images": 7,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/IL-2026-10-26.json"
     },
     {
       "code": "IN",
@@ -132,11 +131,10 @@
     {
       "code": "IA",
       "name": "Iowa",
-      "source_publications": 2,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/IA-2026-10-26.json",
-      "research_assignment": "research_maine"
+      "source_publications": 4,
+      "published_reference_images": 7,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/IA-2026-10-26.json"
     },
     {
       "code": "KS",
@@ -261,11 +259,10 @@
     {
       "code": "NM",
       "name": "New Mexico",
-      "source_publications": 2,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/NM-2026-10-26.json",
-      "research_assignment": "research_michigan"
+      "source_publications": 5,
+      "published_reference_images": 4,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/NM-2026-10-26.json"
     },
     {
       "code": "NY",
@@ -278,11 +275,10 @@
     {
       "code": "NC",
       "name": "North Carolina",
-      "source_publications": 0,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/NC-2026-10-26.json",
-      "research_assignment": "research_michigan"
+      "source_publications": 4,
+      "published_reference_images": 6,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/NC-2026-10-26.json"
     },
     {
       "code": "ND",
@@ -343,20 +339,18 @@
     {
       "code": "SD",
       "name": "South Dakota",
-      "source_publications": 0,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/SD-2026-10-26.json",
-      "research_assignment": "research_maryland"
+      "source_publications": 2,
+      "published_reference_images": 11,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/SD-2026-10-26.json"
     },
     {
       "code": "TN",
       "name": "Tennessee",
-      "source_publications": 0,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/TN-2026-10-26.json",
-      "research_assignment": "research_maryland"
+      "source_publications": 4,
+      "published_reference_images": 20,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/TN-2026-10-26.json"
     },
     {
       "code": "TX",
@@ -369,20 +363,18 @@
     {
       "code": "UT",
       "name": "Utah",
-      "source_publications": 0,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/UT-2026-10-26.json",
-      "research_assignment": "research_maine"
+      "source_publications": 3,
+      "published_reference_images": 8,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/UT-2026-10-26.json"
     },
     {
       "code": "VT",
       "name": "Vermont",
-      "source_publications": 0,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/VT-2026-10-26.json",
-      "research_assignment": "research_michigan"
+      "source_publications": 3,
+      "published_reference_images": 31,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/VT-2026-10-26.json"
     },
     {
       "code": "VA",
@@ -411,11 +403,10 @@
     {
       "code": "WI",
       "name": "Wisconsin",
-      "source_publications": 1,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/WI-2026-10-26.json",
-      "research_assignment": "research_maine"
+      "source_publications": 4,
+      "published_reference_images": 20,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/WI-2026-10-26.json"
     },
     {
       "code": "WY",
@@ -425,5 +416,13 @@
       "research_status": "published_references_available",
       "research_record": null
     }
-  ]
+  ],
+  "verification": {
+    "anonymous_png_hash_checks_passed": 658,
+    "state_collection_browser_checks_passed": 51,
+    "federal_collection_browser_check_passed": true,
+    "browser_page_errors": 0,
+    "public_index_sha256": "99c20ed1623809de28464439ec8bfdd3890ecc4fc275af7f3b62765394a17743",
+    "source_preservation_ledger": "docs/source-research/research-preservation-2026-10-26.json"
+  }
 }

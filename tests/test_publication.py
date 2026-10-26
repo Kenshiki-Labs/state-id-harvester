@@ -610,3 +610,36 @@ def test_private_preparation_includes_quarantined_federal_plates_without_id1_cla
     assert federal_item["review_status"] == "reference_only"
     assert federal_item["source_sha256"] == federal_download.sha256
     assert (destination / f"{federal_item['asset_sha256']}.png").is_file()
+
+
+@pytest.mark.parametrize("code", ["WA", "AK", "HI", "DC"])
+def test_allows_only_named_vector_state_artwork_in_public_html(code):
+    markup = f'<img src="/artwork/states/{code}.svg" alt="" width="80" height="80" loading="lazy">'
+    assert not guard.has_unapproved_html_image(markup)
+
+
+@pytest.mark.parametrize(
+    "source",
+    [
+        "/artwork/states/ZZ.svg",
+        "/artwork/states/PR.svg",
+        "/artwork/states/WA.png",
+        "/artwork/states/../WA.svg",
+        "/artwork/states/%57A.svg",
+        "/artwork/states/WA.svg?source=private",
+        "https://example.gov/artwork/states/WA.svg",
+        "//example.gov/artwork/states/WA.svg",
+    ],
+)
+def test_state_artwork_does_not_allow_other_static_or_external_images(source):
+    assert guard.has_unapproved_html_image(f'<img src="{source}" alt="">')
+
+
+def test_state_artwork_does_not_allow_active_image_attributes_or_embedded_rasters(tmp_path):
+    assert guard.has_unapproved_html_image(
+        '<img src="/artwork/states/WA.svg" alt="" onerror="alert(1)">'
+    )
+    artwork = tmp_path / "artwork" / "states" / "WA.svg"
+    artwork.parent.mkdir(parents=True)
+    artwork.write_text('<svg data-cadastre-diagram="independent"><image href="private.png"/></svg>')
+    assert guard.inspect_public_tree(tmp_path)

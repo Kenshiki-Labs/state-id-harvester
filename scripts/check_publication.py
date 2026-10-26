@@ -14,6 +14,8 @@ from urllib.parse import unquote, urlsplit
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
 
+from state_id_harvester.seeds import STATE_DOMAINS
+
 PUBLIC_LABEL_PATTERN = r"^[^\x00-\x1f<>]+$"
 
 
@@ -161,10 +163,11 @@ SOURCE_KEYS = re.compile(
     re.IGNORECASE,
 )
 PUBLIC_SPECIMEN_PATH = re.compile(r"/v1/specimens/(?:[A-Z]{2}|US_FED)/[A-Za-z0-9_-]{1,150}")
+PUBLIC_STATE_ARTWORK_PATHS = {f"/artwork/states/{code}.svg" for code in STATE_DOMAINS}
 
 
 class PublicImageInspector(HTMLParser):
-    """Permit only Worker-resolved references; static source media stays forbidden."""
+    """Permit indexed references and known vector state badges; forbid source media."""
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
@@ -183,7 +186,10 @@ class PublicImageInspector(HTMLParser):
             len(names) != len(set(names))
             or any(name not in allowed for name in names)
             or source is None
-            or PUBLIC_SPECIMEN_PATH.fullmatch(source) is None
+            or (
+                PUBLIC_SPECIMEN_PATH.fullmatch(source) is None
+                and source not in PUBLIC_STATE_ARTWORK_PATHS
+            )
         ):
             self.invalid = True
 

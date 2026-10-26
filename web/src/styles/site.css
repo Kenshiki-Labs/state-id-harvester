@@ -2484,10 +2484,13 @@ h2 > span {
 .directory-count, .directory-note { font-size: 12px; color: var(--muted); margin: 20px 0; line-height: 1.7; }
 .directory-note a { color: var(--teal); }
 .directory-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.directory-card { display: block; position: relative; padding: 24px; border: 1px solid var(--line); border-radius: 12px; min-width: 0; transition: border-color .2s; }
-.directory-card h2 { font-size: 22px; font-weight: 500; margin: 14px 0 10px; letter-spacing: -.025em; }
-.directory-card > span:not(.state-code):not(.directory-arrow) { font-size: 12px; color: var(--muted); }
-.directory-arrow { position: absolute; right: 24px; top: 24px; color: var(--teal); }
+.directory-card { display: flex; align-items: center; gap: 20px; position: relative; padding: 24px; border: 1px solid var(--line); border-radius: 12px; min-width: 0; transition: border-color .2s; }
+.directory-artwork { display: block; width: 80px; height: 80px; flex-shrink: 0; }
+.directory-card-copy { min-width: 0; padding-right: 8px; }
+.directory-card .state-code { display: block; width: auto; font-size: 10px; letter-spacing: .1em; }
+.directory-card h2 { font-size: 20px; font-weight: 500; margin: 7px 0 8px; letter-spacing: -.025em; line-height: 1.2; }
+.directory-source-count { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.directory-arrow { position: absolute; right: 18px; top: 18px; color: var(--teal); font-size: 13px; }
 .collection-page .state-detail { max-height: none; overflow: visible; padding: 0; }
 .collection-heading, .reference-gallery-heading h2 { font-size: 20px; font-weight: 500; letter-spacing: -.02em; margin: 18px 0; }
 .collection-page .reference-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); }
@@ -2495,6 +2498,8 @@ h2 > span {
 .collection-back { display: inline-block; margin-top: 36px; }
 @media (max-width: 760px) { .entry-grid, .directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .entry-grid > :last-child { grid-column: 1 / -1; } }
 @media (max-width: 480px) { .entry-grid, .directory-grid { grid-template-columns: minmax(0, 1fr); } .entry-card, .directory-card { padding: 22px; } .page-breadcrumb { margin-bottom: 28px; } }
+@media (min-width: 761px) and (max-width: 1080px) { .directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .directory-grid { grid-template-columns: minmax(0, 1fr); } }
 
 .collection-segments { display: inline-flex; gap: 4px; padding: 5px; border: 1px solid var(--line); border-radius: 10px; background: #f3f5f4; margin-bottom: 32px; }
 .collection-segments a { padding: 10px 30px; border-radius: 6px; color: var(--muted); font-size: 14px; font-weight: 600; }

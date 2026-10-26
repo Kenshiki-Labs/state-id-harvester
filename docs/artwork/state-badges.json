@@ -1,0 +1,458 @@
+{
+  "schema_version": 1,
+  "source_repository": "pulse-gov-native",
+  "source_revision": "59d714db8d30f7d5280f8c57b53ae8074545ab67",
+  "source_checkout_dirty": true,
+  "source_files": [
+    {
+      "path": "SSANative/Views/StateSeal.swift",
+      "sha256": "e01d7a24b5969cce88603c79f36b7be4983fd479167af46074bba12cd7e5b4e4"
+    },
+    {
+      "path": "SSANative/Views/VerificationArtworkStyle.swift",
+      "sha256": "d351fdaa688a2ec21832c271e0f7c5a3337e5b6f46d3114bd1c351ec632c5486"
+    },
+    {
+      "path": "SSANative/Design/SealDrawing.swift",
+      "sha256": "fc8004dcb845711fdf18700ef5828df0624fb6008bb4d01fea2e79b815e38f7f"
+    },
+    {
+      "path": "SSANative/Design/SealGeography.swift",
+      "sha256": "df1cbd80c722dc3d8048a144cd14e55cb773b1cb68f1320b1e4b85a443f3e51a"
+    },
+    {
+      "path": "SSANative/Design/Theme.swift",
+      "sha256": "b5433c6e40db7cedc20c1040865f9b2777fd4fc5ca340c54ee8ed059eac78a39"
+    },
+    {
+      "path": "SSANative/Design/Tokens.generated.swift",
+      "sha256": "579b9cd640e3ca2c11a9601f4dab18ee69c3b31325d1b5785b13b09c12324b62"
+    }
+  ],
+  "description": "Decorative jurisdiction artwork; not official seals or identity evidence.",
+  "rendering": {
+    "size": 80,
+    "compact_disc": 0.99,
+    "area_target": "0.5*pi",
+    "reach_limit": 0.92,
+    "native_gradient_degrees": 135,
+    "native_gradient_stops": [
+      "#b7cee0",
+      "#e4d5bd"
+    ],
+    "plate_approximation": "32 diagonal circular caps; no SVG paint servers",
+    "geography": "All native rings retained; coordinates rounded to 0.01 SVG units",
+    "legend": false,
+    "location_marker": false
+  },
+  "assets": [
+    {
+      "code": "AK",
+      "source": "SSANative/Resources/SealGeography/seal-geography-AK.json",
+      "source_sha256": "fda13da8281f0a85c66521c5d20d428f18af56d234f4106fe3ff0cef811ed993",
+      "asset": "web/public/artwork/states/AK.svg",
+      "asset_sha256": "983fd5c6e430400d00c6474743ebcf1653e8b28ddad6e88bb9e5feaa549b27f4",
+      "bytes": 115711
+    },
+    {
+      "code": "AL",
+      "source": "SSANative/Resources/SealGeography/seal-geography-AL.json",
+      "source_sha256": "08b2b12f2b952ab975bada4ea7fdcec32c0b98d21724c60fa25cc31cc7551d6b",
+      "asset": "web/public/artwork/states/AL.svg",
+      "asset_sha256": "92141a061cc01f61d823e4bc77fd12fd80a095184223851aa56cb0e339955d74",
+      "bytes": 26259
+    },
+    {
+      "code": "AR",
+      "source": "SSANative/Resources/SealGeography/seal-geography-AR.json",
+      "source_sha256": "fcca32002ef83bc18f2983521fb2298fa4c94d8ed82c4b930b4c446d55635d3f",
+      "asset": "web/public/artwork/states/AR.svg",
+      "asset_sha256": "af357cb744b247cf2b9cfe03da8f8e38b1d6258425b68c26f189a045f6be306f",
+      "bytes": 33735
+    },
+    {
+      "code": "AZ",
+      "source": "SSANative/Resources/SealGeography/seal-geography-AZ.json",
+      "source_sha256": "62bc2bba48f88fd8e061c5a0ba423de30fdff1965f6164b203ef52520944fd58",
+      "asset": "web/public/artwork/states/AZ.svg",
+      "asset_sha256": "dc22dbdc84ccb7d723f052f7cef450f082b393063f3eef1e593fd0e54395808c",
+      "bytes": 21411
+    },
+    {
+      "code": "CA",
+      "source": "SSANative/Resources/SealGeography/seal-geography-CA.json",
+      "source_sha256": "cf74a30e5a57f8c95f8d64052796f104f6be913b1612de5e5b0e1a31fc4c8ada",
+      "asset": "web/public/artwork/states/CA.svg",
+      "asset_sha256": "ee77b2d9eba6c6f22a0900d334e8dbb32a6ed193978c9c2cf15bd17995126b02",
+      "bytes": 40605
+    },
+    {
+      "code": "CO",
+      "source": "SSANative/Resources/SealGeography/seal-geography-CO.json",
+      "source_sha256": "430207b01f3afa0c8e0c0f8e97249587d2e97675bfebc3ee4f8d544d2f455578",
+      "asset": "web/public/artwork/states/CO.svg",
+      "asset_sha256": "9d0fac8c3f31105c51383539369676e19c0e126c50f60759c197a81c54c767df",
+      "bytes": 5547
+    },
+    {
+      "code": "CT",
+      "source": "SSANative/Resources/SealGeography/seal-geography-CT.json",
+      "source_sha256": "8839bba0183809d205d0ffbd8b186f541c6f63e052bbaadc100cd8ea97be0943",
+      "asset": "web/public/artwork/states/CT.svg",
+      "asset_sha256": "b0ff8e7efb4c60674032527f6a19eb4235d5de41eca0fddffe487b79a69130e6",
+      "bytes": 5103
+    },
+    {
+      "code": "DC",
+      "source": "SSANative/Resources/SealGeography/seal-geography-DC.json",
+      "source_sha256": "ce016c4dc9cd2dd22ca114ab61fad024733c1f3c6cf222d31c1a43c26f85e89c",
+      "asset": "web/public/artwork/states/DC.svg",
+      "asset_sha256": "aef57f5bbdecbeaf13f578335c1a73c42bd0a4eae5ff939ba7f0c558342fca78",
+      "bytes": 3783
+    },
+    {
+      "code": "DE",
+      "source": "SSANative/Resources/SealGeography/seal-geography-DE.json",
+      "source_sha256": "1d211373bb9e27e2c16674b33f10c0b529eb3899dd0fd6c4329fc43c8c8771de",
+      "asset": "web/public/artwork/states/DE.svg",
+      "asset_sha256": "f6a3382436d211b5a33cfa9e79921413334d23a3a86d78fe8b9cada079def160",
+      "bytes": 5511
+    },
+    {
+      "code": "FL",
+      "source": "SSANative/Resources/SealGeography/seal-geography-FL.json",
+      "source_sha256": "71a17ee7b7c990d3fb018fcce8ef088f5302ff49914cd6f3b1378c2fa11c81f5",
+      "asset": "web/public/artwork/states/FL.svg",
+      "asset_sha256": "bb514c500157a0fdeae84c15f385468940740f52673dca24910c4b5bf539142c",
+      "bytes": 53097
+    },
+    {
+      "code": "GA",
+      "source": "SSANative/Resources/SealGeography/seal-geography-GA.json",
+      "source_sha256": "0917a2b605740b236ef2192d006d63862c86931663095d30897675ac14931d22",
+      "asset": "web/public/artwork/states/GA.svg",
+      "asset_sha256": "4c849473ceef94929cfcf569cfdaa019fb3516f09e8e50ef171c87e53601a499",
+      "bytes": 60339
+    },
+    {
+      "code": "HI",
+      "source": "SSANative/Resources/SealGeography/seal-geography-HI.json",
+      "source_sha256": "9dce9ec4f0f06d4123380745f09d6279d4dd9e6107d02151d741f4050d9b1cf2",
+      "asset": "web/public/artwork/states/HI.svg",
+      "asset_sha256": "9b46d74554da04a97325941547ef6dda47e3cbed738d6346f506dc67cadff5e5",
+      "bytes": 25548
+    },
+    {
+      "code": "IA",
+      "source": "SSANative/Resources/SealGeography/seal-geography-IA.json",
+      "source_sha256": "3d34b5109d8c5d775bee5edbfbc0d3ce47f28155474d0e7698779cebdff9637d",
+      "asset": "web/public/artwork/states/IA.svg",
+      "asset_sha256": "45446c1a604107a307dab8be577718cebfdc22105ca32e24586df01b32ddfec0",
+      "bytes": 37277
+    },
+    {
+      "code": "ID",
+      "source": "SSANative/Resources/SealGeography/seal-geography-ID.json",
+      "source_sha256": "2714f04deca11f17c1d9ab135eb6f7a5a48a1a9256c2cb05fc86c4b6a44f725c",
+      "asset": "web/public/artwork/states/ID.svg",
+      "asset_sha256": "9c283c8972f2d6109fbc8067a49e7b19da29537db4ced8170ab6690f08a37cec",
+      "bytes": 67853
+    },
+    {
+      "code": "IL",
+      "source": "SSANative/Resources/SealGeography/seal-geography-IL.json",
+      "source_sha256": "637d5bf640ba12812957de529a7c26a4e79c401343209eff597235d85b680e5f",
+      "asset": "web/public/artwork/states/IL.svg",
+      "asset_sha256": "ba3500b48cbd1b5c70757312ab961383e28453140106b4e8f4fbe1b3a4664657",
+      "bytes": 37791
+    },
+    {
+      "code": "IN",
+      "source": "SSANative/Resources/SealGeography/seal-geography-IN.json",
+      "source_sha256": "d5bfe4ed86a4f8e09429a405f9613c6a2a6d300900902f91d2b2889537075c34",
+      "asset": "web/public/artwork/states/IN.svg",
+      "asset_sha256": "f66617ef0731f0c76f000f24c6486cd3ec3330c71df50c261f99158ec87daf05",
+      "bytes": 27735
+    },
+    {
+      "code": "KS",
+      "source": "SSANative/Resources/SealGeography/seal-geography-KS.json",
+      "source_sha256": "aef1e237a139f6c6ead69fbcef27b762aee5af744b64c40cfca79ce0916de346",
+      "asset": "web/public/artwork/states/KS.svg",
+      "asset_sha256": "5ac351bb5356a6794d3a4871e52c734e7b5d12dfd2cbc5e362d46d39ca995d6b",
+      "bytes": 10548
+    },
+    {
+      "code": "KY",
+      "source": "SSANative/Resources/SealGeography/seal-geography-KY.json",
+      "source_sha256": "d8e7334ddb54a462b195beed9276fc05bb1672bb0a52eb34b06e27169f2827aa",
+      "asset": "web/public/artwork/states/KY.svg",
+      "asset_sha256": "1ed681a5dae9e9cf3235fb271ba78879329d5983523b38691436af8414afca81",
+      "bytes": 49787
+    },
+    {
+      "code": "LA",
+      "source": "SSANative/Resources/SealGeography/seal-geography-LA.json",
+      "source_sha256": "0461663e15fd416688c76c1e5b13ba12e2460bd5ea7e141573bc8de5b0dddf60",
+      "asset": "web/public/artwork/states/LA.svg",
+      "asset_sha256": "11129db8402f6da5800a026321a468f21c3dbde4ad2aab49bc81f76a49feb45c",
+      "bytes": 55491
+    },
+    {
+      "code": "MA",
+      "source": "SSANative/Resources/SealGeography/seal-geography-MA.json",
+      "source_sha256": "fdf09219fd9a1c84e4fd4840bf9f84a58bfdef0ee8b1c7995245be24fdd82e6d",
+      "asset": "web/public/artwork/states/MA.svg",
+      "asset_sha256": "5307fb28845a3296219222287dc8b0f2be95a23b249bc2363a60c1b085828e1c",
+      "bytes": 9986
+    },
+    {
+      "code": "MD",
+      "source": "SSANative/Resources/SealGeography/seal-geography-MD.json",
+      "source_sha256": "ea06149e3c4067c5b220519f95a994a1ab9d2c69bdeba7ec04aefa952071de50",
+      "asset": "web/public/artwork/states/MD.svg",
+      "asset_sha256": "9fa7c597675fb0c8a33e4bccb585a4bc6ea2247df17c5f5e0378856d0367def2",
+      "bytes": 27655
+    },
+    {
+      "code": "ME",
+      "source": "SSANative/Resources/SealGeography/seal-geography-ME.json",
+      "source_sha256": "25b7cb4266fae3d914c9ab8ff81b96bcba32ba2f62df8a44e13d734c95c4a53f",
+      "asset": "web/public/artwork/states/ME.svg",
+      "asset_sha256": "9291321196b9b2275e1343fad849ac3ef1cd3d8d328d5b928f97033eda1f0f7d",
+      "bytes": 50561
+    },
+    {
+      "code": "MI",
+      "source": "SSANative/Resources/SealGeography/seal-geography-MI.json",
+      "source_sha256": "a90dae7d6ef01ff8a8f02f7fc6b8c23a6ea6a4f278e836cf8e48225611c6a4d9",
+      "asset": "web/public/artwork/states/MI.svg",
+      "asset_sha256": "4889fae6c72498ea4d2f93668be0bbb20eb8f34293d568b42dd88b504c2c2542",
+      "bytes": 26606
+    },
+    {
+      "code": "MN",
+      "source": "SSANative/Resources/SealGeography/seal-geography-MN.json",
+      "source_sha256": "41a50a7c93152d7fb2dd8db0d9890bdfd6a1a9aa7cb5321d454021bc789bd4be",
+      "asset": "web/public/artwork/states/MN.svg",
+      "asset_sha256": "9028e55339a956280a42cae1b817d439961d757a4929845ce1abed2781e82bd3",
+      "bytes": 74827
+    },
+    {
+      "code": "MO",
+      "source": "SSANative/Resources/SealGeography/seal-geography-MO.json",
+      "source_sha256": "6726ddbcbbe87500237dbae65e1650f4c94c3c6f3e4bb4032b7230eb1efeb0ff",
+      "asset": "web/public/artwork/states/MO.svg",
+      "asset_sha256": "ef3efa777cfcb05b9b27c623a433de0e13d0b3d0b1c565eb0c43f1c170486700",
+      "bytes": 35931
+    },
+    {
+      "code": "MS",
+      "source": "SSANative/Resources/SealGeography/seal-geography-MS.json",
+      "source_sha256": "dba95d57870da4fbb5e82c4696e220befe7dd5e7f4da8f5ad8be1cdbbd002e3e",
+      "asset": "web/public/artwork/states/MS.svg",
+      "asset_sha256": "dc5322895816894caee04cffb51aecb10bcc792f9975761ef068d58dce623e59",
+      "bytes": 40704
+    },
+    {
+      "code": "MT",
+      "source": "SSANative/Resources/SealGeography/seal-geography-MT.json",
+      "source_sha256": "fe5d33efddc0ba8bb0acce2d2a59ccb4064c03d62c6827cba595c45f485d92ae",
+      "asset": "web/public/artwork/states/MT.svg",
+      "asset_sha256": "eaf06d0e6cfa5f451bf903c119fac2b14e6145524042c6b047d42a7451001154",
+      "bytes": 55255
+    },
+    {
+      "code": "NC",
+      "source": "SSANative/Resources/SealGeography/seal-geography-NC.json",
+      "source_sha256": "b7413d44820ee4f506494decd5084bdf23b0aaa29bb1fb4d3c7e70a293520ad3",
+      "asset": "web/public/artwork/states/NC.svg",
+      "asset_sha256": "c6f069e85434eea26ef8cba358ce9cd31dccf938b83e8b46800def64a3fd5dd0",
+      "bytes": 33869
+    },
+    {
+      "code": "ND",
+      "source": "SSANative/Resources/SealGeography/seal-geography-ND.json",
+      "source_sha256": "85a3599f0c44bce780e239c8873e01e5a475dd1d8fe67eac0d958593ae7982e6",
+      "asset": "web/public/artwork/states/ND.svg",
+      "asset_sha256": "10fb90d2a26ce5850a079f9917e079ab80b1e9e48d7dd617212c688cd93615b9",
+      "bytes": 46971
+    },
+    {
+      "code": "NE",
+      "source": "SSANative/Resources/SealGeography/seal-geography-NE.json",
+      "source_sha256": "cfad33d9ae4de475b3454c47173b9363534d89ac3acf9b35e51db8f38caa72c9",
+      "asset": "web/public/artwork/states/NE.svg",
+      "asset_sha256": "23db6d295f2e6b831d14a06b2dc95f7d0aad603878a12910cda443e237dcf555",
+      "bytes": 21812
+    },
+    {
+      "code": "NH",
+      "source": "SSANative/Resources/SealGeography/seal-geography-NH.json",
+      "source_sha256": "aecc060b70ce88faf1022ed930e7c6dc11cf4c9482f099e43e2a1159286fa0f9",
+      "asset": "web/public/artwork/states/NH.svg",
+      "asset_sha256": "454f30ee91a4c1e6777973d28a7863c4957ac1084ec864823a77cfa3a02b0afb",
+      "bytes": 33595
+    },
+    {
+      "code": "NJ",
+      "source": "SSANative/Resources/SealGeography/seal-geography-NJ.json",
+      "source_sha256": "988938b8eb9e058d8a5c68bbe70f85c886521fc0c0ce7df189e37c3241634d57",
+      "asset": "web/public/artwork/states/NJ.svg",
+      "asset_sha256": "38d135cb1033f386acd88af8a04071a6f4893d1e7a3d5f9c81c311fb30922e65",
+      "bytes": 14200
+    },
+    {
+      "code": "NM",
+      "source": "SSANative/Resources/SealGeography/seal-geography-NM.json",
+      "source_sha256": "957613b103f6d8dda71bbe20ad99a2e16d37761a7dcd25498f2776159148d40c",
+      "asset": "web/public/artwork/states/NM.svg",
+      "asset_sha256": "fbc39670cf748cfe37874dadfa6a0b37cbf0f1ba83a71163ec930d84acb6a329",
+      "bytes": 6459
+    },
+    {
+      "code": "NV",
+      "source": "SSANative/Resources/SealGeography/seal-geography-NV.json",
+      "source_sha256": "930acf35b97adf4f36e985154770edb8a040261fe68460cb5b1c8311b7229b7d",
+      "asset": "web/public/artwork/states/NV.svg",
+      "asset_sha256": "7e7be870485b3230f1a97e24fa7774d2bb59ff381dc27067388d136a0ce9d5fd",
+      "bytes": 13047
+    },
+    {
+      "code": "NY",
+      "source": "SSANative/Resources/SealGeography/seal-geography-NY.json",
+      "source_sha256": "130f9fc8030f5518c0f3bf0165ab8d86182682d0b5155e84dfd81845f307c95b",
+      "asset": "web/public/artwork/states/NY.svg",
+      "asset_sha256": "a70ef76c540fc82c0fab017f163cc8026f42d642b3a8ac70031fc5e5493d4e58",
+      "bytes": 21704
+    },
+    {
+      "code": "OH",
+      "source": "SSANative/Resources/SealGeography/seal-geography-OH.json",
+      "source_sha256": "b81e4f637a4d1c9ed83e1c78fd78044bbd03fe396b1e6442b660caf982453922",
+      "asset": "web/public/artwork/states/OH.svg",
+      "asset_sha256": "d22192c64359870ea45872d5b89f258616c550371c49a3086ee9b5b606727318",
+      "bytes": 22959
+    },
+    {
+      "code": "OK",
+      "source": "SSANative/Resources/SealGeography/seal-geography-OK.json",
+      "source_sha256": "e126c6ff5e247eb7252d91cf168bdde456e433eee9702d69397d32a1b38fcf55",
+      "asset": "web/public/artwork/states/OK.svg",
+      "asset_sha256": "1a85c2e290f56825cbc86c293681fbc4879cb7703832cc3beb753816a862418d",
+      "bytes": 41469
+    },
+    {
+      "code": "OR",
+      "source": "SSANative/Resources/SealGeography/seal-geography-OR.json",
+      "source_sha256": "91ecbdaa157557a9fdaa16f334a400653118c06cb2a0a8304a1e779ad7aa80a5",
+      "asset": "web/public/artwork/states/OR.svg",
+      "asset_sha256": "8409ecdcd98620e5e1dd4be54cdf73a006efdbd02884b2d9d337bcb47bcc3ed0",
+      "bytes": 26432
+    },
+    {
+      "code": "PA",
+      "source": "SSANative/Resources/SealGeography/seal-geography-PA.json",
+      "source_sha256": "4d5996dc6070f372199015c754c23f0c31e3c39f33221097cd6096b7eae56be4",
+      "asset": "web/public/artwork/states/PA.svg",
+      "asset_sha256": "954378277571cfc699279d751c21fb397b4a67546db9817b7deae5e4ee4aa4aa",
+      "bytes": 16479
+    },
+    {
+      "code": "RI",
+      "source": "SSANative/Resources/SealGeography/seal-geography-RI.json",
+      "source_sha256": "76d59ed3e339bb76e7f7073418fd39d33fc96babe172df0aed07aa491db1b169",
+      "asset": "web/public/artwork/states/RI.svg",
+      "asset_sha256": "2548b8426417ab44e8d6c2911b402e4a7b8ce188ee955b07cb4393614eb8d6cd",
+      "bytes": 5647
+    },
+    {
+      "code": "SC",
+      "source": "SSANative/Resources/SealGeography/seal-geography-SC.json",
+      "source_sha256": "61cb0acd322279e40364568ae8dccf14243296c23c5033b95da11a667d8c26de",
+      "asset": "web/public/artwork/states/SC.svg",
+      "asset_sha256": "791948c38c7ae1f3f8c4b869e4005eb2b20da9c7f900ebf501771d231a16144e",
+      "bytes": 39949
+    },
+    {
+      "code": "SD",
+      "source": "SSANative/Resources/SealGeography/seal-geography-SD.json",
+      "source_sha256": "9740d91823c7a3256591b9493643a902e48b723ffa3d1be57aafaba06c87c972",
+      "asset": "web/public/artwork/states/SD.svg",
+      "asset_sha256": "deec46afc86185072837127d606f38f714069bfeaf193cbdb104c92db10df61d",
+      "bytes": 27051
+    },
+    {
+      "code": "TN",
+      "source": "SSANative/Resources/SealGeography/seal-geography-TN.json",
+      "source_sha256": "5ea8529ddbbfb86c1183b2f98180cb736740bab4627f30c7cd81ff13cddc4f1e",
+      "asset": "web/public/artwork/states/TN.svg",
+      "asset_sha256": "f184cb39bd125ee7b5648f69b09b9c4c96938404ff941f09298995b962a8736b",
+      "bytes": 33223
+    },
+    {
+      "code": "TX",
+      "source": "SSANative/Resources/SealGeography/seal-geography-TX.json",
+      "source_sha256": "29f63680e89951afbd8fd1332f33c686aedc487603c00d1ea58fe05bd740f2a5",
+      "asset": "web/public/artwork/states/TX.svg",
+      "asset_sha256": "8119ef3f18d60678fb5621f8e75f3387a19f55019fe0b4a9e12c3fc4168c0ee8",
+      "bytes": 151662
+    },
+    {
+      "code": "UT",
+      "source": "SSANative/Resources/SealGeography/seal-geography-UT.json",
+      "source_sha256": "90e76c69370db4ab10892728ec5ae7d1c0672107a3dc0c5f63fe8cf970a6cfbc",
+      "asset": "web/public/artwork/states/UT.svg",
+      "asset_sha256": "06d741f4206b50db2277a5b16105deded575a2caf125a3f8c5d1441e704c1024",
+      "bytes": 5616
+    },
+    {
+      "code": "VA",
+      "source": "SSANative/Resources/SealGeography/seal-geography-VA.json",
+      "source_sha256": "90c1d8ffa1cd587620c7c4c06b5211e9d8a53b1a0bb79f3e8474f9541699868c",
+      "asset": "web/public/artwork/states/VA.svg",
+      "asset_sha256": "39de1b39a770437d5494c9761b6fa7117336b8d93597277edb8080679fd333b6",
+      "bytes": 58648
+    },
+    {
+      "code": "VT",
+      "source": "SSANative/Resources/SealGeography/seal-geography-VT.json",
+      "source_sha256": "8a8ce30dd0f50398196c196426b790eac17bff0fb056ebb1a5c4a9d991e9a2db",
+      "asset": "web/public/artwork/states/VT.svg",
+      "asset_sha256": "7e189437cdd3d46f106bc38c0c647ff938efe1dcaea1cd9b80f0449a437dc9f9",
+      "bytes": 29835
+    },
+    {
+      "code": "WA",
+      "source": "SSANative/Resources/SealGeography/seal-geography-WA.json",
+      "source_sha256": "8074e0249df904b55565eda6ccdd89980bd668dd4b0e6400ae7a35511c4a9719",
+      "asset": "web/public/artwork/states/WA.svg",
+      "asset_sha256": "4af0767616020b10ede9879766fdba244b4155ad6906819aad456acfba39fff5",
+      "bytes": 12686
+    },
+    {
+      "code": "WI",
+      "source": "SSANative/Resources/SealGeography/seal-geography-WI.json",
+      "source_sha256": "01ea12a2b1a1c4eabb106fca0ceab983cd480655d6fbe2d491062c8a21cb4bd4",
+      "asset": "web/public/artwork/states/WI.svg",
+      "asset_sha256": "e55a02c4c1515339c6fcf147cdd21754f4c225ee889ebc02b499cae0c5930860",
+      "bytes": 38451
+    },
+    {
+      "code": "WV",
+      "source": "SSANative/Resources/SealGeography/seal-geography-WV.json",
+      "source_sha256": "2e67749969201c1ef87eb8667311cd085a112259a465d6af8cab64e8dbc22549",
+      "asset": "web/public/artwork/states/WV.svg",
+      "asset_sha256": "b6dde2a02e268f051cbf9a920162e0888f9f3fca1d5d2bf94b5ffdcd8a47cf1a",
+      "bytes": 69121
+    },
+    {
+      "code": "WY",
+      "source": "SSANative/Resources/SealGeography/seal-geography-WY.json",
+      "source_sha256": "a97f3f1d3ace6b19e26926fadd2b971340039c6a3eee1fd59329d5723d944435",
+      "asset": "web/public/artwork/states/WY.svg",
+      "asset_sha256": "f9a77217e154e11f98e7efd9bbbd5980bf085827fb6ac7c8b5feaaad5590926c",
+      "bytes": 5895
+    }
+  ]
+}
