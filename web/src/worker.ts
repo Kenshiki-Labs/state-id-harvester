@@ -10,6 +10,7 @@ import {
   validateApplication,
 } from "./core/policy";
 import { validatePngHeader } from "./core/png";
+import { id1NormalizationIndex } from "./core/id1-normalizations";
 import { timingSafeEqual } from "node:crypto";
 
 const encoder = new TextEncoder();
@@ -334,9 +335,12 @@ async function specimens(
     ),
   );
   if (path === "/v1/specimens") {
-    const body = request.method === "HEAD" ? null : JSON.stringify({
-      specimens: index.map(({ key: _key, ...entry }) => entry),
-    });
+    const body =
+      request.method === "HEAD"
+        ? null
+        : JSON.stringify({
+            specimens: index.map(({ key: _key, ...entry }) => entry),
+          });
     return new Response(body, {
       headers: {
         "Content-Type": "application/json",
@@ -350,6 +354,13 @@ async function specimens(
     match &&
     index.find((item) => item.state === match[1] && item.id === match[2]);
   if (!entry) throw new PolicyError("not_found", 404);
+  return specimenImage(request, env, entry);
+}
+async function specimenImage(
+  request: Request,
+  env: Env,
+  entry: Specimen,
+): Promise<Response> {
   const asset = await env.VAULT.get(entry.key);
   if (!asset || !matchesSpecimen(asset, entry)) {
     await asset?.body.cancel();
@@ -362,9 +373,66 @@ async function specimens(
       "Content-Length": String(asset.size),
       "Cache-Control": "public, max-age=300",
       "Content-Disposition": `inline; filename="${entry.state}-${entry.id}.png"`,
-      "ETag": `"${entry.asset_sha256}"`,
+      ETag: `"${entry.asset_sha256}"`,
     },
   });
+}
+async function publicIndex(
+  env: Env,
+  key: string,
+  optional = false,
+): Promise<unknown> {
+  const object = await env.VAULT.get(key);
+  if (!object && optional) return { specimens: [] };
+  if (!object || object.size > 4 * 1024 * 1024) {
+    await object?.body.cancel();
+    throw new PolicyError("catalog_unavailable", 503);
+  }
+  try {
+    const bytes = await boundedBytes(object.body, 4 * 1024 * 1024);
+    return JSON.parse(new TextDecoder("utf-8", { fatal: true }).decode(bytes));
+  } catch {
+    throw new PolicyError("catalog_unavailable", 503);
+  }
+}
+async function id1Normalizations(
+  request: Request,
+  env: Env,
+  path: string,
+): Promise<Response> {
+  let index;
+  try {
+    const originals = specimenIndex(
+      await publicIndex(env, "indexes/specimens.json"),
+    );
+    index = id1NormalizationIndex(
+      await publicIndex(env, "indexes/id1-normalizations.json", true),
+      originals,
+    );
+  } catch {
+    throw new PolicyError("catalog_unavailable", 503);
+  }
+  if (path === "/v1/id1-normalizations")
+    return new Response(
+      request.method === "HEAD"
+        ? null
+        : JSON.stringify({
+            specimens: index.map(({ key: _key, ...entry }) => entry),
+          }),
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "Cache-Control": "public, max-age=60",
+        },
+      },
+    );
+  const match =
+    /^\/v1\/id1-normalizations\/([A-Z]{2})\/([A-Za-z0-9_-]{1,150})$/.exec(path);
+  const entry =
+    match &&
+    index.find((item) => item.state === match[1] && item.id === match[2]);
+  if (!entry) throw new PolicyError("not_found", 404);
+  return specimenImage(request, env, entry);
 }
 async function reviewApplication(
   request: Request,
@@ -600,7 +668,10 @@ async function apiRoute(
   );
   const publicRead =
     ["GET", "HEAD"].includes(request.method) &&
-    (path === "/v1/specimens" || path.startsWith("/v1/specimens/"));
+    (path === "/v1/specimens" ||
+      path.startsWith("/v1/specimens/") ||
+      path === "/v1/id1-normalizations" ||
+      path.startsWith("/v1/id1-normalizations/"));
   let limiter = env.RATE_LIMITER;
   if (category === "ingest") limiter = env.INGEST_LIMITER;
   if (publicRead) limiter = env.PUBLIC_READ_LIMITER;
@@ -617,7 +688,10 @@ async function apiRoute(
     return internal(request, env, path);
   if (request.method === "POST" && path.startsWith("/v1/access-requests"))
     return accessRoute(request, env, path);
-  if (publicRead) return specimens(request, env, path);
+  if (publicRead)
+    return path.startsWith("/v1/id1-normalizations")
+      ? id1Normalizations(request, env, path)
+      : specimens(request, env, path);
   throw new PolicyError("not_found", 404);
 }
 export default {

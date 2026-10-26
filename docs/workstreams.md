@@ -1,0 +1,48 @@
+# Delivery workstreams
+
+Only one delivery is active. A workstream is released after its runtime acceptance
+checks pass; a commit, local artifact, or green build alone does not make it released.
+
+## Active: publish the ID-1 easy pass
+
+- [x] Retain original source assets and original public references.
+- [x] Produce and independently verify 414 ID-1 reference derivatives across all
+  50 states and DC, including six explicit card-body crops.
+- [x] Wire a reusable normalization gate into publication preparation.
+- [x] Pass normalization code CI and SonarCloud on `c54a65c`.
+- [x] Prepare marked public display derivatives and verify their source lineage.
+- [ ] Upload and read back all 414 immutable display objects before publishing
+  their index pointer.
+- [x] Add public normalized delivery and an in-modal Original / ID-1 control.
+  Local validation: 253 web tests, 46 targeted normalization/publication tests,
+  Astro and TypeScript checks, production build, and bundled-publication guard pass.
+- [ ] Pass combined release CI, SonarCloud, and artifact-publication checks.
+- [ ] Deploy and verify every normalized public image hash; verify the original
+  658-reference index remains unchanged.
+- [ ] Verify live collection pages, image switching, citations, keyboard/focus
+  behavior, and mobile layout.
+- [ ] Keep local and remote `dev` / `main` at the same release revision.
+
+Pending normalization: 214 references. Of these, 205 need card-body boundaries
+or separation of multiple cards, and nine need original-to-reference lineage
+recovered. Native image extents are approximate source geometry. This pass does
+not certify physical perimeter precision, remove embedded annotations, or accept
+runtime authentication templates.
+
+## Paused: source classification
+
+Preserve the source-register implementation and its artifacts. The current local
+register accounts for 599 source identities: 584 retained, 15 locally missing.
+Retained media include 177 PDFs, 117 HTML documents, and 290 original images.
+Classification is partial and has not been released. Its document-role labels
+remain provisional until the AAMVA reference vocabulary is assessed. No Docling,
+Unstructured, OCR, new source downloads, or vector database was introduced.
+
+Resume this delivery after the ID-1 release is accepted. Its next artifact is an
+evidence-backed document/section classification register and exception report,
+not a claim that all downloaded material is credential-security guidance.
+
+## Deferred dependencies
+
+Domain-specific claim extraction depends on classification. Embedding/vector
+index construction depends on validated structured records. Neither is active.
