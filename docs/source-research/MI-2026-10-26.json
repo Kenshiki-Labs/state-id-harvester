@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "MI",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T18:28:21.537101+00:00",
+  "scope": "Bounded Michigan manual source research. Useful finds retained and gaps recorded; no completeness requirement or catalog integration.",
+  "source_publications": [
+    {
+      "file": "sos-2024-retail-info.pdf",
+      "source_url": "https://content.govdelivery.com/attachments/MISOS/2024/01/23/file_attachments/2757477/MI_InfoSheet_Retail%20final.pdf",
+      "final_url": "https://content.govdelivery.com/attachments/MISOS/2024/01/23/file_attachments/2757477/MI_InfoSheet_Retail%20final.pdf",
+      "sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+      "bytes": 1214373,
+      "mime_type": "application/pdf",
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "2024 standard adult DL and under21 ID fronts",
+        "2024 enhanced adult DL and under21 ID fronts",
+        "Legacy enhanced adult DL and under21 standard ID fronts"
+      ],
+      "discovery_url": "https://www.michiganada.org/new-michigan-drivers-license-and-state-id/"
+    },
+    {
+      "file": "lara-adult-front.webp",
+      "source_url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/lcc/MLCC-Images/Driver-License-Regular.png?h=343&w=550&rev=35fb28df770949148f3bb79cb8427d83&extension=webp&hash=082331F4D13321978E5CADEEC9851FCD",
+      "final_url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/lcc/MLCC-Images/Driver-License-Regular.png?h=343&w=550&rev=35fb28df770949148f3bb79cb8427d83&extension=webp&hash=082331F4D13321978E5CADEEC9851FCD",
+      "bytes": 45532,
+      "sha256": "a1716d4d4593c86fcadacb67dbd6add4775035cfca836ed1ee0a04948492f88f",
+      "mime_type": "image/webp",
+      "status": "downloaded",
+      "transport": "ordinary browser same-origin fetch",
+      "source_class": "government",
+      "coverage": [
+        "2024 standard adult driver license front"
+      ]
+    },
+    {
+      "file": "lara-under21-front.webp",
+      "source_url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/lcc/MLCC-Images/51_Minor_DL.png?h=550&w=348&rev=87e019c734464c6b80f02bccaf573b6c&extension=webp&hash=46A458680D665191BADB24EBC48B3747",
+      "final_url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/lcc/MLCC-Images/51_Minor_DL.png?h=550&w=348&rev=87e019c734464c6b80f02bccaf573b6c&extension=webp&hash=46A458680D665191BADB24EBC48B3747",
+      "bytes": 42700,
+      "sha256": "8eedafa5d0842e3eebeb588485bcf8c818f3edf79666597c3c4b530d0f3bbf62",
+      "mime_type": "image/webp",
+      "status": "downloaded",
+      "transport": "ordinary browser same-origin fetch",
+      "source_class": "government",
+      "coverage": [
+        "2024 standard under21 driver license front"
+      ]
+    },
+    {
+      "file": "lara-under21-poster.pdf",
+      "source_url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/lcc/Under-21-Vertical-Drivers-License-Sheet.pdf?rev=deb5eef9d4454c39bfb98a6d56a8a123&hash=0EC07E2A3962418E382E7CB0AEAA0D0D",
+      "final_url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/lcc/Under-21-Vertical-Drivers-License-Sheet.pdf?rev=deb5eef9d4454c39bfb98a6d56a8a123&hash=0EC07E2A3962418E382E7CB0AEAA0D0D",
+      "bytes": 347840,
+      "sha256": "eb7d25403af9d0e7af3e968587e2acf66a59d20a502f272570e1154339f94df3",
+      "mime_type": "application/pdf",
+      "status": "downloaded",
+      "transport": "ordinary browser same-origin fetch",
+      "source_class": "government",
+      "coverage": [
+        "2024 standard under21 driver license front"
+      ]
+    },
+    {
+      "file": "lara-license-guide.html",
+      "source_url": "https://www.michigan.gov/lara/bureau-list/lcc/faq/new-drivers-licenses",
+      "final_url": "https://www.michigan.gov/lara/bureau-list/lcc/faq/new-drivers-licenses",
+      "sha256": "935649f067b8c2c7877236129acc37ec658045f0541ba74bb93cd3ca6b62c438",
+      "bytes": 464353,
+      "mime_type": "text/html",
+      "status": "downloaded",
+      "capture_kind": "rendered_dom_html",
+      "source_class": "government"
+    },
+    {
+      "file": "servsafe-legacy-michigan.pdf",
+      "source_url": "https://elearning.servsafe.com/Content/SSAMI/en_US/pdf/Michigan.pdf",
+      "final_url": "https://elearning.servsafe.com/Content/SSAMI/en_US/pdf/Michigan.pdf",
+      "sha256": "5bd881697da5889fad7ba0736e1d881ff584c86ce50ae3694e68dec2d895ef65",
+      "bytes": 1830125,
+      "mime_type": "application/pdf",
+      "status": "downloaded",
+      "capture_kind": "original_source_bytes",
+      "source_class": "training_provider",
+      "coverage": [
+        "Legacy standard adult DL/ID and under21 DL fronts",
+        "Legacy annotated back with UV/perforation detail and front-laminate illustration"
+      ],
+      "limitations": [
+        "Third-party training reproduction; back and laminate are annotated illustrative composites, not clean optical photographs."
+      ]
+    },
+    {
+      "file": "auto-dealers-2024-transition-parent.html",
+      "source_url": "https://www.michiganada.org/new-michigan-drivers-license-and-state-id/",
+      "final_url": "https://www.michiganada.org/new-michigan-drivers-license-and-state-id/",
+      "sha256": "b3feb404db489ab382a2ffee2c9f0deed4b6ee0b31811e2dbd18a4bafcc72f8d",
+      "bytes": 232317,
+      "mime_type": "text/html",
+      "status": "downloaded",
+      "source_class": "trade_association",
+      "coverage": [
+        "Parent linking official SOS GovDelivery transition PDF"
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "sos-2024-retail-info-xref-162.jpeg",
+      "source_file": "sos-2024-retail-info.pdf",
+      "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+      "pdf_object_xref": 162,
+      "resource_page_number": 1,
+      "width_px": 396,
+      "height_px": 621,
+      "sha256": "8742452b0f11c7f46dd48b5bcd120cc14749edb2a6ff198af6f8b1ea76783a34",
+      "mask": {
+        "file": "sos-2024-retail-info-mask-161.jpeg",
+        "pdf_object_xref": 161,
+        "sha256": "224b78d8d91ef460f45fe09ff6cfbbdbdb2babc6270874dc2a8d7ddb26670afe"
+      },
+      "reference_kind": "complete_sample_front",
+      "review_note": "Legacy under21 standard identification-card front",
+      "visual_review": "native_contact_sheet_and_source_page_visually_inspected",
+      "intrinsic_sample_marking_retained": true
+    },
+    {
+      "file": "sos-2024-retail-info-xref-164.jpeg",
+      "source_file": "sos-2024-retail-info.pdf",
+      "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+      "pdf_object_xref": 164,
+      "resource_page_number": 1,
+      "width_px": 617,
+      "height_px": 393,
+      "sha256": "37cd6b5ef3b34ca71ff0be66414bb4538ae025d3c4392c9b239f0ea0377e2b9b",
+      "mask": {
+        "file": "sos-2024-retail-info-mask-163.jpeg",
+        "pdf_object_xref": 163,
+        "sha256": "2842533ede410b2bd44e9960646ae59f54710ea3b632153149618335319429cd"
+      },
+      "reference_kind": "complete_sample_front",
+      "review_note": "Legacy enhanced adult driver-license front",
+      "visual_review": "native_contact_sheet_and_source_page_visually_inspected",
+      "intrinsic_sample_marking_retained": true
+    },
+    {
+      "file": "sos-2024-retail-info-xref-166.jpeg",
+      "source_file": "sos-2024-retail-info.pdf",
+      "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+      "pdf_object_xref": 166,
+      "resource_page_number": 1,
+      "width_px": 613,
+      "height_px": 386,
+      "sha256": "beed530cabe64dc1558a8517d57fca97810169675fc637405ab906b27d386374",
+      "mask": {
+        "file": "sos-2024-retail-info-mask-165.jpeg",
+        "pdf_object_xref": 165,
+        "sha256": "09a18445c2e14b576e344dc26cac8f7c2e8d92971ba834d19000a4b77c0a5d01"
+      },
+      "reference_kind": "complete_sample_front",
+      "review_note": "2024 standard adult driver-license front",
+      "visual_review": "native_contact_sheet_and_source_page_visually_inspected",
+      "intrinsic_sample_marking_retained": true
+    },
+    {
+      "file": "sos-2024-retail-info-xref-168.jpeg",
+      "source_file": "sos-2024-retail-info.pdf",
+      "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+      "pdf_object_xref": 168,
+      "resource_page_number": 1,
+      "width_px": 387,
+      "height_px": 612,
+      "sha256": "009f001246a76d968a210bdfa911f08516d28f7970deea46d3802494a8032d7c",
+      "mask": {
+        "file": "sos-2024-retail-info-mask-167.jpeg",
+        "pdf_object_xref": 167,
+        "sha256": "a4329b8c5cf154b27857631fd34e3bc073fe93d20f5d1e700c5eef8c1b61bfc1"
+      },
+      "reference_kind": "complete_sample_front",
+      "review_note": "2024 standard under21 identification-card front",
+      "visual_review": "native_contact_sheet_and_source_page_visually_inspected",
+      "intrinsic_sample_marking_retained": true
+    },
+    {
+      "file": "sos-2024-retail-info-xref-170.jpeg",
+      "source_file": "sos-2024-retail-info.pdf",
+      "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+      "pdf_object_xref": 170,
+      "resource_page_number": 1,
+      "width_px": 613,
+      "height_px": 386,
+      "sha256": "c135db3519a62c412a4089bc591d5526550d42b28f1232cd53fcfc17a03c14b9",
+      "mask": {
+        "file": "sos-2024-retail-info-mask-169.jpeg",
+        "pdf_object_xref": 169,
+        "sha256": "09a18445c2e14b576e344dc26cac8f7c2e8d92971ba834d19000a4b77c0a5d01"
+      },
+      "reference_kind": "complete_sample_front",
+      "review_note": "2024 enhanced adult driver-license front",
+      "visual_review": "native_contact_sheet_and_source_page_visually_inspected",
+      "intrinsic_sample_marking_retained": true
+    },
+    {
+      "file": "sos-2024-retail-info-xref-172.jpeg",
+      "source_file": "sos-2024-retail-info.pdf",
+      "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+      "pdf_object_xref": 172,
+      "resource_page_number": 1,
+      "width_px": 387,
+      "height_px": 612,
+      "sha256": "ee06d54f4385ad71a783660f2b866b729ffd94ffd2f047b3d6360ccbe10cabb8",
+      "mask": {
+        "file": "sos-2024-retail-info-mask-171.jpeg",
+        "pdf_object_xref": 171,
+        "sha256": "6782d6e1cdb213ae47489df2cb0654b07eeefc32b96457a8e877edd5cc65f3a1"
+      },
+      "reference_kind": "complete_sample_front",
+      "review_note": "2024 enhanced under21 identification-card front",
+      "visual_review": "native_contact_sheet_and_source_page_visually_inspected",
+      "intrinsic_sample_marking_retained": true
+    },
+    {
+      "file": "lara-under21-poster-xref-91.jpeg",
+      "source_file": "lara-under21-poster.pdf",
+      "source_sha256": "eb7d25403af9d0e7af3e968587e2acf66a59d20a502f272570e1154339f94df3",
+      "pdf_object_xref": 91,
+      "resource_page_number": 1,
+      "width_px": 379,
+      "height_px": 600,
+      "sha256": "8192950e5814ca45c585e7e0bc941e571d0d8e871b762561aed75fe61d82c642",
+      "mask": {
+        "file": "lara-under21-poster-mask-90.png",
+        "pdf_object_xref": 90,
+        "sha256": "a0884c324356cb0f0f6b895c12d4a5021760e944a29b8d951b1858446c9506a8"
+      },
+      "reference_kind": "complete_sample_front",
+      "review_note": "2024 standard under21 driver-license front",
+      "visual_review": "native_contact_sheet_and_source_page_visually_inspected",
+      "intrinsic_sample_marking_retained": true
+    },
+    {
+      "file": "servsafe-legacy-michigan-xref-64.jpeg",
+      "source_file": "servsafe-legacy-michigan.pdf",
+      "source_sha256": "5bd881697da5889fad7ba0736e1d881ff584c86ce50ae3694e68dec2d895ef65",
+      "pdf_object_xref": 64,
+      "resource_page_number": 20,
+      "width_px": 658,
+      "height_px": 507,
+      "sha256": "56eeee6a3b2e621efc444dd57975e871d029872be6d012507eff74fd19f36fa0",
+      "reference_kind": "annotated_page_composite",
+      "review_note": "Legacy adult DL/ID and under21 DL annotated composite; native object stored inverted relative to rendered page",
+      "visual_review": "native_contact_sheet_and_source_page_visually_inspected",
+      "intrinsic_sample_marking_retained": true
+    },
+    {
+      "file": "servsafe-legacy-michigan-xref-65.png",
+      "source_file": "servsafe-legacy-michigan.pdf",
+      "source_sha256": "5bd881697da5889fad7ba0736e1d881ff584c86ce50ae3694e68dec2d895ef65",
+      "pdf_object_xref": 65,
+      "resource_page_number": 20,
+      "width_px": 679,
+      "height_px": 1044,
+      "sha256": "f6af617a9104caba28b63c1eadff4ce8d4399904e4db95bf1b858172c57963e0",
+      "reference_kind": "annotated_page_composite",
+      "review_note": "Legacy back and front-laminate annotated composite with surrounding text; native object stored inverted relative to rendered page",
+      "visual_review": "native_contact_sheet_and_source_page_visually_inspected",
+      "intrinsic_sample_marking_retained": true
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "sos-license-hub.html",
+      "source_url": "https://www.michigan.gov/sos/license-id/license-and-id",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://www.michigan.gov/sos/license-id/license-and-id'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "file": "sos-2023-redesign-release.html",
+      "source_url": "https://www.michigan.gov/sos/resources/news/2023/12/20/return-of-green-and-white-license-plate-new-drivers-licenses-and-ids-with-higher-security",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://www.michigan.gov/sos/resources/news/2023/12/20/return-of-green-and-white-license-plate-new-drivers-licenses-and-ids-with-higher-security'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "file": "sos-2024-poster.pdf",
+      "source_url": "https://www.michigan.gov/sos/-/media/Project/Websites/sos/License-and-ID/Informational/Branch_NewLicenseIDPoster_85x11.pdf",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://www.michigan.gov/sos/-/media/Project/Websites/sos/License-and-ID/Informational/Branch_NewLicenseIDPoster_85x11.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    }
+  ],
+  "remaining_gaps": [
+    "Current-generation clean back specimen",
+    "Current enhanced under21 DL and adult identification-card fronts",
+    "Current CDL/chauffeur and interim paper examples",
+    "Actual UV/optical photographs rather than illustrative training graphics",
+    "Historical issuance intervals and measured geometry unreviewed"
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": false,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "MI",
+    "verified_at": "2026-10-26T18:28:53.197724+00:00",
+    "local_directory": "output/research/MI",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/MI/b19da91188607c75e51928f1f24725870121826681be6a59d318407d6affc43a/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/MI.json",
+    "archive_sha256": "b19da91188607c75e51928f1f24725870121826681be6a59d318407d6affc43a",
+    "archive_size_bytes": 10463152,
+    "transport_chunks": 1,
+    "verified_restored_files": 34,
+    "verification": "Downloaded private vault archive, restored with existing snapshot helpers, and compared every restored file byte-for-byte with durable local copies.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/MI"
+  },
+  "initial_download_failures_later_recovered": [
+    {
+      "file": "lara-license-guide.html",
+      "source_url": "https://www.michigan.gov/lara/bureau-list/lcc/faq/new-drivers-licenses",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://www.michigan.gov/lara/bureau-list/lcc/faq/new-drivers-licenses'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "file": "lara-under21-poster.pdf",
+      "source_url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/lcc/Under-21-Vertical-Drivers-License-Sheet.pdf",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://www.michigan.gov/lara/-/media/Project/Websites/lara/lcc/Under-21-Vertical-Drivers-License-Sheet.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "file": "servsafe-legacy-michigan.pdf",
+      "source_url": "https://elearning.servsafe.com/Content/SSAMI/en_US/pdf/Michigan.pdf",
+      "status": "failed",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)"
+    }
+  ],
+  "research_ledger_note": "Preserved local research-index.json records initial download failures; this public index separates subsequently recovered sources from outstanding failed leads."
+}

@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "ME",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T18:27:08.898462+00:00",
+  "scope": "Bounded Maine manual source research across issuer, alcohol-licensee training and historical press sources. Useful finds and explicit gaps; no exhaustive completion or catalog integration.",
+  "source_publications": [
+    {
+      "file": "sos-real-id.html",
+      "source_url": "https://www3.maine.gov/sos/bmv/driver-licenses-and-ids/real-id",
+      "final_url": "https://www3.maine.gov/sos/bmv/driver-licenses-and-ids/real-id",
+      "mime_type": "text/html; charset=UTF-8",
+      "sha256": "1965704ada1dddc763e60ab6ffc95cbbeebb07a73b72297e4360804fa686ebef",
+      "bytes": 113560,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Issuer parent page linking revised2022 printable brochure and2025 campaign graphic."
+      ],
+      "visual_review": "parent_html_retained"
+    },
+    {
+      "file": "sos-real-id-original.jpg",
+      "source_url": "https://www3.maine.gov/sos/sites/maine.gov.sos/files/images/2025-06/RealID_061025.jpg",
+      "final_url": "https://www3.maine.gov/sos/sites/maine.gov.sos/files/images/2025-06/RealID_061025.jpg",
+      "mime_type": "image/jpeg",
+      "sha256": "06d2384160ff500ad018a362da8368ec66b55444cab95d7c20988a8a8714f681",
+      "bytes": 72972,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Current issuer campaign composite with REAL ID adult DL front; exterior arrow/circle and messaging are baked into image."
+      ],
+      "visual_review": "visually_inspected_image_or_relevant_pdf_page"
+    },
+    {
+      "file": "bablo-2025-guide.pdf",
+      "source_url": "https://www3.maine.gov/dafs/bablo/sites/maine.gov.dafs.bablo/files/inline-files/Licensee-Liquor-Law-Guide-Spring-2025.pdf",
+      "final_url": "https://www3.maine.gov/dafs/bablo/sites/maine.gov.dafs.bablo/files/inline-files/Licensee-Liquor-Law-Guide-Spring-2025.pdf",
+      "mime_type": "application/pdf",
+      "sha256": "f9a3d53be45c24923f0a78cdfb701fa3cdfecbb092e63f89caf92ae619d92f5d",
+      "bytes": 525680,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Spring2025 alcohol-licensee guide; page12 identification guidance is text only, no credential images."
+      ],
+      "visual_review": "visually_inspected_image_or_relevant_pdf_page"
+    },
+    {
+      "file": "press-2019.html",
+      "source_url": "https://www.penbaypilot.com/article/secretary-dunlap-unveils-new-maine-driver-s-license-id-card-design/116236",
+      "final_url": "https://www.penbaypilot.com/article/secretary-dunlap-unveils-new-maine-driver-s-license-id-card-design/116236",
+      "mime_type": "text/html; charset=UTF-8",
+      "sha256": "062d67e92a7e2dfb3f984b2138de890051b2713e89f293fd3eac25b035abfcd9",
+      "bytes": 140178,
+      "status": "downloaded",
+      "source_class": "press",
+      "coverage": [
+        "2019 redesign announcement preserved by PenBay Pilot; useful date/design context, no specimen image acquired from this article."
+      ],
+      "visual_review": "parent_html_retained"
+    },
+    {
+      "file": "press-2011.html",
+      "source_url": "https://www.pressherald.com/2011/03/23/licenses-getting-new-look-features_2011-03-23/",
+      "final_url": "https://www.pressherald.com/2011/03/23/licenses-getting-new-look-features_2011-03-23/",
+      "mime_type": "text/html; charset=UTF-8",
+      "sha256": "d9ad8283f88f6a4676afbdec2d8d86bd96a88095b1e6a51e8cf1d7682f6b2fbd",
+      "bytes": 224638,
+      "status": "downloaded",
+      "source_class": "press",
+      "coverage": [
+        "2011 redesign report; parent of press-event photograph."
+      ],
+      "visual_review": "parent_html_retained"
+    },
+    {
+      "file": "issuer-printable-1.pdf",
+      "source_url": "https://www3.maine.gov/sos/sites/maine.gov.sos/files/inline-files/MVL-9Checklist Brochure Revised 7-2022.pdf",
+      "final_url": "https://www3.maine.gov/sos/sites/maine.gov.sos/files/inline-files/MVL-9Checklist%20Brochure%20Revised%207-2022.pdf",
+      "mime_type": "application/pdf",
+      "sha256": "09670d0c92452fc879e13b7085e46f24874a6c2e935b1950b15760fdaa0f02fa",
+      "bytes": 384335,
+      "status": "downloaded",
+      "source_class": "government",
+      "coverage": [
+        "Revised July2022 issuer REAL ID brochure; adult DL front on page1; separate native image and alpha mask."
+      ],
+      "visual_review": "visually_inspected_image_or_relevant_pdf_page"
+    },
+    {
+      "file": "press-2011-specimens.jpg",
+      "source_url": "https://www.pressherald.com/wp-content/uploads/sites/4/2011/03/portland-press-herald_3527871.jpg",
+      "final_url": "https://www.pressherald.com/wp-content/uploads/sites/4/2011/03/portland-press-herald_3527871.jpg",
+      "mime_type": "image/jpeg",
+      "sha256": "c26727c4594373c4bf60a10bc9b959c98b713619b03adc941fe90b2f8bc631c3",
+      "bytes": 185780,
+      "status": "downloaded",
+      "source_class": "press",
+      "coverage": [
+        "2011 press-event photograph: oblique display board includes adult/minor DL/ID depictions and back, several partly occluded; not clean standalone cards."
+      ],
+      "visual_review": "visually_inspected_image_or_relevant_pdf_page"
+    },
+    {
+      "file": "press-2019-wabi.html",
+      "source_url": "https://www.wabi.tv/content/news/Maine-unveils-new-design-for-licenses-IDs-508294021.html",
+      "final_url": "https://www.wabi.tv/content/news/Maine-unveils-new-design-for-licenses-IDs-508294021.html",
+      "mime_type": "text/html; charset=utf-8",
+      "sha256": "3126bbaa9f065610902d863400f9deb9cdbb1801f047d9b7ffa3e7f2d9826e23",
+      "bytes": 150012,
+      "status": "downloaded",
+      "source_class": "press",
+      "coverage": [
+        "Press parent for 2019 redesign television composite."
+      ],
+      "visual_review": "parent_html_retained"
+    },
+    {
+      "file": "press-2019-specimen.png",
+      "source_url": "https://gray-wabi-prod.gtv-cdn.com/resizer/v2/OAVJCM6BBNI2XDRW5RREAD72JA.png?auth=5d8bcb6d478dcbb2eba77a5abf1db1102a87c538676372f36363f1079906fee8&width=1200&height=600&smart=true",
+      "final_url": "https://gray-wabi-prod.gtv-cdn.com/resizer/v2/OAVJCM6BBNI2XDRW5RREAD72JA.png?auth=5d8bcb6d478dcbb2eba77a5abf1db1102a87c538676372f36363f1079906fee8&width=1200&height=600&smart=true",
+      "mime_type": "image/jpeg",
+      "sha256": "56a75b1fee037f4276cd75649a5db72e29a57923ec9fe74c2e9fb0e53c177000",
+      "bytes": 82740,
+      "status": "downloaded",
+      "source_class": "press",
+      "coverage": [
+        "2019 REAL ID adult DL specimen within television graphic; exterior frame and clipped margin, not clean flat."
+      ],
+      "visual_review": "visually_inspected_image_or_relevant_pdf_page"
+    },
+    {
+      "file": "press-2011-unveiling.html",
+      "source_url": "https://www.pressherald.com/2011/03/22/new-maine-license-unveiled/",
+      "final_url": "https://www.pressherald.com/2011/03/22/new-maine-license-unveiled/",
+      "mime_type": "text/html; charset=UTF-8",
+      "sha256": "dbacb10e5b726bdc886351717381c4745d5a8ca26f8d81a06bafaea441d47f30",
+      "bytes": 223137,
+      "status": "downloaded",
+      "source_class": "press",
+      "coverage": [
+        "2011 unveiling report; parent of clean legacy specimen."
+      ],
+      "visual_review": "parent_html_retained"
+    },
+    {
+      "file": "press-2019-photo-parent.html",
+      "source_url": "https://92moose.fm/new-design-for-drivers-licenses-and-id-cards/",
+      "final_url": "https://92moose.fm/new-design-for-drivers-licenses-and-id-cards/",
+      "mime_type": "text/html; charset=utf-8",
+      "sha256": "7fe1b3232a0529c5c621fa5ffa578099cf621a69be4ab1e6e57e5a1a8934874b",
+      "bytes": 201032,
+      "status": "downloaded",
+      "source_class": "press",
+      "coverage": [
+        "2019 redesign article credits Maine Secretary of State Office for specimen image."
+      ],
+      "visual_review": "parent_html_retained"
+    },
+    {
+      "file": "press-2011-flat.jpg",
+      "source_url": "https://www.pressherald.com/wp-content/uploads/sites/4/2011/03/Driver+License.jpg",
+      "final_url": "https://www.pressherald.com/wp-content/uploads/sites/4/2011/03/Driver+License.jpg",
+      "mime_type": "image/jpeg",
+      "sha256": "1b82dc917bc114a4ab89aaeb4cf9881bfb0fa03ec372b1df51db2476571b0bda",
+      "bytes": 197427,
+      "status": "downloaded",
+      "source_class": "press",
+      "coverage": [
+        "2011 moose-generation adult DL specimen front; white publication margin; intrinsic SAMPLE retained."
+      ],
+      "visual_review": "visually_inspected_image_or_relevant_pdf_page"
+    },
+    {
+      "file": "press-2019-flat.jpg",
+      "source_url": "https://townsquare.media/site/490/files/2019/04/NewLicenseDesign2019.72DPI.jpg",
+      "final_url": "https://townsquare.media/site/490/files/2019/04/NewLicenseDesign2019.72DPI.jpg",
+      "mime_type": "image/webp",
+      "sha256": "311b45050b045f3a36c48499cde034a14a828702544a5ced9c0d3e7d3c42bfc3",
+      "bytes": 16910,
+      "status": "downloaded",
+      "source_class": "press",
+      "coverage": [
+        "2019 REAL ID adult DL specimen front; low-resolution243x153 press reproduction with earlier official/portrait, intrinsic SAMPLE retained."
+      ],
+      "visual_review": "visually_inspected_image_or_relevant_pdf_page"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "issuer-brochure-xref-498.jpeg",
+      "source_file": "issuer-printable-1.pdf",
+      "source_sha256": "09670d0c92452fc879e13b7085e46f24874a6c2e935b1950b15760fdaa0f02fa",
+      "pdf_object_xref": 498,
+      "resource_page_number": 1,
+      "width_px": 427,
+      "height_px": 270,
+      "sha256": "3bcaed0b2edaeadf48913117313090228ed12fe2abd0cbe399c21cb569d6327a",
+      "reference_kind": "complete_sample_front",
+      "review_note": "Issuer REAL ID adult DL front. OriginalJPEG and separate alpha mask retained; composed transparent preview generated without changing original resource. Intrinsic SAMPLE retained.",
+      "mask": {
+        "file": "issuer-brochure-mask-497.png",
+        "pdf_object_xref": 497,
+        "sha256": "6762c7ae86b9d53965232b441790fdad20501e0f0f1affd0a3c00868fd0b8814"
+      },
+      "preview_file": "issuer-brochure-xref-498-preview.png",
+      "visual_review": "visually_inspected_native_resource_and_full_page"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "source_url": "https://www.maine.gov/sos/bmv/driver-licenses-and-ids/real-id",
+      "status": "failed",
+      "http_status": 403,
+      "note": "Canonical host blocked or legacy location removed; selected live issuer resources recovered from www3.maine.gov and current page links."
+    },
+    {
+      "source_url": "https://www.maine.gov/sos/news/2019/newlicense.html",
+      "status": "failed",
+      "http_status": 403,
+      "note": "Canonical host blocked or legacy location removed; selected live issuer resources recovered from www3.maine.gov and current page links."
+    },
+    {
+      "source_url": "https://www.maine.gov/dafs/bablo/sites/maine.gov.dafs.bablo/files/inline-files/Licensee-Liquor-Law-Guide-Spring-2025.pdf",
+      "status": "failed",
+      "http_status": 403,
+      "note": "Canonical host blocked or legacy location removed; selected live issuer resources recovered from www3.maine.gov and current page links."
+    },
+    {
+      "source_url": "https://www.maine.gov/dhhs/mecdc/population-health/prevention/community/licensee/cardme/documents/Off%20Prem%20Materials/guide%20for%20stores%20Off%20Premise.pdf",
+      "status": "failed",
+      "http_status": 403,
+      "note": "Canonical host blocked or legacy location removed; selected live issuer resources recovered from www3.maine.gov and current page links."
+    },
+    {
+      "source_url": "https://www3.maine.gov/sos/news/2019/newlicense.html",
+      "status": "failed",
+      "http_status": 404,
+      "note": "Canonical host blocked or legacy location removed; selected live issuer resources recovered from www3.maine.gov and current page links."
+    },
+    {
+      "source_url": "https://www3.maine.gov/sos/news/2011/newdriverlicense.htm",
+      "status": "failed",
+      "http_status": 404,
+      "note": "Canonical host blocked or legacy location removed; selected live issuer resources recovered from www3.maine.gov and current page links."
+    },
+    {
+      "source_url": "https://www3.maine.gov/dhhs/mecdc/population-health/prevention/community/licensee/cardme/documents/Off%20Prem%20Materials/guide%20for%20stores%20Off%20Premise.pdf",
+      "status": "failed",
+      "http_status": 404,
+      "note": "Canonical host blocked or legacy location removed; selected live issuer resources recovered from www3.maine.gov and current page links."
+    },
+    {
+      "source_url": "https://www3.maine.gov/sos/bmv/licenses/MVL-9Checklist%20Brochure.pdf",
+      "status": "failed",
+      "http_status": 404,
+      "note": "Canonical host blocked or legacy location removed; selected live issuer resources recovered from www3.maine.gov and current page links."
+    }
+  ],
+  "source_aliases": [
+    {
+      "source_url": "https://www3.maine.gov/sos/sites/maine.gov.sos/files/inline-files/MVL-9Checklist Brochure Revised 7-2022_0.pdf",
+      "identical_to_file": "issuer-printable-1.pdf",
+      "sha256": "09670d0c92452fc879e13b7085e46f24874a6c2e935b1950b15760fdaa0f02fa"
+    }
+  ],
+  "remaining_gaps": [
+    "Clean document backs remain missing; photographed2011 board is contextual only.",
+    "Clean under21 DL/ID fronts remain missing; press-event photo is oblique and partly occluded.",
+    "Standalone nonfederal, identification-card, CDL and temporarycredential specimens not acquired.",
+    "UV/optical plates and independently verified issuance intervals not established.",
+    "2011 redesign reporting and2019 retrospective disagree on2010/2011 timing; generation label is tied to dated2011 publication, not a verified issuance boundary."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": false,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "ME",
+    "verified_at": "2026-10-26T18:27:32.463728+00:00",
+    "local_directory": "output/research/ME",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/ME/19ca55219daf6a351da1b6b8f1b563dedc471e1b9558c4780852402d777d0b6a/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/ME.json",
+    "archive_sha256": "19ca55219daf6a351da1b6b8f1b563dedc471e1b9558c4780852402d777d0b6a",
+    "archive_size_bytes": 2737922,
+    "transport_chunks": 1,
+    "verified_restored_files": 21,
+    "verification": "Downloaded private vault archive, restored with existing snapshot helpers, compared every restored file byte-for-byte; state-specific discovery index written only after successful verification.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/ME"
+  }
+}

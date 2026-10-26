@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "MD",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T18:28:02.812930+00:00",
+  "scope": "Bounded Maryland manual source research. Useful finds retained and gaps recorded; no completeness requirement or catalog integration.",
+  "source_publications": [
+    {
+      "file": "health-2024-id-guide.pdf",
+      "source_url": "https://health.maryland.gov/notobaccosalestominors/Documents/2024%20T21%20Files/2024_MD_ID_Guide_Detailed.pdf",
+      "final_url": "https://health.maryland.gov/notobaccosalestominors/Documents/2024%20T21%20Files/2024_MD_ID_Guide_Detailed.pdf",
+      "http_status": 200,
+      "mime_type": "application/pdf",
+      "status": "downloaded",
+      "sha256": "a2d819a8d8da5340613b851d8d13940adf7d789ebca3b6645cec5ccb0f9f9360",
+      "bytes": 2172191,
+      "source_class": "government",
+      "coverage": [
+        "Legacy adult and under-21 provisional DL fronts",
+        "2016-generation adult and under-21 DL fronts",
+        "Military examples retained in original publication, not separately inventoried as Maryland credentials"
+      ]
+    },
+    {
+      "file": "mva-realid.html",
+      "source_url": "https://mva.maryland.gov/Pages/realid.aspx",
+      "final_url": "https://mva.maryland.gov/licenses-ids",
+      "http_status": 200,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "downloaded",
+      "sha256": "d5189e6162da3138197b3577642c85523cfdcb16214ed0b751bf01deff3ad2f3",
+      "bytes": 78375,
+      "source_class": "government",
+      "coverage": [
+        "Parent/navigation HTML retained for provenance; no specimen coverage claimed."
+      ]
+    },
+    {
+      "file": "mslba-2016-mva-information.pdf",
+      "source_url": "https://www.mslba.org/pdfs/MVALicenseInfo.pdf",
+      "final_url": "https://www.mslba.org/pdfs/MVALicenseInfo.pdf",
+      "http_status": 200,
+      "mime_type": "application/pdf",
+      "status": "downloaded",
+      "sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+      "bytes": 6238154,
+      "source_class": "alcohol_retailer_association_preserving_issuer_packet",
+      "coverage": [
+        "Association-preserved MVA 2016 launch release and artwork",
+        "Native DL back with transparency mask",
+        "Perspective DL front with transparency mask",
+        "Promotional DL/ID and under-21 front composites"
+      ]
+    },
+    {
+      "file": "health-tobacco-program.html",
+      "source_url": "https://health.maryland.gov/notobaccosalestominors/Pages/Home.aspx",
+      "final_url": "https://health.maryland.gov/notobaccosalestominors/Pages/Home.aspx",
+      "http_status": 200,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "downloaded",
+      "sha256": "57271e966a06d9b3646ff4a6ec0fe9ee01cc8f1b4038a5e8092fbea0eb1f61fc",
+      "bytes": 115645,
+      "source_class": "government",
+      "coverage": [
+        "Parent/navigation HTML retained for provenance; no specimen coverage claimed."
+      ]
+    },
+    {
+      "file": "mslba-home.html",
+      "source_url": "https://www.mslba.org/",
+      "final_url": "https://www.mslba.org/",
+      "http_status": 200,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "downloaded",
+      "sha256": "0dcee76b4f14b4bc344c2ea3110da03afed55e242f1ca366ab44abe6aa518f41",
+      "bytes": 42534,
+      "source_class": "alcohol_retailer_association_preserving_issuer_packet",
+      "coverage": [
+        "Parent/navigation HTML retained for provenance; no specimen coverage claimed."
+      ]
+    },
+    {
+      "file": "mva-hazmat-policy.html",
+      "source_url": "https://mva.maryland.gov/businesses/Documents/bulletins/2023/Hazmat-Bulletin-January-11.pdf",
+      "final_url": "https://mva.maryland.gov/your-mva-guide/businesses/bulletins-businesses/fraud-training-schedule-2023",
+      "http_status": 200,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "downloaded",
+      "sha256": "948f7bb0c5def59ffaacbf4d54fa96371b006f558682547c124e7b22f75b9cc2",
+      "bytes": 51250,
+      "source_class": "government",
+      "coverage": [
+        "Parent/navigation HTML retained for provenance; no specimen coverage claimed."
+      ]
+    },
+    {
+      "file": "health-free-materials.html",
+      "source_url": "https://health.maryland.gov/notobaccosalestominors/Pages/Signs%20and%20Free%20Materials.aspx",
+      "final_url": "https://health.maryland.gov/notobaccosalestominors/Pages/Signs%20and%20Free%20Materials.aspx",
+      "status": "downloaded",
+      "mime_type": "text/html; charset=utf-8",
+      "bytes": 115027,
+      "sha256": "58fac9c00ff38017383fc09c90a9910f20c062e8459ac7a7bc97df3d57117c4f",
+      "source_class": "government",
+      "coverage": [
+        "Parent/navigation HTML retained for provenance; no specimen coverage claimed."
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "health-2024-xref-33.jpeg",
+      "source_file": "health-2024-id-guide.pdf",
+      "source_sha256": "a2d819a8d8da5340613b851d8d13940adf7d789ebca3b6645cec5ccb0f9f9360",
+      "pdf_object_xref": 33,
+      "resource_page_number": 1,
+      "width_px": 686,
+      "height_px": 443,
+      "sha256": "52d7b86e9c6339d1919993cecde1e5e50fb2cd80979806d83fa2aaf730254270",
+      "reference_kind": "complete_sample_front",
+      "review_note": "Legacy adult PDL front; intrinsic SAMPLE and drop shadow retained. Exterior callouts remain in source publication.",
+      "visual_review": "visually_inspected_native_resource_and_full_page_preview"
+    },
+    {
+      "file": "health-2024-xref-35.jpeg",
+      "source_file": "health-2024-id-guide.pdf",
+      "source_sha256": "a2d819a8d8da5340613b851d8d13940adf7d789ebca3b6645cec5ccb0f9f9360",
+      "pdf_object_xref": 35,
+      "resource_page_number": 1,
+      "width_px": 638,
+      "height_px": 405,
+      "sha256": "4a5eb11240d655456e451a1483b9d775320994fd7e66ae16edacd64837fff838",
+      "reference_kind": "complete_sample_front",
+      "review_note": "2016 adult DL front; intrinsic SAMPLE retained. Exterior callouts remain in source publication.",
+      "visual_review": "visually_inspected_native_resource_and_full_page_preview"
+    },
+    {
+      "file": "health-2024-xref-45.jpeg",
+      "source_file": "health-2024-id-guide.pdf",
+      "source_sha256": "a2d819a8d8da5340613b851d8d13940adf7d789ebca3b6645cec5ccb0f9f9360",
+      "pdf_object_xref": 45,
+      "resource_page_number": 1,
+      "width_px": 404,
+      "height_px": 633,
+      "sha256": "3b4839ff5f9363c32f81070e14aa418cd9a975d7769999e7dd25f3a71a2f5dac",
+      "reference_kind": "complete_sample_front",
+      "review_note": "2016 under-21 DL front; intrinsic SAMPLE retained. Exterior callouts remain in source publication.",
+      "visual_review": "visually_inspected_native_resource_and_full_page_preview"
+    },
+    {
+      "file": "health-2024-xref-65.jpeg",
+      "source_file": "health-2024-id-guide.pdf",
+      "source_sha256": "a2d819a8d8da5340613b851d8d13940adf7d789ebca3b6645cec5ccb0f9f9360",
+      "pdf_object_xref": 65,
+      "resource_page_number": 1,
+      "width_px": 476,
+      "height_px": 723,
+      "sha256": "b91305bf02d6b9be00f4b029fd079dff760612ea75fa8c7d2f644c1db692edd9",
+      "reference_kind": "complete_sample_front",
+      "review_note": "Legacy under-21 PDL front; intrinsic SAMPLE and drop shadow retained. Exterior callouts remain in source publication.",
+      "visual_review": "visually_inspected_native_resource_and_full_page_preview"
+    },
+    {
+      "file": "mslba-2016-xref-23.jpeg",
+      "source_file": "mslba-2016-mva-information.pdf",
+      "source_sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+      "pdf_object_xref": 23,
+      "resource_page_number": 3,
+      "width_px": 686,
+      "height_px": 532,
+      "sha256": "d01c8c5e65cf679c005f3d6068128d14e6b44b81b71adf159bb6aa33b97684a0",
+      "reference_kind": "complete_sample_back",
+      "review_note": "DL back with border/perspective and separate mask; not orthographic CAD master. Exterior callouts remain in source publication.",
+      "visual_review": "visually_inspected_native_resource_and_full_page_preview",
+      "mask": {
+        "file": "mslba-2016-mask-22.jpeg",
+        "pdf_object_xref": 22,
+        "width_px": 1421,
+        "height_px": 1032,
+        "sha256": "43b168ef0d6cd969aa8c4dd8726e020a74b33c366871491e6ac511e91cd2cf80"
+      }
+    },
+    {
+      "file": "mslba-2016-xref-91.jpeg",
+      "source_file": "mslba-2016-mva-information.pdf",
+      "source_sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+      "pdf_object_xref": 91,
+      "resource_page_number": 3,
+      "width_px": 676,
+      "height_px": 687,
+      "sha256": "c8e6cf460a435ed86455a55630dd3674f9cbc80df69a5af3fae3a91ca7f2e1c1",
+      "reference_kind": "perspective_specimen_front",
+      "review_note": "DL front with promotional reflection and separate mask. Exterior callouts remain in source publication.",
+      "visual_review": "visually_inspected_native_resource_and_full_page_preview",
+      "mask": {
+        "file": "mslba-2016-mask-90.jpeg",
+        "pdf_object_xref": 90,
+        "width_px": 1891,
+        "height_px": 1909,
+        "sha256": "706b64dc4c42d42b4d58507c5252b75617efc0f39ea5f810429bbe96706cb488"
+      }
+    },
+    {
+      "file": "mslba-2016-xref-173.jpeg",
+      "source_file": "mslba-2016-mva-information.pdf",
+      "source_sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+      "pdf_object_xref": 173,
+      "resource_page_number": 4,
+      "width_px": 2333,
+      "height_px": 3453,
+      "sha256": "8c6e734aa0b483723de405d849588f3f00d8d54b0a82553318b03d8dc972b021",
+      "reference_kind": "promotional_page_composite",
+      "review_note": "Entire raster page with angled adult/minor DL and ID fronts; not separate card flats. Exterior callouts remain in source publication.",
+      "visual_review": "visually_inspected_native_resource_and_full_page_preview"
+    },
+    {
+      "file": "mslba-2016-xref-178.jpeg",
+      "source_file": "mslba-2016-mva-information.pdf",
+      "source_sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+      "pdf_object_xref": 178,
+      "resource_page_number": 5,
+      "width_px": 3301,
+      "height_px": 2230,
+      "sha256": "cd9ae941c91ad069340f02e3d6092cbd0d7b4dea00de9686ccce456e7a5f8237",
+      "reference_kind": "promotional_page_composite",
+      "review_note": "Entire raster DL front promotion with reflection. Exterior callouts remain in source publication.",
+      "visual_review": "visually_inspected_native_resource_and_full_page_preview"
+    },
+    {
+      "file": "mslba-2016-xref-183.jpeg",
+      "source_file": "mslba-2016-mva-information.pdf",
+      "source_sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+      "pdf_object_xref": 183,
+      "resource_page_number": 6,
+      "width_px": 3301,
+      "height_px": 2230,
+      "sha256": "e8ed14b0240c8ccced48ffd5c8620defa5fdda2aab5bceee1321ce526f77dad3",
+      "reference_kind": "promotional_page_composite",
+      "review_note": "Entire raster non-driver ID front promotion with reflection. Exterior callouts remain in source publication.",
+      "visual_review": "visually_inspected_native_resource_and_full_page_preview"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "mva-2016-card-visuals.pdf",
+      "source_url": "https://mva.maryland.gov/documents/card-visuals-all.pdf",
+      "final_url": "https://mva.maryland.gov/documents/card-visuals-all.pdf",
+      "http_status": 404,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "failed"
+    },
+    {
+      "file": "elections-sample-cards.html",
+      "source_url": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/SampleMVACards",
+      "final_url": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/SampleMVACards",
+      "http_status": 503,
+      "mime_type": "text/html",
+      "status": "failed"
+    },
+    {
+      "file": "montgomery-2021-alert.pdf",
+      "source_url": "https://www.montgomerycountymd.gov/ABS/Resources/Files/education/2021%20ALERT%20Online%20Presentation%20for%20Website.pdf",
+      "final_url": "https://www.montgomerycountymd.gov/ABS/Resources/Files/education/2021%20ALERT%20Online%20Presentation%20for%20Website.pdf",
+      "http_status": 404,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "failed"
+    },
+    {
+      "file": "mva-2016-card-visuals-capital.pdf",
+      "source_url": "https://mva.maryland.gov/Documents/card-visuals-all.pdf",
+      "final_url": "https://mva.maryland.gov/Documents/card-visuals-all.pdf",
+      "http_status": 404,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "failed"
+    },
+    {
+      "file": "montgomery-education.html",
+      "source_url": "https://www.montgomerycountymd.gov/ABS/education/",
+      "final_url": "https://www.montgomerycountymd.gov/ABS/education",
+      "http_status": 404,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "failed"
+    },
+    {
+      "file": "mva-secure-card-features.pdf",
+      "source_url": "https://mva.maryland.gov/documents/secureid-card-features.pdf",
+      "final_url": "https://mva.maryland.gov/documents/secureid-card-features.pdf",
+      "http_status": 404,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "failed"
+    },
+    {
+      "file": "mva-hazmat-policy.html",
+      "source_url": "https://mva.maryland.gov/businesses/Documents/bulletins/2023/Hazmat-Bulletin-January-11.pdf",
+      "final_url": "https://mva.maryland.gov/your-mva-guide/businesses/bulletins-businesses/fraud-training-schedule-2023",
+      "http_status": 200,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "redirected_to_unrelated_html",
+      "sha256": "b2e269d559139066b8e886c18ec91fbd8ca531930704ebb31ac4e0a07e154749",
+      "bytes": 51250,
+      "limitations": [
+        "Original PDF URL redirects to unrelated fraud-training page; PDF not acquired."
+      ]
+    },
+    {
+      "file": "somd-2016-launch.html",
+      "source_url": "https://www.somd.com/news/headlines/2016/20891.php",
+      "final_url": "https://www.somd.com/news/headlines/2016/20891.php",
+      "http_status": 403,
+      "mime_type": "text/html; charset=UTF-8",
+      "status": "failed"
+    },
+    {
+      "file": "health-retailer-resources.html",
+      "source_url": "https://health.maryland.gov/notobaccosalestominors/Pages/Retailer-Resources.aspx",
+      "final_url": "https://health.maryland.gov/notobaccosalestominors/Pages/Retailer-Resources.aspx",
+      "http_status": 404,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "failed"
+    },
+    {
+      "file": "mva-secureid-capital.pdf",
+      "source_url": "https://mva.maryland.gov/Documents/SecureID-Card-Features.pdf",
+      "final_url": "https://mva.maryland.gov/Documents/SecureID-Card-Features.pdf",
+      "http_status": 404,
+      "mime_type": "text/html; charset=utf-8",
+      "status": "failed"
+    }
+  ],
+  "remaining_gaps": [
+    "Clean current learner permit and CDL fronts not acquired.",
+    "Standalone non-driver ID front only preserved within promotional raster composite.",
+    "Under-21 and ID-specific backs not acquired; retained back is DL example.",
+    "UV artwork/optical photographs not acquired.",
+    "Current issuance intervals, geometry and runtime template admission unreviewed.",
+    "Issuer 2016 PDFs returned 404; elections gallery 503; county ALERT deck 404."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": false,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "MD",
+    "verified_at": "2026-10-26T18:28:51.478815+00:00",
+    "local_directory": "output/research/MD",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/MD/e7a69c9fb1f6d8c00632fb3d4ad29f332129e1cf6c61fccba24e8ae3132c722c/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/MD.json",
+    "archive_sha256": "e7a69c9fb1f6d8c00632fb3d4ad29f332129e1cf6c61fccba24e8ae3132c722c",
+    "archive_size_bytes": 25689436,
+    "transport_chunks": 1,
+    "verified_restored_files": 29,
+    "verification": "Downloaded private vault archive, restored using existing snapshot helpers, and compared EVERY file byte-for-byte with durable local copies.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/MD"
+  }
+}
