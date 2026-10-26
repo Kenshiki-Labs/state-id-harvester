@@ -7,7 +7,6 @@ import json
 import logging
 import os
 import sys
-from pathlib import Path
 
 from .catalog import export_catalog
 from .library import coverage, federal_coverage, read_manifest, verify, write_reports
@@ -57,7 +56,7 @@ def parser() -> argparse.ArgumentParser:
         "--states", nargs="+", choices=sorted([*STATE_DOMAINS, FEDERAL_CODE])
     )
     images.add_argument("--output", type=managed_path, default="output/gallery")
-    images.add_argument("--import-manifest", type=Path, action="append", default=[])
+    images.add_argument("--import-manifest", type=managed_path, action="append", default=[])
     images.add_argument("--max-pages", type=int, default=40)
     images.add_argument("--max-assets", type=int, default=200)
     images.add_argument("--max-pixels", type=int, default=20_000_000)
@@ -65,11 +64,16 @@ def parser() -> argparse.ArgumentParser:
     images.add_argument("--concurrency", type=int, default=2)
     for command, help_text in (
         ("verify", "Rehash all manifest sources and assets"),
+        ("verify-images", "Verify private gallery originals and HTML evidence bindings"),
         ("report", "Regenerate the private contact sheet and coverage"),
         ("export-catalog", "Export reviewed state topology/cohort interchange"),
     ):
         sub = commands.add_parser(command, help=help_text)
-        sub.add_argument("--output", type=managed_path, default="output")
+        sub.add_argument(
+            "--output",
+            type=managed_path,
+            default="output/gallery" if command == "verify-images" else "output",
+        )
         if command == "export-catalog":
             sub.add_argument("--cohorts", type=managed_path, default="cohorts.json")
     return result
@@ -184,6 +188,15 @@ def run_gallery(args: argparse.Namespace) -> None:
     )
 
 
+def run_verify_images(args: argparse.Namespace) -> None:
+    from .gallery_verify import verify_gallery
+
+    errors = verify_gallery(args.output)
+    if errors:
+        raise ValueError("Gallery verification failed: " + ", ".join(errors[:20]))
+    print("All gallery originals, parent HTML, dimensions, and source bindings verify.")
+
+
 def main() -> None:
     args_list = sys.argv[1:]
     if args_list and args_list[0].startswith("--") and args_list[0] not in ("--help", "-h"):
@@ -196,6 +209,7 @@ def main() -> None:
             "harvest": run_harvest,
             "harvest-images": run_gallery,
             "verify": run_verify,
+            "verify-images": run_verify_images,
             "report": run_report,
             "export-catalog": run_export,
         }

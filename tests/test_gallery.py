@@ -141,7 +141,8 @@ async def test_gallery_job_preserves_aliases_and_originals_without_pdf_or_cohort
     assert len(result["aliases"]) == 2
     asset = result["assets"][0]
     assert (tmp_path / "gallery" / asset["path"]).read_bytes() == original
-    assert asset["altered"] is False and asset["accepted_cohort"] is False
+    assert asset["altered"] is False
+    assert asset["accepted_cohort"] is False
     assert asset["plate_composition"] == "unreviewed"
     assert all(
         row["parent_html_sha256"] == result["pages"][0]["sha256"] for row in result["aliases"]
@@ -407,7 +408,8 @@ async def test_limited_fetch_budget_prioritizes_card_context_over_navigation(
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
         job = GalleryJob(tmp_path, GalleryOptions(max_assets=1), Transport(client, check_dns=False))
         await job.visit("CA", PAGE)
-    assert "/card.png" in requested and "/logo.png" not in requested
+    assert "/card.png" in requested
+    assert "/logo.png" not in requested
     assert job.manifest["assets"][0]["review_status"] == "unreviewed"
 
 
@@ -441,3 +443,142 @@ async def test_native_decoder_does_not_run_on_an_unsafe_background_thread(
             {"collection": "CA", "url": PAGE}, png(), PAGE, "image/png", "synthetic_test"
         )
     assert len(job.manifest["assets"]) == 1
+
+
+async def populated_gallery(root: Path) -> dict[str, object]:
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/robots.txt":
+            return httpx.Response(404)
+        if request.url.path == "/gallery":
+            return httpx.Response(
+                200,
+                text='<h2>Specimen</h2><img src="/card.png">',
+                headers={"content-type": "text/html"},
+            )
+        return httpx.Response(200, content=png(), headers={"content-type": "image/png"})
+
+    async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        job = GalleryJob(root, GalleryOptions(), Transport(client, check_dns=False))
+        await job.visit("CA", PAGE)
+        return job.finish()
+
+
+async def test_later_403_keeps_verified_inventory_and_previous_last_seen(tmp_path: Path) -> None:
+    from state_id_harvester.gallery_verify import verify_gallery
+
+    first = await populated_gallery(tmp_path)
+    original_receipt = (tmp_path / "manifest.json").read_bytes()
+
+    def blocked(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(404 if request.url.path == "/robots.txt" else 403)
+
+    async with httpx.AsyncClient(transport=httpx.MockTransport(blocked)) as client:
+        job = GalleryJob(tmp_path, GalleryOptions(), Transport(client, check_dns=False))
+        await job.visit("CA", PAGE)
+        second = job.finish()
+    assert second["assets"] == first["assets"]
+    assert second["pages"] == first["pages"]
+    assert second["aliases"] == first["aliases"]
+    assert second["run_observations"] == {"assets": 0, "pages": 0, "aliases": 0}
+    assert second["events"][0]["reason"] == "http_status_403"
+    assert len(second["events"]) == 1
+    assert second["inventory_parent_run_id"] == first["run_id"]
+    assert (tmp_path / "runs" / f"{first['run_id']}.json").read_bytes() == original_receipt
+    assert verify_gallery(tmp_path) == []
+
+
+async def test_successful_refetch_updates_last_seen_without_duplicate_inventory(
+    tmp_path: Path,
+) -> None:
+    first = await populated_gallery(tmp_path)
+    first_seen = first["assets"][0]["first_seen_at"]
+    last_seen = first["assets"][0]["last_seen_at"]
+    second = await populated_gallery(tmp_path)
+    assert len(second["assets"]) == 1
+    assert len(second["aliases"]) == 1
+    assert len(second["pages"]) == 1
+    assert second["assets"][0]["first_seen_at"] == first_seen
+    assert second["assets"][0]["last_seen_at"] >= last_seen
+    assert second["run_observations"] == {"assets": 1, "pages": 1, "aliases": 1}
+
+
+async def test_tampered_prior_original_fails_closed_without_replacing_receipt(
+    tmp_path: Path,
+) -> None:
+    from state_id_harvester.gallery_verify import verify_gallery
+
+    first = await populated_gallery(tmp_path)
+    receipt = (tmp_path / "manifest.json").read_bytes()
+    (tmp_path / first["assets"][0]["path"]).write_bytes(b"tampered")
+    assert verify_gallery(tmp_path)
+    options = GalleryOptions()
+    async with httpx.AsyncClient() as client:
+        transport = Transport(client)
+        with pytest.raises(ValueError, match="failed verification"):
+            GalleryJob(tmp_path, options, transport)
+    assert (tmp_path / "manifest.json").read_bytes() == receipt
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        "alias_asset",
+        "alias_url",
+        "alias_parent",
+        "page_bytes",
+        "dimensions",
+        "path_escape",
+        "claim_accepted",
+        "malformed_json",
+        "malformed_run_id",
+    ],
+)
+async def test_verify_images_rejects_broken_hashes_paths_dimensions_and_bindings(
+    tmp_path: Path, change: str
+) -> None:
+    from state_id_harvester.gallery_verify import verify_gallery
+
+    data = await populated_gallery(tmp_path)
+    if change == "alias_asset":
+        data["aliases"][0]["asset_sha256"] = "0" * 64
+    elif change == "alias_url":
+        data["aliases"][0]["url"] = "https://dmv.ca.gov/not-in-source.png"
+    elif change == "alias_parent":
+        data["aliases"][0]["parent_html_sha256"] = "0" * 64
+    elif change == "page_bytes":
+        (tmp_path / data["pages"][0]["path"]).write_bytes(b"modified page")
+    elif change == "dimensions":
+        data["assets"][0]["width"] += 1
+    elif change == "path_escape":
+        data["assets"][0]["path"] = "../outside.png"
+    elif change == "claim_accepted":
+        data["assets"][0]["accepted_cohort"] = True
+    elif change == "malformed_run_id":
+        data["run_id"] = {"malformed": True}
+    else:
+        (tmp_path / "manifest.json").write_text("not JSON")
+    if change != "malformed_json":
+        (tmp_path / "manifest.json").write_text(json.dumps(data))
+    assert verify_gallery(tmp_path)
+
+
+async def test_verify_images_cli_verifies_gallery_instead_of_pdf_contract(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    from state_id_harvester import cli
+
+    monkeypatch.chdir(tmp_path)
+    root = tmp_path / "output/gallery"
+    await populated_gallery(root)
+    args = cli.parser().parse_args(["verify-images"])
+    cli.run_verify_images(args)
+    assert "source bindings verify" in capsys.readouterr().out
+    (root / "manifest.json").write_text("{}")
+    with pytest.raises(ValueError, match="Gallery verification failed"):
+        cli.run_verify_images(args)
+
+
+def test_srcset_ascii_validation_does_not_widen_to_unicode_digits() -> None:
+    assert srcset_urls("/one.png 1200w, /two.png 1.5x") == ["/one.png", "/two.png"]
+    with pytest.raises(ValueError, match="Invalid srcset"):
+        srcset_urls("/one.png ١٢٠٠w")

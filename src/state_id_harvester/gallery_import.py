@@ -8,7 +8,7 @@ from typing import TYPE_CHECKING, Any
 from urllib.parse import urlsplit
 
 from .network import FetchError, official_url, publisher_jurisdiction
-from .paths import contained_path
+from .paths import contained_path, managed_path
 from .seeds import COLLECTION_DOMAINS
 
 if TYPE_CHECKING:
@@ -89,6 +89,7 @@ async def import_image(
 
 async def import_browser_manifest(job: GalleryJob, path: Path) -> None:
     try:
+        path = managed_path(path)
         value, leads, collection = import_page(job, path)
     except (ValueError, OSError, KeyError, TypeError, FetchError) as exc:
         job.event("", str(path), "failed", "browser_manifest:" + type(exc).__name__)

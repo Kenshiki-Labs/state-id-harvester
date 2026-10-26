@@ -82,6 +82,17 @@ class GalleryHTML(HTMLParser):
             self.stack[-1].children.append(data)
 
 
+def valid_descriptor(value: str) -> bool:
+    number = value[:-1]
+    if value.endswith("w"):
+        return re.fullmatch(r"[1-9]\d{0,5}", number, re.ASCII) is not None
+    if not value.endswith("x"):
+        return False
+    if re.fullmatch(r"(?:\d{1,2}(?:\.\d{1,3})?|\.\d{1,3})", number, re.ASCII) is None:
+        return False
+    return 0 < float(number) <= 10
+
+
 def srcset_urls(value: str) -> list[str]:
     """Reject ambiguous/data-URL lists rather than trusting arbitrary descriptors."""
     entries = value.split(",")
@@ -92,9 +103,7 @@ def srcset_urls(value: str) -> list[str]:
         words = entry.split()
         if not 1 <= len(words) <= 2 or words[0].lower().startswith("data:"):
             raise ValueError("Malformed srcset")
-        if len(words) == 2 and not re.fullmatch(
-            r"(?:[1-9][0-9]{0,5}w|(?:[1-9](?:\.[0-9]{1,3})?|0\.[1-9][0-9]{0,2})x)", words[1]
-        ):
+        if len(words) == 2 and not valid_descriptor(words[1]):
             raise ValueError("Invalid srcset descriptor")
         result.append(words[0])
     return result
