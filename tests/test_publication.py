@@ -109,6 +109,47 @@ def test_valid_metadata_and_independent_geometry_pass(tmp_path: Path) -> None:
     assert guard.inspect_public_tree(tmp_path) == []
 
 
+@pytest.mark.parametrize("state", ["ME", "MD", "MI", "US_FED"])
+def test_public_guard_allows_only_worker_resolved_reference_images(
+    tmp_path: Path, state: str
+) -> None:
+    (tmp_path / "index.html").write_text(
+        f'<img src="/v1/specimens/{state}/native-xref_123" alt="Marked research reference" '
+        'loading="lazy" decoding="async" width="600" height="400" class="reference"/>'
+    )
+    assert guard.inspect_public_tree(tmp_path) == []
+
+
+@pytest.mark.parametrize(
+    "markup",
+    [
+        '<img src="https://cadastre.kenshikilabs.com/v1/specimens/MI/example">',
+        '<img src="//cadastre.kenshikilabs.com/v1/specimens/MI/example">',
+        '<img src="/v1/specimens/mi/example">',
+        '<img src="/v1/specimens/MI/../source">',
+        '<img src="/v1/specimens/MI/%2e%2e">',
+        '<img src="/v1/specimens/MI/example?key=original">',
+        '<img src="/v1/specimens/MI/example#raw">',
+        '<img src="/v1/specimens/MI/example.pdf">',
+        '<img src="/v1/specimens/MI/">',
+        '<img src="/v1/specimens/MI/' + "a" * 151 + '">',
+        '<img src="/v1/specimens/MI/example" src="/original.png">',
+        '<img src="/v1/specimens/MI/example" srcset="/original.png 2x">',
+        '<img src="/v1/specimens/MI/example" onerror="this.src=\'/original.png\'">',
+        '<img src="/v1/specimens/MI/example" style="background:url(/original.png)">',
+        '<img src="/v1/specimens/MI/example" lowsrc="/original.png">',
+        '<picture><img src="/v1/specimens/MI/example"></picture>',
+        '<svg><image href="/v1/specimens/MI/example"/></svg>',
+        '<IMG SRC="/original.png">',
+    ],
+)
+def test_public_guard_rejects_reference_image_delivery_bypasses(
+    tmp_path: Path, markup: str
+) -> None:
+    (tmp_path / "index.html").write_text(markup)
+    assert guard.inspect_public_tree(tmp_path)
+
+
 def test_wireframe_contains_only_reviewed_rectangles_and_removes_superseded_files(
     tmp_path: Path,
 ) -> None:

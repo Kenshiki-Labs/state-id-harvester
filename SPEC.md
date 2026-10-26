@@ -4,7 +4,9 @@
 
 Build a repeatable public-source reference collection for all 50 US states and DC.
 The public deliverable is code, schemas, citation metadata, and reviewed normalized
-geometry. A private vault retains original evidence and visual reference derivatives.
+geometry, with a public website and indexed, visibly marked PNG reference derivatives.
+A private vault retains original evidence and the stored reference derivatives; the
+Worker serves only indexed marked references anonymously.
 The harvesting job produces inspectable topology proposals and a separately reviewed
 cohort interchange. It is not a document-authenticity verdict.
 
@@ -107,7 +109,12 @@ snapshot through an authenticated Worker into private R2. There are no visual Gi
 releases or Actions artifacts. Search API keys are optional repository secrets; the vault
 ingestion key is required. Private failure ledgers stay in the snapshot. Source media,
 OCR text, seals, font outlines and raster derivatives never enter public static artifacts.
-See `docs/publication.md` for transport, visual access and manual authorization boundaries.
+The website, `GET /v1/specimens` catalog, and indexed, visibly marked PNG reference
+responses require no visitor application, KYB, DNS verification, or API key. The Worker
+keeps original archives, raw sources, internal ingestion, and administrative operations
+protected. Public reference delivery does not imply accepted runtime templates,
+credential authenticity, measured physical accuracy, or a transfer of source rights.
+See `docs/publication.md` for transport and public/protected delivery boundaries.
 
 ## Acceptance
 

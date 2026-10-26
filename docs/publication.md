@@ -1,13 +1,15 @@
-# Two-tier publication
+# Public references and protected source evidence
 
 ## Public research and engineering artifacts
 
 The public repository and static website contain code, generated schemas, citation URLs,
 source SHA-256 hashes, collection counts, and accepted normalized geometry. Each of the
 51 jurisdictions has a row even when collection found no usable source. Source titles
-are citation metadata. OCR text, callout transcriptions, extracted images, original PDFs,
-font outlines, and state artwork remain private. Public diagrams are independently drawn
-geometric illustrations or projections of reviewed geometry; they are not specimen art.
+are citation metadata. The website also displays indexed, visibly marked PNG reference
+derivatives served by the Worker. Original PDFs, raw extracted resources, OCR text,
+callout transcriptions, font outlines, and archive contents remain private. Public diagrams
+are independently drawn geometric illustrations or projections of reviewed geometry;
+they are distinct from the marked specimen references.
 
 `scripts/build_public_catalog.py` derives public files from `output/manifest.json`,
 `output/coverage.json`, and accepted `cohorts.json` records. The existing cohort exporter
@@ -22,14 +24,18 @@ extraction payloads, unsafe SVG content and symlinks. Every SVG must declare
 `data-cadastre-diagram="independent"` or `"reviewed-geometry"`; review remains necessary
 to establish that declaration. This is a publication boundary check, not a legal ruling.
 For built Astro output, `--bundled` permits imported brand WOFF2 fonts in `_astro/`.
+HTML image elements may point only to the exact same-origin
+`/v1/specimens/{STATE|US_FED}/{id}` route. Static source images, alternate image
+sources, external images, and embedded image payloads remain excluded.
 
-## Private collection and reference derivatives
+## Protected storage and public reference delivery
 
 `output/` is ignored by Git. It holds original PDFs, xref streams, native images, page
 plates, OCR, candidate crops, reviews, and per-run ledgers. Cloudflare's private
 `cadastre-specimens` R2 bucket stores immutable snapshot chunks, visibly marked specimen
 derivatives, and private indexes. It has no public bucket URL. The Worker alone resolves
-an approved key's scope and serves an authorized derivative.
+the public reference index and serves indexed, visibly marked PNG derivatives
+anonymously. Original archives, raw resources and unindexed objects remain protected.
 
 Transport requires an operator secret in `CADASTRE_INGEST_KEY`. Internal GET/PUT requests
 use `/internal/objects/<key>` and an Authorization bearer header. Each upload declares
@@ -57,26 +63,26 @@ be used for delivery; scale, padding, original-asset hash, derivative hash, sour
 and source page are recorded. The `state` field denotes discovery jurisdiction, not an
 accepted depicted-state classification. No derivative is a physical CAD master.
 
-## Authorization and terms
+## Anonymous reference access and operator authorization
 
-An applicant provides an organizational email, entity identity, authorized use, and
-reference-use attestation. Free-mail/disposable screening and domain or registration
-evidence support a manual decision. A UEI, CAGE record or government-looking domain
-alone does not establish applicant authority, legal access entitlement, or completed KYB.
-No automated KYB provider integration is claimed. Operators must independently review
-entity identity and applicant authorization before key issuance.
+The website, `GET /v1/specimens` catalog, and indexed PNG reference responses are public.
+Visitors need no application, KYB, DNS verification, clickwrap acceptance, or API key.
+Anonymous delivery is restricted to the visibly marked derivatives named by the reference
+index; a public reference URL does not grant access to original source files or snapshots.
 
-Per-key delivery receipts use opaque keyed metadata so recipient identity need not be
-embedded in the image. Such metadata can be stripped or transformed; it is not a robust
-steganographic leak attribution guarantee. Visible marking, clickwrap terms and access
-controls do not automatically create legal immunity or transfer redistribution rights.
-The rights and distribution basis of each source require review before external delivery.
+Internal ingestion and administrative operations continue to require operator authorization.
+Application and key management, where retained for operator workflows, do not gate public
+reference browsing. Secrets remain server-side and outside frontend build inputs.
+
+Visible marking identifies a reference derivative. It does not establish authenticity,
+physical measurement accuracy, leak attribution, legal immunity, or a transfer of source
+redistribution rights. The code license does not relicense third-party documents or images.
 
 ## Operations
 
 The weekly/manual workflow requires private vault credentials and never publishes visual
 GitHub releases or Actions artifacts. A failed private upload prevents the public metadata
 commit. No frontend build can read the private bucket directly. Logs and ledgers retained
-in a snapshot remain private. Revocation, scope enforcement and access audit belong to
-the Worker; client state never authorizes access. Deployment, schedule enablement and
-real applicant authorization are explicit operational checkpoints.
+in a snapshot remain private. Public index enforcement, protected-operation authorization, and access audit belong to
+the Worker; client state never authorizes privileged access. Deployment, schedule
+enablement, and operator authorization are explicit operational checkpoints.

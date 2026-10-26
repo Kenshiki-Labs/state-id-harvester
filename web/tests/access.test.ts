@@ -40,6 +40,7 @@ const testEnv = {
   CADASTRE_TRACE_KEY: "test-only-trace-secret-long-enough",
   RATE_LIMITER: { limit: async () => ({ success: true }) },
   INGEST_LIMITER: { limit: async () => ({ success: true }) },
+  PUBLIC_READ_LIMITER: { limit: async () => ({ success: true }) },
 };
 async function call(
   path: string,
@@ -83,45 +84,58 @@ beforeAll(async () => {
   testEnv.CADASTRE_INGEST_KEY_HASH = await hash("test-ingest-token");
 });
 describe("server-side access authority", () => {
-  it.each([200, 302])("uses the edge-supported redirect policy and rejects missing proof or a redirect (%i)", async (status) => {
-    const result = await create();
-    const spy = vi.spyOn(globalThis, "fetch").mockImplementation(async (_input, init) => {
-      // The real Cloudflare edge rejects redirect:error even though a local
-      // mocked fetch accepts it. Reproduce that platform constraint here.
-      if (init?.redirect !== "manual") throw new TypeError("Unsupported edge redirect policy");
-      return status === 200
-        ? Response.json({ Status: 0, Answer: [] })
-        : new Response(null, { status, headers: { Location: "https://untrusted.invalid/" } });
-    });
-    try {
-      const response = await call(`/v1/access-requests/${result.request_id}/verify-domain`, {
-        claim_token: result.claim_token,
-      });
-      expect(response.status).toBe(status === 200 ? 409 : 503);
-      expect(spy).toHaveBeenCalledTimes(1);
-      const row = await env.DB.prepare("SELECT domain_verified_at FROM access_requests WHERE id=?")
-        .bind(result.request_id).first();
-      expect(row?.domain_verified_at).toBeNull();
-    } finally {
-      spy.mockRestore();
-    }
-  });
+  it.each([200, 302])(
+    "uses the edge-supported redirect policy and rejects missing proof or a redirect (%i)",
+    async (status) => {
+      const result = await create();
+      const spy = vi
+        .spyOn(globalThis, "fetch")
+        .mockImplementation(async (_input, init) => {
+          // The real Cloudflare edge rejects redirect:error even though a local
+          // mocked fetch accepts it. Reproduce that platform constraint here.
+          if (init?.redirect !== "manual")
+            throw new TypeError("Unsupported edge redirect policy");
+          return status === 200
+            ? Response.json({ Status: 0, Answer: [] })
+            : new Response(null, {
+                status,
+                headers: { Location: "https://untrusted.invalid/" },
+              });
+        });
+      try {
+        const response = await call(
+          `/v1/access-requests/${result.request_id}/verify-domain`,
+          {
+            claim_token: result.claim_token,
+          },
+        );
+        expect(response.status).toBe(status === 200 ? 409 : 503);
+        expect(spy).toHaveBeenCalledTimes(1);
+        const row = await env.DB.prepare(
+          "SELECT domain_verified_at FROM access_requests WHERE id=?",
+        )
+          .bind(result.request_id)
+          .first();
+        expect(row?.domain_verified_at).toBeNull();
+      } finally {
+        spy.mockRestore();
+      }
+    },
+  );
   it("accepts the frontend proof helper contract while keeping organization review pending", async () => {
     const result = await create();
-    const spy = vi
-      .spyOn(globalThis, "fetch")
-      .mockResolvedValue(
-        Response.json({
-          Status: 0,
-          Answer: [
-            {
-              name: result.domain_challenge.name,
-              type: 16,
-              data: `"${result.domain_challenge.value}"`,
-            },
-          ],
-        }),
-      );
+    const spy = vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      Response.json({
+        Status: 0,
+        Answer: [
+          {
+            name: result.domain_challenge.name,
+            type: 16,
+            data: `"${result.domain_challenge.value}"`,
+          },
+        ],
+      }),
+    );
     const transport = (async (input, init) =>
       worker.fetch(
         new Request(origin + String(input), {
@@ -304,15 +318,6 @@ describe("server-side access authority", () => {
       .bind(key.key_id)
       .first();
     expect(stored?.key_hash).toBe(await hash(key.api_key));
-    await env.DB.prepare("UPDATE api_keys SET expires_at=? WHERE id=?")
-      .bind("2000-01-01T00:00:00.000Z", key.key_id)
-      .run();
-    expect((await call("/v1/specimens", undefined, key.api_key)).status).toBe(
-      401,
-    );
-    await env.DB.prepare("UPDATE api_keys SET expires_at=? WHERE id=?")
-      .bind("2999-01-01T00:00:00.000Z", key.key_id)
-      .run();
     const png = Uint8Array.from(
       atob(
         "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aVNQAAAAASUVORK5CYII=",
@@ -363,19 +368,9 @@ describe("server-side access authority", () => {
       key.api_key,
     );
     expect(downloaded.status).toBe(200);
-    const receipt = downloaded.headers.get("X-Cadastre-Receipt");
-    expect(receipt).toMatch(/^dl1\.[a-f0-9-]+\.\d+\.[\w-]+$/);
-    const bytes = new Uint8Array(await downloaded.arrayBuffer());
-    expect(new TextDecoder().decode(bytes)).toContain(
-      "Cadastre-Receipt\0" + receipt,
-    );
-    const delivery = await env.DB.prepare(
-      "SELECT receipt FROM audit_events WHERE key_id=? AND event='specimen_delivered'",
-    )
-      .bind(key.key_id)
-      .first();
-    expect(delivery?.receipt).toBe(receipt);
-    expect(downloaded.headers.get("Cache-Control")).toBe("private, no-store");
+    expect(downloaded.headers.get("X-Cadastre-Receipt")).toBeNull();
+    expect(new Uint8Array(await downloaded.arrayBuffer())).toEqual(png);
+    expect(downloaded.headers.get("Cache-Control")).toBe("public, max-age=300");
     expect(
       (await call("/v1/specimens/CA/arbitrary-path", undefined, key.api_key))
         .status,
@@ -389,9 +384,13 @@ describe("server-side access authority", () => {
         )
       ).status,
     ).toBe(200);
-    expect((await call("/v1/specimens", undefined, key.api_key)).status).toBe(
-      401,
-    );
+    expect((await call("/v1/specimens")).status).toBe(200);
+    const revoked = await env.DB.prepare(
+      "SELECT revoked_at FROM api_keys WHERE id=?",
+    )
+      .bind(key.key_id)
+      .first();
+    expect(revoked?.revoked_at).not.toBeNull();
   });
   it("does not approve before DNS verification or accept incorrect claim token", async () => {
     const result = await create();
@@ -545,7 +544,7 @@ describe("server-side access authority", () => {
       .first();
     expect(row?.domain_verified_at).toBeNull();
   });
-  it("a valid DNS proof still cannot list private specimens or claim an unapproved key", async () => {
+  it("a valid DNS proof cannot claim an unapproved key while marked references remain public", async () => {
     const result = await create();
     const half = result.domain_challenge.value.length / 2;
     const spy = vi.spyOn(globalThis, "fetch").mockResolvedValue(
@@ -578,9 +577,8 @@ describe("server-side access authority", () => {
         })
       ).status,
     ).toBe(403);
-    expect(
-      (await call("/v1/specimens", undefined, result.claim_token)).status,
-    ).toBe(401);
+    await env.VAULT.put("indexes/specimens.json", "[]");
+    expect((await call("/v1/specimens")).status).toBe(200);
   });
   it("refuses stale accepted policy versions or hashes even for previously approved applicants", async () => {
     for (const [column, value] of [
@@ -618,7 +616,8 @@ describe("server-side access authority", () => {
       `/v1/access-requests/${result.request_id}/claim-key`,
       { claim_token: result.claim_token },
     );
-    const key = (await issued.json()) as { api_key: string };
+    expect(issued.status).toBe(200);
+    await issued.json();
     const rejection = await call(
       `/admin/access-requests/${result.request_id}/reject`,
       {
@@ -629,9 +628,7 @@ describe("server-side access authority", () => {
       "test-admin-token",
     );
     expect(rejection.status).toBe(200);
-    expect((await call("/v1/specimens", undefined, key.api_key)).status).toBe(
-      401,
-    );
+    expect((await call("/v1/specimens")).status).toBe(200);
     expect(
       (
         await call(`/v1/access-requests/${result.request_id}/verify-domain`, {
@@ -646,13 +643,16 @@ describe("server-side access authority", () => {
         })
       ).status,
     ).toBe(403);
-    expect(
-      (await call("/v1/specimens", undefined, key.api_key.slice(0, -1) + "!"))
-        .status,
-    ).toBe(401);
+    const row = await env.DB.prepare(
+      "SELECT status FROM access_requests WHERE id=?",
+    )
+      .bind(result.request_id)
+      .first();
+    expect(row?.status).toBe("rejected");
   });
   it("fails closed for private paths and missing credentials", async () => {
-    expect((await call("/v1/specimens")).status).toBe(401);
+    await env.VAULT.put("indexes/specimens.json", "[]");
+    expect((await call("/v1/specimens")).status).toBe(200);
     expect(
       (await call("/internal/objects/indexes/specimens.json")).status,
     ).toBe(401);
@@ -660,6 +660,20 @@ describe("server-side access authority", () => {
     expect((await call("/v1")).status).toBe(404);
     expect((await call("/admin/access-requests")).status).toBe(401);
   });
+  it.each(["GET", "HEAD"])(
+    "redirects the legacy request manager without retaining credentials (%s)",
+    async (method) => {
+      const response = await call(
+        "/access?request_id=old-request&claim_token=private-legacy-token",
+        undefined,
+        undefined,
+        method,
+      );
+      expect(response.status).toBe(301);
+      expect(response.headers.get("Location")).toBe(origin + "/#catalog");
+      expect(await response.text()).toBe("");
+    },
+  );
   it("isolates ingest credentials and rejects checksum mismatches without committing bytes", async () => {
     const upload = (token: string, checksum: string) =>
       new Request(origin + "/internal/objects/snapshots/test/part.bin", {
@@ -716,7 +730,7 @@ describe("server-side access authority", () => {
     ).toBe(401);
     expect(
       (await call("/v1/specimens", undefined, "test-ingest-token")).status,
-    ).toBe(401);
+    ).toBe(200);
     expect(
       (await call("/admin/access-requests", undefined, "test-admin-token"))
         .status,
@@ -894,8 +908,7 @@ describe("server-side access authority", () => {
     expect(results.map((r) => r.status).sort()).toEqual([200, 409]);
   });
 });
-describe("adversarial private catalog delivery", () => {
-  let apiKey: string, requestId: string;
+describe("adversarial public marked-reference delivery", () => {
   const png = Uint8Array.from(
     atob(
       "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aVNQAAAAASUVORK5CYII=",
@@ -916,22 +929,208 @@ describe("adversarial private catalog delivery", () => {
     ]
       .map((x) => x.toString(16).padStart(2, "0"))
       .join("");
-    const result = await create();
-    requestId = result.request_id;
-    await env.DB.prepare(
-      "UPDATE access_requests SET status='approved',domain_verified_at=? WHERE id=?",
-    )
-      .bind(new Date().toISOString(), requestId)
-      .run();
-    const response = await call(`/v1/access-requests/${requestId}/claim-key`, {
-      claim_token: result.claim_token,
+  });
+  async function seedPublicReference() {
+    await env.VAULT.put(
+      "indexes/specimens.json",
+      JSON.stringify([
+        {
+          ...entry,
+          private_note: "not-public",
+          work_email: "private@example.gov",
+        },
+      ]),
+    );
+    await env.VAULT.put(entry.key, png, {
+      sha256: entry.asset_sha256,
+      httpMetadata: { contentType: "image/png" },
+      customMetadata: {
+        cadastreReferenceOnly: "true",
+        sha256: entry.asset_sha256,
+        sourceSha256: entry.source_sha256,
+      },
     });
-    const issued = (await response.json()) as { api_key: string };
-    apiKey = issued.api_key;
+  }
+  it("allows anonymous GET and HEAD with bounded public caching and no storage-key leakage", async () => {
+    await seedPublicReference();
+    const listed = await worker.fetch(
+      new Request(origin + "/v1/specimens"),
+      testEnv,
+    );
+    expect(listed.status).toBe(200);
+    expect(listed.headers.get("Cache-Control")).toBe("public, max-age=60");
+    expect(await listed.json()).toEqual({
+      specimens: [
+        {
+          id: entry.id,
+          state: entry.state,
+          source_sha256: entry.source_sha256,
+          asset_sha256: entry.asset_sha256,
+          review_status: "reference_only",
+        },
+      ],
+    });
+    const listHead = await call("/v1/specimens", undefined, undefined, "HEAD");
+    expect(listHead.status).toBe(200);
+    expect(listHead.headers.get("Cache-Control")).toBe("public, max-age=60");
+    expect(await listHead.text()).toBe("");
+    const image = await worker.fetch(
+      new Request(origin + "/v1/specimens/TX/adversarial", {
+        headers: {
+          Origin: "https://other.example",
+          Authorization: "Bearer irrelevant-invalid-token",
+        },
+      }),
+      testEnv,
+    );
+    expect(image.status).toBe(200);
+    expect(image.headers.get("Content-Type")).toBe("image/png");
+    expect(image.headers.get("Content-Length")).toBe(String(png.length));
+    expect(image.headers.get("Cache-Control")).toBe("public, max-age=300");
+    expect(image.headers.get("Content-Disposition")).toBe(
+      'inline; filename="TX-adversarial.png"',
+    );
+    expect(image.headers.get("ETag")).toBe(`"${entry.asset_sha256}"`);
+    expect(image.headers.get("X-Cadastre-Receipt")).toBeNull();
+    expect(new Uint8Array(await image.arrayBuffer())).toEqual(png);
+    const head = await call(
+      "/v1/specimens/TX/adversarial",
+      undefined,
+      undefined,
+      "HEAD",
+    );
+    expect(head.status).toBe(200);
+    expect(head.headers.get("Content-Length")).toBe(String(png.length));
+    expect(head.headers.get("ETag")).toBe(`"${entry.asset_sha256}"`);
+    expect(await head.text()).toBe("");
+  });
+  it("reads public references with no database, signing secret, or delivery-audit dependency", async () => {
+    await seedPublicReference();
+    const db = new Proxy(env.DB, {
+      get() {
+        throw new Error("Public reference read reached private D1");
+      },
+    });
+    const withoutAuthority = {
+      ...testEnv,
+      DB: db,
+      CADASTRE_TRACE_KEY: "",
+      CADASTRE_ADMIN_KEY_HASH: "",
+      CADASTRE_INGEST_KEY_HASH: "",
+    };
+    for (const path of ["/v1/specimens", "/v1/specimens/TX/adversarial"]) {
+      const response = await worker.fetch(
+        new Request(origin + path),
+        withoutAuthority,
+      );
+      expect(response.status).toBe(200);
+      await response.arrayBuffer();
+    }
+  });
+  it("keeps raw objects, unindexed references and encoded paths out of public access", async () => {
+    await seedPublicReference();
+    await env.VAULT.put("snapshots/security/raw.pdf", "PRIVATE_RAW_PDF");
+    await env.VAULT.put("specimens/security/unindexed.png", png);
+    for (const path of [
+      "/v1/specimens/TX/unindexed",
+      "/v1/specimens/TX/security%2fflat.png",
+      "/v1/specimens/TX/%2e%2e/snapshots/security/raw.pdf",
+      "/v1/specimens/TX/..%2f..%2fsnapshots%2fsecurity%2fraw.pdf",
+      "/v1/specimens/TX/specimens/security/flat.png",
+      "/v1/specimens/ZZ/adversarial",
+      "/v1/specimens/tx/adversarial",
+    ]) {
+      const response = await call(path);
+      expect(response.status).toBe(404);
+      expect(await response.text()).not.toContain("PRIVATE_RAW_PDF");
+    }
+    expect(
+      (await call("/internal/objects/snapshots/security/raw.pdf")).status,
+    ).toBe(401);
+    expect((await call("/internal/objects/" + entry.key)).status).toBe(401);
+    expect((await call("/admin/access-requests")).status).toBe(401);
+    const query = await call(
+      "/v1/specimens/TX/adversarial?key=snapshots/security/raw.pdf",
+    );
+    expect(query.status).toBe(200);
+    expect(new Uint8Array(await query.arrayBuffer())).toEqual(png);
+  });
+  it.each(["POST", "PUT", "PATCH", "DELETE", "OPTIONS"])(
+    "refuses public specimen writes and preflight (%s)",
+    async (method) => {
+      await seedPublicReference();
+      const get = vi.spyOn(env.VAULT, "get");
+      const put = vi.spyOn(env.VAULT, "put");
+      const remove = vi.spyOn(env.VAULT, "delete");
+      try {
+        const response = await worker.fetch(
+          new Request(origin + "/v1/specimens/TX/adversarial", {
+            method,
+            headers: { Authorization: "Bearer test-ingest-token" },
+          }),
+          testEnv,
+        );
+        expect(response.status).toBe(404);
+        expect(get).not.toHaveBeenCalled();
+        expect(put).not.toHaveBeenCalled();
+        expect(remove).not.toHaveBeenCalled();
+      } finally {
+        get.mockRestore();
+        put.mockRestore();
+        remove.mockRestore();
+      }
+    },
+  );
+  it("uses an isolated anonymous read limit without starving policy or protected administration", async () => {
+    await seedPublicReference();
+    const publicLimit = vi.fn().mockResolvedValue({ success: true });
+    const privateLimit = vi.fn().mockResolvedValue({ success: false });
+    const isolated = {
+      ...testEnv,
+      PUBLIC_READ_LIMITER: { limit: publicLimit },
+      RATE_LIMITER: { limit: privateLimit },
+    };
+    const readable = await worker.fetch(
+      new Request(origin + "/v1/specimens"),
+      isolated,
+    );
+    expect(readable.status).toBe(200);
+    await readable.arrayBuffer();
+    expect(publicLimit).toHaveBeenCalledTimes(1);
+    expect(privateLimit).not.toHaveBeenCalled();
+    const denied = {
+      ...testEnv,
+      PUBLIC_READ_LIMITER: { limit: async () => ({ success: false }) },
+    };
+    const get = vi.spyOn(env.VAULT, "get");
+    try {
+      const response = await worker.fetch(
+        new Request(origin + "/v1/specimens/TX/adversarial"),
+        denied,
+      );
+      expect(response.status).toBe(429);
+      expect(await response.json()).toEqual({
+        error: { code: "rate_limited" },
+      });
+      expect(get).not.toHaveBeenCalled();
+      expect(
+        (await worker.fetch(new Request(origin + "/v1/policy"), denied)).status,
+      ).toBe(200);
+      expect(
+        (
+          await worker.fetch(
+            new Request(origin + "/admin/access-requests"),
+            denied,
+          )
+        ).status,
+      ).toBe(401);
+    } finally {
+      get.mockRestore();
+    }
   });
   it("fails closed for absent, malformed and unsafe allowlists", async () => {
     await env.VAULT.delete("indexes/specimens.json");
-    expect((await call("/v1/specimens", undefined, apiKey)).status).toBe(503);
+    expect((await call("/v1/specimens")).status).toBe(503);
     for (const value of [
       "null",
       "not json",
@@ -940,16 +1139,14 @@ describe("adversarial private catalog delivery", () => {
     ]) {
       await env.VAULT.put("indexes/specimens.json", value);
       expect(
-        (await call("/v1/specimens/TX/adversarial", undefined, apiKey)).status,
+        (await call("/v1/specimens/TX/adversarial")).status,
       ).toBeGreaterThanOrEqual(400);
     }
   });
-  it("requires reference-only metadata and matching source and asset hashes before audit or delivery", async () => {
+  it("requires reference-only metadata and matching source and asset hashes before public delivery", async () => {
     await env.VAULT.put("indexes/specimens.json", JSON.stringify([entry]));
     await env.VAULT.delete(entry.key);
-    expect(
-      (await call("/v1/specimens/TX/adversarial", undefined, apiKey)).status,
-    ).toBe(503);
+    expect((await call("/v1/specimens/TX/adversarial")).status).toBe(503);
     const metadata = {
       cadastreReferenceOnly: "true",
       sha256: entry.asset_sha256,
@@ -964,62 +1161,15 @@ describe("adversarial private catalog delivery", () => {
         httpMetadata: { contentType: "image/png" },
         customMetadata: { ...metadata, ...patch },
       });
-      expect(
-        (await call("/v1/specimens/TX/adversarial", undefined, apiKey)).status,
-      ).toBe(503);
+      expect((await call("/v1/specimens/TX/adversarial")).status).toBe(503);
     }
     await env.VAULT.put(entry.key, png, {
       httpMetadata: { contentType: "application/octet-stream" },
       customMetadata: metadata,
     });
-    expect(
-      (await call("/v1/specimens/TX/adversarial", undefined, apiKey)).status,
-    ).toBe(503);
-    const deliveries = await env.DB.prepare(
-      "SELECT COUNT(*) AS count FROM audit_events WHERE request_id=? AND event='specimen_delivered'",
-    )
-      .bind(requestId)
-      .first();
-    expect(deliveries?.count).toBe(0);
+    expect((await call("/v1/specimens/TX/adversarial")).status).toBe(503);
   });
-  it("delivers no PNG if the mandatory audit transaction fails", async () => {
-    await env.VAULT.put(entry.key, png, {
-      sha256: entry.asset_sha256,
-      httpMetadata: { contentType: "image/png" },
-      customMetadata: {
-        cadastreReferenceOnly: "true",
-        sha256: entry.asset_sha256,
-        sourceSha256: entry.source_sha256,
-      },
-    });
-    await env.DB.prepare(
-      "CREATE TRIGGER fail_delivery_audit BEFORE INSERT ON audit_events WHEN NEW.event='specimen_delivered' BEGIN SELECT RAISE(ABORT,'audit unavailable'); END",
-    ).run();
-    try {
-      const response = await call(
-        "/v1/specimens/TX/adversarial",
-        undefined,
-        apiKey,
-      );
-      expect(response.status).toBe(503);
-      expect(response.headers.get("Content-Type")).toContain(
-        "application/json",
-      );
-      expect(await response.json()).toEqual({
-        error: { code: "service_unavailable" },
-      });
-    } finally {
-      await env.DB.prepare("DROP TRIGGER fail_delivery_audit").run();
-    }
-    const response = await call(
-      "/v1/specimens/TX/adversarial",
-      undefined,
-      apiKey,
-    );
-    expect(response.status).toBe(200);
-    await response.arrayBuffer();
-  });
-  it("refuses forged hash metadata and duplicate asset identities before delivering private bytes", async () => {
+  it("refuses forged hash metadata and duplicate asset identities before delivering public bytes", async () => {
     const metadata = {
       cadastreReferenceOnly: "true",
       sha256: entry.asset_sha256,
@@ -1029,9 +1179,7 @@ describe("adversarial private catalog delivery", () => {
       httpMetadata: { contentType: "image/png" },
       customMetadata: metadata,
     });
-    expect(
-      (await call("/v1/specimens/TX/adversarial", undefined, apiKey)).status,
-    ).toBe(503);
+    expect((await call("/v1/specimens/TX/adversarial")).status).toBe(503);
     const forged = "c".repeat(64);
     await env.VAULT.put(entry.key, png, {
       sha256: entry.asset_sha256,
@@ -1042,9 +1190,7 @@ describe("adversarial private catalog delivery", () => {
       "indexes/specimens.json",
       JSON.stringify([{ ...entry, asset_sha256: forged }]),
     );
-    expect(
-      (await call("/v1/specimens/TX/adversarial", undefined, apiKey)).status,
-    ).toBe(503);
+    expect((await call("/v1/specimens/TX/adversarial")).status).toBe(503);
     await env.VAULT.put(
       "indexes/specimens.json",
       JSON.stringify([
@@ -1052,92 +1198,13 @@ describe("adversarial private catalog delivery", () => {
         { ...entry, key: "specimens/elsewhere/flat.png" },
       ]),
     );
-    expect((await call("/v1/specimens", undefined, apiKey)).status).toBe(503);
+    expect((await call("/v1/specimens")).status).toBe(503);
     await env.VAULT.put("indexes/specimens.json", JSON.stringify([entry]));
     await env.VAULT.put(entry.key, png, {
       sha256: entry.asset_sha256,
       httpMetadata: { contentType: "image/png" },
       customMetadata: metadata,
     });
-  });
-  it("rechecks revocation, expiry and organization authority after awaited R2 reads at the audit boundary", async () => {
-    const updates = [
-      "UPDATE api_keys SET revoked_at='2026-01-01' WHERE request_id=?",
-      "UPDATE api_keys SET expires_at='2000-01-01' WHERE request_id=?",
-      "UPDATE access_requests SET status='rejected' WHERE id=?",
-      "UPDATE access_requests SET domain_verified_at=NULL WHERE id=?",
-      "UPDATE access_requests SET aup_hash='invalid' WHERE id=?",
-    ];
-    const originalGet = env.VAULT.get.bind(env.VAULT);
-    for (const sql of updates) {
-      await env.DB.prepare(
-        "UPDATE api_keys SET revoked_at=NULL,expires_at='2099-01-01' WHERE request_id=?",
-      )
-        .bind(requestId)
-        .run();
-      await env.DB.prepare(
-        "UPDATE access_requests SET status='approved',domain_verified_at=?,aup_hash=? WHERE id=?",
-      )
-        .bind(new Date().toISOString(), await hash(AUP_TEXT), requestId)
-        .run();
-      const spy = vi
-        .spyOn(env.VAULT, "get")
-        .mockImplementation(async (key, options) => {
-          const object = await originalGet(key, options);
-          if (key === entry.key)
-            await env.DB.prepare(sql).bind(requestId).run();
-          return object;
-        });
-      const before = await env.DB.prepare(
-        "SELECT COUNT(*) AS count FROM audit_events WHERE request_id=? AND event='specimen_delivered'",
-      )
-        .bind(requestId)
-        .first();
-      try {
-        const response = await call(
-          "/v1/specimens/TX/adversarial",
-          undefined,
-          apiKey,
-        );
-        expect(response.status).toBe(401);
-        expect(await response.json()).toEqual({
-          error: { code: "unauthorized" },
-        });
-      } finally {
-        spy.mockRestore();
-      }
-      const after = await env.DB.prepare(
-        "SELECT COUNT(*) AS count FROM audit_events WHERE request_id=? AND event='specimen_delivered'",
-      )
-        .bind(requestId)
-        .first();
-      expect(after?.count).toBe(before?.count);
-    }
-    await env.DB.prepare("UPDATE access_requests SET aup_hash=? WHERE id=?")
-      .bind(await hash(AUP_TEXT), requestId)
-      .run();
-    const spy = vi
-      .spyOn(env.VAULT, "get")
-      .mockImplementation(async (key, options) => {
-        const object = await originalGet(key, options);
-        if (key === "indexes/specimens.json")
-          await env.DB.prepare(
-            "UPDATE api_keys SET revoked_at=? WHERE request_id=?",
-          )
-            .bind(new Date().toISOString(), requestId)
-            .run();
-        return object;
-      });
-    try {
-      expect((await call("/v1/specimens", undefined, apiKey)).status).toBe(401);
-    } finally {
-      spy.mockRestore();
-    }
-    await env.DB.prepare(
-      "UPDATE api_keys SET revoked_at=NULL WHERE request_id=?",
-    )
-      .bind(requestId)
-      .run();
   });
   it("rejects truncated or corrupted PNG headers before committing ingest objects", async () => {
     const corrupted = png.slice();
@@ -1186,7 +1253,7 @@ describe("adversarial private catalog delivery", () => {
     );
     expect((await worker.fetch(missingSource, testEnv)).status).toBe(400);
   });
-  it("gates federal specimen ingestion, listing and attributed delivery with the same authority checks", async () => {
+  it("keeps federal ingestion protected while indexed marked federal references are public", async () => {
     const federal = {
       ...entry,
       state: "US_FED",
@@ -1210,55 +1277,50 @@ describe("adversarial private catalog delivery", () => {
       },
       body: png,
     });
+    const anonymousHeaders = new Headers(request.headers);
+    anonymousHeaders.delete("Authorization");
+    expect(
+      (
+        await worker.fetch(
+          new Request(request.clone(), { headers: anonymousHeaders }),
+          testEnv,
+        )
+      ).status,
+    ).toBe(401);
     expect((await worker.fetch(request, testEnv)).status).toBe(201);
     await env.VAULT.put(
       "indexes/specimens.json",
       JSON.stringify([{ ...federal, nominal_width_mm: 85.6 }]),
     );
     const path = "/v1/specimens/US_FED/passport_reference";
-    expect((await call(path)).status).toBe(401);
-    expect((await call(path, undefined, "test-ingest-token")).status).toBe(401);
-    const listed = (await (
-      await call("/v1/specimens", undefined, apiKey)
-    ).json()) as { specimens: Record<string, unknown>[] };
+    expect((await call(path)).status).toBe(200);
+    const listed = (await (await call("/v1/specimens")).json()) as {
+      specimens: Record<string, unknown>[];
+    };
     expect(listed.specimens[0]).toMatchObject({
       state: "US_FED",
       source_sha256: federal.source_sha256,
     });
     expect(listed.specimens[0]).not.toHaveProperty("nominal_width_mm");
     expect(listed.specimens[0]).not.toHaveProperty("key");
-    const delivered = await call(path, undefined, apiKey);
+    const delivered = await call(path);
     expect(delivered.status).toBe(200);
     expect(delivered.headers.get("Content-Disposition")).toContain(
       "US_FED-passport_reference.png",
     );
-    const receipt = delivered.headers.get("X-Cadastre-Receipt");
-    expect(new TextDecoder().decode(await delivered.arrayBuffer())).toContain(
-      "Cadastre-Receipt\0" + receipt,
+    expect(delivered.headers.get("X-Cadastre-Receipt")).toBeNull();
+    expect(new Uint8Array(await delivered.arrayBuffer())).toEqual(png);
+    const head = await call(path, undefined, undefined, "HEAD");
+    expect(head.status).toBe(200);
+    expect(head.headers.get("Cache-Control")).toBe("public, max-age=300");
+    expect(await head.text()).toBe("");
+    expect((await call("/internal/objects/" + federal.key)).status).toBe(401);
+    expect((await call("/v1/specimens/US_FED/other_reference")).status).toBe(
+      404,
     );
-    const audit = await env.DB.prepare(
-      "SELECT receipt FROM audit_events WHERE request_id=? AND asset_id=? AND event='specimen_delivered'",
-    )
-      .bind(requestId, federal.id)
-      .first();
-    expect(audit?.receipt).toBe(receipt);
     expect(
-      (await call("/v1/specimens/US_FED/other_reference", undefined, apiKey))
-        .status,
+      (await call("/v1/specimens/US_FEDERAL/passport_reference")).status,
     ).toBe(404);
-    expect(
-      (
-        await call(
-          "/v1/specimens/US_FEDERAL/passport_reference",
-          undefined,
-          apiKey,
-        )
-      ).status,
-    ).toBe(404);
-    await env.DB.prepare("UPDATE api_keys SET revoked_at=? WHERE request_id=?")
-      .bind(new Date().toISOString(), requestId)
-      .run();
-    expect((await call(path, undefined, apiKey)).status).toBe(401);
   });
 });
 describe("streaming PNG attribution", () => {

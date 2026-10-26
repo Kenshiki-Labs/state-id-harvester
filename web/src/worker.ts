@@ -9,7 +9,7 @@ import {
   type Specimen,
   validateApplication,
 } from "./core/policy";
-import { validatePngHeader, withPngReceipt } from "./core/png";
+import { validatePngHeader } from "./core/png";
 import { timingSafeEqual } from "node:crypto";
 
 const encoder = new TextEncoder();
@@ -304,59 +304,6 @@ async function claimKey(env: Env, row: ApplicationRow): Promise<Response> {
     throw new PolicyError("key_already_claimed", 409);
   return json({ api_key: token, key_id: keyId, expires_at: expires });
 }
-async function activeKey(
-  request: Request,
-  env: Env,
-): Promise<{ id: string; request_id: string }> {
-  const auth = request.headers.get("Authorization") ?? "";
-  if (!/^Bearer kl_live_[a-f0-9]{24}_[A-Za-z0-9_-]{43}$/.test(auth))
-    throw new PolicyError("unauthorized", 401);
-  const parts = auth.slice(7).split("_");
-  const row = await env.DB.prepare(
-    `SELECT k.id,k.request_id,k.key_hash FROM api_keys k JOIN access_requests r ON r.id=k.request_id WHERE k.id=? AND k.revoked_at IS NULL AND k.expires_at>? AND r.status='approved' AND r.domain_verified_at IS NOT NULL AND r.aup_version=? AND r.aup_hash=?`,
-  )
-    .bind(parts[2], now(), AUP_VERSION, await sha(AUP_TEXT))
-    .first<{ id: string; request_id: string; key_hash: string }>();
-  if (!row || !secureEqual(await sha(auth.slice(7)), row.key_hash))
-    throw new PolicyError("unauthorized", 401);
-  return row;
-}
-async function auditAuthorizedAccess(
-  env: Env,
-  key: { id: string; request_id: string },
-  event: "specimens_listed" | "specimen_delivered",
-  entry?: Specimen,
-  receipt?: string,
-): Promise<void> {
-  const timestamp = now();
-  const evidence = entry
-    ? JSON.stringify({
-        collection: entry.state,
-        source_sha256: entry.source_sha256,
-        asset_sha256: entry.asset_sha256,
-      })
-    : null;
-  // This INSERT is the delivery authorization boundary. A key may have expired,
-  // been revoked, or its organization rejected while private R2 reads awaited.
-  const result = await env.DB.prepare(
-    `INSERT INTO audit_events(id,request_id,key_id,event,asset_id,receipt,evidence,created_at) SELECT ?,k.request_id,k.id,?,?,?,?,? FROM api_keys k JOIN access_requests r ON r.id=k.request_id WHERE k.id=? AND k.request_id=? AND k.revoked_at IS NULL AND k.expires_at>? AND r.status='approved' AND r.domain_verified_at IS NOT NULL AND r.aup_version=? AND r.aup_hash=?`,
-  )
-    .bind(
-      id(),
-      event,
-      entry?.id ?? null,
-      receipt ?? null,
-      evidence,
-      timestamp,
-      key.id,
-      key.request_id,
-      timestamp,
-      AUP_VERSION,
-      await sha(AUP_TEXT),
-    )
-    .run();
-  if (result.meta.changes !== 1) throw new PolicyError("unauthorized", 401);
-}
 function matchesSpecimen(asset: R2ObjectBody, entry: Specimen): boolean {
   const checksum = asset.checksums.sha256;
   return (
@@ -374,10 +321,11 @@ async function specimens(
   env: Env,
   path: string,
 ): Promise<Response> {
-  const key = await activeKey(request, env);
   const object = await env.VAULT.get("indexes/specimens.json");
-  if (!object || object.size > 4 * 1024 * 1024)
+  if (!object || object.size > 4 * 1024 * 1024) {
+    await object?.body.cancel();
     throw new PolicyError("catalog_unavailable", 503);
+  }
   const index = specimenIndex(
     JSON.parse(
       new TextDecoder().decode(
@@ -386,8 +334,15 @@ async function specimens(
     ),
   );
   if (path === "/v1/specimens") {
-    await auditAuthorizedAccess(env, key, "specimens_listed");
-    return json({ specimens: index.map(({ key: _key, ...entry }) => entry) });
+    const body = request.method === "HEAD" ? null : JSON.stringify({
+      specimens: index.map(({ key: _key, ...entry }) => entry),
+    });
+    return new Response(body, {
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "public, max-age=60",
+      },
+    });
   }
   const match =
     /^\/v1\/specimens\/([A-Z]{2}|US_FED)\/([A-Za-z0-9_-]{1,150})$/.exec(path);
@@ -396,16 +351,18 @@ async function specimens(
     index.find((item) => item.state === match[1] && item.id === match[2]);
   if (!entry) throw new PolicyError("not_found", 404);
   const asset = await env.VAULT.get(entry.key);
-  if (!asset || !matchesSpecimen(asset, entry))
+  if (!asset || !matchesSpecimen(asset, entry)) {
+    await asset?.body.cancel();
     throw new PolicyError("asset_unavailable", 503);
-  const receipt = await sign(env, `dl1.${id()}.${Date.now()}`);
-  await auditAuthorizedAccess(env, key, "specimen_delivered", entry, receipt);
-  return new Response(withPngReceipt(asset.body, receipt), {
+  }
+  if (request.method === "HEAD") await asset.body.cancel();
+  return new Response(request.method === "HEAD" ? null : asset.body, {
     headers: {
       "Content-Type": "image/png",
-      "Cache-Control": "private, no-store",
-      "Content-Disposition": `attachment; filename="${entry.state}-${entry.id}.png"`,
-      "X-Cadastre-Receipt": receipt,
+      "Content-Length": String(asset.size),
+      "Cache-Control": "public, max-age=300",
+      "Content-Disposition": `inline; filename="${entry.state}-${entry.id}.png"`,
+      "ETag": `"${entry.asset_sha256}"`,
     },
   });
 }
@@ -641,7 +598,12 @@ async function apiRoute(
   const fingerprint = await sha(
     `${category}:${request.headers.get("CF-Connecting-IP") ?? "local"}`,
   );
-  const limiter = category === "ingest" ? env.INGEST_LIMITER : env.RATE_LIMITER;
+  const publicRead =
+    ["GET", "HEAD"].includes(request.method) &&
+    (path === "/v1/specimens" || path.startsWith("/v1/specimens/"));
+  let limiter = env.RATE_LIMITER;
+  if (category === "ingest") limiter = env.INGEST_LIMITER;
+  if (publicRead) limiter = env.PUBLIC_READ_LIMITER;
   if (!(await limiter.limit({ key: fingerprint })).success)
     throw new PolicyError("rate_limited", 429);
   if (path === "/v1/policy" && request.method === "GET")
@@ -655,11 +617,7 @@ async function apiRoute(
     return internal(request, env, path);
   if (request.method === "POST" && path.startsWith("/v1/access-requests"))
     return accessRoute(request, env, path);
-  if (
-    request.method === "GET" &&
-    (path === "/v1/specimens" || path.startsWith("/v1/specimens/"))
-  )
-    return specimens(request, env, path);
+  if (publicRead) return specimens(request, env, path);
   throw new PolicyError("not_found", 404);
 }
 export default {
@@ -671,6 +629,8 @@ export default {
         return headers(await apiRoute(request, env, path));
       if (!["GET", "HEAD"].includes(request.method))
         throw new PolicyError("method_not_allowed", 405);
+      if (path === "/access" || path === "/access/")
+        return headers(Response.redirect(`${env.PUBLIC_ORIGIN}/#catalog`, 301));
       return headers(await env.ASSETS.fetch(request));
     } catch (error) {
       const failure =

@@ -1,3 +1,4 @@
+import { useSpecimens } from "../lib/specimens";
 import { useCatalog } from "../lib/catalog";
 import { catalogFilter } from "../lib/catalog-model";
 import CatalogRows from "./CatalogRows";
@@ -5,6 +6,7 @@ import FederalCatalog from "./FederalCatalog";
 import CatalogDetail from "./CatalogDetail";
 export default function Catalog() {
   const catalog = useCatalog();
+  const gallery = useSpecimens();
   const detail = catalog.detail;
   return (
     <div className="catalog-browser">
@@ -52,10 +54,11 @@ export default function Catalog() {
         </fieldset>
         <CatalogDetail
           detail={detail}
+          gallery={gallery}
           unavailable={catalog.loading || catalog.error}
         />
       </div>
-      <FederalCatalog collection={catalog.error ? null : catalog.federal} />
+      <FederalCatalog collection={catalog.error ? null : catalog.federal} gallery={gallery} />
     </div>
   );
 }

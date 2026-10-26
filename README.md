@@ -3,7 +3,9 @@
 An auditable reference-library builder for US driver licenses and identification cards
 across the 50 states and Washington, DC. The public project contains extraction code,
 schemas, official-source citations and hashes, coverage metadata, and reviewed normalized
-geometry. Original documents and visual derivatives stay in a separate private vault.
+geometry. The website and indexed, visibly marked PNG references are publicly accessible
+without an account or key. Original documents and raw extraction evidence stay in a
+separate private vault.
 Federal credentials are collected separately under `US_FED`; see [federal collection](docs/federal.md).
 
 Website: <https://cadastre.kenshikilabs.com> · Repository:
@@ -53,7 +55,8 @@ uv run python -m http.server 8765 --bind 127.0.0.1 --directory output
 
 Open <http://localhost:8765/>. This directory contains original source media and must
 remain local or in the private vault. The public Astro website lives in `web/` and
-consumes only the allowlisted export in `web/public/data/`.
+consumes the allowlisted metadata export in `web/public/data/`; its reference gallery
+loads indexed, visibly marked PNG derivatives through the Worker.
 
 ## Publication and scheduled collection
 
@@ -63,8 +66,11 @@ Manually recovered sources are recorded separately until catalog integration:
 [Arizona research and preservation record](docs/source-research/AZ-2026-10-26.json),
 [Indiana research and preservation record](docs/source-research/IN-2026-10-26.json),
 [Kansas research and preservation record](docs/source-research/KS-2026-10-26.json),
-[Kentucky research and preservation record](docs/source-research/KY-2026-10-26.json), and
-[Louisiana research and preservation record](docs/source-research/LA-2026-10-26.json).
+[Kentucky research and preservation record](docs/source-research/KY-2026-10-26.json),
+[Louisiana research and preservation record](docs/source-research/LA-2026-10-26.json),
+[Maine research and preservation record](docs/source-research/ME-2026-10-26.json),
+[Maryland research and preservation record](docs/source-research/MD-2026-10-26.json), and
+[Michigan research and preservation record](docs/source-research/MI-2026-10-26.json).
 Their originals, discovery pages, review previews, and research notes are retained under
 `output/research/{STATE}/` and in separately indexed private vault backups.
 `scripts/build_public_catalog.py` exports an explicit field allowlist; it does not copy
@@ -90,12 +96,12 @@ uv run python scripts/vault_sync.py pull output
 uv run state-id-harvester verify
 ```
 
-Authorized visual access is a separate workflow: an application, entity and applicant
-authorization review, accepted reference-use terms, and an individually scoped key.
-Domain and registration checks support that review; they do not constitute completed KYB.
-Automated KYB provider integration and operational authorization remain separate work.
-Visible specimen marking and keyed response metadata support attribution; they do not
-guarantee tracing after transformation or create statutory immunity.
+The website, `GET /v1/specimens` catalog, and indexed, visibly marked PNG reference
+responses are available anonymously. Visitors do not need KYB, DNS verification, an
+application, or an API key. The Worker serves only indexed reference derivatives;
+original archives, raw source media, internal ingestion, and administrative operations
+remain protected. Visible specimen marking identifies reference material; it does not
+establish credential authenticity, measured accuracy, or unrestricted redistribution rights.
 
 ## Evidence and architecture
 

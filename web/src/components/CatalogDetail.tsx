@@ -1,11 +1,15 @@
+import SpecimenGallery from "./SpecimenGallery";
+import type { GalleryState } from "../lib/specimens";
 import type { Jurisdiction } from "../lib/catalog-model";
 import SourceTrail from "./SourceTrail";
 export default function CatalogDetail({
   detail,
   unavailable,
+  gallery,
 }: Readonly<{
   detail: Jurisdiction;
   unavailable: boolean;
+  gallery?: GalleryState;
 }>) {
   if (unavailable)
     return (
@@ -69,6 +73,7 @@ export default function CatalogDetail({
           <span>Accepted cohorts</span>
         </div>
       </div>
+      {gallery && <SpecimenGallery state={detail.code} name={detail.name} sources={detail.sources} gallery={gallery} />}
       <div className="detail-divider" />
       <h4>
         Source trail <span>↗</span>

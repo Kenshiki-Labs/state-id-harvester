@@ -1,9 +1,13 @@
+import SpecimenGallery from "./SpecimenGallery";
+import type { GalleryState } from "../lib/specimens";
 import type { FederalCollection } from "../lib/catalog-model";
 import SourceTrail from "./SourceTrail";
 export default function FederalCatalog({
   collection,
+  gallery,
 }: {
   readonly collection: FederalCollection | null;
+  readonly gallery?: GalleryState;
 }) {
   if (!collection) return null;
   return (
@@ -45,6 +49,7 @@ export default function FederalCatalog({
           <span>Accepted cohorts</span>
         </div>
       </div>
+      {gallery && <SpecimenGallery state="US_FED" name={collection.name} sources={collection.sources} gallery={gallery} />}
       <div className="detail-divider" />
       <h4>
         Federal source trail <span>↗</span>

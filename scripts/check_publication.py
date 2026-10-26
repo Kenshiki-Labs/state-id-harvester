@@ -8,6 +8,7 @@ import html
 import json
 import re
 import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
@@ -159,6 +160,41 @@ SOURCE_KEYS = re.compile(
     r'"(?:raw_text|ocr_text|image_data|raw_stream|font_outlines|text_blocks|data_uri)"\s*:',
     re.IGNORECASE,
 )
+PUBLIC_SPECIMEN_PATH = re.compile(r"/v1/specimens/(?:[A-Z]{2}|US_FED)/[A-Za-z0-9_-]{1,150}")
+
+
+class PublicImageInspector(HTMLParser):
+    """Permit only Worker-resolved references; static source media stays forbidden."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.invalid = False
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in {"picture", "image"}:
+            self.invalid = True
+        if tag != "img":
+            return
+        allowed = {"src", "alt", "width", "height", "loading", "decoding", "class", "id", "title"}
+        names = [name for name, _ in attrs]
+        values = dict(attrs)
+        source = values.get("src")
+        if (
+            len(names) != len(set(names))
+            or any(name not in allowed for name in names)
+            or source is None
+            or PUBLIC_SPECIMEN_PATH.fullmatch(source) is None
+        ):
+            self.invalid = True
+
+    handle_startendtag = handle_starttag
+
+
+def has_unapproved_html_image(decoded: str) -> bool:
+    inspector = PublicImageInspector()
+    inspector.feed(decoded)
+    inspector.close()
+    return inspector.invalid
 
 
 def validate_public_json(path: Path, content: str) -> None:
@@ -263,7 +299,7 @@ def inspect_text_resource(path: Path, relative: Path) -> list[str]:
         r"data\s*:\s*(?:image|application/(?:pdf|octet-stream))", normalized_uris(decoded), re.I
     ):
         errors.append(f"Embedded media data URI: {relative}")
-    if path.suffix.lower() == ".html" and re.search(r"<\s*(?:img|picture|image)\b", decoded, re.I):
+    if path.suffix.lower() == ".html" and has_unapproved_html_image(decoded):
         errors.append(f"Raster delivery element in public HTML: {relative}")
     if path.suffix.lower() == ".css" and re.search(
         r"url\([^)]*\.(?:png|jpe?g|webp|gif|pdf)(?:[?'\"\s)]|$)",

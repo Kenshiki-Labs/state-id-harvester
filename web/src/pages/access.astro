@@ -1,8 +1,3 @@
 ---
-import '../styles/site.css';
-import AccessManager from '../components/AccessManager';
+return Astro.redirect("/#catalog", 301);
 ---
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="icon" type="image/svg+xml" href="/favicon.svg"/><title>Manage research access — Cadastre</title><meta name="description" content="Check your Cadastre research request, verify domain control, and retrieve an approved research key."/><meta name="robots" content="noindex"/></head>
-<body><header class="site-header shell legal-header"><a href="/" class="wordmark">cadastre<span class="wordmark-dot">.</span></a><a href="/#access" class="header-access">New research request ↗</a></header>
-<main class="shell legal-page"><p class="eyebrow">RESEARCH REQUEST MANAGER</p><h1>Your request.<br/>Your next step.</h1><p>Use the request ID and private claim token from your original receipt. They stay in this page’s memory and are sent in request bodies to Cadastre’s access service. They are not saved by this page or placed in a URL. Closing or reloading the page clears them.</p><p>Keep your original DNS TXT record and attestation receipt. Domain verification establishes domain control; organization eligibility and applicant authority require separate review. A claim token alone does not grant research access.</p><AccessManager client:load /><p>If you lost your receipt or a one-time key, contact the <a href="https://github.com/Kenshiki-Labs/state-id-harvester/issues">project maintainers</a>. Share only your request ID publicly; never post your token, API key, or personal application details.</p><p><a href="/">← Return to Cadastre</a> · <a href="/acceptable-use">Acceptable use</a> · <a href="/privacy">Privacy notice</a></p></main></body></html>
