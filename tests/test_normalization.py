@@ -108,11 +108,14 @@ def test_native_corners_map_to_full_nominal_canvas_without_flipping(fixture):
     ],
 )
 def test_invalid_or_escaping_boundaries_never_reach_warp(corners):
-    with pytest.raises((ValueError, ValidationError)):
+    def admit():
         decision = BoundaryDecision(
             original_asset_sha256="a" * 64, corners=corners, basis="visual_card_corners"
         )
         checked_corners(decision, 100, 60)
+
+    with pytest.raises((ValueError, ValidationError)):
+        admit()
 
 
 def test_untrusted_rectifier_never_executes(tmp_path):
@@ -122,7 +125,9 @@ def test_untrusted_rectifier_never_executes(tmp_path):
     with pytest.raises(ValueError, match="hash mismatch"):
         load_rectifier(implementation)
     assert not marker.exists()
-    alias = tmp_path / "alias.py"
+    alias_directory = tmp_path / "alias"
+    alias_directory.mkdir()
+    alias = alias_directory / "rectify.py"
     alias.symlink_to(implementation)
     with pytest.raises(ValueError, match="Invalid retained"):
         load_rectifier(alias)

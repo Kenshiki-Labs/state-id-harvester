@@ -20,7 +20,7 @@ from state_id_harvester.normalization import (
     normalize_card,
     read_decisions,
 )
-from state_id_harvester.paths import managed_path
+from state_id_harvester.paths import contained_path, managed_path
 
 
 def bounded_json(path: Path) -> dict:
@@ -34,9 +34,9 @@ decisions_from = read_decisions
 
 def decode_original(row: dict) -> tuple[np.ndarray, bytes]:
     unresolved = Path(row["original_path"])
+    path = managed_path(unresolved)
     if unresolved.is_symlink():
         raise ValueError("Original image must not be a symlink")
-    path = managed_path(unresolved)
     if path.is_symlink() or not path.is_file() or path.stat().st_size > 50_000_000:
         raise ValueError("Invalid original image path or byte budget")
     data = path.read_bytes()
@@ -92,6 +92,8 @@ def run(inventory: Path, registry: Path, rectifier_path: Path, output: Path) -> 
     output = managed_path(output)
     if output.exists() or output.is_symlink():
         raise ValueError("Normalization output already exists; choose a new run directory")
+    inventory = managed_path(inventory)
+    registry = managed_path(registry)
     inventory_hash = hashlib.sha256(inventory.read_bytes()).hexdigest()
     registry_hash = hashlib.sha256(registry.read_bytes()).hexdigest()
     rows = bounded_json(managed_path(inventory))["rows"]
@@ -103,7 +105,7 @@ def run(inventory: Path, registry: Path, rectifier_path: Path, output: Path) -> 
     output.parent.mkdir(parents=True, exist_ok=True)
     pending, results = [], []
     with tempfile.TemporaryDirectory(prefix=".id1-stage-", dir=output.parent) as temporary:
-        stage = Path(temporary)
+        stage = managed_path(temporary)
         for row in rows:
             decision = decisions.get(row.get("original_asset_sha256"))
             if decision is None:
@@ -139,7 +141,9 @@ def run(inventory: Path, registry: Path, rectifier_path: Path, output: Path) -> 
             "results": results,
             "pending": pending,
         }
-        (stage / "manifest.json").write_text(json.dumps(manifest, indent=2, allow_nan=False) + "\n")
+        contained_path(stage, "manifest.json").write_text(
+            json.dumps(manifest, indent=2, allow_nan=False) + "\n"
+        )
         # Publish a complete run only. An interrupted process cannot leave a partial
         # output that a subsequent publication step could mistake for a finished run.
         os.rename(stage, output)

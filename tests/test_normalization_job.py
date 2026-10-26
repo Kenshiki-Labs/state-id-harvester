@@ -3,6 +3,7 @@
 import hashlib
 import importlib.util
 import json
+from pathlib import Path
 
 import cv2
 import numpy as np
@@ -11,7 +12,8 @@ import pytest
 spec = importlib.util.spec_from_file_location(
     "normalization_job", "scripts/normalize_references.py"
 )
-assert spec and spec.loader
+assert spec is not None
+assert spec.loader is not None
 job = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(job)
 
@@ -156,7 +158,8 @@ def test_publisher_gate_keeps_canonical_pixels_separate_from_display_footer(tmp_
     assert row["normalization"]["physical_calibration"] is False
     assert row["original_asset_sha256"] == checksum
     assert path.read_bytes() == original
-    assert gate.completed == 1 and gate.pending == []
+    assert gate.completed == 1
+    assert gate.pending == []
     before = canonical.stat().st_mtime_ns
     repeated = publication.prepare_specimen(
         source, destination, doc, asset, normalization_gate=gate
@@ -182,3 +185,30 @@ def test_mismatched_decision_never_writes_a_canonical_image(tmp_path):
     with pytest.raises(ValueError, match="does not match"):
         gate.prepare(np.zeros((60, 100, 3), np.uint8), "b" * 64, tmp_path)
     assert list(tmp_path.iterdir()) == []
+
+
+@pytest.mark.parametrize("field", ["inventory", "registry"])
+def test_batch_rejects_external_paths_before_reading_hashes(tmp_path, field):
+    inventory, registry = tmp_path / "inventory.json", tmp_path / "registry.json"
+    inventory.write_text('{"rows": []}')
+    write_registry(registry, [])
+    output = tmp_path / "uncreated-run"
+    paths = {"inventory": inventory, "registry": registry}
+    paths[field] = Path("/etc/passwd")
+    with pytest.raises(ValueError, match="inside the checkout"):
+        job.run(paths["inventory"], paths["registry"], tmp_path / "rectify.py", output)
+    assert not output.exists()
+
+
+def test_external_original_path_is_not_a_file_existence_oracle(monkeypatch):
+    path = Path("/etc/passwd")
+    original_check = Path.is_symlink
+
+    def guarded_check(candidate):
+        if candidate == path:
+            pytest.fail("Queried external file before checking containment")
+        return original_check(candidate)
+
+    monkeypatch.setattr(Path, "is_symlink", guarded_check)
+    with pytest.raises(ValueError, match="inside the checkout"):
+        job.decode_original({"original_path": str(path), "original_asset_sha256": "a" * 64})

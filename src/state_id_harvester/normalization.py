@@ -6,6 +6,7 @@ import hashlib
 import importlib.util
 import json
 import math
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -30,7 +31,19 @@ class BoundaryDecision(BaseModel):
 
 def load_rectifier(path: Path) -> Any:
     """Admit the exact retained implementation; never execute an unpinned module."""
-    if path.is_symlink() or not path.is_file() or path.stat().st_size > 100_000:
+    unresolved = path
+    path = path.resolve()
+    roots = [
+        Path.cwd().resolve(),
+        Path(tempfile.gettempdir()).resolve(),
+        (Path.cwd().resolve().parent / "releases").resolve(),
+        (Path.cwd().resolve().parent / "kenshiki-identity-sdk").resolve(),
+    ]
+    if not any(path.is_relative_to(root) for root in roots):
+        raise ValueError("Retained rectifier is outside the managed host tools")
+    if path.name != "rectify.py":
+        raise ValueError("Expected the retained rectify.py implementation")
+    if unresolved.is_symlink() or not path.is_file() or path.stat().st_size > 100_000:
         raise ValueError("Invalid retained rectifier file")
     if hashlib.sha256(path.read_bytes()).hexdigest() != RECTIFIER_SHA256:
         raise ValueError("Retained rectifier hash mismatch")
@@ -127,7 +140,9 @@ def normalize_card(
 
 
 def read_decisions(path: Path) -> dict[str, BoundaryDecision]:
-    if path.is_symlink() or not path.is_file() or path.stat().st_size > 4_000_000:
+    unresolved = path
+    path = managed_path(path)
+    if unresolved.is_symlink() or not path.is_file() or path.stat().st_size > 4_000_000:
         raise ValueError("Invalid or oversized normalization manifest")
     document = json.loads(path.read_text())
     if document.get("schema_version") != 1 or not isinstance(document.get("decisions"), list):
