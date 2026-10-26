@@ -21,13 +21,22 @@ unchanged asset to retained parent HTML and checks its byte count and hash:
 
 ```sh
 uv run --locked state-id-harvester harvest-images \
-  --import-manifest tmp/source-research/WA/driver-manifest.json \
+  --import-manifest tmp/source-research/WA/driver-adapter-import.json \
   --output output/gallery
 ```
 
 This import records observed browser evidence; it does not replay or independently prove
 the original network transaction. A browser record cannot approve a cohort or issue an
 access key. Source-specific usage constraints remain attached to imported evidence.
+
+An import ledger must contain `source_page_url`, `collection`, `html_path`,
+`parent_html_sha256`, and an `images` array. Paths are relative to that ledger.
+Each image records its observed `url`, final `asset_url`, `path`, `sha256`,
+`size_bytes`, and `altered: false`. Optional captions and usage constraints remain
+observations. A research download manifest with a `files` array is not this contract;
+prepare an explicit adapter ledger that references the unchanged retained HTML and bytes.
+Run `verify-images --output output/gallery` after import. Check the run's events for
+failed imports: a valid empty inventory does not establish successful acquisition.
 
 Verified private examples include Washington's card-front gallery and New York's annotated
 front/back gallery. Separately inspected California, Pennsylvania, Florida, and Virginia

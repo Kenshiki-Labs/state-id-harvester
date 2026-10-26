@@ -1,6 +1,7 @@
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import CatalogDetail from "../src/components/CatalogDetail";
+import SourceTrail from "../src/components/SourceTrail";
 import FederalCatalog from "../src/components/FederalCatalog";
 import { AccessReceipt } from "../src/components/AccessForm";
 import { describe, expect, it } from "vitest";
@@ -10,6 +11,7 @@ import {
   normalizeCatalog,
   normalizeFederal,
   catalogFilter,
+  visibleSelection,
 } from "../src/lib/catalog-model";
 import {
   applicationPayload,
@@ -145,6 +147,92 @@ describe("public catalog boundary", () => {
     expect(filterCatalog(rows, "Texas", "awaiting")).toEqual([]);
     expect(filterCatalog(rows, "[.*<script>", "all")).toEqual([]);
     expect(filterCatalog(blankCatalog(), "", "awaiting")).toHaveLength(51);
+  });
+  it("shows the searched jurisdiction and clears stale detail when no rows match", () => {
+    const rows = normalizeCatalog(manifest);
+    expect(
+      visibleSelection(filterCatalog(rows, "Washington", "all"), "TX").code,
+    ).toBe("WA");
+    const none = visibleSelection(
+      filterCatalog(rows, "__proto__", "all"),
+      "TX",
+    );
+    expect(none.code).toBe("");
+    expect(none.sources).toEqual([]);
+    const html = renderToStaticMarkup(
+      createElement(CatalogDetail, { detail: none, unavailable: false }),
+    );
+    expect(html).toContain("No matching jurisdiction");
+    expect(html).not.toContain("Official source");
+  });
+  it("uses readable official filenames for hash titles and retains valid provenance only", () => {
+    const tx = normalizeCatalog({
+      jurisdictions: [
+        {
+          code: "TX",
+          sources: [
+            {
+              title: fingerprint + ".pdf",
+              url: "https://agency.gov/WV_Current-License%20Samples.pdf",
+              page_count: 3,
+              retrieved_at: "2026-10-25T12:00:00Z",
+              publisher_jurisdiction: "WV",
+            },
+            {
+              url: "https://agency.gov/%broken.pdf",
+              page_count: -3,
+              retrieved_at: "<script>now</script>",
+              publisher_jurisdiction: "__proto__",
+            },
+          ],
+        },
+      ],
+    }).find((row) => row.code === "TX")!;
+    expect(tx.sources[0]).toMatchObject({
+      title: "WV Current License Samples",
+      pageCount: 3,
+      retrievedAt: "2026-10-25T12:00:00Z",
+      publisherJurisdiction: "WV",
+    });
+    expect(tx.sources[1]).toEqual({
+      url: "https://agency.gov/%broken.pdf",
+      hostname: "agency.gov",
+      title: "agency.gov source document",
+      relevance: "unreviewed",
+    });
+  });
+  it("keeps quarantined discovery citations collapsed behind the useful reference", () => {
+    const html = renderToStaticMarkup(
+      createElement(SourceTrail, {
+        sources: [
+          {
+            title: "Administrative payment guide",
+            url: "https://agency.gov/payment.pdf",
+            hostname: "agency.gov",
+            relevance: "quarantined",
+          },
+          {
+            title: "Credential reference",
+            url: "https://agency.gov/cards.pdf",
+            hostname: "agency.gov",
+            relevance: "candidate",
+            sha256: fingerprint,
+            pageCount: 28,
+            retrievedAt: "2026-10-25T12:00:00Z",
+            publisherJurisdiction: "WA",
+          },
+        ],
+      }),
+    );
+    expect(html.indexOf("Credential reference")).toBeLessThan(
+      html.indexOf("Administrative payment guide"),
+    );
+    expect(html).toContain('<details class="quarantined-sources">');
+    expect(html).not.toContain('<details class="quarantined-sources" open');
+    expect(html).toContain("Source provenance");
+    expect(html).toContain("28");
+    expect(html).toContain(fingerprint);
+    expect(html).toContain("25 Oct 2026");
   });
 });
 
@@ -356,6 +444,8 @@ describe("federal collection boundary", () => {
     expect(html).toContain("Separate federal source collection");
     expect(html).toContain("not normalized as ID-1");
     expect(html).toContain("Normative PIV reference");
+    expect(html).toContain("The collection plan covers PIV, CAC, USID");
+    expect(html).toContain("do not yet establish complete coverage");
   });
   it("supports an absent collection and rejects federal ID1 classification", () => {
     expect(normalizeFederal(manifest)).toBeNull();

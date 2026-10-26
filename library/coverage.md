@@ -53,7 +53,7 @@ Source collection and reviewed design coverage are separate.
 | Vermont (VT) | 0 | 0 | 0 |
 | Washington (WA) | 5 | 1 | 0 |
 | Wisconsin (WI) | 1 | 0 | 0 |
-| West Virginia (WV) | 0 | 0 | 0 |
+| West Virginia (WV) | 4 | 2 | 0 |
 | Wyoming (WY) | 7 | 1 | 0 |
 
 ## Separate federal collection

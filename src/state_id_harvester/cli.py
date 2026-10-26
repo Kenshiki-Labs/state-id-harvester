@@ -36,6 +36,12 @@ def parser() -> argparse.ArgumentParser:
     run.add_argument("--workers", type=int, default=min(2, os.cpu_count() or 1))
     run.add_argument("--dpi", type=int, default=600)
     run.add_argument("--max-pdfs-per-state", type=int, default=8)
+    run.add_argument(
+        "--max-pdf-bytes",
+        type=int,
+        default=36_700_160,
+        help="Per-source download byte budget; checked against headers and streamed bytes",
+    )
     run.add_argument("--crawl-pages", type=int, default=6)
     run.add_argument("--max-render-pages", type=int, default=12)
     run.add_argument("--max-pages", type=int, default=250)
@@ -85,6 +91,7 @@ def harvest_options(args: argparse.Namespace) -> Options:
         workers=args.workers,
         dpi=args.dpi,
         max_pdfs_per_state=args.max_pdfs_per_state,
+        max_pdf_bytes=args.max_pdf_bytes,
         crawl_pages=args.crawl_pages,
         max_render_pages=args.max_render_pages,
         max_pages=args.max_pages,

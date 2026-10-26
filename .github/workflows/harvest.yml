@@ -45,7 +45,7 @@ jobs:
         run: |
           refresh_args=()
           if [ "$REFRESH" = true ]; then refresh_args+=(--refresh); fi
-          uv run --locked --no-sync --no-build python -m state_id_harvester harvest --all --workers 2 --ocr "${refresh_args[@]}"
+          uv run --locked --no-sync --no-build python -m state_id_harvester harvest --all --workers 2 --max-pdf-bytes 67108864 --ocr "${refresh_args[@]}"
       - name: Collect federal sources separately
         env:
           REFRESH: ${{ github.event_name == 'schedule' || inputs.refresh }}
@@ -55,6 +55,10 @@ jobs:
           uv run --locked --no-sync --no-build python -m state_id_harvester harvest --federal --output output/federal --workers 2 --ocr --crawl-pages 3 "${refresh_args[@]}"
       - run: uv run --locked --no-sync --no-build python -m state_id_harvester verify --output output/federal
       - run: uv run --locked --no-sync --no-build python -m state_id_harvester verify
+      - name: Collect original agency HTML gallery images
+        run: uv run --locked --no-sync --no-build python -m state_id_harvester harvest-images --all --output output/gallery
+      - name: Verify gallery bytes and parent HTML bindings
+        run: uv run --locked --no-sync --no-build python -m state_id_harvester verify-images --output output/gallery
       - run: uv run --locked --no-sync --no-build python -m state_id_harvester export-catalog
       - name: Export citation metadata and reviewed geometry
         run: uv run --locked --no-sync --no-build python scripts/build_public_catalog.py

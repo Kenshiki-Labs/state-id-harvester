@@ -57,6 +57,9 @@ export interface Source {
   hostname: string;
   relevance: "candidate" | "quarantined" | "unreviewed";
   sha256?: string;
+  pageCount?: number;
+  retrievedAt?: string;
+  publisherJurisdiction?: string;
 }
 export interface Jurisdiction {
   code: string;
@@ -97,6 +100,45 @@ const count = (value: unknown): number =>
   typeof value === "number" && Number.isSafeInteger(value) && value >= 0
     ? value
     : 0;
+
+function sourceProvenance(source: Record<string, unknown>): Partial<Source> {
+  const metadata: Partial<Source> = {};
+  const pages = source.page_count;
+  if (typeof pages === "number" && Number.isSafeInteger(pages) && pages > 0)
+    metadata.pageCount = pages;
+  const retrieved = source.retrieved_at;
+  if (
+    typeof retrieved === "string" &&
+    retrieved.length < 65 &&
+    /^\d{4}-\d{2}-\d{2}T/.test(retrieved) &&
+    Number.isFinite(Date.parse(retrieved))
+  )
+    metadata.retrievedAt = retrieved;
+  const publisher = source.publisher_jurisdiction;
+  if (
+    publisher === "US_FED" ||
+    JURISDICTIONS.some(([code]) => code === publisher)
+  )
+    metadata.publisherJurisdiction = String(publisher);
+  return metadata;
+}
+function sourceTitle(source: Record<string, unknown>, url: URL): string {
+  const title =
+    typeof source.title === "string" ? source.title.trim().slice(0, 1000) : "";
+  if (title && !/^[a-f0-9]{64}(?:\.pdf)?$/i.test(title)) return title;
+  const filename = url.pathname.split("/").filter(Boolean).at(-1) ?? "";
+  try {
+    const label = decodeURIComponent(filename)
+      .replace(/\.pdf$/i, "")
+      .replace(/[_-]+/g, " ")
+      .trim();
+    if (label && label !== "download" && !/^[a-f0-9]{64}$/i.test(label))
+      return label.slice(0, 240);
+  } catch {
+    /* Keep the citation when only its display filename is malformed. */
+  }
+  return `${url.hostname} source document`;
+}
 function sourceRecord(value: unknown): Source | null {
   const source = object(value);
   if (typeof source.url !== "string") return null;
@@ -104,10 +146,7 @@ function sourceRecord(value: unknown): Source | null {
     const url = new URL(source.url);
     if (url.protocol !== "https:" || url.username || url.password) return null;
     return {
-      title:
-        typeof source.title === "string" && source.title.trim()
-          ? source.title.slice(0, 1000)
-          : url.hostname,
+      title: sourceTitle(source, url),
       url: url.href,
       hostname: url.hostname,
       relevance:
@@ -118,6 +157,7 @@ function sourceRecord(value: unknown): Source | null {
       /^[a-f0-9]{64}$/i.test(source.sha256)
         ? { sha256: source.sha256 }
         : {}),
+      ...sourceProvenance(source),
     };
   } catch {
     return null;
@@ -187,5 +227,15 @@ export function filterCatalog(
         (filter === "sources"
           ? row.sources.length > 0
           : row.sources.length === 0)),
+  );
+}
+export function visibleSelection(
+  rows: Jurisdiction[],
+  selected: string,
+): Jurisdiction {
+  return (
+    rows.find((row) => row.code === selected) ??
+    rows[0] ??
+    emptyJurisdiction("", "No matching jurisdiction")
   );
 }

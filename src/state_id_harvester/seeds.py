@@ -143,7 +143,12 @@ LANDING_PAGES: dict[str, list[str]] = {
     "VT": ["https://dmv.vermont.gov/licenses"],
     "VA": ["https://www.dmv.virginia.gov/licenses-ids"],
     "WA": ["https://dol.wa.gov/driver-licenses-and-permits"],
-    "WV": ["https://transportation.wv.gov/DMV/Drivers/Pages/default.aspx"],
+    "WV": [
+        "https://dmv.wv.gov/sample-licenses",
+        "https://dmv.wv.gov/forms",
+        "https://dmv.wv.gov/driver-services/drivers/drivers-licenses-and-id-cards",
+        "https://abca.wv.gov/education/resources",
+    ],
     "WI": ["https://wisconsindot.gov/Pages/dmv/license-drvs/how-to-apply/mailed.aspx"],
     "WY": ["https://www.dot.state.wy.us/home/driver_license_records.html"],
 }
@@ -162,6 +167,15 @@ LEGACY_OFFICIAL_HOSTS = frozenset(
 )
 
 GOLDEN_SEED_PDFS: dict[str, list[str]] = {
+    "IL": ["https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf"],
+    "WV": [
+        # Current DMV comparison poster is 57 MB; use an explicit adequate fetch budget.
+        "https://webapps.transportation.wv.gov/TWS/WVDOTDocumentStorageMigration/PDF/Webapps/DMV/DMVFormSearch/LicenseComparisonPoster.pdf",
+        # These live ABCA references describe historical designs despite the first hub label.
+        "https://abca.wv.gov/media/17266/download?inline",
+        "https://abca.wv.gov/media/17291/download?inline",
+        "https://abca.wv.gov/media/17281/download?inline",
+    ],
     "FL": ["https://www.flhsmv.gov/pdf/newdl/retailguide_aug2020.pdf"],
     "TX": [
         "https://www.dps.texas.gov/internetforms/getForm.ashx?id=DL-73.pdf",

@@ -16,6 +16,7 @@ HTML_GALLERY_SEEDS: dict[str, list[str]] = {
         "https://dol.wa.gov/driver-licenses-and-permits/driver-license-designs",
         "https://dol.wa.gov/id-cards/id-card-designs",
     ],
+    "WV": ["https://dmv.wv.gov/sample-licenses"],
     "NY": ["https://dmv.ny.gov/driver-license/sample-photo-documents"],
     "FL": ["https://www.flhsmv.gov/driver-licenses-id-cards/newdl/"],
     "TX": ["https://www.dps.texas.gov/section/driver-license/texas-dlid-card-designs"],
