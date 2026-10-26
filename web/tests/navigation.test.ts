@@ -19,6 +19,6 @@ describe("document navigation and page boundaries", () => {
     expect(links).toContain("/catalog/wa");
     expect(links).toContain("/catalog/dc");
     expect(html).not.toMatch(/<img|Source SHA-256|reference-provenance|api_key|<button/);
-    expect(directoryPage).not.toMatch(/<Collection|<CatalogDetail|<FederalCatalog|useSpecimens/);
+    expect(directoryPage).not.toMatch(/<Collection(?:\s|>)|<CatalogDetail|<FederalCatalog|useSpecimens/);
   });
 });

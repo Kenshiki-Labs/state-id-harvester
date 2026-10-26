@@ -1,0 +1,5 @@
+---
+interface Props { active: 'state' | 'federal'; }
+const { active } = Astro.props;
+---
+<nav class="collection-segments" aria-label="Collection type"><a href="/catalog" aria-current={active === 'state' ? 'page' : undefined}>State</a><a href="/catalog/federal" aria-current={active === 'federal' ? 'page' : undefined}>Federal</a></nav>

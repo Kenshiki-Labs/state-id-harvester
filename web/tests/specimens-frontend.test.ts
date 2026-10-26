@@ -31,9 +31,11 @@ describe("public image metadata boundary", () => {
   });
 });
 describe("public gallery rendering", () => {
-  it("limits images to the selected collection, links full-size images and escapes source titles", () => {
+  it("limits images to the selected collection, opens a dialog and escapes source titles", () => {
     const html = render(ready, [{ title: '<script>alert("source")</script>', url: "https://agency.gov/guide.pdf", hostname: "agency.gov", relevance: "candidate", sha256: specimen.source_sha256 }]);
     expect(html).toContain('src="/v1/specimens/WA/reference_01"');
+    expect(html).toContain('aria-haspopup="dialog"');
+    expect(html).not.toContain('href="/v1/specimens/');
     expect(html).not.toContain("/v1/specimens/US_FED/");
     expect(html).toContain('target="_blank" rel="noopener noreferrer"');
     expect(html).toContain('alt="Washington source reference 1; research specimen, review pending"');

@@ -46,3 +46,9 @@ or image requests. The directory renders all 51 jurisdiction links before hydrat
 search filters those links. Native document navigation opens each collection, whose
 React island loads its public reference images through the Worker. Each collection
 has a stable URL, breadcrumb navigation, and ordinary page scrolling.
+
+A shared State / Federal segmented navigation control connects the catalog views and
+marks the active collection type. Reference images open in a native modal dialog with
+keyboard paging, bounded zoom, PNG download, focus containment and restoration, and
+an explicit retry after image-load failures. Opening the viewer preserves the current
+collection document and does not create another tab.

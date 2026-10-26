@@ -2478,7 +2478,6 @@ h2 > span {
 .entry-card:hover, .directory-card:hover { border-color: var(--teal); }
 .entry-card h3, .entry-card h2 { font-size: 24px; font-weight: 500; letter-spacing: -.03em; margin: 12px 0; }
 .entry-card p { color: var(--muted); font-size: 14px; line-height: 1.7; margin-bottom: 0; }
-.federal-entry { margin-bottom: 36px; background: #f7faf8; }
 .directory-search { display: flex; flex-direction: column; gap: 10px; max-width: 560px; font-size: 13px; }
 .directory-search input { border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; width: 100%; background: white; color: var(--graphite); }
 .directory-count, .directory-note { font-size: 12px; color: var(--muted); margin: 20px 0; line-height: 1.7; }
@@ -2495,3 +2494,36 @@ h2 > span {
 .collection-back { display: inline-block; margin-top: 36px; }
 @media (max-width: 760px) { .entry-grid, .directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .entry-grid > :last-child { grid-column: 1 / -1; } }
 @media (max-width: 480px) { .entry-grid, .directory-grid { grid-template-columns: minmax(0, 1fr); } .entry-card, .directory-card { padding: 22px; } .page-breadcrumb { margin-bottom: 28px; } }
+
+.collection-segments { display: inline-flex; gap: 4px; padding: 5px; border: 1px solid var(--line); border-radius: 10px; background: #f3f5f4; margin-bottom: 32px; }
+.collection-segments a { padding: 10px 30px; border-radius: 6px; color: var(--muted); font-size: 14px; font-weight: 600; }
+.collection-segments a[aria-current="page"] { background: white; color: var(--graphite); box-shadow: 0 1px 4px #00000012; }
+button.reference-image-link { width: 100%; border: 0; text-align: left; font: inherit; color: inherit; }
+.reference-image-link:focus-visible { outline-offset: -4px; }
+.image-viewer { margin: auto; width: min(1200px, 94vw); height: 92dvh; max-width: 94vw; max-height: 92dvh; padding: 0; border: 1px solid #d9dfdc; border-radius: 16px; background: #fff; color: var(--graphite); overflow: hidden; }
+.image-viewer[open] { display: flex; flex-direction: column; }
+.image-viewer::backdrop { background: #0b1717cc; backdrop-filter: blur(5px); }
+.viewer-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+.viewer-header h2 { letter-spacing: 0; font-size: 18px; line-height: 1.5; font-weight: 600; margin: 0; }
+.viewer-header h2 span { display: block; font-size: 12px; color: var(--muted); font-weight: 400; }
+.image-viewer button { border: 1px solid var(--line); border-radius: 7px; background: white; color: var(--graphite); padding: 9px 12px; font-size: 13px; min-height: 42px; }
+.image-viewer button:disabled { opacity: .4; cursor: default; }
+.viewer-close { white-space: nowrap; }
+.viewer-close span { margin-left: 10px; font-size: 20px; }
+.viewer-toolbar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 12px 22px; }
+.viewer-paging, .viewer-zoom { display: flex; align-items: center; gap: 6px; }
+.viewer-zoom output { min-width: 48px; text-align: center; font-size: 12px; }
+.viewer-canvas { flex: 1; min-height: 0; min-width: 0; position: relative; overflow: auto; padding: 20px; background: #eef1ef; }
+.viewer-canvas img { display: block; margin: auto; max-width: none; max-height: none; }
+.viewer-canvas[data-zoom="0"] { display: flex; align-items: center; justify-content: center; }
+.viewer-canvas[data-zoom="0"] img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.viewer-canvas[data-zoom="1.5"] img { zoom: 1.5; }
+.viewer-canvas[data-zoom="2"] img { zoom: 2; }
+.viewer-canvas[data-zoom="3"] img { zoom: 3; }
+.viewer-canvas[data-zoom="4"] img { zoom: 4; }
+.viewer-loading { position: absolute; top: 12px; left: 20px; font-size: 13px; color: var(--muted); background: white; padding: 8px; }
+.viewer-image-error { margin: auto; text-align: center; padding: 20px; }
+.viewer-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; padding: 12px 22px; font-size: 12px; }
+.viewer-footer p { margin: 0; color: var(--muted); }
+.viewer-footer a { color: var(--teal); }
+@media (max-width: 480px) { .image-viewer { margin: auto; width: 96vw; max-width: 96vw; height: 96dvh; max-height: 96dvh; border-radius: 10px; } .viewer-header, .viewer-toolbar, .viewer-footer { padding: 12px; } .viewer-toolbar { justify-content: center; } .viewer-canvas { padding: 12px; } }
