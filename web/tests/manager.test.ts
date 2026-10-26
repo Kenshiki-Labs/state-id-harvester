@@ -85,7 +85,7 @@ describe("saved request client boundary", () => {
       clear: vi.fn(),
     };
     const buttons = renderedButtons(
-      createElement(AccessManagerView, { manager }),
+      createElement(AccessManagerView, { manager, ready: true }),
     );
     buttons.find((button) => button.children === "Refresh status")?.onClick?.();
     buttons.find((button) => button.children === "Verify domain")?.onClick?.();
@@ -94,6 +94,7 @@ describe("saved request client boundary", () => {
       ?.onClick?.();
     const eligible = renderedButtons(
       createElement(AccessManagerView, {
+        ready: true,
         manager: {
           ...manager,
           status: parseRequestStatus(approved, requestId),
@@ -215,7 +216,7 @@ describe("saved request client boundary", () => {
         clear: vi.fn(),
       };
       const markup = renderToStaticMarkup(
-        createElement(AccessManagerView, { manager }),
+        createElement(AccessManagerView, { manager, ready: true }),
       );
       expect(markup).not.toContain(token);
       expect(markup).not.toContain('name="claim_token"');
@@ -241,13 +242,14 @@ describe("saved request client boundary", () => {
       clear: vi.fn(),
     };
     const pending = renderToStaticMarkup(
-      createElement(AccessManagerView, { manager }),
+      createElement(AccessManagerView, { manager, ready: true }),
     );
     expect(pending).toContain("Verify domain");
     expect(pending).not.toContain("Claim one-time research key");
     expect(pending).toContain('role="alert"');
     const issued = renderToStaticMarkup(
       createElement(AccessManagerView, {
+        ready: true,
         manager: {
           ...manager,
           status: parseRequestStatus(approved, requestId),
@@ -283,6 +285,15 @@ describe("saved request client boundary", () => {
     expect(key).toContain("This is its only display");
     expect(key).toContain("readOnly");
     expect(key).toContain(receipt.api_key);
+  });
+  it("prevents credential GET submission before hydration or when JavaScript is unavailable", () => {
+    const initial = renderToStaticMarkup(createElement(AccessManager));
+    expect(initial).toContain('method="post"');
+    expect(initial).toContain('action="/access"');
+    expect((initial.match(/disabled=""/g) ?? []).length).toBe(3);
+    expect(initial).toContain("Preparing request manager…");
+    expect(initial).toContain("Enable JavaScript");
+    expect(initial).not.toContain('method="get"');
   });
 });
 

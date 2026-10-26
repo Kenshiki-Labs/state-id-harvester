@@ -48,17 +48,16 @@ def test_routing_preserves_overlap_and_unknown_dates() -> None:
 
 
 def test_specimen_cannot_claim_measured_accuracy() -> None:
+    evidence = Evidence(
+        source_sha256="0" * 64, asset_sha256="1" * 64, page_number=1, explanation="test"
+    )
     with pytest.raises(ValidationError, match="metric accuracy"):
         Zone(
             name="portrait",
             bbox_uv=(0.0, 0.0, 0.5, 0.5),
             geometry_basis="reviewed_specimen",
             measured_error_mm=0.05,
-            evidence=[
-                Evidence(
-                    source_sha256="0" * 64, asset_sha256="1" * 64, page_number=1, explanation="test"
-                )
-            ],
+            evidence=[evidence],
         )
 
 
