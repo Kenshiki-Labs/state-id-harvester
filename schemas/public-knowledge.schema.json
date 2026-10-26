@@ -1,0 +1,685 @@
+{
+  "$defs": {
+    "AcceptancePolicy": {
+      "additionalProperties": false,
+      "properties": {
+        "conditions": {
+          "default": [],
+          "items": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Conditions",
+          "type": "array"
+        },
+        "context": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Context",
+          "type": "string"
+        },
+        "credential_categories": {
+          "items": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "minItems": 1,
+          "title": "Credential Categories",
+          "type": "array"
+        },
+        "domain": {
+          "const": "acceptance_policy",
+          "title": "Domain",
+          "type": "string"
+        },
+        "exceptions": {
+          "default": [],
+          "items": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Exceptions",
+          "type": "array"
+        },
+        "outcome": {
+          "enum": [
+            "accepted",
+            "not_accepted",
+            "conditional"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        }
+      },
+      "required": [
+        "domain",
+        "context",
+        "credential_categories",
+        "outcome"
+      ],
+      "title": "AcceptancePolicy",
+      "type": "object"
+    },
+    "AuthorityReference": {
+      "additionalProperties": false,
+      "description": "An edition/clause reference, not an issuer-adoption or compliance assertion.",
+      "properties": {
+        "authority": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Authority",
+          "type": "string"
+        },
+        "clause": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Clause",
+          "type": "string"
+        },
+        "concept": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Concept",
+          "type": "string"
+        },
+        "edition": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Edition",
+          "type": "string"
+        },
+        "mapping_status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "reviewed"
+          ],
+          "title": "Mapping Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "authority",
+        "edition",
+        "clause",
+        "concept"
+      ],
+      "title": "AuthorityReference",
+      "type": "object"
+    },
+    "DesignFeature": {
+      "additionalProperties": false,
+      "properties": {
+        "domain": {
+          "const": "credential_design_security",
+          "title": "Domain",
+          "type": "string"
+        },
+        "inspection_level": {
+          "anyOf": [
+            {
+              "maximum": 3,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Inspection Level"
+        },
+        "modalities": {
+          "default": [],
+          "items": {
+            "enum": [
+              "visible",
+              "tilt",
+              "transmitted_light",
+              "ultraviolet",
+              "infrared",
+              "magnification",
+              "tactile",
+              "thermal",
+              "barcode",
+              "magstripe",
+              "rfid"
+            ],
+            "type": "string"
+          },
+          "maxItems": 11,
+          "title": "Modalities",
+          "type": "array"
+        },
+        "name": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Name",
+          "type": "string"
+        },
+        "presence": {
+          "enum": [
+            "present",
+            "absent"
+          ],
+          "title": "Presence",
+          "type": "string"
+        },
+        "security_family": {
+          "anyOf": [
+            {
+              "enum": [
+                "card_body",
+                "reproduction_resistance",
+                "security_inks",
+                "personalization_protection"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Security Family"
+        },
+        "source_location": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Location"
+        }
+      },
+      "required": [
+        "domain",
+        "name",
+        "presence"
+      ],
+      "title": "DesignFeature",
+      "type": "object"
+    },
+    "InspectionProcedure": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Action",
+          "type": "string"
+        },
+        "domain": {
+          "const": "inspection_procedure",
+          "title": "Domain",
+          "type": "string"
+        },
+        "equipment": {
+          "default": [],
+          "items": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Equipment",
+          "type": "array"
+        },
+        "expected_observation": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Expected Observation",
+          "type": "string"
+        },
+        "modalities": {
+          "items": {
+            "enum": [
+              "visible",
+              "tilt",
+              "transmitted_light",
+              "ultraviolet",
+              "infrared",
+              "magnification",
+              "tactile",
+              "thermal",
+              "barcode",
+              "magstripe",
+              "rfid"
+            ],
+            "type": "string"
+          },
+          "maxItems": 11,
+          "minItems": 1,
+          "title": "Modalities",
+          "type": "array"
+        }
+      },
+      "required": [
+        "domain",
+        "action",
+        "expected_observation",
+        "modalities"
+      ],
+      "title": "InspectionProcedure",
+      "type": "object"
+    },
+    "IssuanceGuidance": {
+      "additionalProperties": false,
+      "properties": {
+        "document_stage": {
+          "enum": [
+            "temporary",
+            "permanent",
+            "both",
+            "unspecified"
+          ],
+          "title": "Document Stage",
+          "type": "string"
+        },
+        "domain": {
+          "const": "issuance_administration",
+          "title": "Domain",
+          "type": "string"
+        },
+        "procedure": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Procedure",
+          "type": "string"
+        },
+        "required_evidence": {
+          "default": [],
+          "items": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Required Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "domain",
+        "procedure",
+        "document_stage"
+      ],
+      "title": "IssuanceGuidance",
+      "type": "object"
+    },
+    "PublicDocument": {
+      "additionalProperties": false,
+      "properties": {
+        "collection": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Collection",
+          "type": "string"
+        },
+        "interpretation_status": {
+          "const": "unreviewed",
+          "default": "unreviewed",
+          "title": "Interpretation Status",
+          "type": "string"
+        },
+        "publication_date_wording": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Publication Date Wording"
+        },
+        "publisher": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Publisher"
+        },
+        "roles": {
+          "items": {
+            "enum": [
+              "technical_standard",
+              "legislation_regulation",
+              "issuer_design_reference",
+              "verification_training",
+              "issuance_guidance",
+              "design_announcement",
+              "operational_manual",
+              "unresolved"
+            ],
+            "type": "string"
+          },
+          "title": "Roles",
+          "type": "array"
+        },
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Source Url"
+        },
+        "stated_edition": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stated Edition"
+        },
+        "statement_count": {
+          "minimum": 0,
+          "title": "Statement Count",
+          "type": "integer"
+        },
+        "statements": {
+          "items": {
+            "$ref": "#/$defs/PublicStatement"
+          },
+          "title": "Statements",
+          "type": "array"
+        },
+        "title": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_sha256",
+        "title",
+        "publisher",
+        "collection",
+        "source_url",
+        "roles",
+        "statement_count",
+        "statements"
+      ],
+      "title": "PublicDocument",
+      "type": "object"
+    },
+    "PublicEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "page_number": {
+          "minimum": 1,
+          "title": "Page Number",
+          "type": "integer"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Url"
+        }
+      },
+      "required": [
+        "page_number",
+        "url"
+      ],
+      "title": "PublicEvidence",
+      "type": "object"
+    },
+    "PublicStatement": {
+      "additionalProperties": false,
+      "properties": {
+        "conditions": {
+          "items": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Conditions",
+          "type": "array"
+        },
+        "content": {
+          "discriminator": {
+            "mapping": {
+              "acceptance_policy": "#/$defs/AcceptancePolicy",
+              "credential_design_security": "#/$defs/DesignFeature",
+              "inspection_procedure": "#/$defs/InspectionProcedure",
+              "issuance_administration": "#/$defs/IssuanceGuidance",
+              "technical_standard": "#/$defs/StandardRequirement"
+            },
+            "propertyName": "domain"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/DesignFeature"
+            },
+            {
+              "$ref": "#/$defs/InspectionProcedure"
+            },
+            {
+              "$ref": "#/$defs/AcceptancePolicy"
+            },
+            {
+              "$ref": "#/$defs/IssuanceGuidance"
+            },
+            {
+              "$ref": "#/$defs/StandardRequirement"
+            }
+          ],
+          "title": "Content"
+        },
+        "domain": {
+          "enum": [
+            "credential_design_security",
+            "inspection_procedure",
+            "acceptance_policy",
+            "issuance_administration",
+            "technical_standard",
+            "other",
+            "unresolved"
+          ],
+          "title": "Domain",
+          "type": "string"
+        },
+        "effective_wording": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Effective Wording"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/PublicEvidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "exceptions": {
+          "items": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Exceptions",
+          "type": "array"
+        },
+        "interpretation_status": {
+          "const": "unreviewed",
+          "default": "unreviewed",
+          "title": "Interpretation Status",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "assertion",
+            "instruction",
+            "requirement",
+            "recommendation",
+            "example"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "statement_id": {
+          "pattern": "^[A-Za-z0-9_-]{1,80}$",
+          "title": "Statement Id",
+          "type": "string"
+        },
+        "subject": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Subject"
+        }
+      },
+      "required": [
+        "statement_id",
+        "domain",
+        "kind",
+        "subject",
+        "content",
+        "conditions",
+        "exceptions",
+        "effective_wording",
+        "evidence"
+      ],
+      "title": "PublicStatement",
+      "type": "object"
+    },
+    "StandardRequirement": {
+      "additionalProperties": false,
+      "properties": {
+        "authority_reference": {
+          "$ref": "#/$defs/AuthorityReference"
+        },
+        "domain": {
+          "const": "technical_standard",
+          "title": "Domain",
+          "type": "string"
+        },
+        "requirement": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Requirement",
+          "type": "string"
+        }
+      },
+      "required": [
+        "domain",
+        "requirement",
+        "authority_reference"
+      ],
+      "title": "StandardRequirement",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "documents": {
+      "items": {
+        "$ref": "#/$defs/PublicDocument"
+      },
+      "title": "Documents",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": 1,
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "documents"
+  ],
+  "title": "PublicKnowledge",
+  "type": "object"
+}

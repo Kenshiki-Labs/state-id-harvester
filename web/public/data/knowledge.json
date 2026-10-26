@@ -1,0 +1,4502 @@
+{
+  "schema_version": 1,
+  "documents": [
+    {
+      "source_sha256": "103cb34ab69331b696cc335313247420c4a69ff9edba47371087a6054881f6c7",
+      "title": "Get to Know the Newly Redesigned Texas DL and ID Cards",
+      "publisher": "Texas Department of Public Safety",
+      "stated_edition": "DL-73 Rev. 8/2021",
+      "publication_date_wording": null,
+      "collection": "Texas",
+      "source_url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf",
+      "roles": [
+        "issuer_design_reference",
+        "design_announcement",
+        "issuance_guidance"
+      ],
+      "statement_count": 27,
+      "statements": [
+        {
+          "statement_id": "s001",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "DPS began issuing the redesigned driver licenses, identification cards and election identification certificates on February 24, 2020.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": "February 24, 2020",
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=2"
+            },
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s002",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Security lines appear in the photo area and may appear at the sides of the face; people who are bald or have lighter hair may show more prominent lines.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "photo area"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s003",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Validity of cards with security lines in the photo area",
+            "credential_categories": [
+              "Cards with photo-area security lines"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "The lines do not overlap the person eyes, nose or mouth."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s004",
+          "domain": "issuance_administration",
+          "kind": "recommendation",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "Taking a new photo at a driver license office will not change the appearance of the photo-area lines; the source does not recommend retaking a photo for this reason.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s005",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Photo-area line removal described for July 16, 2021 · Driver license for anyone age 21 or older · driver license",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The photo-area line security feature is removed for driver licenses issued to persons age 21 or older starting July 16, 2021.",
+            "presence": "absent",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "photo area"
+          },
+          "conditions": [
+            "Applies only to driver licenses for persons age 21 or older.",
+            "Applies to the July 16, 2021 photo-area update described in this historical source."
+          ],
+          "exceptions": [],
+          "effective_wording": "On July 16, 2021, the driver license (DL) for anyone 21 or older will see this change.",
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s006",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "Photo-area line removal for driver licenses of persons under 21 and identification cards is described as occurring later in 2021; the source supplies no exact cutoff date.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s007",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Continued use during photo-line design update",
+            "credential_categories": [
+              "Current card with photo-area security lines"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "The lines do not overlap the person eyes, nose or mouth.",
+              "The source states law enforcement and other agencies accept the current card for identity and proof of driving privileges."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s008",
+          "domain": "issuance_administration",
+          "kind": "instruction",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "When the updated design is available, request a replacement without the photo lines at www.texas.gov/drivers for the stated fee of $11.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [
+            "Updated design is available."
+          ],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s009",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The redesigned cards use polycarbonate described as tamper-resistant and difficult to reproduce.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [],
+            "source_location": "card body"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s010",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The cards retain a gold REAL ID star in the upper-right corner; the communication impediment identifier moves to the front and disabled-veteran and branch-of-service identifiers are added. Existing organ donor and veteran identifiers remain.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "front"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s011",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card body is polycarbonate and described as more durable, secure and tamper-resistant.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [],
+            "source_location": "card body"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s012",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card uses laser engraving to protect against data manipulation and forgery.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s013",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Veterans may have a veteran designator, American flag and branch of service on the front of the driver license or identification card.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "front"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s014",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The REAL ID star indicates that the card meets state and federal regulations.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s015",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Customer ID and name are laser engraved with raised tactile print.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "tactile"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s016",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Cardholders may specify organ donor status.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s017",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Cardholders may indicate a health condition that could impede communication.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s018",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Every minor under 21 has an indicator specifying the date they become 21.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s019",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The magnetic stripe has three tracks of cardholder information readable by a standard magnetic stripe reader.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "magstripe"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s020",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Classifications specify the types of vehicles the cardholder is authorized to operate.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s021",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Endorsements apply to commercial licenses only.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s022",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Restrictions specify when a person can drive or conditions they must meet while driving.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s023",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The PDF417 barcode exposes printed cardholder information to a PDF417-compatible scanner.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "barcode"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s024",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The secondary cardholder photo has an overlapping guilloche pattern.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "ghost photo"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s025",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Newly designed credentials introduced February 24, 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Adult and under-21 driver licenses carry the magnetic stripe and PDF417 barcode on the back.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "magstripe",
+              "barcode"
+            ],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 4,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=4"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s026",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned Texas identification card described in brochure · identification card",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The identification card has all security features defined for the driver license; only the color scheme and demographic data vary between the two.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 5,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=5"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s027",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned Texas election certificate described in brochure · other",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "For Election Purposes Only is printed on both sides.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "both sides"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 5,
+              "url": "https://www.dps.texas.gov/DriverLicense/documents/newDLIDCards.pdf#page=5"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        }
+      ],
+      "interpretation_status": "unreviewed"
+    },
+    {
+      "source_sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+      "title": "Central Issuance Driver’s Licenses/ID Cards",
+      "publisher": "Illinois Secretary of State",
+      "stated_edition": "DSD A 301.2",
+      "publication_date_wording": "Printed by authority of the State of Illinois. March 2023 — 1 — DSD A 301.2",
+      "collection": "Illinois",
+      "source_url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf",
+      "roles": [
+        "issuance_guidance",
+        "issuer_design_reference"
+      ],
+      "statement_count": 15,
+      "statements": [
+        {
+          "statement_id": "s001",
+          "domain": "issuance_administration",
+          "kind": "instruction",
+          "subject": "Central issuance redesigned card described in brochure · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "For renewal or a new Illinois driver, visit a Secretary of State Driver Services facility, complete any necessary vision, written and road tests, and have a photograph taken.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s002",
+          "domain": "issuance_administration",
+          "kind": "instruction",
+          "subject": "Central issuance redesigned card described in brochure · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "Receive a temporary secure paper license at the facility; the old driver license or identification card is returned after being hole-punched.",
+            "required_evidence": [],
+            "document_stage": "temporary"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s003",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "Central issuance redesigned card described in brochure · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "Following fraud checks, the permanent driver license or identification card is printed centrally and mailed within 15 business days.",
+            "required_evidence": [],
+            "document_stage": "permanent"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": "In Spring 2016, the Secretary of State’s office began the Central Issuance process.",
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=1"
+            },
+            {
+              "page_number": 2,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s004",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "Central issuance redesigned card described in brochure · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "The temporary secure paper driver license or identification card issued at the facility is valid for 90 days.",
+            "required_evidence": [],
+            "document_stage": "temporary"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s005",
+          "domain": "issuance_administration",
+          "kind": "instruction",
+          "subject": "Central issuance redesigned card described in brochure · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "If the permanent card has not arrived after 15 business days, check its status at ilsos.gov or call 217-782-7044.",
+            "required_evidence": [],
+            "document_stage": "permanent"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s006",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "Central issuance redesigned card described in brochure · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Transition to the redesigned card",
+            "credential_categories": [
+              "Existing valid Illinois driver licenses",
+              "Existing valid Illinois ID cards"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "Existing cards remain valid until expiration.",
+              "Immediate replacement is not required."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s007",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "Central issuance redesigned card described in brochure · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "The redesign does not change driver license or identification card fees or procedures in the Safe Driver Renewal program.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s008",
+          "domain": "issuance_administration",
+          "kind": "instruction",
+          "subject": "Central issuance redesigned card described in brochure · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "Keep an updated address with the Secretary of State; the brochure states residents must notify the office of an address change within 10 days. Address changes may be made online; after an online change, bring one item of identification verifying the new address at the next facility visit.",
+            "required_evidence": [
+              "One piece of identification verifying the new address at the next facility visit after an online address change."
+            ],
+            "document_stage": "unspecified"
+          },
+          "conditions": [
+            "Address has changed."
+          ],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s009",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned permanent card described in the Central Issuance brochure · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A larger photograph is accompanied by a smaller ghost photograph.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s010",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned permanent card described in the Central Issuance brochure · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The security design comprises many patterns, lines and images.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s011",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned permanent card described in the Central Issuance brochure · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A laser perforation is shaped like Illinois.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "transmitted_light"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s012",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned permanent card described in the Central Issuance brochure · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The front includes a portrait of Lincoln and the Great Seal of Illinois.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "front"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s013",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned permanent card described in the Central Issuance brochure · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The back UV feature duplicates the person photograph and date of birth.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "ultraviolet"
+            ],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s014",
+          "domain": "inspection_procedure",
+          "kind": "instruction",
+          "subject": "Redesigned permanent card described in the Central Issuance brochure · unknown",
+          "content": {
+            "domain": "inspection_procedure",
+            "action": "Hold the card up to light and inspect the laser perforation.",
+            "expected_observation": "The perforation forms the shape of Illinois.",
+            "modalities": [
+              "transmitted_light"
+            ],
+            "equipment": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s015",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "Central issuance redesigned card described in brochure · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Air travel advice stated in this brochure, attributed there to the U.S. Department of Homeland Security",
+            "credential_categories": [
+              "Temporary secure paper Illinois driver license",
+              "Temporary secure paper Illinois identification card"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "Present the temporary secure paper credential in conjunction with the old driver license or ID card to board an airplane."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": "Advice retained from the brochure printed March 2023; no present-day applicability asserted.",
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        }
+      ],
+      "interpretation_status": "unreviewed"
+    },
+    {
+      "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+      "title": "South Dakota Issues SecureID Credentials",
+      "publisher": "South Dakota Department of Public Safety",
+      "stated_edition": null,
+      "publication_date_wording": null,
+      "collection": "South Dakota",
+      "source_url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378",
+      "roles": [
+        "issuer_design_reference",
+        "design_announcement"
+      ],
+      "statement_count": 24,
+      "statements": [
+        {
+          "statement_id": "s001",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "The Department will begin issuing the redesigned driver licenses and identification cards in December 2009, with approximately five years for all motorists to receive the new format.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": "In December 2009",
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s002",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Transition to the announced new format",
+            "credential_categories": [
+              "Current-format driver licenses",
+              "Current-format permits",
+              "Current-format identification cards"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "Valid until the document expiration date."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s003",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "State identification cards include the same security features as driver licenses.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s004",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "License class, restrictions and endorsements specific to the cardholder are printed on the back.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s005",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Living will and power of attorney indicators are on the back.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s006",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The 18th and 21st birthdays are printed on the back of cards issued to someone under 21.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s007",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A two-dimensional barcode is included on the back.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "barcode"
+            ],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s008",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A common back applies to all driver licenses and identification cards.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s009",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Mount Rushmore appears in the background.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "background"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s010",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A ghost image of the driver photograph is in the lower right corner.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "lower right corner"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s011",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The DL/ID number is red.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s012",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The word Donor is written in red when the cardholder has designated organ donation wishes.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s013",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The back includes two types of barcodes.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "barcode"
+            ],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s014",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The 1D barcode contains the material management inventory number.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "barcode"
+            ],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s015",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The 2D barcode contains all front-of-license information except the photograph and signature.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "barcode"
+            ],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s016",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A ghost image is viewable under black light.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "ultraviolet"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s017",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Under-21 driver licenses and ID cards use a red header.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s018",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Under-21 restricted permits use a green header.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s019",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Over-21 operator licenses use a blue header.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s020",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Over-21 non-driver ID cards use a gray header.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s021",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Over-21 commercial driver licenses use a gold header.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s022",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Under-21 licenses show the date the applicant turns 21, print Under 21 to the right of the photo, and print the final two digits of the year the applicant turns 21 in red at the ghost portrait top right.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s023",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The governor name is printed to the right of the portrait.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s024",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "SecureID credentials announced for December 2009 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The minor-card examples use a vertical orientation for quick age verification.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        }
+      ],
+      "interpretation_status": "unreviewed"
+    },
+    {
+      "source_sha256": "6a8d19a16c4419f466dc8d1ad6ea535557951412d6e8fc4132773c10eff5239e",
+      "title": "Missouri Driver Licenses and Nondriver Identification Cards",
+      "publisher": "Missouri Department of Revenue",
+      "stated_edition": null,
+      "publication_date_wording": null,
+      "collection": "Missouri",
+      "source_url": "https://dor.mo.gov/forms/5443.pdf",
+      "roles": [
+        "issuer_design_reference",
+        "issuance_guidance"
+      ],
+      "statement_count": 28,
+      "statements": [
+        {
+          "statement_id": "s001",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "Driver licenses and nondriver identification cards received improvements in December 2012; instruction permits, driver licenses and nondriver cards were modified as of April 1, 2017 to remove the Director of Revenue signature above the applicant photo.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": "As of April 1, 2017",
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s002",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Director of Revenue signature removal",
+            "credential_categories": [
+              "Previously issued formats containing the Director of Revenue signature"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "Remain valid until the document expiration date."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s003",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card includes laser perforations.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s004",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card includes a ghost image.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s005",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Fine lines extend through the portrait and ghost image.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "portrait and ghost image"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s006",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Data overlap the ghost image.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "ghost image"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s007",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "An optional organ donor indicator is available.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s008",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A REAL ID-compliant indicator is shown.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s009",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A limited-term indicator is shown.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s010",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A Not For REAL ID Purposes indicator is shown.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s011",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Each card has an optically variable laminate pattern containing Missouri text and the state seal.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "tilt"
+            ],
+            "source_location": "laminate"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s012",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The 1D barcode is for factory use only.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "barcode"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s013",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The 2D barcode includes data from the front; class, endorsement and restriction definitions are printed on the back.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "barcode",
+              "visible"
+            ],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s014",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Optional veteran, boater and disability indicators are available.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s015",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card displays expiration and issue dates.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s016",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The publication identifies Valid Without Photo indicators.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s017",
+          "domain": "inspection_procedure",
+          "kind": "instruction",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "inspection_procedure",
+            "action": "Place the card directly under a black light source.",
+            "expected_observation": "The laminate shows an ultraviolet ink pattern.",
+            "modalities": [
+              "ultraviolet"
+            ],
+            "equipment": [
+              "black light source"
+            ]
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s018",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "Temporary Driver License · driver license",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "Applicants receive a temporary license and may retain the old license, which is punched VOID.",
+            "required_evidence": [],
+            "document_stage": "temporary"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s019",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "December 2012 improvements; April 2017 signature removal · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "The permanent license is produced at a secure U.S. facility and mailed in an unmarked envelope; it typically arrives at the home address within 7 to 10 business days.",
+            "required_evidence": [],
+            "document_stage": "permanent"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s020",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Temporary Driver License · driver license",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "An inventory control number is for DOR use only.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s021",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Temporary Driver License · driver license",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The temporary license displays an expiration date.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s022",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Temporary Driver License · driver license",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The temporary license includes a 2D barcode.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "barcode"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s023",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Temporary Driver License · driver license",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The state seal and TEMPORARY text are printed with temperature-sensitive ink.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s024",
+          "domain": "inspection_procedure",
+          "kind": "instruction",
+          "subject": "Temporary Driver License · driver license",
+          "content": {
+            "domain": "inspection_procedure",
+            "action": "Expose the state seal and TEMPORARY text areas to warmth.",
+            "expected_observation": "These temperature-sensitive ink areas fade to white.",
+            "modalities": [
+              "thermal",
+              "visible"
+            ],
+            "equipment": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s025",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Temporary Driver License · driver license",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The temporary license includes mailing information.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s026",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Temporary Driver License · driver license",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The temporary license includes a photo.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s027",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Temporary Driver License · driver license",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The temporary license has an optional organ donor indicator.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s028",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Temporary Driver License · driver license",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The temporary license includes the issue date.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/5443.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        }
+      ],
+      "interpretation_status": "unreviewed"
+    },
+    {
+      "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+      "title": "Indiana Driver’s License and ID Card: Security and Authenticity",
+      "publisher": "Indiana Bureau of Motor Vehicles",
+      "stated_edition": null,
+      "publication_date_wording": null,
+      "collection": "Indiana",
+      "source_url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf",
+      "roles": [
+        "issuer_design_reference",
+        "verification_training",
+        "issuance_guidance"
+      ],
+      "statement_count": 27,
+      "statements": [
+        {
+          "statement_id": "s001",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Previous version as labeled in source · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A gold star in the upper right corner indicates federal identification compliance.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "upper right corner"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s002",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Previous version as labeled in source · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Temporary is printed at the upper left corner of the face when the holder is a foreign national with temporary lawful status.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "upper left corner"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s003",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "Previous version as labeled in source · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "BMV issues REAL ID credentials only after verifying identity, Social Security number, lawful status and Indiana residency.",
+            "required_evidence": [
+              "Identity",
+              "Social Security number",
+              "Lawful status",
+              "Proof of Indiana residency"
+            ],
+            "document_stage": "unspecified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": "In January 2010, the BMV introduced REAL ID driver licenses and REAL ID identification cards.",
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s004",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "Previous version as labeled in source · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "U.S. citizens holding a valid Indiana driver license or identification card who wish to wait for REAL ID are eligible to apply for a Legacy noncompliant credential.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [
+            "Applicant is a United States citizen.",
+            "Applicant holds a valid Indiana driver license or identification card.",
+            "Applicant wishes to wait to get REAL ID."
+          ],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s005",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Previous version as labeled in source · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Minor credentials are printed vertically and designate the dates the individual reaches ages 18 and 21.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [
+            "Previous-design source lists driver licenses and identification cards."
+          ],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s006",
+          "domain": "inspection_procedure",
+          "kind": "instruction",
+          "subject": "Previous version as labeled in source · unknown",
+          "content": {
+            "domain": "inspection_procedure",
+            "action": "Handle the bare card and feel near the photo and birth date for raised edges, glue lines or bumpy surfaces.",
+            "expected_observation": "Uneven surfaces indicate tampering.",
+            "modalities": [
+              "tactile"
+            ],
+            "equipment": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s007",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A black outline of a star in the upper right corner indicates federal identification compliance.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "upper right corner"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s008",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Temporary is printed at the upper right corner of the face when the holder is a foreign national with temporary lawful status.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "upper right corner"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s009",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "BMV issues REAL ID credentials only after verifying identity, Social Security number, lawful status and Indiana residency.",
+            "required_evidence": [
+              "Identity",
+              "Social Security number",
+              "Lawful status",
+              "Proof of Indiana residency"
+            ],
+            "document_stage": "unspecified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": "In January 2010, the BMV introduced REAL ID driver licenses and REAL ID identification cards.",
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s010",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "U.S. citizens holding a valid Indiana driver license or identification card who wish to wait for REAL ID are eligible to apply for a Legacy noncompliant credential.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [
+            "Applicant is a United States citizen.",
+            "Applicant holds a valid Indiana driver license or identification card.",
+            "Applicant wishes to wait to get REAL ID."
+          ],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s011",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Minor credentials are printed vertically and designate the dates the individual reaches ages 18 and 21.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [
+            "Current-design source lists learner permits, driver licenses and identification cards."
+          ],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s012",
+          "domain": "inspection_procedure",
+          "kind": "instruction",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "inspection_procedure",
+            "action": "Handle the bare card and feel near the photo and birth date for raised edges, glue lines or bumpy surfaces.",
+            "expected_observation": "Uneven surfaces indicate tampering.",
+            "modalities": [
+              "tactile"
+            ],
+            "equipment": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 4,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=4"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s013",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Previous version as labeled in source · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Credential types include operator license, learner permit, identification card, commercial driver license, chauffeur license and PP chauffeur license.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s014",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Credential types include operator/driver license, learner permit, identification card and commercial driver license; cards issued after January 1, 2022 are marked Driver’s License.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": "Cards issued after 1/1/22",
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s015",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Previous version as labeled in source · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The photograph contains overlapping standard and UV data; two other matching ghost images appear, one visible and one UV.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible",
+              "ultraviolet"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s016",
+          "domain": "inspection_procedure",
+          "kind": "instruction",
+          "subject": "Previous version as labeled in source · unknown",
+          "content": {
+            "domain": "inspection_procedure",
+            "action": "Compare the front date of birth against the back top-right date of birth.",
+            "expected_observation": "Both dates of birth must match.",
+            "modalities": [
+              "visible"
+            ],
+            "equipment": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s017",
+          "domain": "inspection_procedure",
+          "kind": "instruction",
+          "subject": "Previous version as labeled in source · unknown",
+          "content": {
+            "domain": "inspection_procedure",
+            "action": "Illuminate the card with ultraviolet light.",
+            "expected_observation": "The illustrated UV features must appear when lit.",
+            "modalities": [
+              "ultraviolet"
+            ],
+            "equipment": [
+              "UV light"
+            ]
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s018",
+          "domain": "inspection_procedure",
+          "kind": "instruction",
+          "subject": "Previous version as labeled in source · unknown",
+          "content": {
+            "domain": "inspection_procedure",
+            "action": "Turn the card in the light and observe the background outlines on its face.",
+            "expected_observation": "The outlines flash in and out of vision and should not remain consistently bright.",
+            "modalities": [
+              "tilt"
+            ],
+            "equipment": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s019",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The photograph contains overlapping graphics and wording in standard and UV print.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible",
+              "ultraviolet"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 3,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=3"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s020",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Matching ghost images appear on the front and back, visible and UV; the image shifts from grey to gold as the card turns.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible",
+              "ultraviolet",
+              "tilt"
+            ],
+            "source_location": "front and back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 4,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=4"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s021",
+          "domain": "inspection_procedure",
+          "kind": "instruction",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "inspection_procedure",
+            "action": "Compare the front date of birth with the date at the back top-left and the raised date numbers at the bottom of the card face.",
+            "expected_observation": "The three dates of birth match.",
+            "modalities": [
+              "visible",
+              "tactile"
+            ],
+            "equipment": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 4,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=4"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s022",
+          "domain": "inspection_procedure",
+          "kind": "instruction",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "inspection_procedure",
+            "action": "Illuminate the card with ultraviolet light.",
+            "expected_observation": "The other UV features appear when lit.",
+            "modalities": [
+              "ultraviolet"
+            ],
+            "equipment": [
+              "UV light"
+            ]
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 4,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=4"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s023",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Current version as labeled in source; publication date unknown · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Driver licenses display a blue Indy car and identification cards a red cardinal on the card face.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "card face"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 4,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=4"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s024",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "Interim / Extension Credential · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Valid for driving privileges and voter identification",
+            "credential_categories": [
+              "Interim / extension credential"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "Credential bears the message Valid for driving privileges and voter identification."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s025",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "Interim / Extension Credential · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Valid for extension when presented with previous credential",
+            "credential_categories": [
+              "Interim / extension credential"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "Credential bears the message Valid for extension when presented with previous credential.",
+              "Must be presented with the previous credential."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s026",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "Interim / Extension Credential · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Valid for voter identification",
+            "credential_categories": [
+              "Interim / extension credential"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "Credential bears the message Valid for voter identification."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s027",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "Interim / Extension Credential · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Valid when presented with previous credential",
+            "credential_categories": [
+              "Interim / extension credential"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "Credential bears the message Valid when presented with previous credential.",
+              "Must be presented with the previous credential."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        }
+      ],
+      "interpretation_status": "unreviewed"
+    },
+    {
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "title": "2026 redesigned Oklahoma Driver License and Identification Card",
+      "publisher": null,
+      "stated_edition": "2026",
+      "publication_date_wording": null,
+      "collection": "Oklahoma",
+      "source_url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf",
+      "roles": [
+        "issuer_design_reference",
+        "design_announcement"
+      ],
+      "statement_count": 12,
+      "statements": [
+        {
+          "statement_id": "s001",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Artwork includes the state wildflower, Indian Blanket.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s002",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Artwork includes the state mammal, bison.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s003",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Artwork includes the state bird, scissor-tailed flycatcher.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s004",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The state tree, redbud, is raised to the touch.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "tactile"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s005",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A secondary photo includes text that changes with the viewing angle.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "tilt"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s006",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Black-and-white portraits are laser engraved and described by the source as tamper-proof.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s007",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "UV and Prism security features are on the front.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "ultraviolet"
+            ],
+            "source_location": "front"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s008",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Microprinted phrases include the names of all 77 counties.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "magnification"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s009",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "UV security features are on the back.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "ultraviolet"
+            ],
+            "source_location": "back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s010",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Patterns and textures celebrate the state natural beauty and heritage.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s011",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Transition to the redesigned credentials",
+            "credential_categories": [
+              "Existing Oklahoma identifications"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "Remain valid until their expiration date."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s012",
+          "domain": "issuance_administration",
+          "kind": "assertion",
+          "subject": "2026 redesigned Oklahoma Driver License and Identification Card · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "Licensees can opt for a noncompliant ID or REAL ID.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        }
+      ],
+      "interpretation_status": "unreviewed"
+    },
+    {
+      "source_sha256": "7138164845e5a2c4cf04cf0a8a920e27577223b6236091258a2faa97c4c08d6c",
+      "title": "Redesigned EAD 2023",
+      "publisher": null,
+      "stated_edition": "2023",
+      "publication_date_wording": null,
+      "collection": "United States federal",
+      "source_url": "https://www.uscis.gov/sites/default/files/document/guides/EAD_Comparison_EN.pdf",
+      "roles": [
+        "issuer_design_reference",
+        "design_announcement"
+      ],
+      "statement_count": 6,
+      "statements": [
+        {
+          "statement_id": "s001",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned EAD 2023 · employment authorization",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The redesigned card displays updated eagle artwork.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.uscis.gov/sites/default/files/document/guides/EAD_Comparison_EN.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s002",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned EAD 2023 · employment authorization",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Data fields appear in different locations than on previous card versions.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.uscis.gov/sites/default/files/document/guides/EAD_Comparison_EN.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s003",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned EAD 2023 · employment authorization",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The cardholder fingerprint is no longer displayed on the front.",
+            "presence": "absent",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "front"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.uscis.gov/sites/default/files/document/guides/EAD_Comparison_EN.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s004",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned EAD 2023 · employment authorization",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "New tactile printing is better integrated with the artwork.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "tactile"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.uscis.gov/sites/default/files/document/guides/EAD_Comparison_EN.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s005",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned EAD 2023 · employment authorization",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Enhanced optically variable ink and new highly secure holographic images appear on the front and back.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "tilt"
+            ],
+            "source_location": "front and back"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.uscis.gov/sites/default/files/document/guides/EAD_Comparison_EN.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s006",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "Redesigned EAD 2023 · employment authorization",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A new layer-reveal feature includes a partial window on the back photo box.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [],
+            "source_location": "back photo box"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://www.uscis.gov/sites/default/files/document/guides/EAD_Comparison_EN.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        }
+      ],
+      "interpretation_status": "unreviewed"
+    },
+    {
+      "source_sha256": "77f0bdcdd8072a5165a03c93ad95a205451196d20e7020336a0283d6d4e2c6c9",
+      "title": "Missouri’s Driver License & Nondriver Identification Card",
+      "publisher": null,
+      "stated_edition": null,
+      "publication_date_wording": null,
+      "collection": "Missouri",
+      "source_url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf",
+      "roles": [
+        "issuer_design_reference",
+        "issuance_guidance"
+      ],
+      "statement_count": 25,
+      "statements": [
+        {
+          "statement_id": "s001",
+          "domain": "issuance_administration",
+          "kind": "instruction",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "issuance_administration",
+            "procedure": "Renew or replace a credential at a local license office listed at dor.mo.gov; the new card design was available as of June 2020.",
+            "required_evidence": [],
+            "document_stage": "unspecified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": "available as of June 2020",
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s002",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The name and title of the Director of Revenue appear on cards printed on or after July 19, 2021.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": "cards printed on or after July 19, 2021",
+          "evidence": [
+            {
+              "page_number": 1,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=1"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s003",
+          "domain": "acceptance_policy",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "acceptance_policy",
+            "context": "Transition to the June 2020 design",
+            "credential_categories": [
+              "Old-design driver licenses",
+              "Old-design ID cards"
+            ],
+            "outcome": "conditional",
+            "conditions": [
+              "A replacement is not required unless the credential has expired or a required change such as name or address is needed.",
+              "Old and new designs remain in use alongside each other."
+            ],
+            "exceptions": []
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s004",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Instruction permits and commercial learner permits use a brown header; N denotes new and R renewal.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "header"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s005",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Nondriver identification cards use a red header.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "header"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s006",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Commercial driver licenses and non-domiciled CDLs use a green header.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "header"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s007",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Driver licenses use a blue header.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "header"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s008",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Intermediate driver licenses use a purple header.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "header"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s009",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Variable data include a laser-engraved tactile date of birth.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "tactile"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s010",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card includes a ghost portrait.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s011",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Fine-line security printing is preprinted on the card background, including underneath the portrait.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "background including portrait area"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s012",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card includes redundant data.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s013",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "When applicable, indicators retain fixed locations: front veteran, organ donor, deaf or hard of hearing and medical; back permanent disability and boater safety.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": "front and back as specified"
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s014",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card includes a guilloche security design.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s015",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card includes overlapping data.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s016",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card includes a tri-color optically variable device.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "tilt"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s017",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card includes 1D and 2D barcodes.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "barcode"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s018",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "A laser perforation depicts a dogwood flower.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s019",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The card includes class, endorsements and restrictions.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s020",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The UV features include a portrait and date of birth.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "ultraviolet"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s021",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The vertical format is issued to individuals under 21 and applies to all card types.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s022",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "REAL ID-compliant cards have a compliant REAL ID indicator.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s023",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "Noncompliant cards have a noncompliant REAL ID indicator.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "visible"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s024",
+          "domain": "credential_design_security",
+          "kind": "assertion",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "credential_design_security",
+            "name": "The redesigned cards include ultraviolet ink and optically variable features.",
+            "presence": "present",
+            "security_family": null,
+            "inspection_level": null,
+            "modalities": [
+              "ultraviolet",
+              "tilt"
+            ],
+            "source_location": null
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        },
+        {
+          "statement_id": "s025",
+          "domain": "inspection_procedure",
+          "kind": "instruction",
+          "subject": "New design implemented June 2020 · unknown",
+          "content": {
+            "domain": "inspection_procedure",
+            "action": "Illuminate the front and back UV features using a 365 nanometer ultraviolet light source.",
+            "expected_observation": "The UV features glow green.",
+            "modalities": [
+              "ultraviolet"
+            ],
+            "equipment": [
+              "365 nanometer UV light source"
+            ]
+          },
+          "conditions": [],
+          "exceptions": [],
+          "effective_wording": null,
+          "evidence": [
+            {
+              "page_number": 2,
+              "url": "https://dor.mo.gov/forms/Driver%20License%20Brochure.pdf#page=2"
+            }
+          ],
+          "interpretation_status": "unreviewed"
+        }
+      ],
+      "interpretation_status": "unreviewed"
+    }
+  ]
+}

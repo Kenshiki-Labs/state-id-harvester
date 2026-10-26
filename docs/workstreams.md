@@ -82,8 +82,10 @@ next delivery are in [document-ontology.md](document-ontology.md).
 - [x] Pass 140 focused adversarial tests, including actual-PDF packet comparison.
 - [x] Extract a first batch of eight documents across seven collections: 164
   statements, 177 exact anchors and 15 subject scopes, all explicitly unreviewed.
-- [ ] Complete final independent correction checks and private R2 upload/readback.
-- [ ] Pass full CI and SonarCloud for the typed extraction/storage code.
+- [x] Complete independent correction checks; upload and SHA-verify all 32 private R2
+  artifacts. Activate the eight-document index (164 statements).
+- [x] Pass full CI and SonarCloud for typed extraction/storage on `4e08ba8`
+  (Validate `40419947239`; Sonar gate OK, zero open issues).
 - [ ] Complete the edition-specific standards crosswalk and corpus classification
   register with explicit exceptions; the rest of the corpus is not yet extracted.
 
@@ -100,6 +102,25 @@ Private storage is specified in [document-ontology.md](document-ontology.md):
 R2 retains originals, native packets and validated JSON; D1 registry projection is
 prepared without a production migration. Vectorize remains deferred.
 No Docling, Unstructured, OCR or new harvesting sweep is active.
+
+## Public knowledge viewer release
+
+The first eight grounded records are exported through an explicit strict public
+projection to `/knowledge`. Search and domain filters expose normalized statements,
+subject scopes, conditions, exceptions, historical publication wording, and PDF
+page citations. Every interpretation remains unreviewed. Native quote packets,
+source originals, and private storage paths stay in private storage.
+
+Regenerate the viewer payload with:
+
+```sh
+.venv/bin/python scripts/export_public_knowledge.py <selected-records.json ...> \
+  --native-packets output/domain-classification/native-text
+```
+
+The export validates each selected record against its native packet; public JSON
+is separately checked against the strict public projection schema by the publication
+guard. This first release does not claim complete extraction of the corpus.
 
 ## Deferred dependencies
 

@@ -14,6 +14,7 @@ from urllib.parse import unquote, urlsplit
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
 
+from state_id_harvester.knowledge_public import PublicKnowledge
 from state_id_harvester.seeds import STATE_DOMAINS
 
 PUBLIC_LABEL_PATTERN = r"^[^\x00-\x1f<>]+$"
@@ -214,6 +215,7 @@ def validate_public_json(path: Path, content: str) -> None:
         return
     shapes = {
         "catalog.json": Catalog,
+        "knowledge.json": PublicKnowledge,
         "cohorts.json": GeometryBundle,
         "manifest.json": CitationManifest,
         "coverage.json": list[Jurisdiction],
@@ -222,7 +224,7 @@ def validate_public_json(path: Path, content: str) -> None:
     }
     if path.name not in shapes:
         raise ValueError("Unrecognized public JSON payload")
-    TypeAdapter(shapes[path.name]).validate_python(data)
+    TypeAdapter(shapes[path.name]).validate_json(content)
 
 
 def normalized_uris(content: str) -> str:

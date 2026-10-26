@@ -10,6 +10,7 @@ from pydantic import TypeAdapter
 from state_id_harvester.catalog import Cohort
 from state_id_harvester.knowledge import DocumentKnowledge
 from state_id_harvester.knowledge_evidence import NativePdfPacket
+from state_id_harvester.knowledge_public import PublicKnowledge
 from state_id_harvester.knowledge_store import KnowledgeIndex, PreparedManifest
 from state_id_harvester.models import BoundaryCandidate, Manifest, Review
 
@@ -26,6 +27,7 @@ def main() -> None:
         "public-catalog": Catalog.model_json_schema(),
         "public-cohorts": GeometryBundle.model_json_schema(),
         "document-knowledge": DocumentKnowledge.model_json_schema(),
+        "public-knowledge": PublicKnowledge.model_json_schema(),
         "native-pdf-packet": NativePdfPacket.model_json_schema(),
         "knowledge-storage": PreparedManifest.model_json_schema(),
         "knowledge-index": KnowledgeIndex.model_json_schema(),

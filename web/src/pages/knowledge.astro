@@ -1,0 +1,17 @@
+---
+import Site from '../layouts/Site.astro';
+import KnowledgeLibrary from '../components/KnowledgeLibrary';
+import type { KnowledgeCatalog } from '../lib/knowledge-model';
+import data from '../../public/data/knowledge.json';
+const catalog = data as KnowledgeCatalog;
+const statements = catalog.documents.reduce((sum, document) => sum + document.statements.length, 0);
+---
+<Site title="Document knowledge — Cadastre" description="Explore source-backed identity-document design, inspection, issuance and acceptance guidance.">
+  <div class="shell section-space knowledge-page">
+    <nav class="page-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> / </span><span>Document knowledge</span></nav>
+    <div class="page-intro"><p class="eyebrow">FROM PUBLICATIONS TO KNOWLEDGE</p><h1>Read beyond the card.</h1><p>Explore the design features, inspection instructions and issuance guidance documented in public source publications.</p></div>
+    <div class="knowledge-intro"><div class="knowledge-stats"><div><strong>{catalog.documents.length}</strong><span>source publications</span></div><div><strong>{statements}</strong><span>structured statements</span></div></div><p>Every statement links back to its source PDF. Interpretations are <strong>unreviewed</strong>; historical guidance retains its source period. This is an initial extraction set, with more publications in progress.</p></div>
+    <KnowledgeLibrary documents={catalog.documents} client:load />
+    <p class="directory-note">Browse the original document images in <a href="/catalog">the reference catalog ↗</a>. <a href="/data/knowledge.json">Download this knowledge set ↗</a></p>
+  </div>
+</Site>
