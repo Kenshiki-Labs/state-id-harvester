@@ -35,7 +35,7 @@ decisions_from = read_decisions
 def decode_original(row: dict) -> tuple[np.ndarray, bytes]:
     unresolved = Path(row["original_path"])
     path = managed_path(unresolved)
-    if unresolved.is_symlink():
+    if path != Path(os.path.abspath(unresolved)):
         raise ValueError("Original image must not be a symlink")
     if path.is_symlink() or not path.is_file() or path.stat().st_size > 50_000_000:
         raise ValueError("Invalid original image path or byte budget")
@@ -141,9 +141,10 @@ def run(inventory: Path, registry: Path, rectifier_path: Path, output: Path) -> 
             "results": results,
             "pending": pending,
         }
-        contained_path(stage, "manifest.json").write_text(
-            json.dumps(manifest, indent=2, allow_nan=False) + "\n"
-        )
+        manifest_path = contained_path(stage, "manifest.json")
+        with manifest_path.open("w") as stream:
+            json.dump(manifest, stream, indent=2, allow_nan=False)
+            stream.write("\n")
         # Publish a complete run only. An interrupted process cannot leave a partial
         # output that a subsequent publication step could mistake for a finished run.
         os.rename(stage, output)
