@@ -30,6 +30,11 @@ accepts saved inventory records instead of generating them. `--baseline-text`
 accepts previous `TextBlock` records; only their local OCR entries are merged.
 `--baseline-summary` displays an operator-provided before summary.
 
+Inputs and output must stay in the checkout or the process's managed temporary
+directory. Input files must be outside the output directory so a report cannot
+overwrite its source or sidecars. Every output filename is confined to its output
+directory after resolving symlinks. JSON sidecar reads are capped at 64 MiB.
+
 The output contains `index.html`, composed page previews, original extracted
 image bytes and mask streams, `after.json`, counts and `review-requests.json`.
 All files are private review artifacts. Keep them under ignored `output/` and

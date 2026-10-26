@@ -21,6 +21,7 @@ import pymupdf
 from pydantic import Field
 
 from .models import Record, TextBlock
+from .paths import managed_path
 
 BBox = tuple[float, float, float, float]
 SHA256_PATTERN = r"^[a-f0-9]{64}$"
@@ -622,6 +623,7 @@ def analyze_document(
     ocr_by_page: dict[int, list[TextBlock]] | None = None,
     native_inventory_by_page: dict[int, dict[str, Any]] | None = None,
 ) -> list[PageSemantics]:
+    path = managed_path(path)
     with path.open("rb") as source:
         checksum = hashlib.file_digest(source, "sha256").hexdigest()
     with pymupdf.open(path) as document:

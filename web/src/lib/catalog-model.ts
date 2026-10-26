@@ -126,7 +126,8 @@ function sourceTitle(source: Record<string, unknown>, url: URL): string {
   const title =
     typeof source.title === "string" ? source.title.trim().slice(0, 1000) : "";
   if (title && !/^[a-f0-9]{64}(?:\.pdf)?$/i.test(title)) return title;
-  const filename = url.pathname.split("/").filter(Boolean).at(-1) ?? "";
+  const filename =
+    url.pathname.split("/").findLast((part) => part.length > 0) ?? "";
   try {
     const label = decodeURIComponent(filename)
       .replace(/\.pdf$/i, "")

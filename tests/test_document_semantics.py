@@ -15,7 +15,7 @@ import numpy as np
 import pymupdf
 import pytest
 
-from state_id_harvester.document_semantics import PageSemantics, analyze_page
+from state_id_harvester.document_semantics import PageSemantics, analyze_document, analyze_page
 from state_id_harvester.models import TextBlock
 from state_id_harvester.semantic_review import (
     QuotedEvidence,
@@ -355,3 +355,73 @@ def test_private_report_does_not_follow_existing_asset_symlinks(tmp_path: Path) 
     with pytest.raises(ValueError, match="escapes"):
         script.export_inspection_assets(source, output, [result])
     assert outside.read_bytes() == b"must remain unchanged"
+
+
+@pytest.mark.parametrize("route", ["traversal", "symlink"])
+@pytest.mark.parametrize("reader", ["json", "native_inventory", "document"])
+def test_audit_input_paths_cannot_escape_managed_roots(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, route: str, reader: str
+) -> None:
+    script = load_audit_script()
+    checkout = tmp_path / "checkout"
+    checkout.mkdir()
+    temporary = tmp_path / "managed-temporary"
+    temporary.mkdir()
+    outside = tmp_path / "private-source.json"
+    outside.write_text('{"private":true}')
+    requested = checkout / "../private-source.json"
+    if route == "symlink":
+        requested = checkout / "linked.json"
+        requested.symlink_to(outside)
+    monkeypatch.chdir(checkout)
+    monkeypatch.setattr("state_id_harvester.paths.tempfile.gettempdir", lambda: str(temporary))
+    with pytest.raises(ValueError, match="managed temporary directory"):
+        if reader == "json":
+            script.read_json_file(requested)
+        elif reader == "native_inventory":
+            script.load_inventories(checkout / "source.pdf", [1], requested, False)
+        else:
+            analyze_document(requested, [1])
+
+
+@pytest.mark.parametrize("route", ["traversal", "absolute", "symlink"])
+def test_report_json_writer_cannot_replace_a_file_outside_output(
+    tmp_path: Path, route: str
+) -> None:
+    script = load_audit_script()
+    output = tmp_path / "report"
+    output.mkdir()
+    outside = tmp_path / "keep.json"
+    outside.write_text("preserve these bytes")
+    name = "../keep.json" if route == "traversal" else str(outside)
+    if route == "symlink":
+        name = "linked.json"
+        (output / name).symlink_to(outside)
+    with pytest.raises(ValueError, match="escapes"):
+        script.json_file(output, name, {"replaced": True})
+    assert outside.read_text() == "preserve these bytes"
+
+
+def test_report_inputs_inside_output_are_rejected_before_any_source_overwrite(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    script = load_audit_script()
+    output = tmp_path / "report"
+    output.mkdir()
+    source = output / "after.json"
+    with two_versions() as (page, _):
+        source.write_bytes(page.parent.tobytes())
+    original = source.read_bytes()
+    monkeypatch.setattr(sys, "argv", ["audit", str(source), str(output), "--pages", "1"])
+    with pytest.raises(ValueError, match="outside the output directory"):
+        script.main()
+    assert source.read_bytes() == original
+
+
+def test_audit_sidecar_read_is_bounded_before_json_parsing(tmp_path: Path) -> None:
+    script = load_audit_script()
+    script.MAX_SIDECAR_BYTES = 16
+    sidecar = tmp_path / "large.json"
+    sidecar.write_text('{"payload":"' + "a" * 32 + '"}')
+    with pytest.raises(ValueError, match="sidecar exceeds"):
+        script.read_json_file(sidecar)

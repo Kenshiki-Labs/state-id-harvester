@@ -143,7 +143,10 @@ def test_administrative_ui_and_unlabelled_rectangles_abstain_keep_inventory() ->
         groups = component_groups(inv, max_image_pixels=1_000_000)
         assert all(g.status == "abstained" for g in groups)
         assert any("administrative" in reason for g in groups for reason in g.reasons)
-        assert inv.images and inv.paths and inv.text_runs and inv.content_stream_ids
+        assert inv.images
+        assert inv.paths
+        assert inv.text_runs
+        assert inv.content_stream_ids
         assert not detect(page, [], 1, inventory=inv, groups=groups)
 
 

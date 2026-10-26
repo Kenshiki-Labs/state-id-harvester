@@ -2,8 +2,8 @@ import { useState, type SubmitEvent } from "react";
 import { AccessSubmissionError } from "./access-model";
 import {
   claimKey,
+  claimFromForm,
   requestStatus,
-  savedClaim,
   verifySavedDomain,
   type ClaimedKey,
   type RequestStatus,
@@ -39,13 +39,13 @@ export function useRequestManager() {
         setStatus(await requestStatus(current));
       }
       setClaim(current);
-    } catch (failure) {
+    } catch (error_) {
       const fallback =
         action === "claim"
           ? "A complete key receipt was not received. Check status before retrying; a claimed key cannot be displayed again."
           : "The access service is unavailable. Please try again.";
       setError(
-        failure instanceof AccessSubmissionError ? failure.message : fallback,
+        error_ instanceof AccessSubmissionError ? error_.message : fallback,
       );
     } finally {
       setBusy(false);
@@ -55,15 +55,12 @@ export function useRequestManager() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     try {
-      const current = savedClaim(
-        String(data.get("request_id") ?? ""),
-        String(data.get("claim_token") ?? ""),
-      );
+      const current = claimFromForm(data);
       void run(current, "status");
-    } catch (failure) {
+    } catch (error_) {
       setError(
-        failure instanceof AccessSubmissionError
-          ? failure.message
+        error_ instanceof AccessSubmissionError
+          ? error_.message
           : "Check your saved receipt.",
       );
     }

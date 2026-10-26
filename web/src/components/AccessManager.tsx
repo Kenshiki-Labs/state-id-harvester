@@ -6,7 +6,7 @@ import {
 } from "../lib/manager-model";
 import { useRequestManager } from "../lib/manager";
 
-export function KeyReceipt({ receipt }: { receipt: ClaimedKey }) {
+export function KeyReceipt({ receipt }: Readonly<{ receipt: ClaimedKey }>) {
   return (
     <section className="access-result" aria-label="One-time key receipt">
       <h2>Save your key now.</h2>
@@ -16,7 +16,7 @@ export function KeyReceipt({ receipt }: { receipt: ClaimedKey }) {
         or message.
       </p>
       <label>
-        Research API key
+        Research API key{" "}
         <textarea
           readOnly
           rows={3}
@@ -37,16 +37,16 @@ export function KeyReceipt({ receipt }: { receipt: ClaimedKey }) {
 
 export function AccessManagerView({
   manager,
-}: {
+}: Readonly<{
   manager: ReturnType<typeof useRequestManager>;
-}) {
+}>) {
   return (
     <section className="access-form" aria-label="Manage research request">
       {!manager.claim && (
         <form onSubmit={manager.submit} autoComplete="off">
           <div className="form-grid">
             <label>
-              Saved request ID
+              Saved request ID{" "}
               <input
                 name="request_id"
                 required
@@ -59,7 +59,7 @@ export function AccessManagerView({
               />
             </label>
             <label>
-              Private claim token
+              Private claim token{" "}
               <input
                 name="claim_token"
                 type="password"
@@ -73,7 +73,11 @@ export function AccessManagerView({
               />
             </label>
           </div>
-          <button className="button button-primary" disabled={manager.busy}>
+          <button
+            className="button button-primary"
+            type="submit"
+            disabled={manager.busy}
+          >
             {manager.busy ? "Checking request…" : "Check request status"}
           </button>
         </form>
@@ -116,10 +120,10 @@ export function AccessManagerView({
 function RequestStatusPanel({
   manager,
   status,
-}: {
+}: Readonly<{
   manager: ReturnType<typeof useRequestManager>;
   status: RequestStatus;
-}) {
+}>) {
   return (
     <div>
       <h2>Request status</h2>

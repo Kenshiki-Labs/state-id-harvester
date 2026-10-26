@@ -12,6 +12,7 @@ import AccessManager, {
 import {
   canClaim,
   claimKey,
+  claimFromForm,
   parseClaimedKey,
   parseRequestStatus,
   requestStatus,
@@ -52,6 +53,22 @@ function renderedButtons(
 }
 
 describe("saved request client boundary", () => {
+  it("accepts string credentials from a form and rejects File or oversized entries", () => {
+    const data = new FormData();
+    data.set("request_id", requestId);
+    data.set("claim_token", token);
+    expect(claimFromForm(data)).toEqual(claim);
+    data.set("claim_token", new File([token], "claim.txt"));
+    expect(() => claimFromForm(data)).toThrow("saved receipt");
+    data.set("claim_token", token);
+    data.set("request_id", new File([requestId], "request.txt"));
+    expect(() => claimFromForm(data)).toThrow("saved receipt");
+    data.set("request_id", requestId);
+    data.set("claim_token", "x".repeat(129));
+    expect(() => claimFromForm(data)).toThrow("saved receipt");
+    data.delete("claim_token");
+    expect(() => claimFromForm(data)).toThrow("saved receipt");
+  });
   it("wires visible proof, refresh, claim and clear buttons to their matching actions", () => {
     const manager = {
       claim,

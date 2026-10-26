@@ -18,7 +18,8 @@ from state_id_harvester.storage import atomic_json, digest
 spec = importlib.util.spec_from_file_location(
     "reextract_retained", Path("scripts/reextract_retained.py")
 )
-assert spec is not None and spec.loader is not None
+assert spec is not None
+assert spec.loader is not None
 refresher = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = refresher
 spec.loader.exec_module(refresher)
@@ -95,11 +96,13 @@ def test_refresh_preserves_downloads_original_assets_and_other_jurisdictions(
     payload = json.loads((tmp_path / "manifest.json").read_text())
     assert payload["documents"][1] == original_payload["documents"][1]
     assert payload["documents"][0]["download"] == original_payload["documents"][0]["download"]
-    assert after.run_id == before.run_id and after.options == before.options
+    assert after.run_id == before.run_id
+    assert after.options == before.options
     assert after.source_revision == before.source_revision
     assert after.documents[0].extraction_fingerprint != before.documents[0].extraction_fingerprint
     assert all(digest(tmp_path / path) == sha for path, sha in old_assets.items())
-    assert receipt["before"]["crop_candidates"] == 0 and receipt["after"]["crop_candidates"] == 1
+    assert receipt["before"]["crop_candidates"] == 0
+    assert receipt["after"]["crop_candidates"] == 1
     assert receipt["unchanged_other_jurisdiction_documents"] == 1
     assert receipt["previous_derivatives_verified_unchanged"] is True
     assert not verify(tmp_path)

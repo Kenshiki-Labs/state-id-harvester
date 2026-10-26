@@ -37,6 +37,22 @@ export function savedClaim(requestId: string, token: string): SavedClaim {
   return { request_id, claim_token };
 }
 
+export function claimFromForm(data: FormData): SavedClaim {
+  const requestId = data.get("request_id");
+  const token = data.get("claim_token");
+  if (
+    typeof requestId !== "string" ||
+    requestId.length > 128 ||
+    typeof token !== "string" ||
+    token.length > 128
+  ) {
+    throw new AccessSubmissionError(
+      "Enter the request ID and claim token from your saved receipt.",
+    );
+  }
+  return savedClaim(requestId, token);
+}
+
 export function parseRequestStatus(
   value: unknown,
   requestId: string,

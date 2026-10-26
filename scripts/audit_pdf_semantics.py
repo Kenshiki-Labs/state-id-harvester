@@ -21,14 +21,57 @@ from state_id_harvester.semantic_review import (
     validate_review,
 )
 
+MAX_SIDECAR_BYTES = 64 * 1024 * 1024
 
-def json_file(path: Path, value: object) -> None:
-    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n")
+
+def json_file(root: Path, name: str, value: object) -> None:
+    root = managed_path(root)
+    target = contained_path(root, name)
+    target.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n")
+
+
+def read_json_file(path: Path) -> object:
+    path = managed_path(path)
+    with path.open("rb") as stream:
+        data = stream.read(MAX_SIDECAR_BYTES + 1)
+    if len(data) > MAX_SIDECAR_BYTES:
+        raise ValueError("Private audit JSON sidecar exceeds 64 MiB budget")
+    return json.loads(data)
+
+
+def check_output_inputs(destination: Path, inputs: list[Path | None]) -> None:
+    destination = managed_path(destination)
+    for path in inputs:
+        if path is not None and managed_path(path).is_relative_to(destination):
+            raise ValueError("Audit inputs must remain outside the output directory")
+
+
+def read_json_object(path: Path) -> dict:
+    value = read_json_file(path)
+    if not isinstance(value, dict):
+        raise ValueError("Audit metadata sidecar must be a JSON object")
+    return value
+
+
+def load_ocr(path: Path | None, numbers: list[int]) -> dict[int, list[TextBlock]]:
+    records = read_json_file(path) if path else []
+    if not isinstance(records, list):
+        raise ValueError("Baseline text sidecar must contain text-block records")
+    return {
+        number: [
+            TextBlock.model_validate_json(json.dumps(row))
+            for row in records
+            if row["page_number"] == number and row["method"] == "local_ocr"
+        ]
+        for number in numbers
+    }
 
 
 def export_inspection_assets(
     source: Path, destination: Path, pages: list[PageSemantics]
 ) -> dict[str, str]:
+    source, destination = managed_path(source), managed_path(destination)
+    check_output_inputs(destination, [source])
     assets: dict[str, str] = {}
     with pymupdf.open(source) as document:
         for semantic_page in pages:
@@ -155,11 +198,15 @@ def report_html(
 
 def load_inventories(source: Path, numbers: list[int], path: Path | None, native: bool) -> list:
     if path:
-        return json.loads(path.read_text())
+        records = read_json_file(path)
+        if not isinstance(records, list):
+            raise ValueError("Native inventory sidecar must contain page records")
+        return records
     if not native:
         return []
     # The inventory module is supplied by the native-object extraction component.
     module = importlib.import_module("state_id_harvester.pdf_objects")
+    source = managed_path(source)
     with source.open("rb") as stream:
         checksum = hashlib.file_digest(stream, "sha256").hexdigest()
     with pymupdf.open(source) as document:
@@ -234,53 +281,58 @@ def main() -> None:
         help="Build native object inventory using the installed pdf_objects module",
     )
     args = parser.parse_args()
-    args.destination.mkdir(parents=True, exist_ok=True)
-    raw_blocks = json.loads(args.baseline_text.read_text()) if args.baseline_text else []
-    ocr = {
-        number: [
-            TextBlock.model_validate_json(json.dumps(row))
-            for row in raw_blocks
-            if row["page_number"] == number and row["method"] == "local_ocr"
-        ]
-        for number in args.pages
-    }
-    inventories = load_inventories(
-        args.source, args.pages, args.native_inventory, args.native_objects
+    destination = managed_path(args.destination)
+    source = managed_path(args.source)
+    check_output_inputs(
+        destination,
+        [
+            source,
+            args.baseline_text,
+            args.baseline_summary,
+            args.review,
+            args.expectations,
+            args.native_inventory,
+        ],
     )
+    destination.mkdir(parents=True, exist_ok=True)
+    ocr = load_ocr(args.baseline_text, args.pages)
+    inventories = load_inventories(source, args.pages, args.native_inventory, args.native_objects)
     pages = analyze_document(
-        args.source, args.pages, ocr, {record["page_number"]: record for record in inventories}
+        source, args.pages, ocr, {record["page_number"]: record for record in inventories}
     )
     baseline = (
-        json.loads(args.baseline_summary.read_text())
-        if args.baseline_summary
-        else {"provided": False}
+        read_json_object(args.baseline_summary) if args.baseline_summary else {"provided": False}
     )
-    assets = export_inspection_assets(args.source, args.destination, pages)
+    assets = export_inspection_assets(source, destination, pages)
     json_file(
-        contained_path(args.destination, "after.json"),
+        destination,
+        "after.json",
         [page.model_dump(mode="json") for page in pages],
     )
-    json_file(contained_path(args.destination, "audit-counts.json"), audit_counts(pages))
+    json_file(destination, "audit-counts.json", audit_counts(pages))
     json_file(
-        contained_path(args.destination, "review-requests.json"),
+        destination,
+        "review-requests.json",
         [review_request(page).model_dump(mode="json") for page in pages],
     )
     claims = []
     if args.review:
-        proposal = SemanticReviewProposal.model_validate_json(args.review.read_text())
+        proposal = SemanticReviewProposal.model_validate(read_json_file(args.review))
         page = next(page for page in pages if page.page_number == proposal.page_number)
         claims = validate_review(page, proposal)
         json_file(
-            contained_path(args.destination, "grounded-review.json"),
+            destination,
+            "grounded-review.json",
             [claim.model_dump(mode="json") for claim in claims],
         )
-    contained_path(args.destination, "index.html").write_text(
+    contained_path(destination, "index.html").write_text(
         report_html(pages, assets, baseline, claims)
     )
     if args.expectations:
         json_file(
-            contained_path(args.destination, "benchmark-results.json"),
-            evaluate_expectations(pages, json.loads(args.expectations.read_text())),
+            destination,
+            "benchmark-results.json",
+            evaluate_expectations(pages, read_json_object(args.expectations)),
         )
     print(json.dumps(audit_counts(pages), sort_keys=True))
 

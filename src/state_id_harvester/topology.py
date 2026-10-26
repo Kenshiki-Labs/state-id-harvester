@@ -119,7 +119,7 @@ def overlaps_existing(corners: FloatArray, accepted: list[FloatArray]) -> bool:
 
 def detect(
     page: Any,
-    blocks: list[TextBlock],
+    _blocks: list[TextBlock],
     page_number: int,
     *,
     inventory: PageObjectInventory | None = None,
@@ -130,6 +130,8 @@ def detect(
 
     Native text is kept as source context and overlapping components. It is not
     silently interpreted as a field zone or flattened into the underlying image.
+    The legacy positional text-block argument remains intentionally unused;
+    source text now comes from the native inventory rather than OCR field zones.
     """
     inventory = inventory or inventory_page(
         page,
