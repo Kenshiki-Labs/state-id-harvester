@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "NM",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:15:28.695503+00:00",
+  "scope": "Bounded manual state research; useful finds and gaps, no completeness requirement.",
+  "source_publications": [
+    {
+      "file": "mvd-license-hub.html",
+      "source_url": "https://www.mvd.newmexico.gov/nm-drivers-licenses-ids/drivers-license/",
+      "final_url": "https://www.mvd.newmexico.gov/nm-drivers-licenses-ids/drivers-license/",
+      "sha256": "143d41c498f052b189526566bb15e9f50bbe95c5018fb602d84e5166286c2fb1",
+      "bytes": 439782,
+      "mime_type": "text/html; charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:13:53.837195+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dps-2023-instructor-training.pdf",
+      "source_url": "https://www.dps.nm.gov/wp-content/uploads/2023/11/Instructor-online-Training-November-2023.pdf",
+      "final_url": "https://www.dps.nm.gov/wp-content/uploads/2023/11/Instructor-online-Training-November-2023.pdf",
+      "sha256": "2b8cee306f4be68408935b9f6435886ce281222e0fb0665b7ad093ee748488eb",
+      "bytes": 31371621,
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:14:09.448280+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "rld-alcohol-hub.html",
+      "source_url": "https://www.rld.nm.gov/abc/",
+      "final_url": "https://www.rld.nm.gov/abc/",
+      "sha256": "f7cf30de04ec012883cf560b617383f8c399e1148e3a15a0e765161435af9c74",
+      "bytes": 248252,
+      "mime_type": "text/html; charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:14:09.914579+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "mvd-realid-hub.html",
+      "source_url": "https://realid.mvd.newmexico.gov/",
+      "final_url": "https://realid.mvd.newmexico.gov/",
+      "sha256": "d787aca59947a897e6e53d96f6c86af47907621551d10d07a1fcc270249d45c4",
+      "bytes": 101691,
+      "mime_type": "text/html",
+      "retrieved_at": "2026-10-26T20:14:44.507250+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "mvd-realid-adult-front.jpg",
+      "source_url": "https://realid.mvd.newmexico.gov/dist/images/compliant-fully.jpg",
+      "final_url": "https://realid.mvd.newmexico.gov/dist/images/compliant-fully.jpg",
+      "sha256": "62cfd82b6546fb1e1428ccc4db2541501d5929d9eab581cf4f8ec66474e154ae",
+      "bytes": 819135,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:15:01.632659+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "mvd-standard-adult-front.jpg",
+      "source_url": "https://realid.mvd.newmexico.gov/dist/images/NM_Adult_StandardDL_front.jpg",
+      "final_url": "https://realid.mvd.newmexico.gov/dist/images/NM_Adult_StandardDL_front.jpg",
+      "sha256": "aa4d957675a51bf8f14aa1a4143823cdc414c68a5c7121b95c659dd58887b95a",
+      "bytes": 823460,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:15:03.460743+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "dps-2023-instructor-training-xref878.png",
+      "source_file": "dps-2023-instructor-training.pdf",
+      "source_sha256": "2b8cee306f4be68408935b9f6435886ce281222e0fb0665b7ad093ee748488eb",
+      "pdf_object_xref": 878,
+      "resource_page_number": 85,
+      "width_px": 1536,
+      "height_px": 864,
+      "sha256": "4c29b2a709bdba1642f928fc723fc317e3ec1e8ed5e62c457601ba6f5e3d066f",
+      "mask": {
+        "file": "dps-2023-instructor-training-mask877.png",
+        "pdf_object_xref": 877,
+        "sha256": "3ac0a648c0e484b99f342b2184ba414681569e59276f4bd1eb1979424dd8dfa6"
+      },
+      "preview_file": "dps-2023-instructor-training-xref878-preview.png",
+      "reference_kind": "excluded_context_resource",
+      "review_note": "Flag, background or logo; not a credential reference."
+    },
+    {
+      "file": "dps-2023-instructor-training-xref562.jpeg",
+      "source_file": "dps-2023-instructor-training.pdf",
+      "source_sha256": "2b8cee306f4be68408935b9f6435886ce281222e0fb0665b7ad093ee748488eb",
+      "pdf_object_xref": 562,
+      "resource_page_number": 85,
+      "width_px": 1536,
+      "height_px": 864,
+      "sha256": "ea765d16767fd6497f359d3eac68c13ad0e199f62ecebfff2422bfa3fcebd844",
+      "mask": {
+        "file": "dps-2023-instructor-training-mask561.png",
+        "pdf_object_xref": 561,
+        "sha256": "84edd25c32f418a6d2d40db750cdf915b123c276043bc8b45995a721b8c3977f"
+      },
+      "preview_file": "dps-2023-instructor-training-xref562-preview.png",
+      "reference_kind": "excluded_context_resource",
+      "review_note": "Flag, background or logo; not a credential reference."
+    },
+    {
+      "file": "dps-2023-instructor-training-xref563.jpeg",
+      "source_file": "dps-2023-instructor-training.pdf",
+      "source_sha256": "2b8cee306f4be68408935b9f6435886ce281222e0fb0665b7ad093ee748488eb",
+      "pdf_object_xref": 563,
+      "resource_page_number": 85,
+      "width_px": 1011,
+      "height_px": 637,
+      "sha256": "0dad31f39c5d0b0de8db3c8959d01c8e3bc31c285a889c01efdc658f9a092659",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "NativeREALIDadultDLfront with2016exampleissuedate anddifferentheader/starposition; referencevariant, notverifiedissuancecohort."
+    },
+    {
+      "file": "dps-2023-instructor-training-xref564.jpeg",
+      "source_file": "dps-2023-instructor-training.pdf",
+      "source_sha256": "2b8cee306f4be68408935b9f6435886ce281222e0fb0665b7ad093ee748488eb",
+      "pdf_object_xref": 564,
+      "resource_page_number": 85,
+      "width_px": 1011,
+      "height_px": 638,
+      "sha256": "8b85689524e9f5f9e210caeadfbac56ea44c9464154096dedfee1b9509392687"
+    },
+    {
+      "file": "dps-2023-instructor-training-xref881.png",
+      "source_file": "dps-2023-instructor-training.pdf",
+      "source_sha256": "2b8cee306f4be68408935b9f6435886ce281222e0fb0665b7ad093ee748488eb",
+      "pdf_object_xref": 881,
+      "resource_page_number": 85,
+      "width_px": 657,
+      "height_px": 654,
+      "sha256": "051edb8d887a101fd5cd172a1c72ba0d2f24c166ebc823521a0393a75ff0ee2c",
+      "mask": {
+        "file": "dps-2023-instructor-training-mask880.png",
+        "pdf_object_xref": 880,
+        "sha256": "7061c1e45e5a84ef8d7710b002c9d9ed567cced55a85b80c0835b1d3cc53e9e6"
+      },
+      "preview_file": "dps-2023-instructor-training-xref881-preview.png",
+      "reference_kind": "excluded_context_resource",
+      "review_note": "Flag, background or logo; not a credential reference."
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "unm-2016-realid-guide.pdf",
+      "source_url": "https://geo.unm.edu/all_handouts/drivers_license.pdf",
+      "status": "failed",
+      "error": "Client error '404 Not Found' for url 'https://geo.unm.edu/all_handouts/drivers_license.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+    }
+  ],
+  "remaining_gaps": [
+    "Cleanbacks/minor/ID/CDL/permit/interim credentialexamples missing.",
+    "UNMhistoricalREALIDguide indexedbutlive404.",
+    "Nativeflag/background/logo resources excluded; duplicate lowerresolutionstandardfront notseparatelypublished.",
+    "UV/opticalimages, exactissuancecohorts andphysicalgeometry unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "accepted_cohorts": 0,
+  "catalog_integrated": true,
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "NM",
+    "verified_at": "2026-10-26T20:15:55.187733+00:00",
+    "local_directory": "output/research/NM",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/NM/6b49f2b3bbd536418b175cb36a9ee33185bb63957f048145713273eb0794e9a4/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/NM.json",
+    "archive_sha256": "6b49f2b3bbd536418b175cb36a9ee33185bb63957f048145713273eb0794e9a4",
+    "archive_size_bytes": 29001214,
+    "transport_chunks": 1,
+    "verified_restored_files": 23,
+    "verification": "Downloaded archive restored with existing helpers and every file compared byte-for-byte.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/NM"
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 4,
+    "review_status": "reference_only"
+  }
+}

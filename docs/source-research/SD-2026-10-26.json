@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "SD",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:21:00.603849+00:00",
+  "scope": "Bounded manual state source research. Useful finds retained, remaining gaps recorded; no completeness or runtime acceptance claim.",
+  "source_publications": [
+    {
+      "file": "dps-id-cards.html",
+      "source_url": "https://dps.sd.gov/driver-licensing/id-cards",
+      "final_url": "https://www.sd.gov/dps",
+      "mime_type": "text/html;charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:15:08.995584+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "bf92f31b0c75f0b6cea49d8738002c4e1c3c2410058778124e5d71255b4c2634",
+      "bytes": 965670,
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "state-security-features.pdf",
+      "source_url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378",
+      "final_url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378",
+      "mime_type": "application/pdf;charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:15:11.599377+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+      "bytes": 743062,
+      "coverage": [
+        "2009 adult/minor DL/ID/permit/CDL fronts, common back, annotated guide"
+      ]
+    },
+    {
+      "file": "state-2009-brochure.pdf",
+      "source_url": "https://www.sd.gov/sys_attachment.do?sys_id=b74d4dcd47902a50854b61d2e16d4346",
+      "final_url": "https://www.sd.gov/sys_attachment.do?sys_id=b74d4dcd47902a50854b61d2e16d4346",
+      "mime_type": "application/pdf;charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:15:13.686324+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+      "bytes": 743062,
+      "coverage": [
+        "Byte-identical alias of2009 guide; not a second design"
+      ]
+    },
+    {
+      "file": "dnn-2026-redesign.html",
+      "source_url": "https://www.dakotanewsnow.com/2026/09/03/south-dakota-launches-new-drivers-license-design/",
+      "final_url": "https://www.dakotanewsnow.com/2026/09/03/south-dakota-launches-new-drivers-license-design/",
+      "mime_type": "text/html; charset=utf-8",
+      "retrieved_at": "2026-10-26T20:15:14.937824+00:00",
+      "source_class": "press",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "880de8f55e9c44e7fa264d95f45c986ace435742e0d9e421d4a836613c670195",
+      "bytes": 178356,
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "dnn-2026-redesign-dps-image.jpg",
+      "source_url": "https://gray-ksfy-prod.gtv-cdn.com/resizer/v2/3YHU25PY45C2TFXCUQBAVWCB7E.png?auth=106d30ae1398121ed48e6d01aca715e8cef74b655e15067e5dfd49da6b61e473&width=980&height=551&smart=true",
+      "final_url": "https://gray-ksfy-prod.gtv-cdn.com/resizer/v2/3YHU25PY45C2TFXCUQBAVWCB7E.png?auth=106d30ae1398121ed48e6d01aca715e8cef74b655e15067e5dfd49da6b61e473&width=980&height=551&smart=true",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:16:55.098871+00:00",
+      "source_class": "press_dps_credited",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "b1de8463d18ae9fa92cd7ede233393dc4991e2dc8dcb9891c24390ad9cecf983",
+      "bytes": 97360,
+      "discovery_file": "dnn-2026-redesign.html",
+      "coverage": [
+        "Independent press reproduction credited toDPS, retained but primary image preferred for delivery"
+      ]
+    },
+    {
+      "file": "state-2026-press-release.html",
+      "source_url": "https://news.sd.gov/news?id=news_kb_article_view&sys_id=d456c52247474350fc1303dc426d4352",
+      "final_url": "https://news.sd.gov/news?id=news_kb_article_view&sys_id=d456c52247474350fc1303dc426d4352",
+      "mime_type": "text/html;charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:17:20.200435+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "cca50201a982f933d23e06479b4d9574bc81e19ca6ec7a10f8b5b1a4b47eb385",
+      "bytes": 974648,
+      "coverage": [
+        "Primary September2026 redesign announcement and image link"
+      ]
+    },
+    {
+      "file": "state-2026-dl-specimen.jpg",
+      "source_url": "https://news.sd.gov/sys_attachment.do?sys_id=2596c52247474350fc1303dc426d439f",
+      "final_url": "https://news.sd.gov/sys_attachment.do?sys_id=2596c52247474350fc1303dc426d439f",
+      "mime_type": "image/jpeg;charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:19:55.749342+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "e2220fe60bb783b29bdac80bab8299424e3a3b98a84c76679943dbd7f3f8baec",
+      "bytes": 81590,
+      "discovery_file": "state-2026-press-release.html",
+      "coverage": [
+        "Primary2026 adult DL front specimen"
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "state-security-features-xref-104.jpeg",
+      "source_file": "state-security-features.pdf",
+      "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+      "pdf_object_xref": 104,
+      "resource_page_number": 1,
+      "width_px": 258,
+      "height_px": 407,
+      "sha256": "57d2da93bfbfd055f2625418ab7292e43f320aeb81cd1df6ff60eb58f1321530",
+      "reference_kind": "historical_sample_front_or_back",
+      "visual_review": "native_resources_visually_inspected"
+    },
+    {
+      "file": "state-security-features-xref-105.jpeg",
+      "source_file": "state-security-features.pdf",
+      "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+      "pdf_object_xref": 105,
+      "resource_page_number": 1,
+      "width_px": 258,
+      "height_px": 407,
+      "sha256": "64bf4061b91349bfa67cfb330b5a61328dc72fa2a6607fa0172ec7b664332ac9",
+      "reference_kind": "historical_sample_front_or_back",
+      "visual_review": "native_resources_visually_inspected"
+    },
+    {
+      "file": "state-security-features-xref-106.jpeg",
+      "source_file": "state-security-features.pdf",
+      "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+      "pdf_object_xref": 106,
+      "resource_page_number": 1,
+      "width_px": 258,
+      "height_px": 407,
+      "sha256": "ea822fb58012def3f3b188a8f6fc07d635d582a84b405017ff476a5f76cf283b",
+      "reference_kind": "historical_sample_front_or_back",
+      "visual_review": "native_resources_visually_inspected"
+    },
+    {
+      "file": "state-security-features-xref-107.jpeg",
+      "source_file": "state-security-features.pdf",
+      "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+      "pdf_object_xref": 107,
+      "resource_page_number": 1,
+      "width_px": 409,
+      "height_px": 259,
+      "sha256": "30d99a0cf9efac69490ace0e8ba3e81acbf7f9a2840edf0873971735901eccdc",
+      "reference_kind": "historical_sample_front_or_back",
+      "visual_review": "native_resources_visually_inspected"
+    },
+    {
+      "file": "state-security-features-xref-108.jpeg",
+      "source_file": "state-security-features.pdf",
+      "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+      "pdf_object_xref": 108,
+      "resource_page_number": 1,
+      "width_px": 409,
+      "height_px": 259,
+      "sha256": "492ae6f84ff3c4530667fc91990c60cd53fafe1a3323ecaee5d939396b4a11e8",
+      "reference_kind": "historical_sample_front_or_back",
+      "visual_review": "native_resources_visually_inspected"
+    },
+    {
+      "file": "state-security-features-xref-109.jpeg",
+      "source_file": "state-security-features.pdf",
+      "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+      "pdf_object_xref": 109,
+      "resource_page_number": 1,
+      "width_px": 409,
+      "height_px": 259,
+      "sha256": "4720f824bf04bd0e5dbd28fe36c5fd09d2ef92c2ebc1460272b574f42901f01e",
+      "reference_kind": "historical_sample_front_or_back",
+      "visual_review": "native_resources_visually_inspected"
+    },
+    {
+      "file": "state-security-features-xref-110.jpeg",
+      "source_file": "state-security-features.pdf",
+      "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+      "pdf_object_xref": 110,
+      "resource_page_number": 1,
+      "width_px": 409,
+      "height_px": 259,
+      "sha256": "c8b589398db178f667ae21db90cd32ec6610ffe6db0432d2df4bf6e726ee6292",
+      "reference_kind": "historical_sample_front_or_back",
+      "visual_review": "native_resources_visually_inspected"
+    },
+    {
+      "file": "state-security-features-xref-115.png",
+      "source_file": "state-security-features.pdf",
+      "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+      "pdf_object_xref": 115,
+      "resource_page_number": 1,
+      "width_px": 409,
+      "height_px": 259,
+      "sha256": "068d5d7b9af490572cff602c903e3e6fb3e0ddb759f2a4b1fca0fed2c6aed9f8",
+      "reference_kind": "historical_sample_front_or_back",
+      "visual_review": "native_resources_visually_inspected"
+    }
+  ],
+  "unresolved_downloads": [],
+  "remaining_gaps": [
+    "No 2026 backs or current minor/ID/CDL/permit variants acquired.",
+    "Two state attachment URLs return identical2009 brochure bytes, not independent design publications.",
+    "Issuance intervals, calibrated geometry and optical behavior remain unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": true,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "SD",
+    "verified_at": "2026-10-26T20:21:11.918079+00:00",
+    "local_directory": "output/research/SD",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/SD/14903e9a3cc8ee86523ad4d94fb8b5e421d2f77baa7bd8be5d98f375fbb3d1c8/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/SD.json",
+    "archive_sha256": "14903e9a3cc8ee86523ad4d94fb8b5e421d2f77baa7bd8be5d98f375fbb3d1c8",
+    "archive_size_bytes": 6651519,
+    "transport_chunks": 1,
+    "verified_restored_files": 21,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/SD",
+    "verification": "Downloaded archive, safe restored and compared EVERY retained file byte-for-byte.",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 11,
+    "review_status": "reference_only"
+  }
+}

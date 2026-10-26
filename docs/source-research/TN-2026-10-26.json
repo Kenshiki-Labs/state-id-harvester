@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "TN",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:29:43.982039+00:00",
+  "scope": "Bounded manual state source research. Useful finds retained, remaining gaps recorded; no completeness or runtime acceptance claim.",
+  "source_publications": [
+    {
+      "file": "vanderbilt-driver-manual.pdf",
+      "source_url": "https://www.vanderbilt.edu/isss/wp-content/uploads/sites/134/2026/03/DL_Manual.pdf",
+      "final_url": "https://www.vanderbilt.edu/isss/wp-content/uploads/sites/134/2026/03/DL_Manual.pdf",
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:25:19.513381+00:00",
+      "source_class": "university_preserved_issuer_manual",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+      "bytes": 12033432,
+      "coverage": [
+        "University-preserved issuer manual; older adultREALID/nonfederal, under21 DL/ID, learner and intermediate restricted/unrestricted fronts"
+      ]
+    },
+    {
+      "file": "ut-mtas-2025-realid.pdf",
+      "source_url": "https://www.mtas.tennessee.edu/system/files/mrln/mknowledge/main/MTAS%20Tennessee%20REAL%20ID%202025.pdf",
+      "final_url": "https://www.mtas.tennessee.edu/system/files/mrln/mknowledge/main/MTAS%20Tennessee%20REAL%20ID%202025.pdf",
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:25:21.357130+00:00",
+      "source_class": "public_university_guide",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+      "bytes": 731421,
+      "coverage": [
+        "Public university municipal advisory;2024 and pre2024REALID adultfronts/comparisons"
+      ]
+    },
+    {
+      "file": "safety-realid.html",
+      "source_url": "https://www.tn.gov/safety/driver-services/helpful-information/real-id.html",
+      "final_url": "https://www.tn.gov/safety/driver-services/helpful-information/real-id.html",
+      "mime_type": "text/html;charset=utf-8",
+      "retrieved_at": "2026-10-26T20:27:31.177400+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "bytes": 103311,
+      "sha256": "b03c9789ae1f04ce98831ac6fb40bd68865a476797fa8aad0e5a7089f521fe33",
+      "acquisition_method": "normal_browser_same_origin_fetch",
+      "coverage": [
+        "Primary issuer gallery provenance for bothcurrentfronts"
+      ]
+    },
+    {
+      "file": "safety-current-1.png",
+      "source_url": "https://www.tn.gov/safety/driver-services/helpful-information/real-id/_jcr_content/content/tn_accordion_copy_co/parsys_what_does_a_realidcompliantdriverlicenseoridcredentiallooklike/tn_columnctrl/column_parsys0/tn_textandimage_copy/image.img.png/1724708434491.png",
+      "final_url": "https://www.tn.gov/safety/driver-services/helpful-information/real-id/_jcr_content/content/tn_accordion_copy_co/parsys_what_does_a_realidcompliantdriverlicenseoridcredentiallooklike/tn_columnctrl/column_parsys0/tn_textandimage_copy/image.img.png/1724708434491.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:27:31.182321+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "bytes": 1776795,
+      "sha256": "8b56f55d62b235cfb80d48f5b142b8e2bb3cec9cf7735ec8cacde43394b0c6ca",
+      "acquisition_method": "normal_browser_same_origin_fetch",
+      "coverage": [
+        "Primary current REALID adultDL front"
+      ]
+    },
+    {
+      "file": "safety-current-2.png",
+      "source_url": "https://www.tn.gov/safety/driver-services/helpful-information/real-id/_jcr_content/content/tn_accordion_copy_co/parsys_what_does_a_realidcompliantdriverlicenseoridcredentiallooklike/tn_columnctrl/column_parsys1/tn_textandimage_copy/image.img.png/1732294432238.png",
+      "final_url": "https://www.tn.gov/safety/driver-services/helpful-information/real-id/_jcr_content/content/tn_accordion_copy_co/parsys_what_does_a_realidcompliantdriverlicenseoridcredentiallooklike/tn_columnctrl/column_parsys1/tn_textandimage_copy/image.img.png/1732294432238.png",
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:27:31.187386+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "bytes": 1687039,
+      "sha256": "918aeef0b3658adfbc868746a3d073cc444281fe1b16a6245a4474b1f3e51111",
+      "acquisition_method": "normal_browser_same_origin_fetch",
+      "coverage": [
+        "Primary current nonfederal adultDL front"
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "vanderbilt-driver-manual-xref-947.jpeg",
+      "source_file": "vanderbilt-driver-manual.pdf",
+      "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+      "pdf_object_xref": 947,
+      "resource_page_number": 3,
+      "width_px": 506,
+      "height_px": 319,
+      "sha256": "57d16280996898d7ed12f4d56ceadd3bab17599898bb0ce4a6d74f3e94664c6c",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    },
+    {
+      "file": "vanderbilt-driver-manual-xref-948.jpeg",
+      "source_file": "vanderbilt-driver-manual.pdf",
+      "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+      "pdf_object_xref": 948,
+      "resource_page_number": 3,
+      "width_px": 318,
+      "height_px": 505,
+      "sha256": "6b7279c6322bfe44fc847b4b029e2a80732b9b7affa3be7f60656dd3152954d6",
+      "mask": {
+        "file": "vanderbilt-driver-manual-mask-959.png",
+        "pdf_object_xref": 959,
+        "sha256": "034c1af5f3b84b4b92c5b1bcd48f06f7198be88d9137198d42fc1f1e6ca5d631"
+      },
+      "mask_composition_note": "ValueError",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    },
+    {
+      "file": "vanderbilt-driver-manual-xref-18.jpeg",
+      "source_file": "vanderbilt-driver-manual.pdf",
+      "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+      "pdf_object_xref": 18,
+      "resource_page_number": 4,
+      "width_px": 318,
+      "height_px": 505,
+      "sha256": "b9feabb89d86c6a96511676f6a99c7331668a8b7b03dcc19694a2b1b3ef9b446",
+      "mask": {
+        "file": "vanderbilt-driver-manual-mask-17.png",
+        "pdf_object_xref": 17,
+        "sha256": "034c1af5f3b84b4b92c5b1bcd48f06f7198be88d9137198d42fc1f1e6ca5d631"
+      },
+      "mask_composition_note": "ValueError",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    },
+    {
+      "file": "vanderbilt-driver-manual-xref-69.jpeg",
+      "source_file": "vanderbilt-driver-manual.pdf",
+      "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+      "pdf_object_xref": 69,
+      "resource_page_number": 16,
+      "width_px": 1013,
+      "height_px": 638,
+      "sha256": "e2ee17f5d104ea88ae84d28fcdfc4b094d886596f4aa03f5f214edc0b25f4cd5",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    },
+    {
+      "file": "ut-mtas-2025-realid-xref-9.jpeg",
+      "source_file": "ut-mtas-2025-realid.pdf",
+      "source_sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+      "pdf_object_xref": 9,
+      "resource_page_number": 3,
+      "width_px": 562,
+      "height_px": 354,
+      "sha256": "d569b1c13cefd31f195e1e1c877541c41b01f59bc61ab6ceea47e4dd0fcd3971",
+      "mask": {
+        "file": "ut-mtas-2025-realid-mask-8.png",
+        "pdf_object_xref": 8,
+        "sha256": "a9d0171b214c1f0ae7705cd7545be5af189e3ef78c6467ad41688ae46044d1af"
+      },
+      "composed_preview": {
+        "file": "ut-mtas-2025-realid-xref-9-alpha.png",
+        "sha256": "4267139a45c86f620bda06dad3f6f5c4dfc8e5d2a20cd3c61e6b0fe4ca8dd5b0"
+      },
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    },
+    {
+      "file": "ut-mtas-2025-realid-xref-11.jpeg",
+      "source_file": "ut-mtas-2025-realid.pdf",
+      "source_sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+      "pdf_object_xref": 11,
+      "resource_page_number": 3,
+      "width_px": 422,
+      "height_px": 266,
+      "sha256": "b3d561e5e3cbe6c156bbcd2e3c4fbffa916760c3727d969a2f4a0c97e1798963",
+      "mask": {
+        "file": "ut-mtas-2025-realid-mask-10.png",
+        "pdf_object_xref": 10,
+        "sha256": "43ffa85c825c677d5675abdffc89a18cf544522acc71b91c3645651b26749cc6"
+      },
+      "composed_preview": {
+        "file": "ut-mtas-2025-realid-xref-11-alpha.png",
+        "sha256": "a52bc36998aa1c1a05f9615b153d4cdc7bf461e345eaa9bedf10ebff33e8530f"
+      },
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    },
+    {
+      "file": "ut-mtas-2025-realid-xref-43.jpeg",
+      "source_file": "ut-mtas-2025-realid.pdf",
+      "source_sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+      "pdf_object_xref": 43,
+      "resource_page_number": 13,
+      "width_px": 349,
+      "height_px": 220,
+      "sha256": "2c59f8b85a2a15b03751b5780a0801f162cf6a5ece810646c1b43e1885e1da78",
+      "mask": {
+        "file": "ut-mtas-2025-realid-mask-42.png",
+        "pdf_object_xref": 42,
+        "sha256": "8f2b01845a453e59a5852aece0b474b4b9c5a8e491b36d5ea285b7e4e9a7c179"
+      },
+      "composed_preview": {
+        "file": "ut-mtas-2025-realid-xref-43-alpha.png",
+        "sha256": "f1d552ae0a4a970041408c876c2e321f71e38be09856242b07f85208a21a5a42"
+      },
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    },
+    {
+      "file": "ut-mtas-2025-realid-xref-45.jpeg",
+      "source_file": "ut-mtas-2025-realid.pdf",
+      "source_sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+      "pdf_object_xref": 45,
+      "resource_page_number": 13,
+      "width_px": 344,
+      "height_px": 217,
+      "sha256": "6ad8dee5e3fe44188c83537234ee14b72177b5c8aa6c2a2d18ee5b6ccdc67ba7",
+      "mask": {
+        "file": "ut-mtas-2025-realid-mask-44.png",
+        "pdf_object_xref": 44,
+        "sha256": "9f2a5474f195021fb9b811e1d2c7ad725bb4cc630b94ad3d42091a23da4a18ea"
+      },
+      "composed_preview": {
+        "file": "ut-mtas-2025-realid-xref-45-alpha.png",
+        "sha256": "5c8302d465fa2f29d0d9555b0f52a97d413579d0150b79f4216b87f01478002b"
+      },
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    },
+    {
+      "file": "vanderbilt-driver-manual-xref-157.jpeg",
+      "source_file": "vanderbilt-driver-manual.pdf",
+      "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+      "pdf_object_xref": 157,
+      "resource_page_number": 29,
+      "width_px": 318,
+      "height_px": 505,
+      "sha256": "ed1e6272c44c61eff4c375715ff7fd8d85c8529d08ed95861bf1235a8b8a1785",
+      "mask": {
+        "file": "vanderbilt-driver-manual-mask-156.png",
+        "pdf_object_xref": 156,
+        "sha256": "034c1af5f3b84b4b92c5b1bcd48f06f7198be88d9137198d42fc1f1e6ca5d631"
+      },
+      "mask_composition_note": "ValueError",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    },
+    {
+      "file": "vanderbilt-driver-manual-xref-159.jpeg",
+      "source_file": "vanderbilt-driver-manual.pdf",
+      "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+      "pdf_object_xref": 159,
+      "resource_page_number": 29,
+      "width_px": 318,
+      "height_px": 505,
+      "sha256": "3a6dfb40550aa3c5641bd255ad339487f8e2a965d4f3ee4e70594aad8d6a929b",
+      "mask": {
+        "file": "vanderbilt-driver-manual-mask-158.png",
+        "pdf_object_xref": 158,
+        "sha256": "034c1af5f3b84b4b92c5b1bcd48f06f7198be88d9137198d42fc1f1e6ca5d631"
+      },
+      "mask_composition_note": "ValueError",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    },
+    {
+      "file": "vanderbilt-driver-manual-xref-161.jpeg",
+      "source_file": "vanderbilt-driver-manual.pdf",
+      "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+      "pdf_object_xref": 161,
+      "resource_page_number": 29,
+      "width_px": 318,
+      "height_px": 505,
+      "sha256": "2a231d4d465aaa9c8557e9fe18fafbdf9499b065989187fcb20e3eaa8449c831",
+      "mask": {
+        "file": "vanderbilt-driver-manual-mask-160.png",
+        "pdf_object_xref": 160,
+        "sha256": "034c1af5f3b84b4b92c5b1bcd48f06f7198be88d9137198d42fc1f1e6ca5d631"
+      },
+      "mask_composition_note": "ValueError",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    },
+    {
+      "file": "vanderbilt-driver-manual-xref-193.jpeg",
+      "source_file": "vanderbilt-driver-manual.pdf",
+      "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+      "pdf_object_xref": 193,
+      "resource_page_number": 34,
+      "width_px": 318,
+      "height_px": 505,
+      "sha256": "39bb3ff65a4094583d80b4ae52b04c157870e418eeebd6dfbe574aee4f6b53af",
+      "mask": {
+        "file": "vanderbilt-driver-manual-mask-192.png",
+        "pdf_object_xref": 192,
+        "sha256": "034c1af5f3b84b4b92c5b1bcd48f06f7198be88d9137198d42fc1f1e6ca5d631"
+      },
+      "mask_composition_note": "ValueError",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "native_resource_and_source_page_visually_inspected"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "safety-driver-manual.pdf",
+      "source_url": "https://www.tn.gov/content/dam/tn/safety/documents/DL_Manual.pdf",
+      "status": "failed",
+      "error": "ConnectTimeout",
+      "retrieved_at": "2026-10-26T20:23:02.227855+00:00"
+    },
+    {
+      "file": "safety-2011-announcement.html",
+      "source_url": "https://www.tn.gov/news/2011/3/15/department-of-safety-and-homeland-security-to-issue-new-driver-licenses-id-.html",
+      "status": "failed",
+      "error": "ConnectTimeout",
+      "retrieved_at": "2026-10-26T20:23:57.396423+00:00"
+    }
+  ],
+  "remaining_gaps": [
+    "No actual credential backs acquired; manual GDL restriction cards are information handouts, not license backs.",
+    "2024-generation minor, CDL and separate non-driverID fronts not acquired.",
+    "Direct HTTP clients timed out on four tn.gov URLs; normal browser recovered current primary gallery images and parentHTML, university mirrors preserve other publications.",
+    "UV/optical photographs, issuance intervals and calibratedgeometry unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": true,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "TN",
+    "verified_at": "2026-10-26T20:30:07.616599+00:00",
+    "local_directory": "output/research/TN",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/TN/a7bf7e47327b8b9cad375f6ffe56aa1bd22eb7107a9687bd9936d9ca5afcf569/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/TN.json",
+    "archive_sha256": "a7bf7e47327b8b9cad375f6ffe56aa1bd22eb7107a9687bd9936d9ca5afcf569",
+    "archive_size_bytes": 23094946,
+    "transport_chunks": 1,
+    "verified_restored_files": 42,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/TN",
+    "verification": "Downloaded archive, safe restored and compared EVERY retained file byte-for-byte.",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 20,
+    "review_status": "reference_only"
+  }
+}

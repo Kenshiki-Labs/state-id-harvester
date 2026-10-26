@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "WI",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:17:11.804355+00:00",
+  "source_publications": [
+    {
+      "file": "dmv-id-card.html",
+      "source_url": "https://wisconsindot.gov/Pages/dmv/license-drvs/how-to-apply/id-card.aspx",
+      "final_url": "https://wisconsindot.gov/Pages/dmv/license-drvs/how-to-apply/id-card.aspx",
+      "retrieved_at": "2026-10-26T20:15:41.289997+00:00",
+      "bytes": 160253,
+      "sha256": "f90972526ebcca9f843390369a9d005cc4be9cb3c77753b833466a4e2a66a151",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "doj-2023-bulletin.html",
+      "source_url": "https://content.govdelivery.com/accounts/WIDOJ/bulletins/35e65b3",
+      "final_url": "https://content.govdelivery.com/accounts/WIDOJ/bulletins/35e65b3",
+      "retrieved_at": "2026-10-26T20:16:07.993884+00:00",
+      "bytes": 27256,
+      "sha256": "b38d9f5bf35edfda9ea9c59b28fd84435523aa19422e7d3f0d778a4286849c94",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dmv-2024-award.html",
+      "source_url": "https://wisconsindot.gov/Pages/about-wisdot/newsroom/news-rel/053124dmvbestid.aspx",
+      "final_url": "https://wisconsindot.gov/Pages/about-wisdot/newsroom/news-rel/053124dmvbestid.aspx",
+      "retrieved_at": "2026-10-26T20:16:09.013464+00:00",
+      "bytes": 142321,
+      "sha256": "84e5733de59d0238ea20be2bcd134ae4b9c709eba351d8d73065100e826fff97",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dmv-id-nonexp.jpg",
+      "source_url": "https://wisconsindot.gov/PublishingImages/dmv/shared/O21-ID-nonexp.jpg",
+      "final_url": "https://wisconsindot.gov/PublishingImages/dmv/shared/O21-ID-nonexp.jpg",
+      "retrieved_at": "2026-10-26T20:16:09.669716+00:00",
+      "bytes": 19203,
+      "sha256": "db3224efcc423559ca7e8240e596efad08818b6d1baa5ce228c608f18db4a5ee",
+      "mime_type": "image/jpeg",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dmv-2023-award-front.jpg",
+      "source_url": "https://wisconsindot.gov/PublishingImages/about-wisdot/newsroom/photo-gal/dmv/widl2023.jpg",
+      "final_url": "https://wisconsindot.gov/PublishingImages/about-wisdot/newsroom/photo-gal/dmv/widl2023.jpg",
+      "retrieved_at": "2026-10-26T20:16:35.473093+00:00",
+      "bytes": 51995,
+      "sha256": "8824fe4febfa7853c9caeacdb22f42b4c371752d4728889d16a1677ddd7b6a85",
+      "mime_type": "image/jpeg",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dmv-2024-award.html"
+    },
+    {
+      "file": "doj-2023-id-check-sheet.pdf",
+      "source_url": "https://content.govdelivery.com/attachments/WIDOJ/2023/06/05/file_attachments/2517504/HS138-FAB-ID-062023.pdf",
+      "final_url": "https://content.govdelivery.com/attachments/WIDOJ/2023/06/05/file_attachments/2517504/HS138-FAB-ID-062023.pdf",
+      "retrieved_at": "2026-10-26T20:16:36.753905+00:00",
+      "bytes": 540194,
+      "sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "doj-2023-bulletin.html"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "doj-2023-id-check-sheet-xref-351.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 351,
+      "page_number": 1,
+      "width_px": 361,
+      "height_px": 237,
+      "sha256": "a13c20b7e8dfd02449bd41c8f43432bfcef61dbb8932a51c64a48ef35c01d3d6"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-353.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 353,
+      "page_number": 1,
+      "width_px": 359,
+      "height_px": 236,
+      "sha256": "5d3edf9b74d832e04cce1e23c7c8c8771627e4d0c4156d62957b50220de324b2"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-355.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 355,
+      "page_number": 1,
+      "width_px": 237,
+      "height_px": 361,
+      "sha256": "c8770f1793f78091bf75db0a761bc56ca1efe7eaa2967852c7da352e1862eafc"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-357.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 357,
+      "page_number": 1,
+      "width_px": 237,
+      "height_px": 361,
+      "sha256": "ac47ee41e21d0dff897b80afdcf3752d95604d2b60db0a0e26f62e2f893f18da"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-359.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 359,
+      "page_number": 1,
+      "width_px": 258,
+      "height_px": 182,
+      "sha256": "3442969794880168c7cfdae0d64f2b9ded037b05fdc5bc547a00278d110ff05b"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-361.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 361,
+      "page_number": 1,
+      "width_px": 151,
+      "height_px": 99,
+      "sha256": "c63309ba5409ef500f904000891e80f1f754d803f8e118f2dd303eafa12bc3e2"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-363.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 363,
+      "page_number": 1,
+      "width_px": 151,
+      "height_px": 99,
+      "sha256": "4c6d9bd6baec1be3cee00289eeaab851b95b80c1797a92c09c4c313e9ff0fc73"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-8.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 8,
+      "page_number": 2,
+      "width_px": 309,
+      "height_px": 195,
+      "sha256": "72a3a00af531b40946f1d25428f166391fb3295cb231b87a8eed9f514f38b2d9",
+      "mask": {
+        "file": "doj-2023-id-check-sheet-mask-7.jpeg",
+        "pdf_object_xref": 7,
+        "sha256": "fd1f011c2c9b547b415493970c0a0867f59063d6abb6be4630ffb70f82180b38"
+      },
+      "preview_file": "doj-2023-id-check-sheet-xref-8-preview.png"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-12.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 12,
+      "page_number": 2,
+      "width_px": 300,
+      "height_px": 191,
+      "sha256": "cbc0ef6634b5227e0ce3ba40ec2b7df941e32e2dc6639ec1be36e2631e197a2b",
+      "mask": {
+        "file": "doj-2023-id-check-sheet-mask-11.jpeg",
+        "pdf_object_xref": 11,
+        "sha256": "4bee6dbaad17e8a64db43096d5ffbb25893d5e1f270ecdf97d5b09e8034dca68"
+      },
+      "preview_file": "doj-2023-id-check-sheet-xref-12-preview.png"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-16.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 16,
+      "page_number": 2,
+      "width_px": 192,
+      "height_px": 301,
+      "sha256": "b72b913292602b786f19d161eedfe87c6a643fcf1a8cc02428a3783e4bd867aa",
+      "mask": {
+        "file": "doj-2023-id-check-sheet-mask-15.jpeg",
+        "pdf_object_xref": 15,
+        "sha256": "daace3bef9896f88863519fc8f1e47bbae8f66f04596b752b62c1d89fe75e967"
+      },
+      "preview_file": "doj-2023-id-check-sheet-xref-16-preview.png"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-20.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 20,
+      "page_number": 2,
+      "width_px": 312,
+      "height_px": 194,
+      "sha256": "bead2a8fff036d10890103f4b8771d6775464ef42952b68ad5cf35e6ae90a432",
+      "mask": {
+        "file": "doj-2023-id-check-sheet-mask-19.jpeg",
+        "pdf_object_xref": 19,
+        "sha256": "c6bcc7d004f1ae2f05c8852b54a88baffa9761309c337a389ccb815f116ef23b"
+      },
+      "preview_file": "doj-2023-id-check-sheet-xref-20-preview.png"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-22.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 22,
+      "page_number": 2,
+      "width_px": 255,
+      "height_px": 162,
+      "sha256": "7d21903fb21d195325e378f1bd90f30213355bdff2222a083ccdaa6bdc03758d"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-24.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 24,
+      "page_number": 2,
+      "width_px": 255,
+      "height_px": 162,
+      "sha256": "bc54f9b5458dfe1d6cf79b003c8ca1635b9126de1ded6eb1f34ed7b048a4a90e"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-26.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 26,
+      "page_number": 2,
+      "width_px": 163,
+      "height_px": 255,
+      "sha256": "ecfa0c9df7b1af654a03d5fb7cd671e41ff8abf612619404a24fa00b06afaf4f"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-28.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 28,
+      "page_number": 2,
+      "width_px": 162,
+      "height_px": 255,
+      "sha256": "86d789d40fbcbe776155a11a078fdefc61322519e05ea0840f13808e4bf91bfb"
+    },
+    {
+      "file": "doj-2023-id-check-sheet-xref-30.jpeg",
+      "source_file": "doj-2023-id-check-sheet.pdf",
+      "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+      "pdf_object_xref": 30,
+      "page_number": 2,
+      "width_px": 254,
+      "height_px": 162,
+      "sha256": "1ee5b3cd9b097e83767777398b11e07ffd3a40d779d72ea65bdb91e763cbdeb2"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "dmv-card-design.html",
+      "source_url": "https://wisconsindot.gov/Pages/dmv/license-drvs/how-to-apply/card-design.aspx",
+      "final_url": "https://wisconsindot.gov/Pages/dmv/license-drvs/how-to-apply/card-design.aspx",
+      "retrieved_at": "2026-10-26T20:15:40.143757+00:00",
+      "bytes": 712,
+      "sha256": "8a88de47a92185959b5da3a9e4068d1bb4b08776c7642f85fdc14628e3491779",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 404
+    }
+  ],
+  "remaining_gaps": [
+    "Current minor ID, temporary paper cards and exact retirement intervals remain gaps.",
+    "Some current CDL/ID examples are small published thumbnails rather than high resolution flats."
+  ],
+  "notes": [
+    "Justice Department bulletin links original DMV FAB sheet with 2023 adult/minor fronts/backs, CDL, ID, optical demonstration and multiple historical designs. All published sample credentials, no actual-holder captures.",
+    "Official DMV 2024 award release corroborates current adult front; current ID application page supplies nonexpiring nonfederal adult ID.",
+    "Native image resources, masks and compatible alpha previews retained. Page plates preserve explanatory context. No physical calibration or accepted cohort claims."
+  ],
+  "catalog_integrated": true,
+  "review_status": "reference_research_only",
+  "preservation": {
+    "jurisdiction": "WI",
+    "verified_at": "2026-10-26T20:17:19.771508+00:00",
+    "private_snapshot_index_key": "snapshots/research/WI/b52266bdd1ddf1286495358b3bac5a0d26c36df143302fad226e7eb666687ed8/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/WI.json",
+    "archive_sha256": "b52266bdd1ddf1286495358b3bac5a0d26c36df143302fad226e7eb666687ed8",
+    "archive_size_bytes": 4829571,
+    "verified_restored_files": 36,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/WI",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 20,
+    "review_status": "reference_only"
+  }
+}

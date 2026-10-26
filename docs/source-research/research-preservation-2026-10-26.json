@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "scope": "27-state gap-filling sweep plus retained WA/NY/WV issuer galleries",
+  "verification": "Uploaded archives downloaded, safely restored, and all retained files compared byte for byte. Digests identify private original-source archives; marked reference images are publicly accessible.",
+  "collections": [
+    {
+      "collection": "AK",
+      "verified_at": "2026-10-26T20:01:47.338288+00:00",
+      "archive_sha256": "72091a9506494ab0c96e22a9f3d32f6a2572006e00d08a0e8db4bfeeba0fb169",
+      "archive_size_bytes": 15731099,
+      "verified_restored_files": 22
+    },
+    {
+      "collection": "AL",
+      "verified_at": "2026-10-26T20:00:09.108942+00:00",
+      "archive_sha256": "76d6873418f6ab0a94dbdd775879ea385073d683257f6657fe7a83d10b920968",
+      "archive_size_bytes": 3544158,
+      "verified_restored_files": 19
+    },
+    {
+      "collection": "CO",
+      "verified_at": "2026-10-26T20:04:59.836795+00:00",
+      "archive_sha256": "b0b61194255de243eb99a7b1e215ff6b251561583b513664bedfa79c025781e6",
+      "archive_size_bytes": 16503796,
+      "verified_restored_files": 29
+    },
+    {
+      "collection": "CT",
+      "verified_at": "2026-10-26T20:06:44.995592+00:00",
+      "archive_sha256": "bafa5a53fd9028c4e6beecc1cf846eb4da89fbeaea4cfb8670cbd47237b799cc",
+      "archive_size_bytes": 4308987,
+      "verified_restored_files": 17
+    },
+    {
+      "collection": "GA",
+      "verified_at": "2026-10-26T20:08:51.079531+00:00",
+      "archive_sha256": "d9b9f76852b71a56f1529d7e410df36b5161de29c1852a23fedf56c7d86b97df",
+      "archive_size_bytes": 26521224,
+      "verified_restored_files": 318
+    },
+    {
+      "collection": "HI",
+      "verified_at": "2026-10-26T20:10:25.335221+00:00",
+      "archive_sha256": "f24ea9ddbf8713ef43cccd323d8c6b2de38eae243a1412a779c907d32ab120f1",
+      "archive_size_bytes": 11516684,
+      "verified_restored_files": 19
+    },
+    {
+      "collection": "IA",
+      "verified_at": "2026-10-26T20:18:18.470164+00:00",
+      "archive_sha256": "c3c39698a16d2ca8d6d93d896b7002b7ce225aa303e32b48f65a4a8a6b884dc9",
+      "archive_size_bytes": 4057962,
+      "verified_restored_files": 18
+    },
+    {
+      "collection": "ID",
+      "verified_at": "2026-10-26T20:12:16.364124+00:00",
+      "archive_sha256": "89005b455248d1ee6e3e02dc0c99d8836b533b85a8257e27aad122aa0b0302de",
+      "archive_size_bytes": 6749773,
+      "verified_restored_files": 24
+    },
+    {
+      "collection": "IL",
+      "verified_at": "2026-10-26T20:17:28.056601+00:00",
+      "archive_sha256": "3a943e9be51831f2a38063230bad75412469afcdd05e5dcc4225704508ecc577",
+      "archive_size_bytes": 15393661,
+      "verified_restored_files": 45
+    },
+    {
+      "collection": "MN",
+      "verified_at": "2026-10-26T20:01:30.039358+00:00",
+      "archive_sha256": "4a5e45d34d1306834837d145c98c2a9cd6e182d07e1502a568fe48ce6ab8737a",
+      "archive_size_bytes": 372953,
+      "verified_restored_files": 8
+    },
+    {
+      "collection": "MO",
+      "verified_at": "2026-10-26T20:05:40.666998+00:00",
+      "archive_sha256": "a7b7208e601876cb6b13277729bd88e27fa71c64406d45970f953c5af95d7aa2",
+      "archive_size_bytes": 13957000,
+      "verified_restored_files": 63
+    },
+    {
+      "collection": "MS",
+      "verified_at": "2026-10-26T20:03:48.160860+00:00",
+      "archive_sha256": "d694278d4bc0d30a6857a1bbc8d7eaba864b06b6a03f22c2e7f6b93f08f882e2",
+      "archive_size_bytes": 12839231,
+      "verified_restored_files": 35
+    },
+    {
+      "collection": "MT",
+      "verified_at": "2026-10-26T20:07:47.703628+00:00",
+      "archive_sha256": "b61ddeca06b7eb59037b478f73144f7abf574bea3fd9267ee814029944ecc9d6",
+      "archive_size_bytes": 9652423,
+      "verified_restored_files": 20
+    },
+    {
+      "collection": "NC",
+      "verified_at": "2026-10-26T20:19:39.503731+00:00",
+      "archive_sha256": "c5cee68b33e7ad3b3a90b72a7804983ee621da60b4f2cb42671d421b918530dd",
+      "archive_size_bytes": 6121034,
+      "verified_restored_files": 32
+    },
+    {
+      "collection": "ND",
+      "verified_at": "2026-10-26T20:04:22.301498+00:00",
+      "archive_sha256": "658d9509be4dd1ed2600e3d0f410d665dc6288208de90011d4bd0fcb0c9da5bb",
+      "archive_size_bytes": 22875538,
+      "verified_restored_files": 69
+    },
+    {
+      "collection": "NH",
+      "verified_at": "2026-10-26T20:11:13.254403+00:00",
+      "archive_sha256": "907b0f50e2357790daa9007671eb9993e4c1c1b68dbfddc077d13602b0807be6",
+      "archive_size_bytes": 13028486,
+      "verified_restored_files": 124
+    },
+    {
+      "collection": "NJ",
+      "verified_at": "2026-10-26T20:13:55.223766+00:00",
+      "archive_sha256": "891a3288be22afcdca1f6b9c385c13763be18ce9732834d3a332e1544789eccb",
+      "archive_size_bytes": 53207803,
+      "verified_restored_files": 81
+    },
+    {
+      "collection": "NM",
+      "verified_at": "2026-10-26T20:15:55.187733+00:00",
+      "archive_sha256": "6b49f2b3bbd536418b175cb36a9ee33185bb63957f048145713273eb0794e9a4",
+      "archive_size_bytes": 29001214,
+      "verified_restored_files": 23
+    },
+    {
+      "collection": "NV",
+      "verified_at": "2026-10-26T20:09:04.500695+00:00",
+      "archive_sha256": "2fe6a2fb0019ed3ceb1c5db4244c856b4432c21b5552a36c2aba3617e77add93",
+      "archive_size_bytes": 1643578,
+      "verified_restored_files": 13
+    },
+    {
+      "collection": "OK",
+      "verified_at": "2026-10-26T20:08:17.498367+00:00",
+      "archive_sha256": "4c85dad60f61577132db9b9202af6e6c79b3d096bd4aea141513dcc1298e5ea9",
+      "archive_size_bytes": 61911167,
+      "verified_restored_files": 40
+    },
+    {
+      "collection": "RI",
+      "verified_at": "2026-10-26T20:10:18.099402+00:00",
+      "archive_sha256": "39aec71890b7ee5dee0919fa4f904162cd7826247fa460561ded04e34330987e",
+      "archive_size_bytes": 10101115,
+      "verified_restored_files": 24
+    },
+    {
+      "collection": "SC",
+      "verified_at": "2026-10-26T20:14:59.047877+00:00",
+      "archive_sha256": "047fb3ed17b5478ca84e1f9ee6708d495121739adc9a68e00e9c96df3b8df231",
+      "archive_size_bytes": 22625490,
+      "verified_restored_files": 66
+    },
+    {
+      "collection": "SD",
+      "verified_at": "2026-10-26T20:21:11.918079+00:00",
+      "archive_sha256": "14903e9a3cc8ee86523ad4d94fb8b5e421d2f77baa7bd8be5d98f375fbb3d1c8",
+      "archive_size_bytes": 6651519,
+      "verified_restored_files": 21
+    },
+    {
+      "collection": "TN",
+      "verified_at": "2026-10-26T20:30:07.616599+00:00",
+      "archive_sha256": "a7bf7e47327b8b9cad375f6ffe56aa1bd22eb7107a9687bd9936d9ca5afcf569",
+      "archive_size_bytes": 23094946,
+      "verified_restored_files": 42
+    },
+    {
+      "collection": "UT",
+      "verified_at": "2026-10-26T20:23:01.446956+00:00",
+      "archive_sha256": "450b2f22bcbeddc783c55b3be1042b6ec3fe9f226c678651fb865447090af479",
+      "archive_size_bytes": 37019348,
+      "verified_restored_files": 22
+    },
+    {
+      "collection": "VT",
+      "verified_at": "2026-10-26T20:21:29.264609+00:00",
+      "archive_sha256": "a9a150e293efa1eab617ae4570e7c5d909b17c756132fe766d85e3b8f3b457e5",
+      "archive_size_bytes": 19896510,
+      "verified_restored_files": 64
+    },
+    {
+      "collection": "WI",
+      "verified_at": "2026-10-26T20:17:19.771508+00:00",
+      "archive_sha256": "b52266bdd1ddf1286495358b3bac5a0d26c36df143302fad226e7eb666687ed8",
+      "archive_size_bytes": 4829571,
+      "verified_restored_files": 36
+    },
+    {
+      "collection": "native-galleries",
+      "verified_at": "2026-10-26T20:21:49.633086+00:00",
+      "archive_sha256": "d41997be0c05f809523996e58c07abf42cbe27f7d442d59f4536a6241d9b5841",
+      "archive_size_bytes": 6213488,
+      "verified_restored_files": 65
+    }
+  ],
+  "total_verified_restored_files": 1359
+}

@@ -4,12 +4,12 @@
   "library_run_id": "2026-10-26T094725.718184Z-869efe09",
   "stats": {
     "jurisdictions": 51,
-    "jurisdictions_with_sources": 45,
+    "jurisdictions_with_sources": 51,
     "jurisdictions_with_accepted_cohorts": 0,
-    "sources": 332,
-    "relevant_sources": 235,
-    "embedded_images": 2160,
-    "rendered_pages": 445,
+    "sources": 358,
+    "relevant_sources": 261,
+    "embedded_images": 2240,
+    "rendered_pages": 467,
     "crop_candidates": 159,
     "accepted_cohorts": 0
   },
@@ -1354,10 +1354,10 @@
       "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 2,
-        "relevant_sources": 0,
-        "embedded_images": 9,
-        "rendered_pages": 8,
+        "sources": 4,
+        "relevant_sources": 2,
+        "embedded_images": 14,
+        "rendered_pages": 9,
         "crop_candidates": 5,
         "accepted_cohorts": 0
       },
@@ -1389,6 +1389,32 @@
           "review_status": "unreviewed",
           "page_count": 58,
           "credential_format": "ID1"
+        },
+        {
+          "title": "everify ride factsheet",
+          "url": "https://www.e-verify.gov/sites/default/files/everify/factsheets/IowaRIDEFactSheet.pdf",
+          "sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+          "retrieved_at": "2026-10-26T20:15:33.740269+00:00",
+          "publisher_host": "www.e-verify.gov",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "IA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1
+        },
+        {
+          "title": "dot realid cards",
+          "url": "https://iowadot.gov/sites/default/files/images/2025-03/Sample-REALID.jpg",
+          "sha256": "169a55cbd904c89d52642a55e75d93acd3b95c9c62e971b4304fc70ad2f71893",
+          "retrieved_at": "2026-10-26T20:15:59.431139+00:00",
+          "publisher_host": "iowadot.gov",
+          "publisher_jurisdiction": "IA",
+          "discovery_jurisdiction": "IA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
         }
       ]
     },
@@ -1491,19 +1517,46 @@
     {
       "code": "IL",
       "name": "Illinois",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
-        "embedded_images": 0,
-        "rendered_pages": 0,
+        "sources": 2,
+        "relevant_sources": 2,
+        "embedded_images": 6,
+        "rendered_pages": 1,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
       "fetch_failures": 1,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "sos central brochure",
+          "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf",
+          "sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+          "retrieved_at": "2026-10-25T23:39:54.709Z",
+          "publisher_host": "www.ilsos.gov",
+          "publisher_jurisdiction": "IL",
+          "discovery_jurisdiction": "IL",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2
+        },
+        {
+          "title": "university tvdl flyer",
+          "url": "https://www.dom.edu/sites/default/files/2023-02/dsd_tvdl21_flier.pdf",
+          "sha256": "a957522031b9e5f32c351e4c6566c37aa92ac6322f09c9012193c797a6661ded",
+          "retrieved_at": "2026-10-26T20:16:36.914692+00:00",
+          "publisher_host": "www.dom.edu",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "IL",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1
+        }
+      ]
     },
     {
       "code": "IN",
@@ -2569,19 +2622,72 @@
     {
       "code": "NC",
       "name": "North Carolina",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
-        "embedded_images": 0,
-        "rendered_pages": 0,
+        "sources": 4,
+        "relevant_sources": 4,
+        "embedded_images": 3,
+        "rendered_pages": 1,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "NC: dmv 2024 frontback id.jpg",
+          "url": "https://www.ncdot.gov/dmv/license-id/PublishingImages/back-front-id.jpg",
+          "sha256": "6876f3e1dedb0ac2c88b921eaf2d22f7336616503232ec6bac827cb8f6fc2bd6",
+          "retrieved_at": "2026-10-26T20:16:13.798202+00:00",
+          "publisher_host": "www.ncdot.gov",
+          "publisher_jurisdiction": "NC",
+          "discovery_jurisdiction": "NC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "NC: dmv 2024 under21 front.jpg",
+          "url": "https://www.ncdot.gov/dmv/license-id/PublishingImages/driver-license-under-21.jpg",
+          "sha256": "a739f566a0dd4e8f0837e9aa4483fb124a18edfe935753d5f7c18eef8b8560e5",
+          "retrieved_at": "2026-10-26T20:16:16.186492+00:00",
+          "publisher_host": "www.ncdot.gov",
+          "publisher_jurisdiction": "NC",
+          "discovery_jurisdiction": "NC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "NC: wilson 2019 rase guide.pdf",
+          "url": "https://wilson.ncabcboards.com/wp-content/uploads/2019/06/RASE-Quick-Guide.pdf",
+          "sha256": "a66f720200f1ac11920d135cdfeb568eb1db7d18e2bb8170368a68c995943a69",
+          "retrieved_at": "2026-10-26T20:15:49.599899+00:00",
+          "publisher_host": "wilson.ncabcboards.com",
+          "publisher_jurisdiction": "NC",
+          "discovery_jurisdiction": "NC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 21
+        },
+        {
+          "title": "NC: abc current retailer guide.pdf",
+          "url": "https://www.abc.nc.gov/education/quick-guide-retail-permittees/open",
+          "sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+          "retrieved_at": "2026-10-26T20:16:42.013974+00:00",
+          "publisher_host": "www.abc.nc.gov",
+          "publisher_jurisdiction": "NC",
+          "discovery_jurisdiction": "NC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 20
+        }
+      ]
     },
     {
       "code": "ND",
@@ -3428,10 +3534,10 @@
       "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 2,
-        "relevant_sources": 0,
-        "embedded_images": 3,
-        "rendered_pages": 3,
+        "sources": 5,
+        "relevant_sources": 3,
+        "embedded_images": 4,
+        "rendered_pages": 4,
         "crop_candidates": 2,
         "accepted_cohorts": 0
       },
@@ -3463,6 +3569,45 @@
           "review_status": "unreviewed",
           "page_count": 4,
           "credential_format": "ID1"
+        },
+        {
+          "title": "NM: mvd realid adult front.jpg",
+          "url": "https://realid.mvd.newmexico.gov/dist/images/compliant-fully.jpg",
+          "sha256": "62cfd82b6546fb1e1428ccc4db2541501d5929d9eab581cf4f8ec66474e154ae",
+          "retrieved_at": "2026-10-26T20:15:01.632659+00:00",
+          "publisher_host": "realid.mvd.newmexico.gov",
+          "publisher_jurisdiction": "NM",
+          "discovery_jurisdiction": "NM",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "NM: mvd standard adult front.jpg",
+          "url": "https://realid.mvd.newmexico.gov/dist/images/NM_Adult_StandardDL_front.jpg",
+          "sha256": "aa4d957675a51bf8f14aa1a4143823cdc414c68a5c7121b95c659dd58887b95a",
+          "retrieved_at": "2026-10-26T20:15:03.460743+00:00",
+          "publisher_host": "realid.mvd.newmexico.gov",
+          "publisher_jurisdiction": "NM",
+          "discovery_jurisdiction": "NM",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "NM: dps 2023 instructor training.pdf",
+          "url": "https://www.dps.nm.gov/wp-content/uploads/2023/11/Instructor-online-Training-November-2023.pdf",
+          "sha256": "2b8cee306f4be68408935b9f6435886ce281222e0fb0665b7ad093ee748488eb",
+          "retrieved_at": "2026-10-26T20:14:09.448280+00:00",
+          "publisher_host": "www.dps.nm.gov",
+          "publisher_jurisdiction": "NM",
+          "discovery_jurisdiction": "NM",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 120
         }
       ]
     },
@@ -4341,36 +4486,116 @@
     {
       "code": "SD",
       "name": "South Dakota",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
-        "embedded_images": 0,
-        "rendered_pages": 0,
+        "sources": 2,
+        "relevant_sources": 2,
+        "embedded_images": 8,
+        "rendered_pages": 2,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "state security features",
+          "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378",
+          "sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "retrieved_at": "2026-10-26T20:15:11.599377+00:00",
+          "publisher_host": "www.sd.gov",
+          "publisher_jurisdiction": "SD",
+          "discovery_jurisdiction": "SD",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2
+        },
+        {
+          "title": "state 2026 dl specimen",
+          "url": "https://news.sd.gov/sys_attachment.do?sys_id=2596c52247474350fc1303dc426d439f",
+          "sha256": "e2220fe60bb783b29bdac80bab8299424e3a3b98a84c76679943dbd7f3f8baec",
+          "retrieved_at": "2026-10-26T20:19:55.749342+00:00",
+          "publisher_host": "news.sd.gov",
+          "publisher_jurisdiction": "SD",
+          "discovery_jurisdiction": "SD",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        }
+      ]
     },
     {
       "code": "TN",
       "name": "Tennessee",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
-        "embedded_images": 0,
-        "rendered_pages": 0,
+        "sources": 4,
+        "relevant_sources": 4,
+        "embedded_images": 12,
+        "rendered_pages": 6,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "vanderbilt driver manual",
+          "url": "https://www.vanderbilt.edu/isss/wp-content/uploads/sites/134/2026/03/DL_Manual.pdf",
+          "sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "retrieved_at": "2026-10-26T20:25:19.513381+00:00",
+          "publisher_host": "www.vanderbilt.edu",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "TN",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 135
+        },
+        {
+          "title": "ut mtas 2025 realid",
+          "url": "https://www.mtas.tennessee.edu/system/files/mrln/mknowledge/main/MTAS%20Tennessee%20REAL%20ID%202025.pdf",
+          "sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+          "retrieved_at": "2026-10-26T20:25:21.357130+00:00",
+          "publisher_host": "www.mtas.tennessee.edu",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "TN",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 17
+        },
+        {
+          "title": "safety current 1",
+          "url": "https://www.tn.gov/safety/driver-services/helpful-information/real-id/_jcr_content/content/tn_accordion_copy_co/parsys_what_does_a_realidcompliantdriverlicenseoridcredentiallooklike/tn_columnctrl/column_parsys0/tn_textandimage_copy/image.img.png/1724708434491.png",
+          "sha256": "8b56f55d62b235cfb80d48f5b142b8e2bb3cec9cf7735ec8cacde43394b0c6ca",
+          "retrieved_at": "2026-10-26T20:27:31.182321+00:00",
+          "publisher_host": "www.tn.gov",
+          "publisher_jurisdiction": "TN",
+          "discovery_jurisdiction": "TN",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "safety current 2",
+          "url": "https://www.tn.gov/safety/driver-services/helpful-information/real-id/_jcr_content/content/tn_accordion_copy_co/parsys_what_does_a_realidcompliantdriverlicenseoridcredentiallooklike/tn_columnctrl/column_parsys1/tn_textandimage_copy/image.img.png/1732294432238.png",
+          "sha256": "918aeef0b3658adfbc868746a3d073cc444281fe1b16a6245a4474b1f3e51111",
+          "retrieved_at": "2026-10-26T20:27:31.187386+00:00",
+          "publisher_host": "www.tn.gov",
+          "publisher_jurisdiction": "TN",
+          "discovery_jurisdiction": "TN",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        }
+      ]
     },
     {
       "code": "TX",
@@ -4432,19 +4657,59 @@
     {
       "code": "UT",
       "name": "Utah",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
-        "embedded_images": 0,
-        "rendered_pages": 0,
+        "sources": 3,
+        "relevant_sources": 3,
+        "embedded_images": 4,
+        "rendered_pages": 2,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "waytoquit 2020 retailer guide",
+          "url": "https://s3.amazonaws.com/waytoquit.com/wp-content/uploads/20200622101350/UDOH_Retailer-Ed.-Guide_Final_June-20201.pdf",
+          "sha256": "a3bbf55830406b091d1fb84073bbfbb9c4285da35202905fff9f3413857ebcfb",
+          "retrieved_at": "2026-10-26T20:21:54.479078+00:00",
+          "publisher_host": "s3.amazonaws.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "UT",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 37
+        },
+        {
+          "title": "ksl 2021 adult front",
+          "url": "https://img.ksl.com/slc/2827/282743/28274385.jpeg",
+          "sha256": "6c505172aebaaad89c553b3e6a30fc1939687616944c4d99e535babacebf8019",
+          "retrieved_at": "2026-10-26T20:19:49.882692+00:00",
+          "publisher_host": "img.ksl.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "UT",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "ksl 2016 front",
+          "url": "https://img.ksl.com/slc/2595/259531/25953102.jpg",
+          "sha256": "6574953010af42b86b2569a41cd15182e6babe6643e6d4a86338b71483803191",
+          "retrieved_at": "2026-10-26T20:20:52.118024+00:00",
+          "publisher_host": "img.ksl.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "UT",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        }
+      ]
     },
     {
       "code": "VA",
@@ -4480,19 +4745,59 @@
     {
       "code": "VT",
       "name": "Vermont",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
-        "embedded_images": 0,
-        "rendered_pages": 0,
+        "sources": 3,
+        "relevant_sources": 3,
+        "embedded_images": 25,
+        "rendered_pages": 6,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "VT: epic historical specimens.pdf",
+          "url": "https://archive.epic.org/privacy/surveillance/spotlight/0907/vermontsample.pdf",
+          "sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "retrieved_at": "2026-10-26T20:20:09.233101+00:00",
+          "publisher_host": "archive.epic.org",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "VT",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 4
+        },
+        {
+          "title": "VT: dmv license comparisons.pdf",
+          "url": "https://dmv.vermont.gov/sites/dmv/files/documents/VL-011-License_Comparisons.pdf",
+          "sha256": "0ed0148982b43b1e4dc602b34336dca78ae2417b6bfbea76ffc4d739db3901d3",
+          "retrieved_at": "2026-10-26T20:20:06.978995+00:00",
+          "publisher_host": "dmv.vermont.gov",
+          "publisher_jurisdiction": "VT",
+          "discovery_jurisdiction": "VT",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 3
+        },
+        {
+          "title": "VT: legislature 2019 design.pdf",
+          "url": "https://legislature.vermont.gov/Documents/2020/WorkGroups/House%20Corrections%20and%20Institutions/Department%20of%20Motor%20Vehicles/W~Wanda%20Minoli~Vermont%20Driver%27s%20Licenses%20and%20ID%20Cards~4-4-2019.pdf",
+          "sha256": "7992ca6bbefb5aedd48dc202c325eb1b353879d480d2c3e4a1707d8f56400a95",
+          "retrieved_at": "2026-10-26T20:19:44.970190+00:00",
+          "publisher_host": "legislature.vermont.gov",
+          "publisher_jurisdiction": "VT",
+          "discovery_jurisdiction": "VT",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1
+        }
+      ]
     },
     {
       "code": "WA",
@@ -4895,10 +5200,10 @@
       "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 1,
-        "relevant_sources": 0,
-        "embedded_images": 48,
-        "rendered_pages": 12,
+        "sources": 4,
+        "relevant_sources": 3,
+        "embedded_images": 64,
+        "rendered_pages": 14,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
@@ -4917,6 +5222,45 @@
           "review_status": "unreviewed",
           "page_count": 232,
           "credential_format": "ID1"
+        },
+        {
+          "title": "doj 2023 id check sheet",
+          "url": "https://content.govdelivery.com/attachments/WIDOJ/2023/06/05/file_attachments/2517504/HS138-FAB-ID-062023.pdf",
+          "sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "retrieved_at": "2026-10-26T20:16:36.753905+00:00",
+          "publisher_host": "content.govdelivery.com",
+          "publisher_jurisdiction": "WI",
+          "discovery_jurisdiction": "WI",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2
+        },
+        {
+          "title": "dmv 2023 award front",
+          "url": "https://wisconsindot.gov/PublishingImages/about-wisdot/newsroom/photo-gal/dmv/widl2023.jpg",
+          "sha256": "8824fe4febfa7853c9caeacdb22f42b4c371752d4728889d16a1677ddd7b6a85",
+          "retrieved_at": "2026-10-26T20:16:35.473093+00:00",
+          "publisher_host": "wisconsindot.gov",
+          "publisher_jurisdiction": "WI",
+          "discovery_jurisdiction": "WI",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "dmv id nonexp",
+          "url": "https://wisconsindot.gov/PublishingImages/dmv/shared/O21-ID-nonexp.jpg",
+          "sha256": "db3224efcc423559ca7e8240e596efad08818b6d1baa5ce228c608f18db4a5ee",
+          "retrieved_at": "2026-10-26T20:16:09.669716+00:00",
+          "publisher_host": "wisconsindot.gov",
+          "publisher_jurisdiction": "WI",
+          "discovery_jurisdiction": "WI",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
         }
       ]
     },

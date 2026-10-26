@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "IL",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:17:10.702889+00:00",
+  "source_publications": [
+    {
+      "file": "sos-central-brochure.pdf",
+      "final_url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf",
+      "retrieved_at": "2026-10-25T23:39:54.709Z",
+      "sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+      "bytes": 2604338,
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "acquisition_note": "Retained original from documented ordinary browser acquisition 2026-10-25; current requests timed out.",
+      "source_url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf",
+      "mime_type": "application/pdf"
+    },
+    {
+      "file": "university-tvdl-flyer.pdf",
+      "source_url": "https://www.dom.edu/sites/default/files/2023-02/dsd_tvdl21_flier.pdf",
+      "final_url": "https://www.dom.edu/sites/default/files/2023-02/dsd_tvdl21_flier.pdf",
+      "retrieved_at": "2026-10-26T20:16:36.914692+00:00",
+      "bytes": 3708836,
+      "sha256": "a957522031b9e5f32c351e4c6566c37aa92ac6322f09c9012193c797a6661ded",
+      "mime_type": "application/pdf",
+      "source_class": "third_party",
+      "status": "downloaded",
+      "http_status": 200
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "sos-central-brochure-xref-6.jpeg",
+      "source_file": "sos-central-brochure.pdf",
+      "source_sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+      "pdf_object_xref": 6,
+      "page_number": 2,
+      "width_px": 941,
+      "height_px": 296,
+      "sha256": "be003f52b8bf5608753b6b1413638ee7136b6d71c3c93ed7882519087f04188a"
+    },
+    {
+      "file": "sos-central-brochure-xref-9.jpeg",
+      "source_file": "sos-central-brochure.pdf",
+      "source_sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+      "pdf_object_xref": 9,
+      "page_number": 2,
+      "width_px": 882,
+      "height_px": 556,
+      "sha256": "b65bbb54b3c0b85b2cf8af6e05f68bb35363e4b6bcf08808e2ad8d2b11dc413a"
+    },
+    {
+      "file": "sos-central-brochure-xref-12.png",
+      "source_file": "sos-central-brochure.pdf",
+      "source_sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+      "pdf_object_xref": 12,
+      "page_number": 2,
+      "width_px": 882,
+      "height_px": 556,
+      "sha256": "1c2cedc6e6500666e1e7c9be8ba6f33f3b8fbcc178fb4d2c8a3da48b4e564bab"
+    },
+    {
+      "file": "sos-central-brochure-xref-15.jpeg",
+      "source_file": "sos-central-brochure.pdf",
+      "source_sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+      "pdf_object_xref": 15,
+      "page_number": 2,
+      "width_px": 588,
+      "height_px": 934,
+      "sha256": "f481102b9759b7de53a625fd9218b173b6123f33c33faa49ba1e6655998fb706"
+    },
+    {
+      "file": "university-tvdl-flyer-xref-38.png",
+      "source_file": "university-tvdl-flyer.pdf",
+      "source_sha256": "a957522031b9e5f32c351e4c6566c37aa92ac6322f09c9012193c797a6661ded",
+      "pdf_object_xref": 38,
+      "page_number": 1,
+      "width_px": 1024,
+      "height_px": 672,
+      "sha256": "9b8b8a520b796c4a09cdc31afdc3d435208033b03761c5141b00e1d08102146f"
+    },
+    {
+      "file": "university-tvdl-flyer-xref-39.png",
+      "source_file": "university-tvdl-flyer.pdf",
+      "source_sha256": "a957522031b9e5f32c351e4c6566c37aa92ac6322f09c9012193c797a6661ded",
+      "pdf_object_xref": 39,
+      "page_number": 1,
+      "width_px": 1011,
+      "height_px": 638,
+      "sha256": "58cb039d17e8412d938530efaa3d49419af5c142a1f408f0e8d828c175c6183b"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "sos-central-brochure.pdf",
+      "source_url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf",
+      "final_url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf",
+      "retrieved_at": "2026-10-26T20:14:57.847447+00:00",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mime_type": "",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 0
+    },
+    {
+      "file": "sos-central-faq.html",
+      "source_url": "https://www.ilsos.gov/departments/drivers/drivers-license/central-issuance/cifaq.html",
+      "final_url": "https://www.ilsos.gov/departments/drivers/drivers-license/central-issuance/cifaq.html",
+      "retrieved_at": "2026-10-26T20:15:18.166479+00:00",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mime_type": "",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 0
+    },
+    {
+      "file": "sos-realid.html",
+      "source_url": "https://realid.ilsos.gov/",
+      "final_url": "https://realid.ilsos.gov/",
+      "retrieved_at": "2026-10-26T20:15:38.568409+00:00",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mime_type": "",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 0
+    },
+    {
+      "file": "sos-legacy-design.pdf",
+      "source_url": "https://www.cyberdriveillinois.com/departments/drivers/drivers_license/newdlflyer1.pdf",
+      "final_url": "https://www.cyberdriveillinois.com/departments/drivers/drivers_license/newdlflyer1.pdf",
+      "retrieved_at": "2026-10-26T20:15:58.918267+00:00",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mime_type": "",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 0
+    }
+  ],
+  "remaining_gaps": [
+    "Current REAL ID adult/ID and current minor DL/CDL standalone images remain gaps.",
+    "Issuer live requests timed out; central issuance brochure uses a hash-verified retained original from ordinary browser acquisition on 2026-10-25."
+  ],
+  "notes": [
+    "Native brochure objects include adult front, back, temporary paper front/back and vertical minor ID; shadow/mask/logo objects excluded.",
+    "Independent university mirror of issuer TVDL flyer adds historical TVDL and standard DL specimens. Source family and historical status retained."
+  ],
+  "catalog_integrated": true,
+  "review_status": "reference_research_only",
+  "preservation": {
+    "jurisdiction": "IL",
+    "verified_at": "2026-10-26T20:17:28.056601+00:00",
+    "private_snapshot_index_key": "snapshots/research/IL/3a943e9be51831f2a38063230bad75412469afcdd05e5dcc4225704508ecc577/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/IL.json",
+    "archive_sha256": "3a943e9be51831f2a38063230bad75412469afcdd05e5dcc4225704508ecc577",
+    "archive_size_bytes": 15393661,
+    "verified_restored_files": 45,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/IL",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 7,
+    "review_status": "reference_only"
+  }
+}

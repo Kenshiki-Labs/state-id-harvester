@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "NC",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:19:31.027071+00:00",
+  "scope": "Bounded manual state research; useful finds and gaps, no completeness requirement.",
+  "source_publications": [
+    {
+      "file": "dmv-2024-design-hub.html",
+      "source_url": "https://www.ncdot.gov/dmv/license-id/Pages/new-license-id-cards.aspx",
+      "final_url": "https://www.ncdot.gov/dmv/license-id/Pages/new-license-id-cards.aspx",
+      "sha256": "eb1688315be6dacbd765e69275dedf17b7b9797011a402ae8bf66981af8029f6",
+      "bytes": 97979,
+      "mime_type": "text/html; charset=utf-8",
+      "retrieved_at": "2026-10-26T20:15:48.287974+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "wilson-2019-rase-guide.pdf",
+      "source_url": "https://wilson.ncabcboards.com/wp-content/uploads/2019/06/RASE-Quick-Guide.pdf",
+      "final_url": "https://wilson.ncabcboards.com/wp-content/uploads/2019/06/RASE-Quick-Guide.pdf",
+      "sha256": "a66f720200f1ac11920d135cdfeb568eb1db7d18e2bb8170368a68c995943a69",
+      "bytes": 918216,
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:15:49.599899+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dmv-2024-frontback-id.jpg",
+      "source_url": "https://www.ncdot.gov/dmv/license-id/PublishingImages/back-front-id.jpg",
+      "final_url": "https://www.ncdot.gov/dmv/license-id/PublishingImages/back-front-id.jpg",
+      "sha256": "6876f3e1dedb0ac2c88b921eaf2d22f7336616503232ec6bac827cb8f6fc2bd6",
+      "bytes": 266072,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:16:13.798202+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dmv-2024-frontback-design.jpg",
+      "source_url": "https://www.ncdot.gov/dmv/license-id/PublishingImages/front-back-id.jpg",
+      "final_url": "https://www.ncdot.gov/dmv/license-id/PublishingImages/front-back-id.jpg",
+      "sha256": "27b3ae03fa2f9b22868f380c8f44d4ad9a1c3ac194018ed738958ed2cb617c3e",
+      "bytes": 61531,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:16:14.625160+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dmv-2024-under21-front.jpg",
+      "source_url": "https://www.ncdot.gov/dmv/license-id/PublishingImages/driver-license-under-21.jpg",
+      "final_url": "https://www.ncdot.gov/dmv/license-id/PublishingImages/driver-license-under-21.jpg",
+      "sha256": "a739f566a0dd4e8f0837e9aa4483fb124a18edfe935753d5f7c18eef8b8560e5",
+      "bytes": 194676,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:16:16.186492+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "legislature-2008-central-issuance.pdf",
+      "source_url": "https://webservices.ncleg.gov/ViewDocSiteFile/25390",
+      "final_url": "https://webservices.ncleg.gov/ViewDocSiteFile/25390",
+      "sha256": "0d5d5f5f7b50b1e8342660da5d84ee8b04ce720934151f54b94492a184e04f83",
+      "bytes": 302408,
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:16:40.356507+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "abc-current-retailer-guide.pdf",
+      "source_url": "https://www.abc.nc.gov/education/quick-guide-retail-permittees/open",
+      "final_url": "https://www.abc.nc.gov/education/quick-guide-retail-permittees/open",
+      "sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+      "bytes": 1237535,
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:16:42.013974+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "wilson-2019-rase-guide-xref76.jpeg",
+      "source_file": "wilson-2019-rase-guide.pdf",
+      "source_sha256": "a66f720200f1ac11920d135cdfeb568eb1db7d18e2bb8170368a68c995943a69",
+      "pdf_object_xref": 76,
+      "resource_page_number": 14,
+      "width_px": 1056,
+      "height_px": 816,
+      "sha256": "9b7337422adb2073b727216efb7f1a908141c1e1c71d892da120c22e23e7d536",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Legacy adult ID and under-21 DL SAMPLE fronts and shared back; numbered annotations baked into composite."
+    },
+    {
+      "file": "abc-current-retailer-guide-xref45.jpeg",
+      "source_file": "abc-current-retailer-guide.pdf",
+      "source_sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+      "pdf_object_xref": 45,
+      "resource_page_number": 16,
+      "width_px": 109,
+      "height_px": 177,
+      "sha256": "4c9cc80e6619232819e039bdef3aef47212844f1d7bc7da9cc32834059e4e3ee",
+      "mask": {
+        "file": "abc-current-retailer-guide-mask44.jpeg",
+        "pdf_object_xref": 44,
+        "sha256": "4640fd99edd796b1061edb97fa5ba5994102aa86815a45c1d76059caf0271825"
+      },
+      "preview_file": "abc-current-retailer-guide-xref45-preview.png"
+    },
+    {
+      "file": "abc-current-retailer-guide-xref47.jpeg",
+      "source_file": "abc-current-retailer-guide.pdf",
+      "source_sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+      "pdf_object_xref": 47,
+      "resource_page_number": 16,
+      "width_px": 447,
+      "height_px": 277,
+      "sha256": "c0d832ec7438b6133034d4980aa1e4207c7b5452e946b3246229b66222e249a7",
+      "mask": {
+        "file": "abc-current-retailer-guide-mask46.jpeg",
+        "pdf_object_xref": 46,
+        "sha256": "fb3348d0ed83d90bf537f99d928abd89c44145398e381a5804d4183c1c1cd89d"
+      },
+      "preview_file": "abc-current-retailer-guide-xref47-preview.png"
+    },
+    {
+      "file": "abc-current-retailer-guide-xref51.jpeg",
+      "source_file": "abc-current-retailer-guide.pdf",
+      "source_sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+      "pdf_object_xref": 51,
+      "resource_page_number": 16,
+      "width_px": 422,
+      "height_px": 272,
+      "sha256": "d114aeaaa0f2acf6b5cff0f6917c87b176d0066ec5688b5bac2b98ebc9af30f8",
+      "mask": {
+        "file": "abc-current-retailer-guide-mask50.jpeg",
+        "pdf_object_xref": 50,
+        "sha256": "0eefed5d88fb71abdbea17e833c14b1a1808d91446b949d3e3d4708e0f99b27d"
+      },
+      "preview_file": "abc-current-retailer-guide-xref51-preview.png",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Clearly SAMPLE adult REAL ID driver license front; selected separately from mixed source page."
+    },
+    {
+      "file": "abc-current-retailer-guide-xref55.jpeg",
+      "source_file": "abc-current-retailer-guide.pdf",
+      "source_sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+      "pdf_object_xref": 55,
+      "resource_page_number": 16,
+      "width_px": 420,
+      "height_px": 277,
+      "sha256": "77ebe44141ff7f8d2f6bafda430c1694478954296b273035456e58a6b9aaa5ff",
+      "mask": {
+        "file": "abc-current-retailer-guide-mask54.jpeg",
+        "pdf_object_xref": 54,
+        "sha256": "44409be71b263ae0201aa098cec56b9467c26da28aa0196bafecdd0f409326be"
+      },
+      "preview_file": "abc-current-retailer-guide-xref55-preview.png",
+      "visual_review": "native resource and relevant source page visually inspected",
+      "review_note": "Clearly SAMPLE nonfederal adult identification card front; selected separately from mixed source page."
+    },
+    {
+      "file": "abc-current-retailer-guide-xref56.png",
+      "source_file": "abc-current-retailer-guide.pdf",
+      "source_sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+      "pdf_object_xref": 56,
+      "resource_page_number": 16,
+      "width_px": 124,
+      "height_px": 155,
+      "sha256": "729cc625989c6ada381bc36c9a25f7e5dd0aac9561dc99081c3afd31c514b947"
+    },
+    {
+      "file": "abc-current-retailer-guide-xref57.jpeg",
+      "source_file": "abc-current-retailer-guide.pdf",
+      "source_sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+      "pdf_object_xref": 57,
+      "resource_page_number": 16,
+      "width_px": 194,
+      "height_px": 260,
+      "sha256": "570714ec49295be47f43bb828f3d8a948f3c62171aaa70941c8f73e12fc8d500"
+    },
+    {
+      "file": "abc-current-retailer-guide-xref58.jpeg",
+      "source_file": "abc-current-retailer-guide.pdf",
+      "source_sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+      "pdf_object_xref": 58,
+      "resource_page_number": 16,
+      "width_px": 200,
+      "height_px": 300,
+      "sha256": "d0b172fabbe2f3f9b12930214f35949b68bf1d919de561a356aee64411be2cd0"
+    },
+    {
+      "file": "abc-current-retailer-guide-xref59.jpeg",
+      "source_file": "abc-current-retailer-guide.pdf",
+      "source_sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+      "pdf_object_xref": 59,
+      "resource_page_number": 16,
+      "width_px": 177,
+      "height_px": 280,
+      "sha256": "26e8c69c331d9e1a31495a4dedae45a2f8ebc84746961b87802c3776459dad2c"
+    }
+  ],
+  "unresolved_downloads": [],
+  "remaining_gaps": [
+    "Current adult driver license front not acquired; current adult ID front/back and under-21 DL front acquired.",
+    "Legacy guide plate retains baked annotations; no speculative separation or cleanup.",
+    "Mixed ABC source page contains unrelated jurisdictions and examples without verified fictional identities; full page and those native objects excluded from contribution.",
+    "Legislature 2008 central-issuance PDF is text-only historical context with seals; no credential specimen selected.",
+    "Lower-resolution official current front/back duplicate retained privately but omitted from display.",
+    "No accepted runtime cohorts, physical precision, UV or optical qualification claimed."
+  ],
+  "review_status": "reference_research_only",
+  "accepted_cohorts": 0,
+  "catalog_integrated": true,
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "NC",
+    "verified_at": "2026-10-26T20:19:39.503731+00:00",
+    "local_directory": "output/research/NC",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/NC/c5cee68b33e7ad3b3a90b72a7804983ee621da60b4f2cb42671d421b918530dd/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/NC.json",
+    "archive_sha256": "c5cee68b33e7ad3b3a90b72a7804983ee621da60b4f2cb42671d421b918530dd",
+    "archive_size_bytes": 6121034,
+    "transport_chunks": 1,
+    "verified_restored_files": 32,
+    "verification": "Downloaded archive restored with existing helpers and every file compared byte-for-byte.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/NC"
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 6,
+    "review_status": "reference_only"
+  }
+}

@@ -101,3 +101,16 @@ immutable keys, and changes the pointer only after all new objects are present. 
 or repeated batches cannot erase earlier states. Publishers run serially; an invalid
 index, hash conflict, or failed upload stops publication. Scheduled metadata commits
 push `dev` and `main` atomically to preserve the canonical branch parity.
+
+Manual state research also has private discovery indexes at `indexes/research/{STATE}.json`,
+independent of the scheduled harvest pointer. New archives declare `collection_relative`
+and their restore destination (`output/research/{STATE}`); retained issuer galleries
+use `indexes/research/native-galleries.json` and restore into `output/gallery`. Retrieve
+the indicated immutable snapshot index with the authenticated vault transport, verify
+its chunks with `restore_archive`, then restore with `restore_library` into the recorded
+destination. These research backups must not replace `indexes/latest-snapshot.json`.
+
+The [coverage ledger](source-research/state-coverage.json) records observed public image
+coverage separately from source counts. The [preservation ledger](source-research/research-preservation-2026-10-26.json)
+records archive digests and byte-verified restoration counts for the remaining-state
+search sweep. Marked reference browsing requires no credentials.

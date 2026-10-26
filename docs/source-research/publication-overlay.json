@@ -1595,6 +1595,95 @@
       ]
     },
     {
+      "code": "IA",
+      "citations": [
+        {
+          "title": "everify ride factsheet",
+          "url": "https://www.e-verify.gov/sites/default/files/everify/factsheets/IowaRIDEFactSheet.pdf",
+          "sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+          "retrieved_at": "2026-10-26T20:15:33.740269+00:00",
+          "publisher_host": "www.e-verify.gov",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "IA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "dot realid cards",
+          "url": "https://iowadot.gov/sites/default/files/images/2025-03/Sample-REALID.jpg",
+          "sha256": "169a55cbd904c89d52642a55e75d93acd3b95c9c62e971b4304fc70ad2f71893",
+          "retrieved_at": "2026-10-26T20:15:59.431139+00:00",
+          "publisher_host": "iowadot.gov",
+          "publisher_jurisdiction": "IA",
+          "discovery_jurisdiction": "IA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_6a5e46da5f50715d88ea1b46d41dcf9a",
+          "source_sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+          "asset_sha256": "6a5e46da5f50715d88ea1b46d41dcf9a67f82a075a386dd50f25cf521c6b7913",
+          "original_asset_sha256": "fe86cc0654fa84e2c0971ef9afc8c4fe7da591fede498bad5d1891f2eaafe98a",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_2ac6897acec3b2a9a15b80d1ea04f9a2",
+          "source_sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+          "asset_sha256": "2ac6897acec3b2a9a15b80d1ea04f9a2000d47e4628a3a0f903077d5e3725535",
+          "original_asset_sha256": "a814a96a590f76de8e8732c37b459496cdc0c723b50f80a9eb4e18d27ec3e66b",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_df6568e499cc9abad248c5bf8765d942",
+          "source_sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+          "asset_sha256": "df6568e499cc9abad248c5bf8765d94255262a922ca51dccfe067d3970991ca5",
+          "original_asset_sha256": "7c8949c170cf6c0a484f7970372eb338988d3d371402ea7433540591a08574e4",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_ecb3681fac914fdadcc4575040ac26d6",
+          "source_sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+          "asset_sha256": "ecb3681fac914fdadcc4575040ac26d6dec7a5634fb579d6b158e43b7623b0f8",
+          "original_asset_sha256": "6475c55e8abf07cf82ebd1f30fd49e64fc5c025a9cce18a351cf77e2633cdda3",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_903665f052966d18cfab451efec65980",
+          "source_sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+          "asset_sha256": "903665f052966d18cfab451efec65980631911d043f5ecac335a43377bcac549",
+          "original_asset_sha256": "9cd44701567271c0a4caf4509a81215ca6cc633416ad4ef17540e2d714c56f0d",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_f7bb75e7e917608a54eb9a2453c93656",
+          "source_sha256": "169a55cbd904c89d52642a55e75d93acd3b95c9c62e971b4304fc70ad2f71893",
+          "asset_sha256": "f7bb75e7e917608a54eb9a2453c9365608da5ec927f577b3c9cbb514ed025d26",
+          "original_asset_sha256": "169a55cbd904c89d52642a55e75d93acd3b95c9c62e971b4304fc70ad2f71893",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_0ac6dcffb92ca328c8ada1b17b1ade7c",
+          "source_sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+          "asset_sha256": "0ac6dcffb92ca328c8ada1b17b1ade7c91d67202854d9407842dbc4c11dd004e",
+          "original_asset_sha256": "a9c909ef07feb9829057299f932fc649e6c93d6edd75eb6adf5d635ac1b06a6d",
+          "page_number": 1,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
       "code": "ID",
       "citations": [
         {
@@ -1703,6 +1792,95 @@
           "original_asset_sha256": "5658be3570cace501c0d22d6817b874e665e10c1aebf16bb95eb54a49b777b32",
           "page_number": null,
           "kind": "direct_image"
+        }
+      ]
+    },
+    {
+      "code": "IL",
+      "citations": [
+        {
+          "title": "sos central brochure",
+          "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a301.pdf",
+          "sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+          "retrieved_at": "2026-10-25T23:39:54.709Z",
+          "publisher_host": "www.ilsos.gov",
+          "publisher_jurisdiction": "IL",
+          "discovery_jurisdiction": "IL",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "university tvdl flyer",
+          "url": "https://www.dom.edu/sites/default/files/2023-02/dsd_tvdl21_flier.pdf",
+          "sha256": "a957522031b9e5f32c351e4c6566c37aa92ac6322f09c9012193c797a6661ded",
+          "retrieved_at": "2026-10-26T20:16:36.914692+00:00",
+          "publisher_host": "www.dom.edu",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "IL",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_43d2417e34464cecd5c415646cc553f6",
+          "source_sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+          "asset_sha256": "43d2417e34464cecd5c415646cc553f65040bbea062a57f6184d7fda3e8485e3",
+          "original_asset_sha256": "be003f52b8bf5608753b6b1413638ee7136b6d71c3c93ed7882519087f04188a",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_453f1094b055dff31c5ef9f97381bf6b",
+          "source_sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+          "asset_sha256": "453f1094b055dff31c5ef9f97381bf6b6f82849c160d44db0e4682141059f85a",
+          "original_asset_sha256": "b65bbb54b3c0b85b2cf8af6e05f68bb35363e4b6bcf08808e2ad8d2b11dc413a",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_105eb8be70535970ef908f8163bbe1c3",
+          "source_sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+          "asset_sha256": "105eb8be70535970ef908f8163bbe1c3e1abf831385445e5a382f14984f97030",
+          "original_asset_sha256": "1c2cedc6e6500666e1e7c9be8ba6f33f3b8fbcc178fb4d2c8a3da48b4e564bab",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_bed310a773955a1d56f97bbf2f44b17d",
+          "source_sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+          "asset_sha256": "bed310a773955a1d56f97bbf2f44b17d3d2dd12c06ef71eb8a5f52dbcd8b1cef",
+          "original_asset_sha256": "f481102b9759b7de53a625fd9218b173b6123f33c33faa49ba1e6655998fb706",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_703c670e701eacc142e9d065cd9b2335",
+          "source_sha256": "a957522031b9e5f32c351e4c6566c37aa92ac6322f09c9012193c797a6661ded",
+          "asset_sha256": "703c670e701eacc142e9d065cd9b2335103327782282718679e0967e9e98d688",
+          "original_asset_sha256": "9b8b8a520b796c4a09cdc31afdc3d435208033b03761c5141b00e1d08102146f",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_9cc2a25b4921a878cc965d11d6b27a22",
+          "source_sha256": "a957522031b9e5f32c351e4c6566c37aa92ac6322f09c9012193c797a6661ded",
+          "asset_sha256": "9cc2a25b4921a878cc965d11d6b27a227c774f1088ae4d95def84d8638474af7",
+          "original_asset_sha256": "58cb039d17e8412d938530efaa3d49419af5c142a1f408f0e8d828c175c6183b",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_0cec5b3604b9927e0bb8734ca58213d2",
+          "source_sha256": "141826f38d3c39b2bc748ccfc3dc2bbca7323f03f5fc28c4e248ecb0fb78df0c",
+          "asset_sha256": "0cec5b3604b9927e0bb8734ca58213d2a089d6f210507b15c124085a329a6eab",
+          "original_asset_sha256": "d4e1d82f3ef0b323dc3eeb9fe0e4854a63bb2150433321a9983d8e386e11035a",
+          "page_number": 2,
+          "kind": "page_plate"
         }
       ]
     },
@@ -3312,6 +3490,113 @@
       ]
     },
     {
+      "code": "NC",
+      "citations": [
+        {
+          "title": "NC: dmv 2024 frontback id.jpg",
+          "url": "https://www.ncdot.gov/dmv/license-id/PublishingImages/back-front-id.jpg",
+          "sha256": "6876f3e1dedb0ac2c88b921eaf2d22f7336616503232ec6bac827cb8f6fc2bd6",
+          "retrieved_at": "2026-10-26T20:16:13.798202+00:00",
+          "publisher_host": "www.ncdot.gov",
+          "publisher_jurisdiction": "NC",
+          "discovery_jurisdiction": "NC",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NC: dmv 2024 under21 front.jpg",
+          "url": "https://www.ncdot.gov/dmv/license-id/PublishingImages/driver-license-under-21.jpg",
+          "sha256": "a739f566a0dd4e8f0837e9aa4483fb124a18edfe935753d5f7c18eef8b8560e5",
+          "retrieved_at": "2026-10-26T20:16:16.186492+00:00",
+          "publisher_host": "www.ncdot.gov",
+          "publisher_jurisdiction": "NC",
+          "discovery_jurisdiction": "NC",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NC: wilson 2019 rase guide.pdf",
+          "url": "https://wilson.ncabcboards.com/wp-content/uploads/2019/06/RASE-Quick-Guide.pdf",
+          "sha256": "a66f720200f1ac11920d135cdfeb568eb1db7d18e2bb8170368a68c995943a69",
+          "retrieved_at": "2026-10-26T20:15:49.599899+00:00",
+          "publisher_host": "wilson.ncabcboards.com",
+          "publisher_jurisdiction": "NC",
+          "discovery_jurisdiction": "NC",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 21,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NC: abc current retailer guide.pdf",
+          "url": "https://www.abc.nc.gov/education/quick-guide-retail-permittees/open",
+          "sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+          "retrieved_at": "2026-10-26T20:16:42.013974+00:00",
+          "publisher_host": "www.abc.nc.gov",
+          "publisher_jurisdiction": "NC",
+          "discovery_jurisdiction": "NC",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 20,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_072d75765ac98b236540e4c8964eea5e",
+          "source_sha256": "6876f3e1dedb0ac2c88b921eaf2d22f7336616503232ec6bac827cb8f6fc2bd6",
+          "asset_sha256": "072d75765ac98b236540e4c8964eea5e74605b08d90d0cf564f0c5c783fdc90b",
+          "original_asset_sha256": "6876f3e1dedb0ac2c88b921eaf2d22f7336616503232ec6bac827cb8f6fc2bd6",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_380ae7ad401c65820602fb604c64c496",
+          "source_sha256": "a739f566a0dd4e8f0837e9aa4483fb124a18edfe935753d5f7c18eef8b8560e5",
+          "asset_sha256": "380ae7ad401c65820602fb604c64c496117e76a9b290829bf301f781e2a81454",
+          "original_asset_sha256": "a739f566a0dd4e8f0837e9aa4483fb124a18edfe935753d5f7c18eef8b8560e5",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_5a1cdacd6cbe7866e2f460e3637c53ef",
+          "source_sha256": "a66f720200f1ac11920d135cdfeb568eb1db7d18e2bb8170368a68c995943a69",
+          "asset_sha256": "5a1cdacd6cbe7866e2f460e3637c53ef0d794e8dbde9682cd7b1ab5940037cd1",
+          "original_asset_sha256": "9b7337422adb2073b727216efb7f1a908141c1e1c71d892da120c22e23e7d536",
+          "page_number": 14,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_58fe1226f75e4b2fe966bf7b51587638",
+          "source_sha256": "a66f720200f1ac11920d135cdfeb568eb1db7d18e2bb8170368a68c995943a69",
+          "asset_sha256": "58fe1226f75e4b2fe966bf7b51587638a79eb1e41fef26097d4b8d20e7ac0b57",
+          "original_asset_sha256": "05e0eb48a6211d46262e876e6235a2f00710f97a15c836c7677b475846373e4e",
+          "page_number": 14,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_6dab49e049827916732ebfe07ff779ab",
+          "source_sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+          "asset_sha256": "6dab49e049827916732ebfe07ff779ab29f3cd82f2a6963f2cfa45453aa70be0",
+          "original_asset_sha256": "80497a089ea2ffb90b0139f648762d5e85f19e808e78f0de91684619c98af09f",
+          "page_number": 16,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_3b7a7f1af7e2bada309918a055751754",
+          "source_sha256": "f9647d986f3cc6e18fdf5c8cb06e873a7036f6ac5e4f402cd302d7ba6e31fee8",
+          "asset_sha256": "3b7a7f1af7e2bada309918a0557517545430d9f971953f826e0069d72306085e",
+          "original_asset_sha256": "0a0e23de6a36be8a6d3bd49ae53c27cdd7a83abf9d9d9c9fbadaf75ebe14d007",
+          "page_number": 16,
+          "kind": "native_image"
+        }
+      ]
+    },
+    {
       "code": "ND",
       "citations": [
         {
@@ -4390,6 +4675,84 @@
           "asset_sha256": "2078e2cb9d0d4fa57f4cea0c4119aacdc0b4f8b56d7cf8ac7adf51e756053381",
           "original_asset_sha256": "945d9036da18cecbd8cdaa2d168b0fd787a158b31c86360b902513033c0f28a0",
           "page_number": 8,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "NM",
+      "citations": [
+        {
+          "title": "NM: mvd realid adult front.jpg",
+          "url": "https://realid.mvd.newmexico.gov/dist/images/compliant-fully.jpg",
+          "sha256": "62cfd82b6546fb1e1428ccc4db2541501d5929d9eab581cf4f8ec66474e154ae",
+          "retrieved_at": "2026-10-26T20:15:01.632659+00:00",
+          "publisher_host": "realid.mvd.newmexico.gov",
+          "publisher_jurisdiction": "NM",
+          "discovery_jurisdiction": "NM",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NM: mvd standard adult front.jpg",
+          "url": "https://realid.mvd.newmexico.gov/dist/images/NM_Adult_StandardDL_front.jpg",
+          "sha256": "aa4d957675a51bf8f14aa1a4143823cdc414c68a5c7121b95c659dd58887b95a",
+          "retrieved_at": "2026-10-26T20:15:03.460743+00:00",
+          "publisher_host": "realid.mvd.newmexico.gov",
+          "publisher_jurisdiction": "NM",
+          "discovery_jurisdiction": "NM",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NM: dps 2023 instructor training.pdf",
+          "url": "https://www.dps.nm.gov/wp-content/uploads/2023/11/Instructor-online-Training-November-2023.pdf",
+          "sha256": "2b8cee306f4be68408935b9f6435886ce281222e0fb0665b7ad093ee748488eb",
+          "retrieved_at": "2026-10-26T20:14:09.448280+00:00",
+          "publisher_host": "www.dps.nm.gov",
+          "publisher_jurisdiction": "NM",
+          "discovery_jurisdiction": "NM",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 120,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_2add2cea02a508c44fea43d5575837b8",
+          "source_sha256": "62cfd82b6546fb1e1428ccc4db2541501d5929d9eab581cf4f8ec66474e154ae",
+          "asset_sha256": "2add2cea02a508c44fea43d5575837b848c89eeb8bcfaac9fefb7775ad2f3d98",
+          "original_asset_sha256": "62cfd82b6546fb1e1428ccc4db2541501d5929d9eab581cf4f8ec66474e154ae",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_0c939cd5ef6da9f223757f4361141f41",
+          "source_sha256": "aa4d957675a51bf8f14aa1a4143823cdc414c68a5c7121b95c659dd58887b95a",
+          "asset_sha256": "0c939cd5ef6da9f223757f4361141f41e8b644a078ea04516c4383ae146ac6ff",
+          "original_asset_sha256": "aa4d957675a51bf8f14aa1a4143823cdc414c68a5c7121b95c659dd58887b95a",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_92464888f64ce548945f8a0b76e35d48",
+          "source_sha256": "2b8cee306f4be68408935b9f6435886ce281222e0fb0665b7ad093ee748488eb",
+          "asset_sha256": "92464888f64ce548945f8a0b76e35d482dc82ea169c7032932496a5b6994f23b",
+          "original_asset_sha256": "0dad31f39c5d0b0de8db3c8959d01c8e3bc31c285a889c01efdc658f9a092659",
+          "page_number": 85,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_de7064ee441453af7a0c9e94b7776b3c",
+          "source_sha256": "2b8cee306f4be68408935b9f6435886ce281222e0fb0665b7ad093ee748488eb",
+          "asset_sha256": "de7064ee441453af7a0c9e94b7776b3cb11301409f9a54b3c8e3fa801735be63",
+          "original_asset_sha256": "fa5a18282ef7cda5d6b0066494edd1226f98b81ad828059c59b9c98b21fad212",
+          "page_number": 85,
           "kind": "page_plate"
         }
       ]
@@ -5757,6 +6120,456 @@
       ]
     },
     {
+      "code": "SD",
+      "citations": [
+        {
+          "title": "state security features",
+          "url": "https://www.sd.gov/sys_attachment.do?sys_id=9f254a244700e210a497127ba26d4378",
+          "sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "retrieved_at": "2026-10-26T20:15:11.599377+00:00",
+          "publisher_host": "www.sd.gov",
+          "publisher_jurisdiction": "SD",
+          "discovery_jurisdiction": "SD",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "state 2026 dl specimen",
+          "url": "https://news.sd.gov/sys_attachment.do?sys_id=2596c52247474350fc1303dc426d439f",
+          "sha256": "e2220fe60bb783b29bdac80bab8299424e3a3b98a84c76679943dbd7f3f8baec",
+          "retrieved_at": "2026-10-26T20:19:55.749342+00:00",
+          "publisher_host": "news.sd.gov",
+          "publisher_jurisdiction": "SD",
+          "discovery_jurisdiction": "SD",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_b96051daff8123070572ba09d93f18ba",
+          "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "asset_sha256": "b96051daff8123070572ba09d93f18baacc007d69d0f97a165b30a6042c8f019",
+          "original_asset_sha256": "57d2da93bfbfd055f2625418ab7292e43f320aeb81cd1df6ff60eb58f1321530",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_defa715725a6fa3ed75efcc9698c31ea",
+          "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "asset_sha256": "defa715725a6fa3ed75efcc9698c31ea32df512b75c6ade90aaf9bf5fe352566",
+          "original_asset_sha256": "64bf4061b91349bfa67cfb330b5a61328dc72fa2a6607fa0172ec7b664332ac9",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_43f05e3783d793e6744883b8a5d09585",
+          "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "asset_sha256": "43f05e3783d793e6744883b8a5d09585e871f723fff7c5fe973c62979a3f3020",
+          "original_asset_sha256": "ea822fb58012def3f3b188a8f6fc07d635d582a84b405017ff476a5f76cf283b",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_753e1e89d8c2370661756cdcf94af6c2",
+          "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "asset_sha256": "753e1e89d8c2370661756cdcf94af6c22162e7dc8613dbde1be7f0a28fd17594",
+          "original_asset_sha256": "30d99a0cf9efac69490ace0e8ba3e81acbf7f9a2840edf0873971735901eccdc",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_31352f1536236022036604e5921f35e3",
+          "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "asset_sha256": "31352f1536236022036604e5921f35e3f855a00fac2c81f1d906a677600bca54",
+          "original_asset_sha256": "492ae6f84ff3c4530667fc91990c60cd53fafe1a3323ecaee5d939396b4a11e8",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_da7626274e747a060bfd6bc9b2ac1268",
+          "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "asset_sha256": "da7626274e747a060bfd6bc9b2ac1268db1d68a0916c9e6569bec27b2e760218",
+          "original_asset_sha256": "4720f824bf04bd0e5dbd28fe36c5fd09d2ef92c2ebc1460272b574f42901f01e",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_9d4297b054bdae2661f480d027ad2c37",
+          "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "asset_sha256": "9d4297b054bdae2661f480d027ad2c375a664421534cf7af59c6b91b14fe0316",
+          "original_asset_sha256": "c8b589398db178f667ae21db90cd32ec6610ffe6db0432d2df4bf6e726ee6292",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_600fc2f8ae4e14200f51ecdd7d188117",
+          "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "asset_sha256": "600fc2f8ae4e14200f51ecdd7d18811756ff53177a3eb8cc970693bca218c5bd",
+          "original_asset_sha256": "068d5d7b9af490572cff602c903e3e6fb3e0ddb759f2a4b1fca0fed2c6aed9f8",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_850250ee57bb3376f1291191c4196819",
+          "source_sha256": "e2220fe60bb783b29bdac80bab8299424e3a3b98a84c76679943dbd7f3f8baec",
+          "asset_sha256": "850250ee57bb3376f1291191c41968199023014ef7dfb9734e80d4b6f95e1f1a",
+          "original_asset_sha256": "e2220fe60bb783b29bdac80bab8299424e3a3b98a84c76679943dbd7f3f8baec",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_7a880e57f5bd14d4bd996fb8a695b5e1",
+          "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "asset_sha256": "7a880e57f5bd14d4bd996fb8a695b5e19b02373275b3ae3f99fc6bf6b7547c37",
+          "original_asset_sha256": "e6b2570141637bdc6b6c5f258c2204825f367d01d960913621f71d47c39d8e5e",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_1efe6a46ad91980775ad3ba48ea63cd0",
+          "source_sha256": "204b92be01c8ab991b094e401fb9de57e8cda71c85ca3813f53a920e903b31c6",
+          "asset_sha256": "1efe6a46ad91980775ad3ba48ea63cd0898493a48e992693c1f134a6d866ae81",
+          "original_asset_sha256": "87d342bbc462b8d80ec44e8ca1d19b2d842c9ab53d14ba1ff8cf774e58442508",
+          "page_number": 2,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "TN",
+      "citations": [
+        {
+          "title": "vanderbilt driver manual",
+          "url": "https://www.vanderbilt.edu/isss/wp-content/uploads/sites/134/2026/03/DL_Manual.pdf",
+          "sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "retrieved_at": "2026-10-26T20:25:19.513381+00:00",
+          "publisher_host": "www.vanderbilt.edu",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "TN",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 135,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "ut mtas 2025 realid",
+          "url": "https://www.mtas.tennessee.edu/system/files/mrln/mknowledge/main/MTAS%20Tennessee%20REAL%20ID%202025.pdf",
+          "sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+          "retrieved_at": "2026-10-26T20:25:21.357130+00:00",
+          "publisher_host": "www.mtas.tennessee.edu",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "TN",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 17,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "safety current 1",
+          "url": "https://www.tn.gov/safety/driver-services/helpful-information/real-id/_jcr_content/content/tn_accordion_copy_co/parsys_what_does_a_realidcompliantdriverlicenseoridcredentiallooklike/tn_columnctrl/column_parsys0/tn_textandimage_copy/image.img.png/1724708434491.png",
+          "sha256": "8b56f55d62b235cfb80d48f5b142b8e2bb3cec9cf7735ec8cacde43394b0c6ca",
+          "retrieved_at": "2026-10-26T20:27:31.182321+00:00",
+          "publisher_host": "www.tn.gov",
+          "publisher_jurisdiction": "TN",
+          "discovery_jurisdiction": "TN",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "safety current 2",
+          "url": "https://www.tn.gov/safety/driver-services/helpful-information/real-id/_jcr_content/content/tn_accordion_copy_co/parsys_what_does_a_realidcompliantdriverlicenseoridcredentiallooklike/tn_columnctrl/column_parsys1/tn_textandimage_copy/image.img.png/1732294432238.png",
+          "sha256": "918aeef0b3658adfbc868746a3d073cc444281fe1b16a6245a4474b1f3e51111",
+          "retrieved_at": "2026-10-26T20:27:31.187386+00:00",
+          "publisher_host": "www.tn.gov",
+          "publisher_jurisdiction": "TN",
+          "discovery_jurisdiction": "TN",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_922b6e428cd8113b7fffcae74a63ea43",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "922b6e428cd8113b7fffcae74a63ea431dbd20c6140369ea97300c8993b86615",
+          "original_asset_sha256": "57d16280996898d7ed12f4d56ceadd3bab17599898bb0ce4a6d74f3e94664c6c",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_4ea6cca891e658b61be46c95620aa0da",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "4ea6cca891e658b61be46c95620aa0da525d1c0db07e9bbc4dba0a189ec4dfba",
+          "original_asset_sha256": "6b7279c6322bfe44fc847b4b029e2a80732b9b7affa3be7f60656dd3152954d6",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_98528a71e9cc1f878747210985a02f72",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "98528a71e9cc1f878747210985a02f723c8db8eb106489178f2df68b1d788d04",
+          "original_asset_sha256": "b9feabb89d86c6a96511676f6a99c7331668a8b7b03dcc19694a2b1b3ef9b446",
+          "page_number": 4,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_9c3594b310e98e5f6b9eb667f910a85e",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "9c3594b310e98e5f6b9eb667f910a85ec71f25c2ff70345e5009f9c930dd3003",
+          "original_asset_sha256": "e2ee17f5d104ea88ae84d28fcdfc4b094d886596f4aa03f5f214edc0b25f4cd5",
+          "page_number": 16,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_71315fc6e7c350d76830433b14ef85c4",
+          "source_sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+          "asset_sha256": "71315fc6e7c350d76830433b14ef85c42499b66ddbd1e7ebe9e33af2899ebcf8",
+          "original_asset_sha256": "4267139a45c86f620bda06dad3f6f5c4dfc8e5d2a20cd3c61e6b0fe4ca8dd5b0",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_286476dadc8d1497fae8de035c82344d",
+          "source_sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+          "asset_sha256": "286476dadc8d1497fae8de035c82344d5ad243a4bb2efcf3b656691ca772e1d7",
+          "original_asset_sha256": "a52bc36998aa1c1a05f9615b153d4cdc7bf461e345eaa9bedf10ebff33e8530f",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_5e65ee1415bc18bbed72669558420604",
+          "source_sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+          "asset_sha256": "5e65ee1415bc18bbed726695584206046cca1ce56cd10d1deb80c7dfb419497c",
+          "original_asset_sha256": "f1d552ae0a4a970041408c876c2e321f71e38be09856242b07f85208a21a5a42",
+          "page_number": 13,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_81015c8ebee1dc2f91d1bc7760fb78d2",
+          "source_sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+          "asset_sha256": "81015c8ebee1dc2f91d1bc7760fb78d2067e82ef492101c661ed750dc95a8b40",
+          "original_asset_sha256": "5c8302d465fa2f29d0d9555b0f52a97d413579d0150b79f4216b87f01478002b",
+          "page_number": 13,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_8076a3dcb96f9d8ab8aee47931972c05",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "8076a3dcb96f9d8ab8aee47931972c05e215f4435fa6463c2e843a78d26c73d7",
+          "original_asset_sha256": "ed1e6272c44c61eff4c375715ff7fd8d85c8529d08ed95861bf1235a8b8a1785",
+          "page_number": 29,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_b0e6ce6afaf5a846fe83d90c8db1d9e4",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "b0e6ce6afaf5a846fe83d90c8db1d9e44ba40f35475d707fa23b08807ecd54ee",
+          "original_asset_sha256": "3a6dfb40550aa3c5641bd255ad339487f8e2a965d4f3ee4e70594aad8d6a929b",
+          "page_number": 29,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_21261d8cdcd39d002e647687c580d5e1",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "21261d8cdcd39d002e647687c580d5e160f4deb2fc6bca4f4e05d55e5e66e46a",
+          "original_asset_sha256": "2a231d4d465aaa9c8557e9fe18fafbdf9499b065989187fcb20e3eaa8449c831",
+          "page_number": 29,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_59ef269cf9710267e1a59c74a5060749",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "59ef269cf9710267e1a59c74a5060749511681448957fa6a8b871c00e9de62dd",
+          "original_asset_sha256": "39bb3ff65a4094583d80b4ae52b04c157870e418eeebd6dfbe574aee4f6b53af",
+          "page_number": 34,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_4dd167163bbf221055ad6b8441fd46a7",
+          "source_sha256": "8b56f55d62b235cfb80d48f5b142b8e2bb3cec9cf7735ec8cacde43394b0c6ca",
+          "asset_sha256": "4dd167163bbf221055ad6b8441fd46a729a7641d422589075dcec562d6257ac9",
+          "original_asset_sha256": "8b56f55d62b235cfb80d48f5b142b8e2bb3cec9cf7735ec8cacde43394b0c6ca",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_f7d58380479f9167341faa9e8a19131a",
+          "source_sha256": "918aeef0b3658adfbc868746a3d073cc444281fe1b16a6245a4474b1f3e51111",
+          "asset_sha256": "f7d58380479f9167341faa9e8a19131ad763ff72a8e5be8f6010da1805b08800",
+          "original_asset_sha256": "918aeef0b3658adfbc868746a3d073cc444281fe1b16a6245a4474b1f3e51111",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_d7950860f82dfc4f5d6378ec9247b82b",
+          "source_sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+          "asset_sha256": "d7950860f82dfc4f5d6378ec9247b82b6649f311dd167a5921ecf4eb28b91f41",
+          "original_asset_sha256": "87d549499ccee34c7921ac99948299f70516764e5bdd61bdaae0ae042d19cdf4",
+          "page_number": 3,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_7afc4f82096ef1644c7b54675cfadf38",
+          "source_sha256": "dc088a97b8b831e448bc9974b89703887fbd07856e39b77d47191d500fb66f13",
+          "asset_sha256": "7afc4f82096ef1644c7b54675cfadf388a18db8a94c75af1c16fce4570b82ffe",
+          "original_asset_sha256": "b7cecefcf743fdfa506da1a38e5642100446485930b3ec4253ddc3d3a6ac8657",
+          "page_number": 13,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_bbf74ac29803b5529e57b7d9fd3b634d",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "bbf74ac29803b5529e57b7d9fd3b634d8d4bffa303ec45ff2d3e7001b098d1a3",
+          "original_asset_sha256": "f104aee8ff0fef1a4a588e11808982a3bf32b775312f464a66880511cb07a955",
+          "page_number": 3,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_41916c52359d25b06c01a6603a467ef7",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "41916c52359d25b06c01a6603a467ef710cc6df7a8b1dba3b8296e4f3b97e314",
+          "original_asset_sha256": "72d787c4a1836c91d80bc8a6532709c339e4801e29b81da8ce4e32274d7b705f",
+          "page_number": 4,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_89f2501d73e6649901dfc3170e21ce6b",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "89f2501d73e6649901dfc3170e21ce6b491ae94fd8b04bba5618fb9951b69b95",
+          "original_asset_sha256": "e207f96ff251561942c80348dc6c415757093ce72bbcddc5c5e41a67e95d537a",
+          "page_number": 16,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_de48e8a02691705fc3c94d995cb2d0ce",
+          "source_sha256": "8afece9c21d2355cbfeb79ec5174f6ec598d95b092962676a9637b7ce1b038dd",
+          "asset_sha256": "de48e8a02691705fc3c94d995cb2d0ced1ecf9570306e00c991a633feba48abd",
+          "original_asset_sha256": "ab7d1ddf2349fca86fd0e9084ebcd57d7067dfac7914a5df60921f6debf18055",
+          "page_number": 29,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "UT",
+      "citations": [
+        {
+          "title": "waytoquit 2020 retailer guide",
+          "url": "https://s3.amazonaws.com/waytoquit.com/wp-content/uploads/20200622101350/UDOH_Retailer-Ed.-Guide_Final_June-20201.pdf",
+          "sha256": "a3bbf55830406b091d1fb84073bbfbb9c4285da35202905fff9f3413857ebcfb",
+          "retrieved_at": "2026-10-26T20:21:54.479078+00:00",
+          "publisher_host": "s3.amazonaws.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "UT",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 37,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "ksl 2021 adult front",
+          "url": "https://img.ksl.com/slc/2827/282743/28274385.jpeg",
+          "sha256": "6c505172aebaaad89c553b3e6a30fc1939687616944c4d99e535babacebf8019",
+          "retrieved_at": "2026-10-26T20:19:49.882692+00:00",
+          "publisher_host": "img.ksl.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "UT",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "ksl 2016 front",
+          "url": "https://img.ksl.com/slc/2595/259531/25953102.jpg",
+          "sha256": "6574953010af42b86b2569a41cd15182e6babe6643e6d4a86338b71483803191",
+          "retrieved_at": "2026-10-26T20:20:52.118024+00:00",
+          "publisher_host": "img.ksl.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "UT",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_b1c96ae39256effc6ed48297d814f324",
+          "source_sha256": "a3bbf55830406b091d1fb84073bbfbb9c4285da35202905fff9f3413857ebcfb",
+          "asset_sha256": "b1c96ae39256effc6ed48297d814f324329b46c9a608f579721cbb6d75b93461",
+          "original_asset_sha256": "c1e60044b6ac50f0e300d92d3bb63c47b526fe1d0f43d1f10e1e86c48051914b",
+          "page_number": 14,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_c637676436ee016407208864f8a9db58",
+          "source_sha256": "a3bbf55830406b091d1fb84073bbfbb9c4285da35202905fff9f3413857ebcfb",
+          "asset_sha256": "c637676436ee016407208864f8a9db5832681e79a0ff342d6b01817a7e6caae5",
+          "original_asset_sha256": "0ec6a50404ad5e1469db838ef295f210694ce522a2997e3d7e7622a455ef72cb",
+          "page_number": 14,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_c0866aee3228d784bad207b96bc64732",
+          "source_sha256": "a3bbf55830406b091d1fb84073bbfbb9c4285da35202905fff9f3413857ebcfb",
+          "asset_sha256": "c0866aee3228d784bad207b96bc64732116ad572a66a3400ddbff90372ff75b5",
+          "original_asset_sha256": "6baaa6d4197407726af12eb1c8a9a49675d2c772e137c847b2446a415319f484",
+          "page_number": 13,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_08be7b3a7235dadffc4bca804802d7e8",
+          "source_sha256": "a3bbf55830406b091d1fb84073bbfbb9c4285da35202905fff9f3413857ebcfb",
+          "asset_sha256": "08be7b3a7235dadffc4bca804802d7e8cf9acff922350d5306548797af88b07a",
+          "original_asset_sha256": "9f6b311c8c54d3a0a8b25bd1f8c9540b982d949bdc3ad0d48ff3700388afe5e1",
+          "page_number": 13,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_b61e3ea9f61594d646fab196d1d2fdd6",
+          "source_sha256": "6c505172aebaaad89c553b3e6a30fc1939687616944c4d99e535babacebf8019",
+          "asset_sha256": "b61e3ea9f61594d646fab196d1d2fdd6bbbf2396a8b7d2e5ba479841143ba964",
+          "original_asset_sha256": "6c505172aebaaad89c553b3e6a30fc1939687616944c4d99e535babacebf8019",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_81b1a9370679bb6c186fa3465cc7fdd5",
+          "source_sha256": "6574953010af42b86b2569a41cd15182e6babe6643e6d4a86338b71483803191",
+          "asset_sha256": "81b1a9370679bb6c186fa3465cc7fdd5fddd11c29ae1ae2d988ab20f47fba5a7",
+          "original_asset_sha256": "6574953010af42b86b2569a41cd15182e6babe6643e6d4a86338b71483803191",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_69439652d9420d367feea8b766c55a97",
+          "source_sha256": "a3bbf55830406b091d1fb84073bbfbb9c4285da35202905fff9f3413857ebcfb",
+          "asset_sha256": "69439652d9420d367feea8b766c55a9712128eafce884a3a6f56df95a20d67e0",
+          "original_asset_sha256": "c5e1d1df601821cc0cb8e846061a6360124b7f25699be86f551ffe5a51bf7eaf",
+          "page_number": 13,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_5b533d183d670eee9093d02f78512747",
+          "source_sha256": "a3bbf55830406b091d1fb84073bbfbb9c4285da35202905fff9f3413857ebcfb",
+          "asset_sha256": "5b533d183d670eee9093d02f78512747547c5ab654f0c8df0fa5d659da96100f",
+          "original_asset_sha256": "0bcf822082ad289146192ad867bf7f379abdfd69f9814859077f59d7d48bfdf0",
+          "page_number": 14,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
       "code": "VA",
       "citations": [
         {
@@ -5916,6 +6729,300 @@
           "asset_sha256": "d49dbb98e3e91491a3022d1c2c9f1f15a4e352a2240e2dfa789189b7994dfdfe",
           "original_asset_sha256": "ec3f23e29756e0aa3ff94715c1cb28448bec4184f67032597400dd20d1dad9a3",
           "page_number": 13,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "VT",
+      "citations": [
+        {
+          "title": "VT: epic historical specimens.pdf",
+          "url": "https://archive.epic.org/privacy/surveillance/spotlight/0907/vermontsample.pdf",
+          "sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "retrieved_at": "2026-10-26T20:20:09.233101+00:00",
+          "publisher_host": "archive.epic.org",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "VT",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 4,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "VT: dmv license comparisons.pdf",
+          "url": "https://dmv.vermont.gov/sites/dmv/files/documents/VL-011-License_Comparisons.pdf",
+          "sha256": "0ed0148982b43b1e4dc602b34336dca78ae2417b6bfbea76ffc4d739db3901d3",
+          "retrieved_at": "2026-10-26T20:20:06.978995+00:00",
+          "publisher_host": "dmv.vermont.gov",
+          "publisher_jurisdiction": "VT",
+          "discovery_jurisdiction": "VT",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 3,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "VT: legislature 2019 design.pdf",
+          "url": "https://legislature.vermont.gov/Documents/2020/WorkGroups/House%20Corrections%20and%20Institutions/Department%20of%20Motor%20Vehicles/W~Wanda%20Minoli~Vermont%20Driver%27s%20Licenses%20and%20ID%20Cards~4-4-2019.pdf",
+          "sha256": "7992ca6bbefb5aedd48dc202c325eb1b353879d480d2c3e4a1707d8f56400a95",
+          "retrieved_at": "2026-10-26T20:19:44.970190+00:00",
+          "publisher_host": "legislature.vermont.gov",
+          "publisher_jurisdiction": "VT",
+          "discovery_jurisdiction": "VT",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_b679c13af8d3c18a52b95e7beb9899c1",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "b679c13af8d3c18a52b95e7beb9899c1eb901493f7e80ebf8bd1fa8744345c2a",
+          "original_asset_sha256": "c10094d2c80d6502289a5cea06b2057a1b8f12f974e5cb9ddabc8a7cc6277cf8",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_68b421ac8bc9ba9747c8fae2f610c574",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "68b421ac8bc9ba9747c8fae2f610c5745a3cd878105491157e6fe3fe0589c94b",
+          "original_asset_sha256": "db1176e44a3ca0b775eded4a55438e27bfb6e21aeb85fbb46850245c46794d53",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_fc0b2bc7223cb38e92e77de94aa10a67",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "fc0b2bc7223cb38e92e77de94aa10a673059b5b3d2cc11ec0c3bc8f2f4ace665",
+          "original_asset_sha256": "02597fff3f903e23e856693a00946c9307692757d34d9a7b3848bd4836e74655",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_9e7eff46a4dedf63d2da8c6f923d3a27",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "9e7eff46a4dedf63d2da8c6f923d3a274c0295528b1065faed88fcd06d7627c7",
+          "original_asset_sha256": "93439fa4b6796b0a347e38c053308930a5dfa10d3fec0582d98fdf47b6d97582",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_bc9535704cb37e16ec592635c7a23f2d",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "bc9535704cb37e16ec592635c7a23f2dcd5d9ca0e1dfa14beecae6e1d57fa09c",
+          "original_asset_sha256": "d68b7d608cc864f9f547d40e6053e23d5debd975a33d1a8542293867a0f6e791",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_b40c59b9d6d0a3ab4be1645b5fcb26ed",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "b40c59b9d6d0a3ab4be1645b5fcb26ed934904c72c0710c110fc62be7b520a74",
+          "original_asset_sha256": "c66c4eaba68591b3c7e5fcd80adb5f933bbb9b3c1c09bc5fd68c06ba099248ea",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_a2068eb753a6f4e09e77b640f8acea96",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "a2068eb753a6f4e09e77b640f8acea9641adb37867adb3504af84c0b827c8a9e",
+          "original_asset_sha256": "0c9d7c8ca9f83af5d62ac0d203ec88192e8394b3107648c7694dd123c2a19d62",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_0d810840e9b0746bfb0638cbff99de04",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "0d810840e9b0746bfb0638cbff99de042443402cb106fbeae573604ac5fba450",
+          "original_asset_sha256": "9eb58274e8236ee412ab8680f19994129766f4bb72e50f7a24b28bb3f00f01bf",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_ab639916b50a89a1f0041507eef6ce11",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "ab639916b50a89a1f0041507eef6ce1154be5965b6a9182f9c23706e2a3a8b1c",
+          "original_asset_sha256": "bf811831c34b770646353cf775227eb7149789b98d56f8323d7c4e045d88b2f0",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_dafb378bc1c153ff76a34eb3e4c190e8",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "dafb378bc1c153ff76a34eb3e4c190e80b19a84b307b8c95a89d4de5f0ebd58b",
+          "original_asset_sha256": "aaf0a1e3ab929bda589187e611392c4e78f132140ad3ef1ff958789c036f148f",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_02433b782e2e163bf3e1c3fc37b883f0",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "02433b782e2e163bf3e1c3fc37b883f0b4564226e4d90f56955a2bd249346c7a",
+          "original_asset_sha256": "af8d7b3bb23c341302fe08b4d3c750f52965a594134c6755068bc2f4dd75888f",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_05125e3069f05be16d6b8ab49760ca66",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "05125e3069f05be16d6b8ab49760ca66685388d253db371a89f14b9748a178c2",
+          "original_asset_sha256": "8ca67cc98ca262f03a7b83a90796d17cdf73b830825db35dd086107abb8e3098",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_4cb7d73dd5ff02b636dc68da9117a88b",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "4cb7d73dd5ff02b636dc68da9117a88b5400b61947a3e9ed0de12c126b28191e",
+          "original_asset_sha256": "b817431a0eee5d207c03d55fc418448915cf646219e347abdce3429a93a316f2",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_c9863f568aed18766f3537ce2e377d22",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "c9863f568aed18766f3537ce2e377d227f1456891cca3e17411c009cb00aab9c",
+          "original_asset_sha256": "ec404c8c3eef903edc54544dc99f98d322c0442abb27c973dd73e3fec756fe31",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_eceeaf941c62aa9a3e1f77cf17eb373a",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "eceeaf941c62aa9a3e1f77cf17eb373a71d88a6154c4ca1bbb4b5b68cee3d39b",
+          "original_asset_sha256": "3d64be5111d8cd9edead7847c8e54a1126e795e507ffc0a110eabc733ba2bfe5",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_eb46ea91070276cd54b9b898424d1f88",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "eb46ea91070276cd54b9b898424d1f88f527b7c4b8c6fa315ed83d166081cd62",
+          "original_asset_sha256": "abde2d33fad74ff8219a45878832095f830cc0fd0e78035627b1bcadf6e720a8",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_08e63cf22016ad4b87359f290dd98031",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "08e63cf22016ad4b87359f290dd980313ad5e14998fc52cd079490b80331f95e",
+          "original_asset_sha256": "addccc73a0f303ab42f73e0e23241e51da897192e014a470a7bcc15af3b46adf",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_0fba48d3e9c88f35408b874b049b0713",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "0fba48d3e9c88f35408b874b049b0713aa512b90a2a254f4225bc6de07dedd68",
+          "original_asset_sha256": "f030b86a275ded1cd3e9be39d59f2152c451e2f5393c90b4f633e20e83b0dc70",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_339f6bd43b0d82fe388ceee53e721000",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "339f6bd43b0d82fe388ceee53e7210006b2291c7220f8a8c8d02a00e46310196",
+          "original_asset_sha256": "6f3ae3dc902a98ae98d7a851f0cbd34f03301613f1c428ce32714c98592299a5",
+          "page_number": 4,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_fd1b4435145774c7d5177769dec66983",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "fd1b4435145774c7d5177769dec66983a36a8c166b5b10bd877f58344c39285a",
+          "original_asset_sha256": "f81bdb9c51199765e646f52145c5905b3ab26ea3b0d953a6d0676cfb35982a95",
+          "page_number": 4,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_24d19b28e32c9d88cd6c69a9322dacdd",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "24d19b28e32c9d88cd6c69a9322dacddfe3c8ffb59e560eedc9176bf2380511e",
+          "original_asset_sha256": "7b4191f9460d169f8994d9ccf9320456d8a439eca0d906dae23186e9c889a62c",
+          "page_number": 4,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_d4406956cebf0bc6a1810ec04a5e408f",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "d4406956cebf0bc6a1810ec04a5e408fd695d80cca34a62a8eb0a6f25d5a3b8c",
+          "original_asset_sha256": "03539c5983dedf0514e7e8a51c71980d27367335a5452438df1cc249e10c2259",
+          "page_number": 4,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_b10a2785763022b977a6c7839779c9c0",
+          "source_sha256": "0ed0148982b43b1e4dc602b34336dca78ae2417b6bfbea76ffc4d739db3901d3",
+          "asset_sha256": "b10a2785763022b977a6c7839779c9c08cfeb170d04aa2db0decd549362491fc",
+          "original_asset_sha256": "20dc15cab575ec29707df5b19595b8d41e4db02e71662e52aacb1855618aaea0",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_2af877ca7c2708751c9cbafa25aeff9c",
+          "source_sha256": "0ed0148982b43b1e4dc602b34336dca78ae2417b6bfbea76ffc4d739db3901d3",
+          "asset_sha256": "2af877ca7c2708751c9cbafa25aeff9c6b5fea3aa81faff58d732c91afb13535",
+          "original_asset_sha256": "31b2bd1fb020f8b762e8fc17fc94455a91751c3d5f5563a4b06216518882d447",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_3c2ab511136739dde0848bced52f878f",
+          "source_sha256": "0ed0148982b43b1e4dc602b34336dca78ae2417b6bfbea76ffc4d739db3901d3",
+          "asset_sha256": "3c2ab511136739dde0848bced52f878f4a79f5092de1110be293011c5b93b172",
+          "original_asset_sha256": "9cf2372c50cdf76c0f3525be1beafe0a47346cb1788748e9e651c3c93266127b",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_22edc21813e935ab79c6025cbf72ab53",
+          "source_sha256": "7992ca6bbefb5aedd48dc202c325eb1b353879d480d2c3e4a1707d8f56400a95",
+          "asset_sha256": "22edc21813e935ab79c6025cbf72ab539eaded6e99edcb840810ec38f634437f",
+          "original_asset_sha256": "9427c8881041c77174b76389d89569f6b40b2bf52ab267ba902343b7bdb0e929",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_66e3785109c9b0d33b2853bec40f1e4f",
+          "source_sha256": "0ed0148982b43b1e4dc602b34336dca78ae2417b6bfbea76ffc4d739db3901d3",
+          "asset_sha256": "66e3785109c9b0d33b2853bec40f1e4fda1306c40074177aae9b787d3a486dd8",
+          "original_asset_sha256": "1908b4894af61a6b89c019af8e718199383ca07deba4e10afa576cc9c81053c3",
+          "page_number": 3,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_b64100ae4ed2725caf1c5d6a628f9b72",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "b64100ae4ed2725caf1c5d6a628f9b7218154a8b40e0e55aa3dc3dc11706d737",
+          "original_asset_sha256": "93661d8dfdc116b2e8fa9b27e38f9532b83fd055a5df591e0c8f5ed8d44050b2",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_7f8aad626888d54ffe1af212d9ebec89",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "7f8aad626888d54ffe1af212d9ebec892c174ecb44111931f7939b1d4a81ce93",
+          "original_asset_sha256": "567db8dbfe630d5cc6f92ef4237db84de5d642a5fea323654a5f2bcff555d85d",
+          "page_number": 2,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_6e3550dc7258063a862f536d85c6bed4",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "6e3550dc7258063a862f536d85c6bed4a7c205714cfe90031be4c304a6cc75c7",
+          "original_asset_sha256": "3ed751ca6e95c461f7380b78d0866041c5f733b44d677b8d3e1400a19d14bb7a",
+          "page_number": 3,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_4f9c356291c049de1763df726af4aa24",
+          "source_sha256": "27f7741a1064249d3607c75834693a46e9ab1e97e5b98c82851477ce5d599a02",
+          "asset_sha256": "4f9c356291c049de1763df726af4aa24992c162a8862ca3dd3c5058f3a832ede",
+          "original_asset_sha256": "f5a519166efb065b4e05ba21ce94b284c9ce445df07087fde4632c62f9f657e7",
+          "page_number": 4,
           "kind": "page_plate"
         }
       ]
@@ -6428,6 +7535,212 @@
           "original_asset_sha256": "320feed4e769c6163251d02462cc7240f3d60da0a3f304b3991a0dbbe73963b1",
           "page_number": null,
           "kind": "direct_image"
+        }
+      ]
+    },
+    {
+      "code": "WI",
+      "citations": [
+        {
+          "title": "doj 2023 id check sheet",
+          "url": "https://content.govdelivery.com/attachments/WIDOJ/2023/06/05/file_attachments/2517504/HS138-FAB-ID-062023.pdf",
+          "sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "retrieved_at": "2026-10-26T20:16:36.753905+00:00",
+          "publisher_host": "content.govdelivery.com",
+          "publisher_jurisdiction": "WI",
+          "discovery_jurisdiction": "WI",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "dmv 2023 award front",
+          "url": "https://wisconsindot.gov/PublishingImages/about-wisdot/newsroom/photo-gal/dmv/widl2023.jpg",
+          "sha256": "8824fe4febfa7853c9caeacdb22f42b4c371752d4728889d16a1677ddd7b6a85",
+          "retrieved_at": "2026-10-26T20:16:35.473093+00:00",
+          "publisher_host": "wisconsindot.gov",
+          "publisher_jurisdiction": "WI",
+          "discovery_jurisdiction": "WI",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "dmv id nonexp",
+          "url": "https://wisconsindot.gov/PublishingImages/dmv/shared/O21-ID-nonexp.jpg",
+          "sha256": "db3224efcc423559ca7e8240e596efad08818b6d1baa5ce228c608f18db4a5ee",
+          "retrieved_at": "2026-10-26T20:16:09.669716+00:00",
+          "publisher_host": "wisconsindot.gov",
+          "publisher_jurisdiction": "WI",
+          "discovery_jurisdiction": "WI",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_b72eec76d0cbf0f09c025b2404f492ad",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "b72eec76d0cbf0f09c025b2404f492ad1e45077ca589d4824c34b3c1a101e97e",
+          "original_asset_sha256": "a13c20b7e8dfd02449bd41c8f43432bfcef61dbb8932a51c64a48ef35c01d3d6",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_9d3e7e16cc9ec1ff95537c718d27d7b9",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "9d3e7e16cc9ec1ff95537c718d27d7b9bb02721c470ae481c6662bcd1b1882b8",
+          "original_asset_sha256": "5d3edf9b74d832e04cce1e23c7c8c8771627e4d0c4156d62957b50220de324b2",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_104928d0cff4c82276efe5ac208ad1fe",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "104928d0cff4c82276efe5ac208ad1fe0b04ebd26d6823980c8d27e54b50dd04",
+          "original_asset_sha256": "c8770f1793f78091bf75db0a761bc56ca1efe7eaa2967852c7da352e1862eafc",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_b4b9428f7dacdfe20741304e81b5d304",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "b4b9428f7dacdfe20741304e81b5d3048320ddda24b57f71eeec15b2bd355da1",
+          "original_asset_sha256": "ac47ee41e21d0dff897b80afdcf3752d95604d2b60db0a0e26f62e2f893f18da",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_aeee5a7afbc3ef7c998bf8a4e9053cb9",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "aeee5a7afbc3ef7c998bf8a4e9053cb921bc3b3ed345787f693609bc9bb7557b",
+          "original_asset_sha256": "3442969794880168c7cfdae0d64f2b9ded037b05fdc5bc547a00278d110ff05b",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_909fccc2cd204665ea2505f3ab534660",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "909fccc2cd204665ea2505f3ab534660debb3abf1e1a9422bfc08c1726023356",
+          "original_asset_sha256": "c63309ba5409ef500f904000891e80f1f754d803f8e118f2dd303eafa12bc3e2",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_29f23f83930edf68aababec5278ed138",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "29f23f83930edf68aababec5278ed138431c6928af765ba3c8bd252cfb118f2a",
+          "original_asset_sha256": "4c6d9bd6baec1be3cee00289eeaab851b95b80c1797a92c09c4c313e9ff0fc73",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_8116c008bc3a77075f5df043ca5bd557",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "8116c008bc3a77075f5df043ca5bd557ad4538b7091171bb09b0c0dccf45483b",
+          "original_asset_sha256": "e1180499f2410a60a53f1db7d35e4142ae55c98b86f1641d804a059f0e668cd3",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_2e813b8bcf58036b7c98f94e9929012e",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "2e813b8bcf58036b7c98f94e9929012ef4278a970fbc63a643ba0c5b71745e35",
+          "original_asset_sha256": "d9891094bf57b879f1deac8b5f6303351de3fa7b53943e23a5208a8bbc8ce997",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_455b768d00ab2d27b69dabb760f3f580",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "455b768d00ab2d27b69dabb760f3f580a830f815b6566810573c2a5bb96305cd",
+          "original_asset_sha256": "c9817108b08934c068c7952d93033cefb51db81aff3f658f3739f8ecb074d24b",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_bfba4c7db5aa0be0854d08fec9666408",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "bfba4c7db5aa0be0854d08fec966640834b502088bd6b9e1d90e232d4104700c",
+          "original_asset_sha256": "b8d91b90ad34083826395a2c76492425a07fb6afe0391d977e64e7f5092597ac",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_f253398c599452f387740f2cbb15f4ba",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "f253398c599452f387740f2cbb15f4baac47b1fe2dd31bf54f632790aab35364",
+          "original_asset_sha256": "7d21903fb21d195325e378f1bd90f30213355bdff2222a083ccdaa6bdc03758d",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_3a46304fbd915f236fdd96050d487c16",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "3a46304fbd915f236fdd96050d487c164442dc22ee833e49cfcb996e1590182e",
+          "original_asset_sha256": "bc54f9b5458dfe1d6cf79b003c8ca1635b9126de1ded6eb1f34ed7b048a4a90e",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_0fdb5ca870ade484671a76db7e4ac010",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "0fdb5ca870ade484671a76db7e4ac010d3cd63453c84cb3ab9db5c5956ab2579",
+          "original_asset_sha256": "ecfa0c9df7b1af654a03d5fb7cd671e41ff8abf612619404a24fa00b06afaf4f",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_d31fbc5a39466cef4c49ffa538e45d37",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "d31fbc5a39466cef4c49ffa538e45d37a5694a4c346e9e611abdc6f1a2cbd2ca",
+          "original_asset_sha256": "86d789d40fbcbe776155a11a078fdefc61322519e05ea0840f13808e4bf91bfb",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_26932f5520b44ecc1e6f76d56b39be4a",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "26932f5520b44ecc1e6f76d56b39be4abd886ea902572e52265a8eb7de158aa2",
+          "original_asset_sha256": "1ee5b3cd9b097e83767777398b11e07ffd3a40d779d72ea65bdb91e763cbdeb2",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_d4c9a20f6b887b90607690381ea92dfa",
+          "source_sha256": "8824fe4febfa7853c9caeacdb22f42b4c371752d4728889d16a1677ddd7b6a85",
+          "asset_sha256": "d4c9a20f6b887b90607690381ea92dfaa87d8b97629b66471e92356143f7aa63",
+          "original_asset_sha256": "8824fe4febfa7853c9caeacdb22f42b4c371752d4728889d16a1677ddd7b6a85",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_5d3db37f2e0cb018fd186cde30b5c0d5",
+          "source_sha256": "db3224efcc423559ca7e8240e596efad08818b6d1baa5ce228c608f18db4a5ee",
+          "asset_sha256": "5d3db37f2e0cb018fd186cde30b5c0d5254492310fc4a5fe02a917514774be85",
+          "original_asset_sha256": "db3224efcc423559ca7e8240e596efad08818b6d1baa5ce228c608f18db4a5ee",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_b5f99f02691609e4ddae250fd94c9f0b",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "b5f99f02691609e4ddae250fd94c9f0b1d0cbb54bbf127e999ac9211c67a3ad8",
+          "original_asset_sha256": "5ee72298daeaf4d8fe81574c30fc5ffc1cc2b14c441134ef533c8ba4dd6554fe",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_0452f38e6227e901fcc5129971a3e825",
+          "source_sha256": "ce5891890ee53f6c93f58e3748fe0ebdd939a6cbefa25e6481b8d32ece712742",
+          "asset_sha256": "0452f38e6227e901fcc5129971a3e8253cd57230c1a68b0dd0fcabfcc80072cf",
+          "original_asset_sha256": "074146e6d2935f1afbbf159752c3fca3152ff3317caee9eb35f2e52fd38d04a2",
+          "page_number": 2,
+          "kind": "page_plate"
         }
       ]
     },

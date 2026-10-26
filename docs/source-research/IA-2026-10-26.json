@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "IA",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:18:13.617325+00:00",
+  "source_publications": [
+    {
+      "file": "everify-ride-factsheet.pdf",
+      "source_url": "https://www.e-verify.gov/sites/default/files/everify/factsheets/IowaRIDEFactSheet.pdf",
+      "final_url": "https://www.e-verify.gov/sites/default/files/everify/factsheets/IowaRIDEFactSheet.pdf",
+      "retrieved_at": "2026-10-26T20:15:33.740269+00:00",
+      "bytes": 486882,
+      "sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dot-realid.html",
+      "source_url": "https://iowadot.gov/drivers-licenses-ids/get-or-renew-drivers-licenses-ids-permits/real-id",
+      "final_url": "https://iowadot.gov/drivers-licenses-ids/get-or-renew-drivers-licenses-ids-permits/real-id",
+      "retrieved_at": "2026-10-26T20:15:34.695246+00:00",
+      "bytes": 197638,
+      "sha256": "ed0a720193c804e2cee4f9bbdfc2b579a13a84a60c5e8fd7f632bc8b921927ea",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dot-realid-cards.jpg",
+      "source_url": "https://iowadot.gov/sites/default/files/images/2025-03/Sample-REALID.jpg",
+      "final_url": "https://iowadot.gov/sites/default/files/images/2025-03/Sample-REALID.jpg",
+      "retrieved_at": "2026-10-26T20:15:59.431139+00:00",
+      "bytes": 370944,
+      "sha256": "169a55cbd904c89d52642a55e75d93acd3b95c9c62e971b4304fc70ad2f71893",
+      "mime_type": "image/jpeg",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "https://iowadot.gov/drivers-licenses-ids/get-or-renew-drivers-licenses-ids-permits/real-id"
+    },
+    {
+      "file": "everify-archive-factsheet.pdf",
+      "source_url": "https://www.e-verify.gov/sites/default/files/everify/factsheets/factsheetsArchive/IowaRIDEFactSheet.pdf",
+      "final_url": "https://www.e-verify.gov/sites/default/files/everify/factsheets/factsheetsArchive/IowaRIDEFactSheet.pdf",
+      "retrieved_at": "2026-10-26T20:17:24.428810+00:00",
+      "bytes": 486882,
+      "sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "revenue-age-purchase.html",
+      "source_url": "https://revenue.iowa.gov/iowa-age-purchase",
+      "final_url": "https://revenue.iowa.gov/iowa-age-purchase",
+      "retrieved_at": "2026-10-26T20:17:37.592667+00:00",
+      "bytes": 307212,
+      "sha256": "5edc95f6a9030288be830b7d7417277e4f8005fba6b09981c08117e63a0f0ebc",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "everify-ride-factsheet-xref-36.jpeg",
+      "source_file": "everify-ride-factsheet.pdf",
+      "source_sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+      "pdf_object_xref": 36,
+      "page_number": 1,
+      "width_px": 403,
+      "height_px": 257,
+      "sha256": "fe86cc0654fa84e2c0971ef9afc8c4fe7da591fede498bad5d1891f2eaafe98a"
+    },
+    {
+      "file": "everify-ride-factsheet-xref-38.jpeg",
+      "source_file": "everify-ride-factsheet.pdf",
+      "source_sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+      "pdf_object_xref": 38,
+      "page_number": 1,
+      "width_px": 246,
+      "height_px": 660,
+      "sha256": "a814a96a590f76de8e8732c37b459496cdc0c723b50f80a9eb4e18d27ec3e66b"
+    },
+    {
+      "file": "everify-ride-factsheet-xref-35.jpeg",
+      "source_file": "everify-ride-factsheet.pdf",
+      "source_sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+      "pdf_object_xref": 35,
+      "page_number": 1,
+      "width_px": 308,
+      "height_px": 187,
+      "sha256": "7c8949c170cf6c0a484f7970372eb338988d3d371402ea7433540591a08574e4"
+    },
+    {
+      "file": "everify-ride-factsheet-xref-34.jpeg",
+      "source_file": "everify-ride-factsheet.pdf",
+      "source_sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+      "pdf_object_xref": 34,
+      "page_number": 1,
+      "width_px": 300,
+      "height_px": 188,
+      "sha256": "6475c55e8abf07cf82ebd1f30fd49e64fc5c025a9cce18a351cf77e2633cdda3"
+    },
+    {
+      "file": "everify-ride-factsheet-xref-37.jpeg",
+      "source_file": "everify-ride-factsheet.pdf",
+      "source_sha256": "807782c6317b94533233595ffa7c61684a67615f9cb305729f894a44a4784469",
+      "pdf_object_xref": 37,
+      "page_number": 1,
+      "width_px": 520,
+      "height_px": 340,
+      "sha256": "9cd44701567271c0a4caf4509a81215ca6cc633416ad4ef17540e2d714c56f0d"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "revenue-2018-design-brochure.pdf",
+      "source_url": "https://revenue.iowa.gov/media/2153/download?inline=",
+      "final_url": "https://revenue.iowa.gov/media/2153/download?inline=",
+      "retrieved_at": "2026-10-26T20:15:32.039029+00:00",
+      "bytes": 291603,
+      "sha256": "c9ff89c2da27b74e284eb910e4a931425bc93171461e4da03ed2ea08ff6d72aa",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 404
+    },
+    {
+      "file": "voter-id-flipchart.pdf",
+      "source_url": "https://voterready.iowa.gov/wp-content/uploads/2022/09/VoterIDflipchart.pdf",
+      "final_url": "https://voterready.iowa.gov/wp-content/uploads/2022/09/VoterIDflipchart.pdf",
+      "retrieved_at": "2026-10-26T20:15:34.290118+00:00",
+      "bytes": 5604,
+      "sha256": "f55242b53d46f0ae83459b386af7c0e6e2d09f394da7d7520c6017684c902a6d",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 403
+    },
+    {
+      "file": "idscanner-2018.html",
+      "source_url": "https://www.idscanner.com/drivers-license-news/iowa-introduces-new-driver-license-with-added-security-features/",
+      "final_url": "https://www.idscanner.com/drivers-license-news/iowa-introduces-new-driver-license-with-added-security-features/",
+      "retrieved_at": "2026-10-26T20:15:59.821533+00:00",
+      "bytes": 1084,
+      "sha256": "ef02e92b11b8ec0fdc3fa70181e2566806f048fc56448a0b9cb18a0775192b99",
+      "mime_type": "text/html",
+      "source_class": "third_party",
+      "status": "failed",
+      "http_status": 403
+    },
+    {
+      "file": "revenue-2018-brochure-alt.pdf",
+      "source_url": "https://revenue.iowa.gov/media/2153/download",
+      "final_url": "https://revenue.iowa.gov/media/2153/download",
+      "retrieved_at": "2026-10-26T20:16:47.632521+00:00",
+      "bytes": 291576,
+      "sha256": "dab274d0b97e423ba973e0557d888e90ecd0b9883992fb79643eb195479183bf",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 404
+    },
+    {
+      "file": "abd-2018-brochure.pdf",
+      "source_url": "https://abd.iowa.gov/sites/default/files/education/IDOT_DL_and_ID_Cards_2018.pdf",
+      "final_url": "https://revenue.iowa.gov/sites/default/files/education/IDOT_DL_and_ID_Cards_2018.pdf",
+      "retrieved_at": "2026-10-26T20:16:49.241763+00:00",
+      "bytes": 291616,
+      "sha256": "aee27f36e1882ef68aa587f67bc65c7d303eeb7c6736e8eb9017910b69a49a05",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 404
+    },
+    {
+      "file": "dot-card-guidelines.pdf",
+      "source_url": "https://www.iowadot.gov/mvd/MM353.pdf",
+      "final_url": "https://iowadot.gov/mvd/MM353.pdf",
+      "retrieved_at": "2026-10-26T20:17:37.362760+00:00",
+      "bytes": 304873,
+      "sha256": "035acdfa46c4b0b461f92dfa2a0afe491214cf1b77f728171865129d5385a57f",
+      "mime_type": "text/html; charset=utf-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 404
+    }
+  ],
+  "remaining_gaps": [
+    "Current clean backs, current minor/ID/CDL full specimens remain gaps; issuer REAL ID comparison is an overlapping montage.",
+    "2018 retailer brochure URLs on Revenue, ABD and old DOT path returned404; voter flipchart403. These source bytes were not obtained."
+  ],
+  "notes": [
+    "Official current issuer HTML image provides REAL ID/nonREALID/limitedterm front comparison. Federal EVerify sheet adds native historical adult DL, ID, type-header montage and adult/minor temporary paper specimens.",
+    "Red document-number circles are baked source annotations and retained; no cleanup/inpainting. Header montage is explicitly composite and partial, not a set of complete standalone specimens.",
+    "Federal current/archive URLs returned identical original bytes and are deduplicated as one cited publication. Logos/state silhouette excluded."
+  ],
+  "catalog_integrated": true,
+  "review_status": "reference_research_only",
+  "preservation": {
+    "jurisdiction": "IA",
+    "verified_at": "2026-10-26T20:18:18.470164+00:00",
+    "private_snapshot_index_key": "snapshots/research/IA/c3c39698a16d2ca8d6d93d896b7002b7ce225aa303e32b48f65a4a8a6b884dc9/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/IA.json",
+    "archive_sha256": "c3c39698a16d2ca8d6d93d896b7002b7ce225aa303e32b48f65a4a8a6b884dc9",
+    "archive_size_bytes": 4057962,
+    "verified_restored_files": 18,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/IA",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 7,
+    "review_status": "reference_only"
+  }
+}
