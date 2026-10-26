@@ -22,6 +22,20 @@ export default function CatalogDetail({
         </p>
       </section>
     );
+  if (!detail.code)
+    return (
+      <section
+        className="state-detail"
+        aria-label="Source details"
+        aria-live="polite"
+      >
+        <p className="eyebrow">SOURCE RECORD</p>
+        <h3>No matching jurisdiction.</h3>
+        <p className="detail-description">
+          Clear your search or change the filter to choose a jurisdiction.
+        </p>
+      </section>
+    );
   return (
     <section
       className="state-detail"
@@ -47,8 +61,8 @@ export default function CatalogDetail({
           <span>Source PDFs</span>
         </div>
         <div>
-          <strong>{detail.proposals}</strong>
-          <span>Crop proposals</span>
+          <strong>{detail.relevantPdfs}</strong>
+          <span>Relevance candidates</span>
         </div>
         <div>
           <strong>{detail.acceptedCohorts}</strong>

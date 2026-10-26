@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   blankCatalog,
-  emptyJurisdiction,
+  visibleSelection,
   normalizeFederal,
   type FederalCollection,
   filterCatalog,
@@ -44,6 +44,7 @@ export function useCatalog() {
     () => filterCatalog(rows, query, filter),
     [rows, query, filter],
   );
+  const selectedDetail = visibleSelection(visible, selected);
   return {
     rows,
     federal,
@@ -54,10 +55,8 @@ export function useCatalog() {
     setQuery,
     filter,
     setFilter,
-    selected,
+    selected: selectedDetail.code,
     setSelected,
-    detail:
-      rows.find((row) => row.code === selected) ??
-      emptyJurisdiction("TX", "Texas"),
+    detail: selectedDetail,
   };
 }

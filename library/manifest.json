@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-25T22:50:27.002605+00:00",
-  "library_run_id": "2026-10-25T224430.696834Z-5b2fc569",
+  "generated_at": "2026-10-26T00:20:23.388980+00:00",
+  "library_run_id": "2026-10-26T001937.450634Z-57894fd8",
   "documents": [
     {
       "title": "View PDF",
@@ -1145,6 +1145,58 @@
       "relevance": "quarantined",
       "review_status": "unreviewed",
       "page_count": 232,
+      "credential_format": "ID1"
+    },
+    {
+      "title": "517c102ead40ed9b9caa005aa277a94d0ae0355bb2abd96ca9b66b1dc95c02bc.pdf",
+      "url": "https://abca.wv.gov/media/17266/download?inline",
+      "sha256": "517c102ead40ed9b9caa005aa277a94d0ae0355bb2abd96ca9b66b1dc95c02bc",
+      "retrieved_at": "2026-10-26T00:19:38.490774+00:00",
+      "publisher_host": "abca.wv.gov",
+      "publisher_jurisdiction": "WV",
+      "discovery_jurisdiction": "WV",
+      "relevance": "candidate",
+      "review_status": "unreviewed",
+      "page_count": 3,
+      "credential_format": "ID1"
+    },
+    {
+      "title": "License Comparison Poster 03-25",
+      "url": "https://webapps.transportation.wv.gov/TWS/WVDOTDocumentStorageMigration/PDF/Webapps/DMV/DMVFormSearch/LicenseComparisonPoster.pdf",
+      "sha256": "6e14437e5af10415c66809863ddb16558b6f78def4aa70d0a4e14a795a339d2d",
+      "retrieved_at": "2026-10-26T00:20:17.668893+00:00",
+      "publisher_host": "webapps.transportation.wv.gov",
+      "publisher_jurisdiction": "WV",
+      "discovery_jurisdiction": "WV",
+      "relevance": "quarantined",
+      "review_status": "unreviewed",
+      "page_count": 1,
+      "credential_format": "ID1"
+    },
+    {
+      "title": "8a777e2bb51f6d0463ac73d294bf0cf8fd32ff1ba3617b85ef6ee17aeaba91f9.pdf",
+      "url": "https://abca.wv.gov/media/17291/download?inline",
+      "sha256": "8a777e2bb51f6d0463ac73d294bf0cf8fd32ff1ba3617b85ef6ee17aeaba91f9",
+      "retrieved_at": "2026-10-26T00:19:41.295363+00:00",
+      "publisher_host": "abca.wv.gov",
+      "publisher_jurisdiction": "WV",
+      "discovery_jurisdiction": "WV",
+      "relevance": "candidate",
+      "review_status": "unreviewed",
+      "page_count": 2,
+      "credential_format": "ID1"
+    },
+    {
+      "title": "9b812df64cc19e58e1359473fd0c5d40ef6ba4c23529e237b383d413a7037d10.pdf",
+      "url": "https://abca.wv.gov/media/17281/download?inline",
+      "sha256": "9b812df64cc19e58e1359473fd0c5d40ef6ba4c23529e237b383d413a7037d10",
+      "retrieved_at": "2026-10-26T00:19:38.419415+00:00",
+      "publisher_host": "abca.wv.gov",
+      "publisher_jurisdiction": "WV",
+      "discovery_jurisdiction": "WV",
+      "relevance": "quarantined",
+      "review_status": "unreviewed",
+      "page_count": 1,
       "credential_format": "ID1"
     },
     {

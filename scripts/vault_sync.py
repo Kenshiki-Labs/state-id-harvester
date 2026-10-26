@@ -12,7 +12,6 @@ import json
 import os
 import re
 import secrets
-import struct
 import tempfile
 from datetime import UTC, datetime
 from pathlib import Path
@@ -20,6 +19,7 @@ from urllib.parse import urlsplit
 
 import httpx
 
+from state_id_harvester.gallery_raster import raster_header
 from state_id_harvester.paths import contained_path, managed_path
 from state_id_harvester.snapshots import restore_library
 
@@ -285,19 +285,22 @@ def read_candidate_image(source: Path, asset):
         raise ValueError("Specimen path escapes private source tree")
     if path.stat().st_size > 50_000_000:
         raise ValueError("Specimen source exceeds byte budget")
-    data = path.read_bytes()
+    with path.open("rb") as stream:
+        data = stream.read(50_000_001)
+    if len(data) > 50_000_000:
+        raise ValueError("Specimen source exceeds byte budget")
     if hashlib.sha256(data).hexdigest() != asset.sha256:
         raise ValueError("Specimen source integrity check failed")
-    if len(data) < 24 or data[:8] != b"\x89PNG\r\n\x1a\n" or data[12:16] != b"IHDR":
-        raise ValueError("Specimen candidates must be PNG images")
-    width, height = struct.unpack(">II", data[16:24])
-    if not 0 < width * height <= 40_000_000:
+    _, width, height = raster_header(data)
+    if min(width, height) < 1 or max(width, height) > 20000 or width * height > 40_000_000:
         raise ValueError("Specimen source exceeds pixel budget")
-    image = cv2.imdecode(np.frombuffer(data, dtype=np.uint8), cv2.IMREAD_COLOR)
+    image = cv2.imdecode(
+        np.frombuffer(data, dtype=np.uint8), cv2.IMREAD_COLOR | cv2.IMREAD_IGNORE_ORIENTATION
+    )
     if image is None:
         return None
-    if image.shape[0] * image.shape[1] > 40_000_000:
-        return None
+    if image.shape[:2] != (height, width):
+        raise ValueError("Decoded specimen dimensions disagree with retained header")
     return image
 
 

@@ -214,3 +214,6 @@ class BoundaryCandidate(Record):
     nominal_height_mm: float = 53.98
     metric_accuracy_mm: None = None
     physical_calibration: Literal["none"] = "none"
+    boundary_scope: Literal["unreviewed_boundary", "native_image_extent"] = "unreviewed_boundary"
+    native_provenance: dict[str, object] | None = None
+    crop_format: str = "png"

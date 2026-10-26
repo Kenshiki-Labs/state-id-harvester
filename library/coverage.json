@@ -12,7 +12,7 @@
       "crop_candidates": 0,
       "accepted_cohorts": 0
     },
-    "fetch_failures": 1,
+    "fetch_failures": 0,
     "extraction_failures": 0,
     "sources": []
   },
@@ -29,7 +29,7 @@
       "crop_candidates": 10,
       "accepted_cohorts": 0
     },
-    "fetch_failures": 1,
+    "fetch_failures": 0,
     "extraction_failures": 0,
     "sources": [
       {
@@ -687,7 +687,7 @@
       "crop_candidates": 0,
       "accepted_cohorts": 0
     },
-    "fetch_failures": 0,
+    "fetch_failures": 1,
     "extraction_failures": 0,
     "sources": []
   },
@@ -934,7 +934,7 @@
       "crop_candidates": 0,
       "accepted_cohorts": 0
     },
-    "fetch_failures": 2,
+    "fetch_failures": 0,
     "extraction_failures": 0,
     "sources": []
   },
@@ -1351,7 +1351,7 @@
       "crop_candidates": 0,
       "accepted_cohorts": 0
     },
-    "fetch_failures": 1,
+    "fetch_failures": 0,
     "extraction_failures": 0,
     "sources": [
       {
@@ -1456,7 +1456,7 @@
       "crop_candidates": 15,
       "accepted_cohorts": 0
     },
-    "fetch_failures": 2,
+    "fetch_failures": 0,
     "extraction_failures": 0,
     "sources": [
       {
@@ -1896,9 +1896,9 @@
     "counts": {
       "sources": 5,
       "relevant_sources": 1,
-      "embedded_images": 36,
+      "embedded_images": 62,
       "rendered_pages": 27,
-      "crop_candidates": 19,
+      "crop_candidates": 11,
       "accepted_cohorts": 0
     },
     "fetch_failures": 0,
@@ -2005,19 +2005,72 @@
   {
     "code": "WV",
     "name": "West Virginia",
-    "status": "gap",
+    "status": "sources_available",
     "review_status": "unreviewed",
     "counts": {
-      "sources": 0,
-      "relevant_sources": 0,
-      "embedded_images": 0,
-      "rendered_pages": 0,
-      "crop_candidates": 0,
+      "sources": 4,
+      "relevant_sources": 2,
+      "embedded_images": 33,
+      "rendered_pages": 7,
+      "crop_candidates": 7,
       "accepted_cohorts": 0
     },
     "fetch_failures": 0,
     "extraction_failures": 0,
-    "sources": []
+    "sources": [
+      {
+        "title": "517c102ead40ed9b9caa005aa277a94d0ae0355bb2abd96ca9b66b1dc95c02bc.pdf",
+        "url": "https://abca.wv.gov/media/17266/download?inline",
+        "sha256": "517c102ead40ed9b9caa005aa277a94d0ae0355bb2abd96ca9b66b1dc95c02bc",
+        "retrieved_at": "2026-10-26T00:19:38.490774+00:00",
+        "publisher_host": "abca.wv.gov",
+        "publisher_jurisdiction": "WV",
+        "discovery_jurisdiction": "WV",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 3,
+        "credential_format": "ID1"
+      },
+      {
+        "title": "License Comparison Poster 03-25",
+        "url": "https://webapps.transportation.wv.gov/TWS/WVDOTDocumentStorageMigration/PDF/Webapps/DMV/DMVFormSearch/LicenseComparisonPoster.pdf",
+        "sha256": "6e14437e5af10415c66809863ddb16558b6f78def4aa70d0a4e14a795a339d2d",
+        "retrieved_at": "2026-10-26T00:20:17.668893+00:00",
+        "publisher_host": "webapps.transportation.wv.gov",
+        "publisher_jurisdiction": "WV",
+        "discovery_jurisdiction": "WV",
+        "relevance": "quarantined",
+        "review_status": "unreviewed",
+        "page_count": 1,
+        "credential_format": "ID1"
+      },
+      {
+        "title": "8a777e2bb51f6d0463ac73d294bf0cf8fd32ff1ba3617b85ef6ee17aeaba91f9.pdf",
+        "url": "https://abca.wv.gov/media/17291/download?inline",
+        "sha256": "8a777e2bb51f6d0463ac73d294bf0cf8fd32ff1ba3617b85ef6ee17aeaba91f9",
+        "retrieved_at": "2026-10-26T00:19:41.295363+00:00",
+        "publisher_host": "abca.wv.gov",
+        "publisher_jurisdiction": "WV",
+        "discovery_jurisdiction": "WV",
+        "relevance": "candidate",
+        "review_status": "unreviewed",
+        "page_count": 2,
+        "credential_format": "ID1"
+      },
+      {
+        "title": "9b812df64cc19e58e1359473fd0c5d40ef6ba4c23529e237b383d413a7037d10.pdf",
+        "url": "https://abca.wv.gov/media/17281/download?inline",
+        "sha256": "9b812df64cc19e58e1359473fd0c5d40ef6ba4c23529e237b383d413a7037d10",
+        "retrieved_at": "2026-10-26T00:19:38.419415+00:00",
+        "publisher_host": "abca.wv.gov",
+        "publisher_jurisdiction": "WV",
+        "discovery_jurisdiction": "WV",
+        "relevance": "quarantined",
+        "review_status": "unreviewed",
+        "page_count": 1,
+        "credential_format": "ID1"
+      }
+    ]
   },
   {
     "code": "WY",
@@ -2032,7 +2085,7 @@
       "crop_candidates": 1,
       "accepted_cohorts": 0
     },
-    "fetch_failures": 1,
+    "fetch_failures": 0,
     "extraction_failures": 0,
     "sources": [
       {

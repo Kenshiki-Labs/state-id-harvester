@@ -33,6 +33,18 @@ curated PDFs and bounded official-page discovery still run. Install Tesseract fo
 (`brew install tesseract` or `sudo apt-get install tesseract-ocr`). Raw OCR observations
 retain their origin and confidence and never automatically become runtime rules.
 
+Large official publications require an explicit download budget. West Virginia's
+2025 license comparison poster exceeds the default 35 MiB limit:
+
+```sh
+uv run state-id-harvester harvest --states WV --max-pdf-bytes 67108864
+```
+
+The transport still checks both declared and actual streamed byte counts. Follow live
+agency hub links when source URLs move; a failed request alone does not establish a WAF
+block. Archived copies require separate archival provenance and are not silently treated
+as live agency publications.
+
 For the private local review surface, start:
 
 ```sh
@@ -55,7 +67,8 @@ The **Build reference library** workflow is configured for manual execution and 
 at 09:17 UTC. Its enabled/disabled state in GitHub is an operational setting, separate
 from this configuration. It requires `CADASTRE_INGEST_KEY`; optional search keys are
 repository secrets. It restores private archives, collects all 51 jurisdictions with
-OCR, verifies hashes, exports reviewed cohorts, uploads a private snapshot, and commits
+OCR, collects original agency HTML gallery images, verifies hashes and parent HTML bindings,
+exports reviewed cohorts, uploads a private snapshot, and commits
 only public metadata. It publishes no visual GitHub releases or Actions artifacts.
 
 Private compressed archives are split into at most 40 MiB authenticated transport chunks.
@@ -83,6 +96,7 @@ Boundary candidates remain unreviewed until a reviewer binds a decision to sourc
 asset hashes. Nominal ID-1 coordinates do not imply measured physical accuracy.
 
 See [pipeline contracts](SPEC.md), [review instructions](docs/review.md),
+[native PDF semantics](docs/pdf-semantics.md), [independent gallery collection](docs/gallery-sources.md),
 [publication boundaries](docs/publication.md), and [architecture alignment](docs/architecture.md).
 The website follows the headless core and host separation used by Kenshiki SDKs and
 Gateway: static Astro presentation, typed observations, isolated Worker storage, and

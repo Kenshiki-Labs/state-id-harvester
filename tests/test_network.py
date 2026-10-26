@@ -6,6 +6,7 @@ from pathlib import Path
 import httpx
 import pytest
 
+from state_id_harvester.cli import harvest_options, parser
 from state_id_harvester.models import Options, Source
 from state_id_harvester.network import FetchError, Transport, official_url
 
@@ -94,7 +95,9 @@ async def test_stream_limit_cleans_partial_download(tmp_path: Path) -> None:
         source = Source(
             discovery_jurisdiction="CA", url="https://dmv.ca.gov/a.pdf", discovered_via="test"
         )
-        options = Options(max_pdf_bytes=1024)
+        options = harvest_options(
+            parser().parse_args(["harvest", "--states", "CA", "--max-pdf-bytes", "1024"])
+        )
         with pytest.raises(FetchError, match="byte limit"):
             await transport.download(source, tmp_path, options)
     assert not list(tmp_path.rglob("*.pdf"))

@@ -81,8 +81,11 @@ export function AccessReceipt({
         <pre>{JSON.stringify(result.attestation_receipt, null, 2)}</pre>
       </details>
       <p className="form-note">
-        Save these details. The token belongs to this request and does not
-        authorize access.
+        Save your request ID, claim token, DNS record, and attestation receipt
+        before leaving. The token belongs to this request and does not authorize
+        access. <a href="/access">Manage your request</a> to check status,
+        verify your domain, or retrieve a key after approval. Enter your saved
+        details there; they are never included in this link.
       </p>
     </div>
   );

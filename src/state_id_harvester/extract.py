@@ -14,12 +14,17 @@ from typing import Any, Literal
 import pymupdf
 
 from . import __version__
+from .document_semantics import PageSemantics, analyze_page
 from .extraction_assets import AssetWriter, box, matrix
 from .extraction_assets import ExtractionLimit as ExtractionLimit
+from .extraction_objects import NativeObjectStreams
 from .extraction_pages import NativeImages, PageRenderer
 from .extraction_text import features as features
 from .models import BoundaryCandidate, Document, Download, Options, PageGeometry, TextBlock
 from .ocr import ocr_page
+from .pdf_components import component_groups
+from .pdf_objects import InventoryLimits, inventory_page
+from .semantic_review import review_request
 from .storage import atomic_json, within
 from .topology import detect
 
@@ -31,7 +36,16 @@ def fingerprint(options: Options) -> str:
     # cannot silently reuse a receipt from the old implementation.
     module_root = Path(__file__).parent
     modules = sorted(module_root.glob("extract*.py")) + [
-        module_root / name for name in ("topology.py", "models.py", "ocr.py")
+        module_root / name
+        for name in (
+            "topology.py",
+            "models.py",
+            "ocr.py",
+            "pdf_objects.py",
+            "pdf_components.py",
+            "document_semantics.py",
+            "semantic_review.py",
+        )
     ]
     data["implementation"] = hashlib.sha256(
         b"".join(path.name.encode() + b"\0" + path.read_bytes() for path in modules)
@@ -68,7 +82,15 @@ class DocumentExtractor:
         self.boundaries: list[BoundaryCandidate] = []
         self.feature_evidence: list[dict[str, Any]] = []
         self.tables: list[dict[str, Any]] = []
+        self.native_inventories: list[dict[str, Any]] = []
+        self.native_groups: list[dict[str, Any]] = []
+        self.native_streams: list[dict[str, str]] = []
+        self.source_semantics: list[dict[str, Any]] = []
+        self.semantic_statuses: list[dict[str, Any]] = []
+        self.semantic_requests: list[dict[str, Any]] = []
+        self.semantic_request_bytes = 0
         self.images = NativeImages(doc, options, writer, self.warnings)
+        self.object_streams = NativeObjectStreams(doc, writer)
         self.renderer = PageRenderer(options, writer)
         ranked = sorted(range(doc.page_count), key=lambda n: (-self._page_score(n), n))
         self.render_slots = set(ranked[: options.max_render_pages])
@@ -111,13 +133,29 @@ class DocumentExtractor:
         self.all_blocks.extend(blocks)
         self._record_features(blocks)
         images = self.images.read(page, number)
+        inventory = inventory_page(
+            page,
+            source_sha256=self.download.sha256,
+            page_number=number,
+            limits=InventoryLimits(max_image_pixels=self.options.max_image_pixels),
+        )
+        groups = component_groups(
+            inventory,
+            max_image_pixels=self.options.max_image_pixels,
+            document_native_text="\n".join(self.page_texts),
+        )
+        native_record = inventory.model_dump(mode="json")
+        self.native_inventories.append(native_record)
+        self._source_semantics(page, number, blocks, native_record)
+        self.native_streams.extend(self.object_streams.preserve(inventory))
+        self.native_groups.extend(group.model_dump(mode="json") for group in groups)
         selected = bool(self.per_page[index] or images or not any(self.page_texts))
         rendered = self.renderer.render(page, number, selected, index in self.render_slots)
         rotation = page.rotation
         rotation_matrix = matrix(page.rotation_matrix)
         pdf_to_mupdf = matrix(page.transformation_matrix)
         if self.options.detect_boundaries and index in self.render_slots and selected:
-            self._topology(page, index, blocks)
+            self._topology(page, index, blocks, inventory, groups)
         self.geometry.append(
             PageGeometry(
                 page_number=number,
@@ -133,6 +171,58 @@ class DocumentExtractor:
                 render_skip_reason=rendered.skip_reason,
             )
         )
+
+    def _semantic_failure(self, number: int, stage: str, exc: Exception) -> dict[str, str]:
+        detail = str(exc)[:300]
+        self.warnings.append(f"p{number}: {stage} failed: {type(exc).__name__}: {detail}")
+        return {"type": type(exc).__name__, "detail": detail}
+
+    def _source_semantics(
+        self, page: Any, number: int, blocks: list[TextBlock], inventory: dict[str, Any]
+    ) -> None:
+        status: dict[str, Any] = {
+            "source_sha256": self.download.sha256,
+            "page_number": number,
+            "coordinate_system": "unrotated_mupdf_points",
+            "status": "unsupported",
+            "review_request_status": "not_available",
+        }
+        self.semantic_statuses.append(status)
+        rotation = page.rotation
+        try:
+            page.set_rotation(0)
+            semantic_page = analyze_page(
+                page,
+                source_sha256=self.download.sha256,
+                page_number=number,
+                ocr_blocks=[block for block in blocks if block.method == "local_ocr"],
+                native_inventory=inventory,
+            )
+        except Exception as exc:
+            status["error"] = self._semantic_failure(number, "source semantics", exc)
+            return
+        finally:
+            page.set_rotation(rotation)
+        self.source_semantics.append(semantic_page.model_dump(mode="json"))
+        status["status"] = "observed_unreviewed"
+        status["native_inventory_status"] = semantic_page.native_inventory_status
+        self._semantic_request(semantic_page, status)
+
+    def _semantic_request(self, page: PageSemantics, status: dict[str, Any]) -> None:
+        try:
+            request = review_request(page)
+            request_bytes = len(request.model_dump_json().encode())
+            if self.semantic_request_bytes + request_bytes > 8_000_000:
+                raise ValueError("Document semantic review requests exceed 8 MB input budget")
+        except Exception as exc:
+            status["review_request_status"] = "unavailable"
+            status["review_request_error"] = self._semantic_failure(
+                page.page_number, "semantic review request", exc
+            )
+            return
+        self.semantic_request_bytes += request_bytes
+        self.semantic_requests.append(request.model_dump(mode="json"))
+        status["review_request_status"] = "available_not_executed"
 
     def _ocr(self, page: Any, index: int, blocks: list[TextBlock]) -> None:
         if not (self.options.ocr and index in self.render_slots and page.get_images()):
@@ -167,7 +257,9 @@ class DocumentExtractor:
                     }
                 )
 
-    def _topology(self, page: Any, index: int, blocks: list[TextBlock]) -> None:
+    def _topology(
+        self, page: Any, index: int, blocks: list[TextBlock], inventory: Any, groups: Any
+    ) -> None:
         rotation = page.rotation
         try:
             # OCR, tables, and candidates use unrotated source page coordinates;
@@ -177,10 +269,17 @@ class DocumentExtractor:
                 self._tables(page, index + 1)
             if not self.normalize_id1:
                 return
-            for candidate, png in detect(page, blocks, index + 1):
+            for candidate, encoded in detect(
+                page,
+                blocks,
+                index + 1,
+                inventory=inventory,
+                groups=groups,
+                max_image_pixels=self.options.max_image_pixels,
+            ):
                 path = self.writer.save(
-                    f"card_candidates/{candidate.candidate_id}.png",
-                    png,
+                    f"card_candidates/{candidate.candidate_id}.{candidate.crop_format}",
+                    encoded,
                     "card_candidate",
                     index + 1,
                 )
@@ -221,6 +320,16 @@ class DocumentExtractor:
         )
         self.writer.save_json("geometry/feature_evidence.json", self.feature_evidence, "geometry")
         self.writer.save_json("geometry/tables.json", self.tables, "geometry")
+        self.writer.save_json("geometry/native_objects.json", self.native_inventories, "geometry")
+        self.writer.save_json("geometry/native_components.json", self.native_groups, "geometry")
+        self.writer.save_json("geometry/native_streams.json", self.native_streams, "geometry")
+        self.writer.save_json("geometry/source_semantics.json", self.source_semantics, "geometry")
+        self.writer.save_json(
+            "geometry/source_semantics_status.json", self.semantic_statuses, "geometry"
+        )
+        self.writer.save_json(
+            "geometry/semantic_review_requests.json", self.semantic_requests, "geometry"
+        )
 
     def _document(self) -> Document:
         matched = sorted({feature for group in self.per_page for feature in group})

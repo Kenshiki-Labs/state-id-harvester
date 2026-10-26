@@ -25,6 +25,12 @@ export default function FederalCatalog({
         and normative standards, including PIV references. They remain
         unclassified and are not normalized as ID-1 card templates.
       </p>
+      <p className="detail-description">
+        The collection plan covers PIV, CAC, USID, Green Cards, EADs, passport
+        books and cards, trusted-traveler cards, and TWIC. Indexed publications
+        do not yet establish complete coverage of these families. See the source
+        trail for the references actually collected.
+      </p>
       <div className="detail-numbers">
         <div>
           <strong>{collection.sources.length}</strong>
@@ -47,9 +53,10 @@ export default function FederalCatalog({
       <div className="review-note">
         <span aria-hidden="true">◇</span>
         <p>
-          <strong>Different document families. Separate review.</strong>A source
-          publication is not a credential template. Source page counts, rendered
-          pages, and extracted images represent different stages of collection.
+          <strong>Different document families. Separate review.</strong> A
+          source publication is not a credential template. Source page counts,
+          rendered pages, and extracted images represent different stages of
+          collection.
         </p>
       </div>
     </section>
