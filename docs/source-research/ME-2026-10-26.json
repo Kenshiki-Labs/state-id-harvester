@@ -274,7 +274,7 @@
     "2011 redesign reporting and2019 retrospective disagree on2010/2011 timing; generation label is tied to dated2011 publication, not a verified issuance boundary."
   ],
   "review_status": "reference_research_only",
-  "catalog_integrated": false,
+  "catalog_integrated": true,
   "status": "bounded_research_pass_preserved_not_catalog_integrated",
   "preservation": {
     "schema_version": 1,
@@ -292,5 +292,11 @@
     "public_media": false,
     "archive_layout": "collection_relative",
     "restore_destination": "output/research/ME"
+  },
+  "publication": {
+    "reference_count": 7,
+    "metadata_overlay": "docs/source-research/publication-overlay.json",
+    "review_status": "reference_only",
+    "original_source_bytes": "retained privately; marked delivery derivatives published separately"
   }
 }

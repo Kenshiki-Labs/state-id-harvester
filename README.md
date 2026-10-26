@@ -61,7 +61,8 @@ loads indexed, visibly marked PNG derivatives through the Worker.
 ## Publication and scheduled collection
 
 [Coverage](library/coverage.md) and [citations](library/manifest.json) are public metadata.
-Manually recovered sources are recorded separately until catalog integration:
+Recovered state sources and their marked reference images are integrated through the
+[durable publication overlay](docs/source-research/publication-overlay.json). Research records:
 [Arkansas research and preservation record](docs/source-research/AR-2026-10-26.json),
 [Arizona research and preservation record](docs/source-research/AZ-2026-10-26.json),
 [Indiana research and preservation record](docs/source-research/IN-2026-10-26.json),
@@ -72,7 +73,8 @@ Manually recovered sources are recorded separately until catalog integration:
 [Maryland research and preservation record](docs/source-research/MD-2026-10-26.json), and
 [Michigan research and preservation record](docs/source-research/MI-2026-10-26.json).
 Their originals, discovery pages, review previews, and research notes are retained under
-`output/research/{STATE}/` and in separately indexed private vault backups.
+`output/research/{STATE}/` and in separately indexed private vault backups. The public
+gallery serves marked derivatives; source originals and preparation ledgers stay private.
 `scripts/build_public_catalog.py` exports an explicit field allowlist; it does not copy
 PDFs, raster images, extracted source text, seals, font outlines, or raw PDF resources.
 Only accepted, hash-bound cohorts can contribute public normalized geometry. The public

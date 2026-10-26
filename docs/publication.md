@@ -86,3 +86,18 @@ commit. No frontend build can read the private bucket directly. Logs and ledgers
 in a snapshot remain private. Public index enforcement, protected-operation authorization, and access audit belong to
 the Worker; client state never authorizes privileged access. Deployment, schedule
 enablement, and operator authorization are explicit operational checkpoints.
+
+## Retaining researched states across scheduled harvests
+
+`docs/source-research/publication-overlay.json` retains citation and reference metadata
+for manually researched collections and native agency galleries. The public exporter
+validates the overlay before merging it with harvested metadata. Direct-image sources
+are publications rather than PDF pages; unknown retrieval dates remain unspecified.
+References remain unreviewed and cannot promote geometry into accepted cohorts.
+
+The specimen publisher merges newly prepared references into the existing private
+delivery index. It validates the complete batch before upload, preserves existing
+immutable keys, and changes the pointer only after all new objects are present. Empty
+or repeated batches cannot erase earlier states. Publishers run serially; an invalid
+index, hash conflict, or failed upload stops publication. Scheduled metadata commits
+push `dev` and `main` atomically to preserve the canonical branch parity.

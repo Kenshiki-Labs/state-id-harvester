@@ -12,6 +12,7 @@ from urllib.parse import urlsplit
 
 from state_id_harvester.catalog import export_catalog
 from state_id_harvester.library import read_manifest
+from state_id_harvester.publication_overlay import merge_overlay
 
 JURISDICTIONS = {
     "AL": "Alabama",
@@ -161,6 +162,11 @@ def public_catalog(
     }
 
 
+def merge_publication_overlay(catalog: dict, overlay: object) -> dict:
+    """Retain independently published source metadata across scheduled exports."""
+    return merge_overlay(catalog, overlay, set(JURISDICTIONS))
+
+
 def public_cohorts(cohorts: list[dict]) -> dict:
     """Reviewed geometry is public; freeform source callouts remain in the vault."""
     return {
@@ -247,6 +253,12 @@ def main() -> None:
     parser.add_argument("--federal-source", type=Path, default=Path("output/federal"))
     parser.add_argument("--library", type=Path, default=Path("library"))
     parser.add_argument("--cohorts", type=Path, default=Path("cohorts.json"))
+    parser.add_argument(
+        "--publication-overlay",
+        type=Path,
+        default=Path("docs/source-research/publication-overlay.json"),
+        help="Optional durable source and reference metadata overlay",
+    )
     args = parser.parse_args()
     manifest_model = read_manifest(args.source)
     # Existing exporter verifies accepted reviews, matching hashes, pages and cohort identity.
@@ -262,6 +274,10 @@ def main() -> None:
         federal_manifest = read_manifest(args.federal_source).model_dump(mode="json")
         federal_coverage = json.loads((args.federal_source / "federal-coverage.json").read_text())
     catalog = public_catalog(manifest, coverage, cohorts, federal_manifest, federal_coverage)
+    if args.publication_overlay.exists():
+        catalog = merge_publication_overlay(
+            catalog, json.loads(args.publication_overlay.read_text())
+        )
     write_json(args.public / "data/catalog.json", catalog)
     write_json(args.public / "data/cohorts.json", public_cohorts(cohorts))
     write_wireframes(args.public / "wireframes", cohorts)

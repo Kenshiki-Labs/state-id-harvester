@@ -194,5 +194,12 @@
     "Clean native fronts for each vertical and ID variant; current verified downloads include annotated plates.",
     "Clean backs and mapping of reverse-side differences to document variants.",
     "Full issuance/revision boundaries not established; no completeness claim."
-  ]
+  ],
+  "catalog_integrated": true,
+  "publication": {
+    "reference_count": 8,
+    "metadata_overlay": "docs/source-research/publication-overlay.json",
+    "review_status": "reference_only",
+    "original_source_bytes": "retained privately; marked delivery derivatives published separately"
+  }
 }

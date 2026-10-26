@@ -38,7 +38,7 @@ export default function FederalCatalog({
       <div className="detail-numbers">
         <div>
           <strong>{collection.sources.length}</strong>
-          <span>Source PDFs</span>
+          <span>Source publications</span>
         </div>
         <div>
           <strong>{collection.renderedPages}</strong>

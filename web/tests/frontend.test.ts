@@ -609,3 +609,13 @@ describe("domain proof application boundary", () => {
     );
   });
 });
+
+describe("unpaginated reference publications", () => {
+  it("keeps image provenance without inventing PDF pages or retrieval dates", () => {
+    const html = renderToStaticMarkup(createElement(SourceTrail, { sources: [{ title: "Official specimen", url: "https://agency.gov/specimen.png", hostname: "agency.gov", relevance: "candidate", pageCount: 0, retrievedAt: "", sha256: fingerprint }] }));
+    expect(html).toContain(fingerprint);
+    expect(html).not.toContain("Source pages");
+    expect(html).not.toContain("Retrieved");
+    expect(html).not.toContain('class="source-provenance">0');
+  });
+});

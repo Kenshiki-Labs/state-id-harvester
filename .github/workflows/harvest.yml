@@ -79,7 +79,7 @@ jobs:
           git add library/federal.json library/manifest.json library/coverage.json library/summary.json library/coverage.md web/public/data web/public/schemas web/public/wireframes
           if ! git diff --cached --quiet; then
             git commit -m "Update Cadastre public metadata and reviewed geometry"
-            git push origin HEAD:main
+            git push --atomic origin HEAD:main HEAD:dev
           fi
       # Source PDFs, crops, OCR, archives, and private ledgers never enter GitHub
       # releases or Actions artifacts. Failure stops before public commit.

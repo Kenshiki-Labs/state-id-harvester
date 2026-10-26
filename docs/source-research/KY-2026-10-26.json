@@ -311,7 +311,7 @@
     "Physical geometry, authenticity rules and complete issuance intervals remain unreviewed."
   ],
   "review_status": "reference_research_only",
-  "catalog_integrated": false,
+  "catalog_integrated": true,
   "status": "bounded_research_pass_preserved_not_catalog_integrated",
   "preservation": {
     "schema_version": 1,
@@ -330,5 +330,11 @@
     "archive_layout": "collection_relative",
     "restore_destination": "output/research/KY",
     "parent_verified_at": "2026-10-26T18:09:52.702642+00:00"
+  },
+  "publication": {
+    "reference_count": 12,
+    "metadata_overlay": "docs/source-research/publication-overlay.json",
+    "review_status": "reference_only",
+    "original_source_bytes": "retained privately; marked delivery derivatives published separately"
   }
 }

@@ -489,7 +489,7 @@
     "Full revision boundaries and physical dimensions remain unreviewed."
   ],
   "review_status": "reference_research_only",
-  "catalog_integrated": false,
+  "catalog_integrated": true,
   "preservation": {
     "schema_version": 1,
     "jurisdiction": "AZ",
@@ -504,5 +504,11 @@
     "verification": "Downloaded private vault archive, restored with existing snapshot helpers, and compared all restored files byte-for-byte with durable local copies.",
     "public_media": false
   },
-  "status": "bounded_research_pass_preserved_not_catalog_integrated"
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "publication": {
+    "reference_count": 18,
+    "metadata_overlay": "docs/source-research/publication-overlay.json",
+    "review_status": "reference_only",
+    "original_source_bytes": "retained privately; marked delivery derivatives published separately"
+  }
 }

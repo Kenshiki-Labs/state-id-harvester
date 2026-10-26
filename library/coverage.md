@@ -6,27 +6,27 @@ Source collection and reviewed design coverage are separate.
 | --- | ---: | ---: | ---: |
 | Alaska (AK) | 0 | 0 | 0 |
 | Alabama (AL) | 8 | 0 | 0 |
-| Arkansas (AR) | 1 | 0 | 0 |
-| Arizona (AZ) | 0 | 0 | 0 |
+| Arkansas (AR) | 7 | 6 | 0 |
+| Arizona (AZ) | 14 | 14 | 0 |
 | California (CA) | 3 | 1 | 0 |
 | Colorado (CO) | 0 | 0 | 0 |
 | Connecticut (CT) | 12 | 0 | 0 |
 | District of Columbia (DC) | 1 | 1 | 0 |
-| Delaware (DE) | 9 | 0 | 0 |
+| Delaware (DE) | 9 | 1 | 0 |
 | Florida (FL) | 3 | 1 | 0 |
 | Georgia (GA) | 0 | 0 | 0 |
 | Hawaii (HI) | 0 | 0 | 0 |
 | Iowa (IA) | 2 | 0 | 0 |
 | Idaho (ID) | 1 | 0 | 0 |
 | Illinois (IL) | 0 | 0 | 0 |
-| Indiana (IN) | 0 | 0 | 0 |
-| Kansas (KS) | 1 | 0 | 0 |
-| Kentucky (KY) | 0 | 0 | 0 |
-| Louisiana (LA) | 0 | 0 | 0 |
+| Indiana (IN) | 4 | 4 | 0 |
+| Kansas (KS) | 7 | 6 | 0 |
+| Kentucky (KY) | 7 | 7 | 0 |
+| Louisiana (LA) | 6 | 6 | 0 |
 | Massachusetts (MA) | 5 | 1 | 0 |
-| Maryland (MD) | 1 | 0 | 0 |
-| Maine (ME) | 0 | 0 | 0 |
-| Michigan (MI) | 0 | 0 | 0 |
+| Maryland (MD) | 3 | 2 | 0 |
+| Maine (ME) | 6 | 6 | 0 |
+| Michigan (MI) | 5 | 5 | 0 |
 | Minnesota (MN) | 1 | 0 | 0 |
 | Missouri (MO) | 3 | 0 | 0 |
 | Mississippi (MS) | 6 | 0 | 0 |
@@ -38,8 +38,8 @@ Source collection and reviewed design coverage are separate.
 | New Jersey (NJ) | 0 | 0 | 0 |
 | New Mexico (NM) | 2 | 0 | 0 |
 | Nevada (NV) | 0 | 0 | 0 |
-| New York (NY) | 2 | 0 | 0 |
-| Ohio (OH) | 5 | 0 | 0 |
+| New York (NY) | 20 | 18 | 0 |
+| Ohio (OH) | 5 | 1 | 0 |
 | Oklahoma (OK) | 3 | 0 | 0 |
 | Oregon (OR) | 4 | 1 | 0 |
 | Pennsylvania (PA) | 1 | 1 | 0 |
@@ -51,9 +51,9 @@ Source collection and reviewed design coverage are separate.
 | Utah (UT) | 0 | 0 | 0 |
 | Virginia (VA) | 1 | 1 | 0 |
 | Vermont (VT) | 0 | 0 | 0 |
-| Washington (WA) | 5 | 1 | 0 |
+| Washington (WA) | 29 | 25 | 0 |
 | Wisconsin (WI) | 1 | 0 | 0 |
-| West Virginia (WV) | 6 | 2 | 0 |
+| West Virginia (WV) | 13 | 9 | 0 |
 | Wyoming (WY) | 9 | 1 | 0 |
 
 ## Separate federal collection

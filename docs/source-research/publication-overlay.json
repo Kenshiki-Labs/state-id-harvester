@@ -1,0 +1,3074 @@
+{
+  "schema_version": 1,
+  "collections": [
+    {
+      "code": "AR",
+      "citations": [
+        {
+          "title": "dfa under21 legacy brochure",
+          "url": "https://www.dfa.arkansas.gov/wp-content/uploads/idCardBrochure.pdf",
+          "sha256": "1346af690c335139a6c263285d205f0bc028832772be625cadea2b110d567abb",
+          "retrieved_at": "",
+          "publisher_host": "www.dfa.arkansas.gov",
+          "publisher_jurisdiction": "AR",
+          "discovery_jurisdiction": "AR",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "little rock 2011 dfa id brochure",
+          "url": "https://www.littlerock.gov/%21userfiles/editor/docs/commprograms/ID%20Brochure.pdf",
+          "sha256": "955685972f341b0fdefe9c5ee7820084d51e261634ca7e13ad2649ed58f6e8ac",
+          "retrieved_at": "",
+          "publisher_host": "www.littlerock.gov",
+          "publisher_jurisdiction": "AR",
+          "discovery_jurisdiction": "AR",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "2016 real id comparison tokenworks",
+          "url": "https://tokenworks-com.s3.amazonaws.com/wp-content/uploads/2016/09/30003136/new-arkansas-drivers-license.jpg",
+          "sha256": "90c6f18e14d6b1bdc5ecf20cd9b5b85f385fa00caa6eb6f1bc0d24fb72e63efd",
+          "retrieved_at": "",
+          "publisher_host": "tokenworks-com.s3.amazonaws.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "AR",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "dfa 2018 card design brochure",
+          "url": "https://www.dfa.arkansas.gov/wp-content/uploads/Brochure.pdf",
+          "sha256": "76ca208c1a970f288293bcc6ac574e8997a843cc21545c2b4afb96eea4aec969",
+          "retrieved_at": "",
+          "publisher_host": "www.dfa.arkansas.gov",
+          "publisher_jurisdiction": "AR",
+          "discovery_jurisdiction": "AR",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "dfa 2018 press front kuar",
+          "url": "https://npr-brightspot.s3.amazonaws.com/legacy/sites/kuar/files/201806/2018-06-26-new_ar_driver_s_license.jpg",
+          "sha256": "1e8cb267d3dab51f9410041e43a6bb1c328a92056bd545337973fcc941295d9a",
+          "retrieved_at": "",
+          "publisher_host": "npr-brightspot.s3.amazonaws.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "AR",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "atc 2024 retailer brochure",
+          "url": "https://www.dfa.arkansas.gov/wp-content/uploads/ATC-Brochure-21-REVISED-1-05-24.pdf",
+          "sha256": "6a8cca2e644feecfd23da7e7b61655fcf0ccec502c04c8d119fa73999cc1ca80",
+          "retrieved_at": "",
+          "publisher_host": "www.dfa.arkansas.gov",
+          "publisher_jurisdiction": "AR",
+          "discovery_jurisdiction": "AR",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_9599bff1d8b084606a43aeb295b575e5",
+          "source_sha256": "1346af690c335139a6c263285d205f0bc028832772be625cadea2b110d567abb",
+          "asset_sha256": "9599bff1d8b084606a43aeb295b575e55d34d37b37720dd3ccf4129b0693bc06",
+          "original_asset_sha256": "ddd063c0767554037b2e6a507dd8ca9e2b9a6f00e73f919803e3cd228b7c7ce2",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_6db1fe4d5b48193e09a0768286cb3faf",
+          "source_sha256": "1346af690c335139a6c263285d205f0bc028832772be625cadea2b110d567abb",
+          "asset_sha256": "6db1fe4d5b48193e09a0768286cb3faf3a9cd9a9ed362efcdbf7b870f1d6c3c9",
+          "original_asset_sha256": "8f2abac254ab45e2de7bda114dcf434b1f7eb1f2d82d3902af1e9ec1c50a461d",
+          "page_number": 2,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_4a956614e819b167c7c8e32ae3f85969",
+          "source_sha256": "955685972f341b0fdefe9c5ee7820084d51e261634ca7e13ad2649ed58f6e8ac",
+          "asset_sha256": "4a956614e819b167c7c8e32ae3f8596940229a8d41de3e11d5c3f8173dbed99f",
+          "original_asset_sha256": "2ff0fa9075793d8f2573bf0180bcab521f747a0e4a27a118dcf3e3fbd2712c90",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_fbde65793c61461311e23bd97cdac09e",
+          "source_sha256": "955685972f341b0fdefe9c5ee7820084d51e261634ca7e13ad2649ed58f6e8ac",
+          "asset_sha256": "fbde65793c61461311e23bd97cdac09e66a33d33a3e85d21be579523e5eb242b",
+          "original_asset_sha256": "8e5d48b2b7ad187b3848e3ecb90097c6c5469f868ea5ab3c73102b2d5fc80944",
+          "page_number": 2,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_5b672b55605991c32ab9bf9786a97d1b",
+          "source_sha256": "90c6f18e14d6b1bdc5ecf20cd9b5b85f385fa00caa6eb6f1bc0d24fb72e63efd",
+          "asset_sha256": "5b672b55605991c32ab9bf9786a97d1babf5cbb27fa77a091f269959fc3ec553",
+          "original_asset_sha256": "90c6f18e14d6b1bdc5ecf20cd9b5b85f385fa00caa6eb6f1bc0d24fb72e63efd",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_d33519136adfe04a91d659c1cd3e923a",
+          "source_sha256": "76ca208c1a970f288293bcc6ac574e8997a843cc21545c2b4afb96eea4aec969",
+          "asset_sha256": "d33519136adfe04a91d659c1cd3e923a32b63fab55f914c5134d3566b1f8420b",
+          "original_asset_sha256": "a417d2d347c20567a7343d037fb6e954731acf4d2b7a2332f2749fa2c3150ab4",
+          "page_number": 2,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_85539df0b4d9de7ab34b48fb6caf1e49",
+          "source_sha256": "1e8cb267d3dab51f9410041e43a6bb1c328a92056bd545337973fcc941295d9a",
+          "asset_sha256": "85539df0b4d9de7ab34b48fb6caf1e49c15efbcef83a6305a204af7eac55e9e4",
+          "original_asset_sha256": "1e8cb267d3dab51f9410041e43a6bb1c328a92056bd545337973fcc941295d9a",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_e329d33228ffe14288a7ffc8c0efc585",
+          "source_sha256": "6a8cca2e644feecfd23da7e7b61655fcf0ccec502c04c8d119fa73999cc1ca80",
+          "asset_sha256": "e329d33228ffe14288a7ffc8c0efc5850e69a0b1f30acba21a5532cdf528fed9",
+          "original_asset_sha256": "e0beb26ef41b91385ec59eb5887e41e773cdb16702d5c7f0c1f36bad07655ead",
+          "page_number": 1,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "AZ",
+      "citations": [
+        {
+          "title": "legacy 2014 adult front small",
+          "url": "https://azdot.gov/sites/default/files/2019/01/2014-0501-license.jpg",
+          "sha256": "624e9abf72dde75f6fb6609f86f6b1e9ccbff477588f88068d0360781a4ac074",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "legacy 2014 temporary credential",
+          "url": "https://azdot.gov/sites/default/files/2019/01/2014-0501-license3.jpg",
+          "sha256": "9716f7d689e44dafafb993d7aa34f0c65c68725e6a872ff9c6c04bcf37834dee",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "legacy 2014 front back under21 composite",
+          "url": "https://azdot.gov/sites/default/files/2019/01/2014-0501-license2.jpg",
+          "sha256": "0eb50f3be4ed7fa8b257b214f1699320fab6ec9330243cdacc27abd496cc9d08",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "current 2023 travel front watermarked",
+          "url": "https://azdot.gov/sites/default/files/2023-04/DL%20Front_0.jpg",
+          "sha256": "5ef398e1673dd8ab0e52d2a0b18333f903702ed30547661c2c7e77f4230f0802",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "current 2023 announcement graphic",
+          "url": "https://azdot.gov/sites/default/files/2023-04/AZ%20driver%20license%20new%20look%20%281%29_0.png",
+          "sha256": "1f9deba583cf5569769179de90e8ff4b2b8ea1ddf8ff4ad84578e2b1beb4244b",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "current travel front",
+          "url": "https://azdot.gov/sites/default/files/2023-07/driver-license-donor-veteran-travel-id-star.jpg",
+          "sha256": "e325922e53985aab2efbf436c731b05552949fb81c84f92d9b29a1c80a0c87d2",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "current non travel front",
+          "url": "https://azdot.gov/sites/default/files/2026-04/Arizona-Non-Travel-Driver-License.jpg",
+          "sha256": "6a839e3e70ac58ae9345e4bb6f6e1babd2f99995d7cbb01e1a4977a212af98ac",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "legacy 1993 front",
+          "url": "https://azdot.gov/sites/default/files/inline-images/image%20%281%29.png2__0.png",
+          "sha256": "480c9f23448c778215daa4a62d03ee4b20750c128db230054f21523c189cb176",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "legacy 1997 manual plate",
+          "url": "https://azdot.gov/sites/default/files/inline-images/2024-01-12_19-17-46.png",
+          "sha256": "57f7454b36a78d578120e415c36f2940202f443ccb8d300ab88b344b6d69258f",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "legacy 2001 front",
+          "url": "https://azdot.gov/sites/default/files/inline-images/image%20%282%29.png2__1.png",
+          "sha256": "83d4f17f64276c6db7ae69ef9398cab39b3ad641e9d9b33c2b7805629bde9da6",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "legacy 2016 non travel front",
+          "url": "https://azdot.gov/sites/default/files/inline-images/image%20%283%29.png2__0.png",
+          "sha256": "cfb153fc74ed0006b5a80fa4de004e3d604bfb89b3e26ce5c59b2381b06036b9",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "current uv front back photo",
+          "url": "https://azdot.gov/sites/default/files/2025-04/Untitled%20design%20-%202025-04-21T152145.065.png",
+          "sha256": "ea90d691a7e2ade5587cbfa82fb585d6eb72b90c2c01cbee7c98f4e21704e705",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "adot legacy central issuance",
+          "url": "https://azdot.gov/sites/default/files/2019/07/central-credential-issuance-mvd-English.pdf",
+          "sha256": "b7ee33fac997108b4d415860529bc27c374632a13f421f1b25c017dae9f45597",
+          "retrieved_at": "",
+          "publisher_host": "azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "adot driver manual",
+          "url": "https://apps.azdot.gov/files/mvd/mvd-forms-lib/99-0117.pdf",
+          "sha256": "3f9f8f938671a1d927b080bacf4a1ec1e7b30b3010cb828088a31638e7c86fdf",
+          "retrieved_at": "",
+          "publisher_host": "apps.azdot.gov",
+          "publisher_jurisdiction": "AZ",
+          "discovery_jurisdiction": "AZ",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 74,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_4a94d63b8317fb59f149436f94aa60e8",
+          "source_sha256": "624e9abf72dde75f6fb6609f86f6b1e9ccbff477588f88068d0360781a4ac074",
+          "asset_sha256": "4a94d63b8317fb59f149436f94aa60e8d4f0c0eae8c107d87101c095150e1b79",
+          "original_asset_sha256": "624e9abf72dde75f6fb6609f86f6b1e9ccbff477588f88068d0360781a4ac074",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_05e1acdfe28e4f0328cf767e295e4348",
+          "source_sha256": "9716f7d689e44dafafb993d7aa34f0c65c68725e6a872ff9c6c04bcf37834dee",
+          "asset_sha256": "05e1acdfe28e4f0328cf767e295e4348ece1011547b699c7672f871599235b62",
+          "original_asset_sha256": "9716f7d689e44dafafb993d7aa34f0c65c68725e6a872ff9c6c04bcf37834dee",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_f352772295f255da0ba5bb6d12893f6d",
+          "source_sha256": "0eb50f3be4ed7fa8b257b214f1699320fab6ec9330243cdacc27abd496cc9d08",
+          "asset_sha256": "f352772295f255da0ba5bb6d12893f6d2785cb1d5bb5c27147b8d0dfd4f9c8b6",
+          "original_asset_sha256": "0eb50f3be4ed7fa8b257b214f1699320fab6ec9330243cdacc27abd496cc9d08",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_649a9009afa1e1968e23ebf8f4485120",
+          "source_sha256": "5ef398e1673dd8ab0e52d2a0b18333f903702ed30547661c2c7e77f4230f0802",
+          "asset_sha256": "649a9009afa1e1968e23ebf8f4485120076c641893727610f566c971f60e3434",
+          "original_asset_sha256": "5ef398e1673dd8ab0e52d2a0b18333f903702ed30547661c2c7e77f4230f0802",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_542478a3cd2e12e7d01cb398a6923a21",
+          "source_sha256": "1f9deba583cf5569769179de90e8ff4b2b8ea1ddf8ff4ad84578e2b1beb4244b",
+          "asset_sha256": "542478a3cd2e12e7d01cb398a6923a2161f6622fa4459657103870d596b96d0c",
+          "original_asset_sha256": "1f9deba583cf5569769179de90e8ff4b2b8ea1ddf8ff4ad84578e2b1beb4244b",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_79f99fae31d1384b69673ffa343da02d",
+          "source_sha256": "e325922e53985aab2efbf436c731b05552949fb81c84f92d9b29a1c80a0c87d2",
+          "asset_sha256": "79f99fae31d1384b69673ffa343da02d1bcebe614a1945bbf94de013ce2c911a",
+          "original_asset_sha256": "e325922e53985aab2efbf436c731b05552949fb81c84f92d9b29a1c80a0c87d2",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_e364e5482bec7396e1c100fbefa0e288",
+          "source_sha256": "6a839e3e70ac58ae9345e4bb6f6e1babd2f99995d7cbb01e1a4977a212af98ac",
+          "asset_sha256": "e364e5482bec7396e1c100fbefa0e288b508af25b30bd243d7e78f647dc7d87e",
+          "original_asset_sha256": "6a839e3e70ac58ae9345e4bb6f6e1babd2f99995d7cbb01e1a4977a212af98ac",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_4f105d5155f3df001ba08ea67ebd6589",
+          "source_sha256": "480c9f23448c778215daa4a62d03ee4b20750c128db230054f21523c189cb176",
+          "asset_sha256": "4f105d5155f3df001ba08ea67ebd658929ddd3fc45b86a5733adda814e490289",
+          "original_asset_sha256": "480c9f23448c778215daa4a62d03ee4b20750c128db230054f21523c189cb176",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_6a2c9ae98b038287da848df12833b037",
+          "source_sha256": "57f7454b36a78d578120e415c36f2940202f443ccb8d300ab88b344b6d69258f",
+          "asset_sha256": "6a2c9ae98b038287da848df12833b037c15de8c0f76f1a7e48b15c6cba847744",
+          "original_asset_sha256": "57f7454b36a78d578120e415c36f2940202f443ccb8d300ab88b344b6d69258f",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_18dd74a81307b129708d16814b44a165",
+          "source_sha256": "83d4f17f64276c6db7ae69ef9398cab39b3ad641e9d9b33c2b7805629bde9da6",
+          "asset_sha256": "18dd74a81307b129708d16814b44a1656918f6441ea420a5e8ded549971141be",
+          "original_asset_sha256": "83d4f17f64276c6db7ae69ef9398cab39b3ad641e9d9b33c2b7805629bde9da6",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_8f88cb8f2c368239cdb6f6b154c346c9",
+          "source_sha256": "cfb153fc74ed0006b5a80fa4de004e3d604bfb89b3e26ce5c59b2381b06036b9",
+          "asset_sha256": "8f88cb8f2c368239cdb6f6b154c346c9ad2e71ff3303508a86bbd0251e9c7ba5",
+          "original_asset_sha256": "cfb153fc74ed0006b5a80fa4de004e3d604bfb89b3e26ce5c59b2381b06036b9",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_23ae2d3aefc67ce6b038379f7944aa0c",
+          "source_sha256": "ea90d691a7e2ade5587cbfa82fb585d6eb72b90c2c01cbee7c98f4e21704e705",
+          "asset_sha256": "23ae2d3aefc67ce6b038379f7944aa0c75c6de6ee9167a2dc4b1b0f6dc554825",
+          "original_asset_sha256": "ea90d691a7e2ade5587cbfa82fb585d6eb72b90c2c01cbee7c98f4e21704e705",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_79f96b7d90602e1a3499d50cf38bf314",
+          "source_sha256": "b7ee33fac997108b4d415860529bc27c374632a13f421f1b25c017dae9f45597",
+          "asset_sha256": "79f96b7d90602e1a3499d50cf38bf314503eed5f67294296b5e2017cc36b06dd",
+          "original_asset_sha256": "5259f3ab4e8f28b9e1e805f94668f8261f5d68400ae50e16d8d7e28f987e508b",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_bd73b274492b6986b24b66ddd023ab7c",
+          "source_sha256": "b7ee33fac997108b4d415860529bc27c374632a13f421f1b25c017dae9f45597",
+          "asset_sha256": "bd73b274492b6986b24b66ddd023ab7cab3fa05a8f26c313d0334ddc0aabcddd",
+          "original_asset_sha256": "c656bfccb2608c8c0db9f5446558864fa47172fa6d6f591f5a6efd4e8435c007",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_8ab671cc86949bc10ee8483bea66e448",
+          "source_sha256": "b7ee33fac997108b4d415860529bc27c374632a13f421f1b25c017dae9f45597",
+          "asset_sha256": "8ab671cc86949bc10ee8483bea66e448474e1b8e7db5636e4b3246d02a4f7ff7",
+          "original_asset_sha256": "be5a6b7427cb43f18f03653ce6ce79f75774c5d7dc730647c7c58324a7a1783c",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_37194f2d278d4835a07632102b7d70c7",
+          "source_sha256": "3f9f8f938671a1d927b080bacf4a1ec1e7b30b3010cb828088a31638e7c86fdf",
+          "asset_sha256": "37194f2d278d4835a07632102b7d70c7d2b85375aadfe37d20bdb30c17d2825b",
+          "original_asset_sha256": "176b90cfaaa9743a27440a9b7e1a516c8f21f59ba56904b586bf1f9c9e740221",
+          "page_number": 16,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_2758e3fbad154540571adf46935bd5d2",
+          "source_sha256": "b7ee33fac997108b4d415860529bc27c374632a13f421f1b25c017dae9f45597",
+          "asset_sha256": "2758e3fbad154540571adf46935bd5d24fc5d6e74110b1a57f66ebdd5a4fd35d",
+          "original_asset_sha256": "4e7b30a8a202fdabc0c67247ed4957c3b53cc919d1d10de3d45629cf29ee64a5",
+          "page_number": 2,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_56c7f13ca4db9080641da72db4c44bdf",
+          "source_sha256": "3f9f8f938671a1d927b080bacf4a1ec1e7b30b3010cb828088a31638e7c86fdf",
+          "asset_sha256": "56c7f13ca4db9080641da72db4c44bdf8f48238b3d30a1ebe6675c4055450171",
+          "original_asset_sha256": "4aac1658eee3f159e6d2f178ed110c3d18e5de083e55453634b3efba19a8d744",
+          "page_number": 16,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "DE",
+      "citations": [
+        {
+          "title": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a.pdf",
+          "url": "https://dmv.de.gov/DriverServices/drivers_license/secureID/pdfs/SecureID_brochure.pdf",
+          "sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "retrieved_at": "2026-10-25T22:46:15.970371+00:00",
+          "publisher_host": "dmv.de.gov",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "DE",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_f3004ea6ba8abfcc8990a16aaf03d911",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "f3004ea6ba8abfcc8990a16aaf03d91166f98a5f0309c476a115f335f7f04b91",
+          "original_asset_sha256": "9c3e1bcd8def4373acc3edb939bd18f696851a9c1343e2687d3e450a54bc347a",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_6f6691bdf7bdb5287e21d7337bc42db1",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "6f6691bdf7bdb5287e21d7337bc42db176909dd355dbee13910c60b084d5949b",
+          "original_asset_sha256": "33802aede4530d58858e426d72caa98c8819ff3b55b18063d661bc21f9c9ac4d",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_30fd0cbe54b16a19fedf25cddaa07ae3",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "30fd0cbe54b16a19fedf25cddaa07ae38861615dd9ce1b33fd9d2c4b1ac3d905",
+          "original_asset_sha256": "9cd026ff3c4e1e6e02b2090ac0e78f71439d72f0f1904b1a29994feaeb3cf277",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_c2089611f9d543431a2980ea738d13c6",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "c2089611f9d543431a2980ea738d13c6df1a0e121214da5521aa3cded62c970c",
+          "original_asset_sha256": "339b8111424ccb18ccd651d12f4e7b4878a1d1f3538c9b065be86aac78a938bb",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_12b1bfa83c4f8ddc5a977eb7bd30973e",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "12b1bfa83c4f8ddc5a977eb7bd30973eaa82c9844e37b9d6ae8d035ebad35dd6",
+          "original_asset_sha256": "0a6f324d30cc75ffd5202d5d5696b4b1d327a2d9e417bfc8160df95a0978d4b3",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_873aebd25af1f3b9952b92c78686d618",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "873aebd25af1f3b9952b92c78686d6184b6bea513dc8536d67205fafc948310b",
+          "original_asset_sha256": "137243f63abfae19a642898f0e99461c6e88b50350e98bd88f54f5a745c00b20",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_5c0b93f2f5ecedb497a0929e60230a6a",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "5c0b93f2f5ecedb497a0929e60230a6ad2dbfbc64af17a1020686db46b5f8b8e",
+          "original_asset_sha256": "e71bebef7824ef400c4cc7ef90623f44ffa96b738acabf3b086f0a4db92f3a3d",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_f1be8e604fc57e3a9cd49af1d40290da",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "f1be8e604fc57e3a9cd49af1d40290daa7a29bb9a02e65abc7530b381f73e6bb",
+          "original_asset_sha256": "7f8b81d04b22a26e41e2343437ef1f26a878493792866830b18455fed8a13c34",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_62668197c01dbf398955e45731d64417",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "62668197c01dbf398955e45731d64417f85d04f594b1d183adc5ce767f59fd20",
+          "original_asset_sha256": "7221f368ba722badde5e508860a316446090518b59e3135e60c2caefff26c6d4",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_adb41523076df07a330284809ad5e062",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "adb41523076df07a330284809ad5e0620d8ae3a801390365e9b65a1b88bc0c59",
+          "original_asset_sha256": "d30eb649d97e34c22320ca87f4ef66fa36eb7568e51006a46a3dff7997ac6d0c",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_2570b90020f61801fcf8ed8d846ecdbf",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "2570b90020f61801fcf8ed8d846ecdbf6be7e3e4792a72e99f1ccac7ebc53784",
+          "original_asset_sha256": "e3e98823d70e0ce885495cc6146b562675e0d43018a67f30e770349499f3e1b3",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_a179cacbac23f0b72d80a2a74974444e",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "a179cacbac23f0b72d80a2a74974444e1636acf59fac6f5becb8cf7c963d4597",
+          "original_asset_sha256": "db272c12149280f1c5ecba7fefad24a73bef475896becf382cef420bf0b1dde2",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_6c58c8217645c5eed984dc919d83faf3",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "6c58c8217645c5eed984dc919d83faf3fe964ce392cfae7fa33be24eb1b2a41a",
+          "original_asset_sha256": "fb896fce783a234a6cae06e6b0b3c155273592e8b92bbcd2e9641b06aa09eddb",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_38ab4496947ca703216d9d0f914b2ab5",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "38ab4496947ca703216d9d0f914b2ab582aa2f1590da5513590dc3e326a2d837",
+          "original_asset_sha256": "eb003b786bc0a6c15a127e352765a880ea3ef913d5b86e1aa4386b728fbeb794",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_ac43e1bc01dbfcdc2bd34c7ea0557b25",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "ac43e1bc01dbfcdc2bd34c7ea0557b253917bcbc01b8741e15b9135cf2abc1c4",
+          "original_asset_sha256": "fa52258a61d440505fc58ef909d525573cab52283b50ff2095cf797e82e25f4f",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_67985e4c142b0748ba7f5b2bb0b4d40b",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "67985e4c142b0748ba7f5b2bb0b4d40b0426356647eda2596f9aea84f1630f1e",
+          "original_asset_sha256": "f8aef4c62647e71dae35e4c0cf6e1f69a0a21ec66b3aa93a15c34df65fcd4acb",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_3e40a8a9330e103c2dc64e68f539df25",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "3e40a8a9330e103c2dc64e68f539df250fcf7a54e7f7edbf836d0660af2ae54d",
+          "original_asset_sha256": "4fff13d3be004907ffe31346dc0f4271219534b969dcfbe96edf90a3dc02a5e8",
+          "page_number": 2,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_dc2b7dc529024edf81517a4f42f6ef8d",
+          "source_sha256": "0a00b12b68b80e2e790f6766e6d0b2c4eadb9f86cef3fa34e1e978ca0ae5796a",
+          "asset_sha256": "dc2b7dc529024edf81517a4f42f6ef8db9b4e1acb7fc8b1f329338ab1b008d26",
+          "original_asset_sha256": "309ab98f2700fc2ac98cd7120c1e887d5203813bec8946d3ff15c362666b9bdc",
+          "page_number": 2,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "IN",
+      "citations": [
+        {
+          "title": "bmv driver manual",
+          "url": "https://www.in.gov/bmv/licenses-permits-ids/files/drivers-manual.pdf",
+          "sha256": "6e60b06a2e4837b01ab27aec8f4053da23bc2d5f50582cb8229e0432717ebfdd",
+          "retrieved_at": "",
+          "publisher_host": "www.in.gov",
+          "publisher_jurisdiction": "IN",
+          "discovery_jurisdiction": "IN",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 84,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "bmv security flyer",
+          "url": "https://www.in.gov/bmv/resources/files/DL_Security_and_Authenticity_flyer.pdf",
+          "sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+          "retrieved_at": "",
+          "publisher_host": "www.in.gov",
+          "publisher_jurisdiction": "IN",
+          "discovery_jurisdiction": "IN",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 4,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "bmv top10 credential",
+          "url": "https://www.in.gov/dA/502c1794a3/Top-10-Things-to-Know_Final.pdf?language_id=1",
+          "sha256": "c15e229ea8b6b939df7e390dd1ba364bcf921d05e50aa5cc7dc3ceb8059aff62",
+          "retrieved_at": "",
+          "publisher_host": "www.in.gov",
+          "publisher_jurisdiction": "IN",
+          "discovery_jurisdiction": "IN",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "bmv legacy security flyer old",
+          "url": "https://www.in.gov/bmv/files/DL_Security_and_Authenticity_flyer.pdf",
+          "sha256": "0654387bc838d0ea8d32b7e18540a028cacbe1838c95a9f867aaa962139d1108",
+          "retrieved_at": "",
+          "publisher_host": "www.in.gov",
+          "publisher_jurisdiction": "IN",
+          "discovery_jurisdiction": "IN",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_5991ec34ee63727e2935901fa7acd7b9",
+          "source_sha256": "6e60b06a2e4837b01ab27aec8f4053da23bc2d5f50582cb8229e0432717ebfdd",
+          "asset_sha256": "5991ec34ee63727e2935901fa7acd7b999912524294fd18537564b6d61b11329",
+          "original_asset_sha256": "3de8f0eb44c1553109e25ceb5c58f39a844968e81e11a366a411bfaa3c5de664",
+          "page_number": 6,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_037a074c65da15f17115e8119e204d37",
+          "source_sha256": "6e60b06a2e4837b01ab27aec8f4053da23bc2d5f50582cb8229e0432717ebfdd",
+          "asset_sha256": "037a074c65da15f17115e8119e204d37280a8da078209694a3524a8537ae9355",
+          "original_asset_sha256": "8e502fc63ce9936e5974ab0748b77e2e8e4f962baef7fb9c2fcf11c29f7bf811",
+          "page_number": 6,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_d6f6cbbd347aa95372de0e8627e77d01",
+          "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+          "asset_sha256": "d6f6cbbd347aa95372de0e8627e77d018babe88870aa35f87b72fdebcd295151",
+          "original_asset_sha256": "58464a8a473e60101941cebb634659f552cceb2e816de34a90f592df7aec8068",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_786fd43b87197a65bebfb547599f9a53",
+          "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+          "asset_sha256": "786fd43b87197a65bebfb547599f9a53aa187afb6da20287c39b52af4ecf324a",
+          "original_asset_sha256": "449a8928b4bf3207b752700dcf27eb3c9fafbec0373bc7fe5df04c3de2a5d391",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_7ff702daf76da28f8d060b98a9a69123",
+          "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+          "asset_sha256": "7ff702daf76da28f8d060b98a9a691233137c7ef58aefb7bc6c238052b36f0cf",
+          "original_asset_sha256": "8f7d46497d84b5697bf36946924360c028b1488f7313c2bc992bc599b90d24ec",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_8aaced4bdbd488890908439558424122",
+          "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+          "asset_sha256": "8aaced4bdbd488890908439558424122fdfd835b02702cd5f5239fae70361125",
+          "original_asset_sha256": "6018a94dcfb0d855cd826322408afaf4da4babeca7a8dcce5a5515ee9d7d0365",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_c155c2a427d91ba4a7421191b34f2e1a",
+          "source_sha256": "c15e229ea8b6b939df7e390dd1ba364bcf921d05e50aa5cc7dc3ceb8059aff62",
+          "asset_sha256": "c155c2a427d91ba4a7421191b34f2e1a5dd4a709673011cc650ecd1c0ddb5965",
+          "original_asset_sha256": "366417499ffd21e4cd27b472ad1877c0349eebfb1e39deeb0906a31b8fa4ebf3",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_d8fd653f13fde689b12e68f9215da34d",
+          "source_sha256": "c15e229ea8b6b939df7e390dd1ba364bcf921d05e50aa5cc7dc3ceb8059aff62",
+          "asset_sha256": "d8fd653f13fde689b12e68f9215da34d69f2857da0bdb5ab86a50d64ad271fb2",
+          "original_asset_sha256": "aa3c410573b571b9458460024d99040be051c7192178eeacb952f6920d01a3ec",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_fa0b0a8e7cfcf819538f2b845bba66e4",
+          "source_sha256": "c15e229ea8b6b939df7e390dd1ba364bcf921d05e50aa5cc7dc3ceb8059aff62",
+          "asset_sha256": "fa0b0a8e7cfcf819538f2b845bba66e49a117ee29c22edd00425dc7329af3c47",
+          "original_asset_sha256": "f3e593108ed726f9bcfc6a76da26f7b6d85c7bdd8f092b6a3b4842fadc733e03",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_8a643f52456a917835de1ac81ab6f4eb",
+          "source_sha256": "0654387bc838d0ea8d32b7e18540a028cacbe1838c95a9f867aaa962139d1108",
+          "asset_sha256": "8a643f52456a917835de1ac81ab6f4ebf251c9bbe74d1b2e6c322debd3e5abc0",
+          "original_asset_sha256": "b12251789eb68dba603cd1fccba3a6146f173bd43daef2dfc2c2caca24e1cbf8",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_2a12f222aa97ae261a73d80e2d6dbe9b",
+          "source_sha256": "0654387bc838d0ea8d32b7e18540a028cacbe1838c95a9f867aaa962139d1108",
+          "asset_sha256": "2a12f222aa97ae261a73d80e2d6dbe9bab786d59679822416f5c428484c32435",
+          "original_asset_sha256": "0fe6623146a3953985cb64ad2ca087657b5b8c677726100d407055940699fa16",
+          "page_number": 2,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_fd4ae31678fe4a8a99e09871b9b31086",
+          "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+          "asset_sha256": "fd4ae31678fe4a8a99e09871b9b310869e9ffa695d3005aeaad762b6550dd1fb",
+          "original_asset_sha256": "74b0c864394427c4e5c954aed75c84c61d0e1a76457a87f32d6b46a29dfe7935",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_29b896964d5a0d51de9b36a491788f3c",
+          "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+          "asset_sha256": "29b896964d5a0d51de9b36a491788f3c82cd1bdbf070e9eb637f584c087ac9b2",
+          "original_asset_sha256": "00d1239c0205454373c029e65ed131d507f29f21d2d0456d36516dad1b8794ce",
+          "page_number": 2,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_cc69c7ff367e669b4f12dbcdc12c135c",
+          "source_sha256": "6b1b362bc085044b304e21add2b9e8c9fe5e4f866a2fb94fccf5a6a8376b4d1d",
+          "asset_sha256": "cc69c7ff367e669b4f12dbcdc12c135c3c4eb9d7a1d486e2a421ae64759bdc1b",
+          "original_asset_sha256": "c379b1c45a4f3ec66609018cf343b6ab5fd03aa1b55d8884f3b473d8628dfa40",
+          "page_number": 3,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_82fd5f8ec179cb6e1d80e6031d2b700d",
+          "source_sha256": "6e60b06a2e4837b01ab27aec8f4053da23bc2d5f50582cb8229e0432717ebfdd",
+          "asset_sha256": "82fd5f8ec179cb6e1d80e6031d2b700df1b927c5b66d63eea1888fea4a7a5859",
+          "original_asset_sha256": "63981c95b80878ee15675fe4839659c5ea8fffb7a4463053d929323e36798738",
+          "page_number": 6,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_3fabf0532f1dedbbbfbc04756bd2ca3c",
+          "source_sha256": "6e60b06a2e4837b01ab27aec8f4053da23bc2d5f50582cb8229e0432717ebfdd",
+          "asset_sha256": "3fabf0532f1dedbbbfbc04756bd2ca3c59d00a2ce3871f780659cf1d9e74f238",
+          "original_asset_sha256": "ac5b21d8b62b471e9e742f8bf7fbbda8f175500f362c153873ca10ee57e02360",
+          "page_number": 22,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_25ee5386bd02666c8dde14ef9a00ceb7",
+          "source_sha256": "c15e229ea8b6b939df7e390dd1ba364bcf921d05e50aa5cc7dc3ceb8059aff62",
+          "asset_sha256": "25ee5386bd02666c8dde14ef9a00ceb7e3e07f53a91f781e3c05de558d7b100c",
+          "original_asset_sha256": "5af372b2bf5b6b8d175d1f8029394a2a00887bdf614c52819e3aa05ea50aceb5",
+          "page_number": 1,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "KS",
+      "citations": [
+        {
+          "title": "law enforcement 2017 updated",
+          "url": "https://kslawenforcementinfo.com/uploads/3/4/3/3/34330059/new_dl_notice_20170814.pdf",
+          "sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+          "retrieved_at": "2026-10-26T18:05:42.293551+00:00",
+          "publisher_host": "kslawenforcementinfo.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "KS",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "state library 2017 design",
+          "url": "https://kgi.contentdm.oclc.org/digital/api/collection/p16884coll67/id/326/download",
+          "sha256": "755f3a7b2cf74142b8ac3c4ab00b10c664fe1513f5066d4e1b21dc74b37e81cf",
+          "retrieved_at": "2026-10-26T18:05:42.293551+00:00",
+          "publisher_host": "kgi.contentdm.oclc.org",
+          "publisher_jurisdiction": "KS",
+          "discovery_jurisdiction": "KS",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "legislature 2006 www",
+          "url": "https://www.kslegislature.gov/b2025_26/archive/historical/minutes/2006/2006_H_Min_TRA_0307.pdf",
+          "sha256": "39d0efd64cb0e8e1ebc7efbff9c899b21e0c846fa663cdeebba35ffaa64ea894",
+          "retrieved_at": "2026-10-26T18:05:42.293551+00:00",
+          "publisher_host": "www.kslegislature.gov",
+          "publisher_jurisdiction": "KS",
+          "discovery_jurisdiction": "KS",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 22,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "REALID SAMPLE2",
+          "url": "https://www.ksrevenue.gov/img/REALID-SAMPLE2.png",
+          "sha256": "e3ff4be64272167f2dc12b41af470cbe3b4e5835c93b82f92278ff5bd06695b8",
+          "retrieved_at": "2026-10-26T18:05:42.293551+00:00",
+          "publisher_host": "www.ksrevenue.gov",
+          "publisher_jurisdiction": "KS",
+          "discovery_jurisdiction": "KS",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NOT FOR FEDERAL USE SAMPLE2",
+          "url": "https://www.ksrevenue.gov/img/NOT-FOR-FEDERAL-USE-SAMPLE2.png",
+          "sha256": "ceb9fb4f95e99df663e705582414fad2b73270b7c38df75c98b1afe040e3844b",
+          "retrieved_at": "2026-10-26T18:05:42.293551+00:00",
+          "publisher_host": "www.ksrevenue.gov",
+          "publisher_jurisdiction": "KS",
+          "discovery_jurisdiction": "KS",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "kmbc 2012 redesign specimen",
+          "url": "https://kubrick.htvapps.com/htv-prod/ibmig/cms/image/kmbc/17008620-17008620.jpg",
+          "sha256": "2636600f0b390d61e76ef3f1c439f64f5a560c079811dc906c27d915e72c7411",
+          "retrieved_at": "2026-10-26T18:05:42.293551+00:00",
+          "publisher_host": "kubrick.htvapps.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "KS",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_b6eba1519472d2857b521450d4269b43",
+          "source_sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+          "asset_sha256": "b6eba1519472d2857b521450d4269b43e395ecae95142d114b2502fe0e4b8626",
+          "original_asset_sha256": "d610fc74898f22ae9b842dd3ad158efbcf324ead3683af6bbb67befd6a1e0d9d",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_719ff2e599f08b3d3470fd13685cc402",
+          "source_sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+          "asset_sha256": "719ff2e599f08b3d3470fd13685cc40209eb8ba8c6682e05e436e664efc85df3",
+          "original_asset_sha256": "16f8d663732a50c613a3610bd9dfe74b340d83cc6c4ddf2a643b365e2a71bb47",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_3ed50974400b58775268800663fa3590",
+          "source_sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+          "asset_sha256": "3ed50974400b58775268800663fa3590e22e53ffb6e630b3875c9f3cfd1119c3",
+          "original_asset_sha256": "60744360d367a5a365680b4331bc2308c1d59da4072f2f104bab18442292639e",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_877f613b8080b528d7763f6333f75ee4",
+          "source_sha256": "755f3a7b2cf74142b8ac3c4ab00b10c664fe1513f5066d4e1b21dc74b37e81cf",
+          "asset_sha256": "877f613b8080b528d7763f6333f75ee42b7381f086b0b98245bd5b2a8c909eee",
+          "original_asset_sha256": "df2c7d5111e2162a28115ff23e50130b01c182dd905011408116cc736ecf3c1c",
+          "page_number": 2,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_f19ba872cb37defde9841fc5af8e3cf8",
+          "source_sha256": "39d0efd64cb0e8e1ebc7efbff9c899b21e0c846fa663cdeebba35ffaa64ea894",
+          "asset_sha256": "f19ba872cb37defde9841fc5af8e3cf86e2767282e5ead414d6af4c94b54219e",
+          "original_asset_sha256": "de4220eee8562b37e0bb98a080ebfbb922a4df1edd85fcc7503f6325b8ae0251",
+          "page_number": 21,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_ff4ab258bd7a6e127e073c6bf72681c9",
+          "source_sha256": "e3ff4be64272167f2dc12b41af470cbe3b4e5835c93b82f92278ff5bd06695b8",
+          "asset_sha256": "ff4ab258bd7a6e127e073c6bf72681c9e7d677dfd1ae4142488b8e7e1578f71d",
+          "original_asset_sha256": "e3ff4be64272167f2dc12b41af470cbe3b4e5835c93b82f92278ff5bd06695b8",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_db95808b1ae43c5f7f8f4ed0b4b081b3",
+          "source_sha256": "ceb9fb4f95e99df663e705582414fad2b73270b7c38df75c98b1afe040e3844b",
+          "asset_sha256": "db95808b1ae43c5f7f8f4ed0b4b081b32f1f36623cde31f087faaccc44d87aae",
+          "original_asset_sha256": "ceb9fb4f95e99df663e705582414fad2b73270b7c38df75c98b1afe040e3844b",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_de910e370fd355e3deff99df05a39e70",
+          "source_sha256": "2636600f0b390d61e76ef3f1c439f64f5a560c079811dc906c27d915e72c7411",
+          "asset_sha256": "de910e370fd355e3deff99df05a39e7093cbb6b13b4d4e313c45b05e0f600f2b",
+          "original_asset_sha256": "2636600f0b390d61e76ef3f1c439f64f5a560c079811dc906c27d915e72c7411",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_bd9eba5c7abbe8d2c631e9fc1808a97d",
+          "source_sha256": "cc91b0e04f1f3f251098362bac3be1d205df5b6e014ccb69dda7516b61cfb416",
+          "asset_sha256": "bd9eba5c7abbe8d2c631e9fc1808a97dc9454e1fd4c09f8b5ec7795ba1229fc5",
+          "original_asset_sha256": "93d385ce5b95b2fbe090cbd556580b7db0f620749d3df81f3bbdc240f97662a1",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_81f552bcdd3b9ea19ba4cbde24827fc1",
+          "source_sha256": "39d0efd64cb0e8e1ebc7efbff9c899b21e0c846fa663cdeebba35ffaa64ea894",
+          "asset_sha256": "81f552bcdd3b9ea19ba4cbde24827fc1be7b269bf6e3849504f68722fb9059d5",
+          "original_asset_sha256": "c11b09c0c012b88a2d4c77adbe9015232f36181cd0f397cadd71c9639d7f4121",
+          "page_number": 21,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "KY",
+      "citations": [
+        {
+          "title": "legislature 2019 presentation",
+          "url": "https://apps.legislature.ky.gov/CommitteeDocuments/163/11618/022519-3-ConfIDentKY.pdf",
+          "sha256": "79aa48c3a2e7900cb86525ed46217d59d481c08313f34a17872c371d2051672e",
+          "retrieved_at": "2026-10-26T18:06:10.569933+00:00",
+          "publisher_host": "apps.legislature.ky.gov",
+          "publisher_jurisdiction": "KY",
+          "discovery_jurisdiction": "KY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 16,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "kytc kaco 2021 presentation",
+          "url": "https://kaco.org/media/3531/power-point-real-id-kytc-staff-presentation-updated-4-28-21-003.pdf",
+          "sha256": "56bda825032dadd52dff3df6bdb3b49007d35d0d7fa98d378188564331eba89d",
+          "retrieved_at": "2026-10-26T18:06:10.569933+00:00",
+          "publisher_host": "kaco.org",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "KY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 24,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "drive standard dl",
+          "url": "https://drive.ky.gov/RealID/PublishingImages/Standard-DL.png",
+          "sha256": "5c79bc2c2a4307069aa3edfcfbbba33ed950fa9b828835d986d71c484d0b2262",
+          "retrieved_at": "2026-10-26T18:06:10.569933+00:00",
+          "publisher_host": "drive.ky.gov",
+          "publisher_jurisdiction": "KY",
+          "discovery_jurisdiction": "KY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "drive real id",
+          "url": "https://drive.ky.gov/RealID/PublishingImages/REAL-ID.png",
+          "sha256": "bbd1704802a3da341c41e3c0c43f8f84a7a07a101b6e97618d4015c0cf0b06b8",
+          "retrieved_at": "2026-10-26T18:06:10.569933+00:00",
+          "publisher_host": "drive.ky.gov",
+          "publisher_jurisdiction": "KY",
+          "discovery_jurisdiction": "KY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "drive realid u21",
+          "url": "https://drive.ky.gov/RealID/PublishingImages/REALID-U21.jpg",
+          "sha256": "900cbe1ee8b359cbb72c88d75c6b4277a492c4850cae2f8fcbbd55c8eb6d9496",
+          "retrieved_at": "2026-10-26T18:06:10.569933+00:00",
+          "publisher_host": "drive.ky.gov",
+          "publisher_jurisdiction": "KY",
+          "discovery_jurisdiction": "KY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "drive realid permit u21",
+          "url": "https://drive.ky.gov/RealID/PublishingImages/REALID-IP-U21.jpg",
+          "sha256": "7566ce4ee8aedfd6f475df39e5c621f3c41f06b57bee56a081d8532ad3a3dd42",
+          "retrieved_at": "2026-10-26T18:06:10.569933+00:00",
+          "publisher_host": "drive.ky.gov",
+          "publisher_jurisdiction": "KY",
+          "discovery_jurisdiction": "KY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "transportation 2012 newsletter",
+          "url": "https://transportation.ky.gov/HighwaySafety/Newsletters/KOHS-Voice-Aug-2012.pdf",
+          "sha256": "83340d72d55f24f1061ec91d7810b567f378a72e0aabce815556a6c86eab6f91",
+          "retrieved_at": "2026-10-26T18:06:10.569933+00:00",
+          "publisher_host": "transportation.ky.gov",
+          "publisher_jurisdiction": "KY",
+          "discovery_jurisdiction": "KY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 8,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_351ac5125965a519dba4e08495784d0f",
+          "source_sha256": "79aa48c3a2e7900cb86525ed46217d59d481c08313f34a17872c371d2051672e",
+          "asset_sha256": "351ac5125965a519dba4e08495784d0f977f4522647e882ae98d5dbc95d9c8b3",
+          "original_asset_sha256": "336a5c5e801faf44eb934456af9a8b918ed45f8358b30a9caafcbc01cd22e3e8",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_64f1db7b9761903a4c4bbee6ac64fd0c",
+          "source_sha256": "79aa48c3a2e7900cb86525ed46217d59d481c08313f34a17872c371d2051672e",
+          "asset_sha256": "64f1db7b9761903a4c4bbee6ac64fd0cc9b8a374571ceb579aac435a05e214bd",
+          "original_asset_sha256": "2dc1c3b1156b45e74ba6d1ef39ef56c19a935e65753868552c50b371c6c91c33",
+          "page_number": 8,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_37ad2dd2965a479fa2b04f543e9a65fc",
+          "source_sha256": "79aa48c3a2e7900cb86525ed46217d59d481c08313f34a17872c371d2051672e",
+          "asset_sha256": "37ad2dd2965a479fa2b04f543e9a65fc87a3c145d37c15a4300f2cca72aedba0",
+          "original_asset_sha256": "2956881e236fc566309b0da9a8edb95f0947f5c06c6cfc48f94bece6fe69531c",
+          "page_number": 8,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_2a79e9cf4b005949115ccdb30a71a04f",
+          "source_sha256": "56bda825032dadd52dff3df6bdb3b49007d35d0d7fa98d378188564331eba89d",
+          "asset_sha256": "2a79e9cf4b005949115ccdb30a71a04fc0e6ca176fda5740b508004cc7ba3158",
+          "original_asset_sha256": "44d78d83123c9feb938f94bc494cd4d01c62ecb7a3573fa20ddd1c0525832812",
+          "page_number": 8,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_c60cb1a185a774d8736f9e6a8cd71bbb",
+          "source_sha256": "56bda825032dadd52dff3df6bdb3b49007d35d0d7fa98d378188564331eba89d",
+          "asset_sha256": "c60cb1a185a774d8736f9e6a8cd71bbb60dfc28fe216fc00ed718b12b685cc98",
+          "original_asset_sha256": "f84b2fc076fec4075004f2d9fb6f31f2043c22368536bfb98b87a9d1e793d7a9",
+          "page_number": 9,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_a6cbce5fef2688a78701af9d99ff1bbf",
+          "source_sha256": "5c79bc2c2a4307069aa3edfcfbbba33ed950fa9b828835d986d71c484d0b2262",
+          "asset_sha256": "a6cbce5fef2688a78701af9d99ff1bbf52448d301d9ad67297f862ea017ba9b8",
+          "original_asset_sha256": "5c79bc2c2a4307069aa3edfcfbbba33ed950fa9b828835d986d71c484d0b2262",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_49a71586b816d91ecb7cc0942fa4ce93",
+          "source_sha256": "bbd1704802a3da341c41e3c0c43f8f84a7a07a101b6e97618d4015c0cf0b06b8",
+          "asset_sha256": "49a71586b816d91ecb7cc0942fa4ce932c3635216301346fa297800bcd53e49e",
+          "original_asset_sha256": "bbd1704802a3da341c41e3c0c43f8f84a7a07a101b6e97618d4015c0cf0b06b8",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_9df23e63605ae0dcafd4d13afe82e1d0",
+          "source_sha256": "900cbe1ee8b359cbb72c88d75c6b4277a492c4850cae2f8fcbbd55c8eb6d9496",
+          "asset_sha256": "9df23e63605ae0dcafd4d13afe82e1d0e5b588cb9735426c533eed7b4df108c0",
+          "original_asset_sha256": "900cbe1ee8b359cbb72c88d75c6b4277a492c4850cae2f8fcbbd55c8eb6d9496",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_6c49575742524ec360b6d22f6c6b9f3f",
+          "source_sha256": "7566ce4ee8aedfd6f475df39e5c621f3c41f06b57bee56a081d8532ad3a3dd42",
+          "asset_sha256": "6c49575742524ec360b6d22f6c6b9f3f23b8d83b9fb6476b5cc4a9eebc48702e",
+          "original_asset_sha256": "7566ce4ee8aedfd6f475df39e5c621f3c41f06b57bee56a081d8532ad3a3dd42",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_2b588c6fea893c5e6a7990e4293a54de",
+          "source_sha256": "56bda825032dadd52dff3df6bdb3b49007d35d0d7fa98d378188564331eba89d",
+          "asset_sha256": "2b588c6fea893c5e6a7990e4293a54dedbed813fcd2470cc319e5fa5fa2a7af0",
+          "original_asset_sha256": "064eb4688f90a995394b52a85614a5a8c51005d385357be193869dd4768594ec",
+          "page_number": 6,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_44ec6eaed726890f773f3fe5e3e2721c",
+          "source_sha256": "56bda825032dadd52dff3df6bdb3b49007d35d0d7fa98d378188564331eba89d",
+          "asset_sha256": "44ec6eaed726890f773f3fe5e3e2721c4f543b5578d32d5a7f2bdef7b57d87d6",
+          "original_asset_sha256": "6908cbe57cd90dcf064ebb48c7409fe88acfe1d0876caed10fedf4191d529790",
+          "page_number": 3,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_38a8b88898369e1873f85fbce19640e3",
+          "source_sha256": "83340d72d55f24f1061ec91d7810b567f378a72e0aabce815556a6c86eab6f91",
+          "asset_sha256": "38a8b88898369e1873f85fbce19640e3fbf26613d5212632fb1490ec7b852f9f",
+          "original_asset_sha256": "7e9213dc6ac5bfff126564a0afd17aa1a92e0fc24bd68cefbfd645d1aa85d2f2",
+          "page_number": 5,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "LA",
+      "citations": [
+        {
+          "title": "responsible vendor handbook",
+          "url": "https://burtonservicesinc.com/pdf/rv-handbook.pdf",
+          "sha256": "faa599c84b5616a214f677ccb5a8521b536db98841f8ca7b6a0619e7d3798229",
+          "retrieved_at": "2026-10-26T18:05:19.259560+00:00",
+          "publisher_host": "burtonservicesinc.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "LA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 38,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "omv real id front",
+          "url": "https://expresslane.la.gov/omv/media/zomdwng4/real-id.jpg",
+          "sha256": "67994991bb69c40d9d5a611dc838837f793da3fa62700cc2f7b7a614ce5d3890",
+          "retrieved_at": "2026-10-26T18:05:19.259560+00:00",
+          "publisher_host": "expresslane.la.gov",
+          "publisher_jurisdiction": "LA",
+          "discovery_jurisdiction": "LA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "atc minor front annotated",
+          "url": "https://atc.louisiana.gov/media/gfjlgyl4/minor-license-with-comment.png",
+          "sha256": "33269a53de5be1b35631e7fe71e518835e38ea804a4d605e30e8ece8a2760571",
+          "retrieved_at": "2026-10-26T18:05:19.259560+00:00",
+          "publisher_host": "atc.louisiana.gov",
+          "publisher_jurisdiction": "LA",
+          "discovery_jurisdiction": "LA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "atc adult front",
+          "url": "https://atc.louisiana.gov/media/rrkfmazw/adult-license.png",
+          "sha256": "a2ed48ac4043128f05d1988a8c4025938acea2e2b2d435a61e9536d9004793d9",
+          "retrieved_at": "2026-10-26T18:05:19.259560+00:00",
+          "publisher_host": "atc.louisiana.gov",
+          "publisher_jurisdiction": "LA",
+          "discovery_jurisdiction": "LA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "scanner legacy front",
+          "url": "https://idscanner.com/wp-content/uploads/2015/03/Old-LA-drivers-license-300x188.jpg",
+          "sha256": "c3ecc1b459e5380e883beb071f308cd80092b74b903ac82aff76f3a9d28df3ed",
+          "retrieved_at": "2026-10-26T18:05:19.259560+00:00",
+          "publisher_host": "idscanner.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "LA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "atc vertical guidelines",
+          "url": "https://atc.louisiana.gov/media/qupb5j3d/vertical-drivers-license-guidelines.pdf",
+          "sha256": "d3f28d8705b93f17d7eaa57276a8ea1efaa804f4bbdac0161bc896224b569dfc",
+          "retrieved_at": "2026-10-26T18:05:19.259560+00:00",
+          "publisher_host": "atc.louisiana.gov",
+          "publisher_jurisdiction": "LA",
+          "discovery_jurisdiction": "LA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_0bbfa3347dfcc3347a549ecf47fd54ca",
+          "source_sha256": "faa599c84b5616a214f677ccb5a8521b536db98841f8ca7b6a0619e7d3798229",
+          "asset_sha256": "0bbfa3347dfcc3347a549ecf47fd54ca1f4d327cd429f6b959697b6f08ff0ada",
+          "original_asset_sha256": "8000e1aa4952479c68d25ab26f48b0fee93b82e6f2361788e013adefda839802",
+          "page_number": 12,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_4f31fb5d016975ca461d6a9046b376f0",
+          "source_sha256": "67994991bb69c40d9d5a611dc838837f793da3fa62700cc2f7b7a614ce5d3890",
+          "asset_sha256": "4f31fb5d016975ca461d6a9046b376f0ca5ee790c52d616cd553e4a11f8c7232",
+          "original_asset_sha256": "67994991bb69c40d9d5a611dc838837f793da3fa62700cc2f7b7a614ce5d3890",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_dd959e954ee57f0fb54574bf1f9a967b",
+          "source_sha256": "33269a53de5be1b35631e7fe71e518835e38ea804a4d605e30e8ece8a2760571",
+          "asset_sha256": "dd959e954ee57f0fb54574bf1f9a967bf71beba0462a4bdf0f9bca4cadcb0d4d",
+          "original_asset_sha256": "33269a53de5be1b35631e7fe71e518835e38ea804a4d605e30e8ece8a2760571",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_ffd87103b98a7fe6b02e467cbd24ef1e",
+          "source_sha256": "a2ed48ac4043128f05d1988a8c4025938acea2e2b2d435a61e9536d9004793d9",
+          "asset_sha256": "ffd87103b98a7fe6b02e467cbd24ef1e9e156fbb474a4c1845118130c2cba728",
+          "original_asset_sha256": "a2ed48ac4043128f05d1988a8c4025938acea2e2b2d435a61e9536d9004793d9",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_35026c7b9db0015e9f6772829efcb829",
+          "source_sha256": "c3ecc1b459e5380e883beb071f308cd80092b74b903ac82aff76f3a9d28df3ed",
+          "asset_sha256": "35026c7b9db0015e9f6772829efcb82962b3ce2d18233db69efa8be7b010f770",
+          "original_asset_sha256": "c3ecc1b459e5380e883beb071f308cd80092b74b903ac82aff76f3a9d28df3ed",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_5ff7be6f15d2a70dce8f69179566a5d7",
+          "source_sha256": "d3f28d8705b93f17d7eaa57276a8ea1efaa804f4bbdac0161bc896224b569dfc",
+          "asset_sha256": "5ff7be6f15d2a70dce8f69179566a5d763c650f6369226284e88d7fad13af31d",
+          "original_asset_sha256": "f6865300293b6a829311824bdb3f72a7c701787b9dd57afc91273110499415ba",
+          "page_number": 1,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_423c6987310c451531bb809b8a72dbac",
+          "source_sha256": "faa599c84b5616a214f677ccb5a8521b536db98841f8ca7b6a0619e7d3798229",
+          "asset_sha256": "423c6987310c451531bb809b8a72dbac7b1fb8015b34293c64de1f88dc106e38",
+          "original_asset_sha256": "97309e102127db151402fa69804a4272bbfb095b72a56d9c5d7f5864f3bfbafe",
+          "page_number": 12,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "MD",
+      "citations": [
+        {
+          "title": "MD: health 2024 id guide.pdf",
+          "url": "https://health.maryland.gov/notobaccosalestominors/Documents/2024%20T21%20Files/2024_MD_ID_Guide_Detailed.pdf",
+          "sha256": "a2d819a8d8da5340613b851d8d13940adf7d789ebca3b6645cec5ccb0f9f9360",
+          "retrieved_at": "2026-10-26T18:28:02.812930+00:00",
+          "publisher_host": "health.maryland.gov",
+          "publisher_jurisdiction": "MD",
+          "discovery_jurisdiction": "MD",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 4,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "MD: mslba 2016 mva information.pdf",
+          "url": "https://www.mslba.org/pdfs/MVALicenseInfo.pdf",
+          "sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+          "retrieved_at": "2026-10-26T18:28:02.812930+00:00",
+          "publisher_host": "www.mslba.org",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "MD",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 6,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_a28bbb52eafb5b134b2a2cca447f5651",
+          "source_sha256": "a2d819a8d8da5340613b851d8d13940adf7d789ebca3b6645cec5ccb0f9f9360",
+          "asset_sha256": "a28bbb52eafb5b134b2a2cca447f5651528feaa56f4b235a282faa89788d31db",
+          "original_asset_sha256": "52d7b86e9c6339d1919993cecde1e5e50fb2cd80979806d83fa2aaf730254270",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_c750a256c5680bfdd4c0471b3dc8acb3",
+          "source_sha256": "a2d819a8d8da5340613b851d8d13940adf7d789ebca3b6645cec5ccb0f9f9360",
+          "asset_sha256": "c750a256c5680bfdd4c0471b3dc8acb353557d5cc84657e72b22608641f7f71b",
+          "original_asset_sha256": "4a5eb11240d655456e451a1483b9d775320994fd7e66ae16edacd64837fff838",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_610e4e58d3234ecc03d5fcbeaf3727ea",
+          "source_sha256": "a2d819a8d8da5340613b851d8d13940adf7d789ebca3b6645cec5ccb0f9f9360",
+          "asset_sha256": "610e4e58d3234ecc03d5fcbeaf3727eaee5e6d11fde4725e3e58eea0f0f3a651",
+          "original_asset_sha256": "3b4839ff5f9363c32f81070e14aa418cd9a975d7769999e7dd25f3a71a2f5dac",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_7478cffb6700b9bc3343fec4db4a3fd2",
+          "source_sha256": "a2d819a8d8da5340613b851d8d13940adf7d789ebca3b6645cec5ccb0f9f9360",
+          "asset_sha256": "7478cffb6700b9bc3343fec4db4a3fd2c51873c3ef5501825aca4ae60e592439",
+          "original_asset_sha256": "b91305bf02d6b9be00f4b029fd079dff760612ea75fa8c7d2f644c1db692edd9",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_535a24dc5c58051ab844beae7813bed5",
+          "source_sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+          "asset_sha256": "535a24dc5c58051ab844beae7813bed509e52ffa9b3da09a91a7111a3193e0c7",
+          "original_asset_sha256": "d01c8c5e65cf679c005f3d6068128d14e6b44b81b71adf159bb6aa33b97684a0",
+          "page_number": 3,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_1aadaee39f13cb6dc55a72af00bbda5d",
+          "source_sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+          "asset_sha256": "1aadaee39f13cb6dc55a72af00bbda5de76dd23c9a51c262721bd5a43b7abcc6",
+          "original_asset_sha256": "8c6e734aa0b483723de405d849588f3f00d8d54b0a82553318b03d8dc972b021",
+          "page_number": 4,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_fb747d581c5fda51279967dd9a46047f",
+          "source_sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+          "asset_sha256": "fb747d581c5fda51279967dd9a46047fb1ab79f6caf2cb00de52a2db179a6d52",
+          "original_asset_sha256": "cd9ae941c91ad069340f02e3d6092cbd0d7b4dea00de9686ccce456e7a5f8237",
+          "page_number": 5,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_388ca678a7f08598ef19127b01522285",
+          "source_sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+          "asset_sha256": "388ca678a7f08598ef19127b01522285015ebe201af2c734d798377bf5d2cf93",
+          "original_asset_sha256": "e8ed14b0240c8ccced48ffd5c8620defa5fdda2aab5bceee1321ce526f77dad3",
+          "page_number": 6,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_57408d7362a00c2c935f31a0f2d86bb0",
+          "source_sha256": "68d5e6df6d2a06764d7694db5d54c75f4a8f8da842a4104adab05351d268d0af",
+          "asset_sha256": "57408d7362a00c2c935f31a0f2d86bb0b8192b0f1aec0e7a5de477be4023451e",
+          "original_asset_sha256": "98123fc1c258d1dd25a8add6780edb1d5f23ed265cf6aaeaa8942e78b3d99917",
+          "page_number": 3,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_ed87a5a72c33c5454bc6d65b2c23cdfe",
+          "source_sha256": "a2d819a8d8da5340613b851d8d13940adf7d789ebca3b6645cec5ccb0f9f9360",
+          "asset_sha256": "ed87a5a72c33c5454bc6d65b2c23cdfe1b26c1ffa1fcf159638ff42868ba580f",
+          "original_asset_sha256": "e2f93b9279692ce2e78304d7a19ecd61ebc04390822e6d83e246c33d32785080",
+          "page_number": 1,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "ME",
+      "citations": [
+        {
+          "title": "ME: issuer printable 1.pdf",
+          "url": "https://www3.maine.gov/sos/sites/maine.gov.sos/files/inline-files/MVL-9Checklist%20Brochure%20Revised%207-2022.pdf",
+          "sha256": "09670d0c92452fc879e13b7085e46f24874a6c2e935b1950b15760fdaa0f02fa",
+          "retrieved_at": "2026-10-26T18:27:08.898462+00:00",
+          "publisher_host": "www3.maine.gov",
+          "publisher_jurisdiction": "ME",
+          "discovery_jurisdiction": "ME",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "ME: sos real id original.jpg",
+          "url": "https://www3.maine.gov/sos/sites/maine.gov.sos/files/images/2025-06/RealID_061025.jpg",
+          "sha256": "06d2384160ff500ad018a362da8368ec66b55444cab95d7c20988a8a8714f681",
+          "retrieved_at": "2026-10-26T18:27:08.898462+00:00",
+          "publisher_host": "www3.maine.gov",
+          "publisher_jurisdiction": "ME",
+          "discovery_jurisdiction": "ME",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "ME: press 2011 specimens.jpg",
+          "url": "https://www.pressherald.com/wp-content/uploads/sites/4/2011/03/portland-press-herald_3527871.jpg",
+          "sha256": "c26727c4594373c4bf60a10bc9b959c98b713619b03adc941fe90b2f8bc631c3",
+          "retrieved_at": "2026-10-26T18:27:08.898462+00:00",
+          "publisher_host": "www.pressherald.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "ME",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "ME: press 2019 specimen.png",
+          "url": "https://gray-wabi-prod.gtv-cdn.com/resizer/v2/OAVJCM6BBNI2XDRW5RREAD72JA.png?auth=5d8bcb6d478dcbb2eba77a5abf1db1102a87c538676372f36363f1079906fee8&width=1200&height=600&smart=true",
+          "sha256": "56a75b1fee037f4276cd75649a5db72e29a57923ec9fe74c2e9fb0e53c177000",
+          "retrieved_at": "2026-10-26T18:27:08.898462+00:00",
+          "publisher_host": "gray-wabi-prod.gtv-cdn.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "ME",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "ME: press 2011 flat.jpg",
+          "url": "https://www.pressherald.com/wp-content/uploads/sites/4/2011/03/Driver+License.jpg",
+          "sha256": "1b82dc917bc114a4ab89aaeb4cf9881bfb0fa03ec372b1df51db2476571b0bda",
+          "retrieved_at": "2026-10-26T18:27:08.898462+00:00",
+          "publisher_host": "www.pressherald.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "ME",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "ME: press 2019 flat.jpg",
+          "url": "https://townsquare.media/site/490/files/2019/04/NewLicenseDesign2019.72DPI.jpg",
+          "sha256": "311b45050b045f3a36c48499cde034a14a828702544a5ced9c0d3e7d3c42bfc3",
+          "retrieved_at": "2026-10-26T18:27:08.898462+00:00",
+          "publisher_host": "townsquare.media",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "ME",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_8b8729b6a7097915e621db99ec559767",
+          "source_sha256": "09670d0c92452fc879e13b7085e46f24874a6c2e935b1950b15760fdaa0f02fa",
+          "asset_sha256": "8b8729b6a7097915e621db99ec559767ca6fefde952359ffa084f21cb7423558",
+          "original_asset_sha256": "25797b177b48fdb4ee4590832f0279654b2ae74f44582486933c5e7d5397cad3",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_c3490a94db20295bf6841fbb16683fd5",
+          "source_sha256": "06d2384160ff500ad018a362da8368ec66b55444cab95d7c20988a8a8714f681",
+          "asset_sha256": "c3490a94db20295bf6841fbb16683fd55c042ca7b0dd2d12d8d3e87c5dc78b27",
+          "original_asset_sha256": "06d2384160ff500ad018a362da8368ec66b55444cab95d7c20988a8a8714f681",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_8709214dc06d2864d315161b3c332dc0",
+          "source_sha256": "c26727c4594373c4bf60a10bc9b959c98b713619b03adc941fe90b2f8bc631c3",
+          "asset_sha256": "8709214dc06d2864d315161b3c332dc06045e38ae3022d0d04eec8e96798d593",
+          "original_asset_sha256": "c26727c4594373c4bf60a10bc9b959c98b713619b03adc941fe90b2f8bc631c3",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_337a8dffb61c155ee7c22cf22a0a9e5e",
+          "source_sha256": "56a75b1fee037f4276cd75649a5db72e29a57923ec9fe74c2e9fb0e53c177000",
+          "asset_sha256": "337a8dffb61c155ee7c22cf22a0a9e5e5bb18fa3e5662a6bde4a4df532d710f1",
+          "original_asset_sha256": "56a75b1fee037f4276cd75649a5db72e29a57923ec9fe74c2e9fb0e53c177000",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_60391735ef66daef88807c985c71763c",
+          "source_sha256": "1b82dc917bc114a4ab89aaeb4cf9881bfb0fa03ec372b1df51db2476571b0bda",
+          "asset_sha256": "60391735ef66daef88807c985c71763c47bfdd6873cc47887b8ace1c07fd484b",
+          "original_asset_sha256": "1b82dc917bc114a4ab89aaeb4cf9881bfb0fa03ec372b1df51db2476571b0bda",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_db39c8477f43d0fbc99458d1f0a277db",
+          "source_sha256": "311b45050b045f3a36c48499cde034a14a828702544a5ced9c0d3e7d3c42bfc3",
+          "asset_sha256": "db39c8477f43d0fbc99458d1f0a277db2cc3727600b1c3f9322eef646ba42021",
+          "original_asset_sha256": "15de96ea01f21d4354e1e06963b3504c0fe644e690c28fd2836b92b1c873085c",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_e9fe05fd9b4157cb25c8c214797e60c1",
+          "source_sha256": "09670d0c92452fc879e13b7085e46f24874a6c2e935b1950b15760fdaa0f02fa",
+          "asset_sha256": "e9fe05fd9b4157cb25c8c214797e60c158c25c490c6eaf5de428d1edf951f6f8",
+          "original_asset_sha256": "aefab22bc0d6ba0d5530bb697d97fbb4333d9d171198ebef6a4d599c0b1144ce",
+          "page_number": 1,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "MI",
+      "citations": [
+        {
+          "title": "MI: sos 2024 retail info.pdf",
+          "url": "https://content.govdelivery.com/attachments/MISOS/2024/01/23/file_attachments/2757477/MI_InfoSheet_Retail%20final.pdf",
+          "sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+          "retrieved_at": "2026-10-26T18:28:21.537101+00:00",
+          "publisher_host": "content.govdelivery.com",
+          "publisher_jurisdiction": "MI",
+          "discovery_jurisdiction": "MI",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "MI: lara under21 poster.pdf",
+          "url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/lcc/Under-21-Vertical-Drivers-License-Sheet.pdf?rev=deb5eef9d4454c39bfb98a6d56a8a123&hash=0EC07E2A3962418E382E7CB0AEAA0D0D",
+          "sha256": "eb7d25403af9d0e7af3e968587e2acf66a59d20a502f272570e1154339f94df3",
+          "retrieved_at": "2026-10-26T18:28:21.537101+00:00",
+          "publisher_host": "www.michigan.gov",
+          "publisher_jurisdiction": "MI",
+          "discovery_jurisdiction": "MI",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "MI: lara adult front.webp",
+          "url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/lcc/MLCC-Images/Driver-License-Regular.png?h=343&w=550&rev=35fb28df770949148f3bb79cb8427d83&extension=webp&hash=082331F4D13321978E5CADEEC9851FCD",
+          "sha256": "a1716d4d4593c86fcadacb67dbd6add4775035cfca836ed1ee0a04948492f88f",
+          "retrieved_at": "2026-10-26T18:28:21.537101+00:00",
+          "publisher_host": "www.michigan.gov",
+          "publisher_jurisdiction": "MI",
+          "discovery_jurisdiction": "MI",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "MI: lara under21 front.webp",
+          "url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/lcc/MLCC-Images/51_Minor_DL.png?h=550&w=348&rev=87e019c734464c6b80f02bccaf573b6c&extension=webp&hash=46A458680D665191BADB24EBC48B3747",
+          "sha256": "8eedafa5d0842e3eebeb588485bcf8c818f3edf79666597c3c4b530d0f3bbf62",
+          "retrieved_at": "2026-10-26T18:28:21.537101+00:00",
+          "publisher_host": "www.michigan.gov",
+          "publisher_jurisdiction": "MI",
+          "discovery_jurisdiction": "MI",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "MI: servsafe legacy michigan.pdf",
+          "url": "https://elearning.servsafe.com/Content/SSAMI/en_US/pdf/Michigan.pdf",
+          "sha256": "5bd881697da5889fad7ba0736e1d881ff584c86ce50ae3694e68dec2d895ef65",
+          "retrieved_at": "2026-10-26T18:28:21.537101+00:00",
+          "publisher_host": "elearning.servsafe.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "MI",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 44,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_23f4dba619ae06158dc91aa39fa1e685",
+          "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+          "asset_sha256": "23f4dba619ae06158dc91aa39fa1e6859c387e275500a2cb1990b2f958dbfbbf",
+          "original_asset_sha256": "8742452b0f11c7f46dd48b5bcd120cc14749edb2a6ff198af6f8b1ea76783a34",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_de3cd4b67a242ff6b3d0faa36a83ad02",
+          "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+          "asset_sha256": "de3cd4b67a242ff6b3d0faa36a83ad02e730d903791a186fa4d0cabc30c88573",
+          "original_asset_sha256": "37cd6b5ef3b34ca71ff0be66414bb4538ae025d3c4392c9b239f0ea0377e2b9b",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_a1160953beb0dc4cf0f3766394dc6aed",
+          "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+          "asset_sha256": "a1160953beb0dc4cf0f3766394dc6aedef064ef3d7fde48b635dd136f5c900b4",
+          "original_asset_sha256": "beed530cabe64dc1558a8517d57fca97810169675fc637405ab906b27d386374",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_de46977382283d9b21a4d40e16277b03",
+          "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+          "asset_sha256": "de46977382283d9b21a4d40e16277b036beedca6a2326576def0f39eba9efaa7",
+          "original_asset_sha256": "009f001246a76d968a210bdfa911f08516d28f7970deea46d3802494a8032d7c",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_4770de4f272b37c04dd509311d76d036",
+          "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+          "asset_sha256": "4770de4f272b37c04dd509311d76d036c8cb0df6ac8a598ca49f9d4cb8282f45",
+          "original_asset_sha256": "c135db3519a62c412a4089bc591d5526550d42b28f1232cd53fcfc17a03c14b9",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_b30ca45a5dc34fa67db561b6600a7486",
+          "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+          "asset_sha256": "b30ca45a5dc34fa67db561b6600a74869e1eb097fffb955192455fbe6ec081d3",
+          "original_asset_sha256": "ee06d54f4385ad71a783660f2b866b729ffd94ffd2f047b3d6360ccbe10cabb8",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_6aa27ccdb1b25d0c2e8e6637af2da70c",
+          "source_sha256": "eb7d25403af9d0e7af3e968587e2acf66a59d20a502f272570e1154339f94df3",
+          "asset_sha256": "6aa27ccdb1b25d0c2e8e6637af2da70c0453aa7ded3ff5fc2125289dfa4e6173",
+          "original_asset_sha256": "8192950e5814ca45c585e7e0bc941e571d0d8e871b762561aed75fe61d82c642",
+          "page_number": 1,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_0bf9f4f08e40d68f0972869cc89dc10e",
+          "source_sha256": "a1716d4d4593c86fcadacb67dbd6add4775035cfca836ed1ee0a04948492f88f",
+          "asset_sha256": "0bf9f4f08e40d68f0972869cc89dc10ea6dcb1b19463515afbe16861c4731d44",
+          "original_asset_sha256": "34abd2fccec510f80df370e2eea892707a4b05cef6f110ce3caa59688948b856",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_291377f5710ad59ae3df8d9606e4cc07",
+          "source_sha256": "8eedafa5d0842e3eebeb588485bcf8c818f3edf79666597c3c4b530d0f3bbf62",
+          "asset_sha256": "291377f5710ad59ae3df8d9606e4cc07cc1be9cfe2997cba2e25d762fac73c77",
+          "original_asset_sha256": "2f54c2b010208131f021a26e18fe6238b0f5f4489543b0d760cdd81032f8c532",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_1e7ddb3a023300eb6b41e9ca693e0302",
+          "source_sha256": "5bd881697da5889fad7ba0736e1d881ff584c86ce50ae3694e68dec2d895ef65",
+          "asset_sha256": "1e7ddb3a023300eb6b41e9ca693e03020d1016d0043176f26532a02b2e95f587",
+          "original_asset_sha256": "f546ba19843e25932cf9c34766a47a68dfe3360db9e0a699f8887d7c011ebe33",
+          "page_number": 19,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_b4bd0de5a41d863f71a9df44a1ffe616",
+          "source_sha256": "5bd881697da5889fad7ba0736e1d881ff584c86ce50ae3694e68dec2d895ef65",
+          "asset_sha256": "b4bd0de5a41d863f71a9df44a1ffe616163af930ba9a880d81e254b96e924f84",
+          "original_asset_sha256": "97063b2a1d936e49acbb8bb8cbaa6dbe6e75d210476cf0d67b37aae7e9557334",
+          "page_number": 20,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_59adb18f62b154a2ca185960bf92974a",
+          "source_sha256": "09bfa692d9da64f0efbf38642c5e9744b4b32388326f074e8ecbbe40672b2486",
+          "asset_sha256": "59adb18f62b154a2ca185960bf92974a4cc210acc53575681f048dcf84f90948",
+          "original_asset_sha256": "750743f0ebd8739a3f4dbeb0aea2f86abe84c5908ae0ac98af6cb18fa6c77a57",
+          "page_number": 1,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "NY",
+      "citations": [
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued after March 10, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-08/enhanced-dl-front-862x392.png?itok=7CAzzvsY",
+          "sha256": "01f209411dff6ee5c3fae2ae7ca1e81f03e125ce7219c264f0e45406d35e4c92",
+          "retrieved_at": "2026-10-26T00:16:28.467147+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued after March 10, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-08/enhanced-dl-back-867x396.png?itok=-RnmsH4z",
+          "sha256": "2455703acd6e4039b116e17097e41645639a223c5b008864690d750ff6884a55",
+          "retrieved_at": "2026-10-26T00:16:28.471672+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued January 28, 2014 - March 9, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-01/edl-front2x-708x356.png?itok=P77T9x_o",
+          "sha256": "e2c481387297c9b990226f977dbc75831cb05075e675f19c422c421617cb4733",
+          "retrieved_at": "2026-10-26T00:16:28.476969+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued January 28, 2014 - March 9, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-01/edl-back2x-708x356.png?itok=Ha47Mo0q",
+          "sha256": "e674fbc11826b28b24960d9f21b902269669f6b451b0159431a94febb9eb2a00",
+          "retrieved_at": "2026-10-26T00:16:28.481347+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued after March 10, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-08/realid-dl-front-875x397.png?itok=keLFZN7P",
+          "sha256": "d7bc9b562cb54a544111a188dd05f9b210ae47e485d70248c36063a092dbffd6",
+          "retrieved_at": "2026-10-26T00:16:28.488258+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued after March 10, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-08/realid-dl-back.png?itok=nUVWJ6Yx",
+          "sha256": "041a515b8d672c63abdb9807d9123be5b9e786389b3363149608a52c60336043",
+          "retrieved_at": "2026-10-26T00:16:28.493242+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued October 30, 2017 - March 9, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-01/realid-front2x-708x356.png?itok=nXX4T1Xh",
+          "sha256": "c3c9f2e65e8bbd75c6140d40aec9881adc15cd9cfb5d386913665ee383e1d9bf",
+          "retrieved_at": "2026-10-26T00:16:28.498245+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued October 30, 2017 - March 9, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-01/realid-back2x-708x356.png?itok=PkL7H_Kp",
+          "sha256": "39082f6e18fd57b459b48715a2d9c8cd9be3a1d034f13df445475187df2c8e38",
+          "retrieved_at": "2026-10-26T00:16:28.502846+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued after March 10, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-08/standard-dl-front-892x405.png?itok=4GPq2c4Q",
+          "sha256": "7b17ec63a0682b44424a546b96eaaf0333f02b97df2f64be72607d4ec7f13637",
+          "retrieved_at": "2026-10-26T00:16:28.507799+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued October 30, 2017 - March 9, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-01/nffp-front2x_0-708x356.png?itok=LsP9sSpa",
+          "sha256": "94cb8c4f990cc449242cfa682880bf0069e000230052285b67d600b348a7e246",
+          "retrieved_at": "2026-10-26T00:16:28.517462+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued October 30, 2017 - March 9, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-01/nffp-back2x-793x367.png?itok=x-1om1nC",
+          "sha256": "51d2d009c03c278daef6d4973074efc76a4f78edfaae5eee19c775467764be3f",
+          "retrieved_at": "2026-10-26T00:16:28.521844+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued before October 30, 2017",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-01/dl-o21_updated-docno-654x327.png?itok=GilranPy",
+          "sha256": "b8b71f2e8a6fe094d87ec1f70f4b4b21efb895e2151efd5335223d39cd9e1ac9",
+          "retrieved_at": "2026-10-26T00:16:28.526576+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued before October 30, 2017",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-01/dl_back_hilights_text_0-662x332.png?itok=Fg3KWLzr",
+          "sha256": "2b7ff12a55702167b909d6290cd6de121ab9bffb62be4221a36fef62dc70f9b8",
+          "retrieved_at": "2026-10-26T00:16:28.536860+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Driver License, Learner Permit & Non-Driver IDs (Over 21) — Issued before October 30, 2017",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-01/standard2x_1.png?itok=JaJ0yiUX",
+          "sha256": "75da9d75a1140f6184c50419b904e9e94550258bd7aa57c287d08b4beb795a33",
+          "retrieved_at": "2026-10-26T00:16:28.541906+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Sample License, Learner Permit & Non-driver IDs (Under 21) — Issued after March 10, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-08/u21_standard-dl-back-726x331.png?itok=kakTpINw",
+          "sha256": "b581e959e64927a8fb951159a5db0bc74b6a94bd4b1eaf876434d85359a70e61",
+          "retrieved_at": "2026-10-26T00:16:28.546552+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Sample License, Learner Permit & Non-driver IDs (Under 21) — Issued after March 10, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-08/u21_standard-dl-front_0-495x507.png?itok=xn2PqO7C",
+          "sha256": "77830d1005d266ce2eec8de7ec98fb8a12e657a9a4c40e4bb9d8185b138e8267",
+          "retrieved_at": "2026-10-26T00:16:28.550970+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Sample License, Learner Permit & Non-driver IDs (Under 21) — Issued March 23, 2017 - March 9, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-01/dl-u21_updated-docno-679x338.png?itok=9t34qNIB",
+          "sha256": "dc6f6423cd01362d497f033228f5ec4ff404ae1338e2f2bb4e0df3c6728b6f4d",
+          "retrieved_at": "2026-10-26T00:16:28.558848+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "NY issuer specimen — Sample License, Learner Permit & Non-driver IDs (Under 21) — Issued March 23, 2017 - March 9, 2022",
+          "url": "https://dmv.ny.gov/sites/default/files/styles/wysiwyg/public/images/2022-01/u21lp_hilights_text_4-500x523.png?itok=x0HwG3QP",
+          "sha256": "a7941a764cf4a9f1d469e9ab25fa535e8ad0475361ea4333515c8e856f67356f",
+          "retrieved_at": "2026-10-26T00:16:28.564571+00:00",
+          "publisher_host": "dmv.ny.gov",
+          "publisher_jurisdiction": "NY",
+          "discovery_jurisdiction": "NY",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_f09bbf1e8e07fe47fa497f815f0a9e23",
+          "source_sha256": "01f209411dff6ee5c3fae2ae7ca1e81f03e125ce7219c264f0e45406d35e4c92",
+          "asset_sha256": "f09bbf1e8e07fe47fa497f815f0a9e2306a258b5f9102054452ca5855e1b9232",
+          "original_asset_sha256": "01f209411dff6ee5c3fae2ae7ca1e81f03e125ce7219c264f0e45406d35e4c92",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_c7b70589d122b4d5c1a61f39b97314ac",
+          "source_sha256": "2455703acd6e4039b116e17097e41645639a223c5b008864690d750ff6884a55",
+          "asset_sha256": "c7b70589d122b4d5c1a61f39b97314ac97e7885859eb9578e8edb057ec92b30d",
+          "original_asset_sha256": "2455703acd6e4039b116e17097e41645639a223c5b008864690d750ff6884a55",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_d894dfac0c5451d3d3746b31c7bd27c8",
+          "source_sha256": "e2c481387297c9b990226f977dbc75831cb05075e675f19c422c421617cb4733",
+          "asset_sha256": "d894dfac0c5451d3d3746b31c7bd27c8f99a69ae9b1e91285e7c35408b1f7e2c",
+          "original_asset_sha256": "e2c481387297c9b990226f977dbc75831cb05075e675f19c422c421617cb4733",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_03cb5cf41efc6c6319985ad302a28c9a",
+          "source_sha256": "e674fbc11826b28b24960d9f21b902269669f6b451b0159431a94febb9eb2a00",
+          "asset_sha256": "03cb5cf41efc6c6319985ad302a28c9a24f67b4e980ab3262f4142fa524f9c39",
+          "original_asset_sha256": "e674fbc11826b28b24960d9f21b902269669f6b451b0159431a94febb9eb2a00",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_bb73415d07bc5649a9970bb3cef3f739",
+          "source_sha256": "d7bc9b562cb54a544111a188dd05f9b210ae47e485d70248c36063a092dbffd6",
+          "asset_sha256": "bb73415d07bc5649a9970bb3cef3f739b1dcce01585f5f9ac2eecd47354bfe5c",
+          "original_asset_sha256": "d7bc9b562cb54a544111a188dd05f9b210ae47e485d70248c36063a092dbffd6",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_b1d21700d7e4afa9a13e784f66ac2c71",
+          "source_sha256": "041a515b8d672c63abdb9807d9123be5b9e786389b3363149608a52c60336043",
+          "asset_sha256": "b1d21700d7e4afa9a13e784f66ac2c71a7adbdab13e546c459125235627ddfb7",
+          "original_asset_sha256": "041a515b8d672c63abdb9807d9123be5b9e786389b3363149608a52c60336043",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_50eae574cce68bf6b5a08abbb68071b1",
+          "source_sha256": "c3c9f2e65e8bbd75c6140d40aec9881adc15cd9cfb5d386913665ee383e1d9bf",
+          "asset_sha256": "50eae574cce68bf6b5a08abbb68071b16c0df4fde35dd69c6b6a116f99839726",
+          "original_asset_sha256": "c3c9f2e65e8bbd75c6140d40aec9881adc15cd9cfb5d386913665ee383e1d9bf",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_e4ffd0f7fec352836bd38b581ee278d3",
+          "source_sha256": "39082f6e18fd57b459b48715a2d9c8cd9be3a1d034f13df445475187df2c8e38",
+          "asset_sha256": "e4ffd0f7fec352836bd38b581ee278d330e378ef74c39e8f913358aaadb6b00f",
+          "original_asset_sha256": "39082f6e18fd57b459b48715a2d9c8cd9be3a1d034f13df445475187df2c8e38",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_1283bd5ec1db254e766ce8bbd0f4c6e0",
+          "source_sha256": "7b17ec63a0682b44424a546b96eaaf0333f02b97df2f64be72607d4ec7f13637",
+          "asset_sha256": "1283bd5ec1db254e766ce8bbd0f4c6e0e7f39453c45c66c4e669d152ac3537da",
+          "original_asset_sha256": "7b17ec63a0682b44424a546b96eaaf0333f02b97df2f64be72607d4ec7f13637",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_f38bc21705a0e5fa0fcd0b30c6eea772",
+          "source_sha256": "94cb8c4f990cc449242cfa682880bf0069e000230052285b67d600b348a7e246",
+          "asset_sha256": "f38bc21705a0e5fa0fcd0b30c6eea772c9ec3ecc3760d53ea7602e62eb136903",
+          "original_asset_sha256": "94cb8c4f990cc449242cfa682880bf0069e000230052285b67d600b348a7e246",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_4c52886ddfecb8e7af5bfa8921b38087",
+          "source_sha256": "51d2d009c03c278daef6d4973074efc76a4f78edfaae5eee19c775467764be3f",
+          "asset_sha256": "4c52886ddfecb8e7af5bfa8921b380875df8fc488ec709585aed79ebf5afae85",
+          "original_asset_sha256": "51d2d009c03c278daef6d4973074efc76a4f78edfaae5eee19c775467764be3f",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_62e0cc3919b6b961ebc3cdfb4878de58",
+          "source_sha256": "b8b71f2e8a6fe094d87ec1f70f4b4b21efb895e2151efd5335223d39cd9e1ac9",
+          "asset_sha256": "62e0cc3919b6b961ebc3cdfb4878de58399cd4dcc785cf4e41e8d2dfea4c8d28",
+          "original_asset_sha256": "b8b71f2e8a6fe094d87ec1f70f4b4b21efb895e2151efd5335223d39cd9e1ac9",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_0ff441baba813127ff5587a26de9e742",
+          "source_sha256": "2b7ff12a55702167b909d6290cd6de121ab9bffb62be4221a36fef62dc70f9b8",
+          "asset_sha256": "0ff441baba813127ff5587a26de9e7422ef8e229a9a974c71e576aa750506cff",
+          "original_asset_sha256": "2b7ff12a55702167b909d6290cd6de121ab9bffb62be4221a36fef62dc70f9b8",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_da1678f93973c42493e28214d109d2a4",
+          "source_sha256": "75da9d75a1140f6184c50419b904e9e94550258bd7aa57c287d08b4beb795a33",
+          "asset_sha256": "da1678f93973c42493e28214d109d2a4967d918bdfda9e051581b935aece0ed7",
+          "original_asset_sha256": "75da9d75a1140f6184c50419b904e9e94550258bd7aa57c287d08b4beb795a33",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_2a7720d4fb06ee1a117f89c57e411870",
+          "source_sha256": "b581e959e64927a8fb951159a5db0bc74b6a94bd4b1eaf876434d85359a70e61",
+          "asset_sha256": "2a7720d4fb06ee1a117f89c57e41187070b09768061647df96bc82dae92edd48",
+          "original_asset_sha256": "b581e959e64927a8fb951159a5db0bc74b6a94bd4b1eaf876434d85359a70e61",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_eac20f5d5ee18eaf909084684c47eb52",
+          "source_sha256": "77830d1005d266ce2eec8de7ec98fb8a12e657a9a4c40e4bb9d8185b138e8267",
+          "asset_sha256": "eac20f5d5ee18eaf909084684c47eb52cedb416b54280e514a683ca425f40742",
+          "original_asset_sha256": "77830d1005d266ce2eec8de7ec98fb8a12e657a9a4c40e4bb9d8185b138e8267",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_ba110c4d5f055b9fe2846841ada93c39",
+          "source_sha256": "dc6f6423cd01362d497f033228f5ec4ff404ae1338e2f2bb4e0df3c6728b6f4d",
+          "asset_sha256": "ba110c4d5f055b9fe2846841ada93c39f19867ec142231d86782682d51a46ebd",
+          "original_asset_sha256": "dc6f6423cd01362d497f033228f5ec4ff404ae1338e2f2bb4e0df3c6728b6f4d",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_e5d43c988930fc60772be49bc0a9ebaf",
+          "source_sha256": "a7941a764cf4a9f1d469e9ab25fa535e8ad0475361ea4333515c8e856f67356f",
+          "asset_sha256": "e5d43c988930fc60772be49bc0a9ebafb9cba592560b6997a1e84dfa35f764c0",
+          "original_asset_sha256": "a7941a764cf4a9f1d469e9ab25fa535e8ad0475361ea4333515c8e856f67356f",
+          "page_number": null,
+          "kind": "direct_image"
+        }
+      ]
+    },
+    {
+      "code": "OH",
+      "citations": [
+        {
+          "title": "b0fb736ea2210c94e324378094f870c8bdcf8e0b2bbf30f789c893f8d2fab046.pdf",
+          "url": "https://www.bmv.ohio.gov/links/newDL-ID-FACT-SHEET.pdf",
+          "sha256": "b0fb736ea2210c94e324378094f870c8bdcf8e0b2bbf30f789c893f8d2fab046",
+          "retrieved_at": "2026-10-25T22:40:18.835253+00:00",
+          "publisher_host": "www.bmv.ohio.gov",
+          "publisher_jurisdiction": "OH",
+          "discovery_jurisdiction": "OH",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_67e27dc07a45adfc264b0ca1477feb11",
+          "source_sha256": "b0fb736ea2210c94e324378094f870c8bdcf8e0b2bbf30f789c893f8d2fab046",
+          "asset_sha256": "67e27dc07a45adfc264b0ca1477feb112949064276c0e48eed477d3a56c73b9b",
+          "original_asset_sha256": "61ca9ed158ebba1608b27add20a937bba26d2634d2f9ed514582c0ca79f068a3",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_a0192e7fde8563d0017833d37b9c91df",
+          "source_sha256": "b0fb736ea2210c94e324378094f870c8bdcf8e0b2bbf30f789c893f8d2fab046",
+          "asset_sha256": "a0192e7fde8563d0017833d37b9c91df09eebd8e6599cb3b4407b10f8c24b147",
+          "original_asset_sha256": "b03bf9610cf047ae425a9ef78f8bc88dc061edcea7d0fc587141a60ec9746ca7",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_8064fc9106ed8d3d964f4ce7d134f8af",
+          "source_sha256": "b0fb736ea2210c94e324378094f870c8bdcf8e0b2bbf30f789c893f8d2fab046",
+          "asset_sha256": "8064fc9106ed8d3d964f4ce7d134f8af0a3157452060a715b7a9e9da69b2cb18",
+          "original_asset_sha256": "a31a1ecf5720315706b3f09c23cfc096a8862959f86a05ab9e31ad6c30d82f06",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_58ad81c8af6d1c5fba09843dd23322b5",
+          "source_sha256": "b0fb736ea2210c94e324378094f870c8bdcf8e0b2bbf30f789c893f8d2fab046",
+          "asset_sha256": "58ad81c8af6d1c5fba09843dd23322b569d726c762639a5afd1975d7bdee41ae",
+          "original_asset_sha256": "20fcc90905c09bc72e6c5802faa11ae27ad8aa154ca2990f06be28ad9723ecff",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_e9d4646fda630f929045b1280a3fcde4",
+          "source_sha256": "b0fb736ea2210c94e324378094f870c8bdcf8e0b2bbf30f789c893f8d2fab046",
+          "asset_sha256": "e9d4646fda630f929045b1280a3fcde4a85a49fc10e411022661b3fb15ab122e",
+          "original_asset_sha256": "6023541fbb4c81c812af86b45c16d7e8d26dbb8fc6f02122e1e48f61faf29f76",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_b60d3050afbdb14c15ebd5d3112ff178",
+          "source_sha256": "b0fb736ea2210c94e324378094f870c8bdcf8e0b2bbf30f789c893f8d2fab046",
+          "asset_sha256": "b60d3050afbdb14c15ebd5d3112ff17863fc3870faeedf9c9e6328095ce9f23b",
+          "original_asset_sha256": "bfc1871a6ad3dd980dfc22e2a98441b0af1c6373bbb5b0138240c0473a7696e3",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_a51be89258b52f85517b96f42ee0330a",
+          "source_sha256": "b0fb736ea2210c94e324378094f870c8bdcf8e0b2bbf30f789c893f8d2fab046",
+          "asset_sha256": "a51be89258b52f85517b96f42ee0330ad029e11a72b375a983a89870c9ff3876",
+          "original_asset_sha256": "13fcad360c49bdee7ed78781a1ab4d2e01f30d1ead140b87bc14e86bc7f702e9",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_8ae6e1921d4581b10535ed20c8644399",
+          "source_sha256": "b0fb736ea2210c94e324378094f870c8bdcf8e0b2bbf30f789c893f8d2fab046",
+          "asset_sha256": "8ae6e1921d4581b10535ed20c86443999193f3b88be37433c937cd47ef6928e6",
+          "original_asset_sha256": "d4d3c681e608444042a46428f9d80112df265ada12feba4799d0af677b1f4f82",
+          "page_number": 2,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_706291413318f9bc5631db7b072f0eff",
+          "source_sha256": "b0fb736ea2210c94e324378094f870c8bdcf8e0b2bbf30f789c893f8d2fab046",
+          "asset_sha256": "706291413318f9bc5631db7b072f0eff1805154d91ddaf8d8f7ba3cfec226640",
+          "original_asset_sha256": "a08da00d84f127390347ddc14c1dc15d14dfe0233c7ea670e4837cc46a4b04fa",
+          "page_number": 2,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "VA",
+      "citations": [
+        {
+          "title": "Slide 1",
+          "url": "https://apps.dlas.virginia.gov/user_db/frmvscc.aspx?viewid=644",
+          "sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "retrieved_at": "2026-10-25T22:40:19.004038+00:00",
+          "publisher_host": "apps.dlas.virginia.gov",
+          "publisher_jurisdiction": "VA",
+          "discovery_jurisdiction": "VA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 18,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_e449887106f43c1061792f8fde13fd21",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "e449887106f43c1061792f8fde13fd212f909bb7046a1a067d154596c4202764",
+          "original_asset_sha256": "0ea891d862b6f268115ef8be26dc4255131f2ea46b417c92621fa1747f6714bf",
+          "page_number": 5,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_e543ca62bc927ad60b910cc18a25f5c1",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "e543ca62bc927ad60b910cc18a25f5c19912aec7d08a6f579074efe7ef786e8f",
+          "original_asset_sha256": "2732faf7d82fa977ad1235a73a56bf41f2b6b0d3b663f5232133e246fbfd5230",
+          "page_number": 6,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_77d482be94114ca10c429465c97fb2ad",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "77d482be94114ca10c429465c97fb2ad9c0854118374e92ab70f54f8da41aaf3",
+          "original_asset_sha256": "ab376c5c9dfffbd7929dd304e0d6a1e06677df4cd9b52b5a615e3f7ca5f7c793",
+          "page_number": 7,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_f134d5418e21d94b38be9b93b23db9a6",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "f134d5418e21d94b38be9b93b23db9a63a770d90faac1bae61e68aa62a68e167",
+          "original_asset_sha256": "cd3023e6d1cb0386575dc170304f3fd5ac5c9d6afccfc6f9e3f83d5d8caba5fc",
+          "page_number": 9,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_a67bed8663fa57495991b091dc5da184",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "a67bed8663fa57495991b091dc5da1845312ee72b9cec67ba1373ad7f3394f76",
+          "original_asset_sha256": "f6cfaa1939767258ed26b87f057c2265ba8e16cc60e4f00cee31ca2aac27904f",
+          "page_number": 10,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_c66392a2922b765778b49635f10f03c4",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "c66392a2922b765778b49635f10f03c41cfcdfafc12ebe8f511282050cdf079b",
+          "original_asset_sha256": "0915998cfcc14feebc0248365e30bfdd77d62cd6249811e73883a2653efa12eb",
+          "page_number": 11,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_98f4802cf4f0864645881714c7d0747a",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "98f4802cf4f0864645881714c7d0747a974b98c4372c00c47a84bf15a0f64e47",
+          "original_asset_sha256": "9cc11ccc4e88c570f21b4e37b0160ffdf17ce3903c99c07810dd7789b16bfd31",
+          "page_number": 11,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_394e59f4f2876c4630d6001dbc30d994",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "394e59f4f2876c4630d6001dbc30d99498c426737be372db3ca0846e993f8c28",
+          "original_asset_sha256": "6653b86da1e820ef95a0bdb2321529fdadf013f1d29f1887218054ec5a8d65dd",
+          "page_number": 12,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_6ce5f26d93bc798db32cc42dbb18cd78",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "6ce5f26d93bc798db32cc42dbb18cd7866ac756db75a14e16f3cf353ac6e84e3",
+          "original_asset_sha256": "c5d9031517d1de98adec9fa1158037fdae9a6e5a238570503b6a1ee4c872afac",
+          "page_number": 13,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_312d0356319aad8bc40c8865253cb6a9",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "312d0356319aad8bc40c8865253cb6a9f07e5541deee8528f9d21b6da71b432b",
+          "original_asset_sha256": "55734715b9288ef3fe02399599ed9ffb622aade3e9d4b9408961ffbbd53b1c88",
+          "page_number": 13,
+          "kind": "native_image"
+        },
+        {
+          "id": "sp_9995a8a0f6832596cffc2f8233f30125",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "9995a8a0f6832596cffc2f8233f30125f73878b7d428b66ea61dcbf667952e60",
+          "original_asset_sha256": "5ac76eceed8d6a05c79a7d622cbadb1950e33985149b4a85f1f77b896baac863",
+          "page_number": 5,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_2cfbdb7bd4e6f1e6bd30ac1931cadebe",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "2cfbdb7bd4e6f1e6bd30ac1931cadebe36f0ec134fe6bfcdfda2d5229db72fd5",
+          "original_asset_sha256": "41993dfc6f1a963e092b9ff6370933fd9d4455d9426f936cc280ba0ff435d4fb",
+          "page_number": 6,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_104aab661a6596c5e6eef5bb5dfc198c",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "104aab661a6596c5e6eef5bb5dfc198c485f65899181ab999417dcb3b4ec97ce",
+          "original_asset_sha256": "8d890ce545513263e851ec4e0129134286114580066a0e7817d2c10ba7a72236",
+          "page_number": 7,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_4e0aa377ae52c5b33fe788d0a70f482b",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "4e0aa377ae52c5b33fe788d0a70f482bc293d162a5125a8c7a697e3cf7bc4f8e",
+          "original_asset_sha256": "1492fe7fc95e18f5057b7ff2a93faeb5a1a8f2a7219ccbbe2d7a6d768ed81239",
+          "page_number": 8,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_5acec0daf21948d2339aca9062767b61",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "5acec0daf21948d2339aca9062767b61b4d850c90488b84f6f0ffd3efc559457",
+          "original_asset_sha256": "34bb0feca0c515870e7e8d05e31180f24769d3f2c83be25f92745370602a9ee0",
+          "page_number": 9,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_3aed7c0af6f352dadbf89ed87aa27379",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "3aed7c0af6f352dadbf89ed87aa273795398ec6c3cf7f24fc8a3ee73ecd1570a",
+          "original_asset_sha256": "bd794899ec80b7a94a991ef4e69560cd70c7fa281c7f6a0738d31460e7d41688",
+          "page_number": 10,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_00cd842a13bcf0af69b2bf68956a1263",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "00cd842a13bcf0af69b2bf68956a1263880aaf6bd41d802ccd827ebce23f666b",
+          "original_asset_sha256": "df0533dd2e87c83035ef004bcef4458dfd5f13531a16529af2f0d71307ebd87f",
+          "page_number": 11,
+          "kind": "page_plate"
+        },
+        {
+          "id": "sp_d49dbb98e3e91491a3022d1c2c9f1f15",
+          "source_sha256": "50b2c4fb34c4d9e94125eae4d42681b298fcba614249015a8fcaa317655f68d0",
+          "asset_sha256": "d49dbb98e3e91491a3022d1c2c9f1f15a4e352a2240e2dfa789189b7994dfdfe",
+          "original_asset_sha256": "ec3f23e29756e0aa3ff94715c1cb28448bec4184f67032597400dd20d1dad9a3",
+          "page_number": 13,
+          "kind": "page_plate"
+        }
+      ]
+    },
+    {
+      "code": "WA",
+      "citations": [
+        {
+          "title": "WA issuer specimen — Driver license (Younger than 21) — 2018 design (Issued July 2018 - present)",
+          "url": "https://dol.wa.gov/media/73/download?inline",
+          "sha256": "51c9131b3c9841d255dec012a758ef317d5b90cd5313cb11faa0968029de10aa",
+          "retrieved_at": "2026-10-26T00:16:27.216036+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Driver license (Younger than 21) — 2017 design (Issued February 2017 - June 2018)",
+          "url": "https://dol.wa.gov/media/74/download?inline",
+          "sha256": "ad117aebcb3655fa207c08c7f589733f8e37b3bf25c6bfcf6d42c453aae07c4f",
+          "retrieved_at": "2026-10-26T00:16:27.219007+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Driver license (21 years and older) — 2018 design (Issued July 2018 - present)",
+          "url": "https://dol.wa.gov/media/77/download?inline",
+          "sha256": "f7a1e53a4680a2e060b4522200ab54f79b7c9dc35681bd1ac1c4ea442b0972fa",
+          "retrieved_at": "2026-10-26T00:16:27.221107+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Driver license (21 years and older) — 2017 design (Issued February 2017 - June 2018)",
+          "url": "https://dol.wa.gov/media/78/download?inline",
+          "sha256": "33ef885e4da0bd78c2fa37f5e0870ed677389ca1984ed857179fc95e46233764",
+          "retrieved_at": "2026-10-26T00:16:27.223034+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Commercial driver license (CDL) — 2018 design (Issued July 2018 - present)",
+          "url": "https://dol.wa.gov/media/81/download?inline",
+          "sha256": "6425cfe4f6e25b3378ebaaa87c63e6408837f797090d9e1ec7d0750b574d1b64",
+          "retrieved_at": "2026-10-26T00:16:27.224952+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Commercial driver license (CDL) — 2017 design (Issued February 2017 - June 2018)",
+          "url": "https://dol.wa.gov/media/82/download?inline",
+          "sha256": "30db2f3ec1a581c3e45e46d9fb05b23d9489e245166926fb26b59bea98eadbbf",
+          "retrieved_at": "2026-10-26T00:16:27.227098+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Enhanced driver license (EDL) (21 years and older) — 2018 design (Issued July 2018 - present)",
+          "url": "https://dol.wa.gov/media/84/download?inline",
+          "sha256": "d92d71d2b1258a459d74e84d116a316c5181bf7f5cd1f969e430632a93e7bcd9",
+          "retrieved_at": "2026-10-26T00:16:27.228824+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Enhanced driver license (EDL) (21 years and older) — 2017 design (Issued February 2017 - June 2018)",
+          "url": "https://dol.wa.gov/media/86/download?inline",
+          "sha256": "6af668861583a8bea0bff4e2ca613ef4542a19d1d9f0a0c0fb18c99423f75211",
+          "retrieved_at": "2026-10-26T00:16:27.230784+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Enhanced driver license (Younger than 21) — 2018 design (Issued July 2018 - present)",
+          "url": "https://dol.wa.gov/media/88/download?inline",
+          "sha256": "12aa0c83fa1ece0d075604ea4bf61511036105713d03b1c94ec6add2e38d5db4",
+          "retrieved_at": "2026-10-26T00:16:27.232504+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Enhanced driver license (Younger than 21) — 2017 design (Issued February 2017 - June 2018)",
+          "url": "https://dol.wa.gov/media/89/download?inline",
+          "sha256": "b615f8627bea4eb8f490c72df95a3ff3a560f767fd7a8990496635d3e472025a",
+          "retrieved_at": "2026-10-26T00:16:27.234242+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Restriction driver license* (21 years and older) *Issued September 2018 - present — 2018 design (Issued July 2018 - present)",
+          "url": "https://dol.wa.gov/media/92/download?inline",
+          "sha256": "9bc90c725a9278dabbeed243d13558cce191299a336614315a65005196d48b9b",
+          "retrieved_at": "2026-10-26T00:16:27.236133+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Temporary driver license* (Printed on paper) — Paper temporary; gallery 2018 column says no change; image linked under 2017 column",
+          "url": "https://dol.wa.gov/media/93/download?inline",
+          "sha256": "3cb5f455e4288028edaf0b5825a642ec01bac21c5ace9ae806438375602d63e6",
+          "retrieved_at": "2026-10-26T00:16:27.237853+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — ID card (younger than 21) — 2018 design (Issued July 2018 - present)",
+          "url": "https://dol.wa.gov/media/58/download?inline",
+          "sha256": "5b977975c331c3f4b4c11bdfe8d710951fd78f1d6106b95dd3037c29e95962db",
+          "retrieved_at": "2026-10-26T00:16:27.839179+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — ID card (younger than 21) — 2017 design (Issued February 2017 - June 2018)",
+          "url": "https://dol.wa.gov/media/59/download?inline",
+          "sha256": "108014a256ee724e1b605f5878cc6d5eadfd69df6d107e59768192dc2c6005c8",
+          "retrieved_at": "2026-10-26T00:16:27.841258+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — ID card (younger than 21) — Old design (Valid until expiration)",
+          "url": "https://dol.wa.gov/media/60/download?inline",
+          "sha256": "bedf4c6636d606c1ac0253c70f2d20c8b6e1864908d3435488a960db8e0c0db9",
+          "retrieved_at": "2026-10-26T00:16:27.843806+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — ID card (21 years and older) — 2018 design (Issued July 2018 - present)",
+          "url": "https://dol.wa.gov/media/62/download?inline",
+          "sha256": "d23e0d74048b742411dcc565ac32e28e8754067536215842fe8ccafb43d7ff92",
+          "retrieved_at": "2026-10-26T00:16:27.845665+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — ID card (21 years and older) — 2017 design (Issued February 2017 - June 2018)",
+          "url": "https://dol.wa.gov/media/63/download?inline",
+          "sha256": "7f7be77ad2d8159d5b2a6889506f11f61be6911eece2fa25294639092b98c053",
+          "retrieved_at": "2026-10-26T00:16:27.847346+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — ID card (21 years and older) — Old design (Valid until expiration)",
+          "url": "https://dol.wa.gov/media/64/download?inline",
+          "sha256": "f0e721c574fa50314d5aa0c62b0f8a970c60e04267a10633d73e988f341ea64f",
+          "retrieved_at": "2026-10-26T00:16:27.849552+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Enhanced ID card (EID) (younger than 21) — 2018 design (Issued July 2018 - present)",
+          "url": "https://dol.wa.gov/media/66/download?inline",
+          "sha256": "e5580ba7b163de355af0aa884e664ef1db86506ffda4a7d6f80a7ed385aee7d1",
+          "retrieved_at": "2026-10-26T00:16:27.851595+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Enhanced ID card (EID) (younger than 21) — 2017 design (Issued February 2017 - June 2018)",
+          "url": "https://dol.wa.gov/media/67/download?inline",
+          "sha256": "267bfb5495020c4ea355a4eefe58d62033807f2c46562bfe4ccc64480008f0c6",
+          "retrieved_at": "2026-10-26T00:16:27.853357+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Enhanced ID card (EID) (younger than 21) — Old design (Valid until expiration)",
+          "url": "https://dol.wa.gov/media/68/download?inline",
+          "sha256": "8de80f39d8f058d0eec7c4b41f0a1e716f370619c940a303773a49fb40a812b3",
+          "retrieved_at": "2026-10-26T00:16:27.855152+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Enhanced ID card (EID) (21 years and older) — 2018 design (Issued July 2018 - present)",
+          "url": "https://dol.wa.gov/media/69/download?inline",
+          "sha256": "40323828f234dc763e8fd6a2822fcf7ceb9cb3ff7d67259bb3b4a9772ca1ef84",
+          "retrieved_at": "2026-10-26T00:16:27.856983+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Enhanced ID card (EID) (21 years and older) — 2017 design (Issued February 2017 - June 2018)",
+          "url": "https://dol.wa.gov/media/70/download?inline",
+          "sha256": "8730046706d27c9302446853a978d23224a9c0b97c2cd5de5f9ef1d2032a85c1",
+          "retrieved_at": "2026-10-26T00:16:27.858745+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WA issuer specimen — Enhanced ID card (EID) (21 years and older) — Old design (Valid until expiration)",
+          "url": "https://dol.wa.gov/media/72/download?inline",
+          "sha256": "320feed4e769c6163251d02462cc7240f3d60da0a3f304b3991a0dbbe73963b1",
+          "retrieved_at": "2026-10-26T00:16:27.860982+00:00",
+          "publisher_host": "dol.wa.gov",
+          "publisher_jurisdiction": "WA",
+          "discovery_jurisdiction": "WA",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_24a8aea8e8ab24f54355b4001b543e31",
+          "source_sha256": "51c9131b3c9841d255dec012a758ef317d5b90cd5313cb11faa0968029de10aa",
+          "asset_sha256": "24a8aea8e8ab24f54355b4001b543e316802e89d3af8f9c909eeb05f2db33661",
+          "original_asset_sha256": "51c9131b3c9841d255dec012a758ef317d5b90cd5313cb11faa0968029de10aa",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_be4f309b017fc8e90e9972e0e7f0f5c9",
+          "source_sha256": "ad117aebcb3655fa207c08c7f589733f8e37b3bf25c6bfcf6d42c453aae07c4f",
+          "asset_sha256": "be4f309b017fc8e90e9972e0e7f0f5c9f45d680cc309d1f18021feda9fd72b51",
+          "original_asset_sha256": "ad117aebcb3655fa207c08c7f589733f8e37b3bf25c6bfcf6d42c453aae07c4f",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_ec59bc5ebec825cd3851f82cb88936e8",
+          "source_sha256": "f7a1e53a4680a2e060b4522200ab54f79b7c9dc35681bd1ac1c4ea442b0972fa",
+          "asset_sha256": "ec59bc5ebec825cd3851f82cb88936e8704fe428f6389cdf2a84b1b6ad252c7b",
+          "original_asset_sha256": "f7a1e53a4680a2e060b4522200ab54f79b7c9dc35681bd1ac1c4ea442b0972fa",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_a7cf95c216cc5e31ce9112df0fb9dd54",
+          "source_sha256": "33ef885e4da0bd78c2fa37f5e0870ed677389ca1984ed857179fc95e46233764",
+          "asset_sha256": "a7cf95c216cc5e31ce9112df0fb9dd544fc66af541068d2a6dcd1ee288bfa737",
+          "original_asset_sha256": "33ef885e4da0bd78c2fa37f5e0870ed677389ca1984ed857179fc95e46233764",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_05152680afd13e6f93bf25a06c794bcd",
+          "source_sha256": "6425cfe4f6e25b3378ebaaa87c63e6408837f797090d9e1ec7d0750b574d1b64",
+          "asset_sha256": "05152680afd13e6f93bf25a06c794bcd996e0d0d6c5e27c6894d40732af94239",
+          "original_asset_sha256": "6425cfe4f6e25b3378ebaaa87c63e6408837f797090d9e1ec7d0750b574d1b64",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_ed2b54cb1591059ad7edae5c43d47d7a",
+          "source_sha256": "30db2f3ec1a581c3e45e46d9fb05b23d9489e245166926fb26b59bea98eadbbf",
+          "asset_sha256": "ed2b54cb1591059ad7edae5c43d47d7a0cdd260096548bd1f005893245307908",
+          "original_asset_sha256": "30db2f3ec1a581c3e45e46d9fb05b23d9489e245166926fb26b59bea98eadbbf",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_847dd51f3704485c7eb25b4760ff38dc",
+          "source_sha256": "d92d71d2b1258a459d74e84d116a316c5181bf7f5cd1f969e430632a93e7bcd9",
+          "asset_sha256": "847dd51f3704485c7eb25b4760ff38dca67f3533d7e495dda5dabef8dd63e2f2",
+          "original_asset_sha256": "d92d71d2b1258a459d74e84d116a316c5181bf7f5cd1f969e430632a93e7bcd9",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_23a3f5c5af0fd4ad0d2f1f4acae0a87d",
+          "source_sha256": "6af668861583a8bea0bff4e2ca613ef4542a19d1d9f0a0c0fb18c99423f75211",
+          "asset_sha256": "23a3f5c5af0fd4ad0d2f1f4acae0a87d310064763d30530d3250511e3e9f7340",
+          "original_asset_sha256": "6af668861583a8bea0bff4e2ca613ef4542a19d1d9f0a0c0fb18c99423f75211",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_cfa19e69e86fe56369b0d172e3fbc183",
+          "source_sha256": "12aa0c83fa1ece0d075604ea4bf61511036105713d03b1c94ec6add2e38d5db4",
+          "asset_sha256": "cfa19e69e86fe56369b0d172e3fbc1837893989b502d8a13438fb851f6550507",
+          "original_asset_sha256": "12aa0c83fa1ece0d075604ea4bf61511036105713d03b1c94ec6add2e38d5db4",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_969b35bd9b36e361fed56c233096284a",
+          "source_sha256": "b615f8627bea4eb8f490c72df95a3ff3a560f767fd7a8990496635d3e472025a",
+          "asset_sha256": "969b35bd9b36e361fed56c233096284a8f2bda7ad417abf4b69eaf249c73524b",
+          "original_asset_sha256": "b615f8627bea4eb8f490c72df95a3ff3a560f767fd7a8990496635d3e472025a",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_456b80c540bd4a905d4d28edec5e0744",
+          "source_sha256": "9bc90c725a9278dabbeed243d13558cce191299a336614315a65005196d48b9b",
+          "asset_sha256": "456b80c540bd4a905d4d28edec5e0744a38dfb5e7779ece08ebe557755d88996",
+          "original_asset_sha256": "9bc90c725a9278dabbeed243d13558cce191299a336614315a65005196d48b9b",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_cc5dc21081c4991b06cc7ba546318878",
+          "source_sha256": "3cb5f455e4288028edaf0b5825a642ec01bac21c5ace9ae806438375602d63e6",
+          "asset_sha256": "cc5dc21081c4991b06cc7ba54631887806c7753448f71582dbd0bce5029d339e",
+          "original_asset_sha256": "3cb5f455e4288028edaf0b5825a642ec01bac21c5ace9ae806438375602d63e6",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_1efd280266ca5ac7cba4806a68c3a314",
+          "source_sha256": "5b977975c331c3f4b4c11bdfe8d710951fd78f1d6106b95dd3037c29e95962db",
+          "asset_sha256": "1efd280266ca5ac7cba4806a68c3a31446c817bd42eca5bef635419acc0905d0",
+          "original_asset_sha256": "5b977975c331c3f4b4c11bdfe8d710951fd78f1d6106b95dd3037c29e95962db",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_c9717a9740a221450c6d90c7faee9e8d",
+          "source_sha256": "108014a256ee724e1b605f5878cc6d5eadfd69df6d107e59768192dc2c6005c8",
+          "asset_sha256": "c9717a9740a221450c6d90c7faee9e8dacc5fe8cca6448f8b7d493001764538e",
+          "original_asset_sha256": "108014a256ee724e1b605f5878cc6d5eadfd69df6d107e59768192dc2c6005c8",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_712532c5d655f97a413a552dc416ee81",
+          "source_sha256": "bedf4c6636d606c1ac0253c70f2d20c8b6e1864908d3435488a960db8e0c0db9",
+          "asset_sha256": "712532c5d655f97a413a552dc416ee8108059a3c875057849e687b9acf1a3d1a",
+          "original_asset_sha256": "bedf4c6636d606c1ac0253c70f2d20c8b6e1864908d3435488a960db8e0c0db9",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_4e3053fe40c564900ac745a6ddb7563b",
+          "source_sha256": "d23e0d74048b742411dcc565ac32e28e8754067536215842fe8ccafb43d7ff92",
+          "asset_sha256": "4e3053fe40c564900ac745a6ddb7563b77235b100d3d25ca1aea1dadad9eb2e6",
+          "original_asset_sha256": "d23e0d74048b742411dcc565ac32e28e8754067536215842fe8ccafb43d7ff92",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_f7490567f27be4cf74d171d733454b35",
+          "source_sha256": "7f7be77ad2d8159d5b2a6889506f11f61be6911eece2fa25294639092b98c053",
+          "asset_sha256": "f7490567f27be4cf74d171d733454b3532c123fce87fdc83f15c90458390756b",
+          "original_asset_sha256": "7f7be77ad2d8159d5b2a6889506f11f61be6911eece2fa25294639092b98c053",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_640b6186c6bd23591b7dca157065db84",
+          "source_sha256": "f0e721c574fa50314d5aa0c62b0f8a970c60e04267a10633d73e988f341ea64f",
+          "asset_sha256": "640b6186c6bd23591b7dca157065db84c9c297c8ea842ab28941821f0515cecd",
+          "original_asset_sha256": "f0e721c574fa50314d5aa0c62b0f8a970c60e04267a10633d73e988f341ea64f",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_0ab130ff3a34c0b6313313520ba0295d",
+          "source_sha256": "e5580ba7b163de355af0aa884e664ef1db86506ffda4a7d6f80a7ed385aee7d1",
+          "asset_sha256": "0ab130ff3a34c0b6313313520ba0295dd8828f2bc1c6fa8126c216c87230f5af",
+          "original_asset_sha256": "e5580ba7b163de355af0aa884e664ef1db86506ffda4a7d6f80a7ed385aee7d1",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_30be2808e1bca3b1135af419395c32cb",
+          "source_sha256": "267bfb5495020c4ea355a4eefe58d62033807f2c46562bfe4ccc64480008f0c6",
+          "asset_sha256": "30be2808e1bca3b1135af419395c32cb96aaef3ce21e739e7bdcf24f43a9b594",
+          "original_asset_sha256": "267bfb5495020c4ea355a4eefe58d62033807f2c46562bfe4ccc64480008f0c6",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_09c30ef7905da29ff25598ce147a7da4",
+          "source_sha256": "8de80f39d8f058d0eec7c4b41f0a1e716f370619c940a303773a49fb40a812b3",
+          "asset_sha256": "09c30ef7905da29ff25598ce147a7da4a79ecfd8c3563006d620f2a37c9c9a09",
+          "original_asset_sha256": "8de80f39d8f058d0eec7c4b41f0a1e716f370619c940a303773a49fb40a812b3",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_e041170ca1cdcf8f617ca270e0d2c7a7",
+          "source_sha256": "40323828f234dc763e8fd6a2822fcf7ceb9cb3ff7d67259bb3b4a9772ca1ef84",
+          "asset_sha256": "e041170ca1cdcf8f617ca270e0d2c7a791328b5028e04bbcde6e2649017d862c",
+          "original_asset_sha256": "40323828f234dc763e8fd6a2822fcf7ceb9cb3ff7d67259bb3b4a9772ca1ef84",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_e3ae19eae9653050e2f59985aa3035eb",
+          "source_sha256": "8730046706d27c9302446853a978d23224a9c0b97c2cd5de5f9ef1d2032a85c1",
+          "asset_sha256": "e3ae19eae9653050e2f59985aa3035ebf2dcd3252f2aee2871e7ebcd1fef2d18",
+          "original_asset_sha256": "8730046706d27c9302446853a978d23224a9c0b97c2cd5de5f9ef1d2032a85c1",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_3e5b6b65ab5ea9945de561710cb92dc7",
+          "source_sha256": "320feed4e769c6163251d02462cc7240f3d60da0a3f304b3991a0dbbe73963b1",
+          "asset_sha256": "3e5b6b65ab5ea9945de561710cb92dc7edea121f31141355d98bb0a05172edb4",
+          "original_asset_sha256": "320feed4e769c6163251d02462cc7240f3d60da0a3f304b3991a0dbbe73963b1",
+          "page_number": null,
+          "kind": "direct_image"
+        }
+      ]
+    },
+    {
+      "code": "WV",
+      "citations": [
+        {
+          "title": "WV issuer specimen — A visual reference chart displaying sample versions of West Virginia driver's licenses from Pre-2020, 2020, and 2023, comparing horizontal adult licenses, vertical under-21 licenses, REAL ID vs. Non-REAL ID markings, li",
+          "url": "https://dmv.wv.gov/sites/default/files/2026-03/License_sample_banner_-_desktop.jpg",
+          "sha256": "6ae27631cae8f01b1dfbfd9fe8e26c765341910bf24cf2cf497bc0af56263570",
+          "retrieved_at": "2026-10-26T00:20:51.295797+00:00",
+          "publisher_host": "dmv.wv.gov",
+          "publisher_jurisdiction": "WV",
+          "discovery_jurisdiction": "WV",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WV issuer specimen — A sample vertical West Virginia Level 1 Instruction Permit for drivers ages 15 to 17, featuring the header 'LEVEL 1 - INST PERMIT' and placeholder personal details for 'Eric Levelone'",
+          "url": "https://dmv.wv.gov/sites/default/files/2026-03/15---17.jpg",
+          "sha256": "39f8abb9acf38ac87b1d9dc5ee6d412218e23a5d0b1bcabc80a225ac6c45f2d6",
+          "retrieved_at": "2026-10-26T00:20:51.305726+00:00",
+          "publisher_host": "dmv.wv.gov",
+          "publisher_jurisdiction": "WV",
+          "discovery_jurisdiction": "WV",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WV issuer specimen — A sample vertical West Virginia driver's license issued to drivers ages 18 to 20, featuring blue branding, placeholder personal details for 'Test Record Jr.', and a prominent 21st birthday indicator date.",
+          "url": "https://dmv.wv.gov/sites/default/files/2026-03/18---20.jpg",
+          "sha256": "d25a394c030cfd76219a6c50d5c8ecf924311dbe6f6f8b4fcf1d53492be62e3d",
+          "retrieved_at": "2026-10-26T00:20:51.329493+00:00",
+          "publisher_host": "dmv.wv.gov",
+          "publisher_jurisdiction": "WV",
+          "discovery_jurisdiction": "WV",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WV issuer specimen — A sample horizontal West Virginia driver's license issued to drivers age 21 and older, featuring standard state branding and placeholder personal information for 'Another S. Sample II'",
+          "url": "https://dmv.wv.gov/sites/default/files/2026-03/21.jpg",
+          "sha256": "e5de8a2b35d3b297e7cfc6887666bdbf4d757a9895496f0ba3637d84f0ed0ed6",
+          "retrieved_at": "2026-10-26T00:20:51.377645+00:00",
+          "publisher_host": "dmv.wv.gov",
+          "publisher_jurisdiction": "WV",
+          "discovery_jurisdiction": "WV",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WV issuer specimen — A sample vertical West Virginia Class E Instruction Permit for drivers ages 15 to 17, featuring a driver photo, a vertical yellow banner stating 'Turns 18 on 09-09-2012', and sample cardholder information for Eric Level",
+          "url": "https://dmv.wv.gov/sites/default/files/2026-03/old-15---17.jpg",
+          "sha256": "81f922734d74b8aaeb93077d386940b8546c92b2753ef91dd09bcb5086b09504",
+          "retrieved_at": "2026-10-26T00:20:51.404590+00:00",
+          "publisher_host": "dmv.wv.gov",
+          "publisher_jurisdiction": "WV",
+          "discovery_jurisdiction": "WV",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WV issuer specimen — A sample vertical West Virginia Class E Graduated Driver's License for drivers ages 18 to 20, featuring a driver photo, a vertical red banner stating 'Turns 21 on 05-07-2013', a GDL Level 3 badge, and sample cardholder ",
+          "url": "https://dmv.wv.gov/sites/default/files/2026-03/old-18---20.jpg",
+          "sha256": "a3f57c6e2622e081af3307e953d56a4a507c6d1704fdd63febf31096e01fdefa",
+          "retrieved_at": "2026-10-26T00:20:51.418262+00:00",
+          "publisher_host": "dmv.wv.gov",
+          "publisher_jurisdiction": "WV",
+          "discovery_jurisdiction": "WV",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        },
+        {
+          "title": "WV issuer specimen — A sample horizontal West Virginia Class E Driver's License issued to drivers 21 and older, featuring a photo on the left, top header with 'WEST VIRGINIA DRIVING LICENSE', and sample cardholder information for Sample Ano",
+          "url": "https://dmv.wv.gov/sites/default/files/2026-03/old-21.jpg",
+          "sha256": "d7d729547db76b74b897ef0ad300d30dcf72f66014aab7b61b392e82f55583bc",
+          "retrieved_at": "2026-10-26T00:20:51.442243+00:00",
+          "publisher_host": "dmv.wv.gov",
+          "publisher_jurisdiction": "WV",
+          "discovery_jurisdiction": "WV",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0,
+          "credential_format": "ID1"
+        }
+      ],
+      "references": [
+        {
+          "id": "sp_96f54f561ab70385cfc449098ff962c5",
+          "source_sha256": "6ae27631cae8f01b1dfbfd9fe8e26c765341910bf24cf2cf497bc0af56263570",
+          "asset_sha256": "96f54f561ab70385cfc449098ff962c58fba8c6e6a94377a0c6f882337dca51d",
+          "original_asset_sha256": "6ae27631cae8f01b1dfbfd9fe8e26c765341910bf24cf2cf497bc0af56263570",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_0ab0252663ff697926d0ba8da9949d79",
+          "source_sha256": "39f8abb9acf38ac87b1d9dc5ee6d412218e23a5d0b1bcabc80a225ac6c45f2d6",
+          "asset_sha256": "0ab0252663ff697926d0ba8da9949d797176b97caa09a5ee0a21c5af9d67a4cd",
+          "original_asset_sha256": "39f8abb9acf38ac87b1d9dc5ee6d412218e23a5d0b1bcabc80a225ac6c45f2d6",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_192015d74b7a591c7b91582290026154",
+          "source_sha256": "d25a394c030cfd76219a6c50d5c8ecf924311dbe6f6f8b4fcf1d53492be62e3d",
+          "asset_sha256": "192015d74b7a591c7b91582290026154a21e0ce1eb063c5f1f0de1f578ea6abf",
+          "original_asset_sha256": "d25a394c030cfd76219a6c50d5c8ecf924311dbe6f6f8b4fcf1d53492be62e3d",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_94f749e7f050d75ebe56297ad72c45c3",
+          "source_sha256": "e5de8a2b35d3b297e7cfc6887666bdbf4d757a9895496f0ba3637d84f0ed0ed6",
+          "asset_sha256": "94f749e7f050d75ebe56297ad72c45c359b5399be2c5982f87504da944e3ee71",
+          "original_asset_sha256": "e5de8a2b35d3b297e7cfc6887666bdbf4d757a9895496f0ba3637d84f0ed0ed6",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_490dfe3791ec7b0ba9c9fc292d55f6da",
+          "source_sha256": "81f922734d74b8aaeb93077d386940b8546c92b2753ef91dd09bcb5086b09504",
+          "asset_sha256": "490dfe3791ec7b0ba9c9fc292d55f6da1298f9a5c1c45d86569414435648d626",
+          "original_asset_sha256": "81f922734d74b8aaeb93077d386940b8546c92b2753ef91dd09bcb5086b09504",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_a08185d1c6dbd9595ebf2805c3d8c1c7",
+          "source_sha256": "a3f57c6e2622e081af3307e953d56a4a507c6d1704fdd63febf31096e01fdefa",
+          "asset_sha256": "a08185d1c6dbd9595ebf2805c3d8c1c7a861e73b95876e2b8115795b15abedb1",
+          "original_asset_sha256": "a3f57c6e2622e081af3307e953d56a4a507c6d1704fdd63febf31096e01fdefa",
+          "page_number": null,
+          "kind": "direct_image"
+        },
+        {
+          "id": "sp_92c33d861f481dcdf69bd4ea569674ed",
+          "source_sha256": "d7d729547db76b74b897ef0ad300d30dcf72f66014aab7b61b392e82f55583bc",
+          "asset_sha256": "92c33d861f481dcdf69bd4ea569674edab42de11922285ef1251e223fdfed3ee",
+          "original_asset_sha256": "d7d729547db76b74b897ef0ad300d30dcf72f66014aab7b61b392e82f55583bc",
+          "page_number": null,
+          "kind": "direct_image"
+        }
+      ]
+    }
+  ]
+}

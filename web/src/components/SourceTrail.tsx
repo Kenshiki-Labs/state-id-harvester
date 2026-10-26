@@ -25,7 +25,7 @@ function SourceList({ sources }: Readonly<{ sources: readonly Source[] }>) {
             <details>
               <summary>Source provenance</summary>
               <dl className="source-provenance">
-                {source.pageCount && (
+                {source.pageCount !== undefined && source.pageCount > 0 && (
                   <>
                     <dt>Source pages</dt>
                     <dd>{source.pageCount}</dd>

@@ -65,7 +65,7 @@
       "source_class": "government",
       "kind": "image_bearing",
       "coverage": [
-        "current-generation adult and under-21 Driver\u2019s License fronts",
+        "current-generation adult and under-21 Driver’s License fronts",
         "donor and military-indicator front/back plates",
         "separate native background layers"
       ],
@@ -152,7 +152,7 @@
       },
       "reference_kind": "complete_sample_front",
       "visual_review": "native_resource_visually_inspected",
-      "review_note": "Vertical Driver\u2019s License with TEMPORARY marking, distinct from paper interim credential."
+      "review_note": "Vertical Driver’s License with TEMPORARY marking, distinct from paper interim credential."
     },
     {
       "file": "bmv-driver-manual-xref-275.png",
@@ -356,7 +356,7 @@
     "Full issuance intervals and physical geometry remain unreviewed."
   ],
   "review_status": "reference_research_only",
-  "catalog_integrated": false,
+  "catalog_integrated": true,
   "preservation": {
     "schema_version": 1,
     "jurisdiction": "IN",
@@ -372,5 +372,11 @@
     "verification": "Downloaded private vault archive, restored with existing snapshot helpers, and compared every restored file byte-for-byte with durable local copies.",
     "public_media": false
   },
-  "status": "bounded_research_pass_preserved_not_catalog_integrated"
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "publication": {
+    "reference_count": 17,
+    "metadata_overlay": "docs/source-research/publication-overlay.json",
+    "review_status": "reference_only",
+    "original_source_bytes": "retained privately; marked delivery derivatives published separately"
+  }
 }

@@ -21,6 +21,7 @@ import httpx
 
 from state_id_harvester.gallery_raster import raster_header
 from state_id_harvester.paths import contained_path, managed_path
+from state_id_harvester.seeds import STATE_DOMAINS
 from state_id_harvester.snapshots import restore_library
 
 CHUNK_BYTES = 40 * 1024 * 1024
@@ -390,22 +391,111 @@ def prepare_specimens(
     return items
 
 
+def specimen_record(item: object, *, require_key: bool) -> dict:
+    """Keep only the canonical fields consumed by public reference delivery."""
+    if not isinstance(item, dict):
+        raise ValueError("Invalid specimen record")
+    required = ("id", "state", "source_sha256", "asset_sha256", "review_status")
+    if any(not isinstance(item.get(field), str) for field in required):
+        raise ValueError("Invalid specimen record")
+    if (
+        re.fullmatch(r"[A-Za-z0-9_-]{1,150}", item["id"], flags=re.ASCII) is None
+        or item["state"] not in {*STATE_DOMAINS, "US_FED"}
+        or HEX_SHA256.fullmatch(item["source_sha256"]) is None
+        or HEX_SHA256.fullmatch(item["asset_sha256"]) is None
+        or item["review_status"] != "reference_only"
+    ):
+        raise ValueError("Invalid specimen record")
+    result = {field: item[field] for field in required}
+    if require_key or "key" in item:
+        key = item.get("key")
+        if (
+            not isinstance(key, str)
+            or len(key) > 1024
+            or re.fullmatch(r"specimens/(?:[A-Za-z0-9_-]+/)+[a-f0-9]{64}\.png", key) is None
+            or key.rsplit("/", 1)[-1] != f"{item['asset_sha256']}.png"
+        ):
+            raise ValueError("Invalid specimen object key")
+        result["key"] = key
+    return result
+
+
+def specimen_identity(item: dict) -> tuple[str, str]:
+    return item["state"], item["id"]
+
+
+def same_specimen(left: dict, right: dict) -> bool:
+    return all(left[field] == right[field] for field in ("source_sha256", "asset_sha256"))
+
+
+def specimen_records(encoded: bytes, *, require_key: bool) -> list[dict]:
+    if len(encoded) > INDEX_LIMIT:
+        raise ValueError("Specimen index exceeds budget")
+    index = json.loads(encoded)
+    if not isinstance(index, dict) or not isinstance(index.get("specimens"), list):
+        raise ValueError("Invalid specimen index")
+    if len(index["specimens"]) > 10000:
+        raise ValueError("Specimen index exceeds entry budget")
+    unique: dict[tuple[str, str], dict] = {}
+    for raw in index["specimens"]:
+        item = specimen_record(raw, require_key=require_key)
+        identity = specimen_identity(item)
+        if identity in unique and not same_specimen(unique[identity], item):
+            raise ValueError("Conflicting specimen identity")
+        unique.setdefault(identity, item)
+    return list(unique.values())
+
+
+def prepared_specimen_bytes(directory: Path, item: dict) -> bytes:
+    path = contained_path(directory, f"{item['asset_sha256']}.png")
+    if path.is_symlink() or path.stat().st_size > CHUNK_BYTES:
+        raise ValueError("Prepared specimen integrity check failed")
+    with path.open("rb") as stream:
+        data = stream.read(CHUNK_BYTES + 1)
+    if len(data) > CHUNK_BYTES or hashlib.sha256(data).hexdigest() != item["asset_sha256"]:
+        raise ValueError("Prepared specimen integrity check failed")
+    image_format, width, height = raster_header(data)
+    if image_format != "png" or min(width, height) < 1 or width * height > 40_000_000:
+        raise ValueError("Invalid prepared specimen PNG")
+    return data
+
+
 def push_specimens(vault: Vault, directory: Path) -> None:
-    index = json.loads((directory / "specimens.json").read_text())
+    directory = managed_path(directory)
+    with contained_path(directory, "specimens.json").open("rb") as stream:
+        incoming = specimen_records(stream.read(INDEX_LIMIT + 1), require_key=False)
+    encoded_existing = vault.get("indexes/specimens.json", limit=INDEX_LIMIT, missing_ok=True)
+    existing = (
+        [] if encoded_existing is None else specimen_records(encoded_existing, require_key=True)
+    )
+    merged = {specimen_identity(item): item for item in existing}
+    additions = []
     prefix = f"specimens/{secrets.token_hex(20)}"
-    for item in index["specimens"]:
-        checksum = item["asset_sha256"]
-        if not HEX_SHA256.fullmatch(checksum) or item["review_status"] != "reference_only":
-            raise ValueError("Invalid prepared specimen record")
-        path = directory / f"{checksum}.png"
-        if path.stat().st_size > CHUNK_BYTES or digest(path) != checksum:
-            raise ValueError("Prepared specimen integrity check failed")
-        item["key"] = f"{prefix}/{checksum}.png"
+    for item in incoming:
+        identity = specimen_identity(item)
+        if identity in merged:
+            if not same_specimen(merged[identity], item):
+                raise ValueError("Conflicting specimen identity")
+            continue
+        item["key"] = f"{prefix}/{item['asset_sha256']}.png"
+        additions.append(item)
+        merged[identity] = item
+    encoded = (json.dumps({"specimens": list(merged.values())}, indent=2) + "\n").encode()
+    specimen_records(encoded, require_key=True)
+    # Validate the entire local batch before any upload or pointer mutation.
+    for item in incoming:
+        prepared_specimen_bytes(directory, item)
+    for item in additions:
         vault.put(
-            item["key"], path.read_bytes(), specimen=True, source_sha256=item["source_sha256"]
+            item["key"],
+            prepared_specimen_bytes(directory, item),
+            specimen=True,
+            source_sha256=item["source_sha256"],
         )
-    vault.put("indexes/specimens.json", (json.dumps(index, indent=2) + "\n").encode())
-    print(f"Private reference index uploaded: {len(index['specimens'])} candidates")
+    # Existing immutable object keys survive retries and empty harvest batches.
+    if additions or encoded_existing is None:
+        vault.put("indexes/specimens.json", encoded)
+    print(f"Private reference index merged: {len(merged)} candidates ({len(additions)} added)")
 
 
 def main() -> None:
