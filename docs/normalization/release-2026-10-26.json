@@ -1,0 +1,491 @@
+{
+  "passed": true,
+  "observedAt": "2026-10-26T22:41:34.639Z",
+  "originalReferences": 658,
+  "normalizedReferences": 414,
+  "stateCollections": [
+    {
+      "state": "AK",
+      "normalizedReferences": 5,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "AL",
+      "normalizedReferences": 1,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "AR",
+      "normalizedReferences": 1,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "AZ",
+      "normalizedReferences": 11,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "CA",
+      "normalizedReferences": 1,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "CO",
+      "normalizedReferences": 10,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "CT",
+      "normalizedReferences": 5,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "DC",
+      "normalizedReferences": 5,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "DE",
+      "normalizedReferences": 15,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "FL",
+      "normalizedReferences": 4,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "GA",
+      "normalizedReferences": 19,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "HI",
+      "normalizedReferences": 6,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "IA",
+      "normalizedReferences": 3,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "ID",
+      "normalizedReferences": 2,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "IL",
+      "normalizedReferences": 5,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "IN",
+      "normalizedReferences": 5,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "KS",
+      "normalizedReferences": 5,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "KY",
+      "normalizedReferences": 9,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "LA",
+      "normalizedReferences": 4,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "MA",
+      "normalizedReferences": 11,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "MD",
+      "normalizedReferences": 4,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "ME",
+      "normalizedReferences": 3,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "MI",
+      "normalizedReferences": 9,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "MN",
+      "normalizedReferences": 2,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "MO",
+      "normalizedReferences": 16,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "MS",
+      "normalizedReferences": 5,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "MT",
+      "normalizedReferences": 1,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "NC",
+      "normalizedReferences": 3,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "ND",
+      "normalizedReferences": 45,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "NE",
+      "normalizedReferences": 6,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "NH",
+      "normalizedReferences": 1,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "NJ",
+      "normalizedReferences": 1,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "NM",
+      "normalizedReferences": 3,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "NV",
+      "normalizedReferences": 4,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "NY",
+      "normalizedReferences": 2,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "OH",
+      "normalizedReferences": 8,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "OK",
+      "normalizedReferences": 11,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "OR",
+      "normalizedReferences": 2,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "PA",
+      "normalizedReferences": 1,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "RI",
+      "normalizedReferences": 8,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "SC",
+      "normalizedReferences": 19,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "SD",
+      "normalizedReferences": 9,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "TN",
+      "normalizedReferences": 14,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "TX",
+      "normalizedReferences": 12,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "UT",
+      "normalizedReferences": 5,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "VA",
+      "normalizedReferences": 9,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "VT",
+      "normalizedReferences": 25,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "WA",
+      "normalizedReferences": 33,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "WI",
+      "normalizedReferences": 17,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "WV",
+      "normalizedReferences": 8,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    },
+    {
+      "state": "WY",
+      "normalizedReferences": 1,
+      "thumbnailDecoded": true,
+      "normalizedModalDecoded": true,
+      "originalModalDecoded": true,
+      "citation": true,
+      "escapeFocus": true
+    }
+  ],
+  "federalOriginals": 30,
+  "mobileNoHorizontalOverflow": true,
+  "browserImagesWebP": true,
+  "imageResponseCount": 584,
+  "pageErrors": [],
+  "scope": "One matching normalized and original card per state; federal gallery preserved; image response audit covers all images fetched during browser navigation. Does not qualify physical geometry or all414 card contents.",
+  "deployed_revision": "a479b44",
+  "worker_version": "aaf5e061-d3d9-4f40-ba9b-071ecc65063a",
+  "script_sha256": "294d03ede9dfd2beaef8974d6cd0dab32b7bddb4ff50e8135f9ddc71776999ce",
+  "screenshots": {
+    "wa-mobile.png": "70adb279f29155127aa52b1955a591b8cb2c8e7d6d2e34cdede4b9c503ef2311",
+    "wa-mobile-gallery.png": "b6607acfe0e7392127ed2f4ded9db90b5f872b024241e92935a82da742b3b39c",
+    "wa-mobile-modal.png": "11ba111ea1aab1ae11c57717741d69d2b1675892d26bb43800e7171dfe53ef3e",
+    "wa-desktop-gallery.png": "825df12800947b379a352e4623ec3653b390ff67ebf9ab6b5b08cecbdb08765d"
+  },
+  "normalized_png_hashes_verified": 414,
+  "normalization_pending": 214,
+  "ci_run": "https://github.com/Kenshiki-Labs/state-id-harvester/actions/runs/40413361472",
+  "sonar_analysis": "5fc43067-4028-4a55-8adf-6d59b5bd138a",
+  "sonar_gate": "OK",
+  "sonar_open_issues": 0,
+  "original_public_index_sha256": "99c20ed1623809de28464439ec8bfdd3890ecc4fc275af7f3b62765394a17743",
+  "normalized_private_index_sha256": "49cc1dd71aa4a098992570bcac60c42ebfdd36742bc872460b6c7ec49b2b5fe3",
+  "public_png_verification_receipt_sha256": "52b58515137dd3e27405d7c4b54672d287be93b3d51583ac1643d1d91e0374a6"
+}
