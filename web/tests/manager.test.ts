@@ -290,7 +290,7 @@ describe("saved request client boundary", () => {
     const initial = renderToStaticMarkup(createElement(AccessManager));
     expect(initial).toContain('method="post"');
     expect(initial).toContain('action="/access"');
-    expect((initial.match(/disabled=""/g) ?? []).length).toBe(3);
+    expect(initial.match(/disabled=""/g) ?? []).toHaveLength(3);
     expect(initial).toContain("Preparing request manager…");
     expect(initial).toContain("Enable JavaScript");
     expect(initial).not.toContain('method="get"');
