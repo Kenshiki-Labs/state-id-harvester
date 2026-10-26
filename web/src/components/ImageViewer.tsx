@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useId, useRef, useState } from "react";
-import { normalizationUrl, specimenUrl, type PublicSpecimen } from "../lib/specimens";
+import { browserImageUrl, normalizationUrl, specimenUrl, type PublicSpecimen } from "../lib/specimens";
 
 function ViewerImage({ url, name, number }: Readonly<{ url: string; name: string; number: number }>) {
   const [loading, setLoading] = useState(true);
@@ -35,8 +35,9 @@ export default function ImageViewer({ items, index, name, onNavigate, onClose }:
   const identity = item ? `${item.state}/${item.id}` : "";
   const [originalSelection, setOriginalSelection] = useState<string | null>(null);
   const normalized = Boolean(item?.normalization) && originalSelection !== identity;
-  let imageUrl = "";
-  if (item) imageUrl = normalized ? normalizationUrl(item) : specimenUrl(item);
+  let fullImageUrl = "";
+  if (item) fullImageUrl = normalized ? normalizationUrl(item) : specimenUrl(item);
+  const imageUrl = item && zoom === 0 ? browserImageUrl(item, "display", normalized) : fullImageUrl;
   useEffect(() => {
     const dialog = dialogRef.current;
     if (!dialog) return;
@@ -97,6 +98,6 @@ export default function ImageViewer({ items, index, name, onNavigate, onClose }:
       <div className="viewer-zoom"><button type="button" aria-label="Zoom out" disabled={zoom === 0} onClick={() => changeZoom(zoom - 1)}>−</button><output aria-live="polite">{zoom === 0 ? "Fit" : `${zoomLevels[zoom] * 100}%`}</output><button type="button" aria-label="Zoom in" disabled={zoom === zoomLevels.length - 1} onClick={() => changeZoom(zoom + 1)}>+</button><button type="button" disabled={zoom === 0} onClick={() => changeZoom(0)}>Fit</button></div>
     </div>
     <div ref={canvasRef} className="viewer-canvas" data-zoom={zoomLevels[zoom]}><ViewerImage key={imageUrl} url={imageUrl} name={name} number={index + 1} /></div>
-    <footer className="viewer-footer"><p id={caption}>{normalized ? "ID-1 normalized" : "Original reference"} · review pending</p><a href={imageUrl} download={`${item.state}-${item.id}${normalized ? "-id1" : ""}.png`}>Download PNG ↓</a></footer>
+    <footer className="viewer-footer"><p id={caption}>{normalized ? "ID-1 normalized" : "Original reference"} · review pending</p><a href={fullImageUrl} download={`${item.state}-${item.id}${normalized ? "-id1" : ""}.png`}>Download PNG ↓</a></footer>
   </dialog>;
 }

@@ -59,6 +59,12 @@ export function joinNormalizations(items: PublicSpecimen[], normalizations: ID1N
 export function normalizationUrl(item: PublicSpecimen): string {
   return `/v1/id1-normalizations/${encodeURIComponent(item.state)}/${encodeURIComponent(item.id)}`;
 }
+export function browserImageUrl(item: PublicSpecimen, view: "thumbnail" | "display", normalized = false): string {
+  const normalization = normalized ? item.normalization : undefined;
+  const url = normalization ? normalizationUrl(item) : specimenUrl(item);
+  const fingerprint = normalization?.asset_sha256 ?? item.asset_sha256;
+  return `${url}?view=${view}&v=${fingerprint}`;
+}
 export async function loadNormalizations(signal: AbortSignal, transport: typeof fetch = fetch): Promise<ID1Normalization[]> {
   const response = await transport("/v1/id1-normalizations", { signal, credentials: "omit" });
   if (!response.ok) throw new Error("Normalization index unavailable");

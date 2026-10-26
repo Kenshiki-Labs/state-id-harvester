@@ -361,11 +361,13 @@ async function specimenImage(
   env: Env,
   entry: Specimen,
 ): Promise<Response> {
+  const view = browserView(request, entry);
   const asset = await env.VAULT.get(entry.key);
   if (!asset || !matchesSpecimen(asset, entry)) {
     await asset?.body.cancel();
-    throw new PolicyError("asset_unavailable", 503);
+    throw new PolicyError(ASSET_UNAVAILABLE, 503);
   }
+  if (view) return browserImage(request, env, entry, asset, view);
   if (request.method === "HEAD") await asset.body.cancel();
   return new Response(request.method === "HEAD" ? null : asset.body, {
     headers: {
@@ -376,6 +378,108 @@ async function specimenImage(
       ETag: `"${entry.asset_sha256}"`,
     },
   });
+}
+type BrowserView = "thumbnail" | "display";
+const TRANSFORM_VERSION = "webp-1";
+const WEBP_TYPE = "image/webp";
+const ASSET_UNAVAILABLE = "asset_unavailable";
+const TRANSFORM_INPUT_LIMIT = 20 * 1024 * 1024;
+function browserView(request: Request, entry: Specimen): BrowserView | null {
+  const query = new URL(request.url).searchParams;
+  if (!query.has("view") && !query.has("v")) return null;
+  const view = query.get("view");
+  if (
+    query.size !== 2 ||
+    query.getAll("view").length !== 1 ||
+    query.getAll("v").length !== 1 ||
+    (view !== "thumbnail" && view !== "display") ||
+    query.get("v") !== entry.asset_sha256
+  )
+    throw new PolicyError("invalid_image_view");
+  return view;
+}
+function transformInput(
+  body: ReadableStream<Uint8Array>,
+): ReadableStream<Uint8Array> {
+  let size = 0;
+  return body.pipeThrough(
+    new TransformStream<Uint8Array, Uint8Array>({
+      transform(chunk, controller) {
+        size += chunk.byteLength;
+        if (size > TRANSFORM_INPUT_LIMIT)
+          throw new PolicyError(ASSET_UNAVAILABLE, 503);
+        controller.enqueue(chunk);
+      },
+    }),
+  );
+}
+function browserHeaders(
+  entry: Specimen,
+  view: BrowserView,
+): Record<string, string> {
+  return {
+    "Content-Type": WEBP_TYPE,
+    "Cache-Control": "public, max-age=86400",
+    "Content-Disposition": `inline; filename="${entry.state}-${entry.id}-${view}.webp"`,
+    ETag: `"${entry.asset_sha256}-${view}-${TRANSFORM_VERSION}"`,
+    "X-Cadastre-Asset-Sha256": entry.asset_sha256,
+    "X-Cadastre-Source-Sha256": entry.source_sha256,
+    "X-Cadastre-Reference-Only": "true",
+  };
+}
+async function browserImage(
+  request: Request,
+  env: Env,
+  entry: Specimen,
+  asset: R2ObjectBody,
+  view: BrowserView,
+): Promise<Response> {
+  if (asset.size > TRANSFORM_INPUT_LIMIT) {
+    await asset.body.cancel();
+    throw new PolicyError(ASSET_UNAVAILABLE, 503);
+  }
+  const cacheUrl = new URL(new URL(request.url).pathname, env.PUBLIC_ORIGIN);
+  cacheUrl.search = new URLSearchParams({
+    view,
+    v: entry.asset_sha256,
+    transform: TRANSFORM_VERSION,
+  }).toString();
+  const cacheKey = new Request(cacheUrl, { method: "GET" });
+  const cache = await caches.open("cadastre-browser-images");
+  const cached = await cache.match(cacheKey);
+  if (cached) {
+    await asset.body.cancel();
+    if (request.method === "HEAD") await cached.body?.cancel();
+    return new Response(request.method === "HEAD" ? null : cached.body, cached);
+  }
+  const input = transformInput(asset.body);
+  try {
+    const width = view === "thumbnail" ? 640 : 1600;
+    const output = await env.IMAGES.input(input)
+      .transform({ width, height: width, fit: "scale-down" })
+      .output({
+        format: WEBP_TYPE,
+        quality: view === "thumbnail" ? 82 : 90,
+      });
+    const transformed = output.response();
+    if (
+      !transformed.ok ||
+      transformed.headers.get("Content-Type") !== WEBP_TYPE
+    ) {
+      await transformed.body?.cancel();
+      throw new PolicyError(ASSET_UNAVAILABLE, 503);
+    }
+    const response = new Response(transformed.body, {
+      headers: browserHeaders(entry, view),
+    });
+    await cache.put(cacheKey, response.clone());
+    if (request.method !== "HEAD") return response;
+    await response.body?.cancel();
+    return new Response(null, response);
+  } catch {
+    if (!input.locked) await input.cancel().catch(() => undefined);
+    throw new PolicyError(ASSET_UNAVAILABLE, 503);
+  }
 }
 async function publicIndex(
   env: Env,

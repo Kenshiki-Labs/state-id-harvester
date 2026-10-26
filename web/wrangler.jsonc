@@ -30,6 +30,9 @@
   "vars": {
     "PUBLIC_ORIGIN": "https://cadastre.kenshikilabs.com"
   },
+  "images": {
+    "binding": "IMAGES"
+  },
   "d1_databases": [
     {
       "binding": "DB",
