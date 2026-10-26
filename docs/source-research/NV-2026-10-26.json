@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "NV",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:09:00.243018+00:00",
+  "scope": "Bounded manual state research; useful finds and gaps, no completeness requirement.",
+  "source_publications": [
+    {
+      "file": "dmv-design-gallery.html",
+      "source_url": "https://dmv.nv.gov/dldesign.htm",
+      "final_url": "https://dmv.nv.gov/dldesign.htm",
+      "sha256": "9eb28749172308b4f47355afe466c042774277d2406100feeff22da2e1d9595f",
+      "bytes": 22176,
+      "mime_type": "text/html",
+      "retrieved_at": "2026-10-26T20:07:47.758090+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dmv-realidadult.png",
+      "source_url": "https://dmv.nv.gov/images/dldesign/realidadult.png",
+      "final_url": "https://dmv.nv.gov/images/dldesign/realidadult.png",
+      "sha256": "cc041d0ff46f12552206bd7af8ce5e8b029f7605a933d4b30c40957c6942f210",
+      "bytes": 119335,
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:08:13.875815+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dmv-realidminor.png",
+      "source_url": "https://dmv.nv.gov/images/dldesign/realidminor.png",
+      "final_url": "https://dmv.nv.gov/images/dldesign/realidminor.png",
+      "sha256": "72bc246a4e28aef28e5dd0c98864e8ad8963bcc2ada4772b743da19bce646f9a",
+      "bytes": 87256,
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:08:14.085881+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dmv-bighorn2014to2021.png",
+      "source_url": "https://dmv.nv.gov/images/dldesign/bighorn2014to2021.png",
+      "final_url": "https://dmv.nv.gov/images/dldesign/bighorn2014to2021.png",
+      "sha256": "de532d98fd2e714fa581beb673e8eb00719e9737422210f103f126f9dfc478fd",
+      "bytes": 134274,
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:08:14.417672+00:00",
+      "status": "downloaded",
+      "source_class": "government",
+      "limitations": [
+        "Issuer page labels this REALID2014-2021, but actual pixels say NOTFORFEDERALOFFICIALUSE and are byteidentical to its2010adult image; generation labels not accepted."
+      ]
+    },
+    {
+      "file": "dmv-2010adult.png",
+      "source_url": "https://dmv.nv.gov/images/dldesign/2010adult.png",
+      "final_url": "https://dmv.nv.gov/images/dldesign/2010adult.png",
+      "sha256": "de532d98fd2e714fa581beb673e8eb00719e9737422210f103f126f9dfc478fd",
+      "bytes": 134274,
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:08:14.788632+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "dmv-2010minor.png",
+      "source_url": "https://dmv.nv.gov/images/dldesign/2010minor.png",
+      "final_url": "https://dmv.nv.gov/images/dldesign/2010minor.png",
+      "sha256": "10d5d0a2bc8aeb5ae706da0c81766a2d677475e6e0551e12ebfba4c2ac70968c",
+      "bytes": 106800,
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:08:15.308362+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "carson-2021-release.html",
+      "source_url": "https://www.carsonnow.org/07/11/2021/nevada-dmv-rolls-out-new-drivers-license-design-security-features-beginning-monday",
+      "final_url": "https://www.carsonnow.org/07/11/2021/nevada-dmv-rolls-out-new-drivers-license-design-security-features-beginning-monday",
+      "sha256": "910ce4082785594dd124fb5fcc0c6b5c55aa220f493fb0cc4813838c217327b0",
+      "bytes": 203548,
+      "mime_type": "text/html; charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:08:16.782344+00:00",
+      "status": "downloaded",
+      "source_class": "press"
+    },
+    {
+      "file": "carson-2021-adult-front.png",
+      "source_url": "https://www.carsonnow.org/wp-content/uploads/2021/07/117052-dmvsample.png",
+      "final_url": "https://www.carsonnow.org/wp-content/uploads/2021/07/117052-dmvsample.png",
+      "sha256": "aa614db939e099d3dbc3d5b7756e7c5d3ffc937657582412f4df11fbdde90db6",
+      "bytes": 743319,
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:08:31.810149+00:00",
+      "status": "downloaded",
+      "source_class": "press"
+    }
+  ],
+  "native_pdf_objects": [],
+  "unresolved_downloads": [
+    {
+      "file": "dmv-2021-comparison.pdf",
+      "source_url": "https://dmv.nv.gov/News/21009/NV-DL-OldvsNew.pdf",
+      "status": "failed",
+      "error": "Client error '404 Not Found' for url 'https://dmv.nv.gov/News/21009/NV-DL-OldvsNew.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+    },
+    {
+      "file": "dmv-2021-comparison-lowercase.pdf",
+      "source_url": "https://dmv.nv.gov/news/21009/NV-DL-OldvsNew.pdf",
+      "status": "failed",
+      "error": "Client error '404 Not Found' for url 'https://dmv.nv.gov/news/21009/NV-DL-OldvsNew.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+    }
+  ],
+  "remaining_gaps": [
+    "Cleanbacks,CDL,permit andnonfederalcurrentexamples not acquired.",
+    "ComparisonPDF indexed but bothlivecasepaths404.",
+    "Issuerlegacyadultimage reused identically underconflictinggenerationlabels; exactissuanceclassificationunreviewed.",
+    "UV/opticalimages and calibratedgeometry not acquired."
+  ],
+  "review_status": "reference_research_only",
+  "accepted_cohorts": 0,
+  "catalog_integrated": true,
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "NV",
+    "verified_at": "2026-10-26T20:09:04.500695+00:00",
+    "local_directory": "output/research/NV",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/NV/2fe6a2fb0019ed3ceb1c5db4244c856b4432c21b5552a36c2aba3617e77add93/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/NV.json",
+    "archive_sha256": "2fe6a2fb0019ed3ceb1c5db4244c856b4432c21b5552a36c2aba3617e77add93",
+    "archive_size_bytes": 1643578,
+    "transport_chunks": 1,
+    "verified_restored_files": 13,
+    "verification": "Downloaded archive restored with existing helpers and every file compared byte-for-byte.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/NV"
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 5,
+    "review_status": "reference_only"
+  }
+}

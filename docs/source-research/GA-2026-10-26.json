@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "GA",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:08:25.403387+00:00",
+  "source_publications": [
+    {
+      "file": "dds-barcode.html",
+      "source_url": "https://dds.georgia.gov/partners/license-barcode",
+      "final_url": "https://dds.georgia.gov/partners/license-barcode",
+      "retrieved_at": "2026-10-26T20:07:08.068821+00:00",
+      "bytes": 126242,
+      "sha256": "12a1c0ab8b111c5610371ef7eca0c52ee6b68b44840e0f0b08fc80dbfba0d691",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dds-card-information.html",
+      "source_url": "https://dds.georgia.gov/license-card-information",
+      "final_url": "https://dds.georgia.gov/license-card-information",
+      "retrieved_at": "2026-10-26T20:07:08.633899+00:00",
+      "bytes": 117445,
+      "sha256": "212174553b04c87e040cec57d24ec58462c166d647a687c716d7cb7772be1c29",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dds-2019-card-presentation.pdf",
+      "source_url": "https://dds.georgia.gov/document/2019-pri-summer-conference-cps-presentation/download",
+      "final_url": "https://dds.georgia.gov/document/2019-pri-summer-conference-cps-presentation/download",
+      "retrieved_at": "2026-10-26T20:07:12.816650+00:00",
+      "bytes": 4789215,
+      "sha256": "223609c516745cd1de8a29859129651ffbac80ed81eb160f8c94e9d13d2e1437",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dds-2019-barcode.pdf",
+      "source_url": "https://dds.georgia.gov/document/publication/license-printed-beginning-june-2019/download",
+      "final_url": "https://dds.georgia.gov/document/publication/license-printed-beginning-june-2019/download",
+      "retrieved_at": "2026-10-26T20:07:15.040311+00:00",
+      "bytes": 1550934,
+      "sha256": "faadb8f9977c127c1e2c9fa7c14c880395e02c753ed232947358747207c98af2",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dds-2019-samples.html",
+      "source_url": "https://dds.georgia.gov/sample-licenses-june-2019",
+      "final_url": "https://dds.georgia.gov/sample-licenses-june-2019",
+      "retrieved_at": "2026-10-26T20:07:26.413874+00:00",
+      "bytes": 114206,
+      "sha256": "a2d37fa56f9a51a8d88c03cb6b147903bd429f8f89d34ca1a32382428710cea7",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "dds-legacy-samples.html",
+      "source_url": "https://dds.georgia.gov/sample-licenses-prior-june-2019",
+      "final_url": "https://dds.georgia.gov/sample-licenses-prior-june-2019",
+      "retrieved_at": "2026-10-26T20:07:27.607710+00:00",
+      "bytes": 114378,
+      "sha256": "a0c491fb07f0515d4d8036f6c8fdcb6943cf4a0c607140080dd5a46c5f982c8b",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "official-GA-DL-O21-Female-medium_1.jpg",
+      "source_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/GA%20DL%20O21%20Female-medium_1.jpg?itok=KP0HKylu",
+      "final_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/GA%20DL%20O21%20Female-medium_1.jpg?itok=KP0HKylu",
+      "retrieved_at": "2026-10-26T20:08:01.675178+00:00",
+      "bytes": 59786,
+      "sha256": "8a66974dd4192f4845dc4b38865da8f8db050ba19662aab24b6039382632ad13",
+      "mime_type": "image/jpeg",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dds-2019-samples.html"
+    },
+    {
+      "file": "official-GA-DL-U21-Male-cropped.jpg",
+      "source_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/2021-06/GA%20DL%20U21%20Male-cropped.jpg?itok=Jg6JR8dP",
+      "final_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/2021-06/GA%20DL%20U21%20Male-cropped.jpg?itok=Jg6JR8dP",
+      "retrieved_at": "2026-10-26T20:08:02.312378+00:00",
+      "bytes": 77095,
+      "sha256": "376a0e27dbc28b671cf835390e11f25a496c3cccb63d6cf829327eb3f56838a2",
+      "mime_type": "image/jpeg",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dds-2019-samples.html"
+    },
+    {
+      "file": "official-Sample-Interim-11022021.png",
+      "source_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/2021-11/Sample%20Interim%2011022021.png?itok=ZPKxQqa-",
+      "final_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/2021-11/Sample%20Interim%2011022021.png?itok=ZPKxQqa-",
+      "retrieved_at": "2026-10-26T20:08:02.968590+00:00",
+      "bytes": 151003,
+      "sha256": "36c8487e3338bf355f900703198d05abbe9e384fbcf196c060c1924dcb6c5ccc",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dds-2019-samples.html"
+    },
+    {
+      "file": "official-adultinterim.png",
+      "source_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/adultinterim.png?itok=IVbZ2179",
+      "final_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/adultinterim.png?itok=IVbZ2179",
+      "retrieved_at": "2026-10-26T20:08:03.615150+00:00",
+      "bytes": 151271,
+      "sha256": "9a18b07f2cd495c0b630e1e5412ebd2e857e4535d841d7fd24cf814cb7c5cb3a",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dds-legacy-samples.html"
+    },
+    {
+      "file": "official-under21.png",
+      "source_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/under21.png?itok=NFN3MgkD",
+      "final_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/under21.png?itok=NFN3MgkD",
+      "retrieved_at": "2026-10-26T20:08:04.398602+00:00",
+      "bytes": 136178,
+      "sha256": "c05f371745982c8ff5f0266b913d417131c14c725352391be49523da911ba30f",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dds-legacy-samples.html"
+    },
+    {
+      "file": "official-aultpermanant.png",
+      "source_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/aultpermanant.png?itok=vG8Cir4V",
+      "final_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/aultpermanant.png?itok=vG8Cir4V",
+      "retrieved_at": "2026-10-26T20:08:04.958156+00:00",
+      "bytes": 124677,
+      "sha256": "6bb97f359736250a94e702d8a8ef6ef34046a51f830435be6b91d27748b8b5c2",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dds-legacy-samples.html"
+    },
+    {
+      "file": "official-under21p.png",
+      "source_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/under21p.png?itok=M12AWasD",
+      "final_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/under21p.png?itok=M12AWasD",
+      "retrieved_at": "2026-10-26T20:08:05.464283+00:00",
+      "bytes": 109099,
+      "sha256": "a946d57fba945bad0ae4fd8624cf255d26300cf0daa6e6a5b2ef99251459eb85",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dds-legacy-samples.html"
+    },
+    {
+      "file": "official-Sample-valid-Georgia-Drivers-Licenses_0.jpg",
+      "source_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/Sample%20valid%20Georgia%20Driver%27s%20Licenses_0.jpg?itok=sook8-uK",
+      "final_url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/Sample%20valid%20Georgia%20Driver%27s%20Licenses_0.jpg?itok=sook8-uK",
+      "retrieved_at": "2026-10-26T20:08:05.936822+00:00",
+      "bytes": 61896,
+      "sha256": "739ef1a9547af3af02ee177695085db4d5c3dd54c106553c33b46fc725696dda",
+      "mime_type": "image/jpeg",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "dds-card-information.html"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "dds-2019-card-presentation-xref-51.jpeg",
+      "source_file": "dds-2019-card-presentation.pdf",
+      "source_sha256": "223609c516745cd1de8a29859129651ffbac80ed81eb160f8c94e9d13d2e1437",
+      "pdf_object_xref": 51,
+      "page_number": 7,
+      "width_px": 1030,
+      "height_px": 650,
+      "sha256": "1e37d332658eab2ad6a3e99225a926273d5866088d642f7edea754da6e26aadc"
+    },
+    {
+      "file": "dds-2019-card-presentation-xref-52.jpeg",
+      "source_file": "dds-2019-card-presentation.pdf",
+      "source_sha256": "223609c516745cd1de8a29859129651ffbac80ed81eb160f8c94e9d13d2e1437",
+      "pdf_object_xref": 52,
+      "page_number": 7,
+      "width_px": 652,
+      "height_px": 1027,
+      "sha256": "e1b5f50084a0288c5c8e10539da1fe6525c88617cb269885e5543a4cd2979ca5"
+    },
+    {
+      "file": "dds-2019-card-presentation-xref-77.jpeg",
+      "source_file": "dds-2019-card-presentation.pdf",
+      "source_sha256": "223609c516745cd1de8a29859129651ffbac80ed81eb160f8c94e9d13d2e1437",
+      "pdf_object_xref": 77,
+      "page_number": 8,
+      "width_px": 845,
+      "height_px": 533,
+      "sha256": "95d895ed1a398aab657708c1b001a6c6e1c4552ce446f8b0f8b670344ed868ce"
+    },
+    {
+      "file": "dds-2019-card-presentation-xref-78.jpeg",
+      "source_file": "dds-2019-card-presentation.pdf",
+      "source_sha256": "223609c516745cd1de8a29859129651ffbac80ed81eb160f8c94e9d13d2e1437",
+      "pdf_object_xref": 78,
+      "page_number": 8,
+      "width_px": 848,
+      "height_px": 539,
+      "sha256": "4e15cf8eb58d1fe626cc4bbe53ce9c2ebe7e7958c502331e9e5daccae6e1ff7d"
+    },
+    {
+      "file": "dds-2019-card-presentation-xref-91.jpeg",
+      "source_file": "dds-2019-card-presentation.pdf",
+      "source_sha256": "223609c516745cd1de8a29859129651ffbac80ed81eb160f8c94e9d13d2e1437",
+      "pdf_object_xref": 91,
+      "page_number": 9,
+      "width_px": 700,
+      "height_px": 1103,
+      "sha256": "06afa2158eac3beba1c9294f23b9238495986e7947c698130b11f0c32e959e7b"
+    },
+    {
+      "file": "dds-2019-card-presentation-xref-92.jpeg",
+      "source_file": "dds-2019-card-presentation.pdf",
+      "source_sha256": "223609c516745cd1de8a29859129651ffbac80ed81eb160f8c94e9d13d2e1437",
+      "pdf_object_xref": 92,
+      "page_number": 9,
+      "width_px": 699,
+      "height_px": 1103,
+      "sha256": "a1de2f2507a402a1857117cf287b0402b0d0148f732f29dc5bf969bac38daacb"
+    },
+    {
+      "file": "dds-2019-card-presentation-xref-99.jpeg",
+      "source_file": "dds-2019-card-presentation.pdf",
+      "source_sha256": "223609c516745cd1de8a29859129651ffbac80ed81eb160f8c94e9d13d2e1437",
+      "pdf_object_xref": 99,
+      "page_number": 10,
+      "width_px": 1180,
+      "height_px": 764,
+      "sha256": "f23380e4bfecbf4c58df3c3e817fc8a88661bb4b4aae26877ddba50bea8117a2"
+    },
+    {
+      "file": "dds-2019-card-presentation-xref-164.jpeg",
+      "source_file": "dds-2019-card-presentation.pdf",
+      "source_sha256": "223609c516745cd1de8a29859129651ffbac80ed81eb160f8c94e9d13d2e1437",
+      "pdf_object_xref": 164,
+      "page_number": 11,
+      "width_px": 1157,
+      "height_px": 733,
+      "sha256": "cd6230d02fd1a3cfaf3699e902281987a0afb2e23940530c65d3113b45088b26"
+    },
+    {
+      "file": "dds-2019-card-presentation-xref-200.jpeg",
+      "source_file": "dds-2019-card-presentation.pdf",
+      "source_sha256": "223609c516745cd1de8a29859129651ffbac80ed81eb160f8c94e9d13d2e1437",
+      "pdf_object_xref": 200,
+      "page_number": 12,
+      "width_px": 1317,
+      "height_px": 835,
+      "sha256": "73ba70b9c8bad6eb6adabd3922d30fa375ded327ea8fb89f03902af05bc9daa2"
+    },
+    {
+      "file": "dds-2019-barcode-xref-34.jpeg",
+      "source_file": "dds-2019-barcode.pdf",
+      "source_sha256": "faadb8f9977c127c1e2c9fa7c14c880395e02c753ed232947358747207c98af2",
+      "pdf_object_xref": 34,
+      "page_number": 1,
+      "width_px": 903,
+      "height_px": 569,
+      "sha256": "aaec477128ed70cbd3b9d6eb1a6de00f61520979496c33bd277425fa7b96358c"
+    },
+    {
+      "file": "dds-2019-barcode-xref-35.jpeg",
+      "source_file": "dds-2019-barcode.pdf",
+      "source_sha256": "faadb8f9977c127c1e2c9fa7c14c880395e02c753ed232947358747207c98af2",
+      "pdf_object_xref": 35,
+      "page_number": 1,
+      "width_px": 896,
+      "height_px": 568,
+      "sha256": "82dac51ae2be67b0a1612a835b276a1b35fb6c97bd56094fa4283a92a85c570c"
+    },
+    {
+      "file": "dds-2019-barcode-xref-38.jpeg",
+      "source_file": "dds-2019-barcode.pdf",
+      "source_sha256": "faadb8f9977c127c1e2c9fa7c14c880395e02c753ed232947358747207c98af2",
+      "pdf_object_xref": 38,
+      "page_number": 2,
+      "width_px": 1067,
+      "height_px": 690,
+      "sha256": "380bf6ec2b60a07386e383b652244fbf453f99af6563b446d34e279eeda66490"
+    },
+    {
+      "file": "dds-2019-barcode-xref-39.png",
+      "source_file": "dds-2019-barcode.pdf",
+      "source_sha256": "faadb8f9977c127c1e2c9fa7c14c880395e02c753ed232947358747207c98af2",
+      "pdf_object_xref": 39,
+      "page_number": 2,
+      "width_px": 1080,
+      "height_px": 690,
+      "sha256": "8e72e23b6c08861739e8ff046ccbbbc6c246052c78c2b7e2d5258c2dd9f1c10e"
+    },
+    {
+      "file": "dds-2019-barcode-xref-45.jpeg",
+      "source_file": "dds-2019-barcode.pdf",
+      "source_sha256": "faadb8f9977c127c1e2c9fa7c14c880395e02c753ed232947358747207c98af2",
+      "pdf_object_xref": 45,
+      "page_number": 2,
+      "width_px": 954,
+      "height_px": 602,
+      "sha256": "589878129176981fe4cb1f4890e96192967b21020b2fea113c5f8d9259f0771c"
+    },
+    {
+      "file": "dds-2019-barcode-xref-47.jpeg",
+      "source_file": "dds-2019-barcode.pdf",
+      "source_sha256": "faadb8f9977c127c1e2c9fa7c14c880395e02c753ed232947358747207c98af2",
+      "pdf_object_xref": 47,
+      "page_number": 2,
+      "width_px": 505,
+      "height_px": 321,
+      "sha256": "0c0965475e4f71b963e99ecb83d584e09b176b15ad4c7d6c61a9454b855f9cc1"
+    }
+  ],
+  "unresolved_downloads": [],
+  "remaining_gaps": [
+    "CDL-specific newgeneration and other document-specific backs remain incomplete.",
+    "UV plates, all issuance intervals and physicalcard geometry not established."
+  ],
+  "notes": [
+    "Issuerpartner gallery covers2019adult/minorDL, currentpaperinterim, prioradult/minorpermanent and securepaperinterims.",
+    "Nativepresentation adds adult/minor identificationcards and populatedbacks plus historicalbarcodebrochurefronts/backs; publicationannotations retained in plates.",
+    "Advertisingposter photographs, logos, text-as-images and isolatedbarcodefragments excluded; byteidenticalassets deduplicated without claiming differentresolutions as distinctdesigns."
+  ],
+  "catalog_integrated": true,
+  "review_status": "reference_research_only",
+  "preservation": {
+    "jurisdiction": "GA",
+    "verified_at": "2026-10-26T20:08:51.079531+00:00",
+    "private_snapshot_index_key": "snapshots/research/GA/d9b9f76852b71a56f1529d7e410df36b5161de29c1852a23fedf56c7d86b97df/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/GA.json",
+    "archive_sha256": "d9b9f76852b71a56f1529d7e410df36b5161de29c1852a23fedf56c7d86b97df",
+    "archive_size_bytes": 26521224,
+    "verified_restored_files": 318,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/GA",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 26,
+    "review_status": "reference_only"
+  }
+}

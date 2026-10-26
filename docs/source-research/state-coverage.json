@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "observed_at": "2026-10-26T20:05:30.069349+00:00",
-  "publication_revision": "79b277abdd1dd5856a3a493cc5af05a529618bdf",
+  "observed_at": "2026-10-26T20:14:07.431192+00:00",
+  "publication_revision": "b91d4c02ac260d79cdd7d4c2eab81d401750cf17",
   "measurement": "Anonymous public image-index membership; every image downloaded and SHA-256 verified. Source-publication counts do not imply credential-image coverage.",
-  "state_jurisdictions_with_images": 27,
-  "state_jurisdictions_without_images": 24,
-  "state_reference_images": 290,
+  "state_jurisdictions_with_images": 32,
+  "state_jurisdictions_without_images": 19,
+  "state_reference_images": 392,
   "federal_reference_images": 30,
   "jurisdictions": [
     {
@@ -51,20 +51,18 @@
     {
       "code": "CO",
       "name": "Colorado",
-      "source_publications": 0,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/CO-2026-10-26.json",
-      "research_assignment": "research_maine"
+      "source_publications": 4,
+      "published_reference_images": 10,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/CO-2026-10-26.json"
     },
     {
       "code": "CT",
       "name": "Connecticut",
-      "source_publications": 12,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/CT-2026-10-26.json",
-      "research_assignment": "research_maine"
+      "source_publications": 15,
+      "published_reference_images": 7,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/CT-2026-10-26.json"
     },
     {
       "code": "DE",
@@ -96,7 +94,7 @@
       "source_publications": 0,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/GA-2026-10-26.json",
       "research_assignment": "research_maine"
     },
     {
@@ -105,7 +103,7 @@
       "source_publications": 0,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/HI-2026-10-26.json",
       "research_assignment": "research_maine"
     },
     {
@@ -114,7 +112,7 @@
       "source_publications": 1,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/ID-2026-10-26.json",
       "research_assignment": "research_maine"
     },
     {
@@ -210,20 +208,18 @@
     {
       "code": "MS",
       "name": "Mississippi",
-      "source_publications": 6,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/MS-2026-10-26.json",
-      "research_assignment": "research_michigan"
+      "source_publications": 10,
+      "published_reference_images": 7,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/MS-2026-10-26.json"
     },
     {
       "code": "MO",
       "name": "Missouri",
-      "source_publications": 3,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/MO-2026-10-26.json",
-      "research_assignment": "research_michigan"
+      "source_publications": 7,
+      "published_reference_images": 27,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/MO-2026-10-26.json"
     },
     {
       "code": "MT",
@@ -231,7 +227,7 @@
       "source_publications": 0,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/MT-2026-10-26.json",
       "research_assignment": "research_michigan"
     },
     {
@@ -248,7 +244,7 @@
       "source_publications": 0,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/NV-2026-10-26.json",
       "research_assignment": "research_michigan"
     },
     {
@@ -257,7 +253,7 @@
       "source_publications": 0,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/NH-2026-10-26.json",
       "research_assignment": "research_michigan"
     },
     {
@@ -266,7 +262,7 @@
       "source_publications": 0,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/NJ-2026-10-26.json",
       "research_assignment": "research_michigan"
     },
     {
@@ -298,11 +294,10 @@
     {
       "code": "ND",
       "name": "North Dakota",
-      "source_publications": 3,
-      "published_reference_images": 0,
-      "research_status": "bounded_search_in_progress",
-      "research_record": "docs/source-research/ND-2026-10-26.json",
-      "research_assignment": "research_maryland"
+      "source_publications": 44,
+      "published_reference_images": 51,
+      "research_status": "published_references_available",
+      "research_record": "docs/source-research/ND-2026-10-26.json"
     },
     {
       "code": "OH",
@@ -343,7 +338,7 @@
       "source_publications": 0,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/RI-2026-10-26.json",
       "research_assignment": "research_maryland"
     },
     {
@@ -352,7 +347,7 @@
       "source_publications": 2,
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
-      "research_record": null,
+      "research_record": "docs/source-research/SC-2026-10-26.json",
       "research_assignment": "research_maryland"
     },
     {
@@ -397,7 +392,7 @@
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
       "research_record": null,
-      "research_assignment": "research_maryland"
+      "research_assignment": "research_michigan"
     },
     {
       "code": "VA",
@@ -430,7 +425,7 @@
       "published_reference_images": 0,
       "research_status": "bounded_search_in_progress",
       "research_record": null,
-      "research_assignment": "research_maryland"
+      "research_assignment": "research_maine"
     },
     {
       "code": "WY",

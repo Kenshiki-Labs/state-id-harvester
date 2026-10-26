@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "ID",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:12:06.087504+00:00",
+  "source_publications": [
+    {
+      "file": "itd-2023-faq.pdf",
+      "source_url": "https://itd.idaho.gov/wp-content/uploads/2023/03/DMV_New_Drivers_License_2023_FAQ.pdf",
+      "final_url": "https://itd.idaho.gov/wp-content/uploads/2023/03/DMV_New_Drivers_License_2023_FAQ.pdf",
+      "retrieved_at": "2026-10-26T20:11:04.414171+00:00",
+      "bytes": 2324544,
+      "sha256": "595e02e42466b211964142c38cef2168ab7aaf1df366ce8fa9adda2d7544ae68",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "itd-2023-duplicate-notice.pdf",
+      "source_url": "https://itd.idaho.gov/wp-content/uploads/2023/07/DMV_Notice_Real_ID_credentials_Duplicate-designation.pdf",
+      "final_url": "https://itd.idaho.gov/wp-content/uploads/2023/07/DMV_Notice_Real_ID_credentials_Duplicate-designation.pdf",
+      "retrieved_at": "2026-10-26T20:11:05.595304+00:00",
+      "bytes": 252773,
+      "sha256": "5cfe6173cd2fcb29800cf816c6ea057ef07942505bfff5f3ed73204f54a1432e",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "health-tobacco-training.html",
+      "source_url": "https://healthandwelfare.idaho.gov/providers/idaho-tobacco-project/training-materials",
+      "final_url": "https://healthandwelfare.idaho.gov/providers/idaho-tobacco-project/training-materials",
+      "retrieved_at": "2026-10-26T20:11:06.082286+00:00",
+      "bytes": 186546,
+      "sha256": "9d25dce1b4a0bb9f8935908b77567ca4e45d9a6cd8bcebb1d9e80fb3a2f2e587",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "itd-2023-launch.html",
+      "source_url": "https://itd.idaho.gov/news/idahos-new-license-and-id-card-are-here/",
+      "final_url": "https://itd.idaho.gov/news/idahos-new-license-and-id-card-are-here/",
+      "retrieved_at": "2026-10-26T20:11:07.872955+00:00",
+      "bytes": 139905,
+      "sha256": "422b37e84a1f3572dcf1100717ef72ba873f21836f6b6741eda9fca22c835dde",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "health-under21-legacy.png",
+      "source_url": "https://healthandwelfare.idaho.gov/sites/default/files/2021-09/2021-09-20_10-23-45.png",
+      "final_url": "https://healthandwelfare.idaho.gov/sites/default/files/2021-09/2021-09-20_10-23-45.png",
+      "retrieved_at": "2026-10-26T20:11:27.401650+00:00",
+      "bytes": 141500,
+      "sha256": "e0983880129b4e26a6c2482da474e225371e4ebeca7d9662c28f5621a2340e4c",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "health-tobacco-training.html"
+    },
+    {
+      "file": "health-adult-legacy.png",
+      "source_url": "https://healthandwelfare.idaho.gov/sites/default/files/2021-09/2021-09-20_10-13-14.png",
+      "final_url": "https://healthandwelfare.idaho.gov/sites/default/files/2021-09/2021-09-20_10-13-14.png",
+      "retrieved_at": "2026-10-26T20:11:27.872235+00:00",
+      "bytes": 165104,
+      "sha256": "caf1bee2e4cc104c30426cde5772ef8e188d7b6d0995c37d9cee54dad425ad49",
+      "mime_type": "image/png",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "health-tobacco-training.html"
+    },
+    {
+      "file": "itd-2023-launch-front.jpg",
+      "source_url": "https://itd.idaho.gov/wp-content/uploads/2023/04/new-dl-website-image-9.jpg",
+      "final_url": "https://itd.idaho.gov/wp-content/uploads/2023/04/new-dl-website-image-9.jpg",
+      "retrieved_at": "2026-10-26T20:11:28.472547+00:00",
+      "bytes": 72837,
+      "sha256": "5658be3570cace501c0d22d6817b874e665e10c1aebf16bb95eb54a49b777b32",
+      "mime_type": "image/jpeg",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "itd-2023-launch.html"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "itd-2023-faq-xref-16.png",
+      "source_file": "itd-2023-faq.pdf",
+      "source_sha256": "595e02e42466b211964142c38cef2168ab7aaf1df366ce8fa9adda2d7544ae68",
+      "pdf_object_xref": 16,
+      "page_number": 1,
+      "width_px": 645,
+      "height_px": 407,
+      "sha256": "815a0b651cf3b04db074e257fc5a2d528a9d7e1e0733feeb49453a44be9c93b2",
+      "mask": {
+        "file": "itd-2023-faq-mask-48.png",
+        "pdf_object_xref": 48,
+        "sha256": "ce9f47772e880e566c01eb53c5fb8c5b0ebb1b118783f2703030a09e2822b6ba"
+      },
+      "preview_file": "itd-2023-faq-xref-16-preview.png"
+    },
+    {
+      "file": "itd-2023-duplicate-notice-xref-59.jpeg",
+      "source_file": "itd-2023-duplicate-notice.pdf",
+      "source_sha256": "5cfe6173cd2fcb29800cf816c6ea057ef07942505bfff5f3ed73204f54a1432e",
+      "pdf_object_xref": 59,
+      "page_number": 1,
+      "width_px": 764,
+      "height_px": 481,
+      "sha256": "8191ac1822cd4bc0e620df2249f498dd322ceb2d2c1a4a9e216f5d1461e34690"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "itd-starcard-kit.html",
+      "source_url": "https://itd.idaho.gov/starcard/materials-kit.html",
+      "final_url": "https://itd.idaho.gov/starcard/materials-kit.html",
+      "retrieved_at": "2026-10-26T20:11:10.415665+00:00",
+      "bytes": 141296,
+      "sha256": "bb93ef8c75798a0fb2fb28ef8a1c350235678a6e9761c41c75b56baa6a2b27a8",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 404
+    },
+    {
+      "file": "legacy-2011-brochure-coet-mirror.pdf",
+      "source_url": "https://www.coet.es/web/images/Categorias/DOCUMENTOSCOPIA/Documentos/Specimens/America_Norte/Coet_Documentos_Internacional_IDAIO.pdf",
+      "final_url": "https://www.coet.es/web/images/Categorias/DOCUMENTOSCOPIA/Documentos/Specimens/America_Norte/Coet_Documentos_Internacional_IDAIO.pdf",
+      "retrieved_at": "2026-10-26T20:11:50.792837+00:00",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mime_type": "",
+      "source_class": "third_party",
+      "status": "failed",
+      "http_status": 0
+    }
+  ],
+  "remaining_gaps": [
+    "Clean backs and current2023under21/ID/CDL/temporarypaper specimens remain missing.",
+    "StateStarCardmaterials kit404; independent2011brochuremirror connectionfailed."
+  ],
+  "notes": [
+    "Two complete native2023adultDL fronts:StarCard andnonREALID DUPLICATE; issuerpressgraphic corroborates2023front.",
+    "Statehealth tobacco training contributespartiallegacyadult/minorfront crops, explicitlypartial rather thancompleteflats.",
+    "FAQsilhouetteillustration/headerlogos excluded. No legalruleclaims or barcode-derivedacceptance inferred."
+  ],
+  "catalog_integrated": true,
+  "review_status": "reference_research_only",
+  "preservation": {
+    "jurisdiction": "ID",
+    "verified_at": "2026-10-26T20:12:16.364124+00:00",
+    "private_snapshot_index_key": "snapshots/research/ID/89005b455248d1ee6e3e02dc0c99d8836b533b85a8257e27aad122aa0b0302de/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/ID.json",
+    "archive_sha256": "89005b455248d1ee6e3e02dc0c99d8836b533b85a8257e27aad122aa0b0302de",
+    "archive_size_bytes": 6749773,
+    "verified_restored_files": 24,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/ID",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 5,
+    "review_status": "reference_only"
+  }
+}

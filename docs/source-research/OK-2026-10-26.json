@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "OK",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:07:23.871223+00:00",
+  "scope": "Bounded manual state source research. Useful finds retained, remaining gaps recorded; no completeness or runtime acceptance claim.",
+  "source_publications": [
+    {
+      "file": "service-modernization.html",
+      "source_url": "https://www.oklahoma.gov/service/all-pages/modernization-page.html",
+      "final_url": "https://www.oklahoma.gov/service/all-pages/modernization-page.html",
+      "mime_type": "text/html;charset=utf-8",
+      "retrieved_at": "2026-10-26T20:05:12.977004+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "787492e6aefb61af7d8db5ab70a6264158a1d65b743d4b6698bd37a0de84ab5d",
+      "bytes": 117510,
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "service-2026-credential-flyer.pdf",
+      "source_url": "https://content.govdelivery.com/attachments/OKSERVICE/2026/02/13/file_attachments/3554091/New%20Credential%20Flyer.pdf",
+      "final_url": "https://content.govdelivery.com/attachments/OKSERVICE/2026/02/13/file_attachments/3554091/New%20Credential%20Flyer.pdf",
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:05:17.161597+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "f5493195d16b4cfc72ca7d86b66398e26fa329057e87fb12700c0531c04e02aa",
+      "bytes": 2359677,
+      "coverage": [
+        "Official2026 specimen collage and design announcement"
+      ]
+    },
+    {
+      "file": "oba-2026-security-features.pdf",
+      "source_url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf",
+      "final_url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf",
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:05:18.771190+00:00",
+      "source_class": "banking_association_mirror",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "bytes": 926745,
+      "coverage": [
+        "Banking-association preserved2026 fronts/back, under21 and ID variants, UV/tilt photos"
+      ]
+    },
+    {
+      "file": "vendor-2003-license-brochure.pdf",
+      "source_url": "https://media.corporate-ir.net/media_files/nsd/visg/oklicensebros.pdf",
+      "final_url": "https://media.corporate-ir.net/media_files/nsd/visg/oklicensebros.pdf",
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:05:21.075139+00:00",
+      "source_class": "issuer_vendor_mirror",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "bytes": 1230461,
+      "coverage": [
+        "Historical2003 DL/CDL/ID adult and minor fronts and license/ID backs, retained vendor-hosted issuer guide"
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "service-2026-credential-flyer-xref-67.jpeg",
+      "source_file": "service-2026-credential-flyer.pdf",
+      "source_sha256": "f5493195d16b4cfc72ca7d86b66398e26fa329057e87fb12700c0531c04e02aa",
+      "pdf_object_xref": 67,
+      "resource_page_number": 1,
+      "width_px": 9036,
+      "height_px": 2892,
+      "sha256": "62cd1172e401d7ce5cfefa96fd9a3303260ce87269a073cbf182591a821f6bfc",
+      "mask": {
+        "file": "service-2026-credential-flyer-mask-68.png",
+        "pdf_object_xref": 68,
+        "sha256": "a81d340e1eb06b30c070aa184d878051dd378f7fe989e89fa8498b1ebb2f8d80"
+      },
+      "composed_preview": {
+        "file": "service-2026-credential-flyer-xref-67-alpha.png",
+        "sha256": "1f8a5620753c3aa0db83fb2feef3a908e2b27078b7362ca22adcc409a766eee1"
+      },
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "oba-2026-security-features-xref-4.jpeg",
+      "source_file": "oba-2026-security-features.pdf",
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "pdf_object_xref": 4,
+      "resource_page_number": 1,
+      "width_px": 1146,
+      "height_px": 730,
+      "sha256": "3159615b2aa456e4647c1f71996e0e335c7a4397d72d7b145470b50edb2c0cf1",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "oba-2026-security-features-xref-13.jpeg",
+      "source_file": "oba-2026-security-features.pdf",
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "pdf_object_xref": 13,
+      "resource_page_number": 1,
+      "width_px": 243,
+      "height_px": 233,
+      "sha256": "d2b2e5dc2d9e7939c62f41d45cfd4a59bbdf8c449a4d64166b3df216283ba4f4",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "oba-2026-security-features-xref-14.jpeg",
+      "source_file": "oba-2026-security-features.pdf",
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "pdf_object_xref": 14,
+      "resource_page_number": 1,
+      "width_px": 994,
+      "height_px": 492,
+      "sha256": "3ce8e757696bc53e6cad525de43aabf695eb8912d8560ac62bd15f03cca6b571",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "oba-2026-security-features-xref-15.jpeg",
+      "source_file": "oba-2026-security-features.pdf",
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "pdf_object_xref": 15,
+      "resource_page_number": 1,
+      "width_px": 401,
+      "height_px": 599,
+      "sha256": "7d275247c121472e764feaef455ffcdc976034360b26ab5de1f9fdd76a2593b7",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "oba-2026-security-features-xref-16.jpeg",
+      "source_file": "oba-2026-security-features.pdf",
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "pdf_object_xref": 16,
+      "resource_page_number": 1,
+      "width_px": 978,
+      "height_px": 746,
+      "sha256": "5e8a83bbcc4dbc2c2ab595241a316a7a814bbce23f4116e04febd665e1bc534d",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "oba-2026-security-features-xref-29.jpeg",
+      "source_file": "oba-2026-security-features.pdf",
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "pdf_object_xref": 29,
+      "resource_page_number": 2,
+      "width_px": 1143,
+      "height_px": 661,
+      "sha256": "3118f759a27feacd9aac159f16ddbb521d9d7fded21f5e275cd64d422ce493e4",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "oba-2026-security-features-xref-30.jpeg",
+      "source_file": "oba-2026-security-features.pdf",
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "pdf_object_xref": 30,
+      "resource_page_number": 2,
+      "width_px": 1162,
+      "height_px": 756,
+      "sha256": "d0a4dbe1f0d821e7901f4e24b9a620e0f1cf7d3f8ea7a29e5780d08aa199e138",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "oba-2026-security-features-xref-31.jpeg",
+      "source_file": "oba-2026-security-features.pdf",
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "pdf_object_xref": 31,
+      "resource_page_number": 2,
+      "width_px": 819,
+      "height_px": 632,
+      "sha256": "2d2358ede6eb96951a985a94edb0df0035cd905f66727a87226da3f992692a92",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "oba-2026-security-features-xref-40.jpeg",
+      "source_file": "oba-2026-security-features.pdf",
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "pdf_object_xref": 40,
+      "resource_page_number": 2,
+      "width_px": 988,
+      "height_px": 337,
+      "sha256": "2e70110a71465e1683223200996f709a9cef7f677aa9ff6b51ce3b733f1320d7",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "oba-2026-security-features-xref-41.jpeg",
+      "source_file": "oba-2026-security-features.pdf",
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "pdf_object_xref": 41,
+      "resource_page_number": 2,
+      "width_px": 606,
+      "height_px": 831,
+      "sha256": "418e52607ea684941c591ce4f7a46412ed42391466e973e26ba05ca1f5c713ab",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "oba-2026-security-features-xref-42.jpeg",
+      "source_file": "oba-2026-security-features.pdf",
+      "source_sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+      "pdf_object_xref": 42,
+      "resource_page_number": 2,
+      "width_px": 445,
+      "height_px": 283,
+      "sha256": "033c98869e9b979b6d17f3084c003ee5e36f85fd56a566a8a7ad15a1e54d7469",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-149.jpeg",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 149,
+      "resource_page_number": 1,
+      "width_px": 207,
+      "height_px": 125,
+      "sha256": "d0f8e178d276dafb87f84efdc52f2dbcd027db284bddb8d5d52021caeec53e36",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-164.jpeg",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 164,
+      "resource_page_number": 1,
+      "width_px": 208,
+      "height_px": 130,
+      "sha256": "26c2e3de5316ab0d19d55e1d047b61d008fb37bf43f30894a0569c7813323143",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-171.jpeg",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 171,
+      "resource_page_number": 1,
+      "width_px": 210,
+      "height_px": 128,
+      "sha256": "8e8bdec3e9da865e10a3c85da8029377f1b3f0280552ca45349e4e29f4a80154",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-6.png",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 6,
+      "resource_page_number": 2,
+      "width_px": 929,
+      "height_px": 375,
+      "sha256": "50cd0eb0dd6e5fcd7c01d7319cf4898eb3282b1e1be36362c585c727ded7e2dc",
+      "reference_kind": "background_or_decorative_layer",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-16.png",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 16,
+      "resource_page_number": 2,
+      "width_px": 1002,
+      "height_px": 589,
+      "sha256": "ac913038d3c1f387fbe69d54142ec43042d20d262820322680f87dcc017bf55e",
+      "reference_kind": "background_or_decorative_layer",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-24.png",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 24,
+      "resource_page_number": 2,
+      "width_px": 953,
+      "height_px": 578,
+      "sha256": "88c730bafbc93210d1df98be1e690617ca55af95674113bd4aedc0e99e452822",
+      "reference_kind": "background_or_decorative_layer",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-31.png",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 31,
+      "resource_page_number": 2,
+      "width_px": 971,
+      "height_px": 612,
+      "sha256": "59d4980d45e91190918b5b0f6ed4fb01b835b2257a076ce42619a3c0e69993fe",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-47.png",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 47,
+      "resource_page_number": 2,
+      "width_px": 981,
+      "height_px": 615,
+      "sha256": "24a756978bc8f5f2669cdf4a0e287474412e5355e7c6613936422c14712cf258",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-55.png",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 55,
+      "resource_page_number": 2,
+      "width_px": 1772,
+      "height_px": 448,
+      "sha256": "4bbe3ad81c0e4144b4ea084e6dcfd50f8051cd89a5aacd7345905f603db8c842",
+      "reference_kind": "background_or_decorative_layer",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-141.jpeg",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 141,
+      "resource_page_number": 1,
+      "width_px": 125,
+      "height_px": 207,
+      "sha256": "b6f57d176206419e2c097ca1b14decdf55f0420fc323ad2abe244c348d68a649",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-179.jpeg",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 179,
+      "resource_page_number": 1,
+      "width_px": 127,
+      "height_px": 207,
+      "sha256": "8eddd65ee6b1693041250b67f0e159fe93afe3819d9f298494c56c49dba225ca",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    },
+    {
+      "file": "vendor-2003-license-brochure-xref-195.jpeg",
+      "source_file": "vendor-2003-license-brochure.pdf",
+      "source_sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+      "pdf_object_xref": 195,
+      "resource_page_number": 1,
+      "width_px": 130,
+      "height_px": 209,
+      "sha256": "0afc7074e7fd298acac24f74e9257f119eeeaa7220f70053c70d1c2849db3769",
+      "reference_kind": "specimen_or_optical_detail",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_pages"
+    }
+  ],
+  "unresolved_downloads": [],
+  "remaining_gaps": [
+    "2026 separate CDL specimens and document-specific backs not acquired.",
+    "Intermediate 2003-to-2026 design specimens not separately acquired.",
+    "Current issue intervals and optical performance remain unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": true,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "OK",
+    "verified_at": "2026-10-26T20:08:17.498367+00:00",
+    "local_directory": "output/research/OK",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/OK/4c85dad60f61577132db9b9202af6e6c79b3d096bd4aea141513dcc1298e5ea9/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/OK.json",
+    "archive_sha256": "4c85dad60f61577132db9b9202af6e6c79b3d096bd4aea141513dcc1298e5ea9",
+    "archive_size_bytes": 61911167,
+    "transport_chunks": 2,
+    "verified_restored_files": 40,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/OK",
+    "verification": "Downloaded archive, safe restored and compared EVERY retained file byte-for-byte.",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 25,
+    "review_status": "reference_only"
+  }
+}

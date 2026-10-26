@@ -4,12 +4,12 @@
   "library_run_id": "2026-10-26T094725.718184Z-869efe09",
   "stats": {
     "jurisdictions": 51,
-    "jurisdictions_with_sources": 38,
+    "jurisdictions_with_sources": 45,
     "jurisdictions_with_accepted_cohorts": 0,
-    "sources": 285,
-    "relevant_sources": 188,
-    "embedded_images": 2094,
-    "rendered_pages": 420,
+    "sources": 332,
+    "relevant_sources": 235,
+    "embedded_images": 2160,
+    "rendered_pages": 445,
     "crop_candidates": 159,
     "accepted_cohorts": 0
   },
@@ -1133,36 +1133,220 @@
     {
       "code": "GA",
       "name": "Georgia",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
-        "embedded_images": 0,
-        "rendered_pages": 0,
+        "sources": 10,
+        "relevant_sources": 10,
+        "embedded_images": 15,
+        "rendered_pages": 3,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "dds 2019 card presentation",
+          "url": "https://dds.georgia.gov/document/2019-pri-summer-conference-cps-presentation/download",
+          "sha256": "223609c516745cd1de8a29859129651ffbac80ed81eb160f8c94e9d13d2e1437",
+          "retrieved_at": "2026-10-26T20:07:12.816650+00:00",
+          "publisher_host": "dds.georgia.gov",
+          "publisher_jurisdiction": "GA",
+          "discovery_jurisdiction": "GA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 20
+        },
+        {
+          "title": "dds 2019 barcode",
+          "url": "https://dds.georgia.gov/document/publication/license-printed-beginning-june-2019/download",
+          "sha256": "faadb8f9977c127c1e2c9fa7c14c880395e02c753ed232947358747207c98af2",
+          "retrieved_at": "2026-10-26T20:07:15.040311+00:00",
+          "publisher_host": "dds.georgia.gov",
+          "publisher_jurisdiction": "GA",
+          "discovery_jurisdiction": "GA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2
+        },
+        {
+          "title": "official GA DL O21 Female medium_1",
+          "url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/GA%20DL%20O21%20Female-medium_1.jpg?itok=KP0HKylu",
+          "sha256": "8a66974dd4192f4845dc4b38865da8f8db050ba19662aab24b6039382632ad13",
+          "retrieved_at": "2026-10-26T20:08:01.675178+00:00",
+          "publisher_host": "dds.georgia.gov",
+          "publisher_jurisdiction": "GA",
+          "discovery_jurisdiction": "GA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "official GA DL U21 Male cropped",
+          "url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/2021-06/GA%20DL%20U21%20Male-cropped.jpg?itok=Jg6JR8dP",
+          "sha256": "376a0e27dbc28b671cf835390e11f25a496c3cccb63d6cf829327eb3f56838a2",
+          "retrieved_at": "2026-10-26T20:08:02.312378+00:00",
+          "publisher_host": "dds.georgia.gov",
+          "publisher_jurisdiction": "GA",
+          "discovery_jurisdiction": "GA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "official Sample Interim 11022021",
+          "url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/2021-11/Sample%20Interim%2011022021.png?itok=ZPKxQqa-",
+          "sha256": "36c8487e3338bf355f900703198d05abbe9e384fbcf196c060c1924dcb6c5ccc",
+          "retrieved_at": "2026-10-26T20:08:02.968590+00:00",
+          "publisher_host": "dds.georgia.gov",
+          "publisher_jurisdiction": "GA",
+          "discovery_jurisdiction": "GA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "official adultinterim",
+          "url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/adultinterim.png?itok=IVbZ2179",
+          "sha256": "9a18b07f2cd495c0b630e1e5412ebd2e857e4535d841d7fd24cf814cb7c5cb3a",
+          "retrieved_at": "2026-10-26T20:08:03.615150+00:00",
+          "publisher_host": "dds.georgia.gov",
+          "publisher_jurisdiction": "GA",
+          "discovery_jurisdiction": "GA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "official under21",
+          "url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/under21.png?itok=NFN3MgkD",
+          "sha256": "c05f371745982c8ff5f0266b913d417131c14c725352391be49523da911ba30f",
+          "retrieved_at": "2026-10-26T20:08:04.398602+00:00",
+          "publisher_host": "dds.georgia.gov",
+          "publisher_jurisdiction": "GA",
+          "discovery_jurisdiction": "GA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "official aultpermanant",
+          "url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/aultpermanant.png?itok=vG8Cir4V",
+          "sha256": "6bb97f359736250a94e702d8a8ef6ef34046a51f830435be6b91d27748b8b5c2",
+          "retrieved_at": "2026-10-26T20:08:04.958156+00:00",
+          "publisher_host": "dds.georgia.gov",
+          "publisher_jurisdiction": "GA",
+          "discovery_jurisdiction": "GA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "official under21p",
+          "url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/under21p.png?itok=M12AWasD",
+          "sha256": "a946d57fba945bad0ae4fd8624cf255d26300cf0daa6e6a5b2ef99251459eb85",
+          "retrieved_at": "2026-10-26T20:08:05.464283+00:00",
+          "publisher_host": "dds.georgia.gov",
+          "publisher_jurisdiction": "GA",
+          "discovery_jurisdiction": "GA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "official Sample valid Georgia Drivers Licenses_0",
+          "url": "https://dds.georgia.gov/sites/dds.georgia.gov/files/styles/flexheight/public/Sample%20valid%20Georgia%20Driver%27s%20Licenses_0.jpg?itok=sook8-uK",
+          "sha256": "739ef1a9547af3af02ee177695085db4d5c3dd54c106553c33b46fc725696dda",
+          "retrieved_at": "2026-10-26T20:08:05.936822+00:00",
+          "publisher_host": "dds.georgia.gov",
+          "publisher_jurisdiction": "GA",
+          "discovery_jurisdiction": "GA",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        }
+      ]
     },
     {
       "code": "HI",
       "name": "Hawaii",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
-        "embedded_images": 0,
-        "rendered_pages": 0,
+        "sources": 4,
+        "relevant_sources": 4,
+        "embedded_images": 5,
+        "rendered_pages": 1,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "hidot 2024 driver manual",
+          "url": "https://hidot.hawaii.gov/highways/files/2024/11/2023-Hawaii-Drivers-Manual_5.375x8.375_Final-r3-Digital-071924web.pdf",
+          "sha256": "43cfa28cb320e5ff1d4466f13520931a947765fe5f2d0890744036a37b21f94f",
+          "retrieved_at": "2026-10-26T20:09:00.827556+00:00",
+          "publisher_host": "hidot.hawaii.gov",
+          "publisher_jurisdiction": "HI",
+          "discovery_jurisdiction": "HI",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 132
+        },
+        {
+          "title": "honolulu 2026 design comparison",
+          "url": "https://www.honolulu.gov/csd/wp-content/uploads/sites/6/2026/06/Untitled-design-2.jpg",
+          "sha256": "4d0fa9b8162976867bb841070df68307833f8dc989b41683d8135c63b8914bf0",
+          "retrieved_at": "2026-10-26T20:09:14.895059+00:00",
+          "publisher_host": "www.honolulu.gov",
+          "publisher_jurisdiction": "HI",
+          "discovery_jurisdiction": "HI",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "police 2005 license front",
+          "url": "https://www.hawaiipolice.com/wp-content/uploads/2011/10/LicenseFront.jpg",
+          "sha256": "036052e60c8de421da39465e294e9392d9a2901914a348e21ffa392cb30498ac",
+          "retrieved_at": "2026-10-26T20:09:15.322261+00:00",
+          "publisher_host": "www.hawaiipolice.com",
+          "publisher_jurisdiction": "HI",
+          "discovery_jurisdiction": "HI",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "hpr 2026 front back",
+          "url": "https://npr-brightspot.s3.amazonaws.com/1f/1c/613dd8ec428e8f9642f880f83cba/keeaumoku-kapu-3.jpg",
+          "sha256": "ef445ab4c14e2f73715bf147d972b168357f1010ad8f74e763d47a2d49f5c3d4",
+          "retrieved_at": "2026-10-26T20:10:03.845170+00:00",
+          "publisher_host": "npr-brightspot.s3.amazonaws.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "HI",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        }
+      ]
     },
     {
       "code": "IA",
@@ -1214,9 +1398,9 @@
       "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 1,
-        "relevant_sources": 0,
-        "embedded_images": 1,
+        "sources": 6,
+        "relevant_sources": 5,
+        "embedded_images": 3,
         "rendered_pages": 1,
         "crop_candidates": 0,
         "accepted_cohorts": 0
@@ -1236,6 +1420,71 @@
           "review_status": "unreviewed",
           "page_count": 3,
           "credential_format": "ID1"
+        },
+        {
+          "title": "itd 2023 faq",
+          "url": "https://itd.idaho.gov/wp-content/uploads/2023/03/DMV_New_Drivers_License_2023_FAQ.pdf",
+          "sha256": "595e02e42466b211964142c38cef2168ab7aaf1df366ce8fa9adda2d7544ae68",
+          "retrieved_at": "2026-10-26T20:11:04.414171+00:00",
+          "publisher_host": "itd.idaho.gov",
+          "publisher_jurisdiction": "ID",
+          "discovery_jurisdiction": "ID",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1
+        },
+        {
+          "title": "itd 2023 duplicate notice",
+          "url": "https://itd.idaho.gov/wp-content/uploads/2023/07/DMV_Notice_Real_ID_credentials_Duplicate-designation.pdf",
+          "sha256": "5cfe6173cd2fcb29800cf816c6ea057ef07942505bfff5f3ed73204f54a1432e",
+          "retrieved_at": "2026-10-26T20:11:05.595304+00:00",
+          "publisher_host": "itd.idaho.gov",
+          "publisher_jurisdiction": "ID",
+          "discovery_jurisdiction": "ID",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1
+        },
+        {
+          "title": "health under21 legacy",
+          "url": "https://healthandwelfare.idaho.gov/sites/default/files/2021-09/2021-09-20_10-23-45.png",
+          "sha256": "e0983880129b4e26a6c2482da474e225371e4ebeca7d9662c28f5621a2340e4c",
+          "retrieved_at": "2026-10-26T20:11:27.401650+00:00",
+          "publisher_host": "healthandwelfare.idaho.gov",
+          "publisher_jurisdiction": "ID",
+          "discovery_jurisdiction": "ID",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "health adult legacy",
+          "url": "https://healthandwelfare.idaho.gov/sites/default/files/2021-09/2021-09-20_10-13-14.png",
+          "sha256": "caf1bee2e4cc104c30426cde5772ef8e188d7b6d0995c37d9cee54dad425ad49",
+          "retrieved_at": "2026-10-26T20:11:27.872235+00:00",
+          "publisher_host": "healthandwelfare.idaho.gov",
+          "publisher_jurisdiction": "ID",
+          "discovery_jurisdiction": "ID",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "itd 2023 launch front",
+          "url": "https://itd.idaho.gov/wp-content/uploads/2023/04/new-dl-website-image-9.jpg",
+          "sha256": "5658be3570cace501c0d22d6817b874e665e10c1aebf16bb95eb54a49b777b32",
+          "retrieved_at": "2026-10-26T20:11:28.472547+00:00",
+          "publisher_host": "itd.idaho.gov",
+          "publisher_jurisdiction": "ID",
+          "discovery_jurisdiction": "ID",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
         }
       ]
     },
@@ -2276,11 +2525,11 @@
     {
       "code": "MT",
       "name": "Montana",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
+        "sources": 2,
+        "relevant_sources": 2,
         "embedded_images": 0,
         "rendered_pages": 0,
         "crop_candidates": 0,
@@ -2288,7 +2537,34 @@
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "MT: doj 2025 front.jpg",
+          "url": "https://content.govdelivery.com/attachments/fancy_images/MTAG/2025/12/12793907/6587406/new-credential-key_crop.jpg",
+          "sha256": "016b433f81b1db6b91ab10da2ed080717b6c5868bc200205782bb61312d62b70",
+          "retrieved_at": "2026-10-26T20:06:58.347574+00:00",
+          "publisher_host": "content.govdelivery.com",
+          "publisher_jurisdiction": "MT",
+          "discovery_jurisdiction": "MT",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "MT: publicradio 2016 front.png",
+          "url": "https://npr-brightspot.s3.amazonaws.com/legacy/sites/kufm/files/201601/driver-license-02.png",
+          "sha256": "1e35fb300b4705396e968c0342030586875535af795a6038464bcddec97ee8ab",
+          "retrieved_at": "2026-10-26T20:06:08.719786+00:00",
+          "publisher_host": "npr-brightspot.s3.amazonaws.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "MT",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        }
+      ]
     },
     {
       "code": "NC",
@@ -3048,36 +3324,103 @@
     {
       "code": "NH",
       "name": "New Hampshire",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
-        "embedded_images": 0,
+        "sources": 3,
+        "relevant_sources": 3,
+        "embedded_images": 1,
         "rendered_pages": 0,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "NH: press 2025 adult front.jpg",
+          "url": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/new-design-new-hampshire-driver-s-license-6793a8f50b53b.jpg",
+          "sha256": "96200802aafc76c605d11955107460b1e4ce57c0a6b45475caf7ab7b73fcfbb6",
+          "retrieved_at": "2026-10-26T20:09:47.192543+00:00",
+          "publisher_host": "kubrick.htvapps.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "NH",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "NH: press 2025 back.jpg",
+          "url": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/back-of-new-new-hampshire-drivers-license-6793a95e5f4e2.jpg",
+          "sha256": "6cd1e5c652fb8fadd05af405dc71081f31c288249ccf870bef17867455ece8c4",
+          "retrieved_at": "2026-10-26T20:09:47.400552+00:00",
+          "publisher_host": "kubrick.htvapps.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "NH",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "NH: training preserved 2024 manual.pdf",
+          "url": "https://nationaldrivertraining.com/media/documents/handbooks/New-Hampshire/New-Hampshire-Drivers-Handbook.pdf",
+          "sha256": "9dec472c0306d250bf3e45490730e6676f8f43ea290f5dfbc8d3d8913eb6f4a6",
+          "retrieved_at": "2026-10-26T20:09:48.631169+00:00",
+          "publisher_host": "nationaldrivertraining.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "NH",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 52
+        }
+      ]
     },
     {
       "code": "NJ",
       "name": "New Jersey",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
-        "embedded_images": 0,
-        "rendered_pages": 0,
+        "sources": 2,
+        "relevant_sources": 2,
+        "embedded_images": 2,
+        "rendered_pages": 2,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "NJ: mvc inspection business manual.pdf",
+          "url": "https://nj.gov/mvc/pdf/business/pif-manual.pdf",
+          "sha256": "218dac3fedd127e4d8fe9eebef5856fb5366af01474e39037e9306c9bcddb861",
+          "retrieved_at": "2026-10-26T20:11:54.032385+00:00",
+          "publisher_host": "nj.gov",
+          "publisher_jurisdiction": "NJ",
+          "discovery_jurisdiction": "NJ",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 194
+        },
+        {
+          "title": "NJ: mvc driver manual.pdf",
+          "url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+          "sha256": "bcc99f5cc49c1a19b67e7d7342e148eccd15d18ec105ae5e18c850b870c4c239",
+          "retrieved_at": "2026-10-26T20:11:49.410180+00:00",
+          "publisher_host": "www.nj.gov",
+          "publisher_jurisdiction": "NJ",
+          "discovery_jurisdiction": "NJ",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 243
+        }
+      ]
     },
     {
       "code": "NM",
@@ -3126,11 +3469,11 @@
     {
       "code": "NV",
       "name": "Nevada",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
+        "sources": 5,
+        "relevant_sources": 5,
         "embedded_images": 0,
         "rendered_pages": 0,
         "crop_candidates": 0,
@@ -3138,7 +3481,73 @@
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "NV: dmv realidadult.png",
+          "url": "https://dmv.nv.gov/images/dldesign/realidadult.png",
+          "sha256": "cc041d0ff46f12552206bd7af8ce5e8b029f7605a933d4b30c40957c6942f210",
+          "retrieved_at": "2026-10-26T20:08:13.875815+00:00",
+          "publisher_host": "dmv.nv.gov",
+          "publisher_jurisdiction": "NV",
+          "discovery_jurisdiction": "NV",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "NV: dmv realidminor.png",
+          "url": "https://dmv.nv.gov/images/dldesign/realidminor.png",
+          "sha256": "72bc246a4e28aef28e5dd0c98864e8ad8963bcc2ada4772b743da19bce646f9a",
+          "retrieved_at": "2026-10-26T20:08:14.085881+00:00",
+          "publisher_host": "dmv.nv.gov",
+          "publisher_jurisdiction": "NV",
+          "discovery_jurisdiction": "NV",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "NV: dmv bighorn2014to2021.png",
+          "url": "https://dmv.nv.gov/images/dldesign/bighorn2014to2021.png",
+          "sha256": "de532d98fd2e714fa581beb673e8eb00719e9737422210f103f126f9dfc478fd",
+          "retrieved_at": "2026-10-26T20:08:14.417672+00:00",
+          "publisher_host": "dmv.nv.gov",
+          "publisher_jurisdiction": "NV",
+          "discovery_jurisdiction": "NV",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "NV: dmv 2010minor.png",
+          "url": "https://dmv.nv.gov/images/dldesign/2010minor.png",
+          "sha256": "10d5d0a2bc8aeb5ae706da0c81766a2d677475e6e0551e12ebfba4c2ac70968c",
+          "retrieved_at": "2026-10-26T20:08:15.308362+00:00",
+          "publisher_host": "dmv.nv.gov",
+          "publisher_jurisdiction": "NV",
+          "discovery_jurisdiction": "NV",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "NV: carson 2021 adult front.png",
+          "url": "https://www.carsonnow.org/wp-content/uploads/2021/07/117052-dmvsample.png",
+          "sha256": "aa614db939e099d3dbc3d5b7756e7c5d3ffc937657582412f4df11fbdde90db6",
+          "retrieved_at": "2026-10-26T20:08:31.810149+00:00",
+          "publisher_host": "www.carsonnow.org",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "NV",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        }
+      ]
     },
     {
       "code": "NY",
@@ -3507,10 +3916,10 @@
       "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 3,
-        "relevant_sources": 0,
-        "embedded_images": 32,
-        "rendered_pages": 11,
+        "sources": 6,
+        "relevant_sources": 3,
+        "embedded_images": 52,
+        "rendered_pages": 16,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
@@ -3555,6 +3964,45 @@
           "review_status": "unreviewed",
           "page_count": 2,
           "credential_format": "ID1"
+        },
+        {
+          "title": "service 2026 credential flyer",
+          "url": "https://content.govdelivery.com/attachments/OKSERVICE/2026/02/13/file_attachments/3554091/New%20Credential%20Flyer.pdf",
+          "sha256": "f5493195d16b4cfc72ca7d86b66398e26fa329057e87fb12700c0531c04e02aa",
+          "retrieved_at": "2026-10-26T20:05:17.161597+00:00",
+          "publisher_host": "content.govdelivery.com",
+          "publisher_jurisdiction": "OK",
+          "discovery_jurisdiction": "OK",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1
+        },
+        {
+          "title": "oba 2026 security features",
+          "url": "https://www.oba.com/wp-content/uploads/2026/03/2026-New-OK-DL-ID-Security-Features.pdf",
+          "sha256": "6d27052f2421a52ab87bc9396efa7c4e533c0b97c6e7d826ffe14d558011d560",
+          "retrieved_at": "2026-10-26T20:05:18.771190+00:00",
+          "publisher_host": "www.oba.com",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "OK",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2
+        },
+        {
+          "title": "vendor 2003 license brochure",
+          "url": "https://media.corporate-ir.net/media_files/nsd/visg/oklicensebros.pdf",
+          "sha256": "81dba2eab52b0aa1e479c0aeefe5c93b12ce657c07008b1c2eadec677abaaa9e",
+          "retrieved_at": "2026-10-26T20:05:21.075139+00:00",
+          "publisher_host": "media.corporate-ir.net",
+          "publisher_jurisdiction": null,
+          "discovery_jurisdiction": "OK",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 2
         }
       ]
     },
@@ -3662,19 +4110,59 @@
     {
       "code": "RI",
       "name": "Rhode Island",
-      "status": "gap",
+      "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 0,
-        "relevant_sources": 0,
-        "embedded_images": 0,
-        "rendered_pages": 0,
+        "sources": 3,
+        "relevant_sources": 3,
+        "embedded_images": 10,
+        "rendered_pages": 3,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
       "fetch_failures": 0,
       "extraction_failures": 0,
-      "sources": []
+      "sources": [
+        {
+          "title": "dmv realid samples",
+          "url": "https://dmv.ri.gov/sites/g/files/xkgbur556/files/2021-08/View%20Sample%20REAL%20ID%20Licenses%20and%20IDs.pdf",
+          "sha256": "58b98c27e41136f7dd366f420c405c18882e39442906b001f9c06f6235a0aeb9",
+          "retrieved_at": "2026-10-26T20:08:21.749215+00:00",
+          "publisher_host": "dmv.ri.gov",
+          "publisher_jurisdiction": "RI",
+          "discovery_jurisdiction": "RI",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1
+        },
+        {
+          "title": "energy 2026 ev guidance",
+          "url": "https://drive.ri.gov/sites/g/files/xkgbur836/files/2026-01/DRIVE%20EV%20Guidance%20Document_January%202026.pdf",
+          "sha256": "f95058ee0a74f48f33472e3bf89b216c07771a650b1f8f34dda1994a9b0368d4",
+          "retrieved_at": "2026-10-26T20:08:22.647039+00:00",
+          "publisher_host": "drive.ri.gov",
+          "publisher_jurisdiction": "RI",
+          "discovery_jurisdiction": "RI",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 22
+        },
+        {
+          "title": "energy 2024 ev guidance",
+          "url": "https://drive.ri.gov/sites/g/files/xkgbur836/files/2024-03/DRIVE%20EV%20Guidance%20Document_March%202024_%20Final_%20%281%29.pdf",
+          "sha256": "8278da8e150c58887f16dbc47e4fab8ed068fcd9ecabb297c8edb71c5c16de2b",
+          "retrieved_at": "2026-10-26T20:08:23.411254+00:00",
+          "publisher_host": "drive.ri.gov",
+          "publisher_jurisdiction": "RI",
+          "discovery_jurisdiction": "RI",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 28
+        }
+      ]
     },
     {
       "code": "SC",
@@ -3682,10 +4170,10 @@
       "status": "sources_available",
       "review_status": "unreviewed",
       "counts": {
-        "sources": 2,
-        "relevant_sources": 0,
-        "embedded_images": 3,
-        "rendered_pages": 2,
+        "sources": 12,
+        "relevant_sources": 10,
+        "embedded_images": 14,
+        "rendered_pages": 13,
         "crop_candidates": 0,
         "accepted_cohorts": 0
       },
@@ -3717,6 +4205,136 @@
           "review_status": "unreviewed",
           "page_count": 3,
           "credential_format": "ID1"
+        },
+        {
+          "title": "SC DL O21_websafe_Face RealID",
+          "url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-O21_websafe_Face-RealID.jpg",
+          "sha256": "63b3762886cd1c5f36138b7d87e6854309fe8b83f0db70e611851be7ff470e81",
+          "retrieved_at": "2026-10-26T20:12:08.188677+00:00",
+          "publisher_host": "dmv.sc.gov",
+          "publisher_jurisdiction": "SC",
+          "discovery_jurisdiction": "SC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "SC DL O21_websafe_Reverse",
+          "url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-O21_websafe_Reverse.jpg",
+          "sha256": "f6ceba5f2511902ab53a61ffd287baf26bc857b6204a2810ef413da65e8804a2",
+          "retrieved_at": "2026-10-26T20:12:09.195260+00:00",
+          "publisher_host": "dmv.sc.gov",
+          "publisher_jurisdiction": "SC",
+          "discovery_jurisdiction": "SC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "SC DL U21_websafe_Face",
+          "url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-U21_websafe_Face.jpg",
+          "sha256": "92f4078acd5a739aafc2075f81f2588027860376ac72025c25894b05f9a149d4",
+          "retrieved_at": "2026-10-26T20:12:09.931265+00:00",
+          "publisher_host": "dmv.sc.gov",
+          "publisher_jurisdiction": "SC",
+          "discovery_jurisdiction": "SC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "SC DL U21_websafe_Reverse",
+          "url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-U21_websafe_Reverse.jpg",
+          "sha256": "844a34101234be0677d8fc54f5ebcdcfa57028961658bf780c422828b6ef503b",
+          "retrieved_at": "2026-10-26T20:12:10.976228+00:00",
+          "publisher_host": "dmv.sc.gov",
+          "publisher_jurisdiction": "SC",
+          "discovery_jurisdiction": "SC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "SC ID O21_websafe_Face",
+          "url": "https://dmv.sc.gov/sites/scdmv/files/inline-images/SC%20ID%20O21_websafe_Face.jpg",
+          "sha256": "4965027b6c6a79daf974506d856df092f3458a0a42c1133b237f7a7dee290b02",
+          "retrieved_at": "2026-10-26T20:12:12.026537+00:00",
+          "publisher_host": "dmv.sc.gov",
+          "publisher_jurisdiction": "SC",
+          "discovery_jurisdiction": "SC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "SC ID O21_websafe_Reverse",
+          "url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-ID-O21_websafe_Reverse.jpg",
+          "sha256": "025a640b306d06988f4b25f7ea3d45ea3d48554caaa8fa63b13a3581099c2d3f",
+          "retrieved_at": "2026-10-26T20:12:15.427903+00:00",
+          "publisher_host": "dmv.sc.gov",
+          "publisher_jurisdiction": "SC",
+          "discovery_jurisdiction": "SC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "SC ID U21_websafe_Face",
+          "url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-ID-U21_websafe_Face.jpg",
+          "sha256": "730071b10ba5a2f612cde9c158ec5c6244400b24a944bb0c395ce0d1ffdc34a4",
+          "retrieved_at": "2026-10-26T20:12:16.294191+00:00",
+          "publisher_host": "dmv.sc.gov",
+          "publisher_jurisdiction": "SC",
+          "discovery_jurisdiction": "SC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "SC ID U21_websafe_Reverse",
+          "url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-ID-U21_websafe_Reverse.jpg",
+          "sha256": "1613af819210a3cf5917b58b351578d93e27da2f9654f307d2391de5fb4bd412",
+          "retrieved_at": "2026-10-26T20:12:17.162457+00:00",
+          "publisher_host": "dmv.sc.gov",
+          "publisher_jurisdiction": "SC",
+          "discovery_jurisdiction": "SC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 0
+        },
+        {
+          "title": "legislature realid graphic",
+          "url": "https://www.scstatehouse.gov/CommitteeInfo/HouseLegislativeOversightCommittee/AgencyWebpages/DMV/RealIDGraphic.PDF",
+          "sha256": "bc841f6a05936a26a9330464f955d9aafd66256460ae6e7bd6416df221ffacf6",
+          "retrieved_at": "2026-10-26T20:10:35.701349+00:00",
+          "publisher_host": "www.scstatehouse.gov",
+          "publisher_jurisdiction": "SC",
+          "discovery_jurisdiction": "SC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 1
+        },
+        {
+          "title": "SC_TDC_TIC_Specimen_20250702_r02",
+          "url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC_TDC_TIC_Specimen_20250702_r02.pdf",
+          "sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+          "retrieved_at": "2026-10-26T20:12:14.499762+00:00",
+          "publisher_host": "dmv.sc.gov",
+          "publisher_jurisdiction": "SC",
+          "discovery_jurisdiction": "SC",
+          "credential_format": "ID1",
+          "relevance": "candidate",
+          "review_status": "unreviewed",
+          "page_count": 10
         }
       ]
     },

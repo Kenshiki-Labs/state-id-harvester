@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "RI",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:10:02.010615+00:00",
+  "scope": "Bounded manual state source research. Useful finds retained, remaining gaps recorded; no completeness or runtime acceptance claim.",
+  "source_publications": [
+    {
+      "file": "dmv-realid-samples.pdf",
+      "source_url": "https://dmv.ri.gov/sites/g/files/xkgbur556/files/2021-08/View%20Sample%20REAL%20ID%20Licenses%20and%20IDs.pdf",
+      "final_url": "https://dmv.ri.gov/sites/g/files/xkgbur556/files/2021-08/View%20Sample%20REAL%20ID%20Licenses%20and%20IDs.pdf",
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:08:21.749215+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "58b98c27e41136f7dd366f420c405c18882e39442906b001f9c06f6235a0aeb9",
+      "bytes": 513286,
+      "coverage": [
+        "Six adult REAL ID/nonfederal DL, ID and CDL fronts"
+      ]
+    },
+    {
+      "file": "energy-2026-ev-guidance.pdf",
+      "source_url": "https://drive.ri.gov/sites/g/files/xkgbur836/files/2026-01/DRIVE%20EV%20Guidance%20Document_January%202026.pdf",
+      "final_url": "https://drive.ri.gov/sites/g/files/xkgbur836/files/2026-01/DRIVE%20EV%20Guidance%20Document_January%202026.pdf",
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:08:22.647039+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "f95058ee0a74f48f33472e3bf89b216c07771a650b1f8f34dda1994a9b0368d4",
+      "bytes": 2556319,
+      "coverage": [
+        "Adult and under18 provisional/under21 DL fronts, both REAL ID/nonfederal, source composites"
+      ]
+    },
+    {
+      "file": "energy-2024-ev-guidance.pdf",
+      "source_url": "https://drive.ri.gov/sites/g/files/xkgbur836/files/2024-03/DRIVE%20EV%20Guidance%20Document_March%202024_%20Final_%20%281%29.pdf",
+      "final_url": "https://drive.ri.gov/sites/g/files/xkgbur836/files/2024-03/DRIVE%20EV%20Guidance%20Document_March%202024_%20Final_%20%281%29.pdf",
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:08:23.411254+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "8278da8e150c58887f16dbc47e4fab8ed068fcd9ecabb297c8edb71c5c16de2b",
+      "bytes": 1848678,
+      "coverage": [
+        "Historical blue DL/redID fronts"
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "dmv-realid-samples-xref-81.jpeg",
+      "source_file": "dmv-realid-samples.pdf",
+      "source_sha256": "58b98c27e41136f7dd366f420c405c18882e39442906b001f9c06f6235a0aeb9",
+      "pdf_object_xref": 81,
+      "resource_page_number": 1,
+      "width_px": 531,
+      "height_px": 335,
+      "sha256": "62ffaa3f9f8e12631921d732dddff9ce4797635662610d594110e55834eb76da",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_page"
+    },
+    {
+      "file": "dmv-realid-samples-xref-82.jpeg",
+      "source_file": "dmv-realid-samples.pdf",
+      "source_sha256": "58b98c27e41136f7dd366f420c405c18882e39442906b001f9c06f6235a0aeb9",
+      "pdf_object_xref": 82,
+      "resource_page_number": 1,
+      "width_px": 410,
+      "height_px": 260,
+      "sha256": "42635bd81637296859c7e64a50cd6cfe6629c8e58bb2bf021d104c60b5de9e92",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_page"
+    },
+    {
+      "file": "dmv-realid-samples-xref-83.jpeg",
+      "source_file": "dmv-realid-samples.pdf",
+      "source_sha256": "58b98c27e41136f7dd366f420c405c18882e39442906b001f9c06f6235a0aeb9",
+      "pdf_object_xref": 83,
+      "resource_page_number": 1,
+      "width_px": 410,
+      "height_px": 259,
+      "sha256": "2ca0c67fab67a09ca921d27deb310663d3c812694619b1f9b64cbaac208983c9",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_page"
+    },
+    {
+      "file": "dmv-realid-samples-xref-84.jpeg",
+      "source_file": "dmv-realid-samples.pdf",
+      "source_sha256": "58b98c27e41136f7dd366f420c405c18882e39442906b001f9c06f6235a0aeb9",
+      "pdf_object_xref": 84,
+      "resource_page_number": 1,
+      "width_px": 768,
+      "height_px": 505,
+      "sha256": "c2f9dbae0bdff238187c8d28bbe0ff6cec5d341be553b4a1daea736723f6aff8",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_page"
+    },
+    {
+      "file": "dmv-realid-samples-xref-85.jpeg",
+      "source_file": "dmv-realid-samples.pdf",
+      "source_sha256": "58b98c27e41136f7dd366f420c405c18882e39442906b001f9c06f6235a0aeb9",
+      "pdf_object_xref": 85,
+      "resource_page_number": 1,
+      "width_px": 410,
+      "height_px": 264,
+      "sha256": "a9a9e8aeed6bdc33b04c3f23167aec07a6f0431527017f55139b1663b23582b7",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_page"
+    },
+    {
+      "file": "dmv-realid-samples-xref-86.jpeg",
+      "source_file": "dmv-realid-samples.pdf",
+      "source_sha256": "58b98c27e41136f7dd366f420c405c18882e39442906b001f9c06f6235a0aeb9",
+      "pdf_object_xref": 86,
+      "resource_page_number": 1,
+      "width_px": 412,
+      "height_px": 267,
+      "sha256": "74fd05130df99320a166b292d33d56fa07861c2b40171eac4ec724714a4afdcc",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_page"
+    },
+    {
+      "file": "energy-2026-ev-guidance-xref-62.jpeg",
+      "source_file": "energy-2026-ev-guidance.pdf",
+      "source_sha256": "f95058ee0a74f48f33472e3bf89b216c07771a650b1f8f34dda1994a9b0368d4",
+      "pdf_object_xref": 62,
+      "resource_page_number": 20,
+      "width_px": 763,
+      "height_px": 241,
+      "sha256": "388ec7511853e6ecd203dbccff471aee2dd283f348348dc28b13c85e62a2ea40",
+      "mask": {
+        "file": "energy-2026-ev-guidance-mask-61.png",
+        "pdf_object_xref": 61,
+        "sha256": "6d2d031b10031a7287cc195527bab900ba4006e635ec6bdaed8bffe94e4ee351"
+      },
+      "composed_preview": {
+        "file": "energy-2026-ev-guidance-xref-62-alpha.png",
+        "sha256": "2cfb43e9999003f4df29846889135943814522cd8d88a9ee5ba32fc17b6c1951"
+      },
+      "reference_kind": "sample_front_composite",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_page"
+    },
+    {
+      "file": "energy-2026-ev-guidance-xref-64.jpeg",
+      "source_file": "energy-2026-ev-guidance.pdf",
+      "source_sha256": "f95058ee0a74f48f33472e3bf89b216c07771a650b1f8f34dda1994a9b0368d4",
+      "pdf_object_xref": 64,
+      "resource_page_number": 20,
+      "width_px": 818,
+      "height_px": 307,
+      "sha256": "d66b95e62ca2f8455c06bcb2bf3b54d5791e42e394781603b16eb8b7cd931e7e",
+      "mask": {
+        "file": "energy-2026-ev-guidance-mask-63.png",
+        "pdf_object_xref": 63,
+        "sha256": "8e3d951e7a16dbb3f4780319040404b31464e23ab46579c472a2cfe01802fb0e"
+      },
+      "composed_preview": {
+        "file": "energy-2026-ev-guidance-xref-64-alpha.png",
+        "sha256": "2ca7744aebdb41161949332aef03fd659c014ce22a5e6ee7f9a7d9c3d508cc29"
+      },
+      "reference_kind": "sample_front_composite",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_page"
+    },
+    {
+      "file": "energy-2024-ev-guidance-xref-171.jpeg",
+      "source_file": "energy-2024-ev-guidance.pdf",
+      "source_sha256": "8278da8e150c58887f16dbc47e4fab8ed068fcd9ecabb297c8edb71c5c16de2b",
+      "pdf_object_xref": 171,
+      "resource_page_number": 26,
+      "width_px": 617,
+      "height_px": 413,
+      "sha256": "ff94b487884bad2a1f13e6a943881df40a63ed8d93cb4eb949513423a41c6c18",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_page"
+    },
+    {
+      "file": "energy-2024-ev-guidance-xref-172.jpeg",
+      "source_file": "energy-2024-ev-guidance.pdf",
+      "source_sha256": "8278da8e150c58887f16dbc47e4fab8ed068fcd9ecabb297c8edb71c5c16de2b",
+      "pdf_object_xref": 172,
+      "resource_page_number": 26,
+      "width_px": 610,
+      "height_px": 405,
+      "sha256": "3d8cfd69e34a7ae0b90269c1cac53fe085ba675d657c9b6863dc2efb7d2b0d6d",
+      "reference_kind": "complete_sample_front",
+      "visual_review": "visually_inspected_native_contact_and_relevant_source_page"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "dmv-realid.html",
+      "source_url": "https://dmv.ri.gov/licenses-permits-ids/real-id",
+      "final_url": "https://dmv.ri.gov/licenses-permits-ids/real-id",
+      "mime_type": "text/html; charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:08:21.303726+00:00",
+      "source_class": "government",
+      "http_status": 403,
+      "status": "failed_or_unexpected_content"
+    }
+  ],
+  "remaining_gaps": [
+    "No credential backs acquired.",
+    "UV artwork, temporary paper credentials and separate minorCDL/ID specimens not acquired.",
+    "Issuance intervals and physical geometry remain unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": true,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "RI",
+    "verified_at": "2026-10-26T20:10:18.099402+00:00",
+    "local_directory": "output/research/RI",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/RI/39aec71890b7ee5dee0919fa4f904162cd7826247fa460561ded04e34330987e/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/RI.json",
+    "archive_sha256": "39aec71890b7ee5dee0919fa4f904162cd7826247fa460561ded04e34330987e",
+    "archive_size_bytes": 10101115,
+    "transport_chunks": 1,
+    "verified_restored_files": 24,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/RI",
+    "verification": "Downloaded archive, safe restored and compared EVERY retained file byte-for-byte.",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 13,
+    "review_status": "reference_only"
+  }
+}

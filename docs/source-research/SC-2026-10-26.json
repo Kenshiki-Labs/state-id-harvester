@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "SC",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:14:35.347864+00:00",
+  "scope": "Bounded manual state source research. Useful finds retained, remaining gaps recorded; no completeness or runtime acceptance claim.",
+  "source_publications": [
+    {
+      "file": "dmv-2025-redesign.html",
+      "source_url": "https://dmv.sc.gov/news/new-license-designs",
+      "final_url": "https://dmv.sc.gov/news/new-license-designs",
+      "mime_type": "text/html; charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:10:29.054960+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "9916088a28ab9f20444494dcfdc2794c4b05bfdc47423468659528857c87dc89",
+      "bytes": 117757,
+      "coverage": [
+        "Official2025 newdesign primary page and linked adult/minor DL/ID fronts/backs and temporarycertificate booklet"
+      ]
+    },
+    {
+      "file": "legislature-realid-graphic.pdf",
+      "source_url": "https://www.scstatehouse.gov/CommitteeInfo/HouseLegislativeOversightCommittee/AgencyWebpages/DMV/RealIDGraphic.PDF",
+      "final_url": "https://www.scstatehouse.gov/CommitteeInfo/HouseLegislativeOversightCommittee/AgencyWebpages/DMV/RealIDGraphic.PDF",
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:10:35.701349+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "bc841f6a05936a26a9330464f955d9aafd66256460ae6e7bd6416df221ffacf6",
+      "bytes": 1658454,
+      "coverage": [
+        "Older redscript SouthCarolina REALID driver front in educational poster"
+      ]
+    },
+    {
+      "file": "SC-DL-O21_websafe_Face-RealID.jpg",
+      "source_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-O21_websafe_Face-RealID.jpg",
+      "final_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-O21_websafe_Face-RealID.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:12:08.188677+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "63b3762886cd1c5f36138b7d87e6854309fe8b83f0db70e611851be7ff470e81",
+      "bytes": 488307,
+      "discovery_file": "dmv-2025-redesign.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "SC-DL-O21_websafe_Reverse.jpg",
+      "source_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-O21_websafe_Reverse.jpg",
+      "final_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-O21_websafe_Reverse.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:12:09.195260+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "f6ceba5f2511902ab53a61ffd287baf26bc857b6204a2810ef413da65e8804a2",
+      "bytes": 456114,
+      "discovery_file": "dmv-2025-redesign.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "SC-DL-U21_websafe_Face.jpg",
+      "source_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-U21_websafe_Face.jpg",
+      "final_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-U21_websafe_Face.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:12:09.931265+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "92f4078acd5a739aafc2075f81f2588027860376ac72025c25894b05f9a149d4",
+      "bytes": 501101,
+      "discovery_file": "dmv-2025-redesign.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "SC-DL-U21_websafe_Reverse.jpg",
+      "source_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-U21_websafe_Reverse.jpg",
+      "final_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-DL-U21_websafe_Reverse.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:12:10.976228+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "844a34101234be0677d8fc54f5ebcdcfa57028961658bf780c422828b6ef503b",
+      "bytes": 455883,
+      "discovery_file": "dmv-2025-redesign.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "SC-ID-O21_websafe_Face.jpg",
+      "source_url": "https://dmv.sc.gov/sites/scdmv/files/inline-images/SC%20ID%20O21_websafe_Face.jpg",
+      "final_url": "https://dmv.sc.gov/sites/scdmv/files/inline-images/SC%20ID%20O21_websafe_Face.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:12:12.026537+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "4965027b6c6a79daf974506d856df092f3458a0a42c1133b237f7a7dee290b02",
+      "bytes": 486914,
+      "discovery_file": "dmv-2025-redesign.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "final_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:12:14.499762+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "bytes": 3464367,
+      "discovery_file": "dmv-2025-redesign.html",
+      "coverage": [
+        "Ten complete temporary driving/ID certificate examples including adult/minorDL/CDL/ID and compliant/nonfederal distinctions"
+      ]
+    },
+    {
+      "file": "SC-ID-O21_websafe_Reverse.jpg",
+      "source_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-ID-O21_websafe_Reverse.jpg",
+      "final_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-ID-O21_websafe_Reverse.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:12:15.427903+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "025a640b306d06988f4b25f7ea3d45ea3d48554caaa8fa63b13a3581099c2d3f",
+      "bytes": 452763,
+      "discovery_file": "dmv-2025-redesign.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "SC-ID-U21_websafe_Face.jpg",
+      "source_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-ID-U21_websafe_Face.jpg",
+      "final_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-ID-U21_websafe_Face.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:12:16.294191+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "730071b10ba5a2f612cde9c158ec5c6244400b24a944bb0c395ce0d1ffdc34a4",
+      "bytes": 496612,
+      "discovery_file": "dmv-2025-redesign.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    },
+    {
+      "file": "SC-ID-U21_websafe_Reverse.jpg",
+      "source_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-ID-U21_websafe_Reverse.jpg",
+      "final_url": "https://dmv.sc.gov/sites/scdmv/files/media/Images/Central-Issuance-news-release/SC-ID-U21_websafe_Reverse.jpg",
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:12:17.162457+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "1613af819210a3cf5917b58b351578d93e27da2f9654f307d2391de5fb4bd412",
+      "bytes": 452625,
+      "discovery_file": "dmv-2025-redesign.html",
+      "coverage": [
+        "Discovery context or specimen publication; see selection provenance."
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "legislature-realid-graphic-xref-13.png",
+      "source_file": "legislature-realid-graphic.pdf",
+      "source_sha256": "bc841f6a05936a26a9330464f955d9aafd66256460ae6e7bd6416df221ffacf6",
+      "pdf_object_xref": 13,
+      "resource_page_number": 1,
+      "width_px": 1012,
+      "height_px": 638,
+      "sha256": "cdaeb2c8d7e6601d01f104bdffa1416945f2e7e295a585f8a468010ddac237ea",
+      "reference_kind": "legacy_realid_front",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-840.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 840,
+      "resource_page_number": 1,
+      "width_px": 1011,
+      "height_px": 638,
+      "sha256": "4272165301da63d3eebc5cc238ad7f40a1727363a61feb1ab9f3ce8ed991c632",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-839.jpeg",
+        "pdf_object_xref": 839,
+        "sha256": "c4dbcaf0f402b831139986578ca0a62e0e96e43218b93dffcbbf0a6fd9173500"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-840-alpha.png",
+        "sha256": "44f6ea6f86abb7a53b2445fe3746c087931e08348b96928e18d9c7f2ab5a724a"
+      },
+      "reference_kind": "temporary_certificate_front_layer",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-6.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 6,
+      "resource_page_number": 2,
+      "width_px": 1011,
+      "height_px": 638,
+      "sha256": "86972598aa62d3e14ef94c4dcb5181bcbbb75956f52cd4668eae1cf1370f284e",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-5.jpeg",
+        "pdf_object_xref": 5,
+        "sha256": "c4dbcaf0f402b831139986578ca0a62e0e96e43218b93dffcbbf0a6fd9173500"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-6-alpha.png",
+        "sha256": "3f5e1a2e1f918c67c7e909a7eb1bd47e97d7fd6f5d7bb4d7f0b10307d8bedb3d"
+      },
+      "reference_kind": "temporary_certificate_front_layer",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-13.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 13,
+      "resource_page_number": 3,
+      "width_px": 1011,
+      "height_px": 638,
+      "sha256": "31f2ff2bb7834f01acf5a4df41cecee58fd28b3061d2a1fb097407ecbeb1c051",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-12.jpeg",
+        "pdf_object_xref": 12,
+        "sha256": "c4dbcaf0f402b831139986578ca0a62e0e96e43218b93dffcbbf0a6fd9173500"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-13-alpha.png",
+        "sha256": "b13e3c7d0d4e84c1bd09318f5512cc90511d2ca54b5b8db133ee94ab38305428"
+      },
+      "reference_kind": "temporary_certificate_front_layer",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-20.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 20,
+      "resource_page_number": 4,
+      "width_px": 638,
+      "height_px": 1011,
+      "sha256": "80b1a9221bfc420573d39f1406c65eb690f822c7ceb73a6ef8df1643f038dfb2",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-19.jpeg",
+        "pdf_object_xref": 19,
+        "sha256": "966316fed5a21be2f0808a7ac84121978dc19ad117be1b2792161573cf364710"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-20-alpha.png",
+        "sha256": "138d6c66baa0cebf5395aaf8103505fe48e3790962f3adf92b5ec7d61125f53e"
+      },
+      "reference_kind": "temporary_certificate_front_layer",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-27.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 27,
+      "resource_page_number": 5,
+      "width_px": 638,
+      "height_px": 1011,
+      "sha256": "7aa1ec52a6531f0d5723c0cdeee5c00714cadf747b55555128c3e7910efd9b6b",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-26.jpeg",
+        "pdf_object_xref": 26,
+        "sha256": "966316fed5a21be2f0808a7ac84121978dc19ad117be1b2792161573cf364710"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-27-alpha.png",
+        "sha256": "bf16af6744cdf909268da3629bc351a62629081e14d37c2f2c535ea0d787780f"
+      },
+      "reference_kind": "temporary_certificate_front_layer",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-34.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 34,
+      "resource_page_number": 6,
+      "width_px": 638,
+      "height_px": 1011,
+      "sha256": "3ac76b81547f21179dbf0d1a49d8f44806a725ea9997eb872a5138efdc39ba76",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-33.jpeg",
+        "pdf_object_xref": 33,
+        "sha256": "966316fed5a21be2f0808a7ac84121978dc19ad117be1b2792161573cf364710"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-34-alpha.png",
+        "sha256": "d696c6ff00ea438bad395f3b00b0535c28b064f7204776c9cebe55ff8dd6b9cd"
+      },
+      "reference_kind": "temporary_certificate_front_layer",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-41.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 41,
+      "resource_page_number": 7,
+      "width_px": 1011,
+      "height_px": 638,
+      "sha256": "f4e1e78f63d3645c9bce22dbc84795daeba743f0aac1d43d301a1c68ba24ec41",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-40.jpeg",
+        "pdf_object_xref": 40,
+        "sha256": "c4dbcaf0f402b831139986578ca0a62e0e96e43218b93dffcbbf0a6fd9173500"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-41-alpha.png",
+        "sha256": "9c424b8d00fde3f60f00eb6200c504460425eee78897e5cccaee66ad1dba1f64"
+      },
+      "reference_kind": "temporary_certificate_front_layer",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-48.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 48,
+      "resource_page_number": 8,
+      "width_px": 1011,
+      "height_px": 638,
+      "sha256": "b15da150400ba52a82e28ff6e518a04412e1a2c98b76d14e3675ec6908a67b6e",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-47.jpeg",
+        "pdf_object_xref": 47,
+        "sha256": "c4dbcaf0f402b831139986578ca0a62e0e96e43218b93dffcbbf0a6fd9173500"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-48-alpha.png",
+        "sha256": "6a95145b94a622c10e14da68b5a8c6eecd20f6e29ad2513297b51903aeb17644"
+      },
+      "reference_kind": "temporary_certificate_front_layer",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-55.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 55,
+      "resource_page_number": 9,
+      "width_px": 638,
+      "height_px": 1011,
+      "sha256": "0ba1f81f9416cc5154466d223037d6dd820172f90ab56dc60c5f65c8f6ff9f9c",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-54.jpeg",
+        "pdf_object_xref": 54,
+        "sha256": "966316fed5a21be2f0808a7ac84121978dc19ad117be1b2792161573cf364710"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-55-alpha.png",
+        "sha256": "4b5b62c3cd88524aac499360518cc1296d4575b0ddf21afacbf4f3c3d75bb93e"
+      },
+      "reference_kind": "temporary_certificate_front_layer",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-62.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 62,
+      "resource_page_number": 10,
+      "width_px": 638,
+      "height_px": 1011,
+      "sha256": "4e253e608e624d888ba7ec3bf5772a3316a417a9b034aac2fe2e2d4625ad4291",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-61.jpeg",
+        "pdf_object_xref": 61,
+        "sha256": "966316fed5a21be2f0808a7ac84121978dc19ad117be1b2792161573cf364710"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-62-alpha.png",
+        "sha256": "6f46c5088048d5fe5922a6fa92fc92a1c501d933a2cbbb01be49a0226e83aaee"
+      },
+      "reference_kind": "temporary_certificate_front_layer",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-810.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 810,
+      "resource_page_number": 1,
+      "width_px": 1011,
+      "height_px": 638,
+      "sha256": "98e746acffa24c5656a6a3ad25616dda80401abe762ca8f6d37f6130e7dab740",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-835.jpeg",
+        "pdf_object_xref": 835,
+        "sha256": "c4dbcaf0f402b831139986578ca0a62e0e96e43218b93dffcbbf0a6fd9173500"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-810-alpha.png",
+        "sha256": "8d661e2c8ea8bb56122641bba3b7c7743557e297564bd1fc6e6375f5170f0043"
+      },
+      "reference_kind": "temporary_certificate_reverse_resource_not_standalone_specimen",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-64.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 64,
+      "resource_page_number": 3,
+      "width_px": 1011,
+      "height_px": 638,
+      "sha256": "322f772b8bd5fea9ad8815c71a288ac184a1e0bc3af9d1c1e41e7f2f9ba4c482",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-65.jpeg",
+        "pdf_object_xref": 65,
+        "sha256": "c4dbcaf0f402b831139986578ca0a62e0e96e43218b93dffcbbf0a6fd9173500"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-64-alpha.png",
+        "sha256": "4b3da9db2f9f2bbe542c15bfae148acea4be91ca8c0ed2ea030785e35bcafbb8"
+      },
+      "reference_kind": "temporary_certificate_reverse_resource_not_standalone_specimen",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    },
+    {
+      "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-68.png",
+      "source_file": "SC_TDC_TIC_Specimen_20250702_r02.pdf",
+      "source_sha256": "25409de7b9e65cd8ec57c7c989afa0a671c8a6d8adb9624552b41d82b1a89c03",
+      "pdf_object_xref": 68,
+      "resource_page_number": 7,
+      "width_px": 1011,
+      "height_px": 638,
+      "sha256": "52555d3e97e72156d885b6ba39ea02357a53c8e2a006ae12d01de611037cdcbf",
+      "mask": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-mask-69.jpeg",
+        "pdf_object_xref": 69,
+        "sha256": "c4dbcaf0f402b831139986578ca0a62e0e96e43218b93dffcbbf0a6fd9173500"
+      },
+      "composed_preview": {
+        "file": "SC_TDC_TIC_Specimen_20250702_r02-xref-68-alpha.png",
+        "sha256": "27e5cc0ce224dc4dcdb532ec554039c1262c7a8be603321651c8542ff8b8e28b"
+      },
+      "reference_kind": "temporary_certificate_reverse_resource_not_standalone_specimen",
+      "visual_review": "visually_inspected_native_contact_and_source_page"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "state-library-legacy-design-guide.pdf",
+      "source_url": "https://dc.statelibrary.sc.gov/bitstreams/00119bee-6815-41eb-a37c-da0109086180/download",
+      "final_url": "https://dc.statelibrary.sc.gov/bitstreams/00119bee-6815-41eb-a37c-da0109086180/download",
+      "mime_type": "text/html; charset=utf-8",
+      "retrieved_at": "2026-10-26T20:10:33.989376+00:00",
+      "source_class": "government",
+      "http_status": 200,
+      "status": "failed_or_unexpected_content"
+    },
+    {
+      "file": "state-library-legacy-design-guide.pdf",
+      "source_url": "https://dc.statelibrary.sc.gov/server/api/core/bitstreams/00119bee-6815-41eb-a37c-da0109086180/content",
+      "final_url": "https://dc.statelibrary.sc.gov/server/api/core/bitstreams/00119bee-6815-41eb-a37c-da0109086180/content",
+      "mime_type": "text/html; charset=iso-8859-1",
+      "retrieved_at": "2026-10-26T20:12:18.055873+00:00",
+      "source_class": "government",
+      "http_status": 403,
+      "status": "failed_or_unexpected_content"
+    }
+  ],
+  "remaining_gaps": [
+    "Legacy2010 State Library guide download redirected to HTML, alternate API403; not acquired.",
+    "Separate2025 physicalCDL/permit and REALID/nonfederal variants beyond retained examples remain gaps.",
+    "UV plates/optical photographs, exactissueintervals and calibratedgeometry unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "catalog_integrated": true,
+  "status": "bounded_research_pass_preserved_not_catalog_integrated",
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "SC",
+    "verified_at": "2026-10-26T20:14:59.047877+00:00",
+    "local_directory": "output/research/SC",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/SC/047fb3ed17b5478ca84e1f9ee6708d495121739adc9a68e00e9c96df3b8df231/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/SC.json",
+    "archive_sha256": "047fb3ed17b5478ca84e1f9ee6708d495121739adc9a68e00e9c96df3b8df231",
+    "archive_size_bytes": 22625490,
+    "transport_chunks": 1,
+    "verified_restored_files": 66,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/SC",
+    "verification": "Downloaded archive, safe restored and compared EVERY retained file byte-for-byte.",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 30,
+    "review_status": "reference_only"
+  }
+}

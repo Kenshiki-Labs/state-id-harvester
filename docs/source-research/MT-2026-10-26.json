@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "MT",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:07:31.129504+00:00",
+  "scope": "Bounded manual state research; useful finds and gaps, no completeness requirement.",
+  "source_publications": [
+    {
+      "file": "publicradio-2016-redesign.html",
+      "source_url": "https://www.mtpr.org/montana-news/2016-01-06/state-rolls-out-new-drivers-license-design",
+      "final_url": "https://www.mtpr.org/montana-news/2016-01-06/state-rolls-out-new-drivers-license-design",
+      "sha256": "30adce612be5c3052959dbf1af26c87e64453f00bd88066044eca03ecf78eece",
+      "bytes": 169833,
+      "mime_type": "text/html;charset=UTF-8",
+      "retrieved_at": "2026-10-26T20:05:42.523122+00:00",
+      "status": "downloaded",
+      "source_class": "press"
+    },
+    {
+      "file": "publicradio-2016-front.png",
+      "source_url": "https://npr-brightspot.s3.amazonaws.com/legacy/sites/kufm/files/201601/driver-license-02.png",
+      "final_url": "https://npr-brightspot.s3.amazonaws.com/legacy/sites/kufm/files/201601/driver-license-02.png",
+      "sha256": "1e35fb300b4705396e968c0342030586875535af795a6038464bcddec97ee8ab",
+      "bytes": 408991,
+      "mime_type": "image/png",
+      "retrieved_at": "2026-10-26T20:06:08.719786+00:00",
+      "status": "downloaded",
+      "source_class": "press",
+      "coverage": [
+        "Press reproduction of2016brochure section containing under21ID front, UVartwork and licenseback"
+      ]
+    },
+    {
+      "file": "fargo-2019-retailer-training.pdf",
+      "source_url": "https://download.fargond.gov/0/server_training_presentation_9-3-19.pdf",
+      "final_url": "https://download.fargond.gov/0/server_training_presentation_9-3-19.pdf",
+      "sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "bytes": 9121675,
+      "mime_type": "application/pdf",
+      "retrieved_at": "2026-10-26T20:06:40.042849+00:00",
+      "status": "downloaded",
+      "source_class": "government"
+    },
+    {
+      "file": "doj-2025-front.jpg",
+      "source_url": "https://content.govdelivery.com/attachments/fancy_images/MTAG/2025/12/12793907/6587406/new-credential-key_crop.jpg",
+      "final_url": "https://content.govdelivery.com/attachments/fancy_images/MTAG/2025/12/12793907/6587406/new-credential-key_crop.jpg",
+      "sha256": "016b433f81b1db6b91ab10da2ed080717b6c5868bc200205782bb61312d62b70",
+      "bytes": 55212,
+      "mime_type": "image/jpeg",
+      "retrieved_at": "2026-10-26T20:06:58.347574+00:00",
+      "status": "downloaded",
+      "source_class": "government",
+      "discovery_url": "https://dojmt.gov/?p=93987",
+      "coverage": [
+        "Official2025 front/back annotated credential-key composite"
+      ]
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "fargo-2019-retailer-training-xref11649.jpeg",
+      "source_file": "fargo-2019-retailer-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 11649,
+      "resource_page_number": 99,
+      "width_px": 523,
+      "height_px": 332,
+      "sha256": "b0323fb4c2de9e8163407e473514bf0351c21e85ee25f80854764c0a0e537e59",
+      "review_note": "Not published: counterfeitcomparison, mixed valid/fake composite, textlabel, logo or background. Original trainingPDF is private contextual research only.",
+      "reference_kind": "excluded_context_resource"
+    },
+    {
+      "file": "fargo-2019-retailer-training-xref21012.jpeg",
+      "source_file": "fargo-2019-retailer-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 21012,
+      "resource_page_number": 99,
+      "width_px": 330,
+      "height_px": 330,
+      "sha256": "d17fef9201602615169c5dda4cb3b6947fd679eb2857f90cd342f7715fa38227",
+      "review_note": "Not published: counterfeitcomparison, mixed valid/fake composite, textlabel, logo or background. Original trainingPDF is private contextual research only.",
+      "reference_kind": "excluded_context_resource"
+    },
+    {
+      "file": "fargo-2019-retailer-training-xref21008.jpeg",
+      "source_file": "fargo-2019-retailer-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 21008,
+      "resource_page_number": 99,
+      "width_px": 1500,
+      "height_px": 1125,
+      "sha256": "c4fc50021913cc1ad07f999d81e74f11f08bf0780597f6da5ee27dae49cc45b0",
+      "review_note": "Not published: counterfeitcomparison, mixed valid/fake composite, textlabel, logo or background. Original trainingPDF is private contextual research only.",
+      "reference_kind": "excluded_context_resource"
+    },
+    {
+      "file": "fargo-2019-retailer-training-xref11767.jpeg",
+      "source_file": "fargo-2019-retailer-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 11767,
+      "resource_page_number": 100,
+      "width_px": 523,
+      "height_px": 684,
+      "sha256": "fbaf56e17753eebd8af88023498e25f50ddb7709a548fc188662be87ed8bdc76",
+      "review_note": "Not published: counterfeitcomparison, mixed valid/fake composite, textlabel, logo or background. Original trainingPDF is private contextual research only.",
+      "reference_kind": "excluded_context_resource"
+    },
+    {
+      "file": "fargo-2019-retailer-training-xref11768.png",
+      "source_file": "fargo-2019-retailer-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 11768,
+      "resource_page_number": 100,
+      "width_px": 506,
+      "height_px": 183,
+      "sha256": "1e972fedc3dc6795544e1b962bc2c89c15573211a9c1e9fcb9cef61bae389594",
+      "mask": {
+        "file": "fargo-2019-retailer-training-mask11769.png",
+        "pdf_object_xref": 11769,
+        "sha256": "6cfe334d230100255133de38f58e67b57599c1f072d08cb167bc3304d132dba9"
+      },
+      "preview_file": "fargo-2019-retailer-training-xref11768-preview.png",
+      "review_note": "Not published: counterfeitcomparison, mixed valid/fake composite, textlabel, logo or background. Original trainingPDF is private contextual research only.",
+      "reference_kind": "excluded_context_resource"
+    },
+    {
+      "file": "fargo-2019-retailer-training-xref11770.png",
+      "source_file": "fargo-2019-retailer-training.pdf",
+      "source_sha256": "0d9663bf196e56ace1bc5c3a8bfd7d558b7e6d14426e49d0cb037788d225b1a6",
+      "pdf_object_xref": 11770,
+      "resource_page_number": 100,
+      "width_px": 515,
+      "height_px": 211,
+      "sha256": "179da32d45931c0d27f80c85edeb16f55917e7b11df2b9d5d2644ef85cef8a8e",
+      "mask": {
+        "file": "fargo-2019-retailer-training-mask11771.png",
+        "pdf_object_xref": 11771,
+        "sha256": "4cd82a66621421d1e293289a6a390b4ece1a5b860ef3886bb1a482bc0741e839"
+      },
+      "preview_file": "fargo-2019-retailer-training-xref11770-preview.png",
+      "review_note": "Not published: counterfeitcomparison, mixed valid/fake composite, textlabel, logo or background. Original trainingPDF is private contextual research only.",
+      "reference_kind": "excluded_context_resource"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "doj-2016-brochure.pdf",
+      "source_url": "https://www.dojmt.gov/wp-content/uploads/MT-DL-Brochure-1.pdf",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://www.dojmt.gov/wp-content/uploads/MT-DL-Brochure-1.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "file": "mvd-realid-hub.html",
+      "source_url": "https://mvdmt.gov/real-id/",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://mvdmt.gov/real-id/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "file": "doj-2016-brochure-migrated.pdf",
+      "source_url": "https://dojmt.gov/wp-content/uploads/2024/10/MT-DL-Brochure-1.pdf",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://dojmt.gov/wp-content/uploads/2024/10/MT-DL-Brochure-1.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "file": "doj-2025-redesign.html",
+      "source_url": "https://dojmt.gov/?p=93987",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://dojmt.gov/?p=93987'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "file": "mvd-license-hub.html",
+      "source_url": "https://mvdmt.gov/new-driver-license/",
+      "status": "failed",
+      "error": "Client error '403 Forbidden' for url 'https://mvdmt.gov/new-driver-license/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    }
+  ],
+  "remaining_gaps": [
+    "Clean standalone2025cardflats, minors/ID/CDL and interimexamples missing.",
+    "2016brochure livegovpaths403; onlypress-preserved section acquired.",
+    "Fargotrainingcounterfeit/mixedvalidfake and redactedsourceimages excluded from publication; no pixel cleanup.",
+    "Issuance intervals/physicalgeometry and opticalvalidation unreviewed."
+  ],
+  "review_status": "reference_research_only",
+  "accepted_cohorts": 0,
+  "catalog_integrated": true,
+  "preservation": {
+    "schema_version": 1,
+    "jurisdiction": "MT",
+    "verified_at": "2026-10-26T20:07:47.703628+00:00",
+    "local_directory": "output/research/MT",
+    "private_vault_origin": "https://cadastre.kenshikilabs.com",
+    "private_snapshot_index_key": "snapshots/research/MT/b61ddeca06b7eb59037b478f73144f7abf574bea3fd9267ee814029944ecc9d6/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/MT.json",
+    "archive_sha256": "b61ddeca06b7eb59037b478f73144f7abf574bea3fd9267ee814029944ecc9d6",
+    "archive_size_bytes": 9652423,
+    "transport_chunks": 1,
+    "verified_restored_files": 20,
+    "verification": "Downloaded archive restored with existing helpers and every file compared byte-for-byte.",
+    "public_media": false,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/MT"
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 2,
+    "review_status": "reference_only"
+  }
+}

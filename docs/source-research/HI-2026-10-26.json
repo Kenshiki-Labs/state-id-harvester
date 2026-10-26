@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "jurisdiction": "HI",
+  "research_date": "2026-10-26",
+  "recorded_at": "2026-10-26T20:10:16.303694+00:00",
+  "source_publications": [
+    {
+      "file": "honolulu-new-design.html",
+      "source_url": "https://www.honolulu.gov/csd/latest-news/",
+      "final_url": "https://www.honolulu.gov/csd/latest-news/",
+      "retrieved_at": "2026-10-26T20:08:58.012200+00:00",
+      "bytes": 225304,
+      "sha256": "411a619a686cf37c65e45b6b2976c2ea4ba53d6062c5591fc786c62a7bbe3612",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "honolulu-real-id.html",
+      "source_url": "https://www.honolulu.gov/csd/real-id/",
+      "final_url": "https://www.honolulu.gov/csd/real-id/",
+      "retrieved_at": "2026-10-26T20:08:58.643631+00:00",
+      "bytes": 224467,
+      "sha256": "155a03bbe52d43e2e5c5c68ab3508791272999156d7d9094ffc15a68f2daf7a9",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "police-2005-design.html",
+      "source_url": "https://www.hawaiipolice.com/driver-licenses-sporting-new-look-03-22-05",
+      "final_url": "https://www.hawaiipolice.com/driver-licenses-sporting-new-look-03-22-05",
+      "retrieved_at": "2026-10-26T20:08:59.078878+00:00",
+      "bytes": 36498,
+      "sha256": "ab91146bdba12842d142f75578487d22fe788e780d26a6a112c77013cb0e31d9",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "hidot-2024-driver-manual.pdf",
+      "source_url": "https://hidot.hawaii.gov/highways/files/2024/11/2023-Hawaii-Drivers-Manual_5.375x8.375_Final-r3-Digital-071924web.pdf",
+      "final_url": "https://hidot.hawaii.gov/highways/files/2024/11/2023-Hawaii-Drivers-Manual_5.375x8.375_Final-r3-Digital-071924web.pdf",
+      "retrieved_at": "2026-10-26T20:09:00.827556+00:00",
+      "bytes": 9920752,
+      "sha256": "43cfa28cb320e5ff1d4466f13520931a947765fe5f2d0890744036a37b21f94f",
+      "mime_type": "application/pdf",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "honolulu-2026-design-comparison.jpg",
+      "source_url": "https://www.honolulu.gov/csd/wp-content/uploads/sites/6/2026/06/Untitled-design-2.jpg",
+      "final_url": "https://www.honolulu.gov/csd/wp-content/uploads/sites/6/2026/06/Untitled-design-2.jpg",
+      "retrieved_at": "2026-10-26T20:09:14.895059+00:00",
+      "bytes": 181174,
+      "sha256": "4d0fa9b8162976867bb841070df68307833f8dc989b41683d8135c63b8914bf0",
+      "mime_type": "image/jpeg",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "honolulu-new-design.html"
+    },
+    {
+      "file": "police-2005-license-front.jpg",
+      "source_url": "https://www.hawaiipolice.com/wp-content/uploads/2011/10/LicenseFront.jpg",
+      "final_url": "https://www.hawaiipolice.com/wp-content/uploads/2011/10/LicenseFront.jpg",
+      "retrieved_at": "2026-10-26T20:09:15.322261+00:00",
+      "bytes": 41162,
+      "sha256": "036052e60c8de421da39465e294e9392d9a2901914a348e21ffa392cb30498ac",
+      "mime_type": "image/jpeg",
+      "source_class": "government",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "police-2005-design.html"
+    },
+    {
+      "file": "hpr-2026-new-design.html",
+      "source_url": "https://www.hawaiipublicradio.org/the-conversation/2026-07-09/upgrade-or-eyesore-locals-react-to-the-new-hawaii-drivers-license",
+      "final_url": "https://www.hawaiipublicradio.org/the-conversation/2026-07-09/upgrade-or-eyesore-locals-react-to-the-new-hawaii-drivers-license",
+      "retrieved_at": "2026-10-26T20:09:53.418654+00:00",
+      "bytes": 218908,
+      "sha256": "4edc0bb05b344d4993a1a650164edf701cdeabb1bdf60ab7699ff77652e2ed14",
+      "mime_type": "text/html;charset=UTF-8",
+      "source_class": "press",
+      "status": "downloaded",
+      "http_status": 200
+    },
+    {
+      "file": "hpr-2026-front-back.jpg",
+      "source_url": "https://npr-brightspot.s3.amazonaws.com/1f/1c/613dd8ec428e8f9642f880f83cba/keeaumoku-kapu-3.jpg",
+      "final_url": "https://npr-brightspot.s3.amazonaws.com/1f/1c/613dd8ec428e8f9642f880f83cba/keeaumoku-kapu-3.jpg",
+      "retrieved_at": "2026-10-26T20:10:03.845170+00:00",
+      "bytes": 1146228,
+      "sha256": "ef445ab4c14e2f73715bf147d972b168357f1010ad8f74e763d47a2d49f5c3d4",
+      "mime_type": "image/jpeg",
+      "source_class": "press",
+      "status": "downloaded",
+      "http_status": 200,
+      "parent_file": "hpr-2026-new-design.html"
+    }
+  ],
+  "native_pdf_objects": [
+    {
+      "file": "hidot-2024-driver-manual-xref-3654.jpeg",
+      "source_file": "hidot-2024-driver-manual.pdf",
+      "source_sha256": "43cfa28cb320e5ff1d4466f13520931a947765fe5f2d0890744036a37b21f94f",
+      "pdf_object_xref": 3654,
+      "page_number": 13,
+      "width_px": 271,
+      "height_px": 170,
+      "sha256": "3fb12e17e66716e1f9ae1d5e97ce3e418a3bbf8328e58b30c123d8a8d64d796b"
+    },
+    {
+      "file": "hidot-2024-driver-manual-xref-3655.jpeg",
+      "source_file": "hidot-2024-driver-manual.pdf",
+      "source_sha256": "43cfa28cb320e5ff1d4466f13520931a947765fe5f2d0890744036a37b21f94f",
+      "pdf_object_xref": 3655,
+      "page_number": 13,
+      "width_px": 171,
+      "height_px": 271,
+      "sha256": "9061977635fac07df5c54b68f0e4764bb1c122fab7e6eb197ed9ee5de411d643",
+      "mask": {
+        "file": "hidot-2024-driver-manual-mask-3659.jpeg",
+        "pdf_object_xref": 3659,
+        "sha256": "f8e5397442fdab97ae5b990aba0fbc5bfd073af7020dd4c143ddd1ce6fdef529"
+      },
+      "mask_note": "Different native mask dimensions; source-page rendering retained for composed appearance."
+    },
+    {
+      "file": "hidot-2024-driver-manual-xref-3656.jpeg",
+      "source_file": "hidot-2024-driver-manual.pdf",
+      "source_sha256": "43cfa28cb320e5ff1d4466f13520931a947765fe5f2d0890744036a37b21f94f",
+      "pdf_object_xref": 3656,
+      "page_number": 13,
+      "width_px": 211,
+      "height_px": 132,
+      "sha256": "74ccd7c5dfbb27c58ba2b2258541e050ec083b6f9c51215d981c47aeacbc0ab0"
+    },
+    {
+      "file": "hidot-2024-driver-manual-xref-3657.jpeg",
+      "source_file": "hidot-2024-driver-manual.pdf",
+      "source_sha256": "43cfa28cb320e5ff1d4466f13520931a947765fe5f2d0890744036a37b21f94f",
+      "pdf_object_xref": 3657,
+      "page_number": 13,
+      "width_px": 133,
+      "height_px": 210,
+      "sha256": "d83fdccfbd6a6a1369dce34c4b2dbae8fe67995d7feaefbebb78b25e1f2f582d"
+    },
+    {
+      "file": "hidot-2024-driver-manual-xref-3658.jpeg",
+      "source_file": "hidot-2024-driver-manual.pdf",
+      "source_sha256": "43cfa28cb320e5ff1d4466f13520931a947765fe5f2d0890744036a37b21f94f",
+      "pdf_object_xref": 3658,
+      "page_number": 13,
+      "width_px": 132,
+      "height_px": 211,
+      "sha256": "6ad6454002d505b74716272f68a66849387cbce87aedefceae9b4eb8957e9916"
+    }
+  ],
+  "unresolved_downloads": [
+    {
+      "file": "hidot-limited-purpose-2019.pdf",
+      "source_url": "https://hidot.hawaii.gov/highways/files/2019/11/Limited-Purpose-DL-Info-and-FAQ-Pamphlet-2019-11-13.pdf",
+      "final_url": "https://hidot.hawaii.gov/highways/files/2019/11/Limited-Purpose-DL-Info-and-FAQ-Pamphlet-2019-11-13.pdf",
+      "retrieved_at": "2026-10-26T20:09:01.445696+00:00",
+      "bytes": 27,
+      "sha256": "0e1bce295fd801ab223481da8e6f3ae3a579e69152558444a61b13f3fa26a851",
+      "mime_type": "text/html; charset=UTF-8",
+      "source_class": "government",
+      "status": "failed",
+      "http_status": 404
+    }
+  ],
+  "remaining_gaps": [
+    "Separate2026minorID/CDL and currentlimitedpurpose specimens remain incomplete.",
+    "2019limitedpurposebrochure URL returned404; exactissuance boundaries and backsidevariants notestablished."
+  ],
+  "notes": [
+    "PrimarycurrentHonolulu2026DL/IDfrontcomparison; citycreditedHPR2026composite addsadultfront,minorfront,andback withbakedleaders.",
+    "HIDOTmanual supplies5nativehistoricadult/minor/provisional resources;2005policepressarchive supplieslegacyfront.",
+    "One native mask has differentresolution; originalmask retained without resizing/reconstruction, and correctly rendered sourcepage retained."
+  ],
+  "catalog_integrated": true,
+  "review_status": "reference_research_only",
+  "preservation": {
+    "jurisdiction": "HI",
+    "verified_at": "2026-10-26T20:10:25.335221+00:00",
+    "private_snapshot_index_key": "snapshots/research/HI/f24ea9ddbf8713ef43cccd323d8c6b2de38eae243a1412a779c907d32ab120f1/snapshot-index.json",
+    "private_discovery_index_key": "indexes/research/HI.json",
+    "archive_sha256": "f24ea9ddbf8713ef43cccd323d8c6b2de38eae243a1412a779c907d32ab120f1",
+    "archive_size_bytes": 11516684,
+    "verified_restored_files": 19,
+    "archive_layout": "collection_relative",
+    "restore_destination": "output/research/HI",
+    "public_media": false
+  },
+  "publication": {
+    "overlay": "docs/source-research/publication-overlay.json",
+    "references_prepared": 9,
+    "review_status": "reference_only"
+  }
+}
