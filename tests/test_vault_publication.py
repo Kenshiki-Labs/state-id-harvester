@@ -12,7 +12,8 @@ import numpy as np
 import pytest
 
 _spec = importlib.util.spec_from_file_location("vault_publication", "scripts/vault_sync.py")
-assert _spec and _spec.loader
+assert _spec is not None
+assert _spec.loader is not None
 vault_sync = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(vault_sync)
 POINTER = "indexes/specimens.json"
@@ -26,7 +27,9 @@ class FakeVault:
         self.uploads = 0
 
     def get(self, key, *, limit, missing_ok):
-        assert key == POINTER and limit == vault_sync.INDEX_LIMIT and missing_ok
+        assert key == POINTER
+        assert limit == vault_sync.INDEX_LIMIT
+        assert missing_ok
         return self.objects.get(key)
 
     def put(self, key, data, **kwargs):

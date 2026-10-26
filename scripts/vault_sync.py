@@ -27,6 +27,7 @@ from state_id_harvester.snapshots import restore_library
 CHUNK_BYTES = 40 * 1024 * 1024
 INDEX_LIMIT = 4 * 1024 * 1024
 HEX_SHA256 = re.compile(r"[a-f0-9]{64}")
+INVALID_SPECIMEN_RECORD = "Invalid specimen record"
 
 
 def digest(path: Path) -> str:
@@ -394,10 +395,10 @@ def prepare_specimens(
 def specimen_record(item: object, *, require_key: bool) -> dict:
     """Keep only the canonical fields consumed by public reference delivery."""
     if not isinstance(item, dict):
-        raise ValueError("Invalid specimen record")
+        raise ValueError(INVALID_SPECIMEN_RECORD)
     required = ("id", "state", "source_sha256", "asset_sha256", "review_status")
     if any(not isinstance(item.get(field), str) for field in required):
-        raise ValueError("Invalid specimen record")
+        raise ValueError(INVALID_SPECIMEN_RECORD)
     if (
         re.fullmatch(r"[A-Za-z0-9_-]{1,150}", item["id"], flags=re.ASCII) is None
         or item["state"] not in {*STATE_DOMAINS, "US_FED"}
@@ -405,7 +406,7 @@ def specimen_record(item: object, *, require_key: bool) -> dict:
         or HEX_SHA256.fullmatch(item["asset_sha256"]) is None
         or item["review_status"] != "reference_only"
     ):
-        raise ValueError("Invalid specimen record")
+        raise ValueError(INVALID_SPECIMEN_RECORD)
     result = {field: item[field] for field in required}
     if require_key or "key" in item:
         key = item.get("key")

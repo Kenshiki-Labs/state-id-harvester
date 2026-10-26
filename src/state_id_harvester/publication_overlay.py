@@ -14,6 +14,27 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 HASH = r"^[a-f0-9]{64}$"
 
 
+def _contains_contact(value: str) -> bool:
+    """Inspect disjoint address segments without an unanchored repeating regex."""
+    segments = value.split("@")
+    for local, following in zip(segments, segments[1:], strict=False):
+        if not local or re.fullmatch(r"[\w.+-]", local[-1]) is None:
+            continue
+        domain = re.match(r"[\w.-]+", following)
+        if domain is not None and _domain_has_suffix(domain.group()):
+            return True
+    return False
+
+
+def _domain_has_suffix(domain: str) -> bool:
+    return any(
+        character == "."
+        and index > 0
+        and re.fullmatch(r"[a-z]{2}", domain[index + 1 : index + 3], re.I)
+        for index, character in enumerate(domain)
+    )
+
+
 class Metadata(BaseModel):
     model_config = ConfigDict(extra="forbid", strict=True)
 
@@ -69,7 +90,7 @@ class OverlayCitation(Metadata):
     @field_validator("title")
     @classmethod
     def metadata_label(cls, value: str) -> str:
-        if re.search(r"[\w.+-]+@[\w.-]+\.[a-z]{2,}|/(?:Users|private|home)/", value, re.I):
+        if _contains_contact(value) or re.search(r"/(?:Users|private|home)/", value, re.I):
             raise ValueError("Personal contact or local path is not a publication title")
         return value
 
@@ -110,57 +131,61 @@ class PublicationOverlay(Metadata):
         return value
 
 
+def _validate_citations(collection: OverlayCollection, states: set[str]) -> set[str]:
+    hashes: set[str] = set()
+    citations: dict[tuple[str, str], OverlayCitation] = {}
+    for item in collection.citations:
+        if (
+            item.discovery_jurisdiction != collection.code
+            or item.publisher_jurisdiction not in states | {None, "US_FED"}
+            or item.publisher_host != urlsplit(item.url).hostname
+        ):
+            raise ValueError("Citation jurisdiction or publisher does not match")
+        identity = (item.sha256, item.url)
+        if identity in citations and citations[identity] != item:
+            raise ValueError("Conflicting duplicate citation")
+        citations[identity] = item
+        hashes.add(item.sha256)
+    return hashes
+
+
+def _validate_references(references: list[OverlayReference], hashes: set[str]) -> None:
+    identities: dict[str, OverlayReference] = {}
+    for reference in references:
+        if reference.source_sha256 not in hashes:
+            raise ValueError("Orphan publication reference")
+        if reference.id in identities and identities[reference.id] != reference:
+            raise ValueError("Conflicting duplicate reference")
+        identities[reference.id] = reference
+
+
 def _validate_collections(overlay: PublicationOverlay, states: set[str]) -> None:
     codes: set[str] = set()
     for collection in overlay.collections:
         if collection.code not in states or collection.code in codes:
             raise ValueError("Unknown or duplicate publication collection")
         codes.add(collection.code)
-        hashes = set()
-        citations: dict[tuple[str, str], OverlayCitation] = {}
-        for item in collection.citations:
-            if (
-                item.discovery_jurisdiction != collection.code
-                or item.publisher_jurisdiction not in states | {None, "US_FED"}
-                or item.publisher_host != urlsplit(item.url).hostname
-            ):
-                raise ValueError("Citation jurisdiction or publisher does not match")
-            identity = (item.sha256, item.url)
-            if identity in citations and citations[identity] != item:
-                raise ValueError("Conflicting duplicate citation")
-            citations[identity] = item
-            hashes.add(item.sha256)
-        identities: dict[str, OverlayReference] = {}
-        for reference in collection.references:
-            if reference.source_sha256 not in hashes:
-                raise ValueError("Orphan publication reference")
-            if reference.id in identities and identities[reference.id] != reference:
-                raise ValueError("Conflicting duplicate reference")
-            identities[reference.id] = reference
+        hashes = _validate_citations(collection, states)
+        _validate_references(collection.references, hashes)
 
 
-def _merge_row(row: dict[str, Any], collection: OverlayCollection) -> None:
-    baseline_hashes = {item["sha256"] for item in row["sources"]}
-    sources = {(item["sha256"], item["url"]): item for item in row["sources"]}
-    for item in collection.citations:
-        incoming = item.model_dump()
-        identity = (item.sha256, item.url)
-        old = sources.get(identity)
-        if old is not None:
-            if old.get("retrieved_at") and not incoming["retrieved_at"]:
-                incoming["retrieved_at"] = old["retrieved_at"]
-            # A publication overlay cannot erase an existing accepted source review.
-            if old.get("review_status") == "accepted":
-                incoming["review_status"] = "accepted"
-        sources[identity] = incoming
-    row["sources"] = list(sources.values())
-    row["counts"]["sources"] = len(row["sources"])
-    row["counts"]["relevant_sources"] = sum(
-        item["relevance"] == "candidate" for item in row["sources"]
-    )
+def _merge_citation(item: OverlayCitation, old: dict[str, Any] | None) -> dict[str, Any]:
+    incoming = item.model_dump()
+    if old is not None:
+        if old.get("retrieved_at") and not incoming["retrieved_at"]:
+            incoming["retrieved_at"] = old["retrieved_at"]
+        # A publication overlay cannot erase an existing accepted source review.
+        if old.get("review_status") == "accepted":
+            incoming["review_status"] = "accepted"
+    return incoming
+
+
+def _reference_counts(
+    references: list[OverlayReference], baseline_hashes: set[str]
+) -> tuple[int, int]:
     native = set()
     plates = set()
-    for reference in collection.references:
+    for reference in references:
         if reference.source_sha256 in baseline_hashes:
             continue
         if reference.kind == "native_image":
@@ -169,8 +194,23 @@ def _merge_row(row: dict[str, Any], collection: OverlayCollection) -> None:
             plates.add(
                 (reference.source_sha256, reference.page_number or reference.original_asset_sha256)
             )
-    row["counts"]["embedded_images"] += len(native)
-    row["counts"]["rendered_pages"] += len(plates)
+    return len(native), len(plates)
+
+
+def _merge_row(row: dict[str, Any], collection: OverlayCollection) -> None:
+    baseline_hashes = {item["sha256"] for item in row["sources"]}
+    sources = {(item["sha256"], item["url"]): item for item in row["sources"]}
+    for item in collection.citations:
+        identity = (item.sha256, item.url)
+        sources[identity] = _merge_citation(item, sources.get(identity))
+    row["sources"] = list(sources.values())
+    row["counts"]["sources"] = len(row["sources"])
+    row["counts"]["relevant_sources"] = sum(
+        item["relevance"] == "candidate" for item in row["sources"]
+    )
+    native, plates = _reference_counts(collection.references, baseline_hashes)
+    row["counts"]["embedded_images"] += native
+    row["counts"]["rendered_pages"] += plates
     row["status"] = "sources_available" if row["sources"] else "gap"
 
 

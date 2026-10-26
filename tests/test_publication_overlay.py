@@ -11,7 +11,8 @@ import pytest
 from state_id_harvester.publication_overlay import PublicationOverlay
 
 spec = importlib.util.spec_from_file_location("overlay_exporter", "scripts/build_public_catalog.py")
-assert spec is not None and spec.loader is not None
+assert spec is not None
+assert spec.loader is not None
 exporter = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(exporter)
 
@@ -177,8 +178,9 @@ def test_rejects_unsafe_overlay_atomically(level, field, value):
 def test_rejects_private_or_active_citation_urls(url):
     add = overlay()
     add["collections"][0]["citations"][0]["url"] = url
+    catalog = baseline()
     with pytest.raises(ValueError):
-        exporter.merge_publication_overlay(baseline(), add)
+        exporter.merge_publication_overlay(catalog, add)
 
 
 @pytest.mark.parametrize("kind", ["citation", "reference", "collection"])
@@ -194,8 +196,9 @@ def test_rejects_conflicting_duplicate_identities(kind):
             "Conflicting title" if kind == "citation" else "e" * 64
         )
         collection[key].append(duplicate)
+    catalog = baseline()
     with pytest.raises(ValueError):
-        exporter.merge_publication_overlay(baseline(), add)
+        exporter.merge_publication_overlay(catalog, add)
 
 
 def test_same_hash_different_publication_url_is_not_discarded():
@@ -279,3 +282,28 @@ def test_unpaginated_plates_are_counted_by_unique_asset():
     assert (
         state(exporter.merge_publication_overlay(baseline(), add))["counts"]["rendered_pages"] == 4
     )
+
+
+@pytest.mark.parametrize(
+    "title",
+    [
+        "Contact person@example.com",
+        "x@y..co",
+        "x@domain.COM-extra",
+        "prefix a+b.c@domain.gov suffix",
+    ],
+)
+def test_contact_labels_remain_rejected_without_backtracking(title):
+    add = overlay()
+    add["collections"][0]["citations"][0]["title"] = title
+    catalog = baseline()
+    with pytest.raises(ValueError):
+        exporter.merge_publication_overlay(catalog, add)
+
+
+@pytest.mark.parametrize("title", ["a" * 240, "x@.co", "x@domain.c", "Public credential guide"])
+def test_noncontact_labels_keep_existing_behavior(title):
+    add = overlay()
+    add["collections"][0]["citations"][0]["title"] = title
+    merged = exporter.merge_publication_overlay(baseline(), add)
+    assert state(merged)["sources"][-1]["title"] == title

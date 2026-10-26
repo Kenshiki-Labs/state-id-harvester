@@ -12,7 +12,23 @@ from urllib.parse import urlsplit
 
 from state_id_harvester.catalog import export_catalog
 from state_id_harvester.library import read_manifest
+from state_id_harvester.paths import managed_path
 from state_id_harvester.publication_overlay import merge_overlay
+
+MAX_OVERLAY_BYTES = 4 * 1024 * 1024
+
+
+def read_publication_overlay(value: Path) -> dict | None:
+    """Read optional metadata only inside the operator's managed filesystem roots."""
+    path = managed_path(value)
+    if not path.exists():
+        return None
+    with path.open("rb") as stream:
+        payload = stream.read(MAX_OVERLAY_BYTES + 1)
+    if len(payload) > MAX_OVERLAY_BYTES:
+        raise ValueError("Publication overlay exceeds the metadata size limit")
+    return json.loads(payload)
+
 
 JURISDICTIONS = {
     "AL": "Alabama",
@@ -255,11 +271,12 @@ def main() -> None:
     parser.add_argument("--cohorts", type=Path, default=Path("cohorts.json"))
     parser.add_argument(
         "--publication-overlay",
-        type=Path,
+        type=managed_path,
         default=Path("docs/source-research/publication-overlay.json"),
         help="Optional durable source and reference metadata overlay",
     )
     args = parser.parse_args()
+    overlay = read_publication_overlay(args.publication_overlay)
     manifest_model = read_manifest(args.source)
     # Existing exporter verifies accepted reviews, matching hashes, pages and cohort identity.
     with tempfile.TemporaryDirectory() as temporary:
@@ -274,10 +291,8 @@ def main() -> None:
         federal_manifest = read_manifest(args.federal_source).model_dump(mode="json")
         federal_coverage = json.loads((args.federal_source / "federal-coverage.json").read_text())
     catalog = public_catalog(manifest, coverage, cohorts, federal_manifest, federal_coverage)
-    if args.publication_overlay.exists():
-        catalog = merge_publication_overlay(
-            catalog, json.loads(args.publication_overlay.read_text())
-        )
+    if overlay is not None:
+        catalog = merge_publication_overlay(catalog, overlay)
     write_json(args.public / "data/catalog.json", catalog)
     write_json(args.public / "data/cohorts.json", public_cohorts(cohorts))
     write_wireframes(args.public / "wireframes", cohorts)
