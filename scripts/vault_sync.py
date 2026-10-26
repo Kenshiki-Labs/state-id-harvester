@@ -317,10 +317,18 @@ def candidate_assets(
                 yield document, asset
 
 
-def prepare_specimen(source: Path, destination: Path, document, asset) -> dict | None:
+def prepare_specimen(
+    source: Path, destination: Path, document, asset, *, normalization_gate=None
+) -> dict | None:
     image = read_candidate_image(source, asset)
     if image is None:
         return None
+    normalization = None
+    if normalization_gate is not None:
+        gated = normalization_gate.prepare(image, asset.sha256, destination)
+        if gated is None:
+            return None
+        image, normalization = gated
     marked = marked_reference(image)
     if marked is None:
         return None
@@ -342,10 +350,13 @@ def prepare_specimen(source: Path, destination: Path, document, asset) -> dict |
         "credential_format": document.download.source.credential_format,
         "source_relevance": document.relevance,
         "transform": transform,
+        **({"normalization": normalization} if normalization is not None else {}),
     }
 
 
-def prepare_collection(source: Path, destination: Path, limit: int, *, federal: bool) -> list[dict]:
+def prepare_collection(
+    source: Path, destination: Path, limit: int, *, federal: bool, normalization_gate=None
+) -> list[dict]:
     from state_id_harvester.library import read_manifest
 
     if not 0 <= limit <= 1000:
@@ -361,7 +372,9 @@ def prepare_collection(source: Path, destination: Path, limit: int, *, federal: 
             break
         if asset.sha256 in seen:
             continue
-        item = prepare_specimen(source, destination, document, asset)
+        item = prepare_specimen(
+            source, destination, document, asset, normalization_gate=normalization_gate
+        )
         if item is not None:
             items.append(item)
             seen.add(asset.sha256)
@@ -369,7 +382,7 @@ def prepare_collection(source: Path, destination: Path, limit: int, *, federal: 
 
 
 def prepare_specimens(
-    source: Path, destination: Path, limit: int, *, federal_limit: int = 30
+    source: Path, destination: Path, limit: int, *, federal_limit: int = 30, normalization_gate=None
 ) -> list[dict]:
     from state_id_harvester.library import read_manifest
 
@@ -377,13 +390,30 @@ def prepare_specimens(
     manifest = read_manifest(source)
     primary_federal = manifest.requested_jurisdictions == ["US_FED"]
     primary_limit = federal_limit if primary_federal else limit
-    items = prepare_collection(source, destination, primary_limit, federal=primary_federal)
+    items = prepare_collection(
+        source,
+        destination,
+        primary_limit,
+        federal=primary_federal,
+        normalization_gate=normalization_gate if not primary_federal else None,
+    )
     federal_source = contained_path(source, "federal")
     if not primary_federal and (federal_source / "manifest.json").is_file():
         items.extend(prepare_collection(federal_source, destination, federal_limit, federal=True))
     contained_path(destination, "specimens.json").write_text(
         json.dumps({"specimens": items}, indent=2) + "\n"
     )
+    if normalization_gate is not None:
+        contained_path(destination, "normalization-report.json").write_text(
+            json.dumps(
+                {
+                    "normalized_references": normalization_gate.completed,
+                    "pending": normalization_gate.pending,
+                },
+                indent=2,
+            )
+            + "\n"
+        )
     federal_count = sum(item["source_collection"] == "US_FED" for item in items)
     print(
         f"Prepared {len(items)} visibly marked private references "
@@ -515,12 +545,31 @@ def main() -> None:
     prepare.add_argument("destination", type=managed_path)
     prepare.add_argument("--limit", type=int, default=100)
     prepare.add_argument("--federal-limit", type=int, default=30)
+    prepare.add_argument("--rectifier", type=Path)
+    prepare.add_argument("--boundary-decisions", type=managed_path)
     specimens = commands.add_parser("push-specimens")
     specimens.add_argument("directory", type=managed_path)
     args = parser.parse_args()
     if args.command == "prepare-specimens":
+        gate = None
+        if bool(args.rectifier) != bool(args.boundary_decisions):
+            parser.error("--rectifier and --boundary-decisions must be supplied together")
+        if args.rectifier is not None:
+            from state_id_harvester.normalization import (
+                NormalizationGate,
+                load_rectifier,
+                read_decisions,
+            )
+
+            gate = NormalizationGate(
+                read_decisions(args.boundary_decisions), load_rectifier(args.rectifier)
+            )
         prepare_specimens(
-            args.source, args.destination, args.limit, federal_limit=args.federal_limit
+            args.source,
+            args.destination,
+            args.limit,
+            federal_limit=args.federal_limit,
+            normalization_gate=gate,
         )
         return
     vault = Vault(args.url, os.environ.get("CADASTRE_INGEST_KEY", ""))

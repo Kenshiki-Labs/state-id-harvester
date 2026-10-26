@@ -1,0 +1,9115 @@
+{
+  "schema_version": 1,
+  "review_method": "codex_visual_review_of_retained_source_images",
+  "scope": "Complete individual card image extents, plus explicit card-body crops. Nominal source geometry; not physical metrology. Rounded corners and baked-in annotations remain.",
+  "decisions": [
+    {
+      "original_asset_sha256": "009f001246a76d968a210bdfa911f08516d28f7970deea46d3802494a8032d7c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          387.0,
+          0.0
+        ],
+        [
+          387.0,
+          612.0
+        ],
+        [
+          0.0,
+          612.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0149bee8833aec8e679bc663fef4b280a5b47f5bd8b76e27da13f0b91d2368c3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          296.0,
+          0.0
+        ],
+        [
+          296.0,
+          184.0
+        ],
+        [
+          0.0,
+          184.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "016b433f81b1db6b91ab10da2ed080717b6c5868bc200205782bb61312d62b70",
+      "corners": [
+        [
+          194.0,
+          5.0
+        ],
+        [
+          367.0,
+          5.0
+        ],
+        [
+          367.0,
+          117.0
+        ],
+        [
+          194.0,
+          117.0
+        ]
+      ],
+      "basis": "visual_card_corners"
+    },
+    {
+      "original_asset_sha256": "01f209411dff6ee5c3fae2ae7ca1e81f03e125ce7219c264f0e45406d35e4c92",
+      "corners": [
+        [
+          13.0,
+          14.0
+        ],
+        [
+          443.0,
+          14.0
+        ],
+        [
+          443.0,
+          287.0
+        ],
+        [
+          13.0,
+          287.0
+        ]
+      ],
+      "basis": "visual_card_corners"
+    },
+    {
+      "original_asset_sha256": "0233ba6029cd98edff7bb99a0939f9af0aaa4df41d3015d6b1f1f4b8b2c3f26d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          528.0,
+          0.0
+        ],
+        [
+          528.0,
+          342.0
+        ],
+        [
+          0.0,
+          342.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "02597fff3f903e23e856693a00946c9307692757d34d9a7b3848bd4836e74655",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "025a640b306d06988f4b25f7ea3d45ea3d48554caaa8fa63b13a3581099c2d3f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          721.0,
+          0.0
+        ],
+        [
+          721.0,
+          473.0
+        ],
+        [
+          0.0,
+          473.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "033c98869e9b979b6d17f3084c003ee5e36f85fd56a566a8a7ad15a1e54d7469",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          445.0,
+          0.0
+        ],
+        [
+          445.0,
+          283.0
+        ],
+        [
+          0.0,
+          283.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "03539c5983dedf0514e7e8a51c71980d27367335a5452438df1cc249e10c2259",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "036052e60c8de421da39465e294e9392d9a2901914a348e21ffa392cb30498ac",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          506.0,
+          0.0
+        ],
+        [
+          506.0,
+          317.0
+        ],
+        [
+          0.0,
+          317.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "048f5f9c65982b502f72ea7ef0a3464601f083a0dc384c526a71dc8e2e206405",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "068d5d7b9af490572cff602c903e3e6fb3e0ddb759f2a4b1fca0fed2c6aed9f8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          409.0,
+          0.0
+        ],
+        [
+          409.0,
+          259.0
+        ],
+        [
+          0.0,
+          259.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "06afa2158eac3beba1c9294f23b9238495986e7947c698130b11f0c32e959e7b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          700.0,
+          0.0
+        ],
+        [
+          700.0,
+          1103.0
+        ],
+        [
+          0.0,
+          1103.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "06bf24df689e43497d5c983ff481ecc41fb71395f0736ca9cd588939aa4338b8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          243.0,
+          0.0
+        ],
+        [
+          243.0,
+          152.0
+        ],
+        [
+          0.0,
+          152.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "07fa170ecce4457e3c46105e56b47631c9ba712f53dc2d7a97c0f160f3b91cf5",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          528.0,
+          0.0
+        ],
+        [
+          528.0,
+          342.0
+        ],
+        [
+          0.0,
+          342.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0915998cfcc14feebc0248365e30bfdd77d62cd6249811e73883a2653efa12eb",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          558.0,
+          0.0
+        ],
+        [
+          558.0,
+          370.0
+        ],
+        [
+          0.0,
+          370.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "098bc9df69b9970975845a5bf03783c42d428addbe85119593b2311a344f81e3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1112.0,
+          0.0
+        ],
+        [
+          1112.0,
+          702.0
+        ],
+        [
+          0.0,
+          702.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0a0e23de6a36be8a6d3bd49ae53c27cdd7a83abf9d9d9c9fbadaf75ebe14d007",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          420.0,
+          0.0
+        ],
+        [
+          420.0,
+          277.0
+        ],
+        [
+          0.0,
+          277.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0a6f324d30cc75ffd5202d5d5696b4b1d327a2d9e417bfc8160df95a0978d4b3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1021.0,
+          0.0
+        ],
+        [
+          1021.0,
+          647.0
+        ],
+        [
+          0.0,
+          647.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0afc7074e7fd298acac24f74e9257f119eeeaa7220f70053c70d1c2849db3769",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          130.0,
+          0.0
+        ],
+        [
+          130.0,
+          209.0
+        ],
+        [
+          0.0,
+          209.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0be6b0c18f9f1c468820f766a4d2275327afb0fcfa3c0d358cbf68b5e743e60b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1013.0,
+          0.0
+        ],
+        [
+          1013.0,
+          639.0
+        ],
+        [
+          0.0,
+          639.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0c0965475e4f71b963e99ecb83d584e09b176b15ad4c7d6c61a9454b855f9cc1",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          505.0,
+          0.0
+        ],
+        [
+          505.0,
+          321.0
+        ],
+        [
+          0.0,
+          321.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0c9d7c8ca9f83af5d62ac0d203ec88192e8394b3107648c7694dd123c2a19d62",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0c9f98f4263d2bcab8414ab0d89008917ffde64d3e3c0b581e4b9f8bfd4c1b94",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          156.0,
+          0.0
+        ],
+        [
+          156.0,
+          246.0
+        ],
+        [
+          0.0,
+          246.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0cd8ec9863f5d8e7b26e0971d027a841f07b7a7e54c956b1f668fb7f3f0c4206",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          154.0
+        ],
+        [
+          0.0,
+          154.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0d7f7e655fae522f6e6261ea173f91ba47d08f719ea71dbc8658f75d8bbe5287",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          164.0,
+          0.0
+        ],
+        [
+          164.0,
+          253.0
+        ],
+        [
+          0.0,
+          253.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0dad31f39c5d0b0de8db3c8959d01c8e3bc31c285a889c01efdc658f9a092659",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1011.0,
+          0.0
+        ],
+        [
+          1011.0,
+          637.0
+        ],
+        [
+          0.0,
+          637.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0ea891d862b6f268115ef8be26dc4255131f2ea46b417c92621fa1747f6714bf",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1075.0,
+          0.0
+        ],
+        [
+          1075.0,
+          675.0
+        ],
+        [
+          0.0,
+          675.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "0ec6a50404ad5e1469db838ef295f210694ce522a2997e3d7e7622a455ef72cb",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          2057.0,
+          0.0
+        ],
+        [
+          2057.0,
+          3291.0
+        ],
+        [
+          0.0,
+          3291.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "108014a256ee724e1b605f5878cc6d5eadfd69df6d107e59768192dc2c6005c8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          294.0,
+          0.0
+        ],
+        [
+          294.0,
+          450.0
+        ],
+        [
+          0.0,
+          450.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "10a19760183ff069bd7cce0320071eb32fd6fe62a395b50f82c730a1db0e19f7",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          667.0,
+          0.0
+        ],
+        [
+          667.0,
+          421.0
+        ],
+        [
+          0.0,
+          421.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "10d5d0a2bc8aeb5ae706da0c81766a2d677475e6e0551e12ebfba4c2ac70968c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          165.0,
+          0.0
+        ],
+        [
+          165.0,
+          260.0
+        ],
+        [
+          0.0,
+          260.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "129f59d0c656f5b9911304291f9224cf14805ff96266a3413232121f57fbfc60",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1013.0,
+          0.0
+        ],
+        [
+          1013.0,
+          639.0
+        ],
+        [
+          0.0,
+          639.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "12aa0c83fa1ece0d075604ea4bf61511036105713d03b1c94ec6add2e38d5db4",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          294.0,
+          0.0
+        ],
+        [
+          294.0,
+          450.0
+        ],
+        [
+          0.0,
+          450.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "137243f63abfae19a642898f0e99461c6e88b50350e98bd88f54f5a745c00b20",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1021.0,
+          0.0
+        ],
+        [
+          1021.0,
+          647.0
+        ],
+        [
+          0.0,
+          647.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "138d6c66baa0cebf5395aaf8103505fe48e3790962f3adf92b5ec7d61125f53e",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          638.0,
+          0.0
+        ],
+        [
+          638.0,
+          1011.0
+        ],
+        [
+          0.0,
+          1011.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "13fcad360c49bdee7ed78781a1ab4d2e01f30d1ead140b87bc14e86bc7f702e9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          532.0,
+          0.0
+        ],
+        [
+          532.0,
+          330.0
+        ],
+        [
+          0.0,
+          330.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "15b49030540cd8ad67495444ba6cdd6592eb002ac419df382c28399412057738",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          500.0,
+          0.0
+        ],
+        [
+          500.0,
+          761.0
+        ],
+        [
+          0.0,
+          761.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "15de96ea01f21d4354e1e06963b3504c0fe644e690c28fd2836b92b1c873085c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          243.0,
+          0.0
+        ],
+        [
+          243.0,
+          153.0
+        ],
+        [
+          0.0,
+          153.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "1613af819210a3cf5917b58b351578d93e27da2f9654f307d2391de5fb4bd412",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          721.0,
+          0.0
+        ],
+        [
+          721.0,
+          473.0
+        ],
+        [
+          0.0,
+          473.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "16d0580b6cd90236968b997ab7daac016dc37f778b78db4b95ca651b58c068c8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1177.0,
+          0.0
+        ],
+        [
+          1177.0,
+          745.0
+        ],
+        [
+          0.0,
+          745.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "16f8d663732a50c613a3610bd9dfe74b340d83cc6c4ddf2a643b365e2a71bb47",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          693.0,
+          0.0
+        ],
+        [
+          693.0,
+          441.0
+        ],
+        [
+          0.0,
+          441.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "173663e93afec7c8c5549a379e6e30292fe255a07e0ce112b3b0f99d2d6a2560",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          444.0,
+          0.0
+        ],
+        [
+          444.0,
+          282.0
+        ],
+        [
+          0.0,
+          282.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "1767578a61e82952cc2929fe77ab3be423899bcc9e9228b6356a88ab99bd1a91",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          506.0,
+          0.0
+        ],
+        [
+          506.0,
+          317.0
+        ],
+        [
+          0.0,
+          317.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "176b90cfaaa9743a27440a9b7e1a516c8f21f59ba56904b586bf1f9c9e740221",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          372.0,
+          0.0
+        ],
+        [
+          372.0,
+          600.0
+        ],
+        [
+          0.0,
+          600.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "1b29f8351cd168830290fa84ee874a443e5a022991c806259ec87ef636529610",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          645.0,
+          0.0
+        ],
+        [
+          645.0,
+          407.0
+        ],
+        [
+          0.0,
+          407.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "1b5277a6283885050db9110cf966bbd198eafa8ff1ea0aedb807c50ad718be30",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          233.0,
+          0.0
+        ],
+        [
+          233.0,
+          371.0
+        ],
+        [
+          0.0,
+          371.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "1b535f53e32c6aa0cc42aef7c23c2ec3f4bd8e794f1847de16a4e3d36abcdfa9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          175.0,
+          0.0
+        ],
+        [
+          175.0,
+          288.0
+        ],
+        [
+          0.0,
+          288.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "1b82dc917bc114a4ab89aaeb4cf9881bfb0fa03ec372b1df51db2476571b0bda",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          750.0,
+          0.0
+        ],
+        [
+          750.0,
+          482.0
+        ],
+        [
+          0.0,
+          482.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "1c2cedc6e6500666e1e7c9be8ba6f33f3b8fbcc178fb4d2c8a3da48b4e564bab",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          882.0,
+          0.0
+        ],
+        [
+          882.0,
+          556.0
+        ],
+        [
+          0.0,
+          556.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "1e37d332658eab2ad6a3e99225a926273d5866088d642f7edea754da6e26aadc",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1030.0,
+          0.0
+        ],
+        [
+          1030.0,
+          650.0
+        ],
+        [
+          0.0,
+          650.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "1e8cb267d3dab51f9410041e43a6bb1c328a92056bd545337973fcc941295d9a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1035.0,
+          0.0
+        ],
+        [
+          1035.0,
+          662.0
+        ],
+        [
+          0.0,
+          662.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "1ee5b3cd9b097e83767777398b11e07ffd3a40d779d72ea65bdb91e763cbdeb2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          162.0
+        ],
+        [
+          0.0,
+          162.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2079e0ba2d6a11a9e9a118c27c2e47f1e67bd9b2c70495d64a1872d386d1bcec",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          332.0,
+          0.0
+        ],
+        [
+          332.0,
+          210.0
+        ],
+        [
+          0.0,
+          210.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "20dc15cab575ec29707df5b19595b8d41e4db02e71662e52aacb1855618aaea0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          523.0,
+          0.0
+        ],
+        [
+          523.0,
+          330.0
+        ],
+        [
+          0.0,
+          330.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "20fcc90905c09bc72e6c5802faa11ae27ad8aa154ca2990f06be28ad9723ecff",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          531.0,
+          0.0
+        ],
+        [
+          531.0,
+          330.0
+        ],
+        [
+          0.0,
+          330.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "218717344750fdf48ada6de8a4606be04d6d4fc665771de66d349af9c5fe97c0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          499.0,
+          0.0
+        ],
+        [
+          499.0,
+          302.0
+        ],
+        [
+          0.0,
+          302.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "24a756978bc8f5f2669cdf4a0e287474412e5355e7c6613936422c14712cf258",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          981.0,
+          0.0
+        ],
+        [
+          981.0,
+          615.0
+        ],
+        [
+          0.0,
+          615.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2533091b24180aae97a65e86dbc2ef07db22cdebceef947cf35541a10dfaa5e4",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          271.0,
+          0.0
+        ],
+        [
+          271.0,
+          168.0
+        ],
+        [
+          0.0,
+          168.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "25797b177b48fdb4ee4590832f0279654b2ae74f44582486933c5e7d5397cad3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          427.0,
+          0.0
+        ],
+        [
+          427.0,
+          270.0
+        ],
+        [
+          0.0,
+          270.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2636600f0b390d61e76ef3f1c439f64f5a560c079811dc906c27d915e72c7411",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1056.0,
+          0.0
+        ],
+        [
+          1056.0,
+          675.0
+        ],
+        [
+          0.0,
+          675.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "267bfb5495020c4ea355a4eefe58d62033807f2c46562bfe4ccc64480008f0c6",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          294.0,
+          0.0
+        ],
+        [
+          294.0,
+          450.0
+        ],
+        [
+          0.0,
+          450.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "26c2e3de5316ab0d19d55e1d047b61d008fb37bf43f30894a0569c7813323143",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          208.0,
+          0.0
+        ],
+        [
+          208.0,
+          130.0
+        ],
+        [
+          0.0,
+          130.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2732faf7d82fa977ad1235a73a56bf41f2b6b0d3b663f5232133e246fbfd5230",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1075.0,
+          0.0
+        ],
+        [
+          1075.0,
+          675.0
+        ],
+        [
+          0.0,
+          675.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "27d3f264587a581ca5643f49958a55190dad913a6aff3401e1fee9ad5aa103cc",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          666.0,
+          0.0
+        ],
+        [
+          666.0,
+          420.0
+        ],
+        [
+          0.0,
+          420.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "27ed4ae259d7b5e1b76f6f1fb5b03a95b5d2348b2fe52556788612a0e1cd2324",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          150.0,
+          0.0
+        ],
+        [
+          150.0,
+          234.0
+        ],
+        [
+          0.0,
+          234.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "28e05957785ee98361a36beddb4a887366c1bd4bf00fc52a4f98b464dacba436",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          371.0,
+          0.0
+        ],
+        [
+          371.0,
+          237.0
+        ],
+        [
+          0.0,
+          237.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "293fd2908b5bf7523357974c59aa79f6b6ebf046f564fa3b86ec022fae2f7804",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          372.0,
+          0.0
+        ],
+        [
+          372.0,
+          237.0
+        ],
+        [
+          0.0,
+          237.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2956881e236fc566309b0da9a8edb95f0947f5c06c6cfc48f94bece6fe69531c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          742.0,
+          0.0
+        ],
+        [
+          742.0,
+          469.0
+        ],
+        [
+          0.0,
+          469.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "29c6723d514773853fe8007454d714863fd695ea4f18f43b18685234e07038c0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "29cf383bd36de6e0acd5a538a6b5f5ca6d57694315a35de19d220a1bf02d409b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          642.0,
+          0.0
+        ],
+        [
+          642.0,
+          406.0
+        ],
+        [
+          0.0,
+          406.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2a231d4d465aaa9c8557e9fe18fafbdf9499b065989187fcb20e3eaa8449c831",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          318.0,
+          0.0
+        ],
+        [
+          318.0,
+          505.0
+        ],
+        [
+          0.0,
+          505.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2a63a23d0bef33cc58801d40c7127ebad258bdad5d081565c2705acabb026ccb",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1662.0,
+          0.0
+        ],
+        [
+          1662.0,
+          1080.0
+        ],
+        [
+          0.0,
+          1080.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2bb875849cd8c87d308a170f8673bcaf5d0cc001035d7ab100e4435ff294ae48",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          465.0,
+          0.0
+        ],
+        [
+          465.0,
+          293.0
+        ],
+        [
+          0.0,
+          293.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2c3f4d8e33ddf27eb992168f53c1e0468773a2b2e2b86d72aaa431ac4086c30d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          358.0,
+          0.0
+        ],
+        [
+          358.0,
+          555.0
+        ],
+        [
+          0.0,
+          555.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2ca0c67fab67a09ca921d27deb310663d3c812694619b1f9b64cbaac208983c9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          410.0,
+          0.0
+        ],
+        [
+          410.0,
+          259.0
+        ],
+        [
+          0.0,
+          259.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2cb489a75986c8310c9f17ac16b69da6e77e0b5a0c306defed02cf4ee7797928",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          443.0,
+          0.0
+        ],
+        [
+          443.0,
+          283.0
+        ],
+        [
+          0.0,
+          283.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2d4c1dfa9d994c6d8b06251ac6687c0ffb81f4665e69327662a533f18f943fb1",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          456.0,
+          0.0
+        ],
+        [
+          456.0,
+          286.0
+        ],
+        [
+          0.0,
+          286.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2dc1c3b1156b45e74ba6d1ef39ef56c19a935e65753868552c50b371c6c91c33",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          742.0,
+          0.0
+        ],
+        [
+          742.0,
+          469.0
+        ],
+        [
+          0.0,
+          469.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2e62acb0690aaa2f3a80451858c5a85dc935208aa74d50488cd3ab2e81c056a3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2f4dcf5e69a1c56e1608fa38b5e547e17b866132ad3f4485892ea66b1d639338",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          243.0,
+          0.0
+        ],
+        [
+          243.0,
+          153.0
+        ],
+        [
+          0.0,
+          153.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "2f54c2b010208131f021a26e18fe6238b0f5f4489543b0d760cdd81032f8c532",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          348.0,
+          0.0
+        ],
+        [
+          348.0,
+          550.0
+        ],
+        [
+          0.0,
+          550.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "30d99a0cf9efac69490ace0e8ba3e81acbf7f9a2840edf0873971735901eccdc",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          409.0,
+          0.0
+        ],
+        [
+          409.0,
+          259.0
+        ],
+        [
+          0.0,
+          259.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "30db2f3ec1a581c3e45e46d9fb05b23d9489e245166926fb26b59bea98eadbbf",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          294.0
+        ],
+        [
+          0.0,
+          294.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3159615b2aa456e4647c1f71996e0e335c7a4397d72d7b145470b50edb2c0cf1",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1146.0,
+          0.0
+        ],
+        [
+          1146.0,
+          730.0
+        ],
+        [
+          0.0,
+          730.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "31b2bd1fb020f8b762e8fc17fc94455a91751c3d5f5563a4b06216518882d447",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          520.0,
+          0.0
+        ],
+        [
+          520.0,
+          330.0
+        ],
+        [
+          0.0,
+          330.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "320feed4e769c6163251d02462cc7240f3d60da0a3f304b3991a0dbbe73963b1",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          285.0
+        ],
+        [
+          0.0,
+          285.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3348071a8bbe0d2fe62ddbb120f9e8a3d531a14aa9084b1f40a60764a3f92d1a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "336a5c5e801faf44eb934456af9a8b918ed45f8358b30a9caafcbc01cd22e3e8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          742.0,
+          0.0
+        ],
+        [
+          742.0,
+          469.0
+        ],
+        [
+          0.0,
+          469.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "33802aede4530d58858e426d72caa98c8819ff3b55b18063d661bc21f9c9ac4d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          520.0,
+          0.0
+        ],
+        [
+          520.0,
+          329.0
+        ],
+        [
+          0.0,
+          329.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "339b8111424ccb18ccd651d12f4e7b4878a1d1f3538c9b065be86aac78a938bb",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1021.0,
+          0.0
+        ],
+        [
+          1021.0,
+          647.0
+        ],
+        [
+          0.0,
+          647.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "33ef885e4da0bd78c2fa37f5e0870ed677389ca1984ed857179fc95e46233764",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          294.0
+        ],
+        [
+          0.0,
+          294.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "34abd2fccec510f80df370e2eea892707a4b05cef6f110ce3caa59688948b856",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          550.0,
+          0.0
+        ],
+        [
+          550.0,
+          343.0
+        ],
+        [
+          0.0,
+          343.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "366417499ffd21e4cd27b472ad1877c0349eebfb1e39deeb0906a31b8fa4ebf3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          357.0,
+          0.0
+        ],
+        [
+          357.0,
+          225.0
+        ],
+        [
+          0.0,
+          225.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "372f4d8b560e1876c36180cffd2537ca3773477a2db31e76ca6b58b944d7d59f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "376a0e27dbc28b671cf835390e11f25a496c3cccb63d6cf829327eb3f56838a2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          398.0,
+          0.0
+        ],
+        [
+          398.0,
+          627.0
+        ],
+        [
+          0.0,
+          627.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "37cd6b5ef3b34ca71ff0be66414bb4538ae025d3c4392c9b239f0ea0377e2b9b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          617.0,
+          0.0
+        ],
+        [
+          617.0,
+          393.0
+        ],
+        [
+          0.0,
+          393.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "380bf6ec2b60a07386e383b652244fbf453f99af6563b446d34e279eeda66490",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1067.0,
+          0.0
+        ],
+        [
+          1067.0,
+          690.0
+        ],
+        [
+          0.0,
+          690.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "38e4f191a3572f3f7ae33f6065ed3eb79384a34706e1dbd5f343b1f78be32bbd",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          342.0,
+          0.0
+        ],
+        [
+          342.0,
+          528.0
+        ],
+        [
+          0.0,
+          528.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "39bb3ff65a4094583d80b4ae52b04c157870e418eeebd6dfbe574aee4f6b53af",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          318.0,
+          0.0
+        ],
+        [
+          318.0,
+          505.0
+        ],
+        [
+          0.0,
+          505.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "39f25d8442f3d600a72088c8030b8f79040130e8ba9706b793d406b7d7bbf451",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          973.0,
+          0.0
+        ],
+        [
+          973.0,
+          598.0
+        ],
+        [
+          0.0,
+          598.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "39f8abb9acf38ac87b1d9dc5ee6d412218e23a5d0b1bcabc80a225ac6c45f2d6",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          163.0,
+          0.0
+        ],
+        [
+          163.0,
+          267.0
+        ],
+        [
+          0.0,
+          267.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3a47658fe930113766acf967dc7a7d98f788d6b3c188a2030c7d610a3c9c185d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          247.0,
+          0.0
+        ],
+        [
+          247.0,
+          155.0
+        ],
+        [
+          0.0,
+          155.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3a6dfb40550aa3c5641bd255ad339487f8e2a965d4f3ee4e70594aad8d6a929b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          318.0,
+          0.0
+        ],
+        [
+          318.0,
+          505.0
+        ],
+        [
+          0.0,
+          505.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3b4839ff5f9363c32f81070e14aa418cd9a975d7769999e7dd25f3a71a2f5dac",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          404.0,
+          0.0
+        ],
+        [
+          404.0,
+          633.0
+        ],
+        [
+          0.0,
+          633.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3bf86255f4d6604643fdd05c75e2b2795644e4780637840ae9ab5cf858153747",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          280.0,
+          0.0
+        ],
+        [
+          280.0,
+          177.0
+        ],
+        [
+          0.0,
+          177.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3d64be5111d8cd9edead7847c8e54a1126e795e507ffc0a110eabc733ba2bfe5",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          409.0,
+          0.0
+        ],
+        [
+          409.0,
+          263.0
+        ],
+        [
+          0.0,
+          263.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3d8cfd69e34a7ae0b90269c1cac53fe085ba675d657c9b6863dc2efb7d2b0d6d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          610.0,
+          0.0
+        ],
+        [
+          610.0,
+          405.0
+        ],
+        [
+          0.0,
+          405.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3de8f0eb44c1553109e25ceb5c58f39a844968e81e11a366a411bfaa3c5de664",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          397.0,
+          0.0
+        ],
+        [
+          397.0,
+          251.0
+        ],
+        [
+          0.0,
+          251.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3ebd35a9c6980d2304f3980291f9175ea950ff638e1f03eeb58b8b3f1f679463",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          443.0,
+          0.0
+        ],
+        [
+          443.0,
+          283.0
+        ],
+        [
+          0.0,
+          283.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3f5e1a2e1f918c67c7e909a7eb1bd47e97d7fd6f5d7bb4d7f0b10307d8bedb3d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1011.0,
+          0.0
+        ],
+        [
+          1011.0,
+          638.0
+        ],
+        [
+          0.0,
+          638.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3f978a036cce62e48481f4514b3a28b8b6eac25f53db844deb719a0fe25bbba5",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "3fb12e17e66716e1f9ae1d5e97ce3e418a3bbf8328e58b30c123d8a8d64d796b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          271.0,
+          0.0
+        ],
+        [
+          271.0,
+          170.0
+        ],
+        [
+          0.0,
+          170.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "40323828f234dc763e8fd6a2822fcf7ceb9cb3ff7d67259bb3b4a9772ca1ef84",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          294.0
+        ],
+        [
+          0.0,
+          294.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "421d7c166f57470aca591b00e657232d46f5732bf2f735de668cc96824921a71",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          2112.0,
+          0.0
+        ],
+        [
+          2112.0,
+          1350.0
+        ],
+        [
+          0.0,
+          1350.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "42635bd81637296859c7e64a50cd6cfe6629c8e58bb2bf021d104c60b5de9e92",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          410.0,
+          0.0
+        ],
+        [
+          410.0,
+          260.0
+        ],
+        [
+          0.0,
+          260.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4267139a45c86f620bda06dad3f6f5c4dfc8e5d2a20cd3c61e6b0fe4ca8dd5b0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          562.0,
+          0.0
+        ],
+        [
+          562.0,
+          354.0
+        ],
+        [
+          0.0,
+          354.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4302db2b28f01d30273147719c8367f65ff9972f4ffb123088721e85c2e40830",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "44d78d83123c9feb938f94bc494cd4d01c62ecb7a3573fa20ddd1c0525832812",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1315.0,
+          0.0
+        ],
+        [
+          1315.0,
+          833.0
+        ],
+        [
+          0.0,
+          833.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "44f6ea6f86abb7a53b2445fe3746c087931e08348b96928e18d9c7f2ab5a724a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1011.0,
+          0.0
+        ],
+        [
+          1011.0,
+          638.0
+        ],
+        [
+          0.0,
+          638.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4720f824bf04bd0e5dbd28fe36c5fd09d2ef92c2ebc1460272b574f42901f01e",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          409.0,
+          0.0
+        ],
+        [
+          409.0,
+          259.0
+        ],
+        [
+          0.0,
+          259.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "480c9f23448c778215daa4a62d03ee4b20750c128db230054f21523c189cb176",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          322.0,
+          0.0
+        ],
+        [
+          322.0,
+          203.0
+        ],
+        [
+          0.0,
+          203.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4882cfea7dd56ac78bb913f038bfe244fa30dc681bfd72e59301c5ec2416185f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          935.0,
+          0.0
+        ],
+        [
+          935.0,
+          585.0
+        ],
+        [
+          0.0,
+          585.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "492ae6f84ff3c4530667fc91990c60cd53fafe1a3323ecaee5d939396b4a11e8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          409.0,
+          0.0
+        ],
+        [
+          409.0,
+          259.0
+        ],
+        [
+          0.0,
+          259.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4965027b6c6a79daf974506d856df092f3458a0a42c1133b237f7a7dee290b02",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          721.0,
+          0.0
+        ],
+        [
+          721.0,
+          473.0
+        ],
+        [
+          0.0,
+          473.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4a5eb11240d655456e451a1483b9d775320994fd7e66ae16edacd64837fff838",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          638.0,
+          0.0
+        ],
+        [
+          638.0,
+          405.0
+        ],
+        [
+          0.0,
+          405.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4b526bade779f8303a7058e3d02ae481d7397e1e4b7dcdc5b8f4de131fc8562d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          342.0,
+          0.0
+        ],
+        [
+          342.0,
+          528.0
+        ],
+        [
+          0.0,
+          528.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4b5b33908e9038dc9888e4fbb3461a8b851dcf6946b7311a2cec37a19e099869",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          229.0,
+          0.0
+        ],
+        [
+          229.0,
+          146.0
+        ],
+        [
+          0.0,
+          146.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4b5b62c3cd88524aac499360518cc1296d4575b0ddf21afacbf4f3c3d75bb93e",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          638.0,
+          0.0
+        ],
+        [
+          638.0,
+          1011.0
+        ],
+        [
+          0.0,
+          1011.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4c6d9bd6baec1be3cee00289eeaab851b95b80c1797a92c09c4c313e9ff0fc73",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          151.0,
+          0.0
+        ],
+        [
+          151.0,
+          99.0
+        ],
+        [
+          0.0,
+          99.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4e15cf8eb58d1fe626cc4bbe53ce9c2ebe7e7958c502331e9e5daccae6e1ff7d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          848.0,
+          0.0
+        ],
+        [
+          848.0,
+          539.0
+        ],
+        [
+          0.0,
+          539.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "4f8cc4c3b416bec97ee6afc0da915c390552273f7b1e13485963693cdfc84ebd",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          343.0,
+          0.0
+        ],
+        [
+          343.0,
+          219.0
+        ],
+        [
+          0.0,
+          219.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "51abcce3d22e117cbaab8f516248eb6f3f34f0cd20560f269c28c688fb6af295",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          576.0,
+          0.0
+        ],
+        [
+          576.0,
+          369.0
+        ],
+        [
+          0.0,
+          369.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "51c9131b3c9841d255dec012a758ef317d5b90cd5313cb11faa0968029de10aa",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          294.0,
+          0.0
+        ],
+        [
+          294.0,
+          450.0
+        ],
+        [
+          0.0,
+          450.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "5259f3ab4e8f28b9e1e805f94668f8261f5d68400ae50e16d8d7e28f987e508b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          257.0,
+          0.0
+        ],
+        [
+          257.0,
+          162.0
+        ],
+        [
+          0.0,
+          162.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "52644ac2ad1ba6513d3cd2d693078b27195f8967334ebd322a6fe2a6dbbf2210",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          253.0,
+          0.0
+        ],
+        [
+          253.0,
+          162.0
+        ],
+        [
+          0.0,
+          162.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "52d7b86e9c6339d1919993cecde1e5e50fb2cd80979806d83fa2aaf730254270",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          686.0,
+          0.0
+        ],
+        [
+          686.0,
+          443.0
+        ],
+        [
+          0.0,
+          443.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "53b276c4d086eb9c5335a1c7ba7778f089ad50921c6a08f0ec76e6d619094aa0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          162.0,
+          0.0
+        ],
+        [
+          162.0,
+          253.0
+        ],
+        [
+          0.0,
+          253.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "55734715b9288ef3fe02399599ed9ffb622aade3e9d4b9408961ffbbd53b1c88",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          526.0,
+          0.0
+        ],
+        [
+          526.0,
+          807.0
+        ],
+        [
+          0.0,
+          807.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "57380c2f3a7418af80708c0ca875e995c039cf52ac1918e5e6745e76d193887c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          288.0,
+          0.0
+        ],
+        [
+          288.0,
+          175.0
+        ],
+        [
+          0.0,
+          175.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "57d16280996898d7ed12f4d56ceadd3bab17599898bb0ce4a6d74f3e94664c6c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          506.0,
+          0.0
+        ],
+        [
+          506.0,
+          319.0
+        ],
+        [
+          0.0,
+          319.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "57d2da93bfbfd055f2625418ab7292e43f320aeb81cd1df6ff60eb58f1321530",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          258.0,
+          0.0
+        ],
+        [
+          258.0,
+          407.0
+        ],
+        [
+          0.0,
+          407.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "583dad51c71b95e13113bea1e7c7d3954c96789bf13296dbdaceb11545b508cd",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          283.0,
+          0.0
+        ],
+        [
+          283.0,
+          443.0
+        ],
+        [
+          0.0,
+          443.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "589878129176981fe4cb1f4890e96192967b21020b2fea113c5f8d9259f0771c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          954.0,
+          0.0
+        ],
+        [
+          954.0,
+          602.0
+        ],
+        [
+          0.0,
+          602.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "58cb039d17e8412d938530efaa3d49419af5c142a1f408f0e8d828c175c6183b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1011.0,
+          0.0
+        ],
+        [
+          1011.0,
+          638.0
+        ],
+        [
+          0.0,
+          638.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "58f67bf5b5e05173bd2310a73557dfa77e9affbacd96d4e97ea8fbe832e25d92",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "59d4980d45e91190918b5b0f6ed4fb01b835b2257a076ce42619a3c0e69993fe",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          971.0,
+          0.0
+        ],
+        [
+          971.0,
+          612.0
+        ],
+        [
+          0.0,
+          612.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "5b977975c331c3f4b4c11bdfe8d710951fd78f1d6106b95dd3037c29e95962db",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          294.0,
+          0.0
+        ],
+        [
+          294.0,
+          450.0
+        ],
+        [
+          0.0,
+          450.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "5c0859708cb50bf4d5e63b90b4d282b5c8b0e89ec747acfa24a20c8fcedd7e14",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          485.0,
+          0.0
+        ],
+        [
+          485.0,
+          310.0
+        ],
+        [
+          0.0,
+          310.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "5c79bc2c2a4307069aa3edfcfbbba33ed950fa9b828835d986d71c484d0b2262",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1000.0,
+          0.0
+        ],
+        [
+          1000.0,
+          633.0
+        ],
+        [
+          0.0,
+          633.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "5c8302d465fa2f29d0d9555b0f52a97d413579d0150b79f4216b87f01478002b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          344.0,
+          0.0
+        ],
+        [
+          344.0,
+          217.0
+        ],
+        [
+          0.0,
+          217.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "5d3edf9b74d832e04cce1e23c7c8c8771627e4d0c4156d62957b50220de324b2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          359.0,
+          0.0
+        ],
+        [
+          359.0,
+          236.0
+        ],
+        [
+          0.0,
+          236.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "5ef398e1673dd8ab0e52d2a0b18333f903702ed30547661c2c7e77f4230f0802",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          600.0,
+          0.0
+        ],
+        [
+          600.0,
+          375.0
+        ],
+        [
+          0.0,
+          375.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6023541fbb4c81c812af86b45c16d7e8d26dbb8fc6f02122e1e48f61faf29f76",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          526.0,
+          0.0
+        ],
+        [
+          526.0,
+          330.0
+        ],
+        [
+          0.0,
+          330.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "60744360d367a5a365680b4331bc2308c1d59da4072f2f104bab18442292639e",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          763.0,
+          0.0
+        ],
+        [
+          763.0,
+          487.0
+        ],
+        [
+          0.0,
+          487.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "61ca9ed158ebba1608b27add20a937bba26d2634d2f9ed514582c0ca79f068a3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          524.0,
+          0.0
+        ],
+        [
+          524.0,
+          330.0
+        ],
+        [
+          0.0,
+          330.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "624e9abf72dde75f6fb6609f86f6b1e9ccbff477588f88068d0360781a4ac074",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          200.0,
+          0.0
+        ],
+        [
+          200.0,
+          120.0
+        ],
+        [
+          0.0,
+          120.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "62cfd82b6546fb1e1428ccc4db2541501d5929d9eab581cf4f8ec66474e154ae",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1013.0,
+          0.0
+        ],
+        [
+          1013.0,
+          640.0
+        ],
+        [
+          0.0,
+          640.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "62ffaa3f9f8e12631921d732dddff9ce4797635662610d594110e55834eb76da",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          531.0,
+          0.0
+        ],
+        [
+          531.0,
+          335.0
+        ],
+        [
+          0.0,
+          335.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "63b3762886cd1c5f36138b7d87e6854309fe8b83f0db70e611851be7ff470e81",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          721.0,
+          0.0
+        ],
+        [
+          721.0,
+          473.0
+        ],
+        [
+          0.0,
+          473.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6425cfe4f6e25b3378ebaaa87c63e6408837f797090d9e1ec7d0750b574d1b64",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          294.0
+        ],
+        [
+          0.0,
+          294.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6475c55e8abf07cf82ebd1f30fd49e64fc5c025a9cce18a351cf77e2633cdda3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          300.0,
+          0.0
+        ],
+        [
+          300.0,
+          188.0
+        ],
+        [
+          0.0,
+          188.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "64bf4061b91349bfa67cfb330b5a61328dc72fa2a6607fa0172ec7b664332ac9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          258.0,
+          0.0
+        ],
+        [
+          258.0,
+          407.0
+        ],
+        [
+          0.0,
+          407.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6617dd035883276d180d3d64be033f2e18b4bfe5f0e2d05582501204c7edc4ef",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6653b86da1e820ef95a0bdb2321529fdadf013f1d29f1887218054ec5a8d65dd",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          774.0,
+          0.0
+        ],
+        [
+          774.0,
+          486.0
+        ],
+        [
+          0.0,
+          486.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "67994991bb69c40d9d5a611dc838837f793da3fa62700cc2f7b7a614ce5d3890",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1013.0,
+          0.0
+        ],
+        [
+          1013.0,
+          638.0
+        ],
+        [
+          0.0,
+          638.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6a5da9d389ff17943390c682bc5c172f1293eb672e72031c8c0948edb2508c09",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6a839e3e70ac58ae9345e4bb6f6e1babd2f99995d7cbb01e1a4977a212af98ac",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          512.0,
+          0.0
+        ],
+        [
+          512.0,
+          315.0
+        ],
+        [
+          0.0,
+          315.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6a95145b94a622c10e14da68b5a8c6eecd20f6e29ad2513297b51903aeb17644",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1011.0,
+          0.0
+        ],
+        [
+          1011.0,
+          638.0
+        ],
+        [
+          0.0,
+          638.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6acd3a34ae9ff80121f96da0de02bf07b8f7786ae1559626b7311d0b18df58b4",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          528.0,
+          0.0
+        ],
+        [
+          528.0,
+          342.0
+        ],
+        [
+          0.0,
+          342.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6ad6454002d505b74716272f68a66849387cbce87aedefceae9b4eb8957e9916",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          132.0,
+          0.0
+        ],
+        [
+          132.0,
+          211.0
+        ],
+        [
+          0.0,
+          211.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6af668861583a8bea0bff4e2ca613ef4542a19d1d9f0a0c0fb18c99423f75211",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          294.0
+        ],
+        [
+          0.0,
+          294.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6b7279c6322bfe44fc847b4b029e2a80732b9b7affa3be7f60656dd3152954d6",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          318.0,
+          0.0
+        ],
+        [
+          318.0,
+          505.0
+        ],
+        [
+          0.0,
+          505.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6baaa6d4197407726af12eb1c8a9a49675d2c772e137c847b2446a415319f484",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          506.0,
+          0.0
+        ],
+        [
+          506.0,
+          319.0
+        ],
+        [
+          0.0,
+          319.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6bb97f359736250a94e702d8a8ef6ef34046a51f830435be6b91d27748b8b5c2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          298.0,
+          0.0
+        ],
+        [
+          298.0,
+          187.0
+        ],
+        [
+          0.0,
+          187.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6bc7e55f682aaed836d8f7aa04b0f03ce0cea3d44588ab56a4c36f87be8c7c07",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6c505172aebaaad89c553b3e6a30fc1939687616944c4d99e535babacebf8019",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1062.0,
+          0.0
+        ],
+        [
+          1062.0,
+          681.0
+        ],
+        [
+          0.0,
+          681.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6d5a41acb57f2daca109584374c5bd427a0c48337dbb95da950f0b03c1a9c9fb",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          456.0,
+          0.0
+        ],
+        [
+          456.0,
+          310.0
+        ],
+        [
+          0.0,
+          310.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6db9c9268c5c4e52efb5b70dd8fb03891563d02df059aa72f2df8d1e8221d2af",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          164.0,
+          0.0
+        ],
+        [
+          164.0,
+          253.0
+        ],
+        [
+          0.0,
+          253.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6e12ad06ad703a0e0a3c954b493f2f4021fa456ac5691c8d4592d9690ee78e3f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          147.0,
+          0.0
+        ],
+        [
+          147.0,
+          233.0
+        ],
+        [
+          0.0,
+          233.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6f2e4ce5094e12d5e88ff9733db1100902ea10bbaa4d603f7ecb3426e06c8c20",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          282.0,
+          0.0
+        ],
+        [
+          282.0,
+          448.0
+        ],
+        [
+          0.0,
+          448.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6f3ae3dc902a98ae98d7a851f0cbd34f03301613f1c428ce32714c98592299a5",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          407.0,
+          0.0
+        ],
+        [
+          407.0,
+          262.0
+        ],
+        [
+          0.0,
+          262.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "6f46c5088048d5fe5922a6fa92fc92a1c501d933a2cbbb01be49a0226e83aaee",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          638.0,
+          0.0
+        ],
+        [
+          638.0,
+          1011.0
+        ],
+        [
+          0.0,
+          1011.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7004401e5e370de57d4b728adab0de64bedf4099228d254f3bb0cc6011b06f05",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          369.0,
+          0.0
+        ],
+        [
+          369.0,
+          235.0
+        ],
+        [
+          0.0,
+          235.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "70ac7f2e762a364e6edb07fab7d903fa3f4b68adb1638ec45bc2436d976c0497",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          373.0,
+          0.0
+        ],
+        [
+          373.0,
+          237.0
+        ],
+        [
+          0.0,
+          237.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7221f368ba722badde5e508860a316446090518b59e3135e60c2caefff26c6d4",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1021.0,
+          0.0
+        ],
+        [
+          1021.0,
+          647.0
+        ],
+        [
+          0.0,
+          647.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "72bc246a4e28aef28e5dd0c98864e8ad8963bcc2ada4772b743da19bce646f9a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          164.0,
+          0.0
+        ],
+        [
+          164.0,
+          255.0
+        ],
+        [
+          0.0,
+          255.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "730071b10ba5a2f612cde9c158ec5c6244400b24a944bb0c395ce0d1ffdc34a4",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          473.0,
+          0.0
+        ],
+        [
+          473.0,
+          721.0
+        ],
+        [
+          0.0,
+          721.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "73ba70b9c8bad6eb6adabd3922d30fa375ded327ea8fb89f03902af05bc9daa2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1317.0,
+          0.0
+        ],
+        [
+          1317.0,
+          835.0
+        ],
+        [
+          0.0,
+          835.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "73e33f624fef5d0929d6eac9001440e124dec6e7d5a2ec3569511cc58f28b2a2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          162.0,
+          0.0
+        ],
+        [
+          162.0,
+          253.0
+        ],
+        [
+          0.0,
+          253.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "74c9021321114186c45ea03161fd5be3d38be7403065171435e4907029e25a13",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          583.0,
+          0.0
+        ],
+        [
+          583.0,
+          933.0
+        ],
+        [
+          0.0,
+          933.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "74ccd7c5dfbb27c58ba2b2258541e050ec083b6f9c51215d981c47aeacbc0ab0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          211.0,
+          0.0
+        ],
+        [
+          211.0,
+          132.0
+        ],
+        [
+          0.0,
+          132.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "74fd05130df99320a166b292d33d56fa07861c2b40171eac4ec724714a4afdcc",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          412.0,
+          0.0
+        ],
+        [
+          412.0,
+          267.0
+        ],
+        [
+          0.0,
+          267.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "751446daf9588c45b2ad7b842aceac0a9a51710004ea088e865d4e772f746dab",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7566ce4ee8aedfd6f475df39e5c621f3c41f06b57bee56a081d8532ad3a3dd42",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          634.0,
+          0.0
+        ],
+        [
+          634.0,
+          1000.0
+        ],
+        [
+          0.0,
+          1000.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "77830d1005d266ce2eec8de7ec98fb8a12e657a9a4c40e4bb9d8185b138e8267",
+      "corners": [
+        [
+          12.0,
+          12.0
+        ],
+        [
+          250.0,
+          12.0
+        ],
+        [
+          250.0,
+          389.0
+        ],
+        [
+          12.0,
+          389.0
+        ]
+      ],
+      "basis": "visual_card_corners"
+    },
+    {
+      "original_asset_sha256": "7b1aa5659501bf3e5095983f9e45cbadc5d092323f7f7fa2137cab6164aa43ab",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7b4191f9460d169f8994d9ccf9320456d8a439eca0d906dae23186e9c889a62c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7c8949c170cf6c0a484f7970372eb338988d3d371402ea7433540591a08574e4",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          308.0,
+          0.0
+        ],
+        [
+          308.0,
+          187.0
+        ],
+        [
+          0.0,
+          187.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7d21903fb21d195325e378f1bd90f30213355bdff2222a083ccdaa6bdc03758d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          255.0,
+          0.0
+        ],
+        [
+          255.0,
+          162.0
+        ],
+        [
+          0.0,
+          162.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7d36ec07e23f7f6411aca3f32669e9ca28d89c599c9d76c4f5968c0c26ee8e5f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          469.0,
+          0.0
+        ],
+        [
+          469.0,
+          742.0
+        ],
+        [
+          0.0,
+          742.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7e0fa803e602c35bc1a55693cdfcbd4a6f68aff5c5c2587a5217572961171fd9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          156.0,
+          0.0
+        ],
+        [
+          156.0,
+          246.0
+        ],
+        [
+          0.0,
+          246.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7f3488657de10001ddcf2cd791aef7278030dd10ef8f4e34cb3ac96edb669441",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          697.0,
+          0.0
+        ],
+        [
+          697.0,
+          439.0
+        ],
+        [
+          0.0,
+          439.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7f7a447fe0bb4b27b2b2098d0386428756c3bf5830a7bdf361c9ac64d0c42f65",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7f7be77ad2d8159d5b2a6889506f11f61be6911eece2fa25294639092b98c053",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          294.0
+        ],
+        [
+          0.0,
+          294.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "7f8b81d04b22a26e41e2343437ef1f26a878493792866830b18455fed8a13c34",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1021.0,
+          0.0
+        ],
+        [
+          1021.0,
+          647.0
+        ],
+        [
+          0.0,
+          647.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8000e1aa4952479c68d25ab26f48b0fee93b82e6f2361788e013adefda839802",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          424.0,
+          0.0
+        ],
+        [
+          424.0,
+          677.0
+        ],
+        [
+          0.0,
+          677.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "80497a089ea2ffb90b0139f648762d5e85f19e808e78f0de91684619c98af09f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          422.0,
+          0.0
+        ],
+        [
+          422.0,
+          272.0
+        ],
+        [
+          0.0,
+          272.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8118ca85025778c9da4972498dbcd84315a391b8a9c9344719f274b276e56a88",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          156.0,
+          0.0
+        ],
+        [
+          156.0,
+          246.0
+        ],
+        [
+          0.0,
+          246.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8154c3e3c02137eb133f7dec2c0aad4c963bf836a5ea7c7162e86634e1ee5a2d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          541.0,
+          0.0
+        ],
+        [
+          541.0,
+          346.0
+        ],
+        [
+          0.0,
+          346.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8191ac1822cd4bc0e620df2249f498dd322ceb2d2c1a4a9e216f5d1461e34690",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          764.0,
+          0.0
+        ],
+        [
+          764.0,
+          481.0
+        ],
+        [
+          0.0,
+          481.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8192950e5814ca45c585e7e0bc941e571d0d8e871b762561aed75fe61d82c642",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          379.0,
+          0.0
+        ],
+        [
+          379.0,
+          600.0
+        ],
+        [
+          0.0,
+          600.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "81f922734d74b8aaeb93077d386940b8546c92b2753ef91dd09bcb5086b09504",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          163.0,
+          0.0
+        ],
+        [
+          163.0,
+          267.0
+        ],
+        [
+          0.0,
+          267.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "82dac51ae2be67b0a1612a835b276a1b35fb6c97bd56094fa4283a92a85c570c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          896.0,
+          0.0
+        ],
+        [
+          896.0,
+          568.0
+        ],
+        [
+          0.0,
+          568.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "83b157de66631dbf953ea7feee8169c14bfd03b41a6ebe4f347d871ede5935bf",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          431.0,
+          0.0
+        ],
+        [
+          431.0,
+          682.0
+        ],
+        [
+          0.0,
+          682.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "83d4f17f64276c6db7ae69ef9398cab39b3ad641e9d9b33c2b7805629bde9da6",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          318.0,
+          0.0
+        ],
+        [
+          318.0,
+          200.0
+        ],
+        [
+          0.0,
+          200.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8406d410ffea4ad3e54f4947db4658b06d64bfbe58ea398b9bfa7915e2ec4713",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          444.0,
+          0.0
+        ],
+        [
+          444.0,
+          283.0
+        ],
+        [
+          0.0,
+          283.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "844a34101234be0677d8fc54f5ebcdcfa57028961658bf780c422828b6ef503b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          721.0,
+          0.0
+        ],
+        [
+          721.0,
+          473.0
+        ],
+        [
+          0.0,
+          473.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "859cbb5bf0e4a728988151d2836a568dda47ee2ec6b7a6666d4aabf7ca21fdf5",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          642.0,
+          0.0
+        ],
+        [
+          642.0,
+          406.0
+        ],
+        [
+          0.0,
+          406.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "85fde02c45dcde588ee51e052247562f6cbba73da4659dcca036f8e95c36d024",
+      "corners": [
+        [
+          165.0,
+          834.0
+        ],
+        [
+          534.0,
+          842.0
+        ],
+        [
+          527.0,
+          1098.0
+        ],
+        [
+          161.0,
+          1085.0
+        ]
+      ],
+      "basis": "visual_card_corners"
+    },
+    {
+      "original_asset_sha256": "86d789d40fbcbe776155a11a078fdefc61322519e05ea0840f13808e4bf91bfb",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          162.0,
+          0.0
+        ],
+        [
+          162.0,
+          255.0
+        ],
+        [
+          0.0,
+          255.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "86f7e1aab9e7a7c199dd0ef76cd48aee373e6422676beaae6d55ca26b4ea0e8c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          528.0,
+          0.0
+        ],
+        [
+          528.0,
+          342.0
+        ],
+        [
+          0.0,
+          342.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8730046706d27c9302446853a978d23224a9c0b97c2cd5de5f9ef1d2032a85c1",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          294.0
+        ],
+        [
+          0.0,
+          294.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8742452b0f11c7f46dd48b5bcd120cc14749edb2a6ff198af6f8b1ea76783a34",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          396.0,
+          0.0
+        ],
+        [
+          396.0,
+          621.0
+        ],
+        [
+          0.0,
+          621.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "878762c7e27e8ab779a14d83a8feda75dd5c2957b8497a3652cd8d6de7909132",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8824fe4febfa7853c9caeacdb22f42b4c371752d4728889d16a1677ddd7b6a85",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          435.0,
+          0.0
+        ],
+        [
+          435.0,
+          285.0
+        ],
+        [
+          0.0,
+          285.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "89050143bb21e10915c638a44080d9b2d2097440fb712a3fe51d53c3a0d2bf8a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          448.0,
+          0.0
+        ],
+        [
+          448.0,
+          287.0
+        ],
+        [
+          0.0,
+          287.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "89d0b23d7b08ac59c540e18c330ad270ff671489e0b696891042d95257dcd2a5",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1180.0,
+          0.0
+        ],
+        [
+          1180.0,
+          745.0
+        ],
+        [
+          0.0,
+          745.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8a11a9d3f759ec61f4fecc9ba67e5d3ebf7d42ecd07ea647a81e2b54f4094d4e",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          247.0,
+          0.0
+        ],
+        [
+          247.0,
+          155.0
+        ],
+        [
+          0.0,
+          155.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8a51edb9cc8b3c584e1f4a6e606058de0f9df86312b9b2a85026d2ea50c4d176",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          369.0,
+          0.0
+        ],
+        [
+          369.0,
+          235.0
+        ],
+        [
+          0.0,
+          235.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8a66974dd4192f4845dc4b38865da8f8db050ba19662aab24b6039382632ad13",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          600.0,
+          0.0
+        ],
+        [
+          600.0,
+          379.0
+        ],
+        [
+          0.0,
+          379.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8aead2d8a923b8870459e18f4c446be2a27ed29a7bbee8da95a18062c19d6ffe",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8b56f55d62b235cfb80d48f5b142b8e2bb3cec9cf7735ec8cacde43394b0c6ca",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1013.0,
+          0.0
+        ],
+        [
+          1013.0,
+          639.0
+        ],
+        [
+          0.0,
+          639.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8ca67cc98ca262f03a7b83a90796d17cdf73b830825db35dd086107abb8e3098",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          409.0,
+          0.0
+        ],
+        [
+          409.0,
+          263.0
+        ],
+        [
+          0.0,
+          263.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8de80f39d8f058d0eec7c4b41f0a1e716f370619c940a303773a49fb40a812b3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          295.0,
+          0.0
+        ],
+        [
+          295.0,
+          450.0
+        ],
+        [
+          0.0,
+          450.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8e502fc63ce9936e5974ab0748b77e2e8e4f962baef7fb9c2fcf11c29f7bf811",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          256.0,
+          0.0
+        ],
+        [
+          256.0,
+          399.0
+        ],
+        [
+          0.0,
+          399.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8e72e23b6c08861739e8ff046ccbbbc6c246052c78c2b7e2d5258c2dd9f1c10e",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1080.0,
+          0.0
+        ],
+        [
+          1080.0,
+          690.0
+        ],
+        [
+          0.0,
+          690.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8e8bdec3e9da865e10a3c85da8029377f1b3f0280552ca45349e4e29f4a80154",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          210.0,
+          0.0
+        ],
+        [
+          210.0,
+          128.0
+        ],
+        [
+          0.0,
+          128.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "8eddd65ee6b1693041250b67f0e159fe93afe3819d9f298494c56c49dba225ca",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          127.0,
+          0.0
+        ],
+        [
+          127.0,
+          207.0
+        ],
+        [
+          0.0,
+          207.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "900cbe1ee8b359cbb72c88d75c6b4277a492c4850cae2f8fcbbd55c8eb6d9496",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          630.0,
+          0.0
+        ],
+        [
+          630.0,
+          1000.0
+        ],
+        [
+          0.0,
+          1000.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "90363d8f8feedd073f153d391e6a0b40587d68337f9511a53d0f169de90d63fe",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1664.0,
+          0.0
+        ],
+        [
+          1664.0,
+          1059.0
+        ],
+        [
+          0.0,
+          1059.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9061977635fac07df5c54b68f0e4764bb1c122fab7e6eb197ed9ee5de411d643",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          171.0,
+          0.0
+        ],
+        [
+          171.0,
+          271.0
+        ],
+        [
+          0.0,
+          271.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "906e76704de16b5371fdc78e0069b9821c598a663770dade1c96c2ee65cd33bc",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          226.0,
+          0.0
+        ],
+        [
+          226.0,
+          144.0
+        ],
+        [
+          0.0,
+          144.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "91862c6574335dc887100fc5b8de470a0e8a5c69436e85d4e3022a89d7eca13e",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          283.0,
+          0.0
+        ],
+        [
+          283.0,
+          443.0
+        ],
+        [
+          0.0,
+          443.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "918aeef0b3658adfbc868746a3d073cc444281fe1b16a6245a4474b1f3e51111",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1013.0,
+          0.0
+        ],
+        [
+          1013.0,
+          641.0
+        ],
+        [
+          0.0,
+          641.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9191ee7089471a8b2876b76792ea4e2fb13cf04aba7dadb7d1c78d03c6546c58",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          449.0,
+          0.0
+        ],
+        [
+          449.0,
+          283.0
+        ],
+        [
+          0.0,
+          283.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9290918a1ffb87ec860d6c5570e0794cb7d7b9b1ae1807148650d0721b91ddba",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          942.0,
+          0.0
+        ],
+        [
+          942.0,
+          587.0
+        ],
+        [
+          0.0,
+          587.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "92f4078acd5a739aafc2075f81f2588027860376ac72025c25894b05f9a149d4",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          473.0,
+          0.0
+        ],
+        [
+          473.0,
+          721.0
+        ],
+        [
+          0.0,
+          721.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "93439fa4b6796b0a347e38c053308930a5dfa10d3fec0582d98fdf47b6d97582",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "94c63f461f44cf89a99d734afe9ca40a019d73fd402b8a607ec2785ae90bee2d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9584abab1d5f836b802d586aa09842ff49518363af12f680cb9d38abe0341e3a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          852.0,
+          0.0
+        ],
+        [
+          852.0,
+          1283.0
+        ],
+        [
+          0.0,
+          1283.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "95d895ed1a398aab657708c1b001a6c6e1c4552ce446f8b0f8b670344ed868ce",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          845.0,
+          0.0
+        ],
+        [
+          845.0,
+          533.0
+        ],
+        [
+          0.0,
+          533.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "96200802aafc76c605d11955107460b1e4ce57c0a6b45475caf7ab7b73fcfbb6",
+      "corners": [
+        [
+          105.0,
+          0.0
+        ],
+        [
+          1815.0,
+          0.0
+        ],
+        [
+          1815.0,
+          1080.0
+        ],
+        [
+          105.0,
+          1080.0
+        ]
+      ],
+      "basis": "visual_card_corners"
+    },
+    {
+      "original_asset_sha256": "98c2181746efb9d3b8a6ffb68df7314156a7734a5676cfe19a37d29cdfafc4a7",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          143.0,
+          0.0
+        ],
+        [
+          143.0,
+          228.0
+        ],
+        [
+          0.0,
+          228.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "98e49ae5d3ebb1edc552b0be4a1a622e1ab939b385d600f37a21de71c4f14095",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9a7a9339db83a4bfeae347537b8ad7766496d60e8bd77f3d8b57162510fc8537",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          344.0,
+          0.0
+        ],
+        [
+          344.0,
+          215.0
+        ],
+        [
+          0.0,
+          215.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9b8b8a520b796c4a09cdc31afdc3d435208033b03761c5141b00e1d08102146f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1024.0,
+          0.0
+        ],
+        [
+          1024.0,
+          672.0
+        ],
+        [
+          0.0,
+          672.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9bc90c725a9278dabbeed243d13558cce191299a336614315a65005196d48b9b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          294.0
+        ],
+        [
+          0.0,
+          294.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9bd926a7e910806f43c2a6c4e1edc14e34ced4c8cc58a1990292505480245352",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1128.0,
+          0.0
+        ],
+        [
+          1128.0,
+          706.0
+        ],
+        [
+          0.0,
+          706.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9c3e1bcd8def4373acc3edb939bd18f696851a9c1343e2687d3e450a54bc347a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1011.0,
+          0.0
+        ],
+        [
+          1011.0,
+          638.0
+        ],
+        [
+          0.0,
+          638.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9c424b8d00fde3f60f00eb6200c504460425eee78897e5cccaee66ad1dba1f64",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1011.0,
+          0.0
+        ],
+        [
+          1011.0,
+          638.0
+        ],
+        [
+          0.0,
+          638.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9cc11ccc4e88c570f21b4e37b0160ffdf17ce3903c99c07810dd7789b16bfd31",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          532.0,
+          0.0
+        ],
+        [
+          532.0,
+          807.0
+        ],
+        [
+          0.0,
+          807.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9cd026ff3c4e1e6e02b2090ac0e78f71439d72f0f1904b1a29994feaeb3cf277",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1021.0,
+          0.0
+        ],
+        [
+          1021.0,
+          647.0
+        ],
+        [
+          0.0,
+          647.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9cf2372c50cdf76c0f3525be1beafe0a47346cb1788748e9e651c3c93266127b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          525.0,
+          0.0
+        ],
+        [
+          525.0,
+          330.0
+        ],
+        [
+          0.0,
+          330.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9dd062b52ac476e54d85c49e903e5cec8db390b9064610fb3d9cd716572580d0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          319.0,
+          0.0
+        ],
+        [
+          319.0,
+          511.0
+        ],
+        [
+          0.0,
+          511.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9eb58274e8236ee412ab8680f19994129766f4bb72e50f7a24b28bb3f00f01bf",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "9f6b311c8c54d3a0a8b25bd1f8c9540b982d949bdc3ad0d48ff3700388afe5e1",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          319.0,
+          0.0
+        ],
+        [
+          319.0,
+          506.0
+        ],
+        [
+          0.0,
+          506.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a05cf3c89614891314866fa9ae7f35ed42454a25191f6a1f96235a5c2fabb538",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a13c20b7e8dfd02449bd41c8f43432bfcef61dbb8932a51c64a48ef35c01d3d6",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          361.0,
+          0.0
+        ],
+        [
+          361.0,
+          237.0
+        ],
+        [
+          0.0,
+          237.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a1de2f2507a402a1857117cf287b0402b0d0148f732f29dc5bf969bac38daacb",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          699.0,
+          0.0
+        ],
+        [
+          699.0,
+          1103.0
+        ],
+        [
+          0.0,
+          1103.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a2b7ae17a8bf37015f1a619134d9319f05a23cba53a166a6fae84d35b06bc5d3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          715.0,
+          0.0
+        ],
+        [
+          715.0,
+          470.0
+        ],
+        [
+          0.0,
+          470.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a2ed48ac4043128f05d1988a8c4025938acea2e2b2d435a61e9536d9004793d9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          325.0,
+          0.0
+        ],
+        [
+          325.0,
+          205.0
+        ],
+        [
+          0.0,
+          205.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a31a1ecf5720315706b3f09c23cfc096a8862959f86a05ab9e31ad6c30d82f06",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          526.0,
+          0.0
+        ],
+        [
+          526.0,
+          330.0
+        ],
+        [
+          0.0,
+          330.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a3f57c6e2622e081af3307e953d56a4a507c6d1704fdd63febf31096e01fdefa",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          170.0,
+          0.0
+        ],
+        [
+          170.0,
+          267.0
+        ],
+        [
+          0.0,
+          267.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a52bc36998aa1c1a05f9615b153d4cdc7bf461e345eaa9bedf10ebff33e8530f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          422.0,
+          0.0
+        ],
+        [
+          422.0,
+          266.0
+        ],
+        [
+          0.0,
+          266.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a70bc2a7e3fca546992853575a3835fa290405da036cae683f5abaaee1db0082",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          283.0,
+          0.0
+        ],
+        [
+          283.0,
+          443.0
+        ],
+        [
+          0.0,
+          443.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a739f566a0dd4e8f0837e9aa4483fb124a18edfe935753d5f7c18eef8b8560e5",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          290.0,
+          0.0
+        ],
+        [
+          290.0,
+          450.0
+        ],
+        [
+          0.0,
+          450.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a76c746fbac4aac9c09809e81d794285025f9dc7089192a0b447a299b3769ac0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a81683f5bd4dfd198989d50db52427f900c007ad39498f1df3daf4a2dda2d6d6",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a8d19d3a8977fa354b738c89e02d8c51923b2bea4ac942fce929ee97573114bf",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a946d57fba945bad0ae4fd8624cf255d26300cf0daa6e6a5b2ef99251459eb85",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          169.0,
+          0.0
+        ],
+        [
+          169.0,
+          264.0
+        ],
+        [
+          0.0,
+          264.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a987340d118d1c799544e156b64ad853e7309312f6ad9e5c46dbbadffd51123b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "a9a9e8aeed6bdc33b04c3f23167aec07a6f0431527017f55139b1663b23582b7",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          410.0,
+          0.0
+        ],
+        [
+          410.0,
+          264.0
+        ],
+        [
+          0.0,
+          264.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "aa3c410573b571b9458460024d99040be051c7192178eeacb952f6920d01a3ec",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          303.0,
+          0.0
+        ],
+        [
+          303.0,
+          191.0
+        ],
+        [
+          0.0,
+          191.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "aa4d957675a51bf8f14aa1a4143823cdc414c68a5c7121b95c659dd58887b95a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1011.0,
+          0.0
+        ],
+        [
+          1011.0,
+          638.0
+        ],
+        [
+          0.0,
+          638.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "aaec477128ed70cbd3b9d6eb1a6de00f61520979496c33bd277425fa7b96358c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          903.0,
+          0.0
+        ],
+        [
+          903.0,
+          569.0
+        ],
+        [
+          0.0,
+          569.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "aaf0a1e3ab929bda589187e611392c4e78f132140ad3ef1ff958789c036f148f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "ab376c5c9dfffbd7929dd304e0d6a1e06677df4cd9b52b5a615e3f7ca5f7c793",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1075.0,
+          0.0
+        ],
+        [
+          1075.0,
+          675.0
+        ],
+        [
+          0.0,
+          675.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "abde2d33fad74ff8219a45878832095f830cc0fd0e78035627b1bcadf6e720a8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "abec713eee388ca24f3b0f7577c87fb91b344217efa73d39a1f1a7fccaaa6b1f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "ac47ee41e21d0dff897b80afdcf3752d95604d2b60db0a0e26f62e2f893f18da",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          237.0,
+          0.0
+        ],
+        [
+          237.0,
+          361.0
+        ],
+        [
+          0.0,
+          361.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "ad117aebcb3655fa207c08c7f589733f8e37b3bf25c6bfcf6d42c453aae07c4f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          297.0,
+          0.0
+        ],
+        [
+          297.0,
+          450.0
+        ],
+        [
+          0.0,
+          450.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "add6f37d1d41d76fc59554da7c8ae9b767deefe8de1045a5b82399c667cf83b3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          469.0,
+          0.0
+        ],
+        [
+          469.0,
+          742.0
+        ],
+        [
+          0.0,
+          742.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "addccc73a0f303ab42f73e0e23241e51da897192e014a470a7bcc15af3b46adf",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          409.0,
+          0.0
+        ],
+        [
+          409.0,
+          263.0
+        ],
+        [
+          0.0,
+          263.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "af77a1892c7b194a0d38ee9766b77dcacf228a05b2ed1cc6f26f2e99486e3193",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          153.0,
+          0.0
+        ],
+        [
+          153.0,
+          243.0
+        ],
+        [
+          0.0,
+          243.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "af8d7b3bb23c341302fe08b4d3c750f52965a594134c6755068bc2f4dd75888f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b03bf9610cf047ae425a9ef78f8bc88dc061edcea7d0fc587141a60ec9746ca7",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          523.0,
+          0.0
+        ],
+        [
+          523.0,
+          330.0
+        ],
+        [
+          0.0,
+          330.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b0b1f4a466e8977141dc9092f610eb60d3baf986f12e1e8971943fa8d889b7fd",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          236.0,
+          0.0
+        ],
+        [
+          236.0,
+          150.0
+        ],
+        [
+          0.0,
+          150.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b13e3c7d0d4e84c1bd09318f5512cc90511d2ca54b5b8db133ee94ab38305428",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1011.0,
+          0.0
+        ],
+        [
+          1011.0,
+          638.0
+        ],
+        [
+          0.0,
+          638.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b19498a582a2da214b81fa4bf83a52d76d2803c857f536e34084d21a87dc48ee",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          243.0,
+          0.0
+        ],
+        [
+          243.0,
+          153.0
+        ],
+        [
+          0.0,
+          153.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b1e50151f80f006629ea6927ccebdd95e8eebd9b91031c75c92c2e6500351580",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b2f791d58f29ce51f4450ec63d8d54dc26f3ccbffd4df5a43536cb419e4b3869",
+      "corners": [
+        [
+          8.0,
+          20.0
+        ],
+        [
+          514.0,
+          20.0
+        ],
+        [
+          514.0,
+          340.0
+        ],
+        [
+          8.0,
+          340.0
+        ]
+      ],
+      "basis": "visual_card_corners"
+    },
+    {
+      "original_asset_sha256": "b4a0b5c949f4c4e36a3ca59f863d9019215417c35cd6f9d0bfa4caef1433cb65",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          254.0,
+          0.0
+        ],
+        [
+          254.0,
+          164.0
+        ],
+        [
+          0.0,
+          164.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b615f8627bea4eb8f490c72df95a3ff3a560f767fd7a8990496635d3e472025a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          297.0,
+          0.0
+        ],
+        [
+          297.0,
+          450.0
+        ],
+        [
+          0.0,
+          450.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b65bbb54b3c0b85b2cf8af6e05f68bb35363e4b6bcf08808e2ad8d2b11dc413a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          882.0,
+          0.0
+        ],
+        [
+          882.0,
+          556.0
+        ],
+        [
+          0.0,
+          556.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b6f57d176206419e2c097ca1b14decdf55f0420fc323ad2abe244c348d68a649",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          125.0,
+          0.0
+        ],
+        [
+          125.0,
+          207.0
+        ],
+        [
+          0.0,
+          207.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b817431a0eee5d207c03d55fc418448915cf646219e347abdce3429a93a316f2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b8d91b90ad34083826395a2c76492425a07fb6afe0391d977e64e7f5092597ac",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          312.0,
+          0.0
+        ],
+        [
+          312.0,
+          194.0
+        ],
+        [
+          0.0,
+          194.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b9023cc52411c562a2766f6341963601b8ce0b3590aa56f70434250c15934453",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          532.0,
+          0.0
+        ],
+        [
+          532.0,
+          343.0
+        ],
+        [
+          0.0,
+          343.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b91305bf02d6b9be00f4b029fd079dff760612ea75fa8c7d2f644c1db692edd9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          476.0,
+          0.0
+        ],
+        [
+          476.0,
+          723.0
+        ],
+        [
+          0.0,
+          723.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b9a2077b4b739573003bef523d0db89e5937fa60e143984f83802742728c4900",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          342.0,
+          0.0
+        ],
+        [
+          342.0,
+          541.0
+        ],
+        [
+          0.0,
+          541.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "b9feabb89d86c6a96511676f6a99c7331668a8b7b03dcc19694a2b1b3ef9b446",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          318.0,
+          0.0
+        ],
+        [
+          318.0,
+          505.0
+        ],
+        [
+          0.0,
+          505.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "ba2f7280142aff31fd04517eb66fd65e3029ff5641141286d1963768edfd7684",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          642.0,
+          0.0
+        ],
+        [
+          642.0,
+          406.0
+        ],
+        [
+          0.0,
+          406.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "bbd1704802a3da341c41e3c0c43f8f84a7a07a101b6e97618d4015c0cf0b06b8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1000.0,
+          0.0
+        ],
+        [
+          1000.0,
+          633.0
+        ],
+        [
+          0.0,
+          633.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "bc54f9b5458dfe1d6cf79b003c8ca1635b9126de1ded6eb1f34ed7b048a4a90e",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          255.0,
+          0.0
+        ],
+        [
+          255.0,
+          162.0
+        ],
+        [
+          0.0,
+          162.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "bd755ca104360e3639e115dca237ee329e03ff1e26929ba5da64360f125126c8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          269.0,
+          0.0
+        ],
+        [
+          269.0,
+          168.0
+        ],
+        [
+          0.0,
+          168.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "be5a6b7427cb43f18f03653ce6ce79f75774c5d7dc730647c7c58324a7a1783c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          172.0,
+          0.0
+        ],
+        [
+          172.0,
+          272.0
+        ],
+        [
+          0.0,
+          272.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "be62c97eebc3d9b152a4727d859b0ec7c67cd1002270033e47e79f8d1147e551",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          369.0,
+          0.0
+        ],
+        [
+          369.0,
+          235.0
+        ],
+        [
+          0.0,
+          235.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "bedf4c6636d606c1ac0253c70f2d20c8b6e1864908d3435488a960db8e0c0db9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          284.0,
+          0.0
+        ],
+        [
+          284.0,
+          450.0
+        ],
+        [
+          0.0,
+          450.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "beed530cabe64dc1558a8517d57fca97810169675fc637405ab906b27d386374",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          613.0,
+          0.0
+        ],
+        [
+          613.0,
+          386.0
+        ],
+        [
+          0.0,
+          386.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "bf16af6744cdf909268da3629bc351a62629081e14d37c2f2c535ea0d787780f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          638.0,
+          0.0
+        ],
+        [
+          638.0,
+          1011.0
+        ],
+        [
+          0.0,
+          1011.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "bf1d0a12c157fd50dbb2ad0f662fc63c17fd1e9fb75ef7af88fa85e8d42bd89a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          180.0,
+          0.0
+        ],
+        [
+          180.0,
+          284.0
+        ],
+        [
+          0.0,
+          284.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "bf811831c34b770646353cf775227eb7149789b98d56f8323d7c4e045d88b2f0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          409.0,
+          0.0
+        ],
+        [
+          409.0,
+          263.0
+        ],
+        [
+          0.0,
+          263.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "bfc1871a6ad3dd980dfc22e2a98441b0af1c6373bbb5b0138240c0473a7696e3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          528.0,
+          0.0
+        ],
+        [
+          528.0,
+          330.0
+        ],
+        [
+          0.0,
+          330.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c055d917c15ff565c9aaa58e939c846f4b29649bf613c7b18e631a20fb735492",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          234.0,
+          0.0
+        ],
+        [
+          234.0,
+          152.0
+        ],
+        [
+          0.0,
+          152.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c078a016fcb1156a5da2acb715454f092393212609ec7391d309de108a01b3ac",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          693.0,
+          0.0
+        ],
+        [
+          693.0,
+          440.0
+        ],
+        [
+          0.0,
+          440.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c10094d2c80d6502289a5cea06b2057a1b8f12f974e5cb9ddabc8a7cc6277cf8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c135db3519a62c412a4089bc591d5526550d42b28f1232cd53fcfc17a03c14b9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          613.0,
+          0.0
+        ],
+        [
+          613.0,
+          386.0
+        ],
+        [
+          0.0,
+          386.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c1e60044b6ac50f0e300d92d3bb63c47b526fe1d0f43d1f10e1e86c48051914b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          319.0,
+          0.0
+        ],
+        [
+          319.0,
+          506.0
+        ],
+        [
+          0.0,
+          506.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c2f9dbae0bdff238187c8d28bbe0ff6cec5d341be553b4a1daea736723f6aff8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          768.0,
+          0.0
+        ],
+        [
+          768.0,
+          505.0
+        ],
+        [
+          0.0,
+          505.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c3ecc1b459e5380e883beb071f308cd80092b74b903ac82aff76f3a9d28df3ed",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          300.0,
+          0.0
+        ],
+        [
+          300.0,
+          188.0
+        ],
+        [
+          0.0,
+          188.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c3f76288cd8fec6125642fb5f4896c3b0cfbbb5d6cd19b11bd733f70fc379c6b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          319.0,
+          0.0
+        ],
+        [
+          319.0,
+          506.0
+        ],
+        [
+          0.0,
+          506.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c5d9031517d1de98adec9fa1158037fdae9a6e5a238570503b6a1ee4c872afac",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          843.0,
+          0.0
+        ],
+        [
+          843.0,
+          509.0
+        ],
+        [
+          0.0,
+          509.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c63309ba5409ef500f904000891e80f1f754d803f8e118f2dd303eafa12bc3e2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          151.0,
+          0.0
+        ],
+        [
+          151.0,
+          99.0
+        ],
+        [
+          0.0,
+          99.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c656bfccb2608c8c0db9f5446558864fa47172fa6d6f591f5a6efd4e8435c007",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          257.0,
+          0.0
+        ],
+        [
+          257.0,
+          162.0
+        ],
+        [
+          0.0,
+          162.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c66c4eaba68591b3c7e5fcd80adb5f933bbb9b3c1c09bc5fd68c06ba099248ea",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c8770f1793f78091bf75db0a761bc56ca1efe7eaa2967852c7da352e1862eafc",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          237.0,
+          0.0
+        ],
+        [
+          237.0,
+          361.0
+        ],
+        [
+          0.0,
+          361.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c8b589398db178f667ae21db90cd32ec6610ffe6db0432d2df4bf6e726ee6292",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          409.0,
+          0.0
+        ],
+        [
+          409.0,
+          259.0
+        ],
+        [
+          0.0,
+          259.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c8e539eb4299984f63c8f098dba1dccb013f60b31dac0b6eca8ff89fe6a06242",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          642.0,
+          0.0
+        ],
+        [
+          642.0,
+          406.0
+        ],
+        [
+          0.0,
+          406.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "c9817108b08934c068c7952d93033cefb51db81aff3f658f3739f8ecb074d24b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          192.0,
+          0.0
+        ],
+        [
+          192.0,
+          301.0
+        ],
+        [
+          0.0,
+          301.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "cc041d0ff46f12552206bd7af8ce5e8b029f7605a933d4b30c40957c6942f210",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          300.0,
+          0.0
+        ],
+        [
+          300.0,
+          188.0
+        ],
+        [
+          0.0,
+          188.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "cd3023e6d1cb0386575dc170304f3fd5ac5c9d6afccfc6f9e3f83d5d8caba5fc",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1075.0,
+          0.0
+        ],
+        [
+          1075.0,
+          675.0
+        ],
+        [
+          0.0,
+          675.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "cd6230d02fd1a3cfaf3699e902281987a0afb2e23940530c65d3113b45088b26",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1157.0,
+          0.0
+        ],
+        [
+          1157.0,
+          733.0
+        ],
+        [
+          0.0,
+          733.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "cdaeb2c8d7e6601d01f104bdffa1416945f2e7e295a585f8a468010ddac237ea",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1012.0,
+          0.0
+        ],
+        [
+          1012.0,
+          638.0
+        ],
+        [
+          0.0,
+          638.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "cee5799941f0e1d2e71dc28b04ab8d52b0648e87b773fa477b462a4cad8bc6a5",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          253.0,
+          0.0
+        ],
+        [
+          253.0,
+          162.0
+        ],
+        [
+          0.0,
+          162.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "cfb153fc74ed0006b5a80fa4de004e3d604bfb89b3e26ce5c59b2381b06036b9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          338.0,
+          0.0
+        ],
+        [
+          338.0,
+          219.0
+        ],
+        [
+          0.0,
+          219.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d0a4dbe1f0d821e7901f4e24b9a620e0f1cf7d3f8ea7a29e5780d08aa199e138",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1162.0,
+          0.0
+        ],
+        [
+          1162.0,
+          756.0
+        ],
+        [
+          0.0,
+          756.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d0f8e178d276dafb87f84efdc52f2dbcd027db284bddb8d5d52021caeec53e36",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          207.0,
+          0.0
+        ],
+        [
+          207.0,
+          125.0
+        ],
+        [
+          0.0,
+          125.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d1806f15bceaad82a9d1e235a7aa52f69c437fdbb126fdedcaa41fb7468459de",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          290.0,
+          0.0
+        ],
+        [
+          290.0,
+          458.0
+        ],
+        [
+          0.0,
+          458.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d23e0d74048b742411dcc565ac32e28e8754067536215842fe8ccafb43d7ff92",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          294.0
+        ],
+        [
+          0.0,
+          294.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d25a394c030cfd76219a6c50d5c8ecf924311dbe6f6f8b4fcf1d53492be62e3d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          170.0,
+          0.0
+        ],
+        [
+          170.0,
+          267.0
+        ],
+        [
+          0.0,
+          267.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d30eb649d97e34c22320ca87f4ef66fa36eb7568e51006a46a3dff7997ac6d0c",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          647.0,
+          0.0
+        ],
+        [
+          647.0,
+          1021.0
+        ],
+        [
+          0.0,
+          1021.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d35111fbd9e956eb21c6b816262733275f25702aa090216aa18718666002b2bf",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          504.0,
+          0.0
+        ],
+        [
+          504.0,
+          317.0
+        ],
+        [
+          0.0,
+          317.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d4d3c681e608444042a46428f9d80112df265ada12feba4799d0af677b1f4f82",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          531.0,
+          0.0
+        ],
+        [
+          531.0,
+          330.0
+        ],
+        [
+          0.0,
+          330.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d51be785bb84a817234049a3440d4dd3a10ed8e7bc4afe44d3d491542d53b131",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          667.0,
+          0.0
+        ],
+        [
+          667.0,
+          420.0
+        ],
+        [
+          0.0,
+          420.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d52699f00be5f6a80f3f3307db8e577582584ba3676ad3c0ad8f7f4f3db62d48",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d610fc74898f22ae9b842dd3ad158efbcf324ead3683af6bbb67befd6a1e0d9d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          694.0,
+          0.0
+        ],
+        [
+          694.0,
+          441.0
+        ],
+        [
+          0.0,
+          441.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d6619c3eed3717a521614394a16170689aedd2adcc5884d5c0aeea95f931d037",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          266.0,
+          0.0
+        ],
+        [
+          266.0,
+          172.0
+        ],
+        [
+          0.0,
+          172.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d68b7d608cc864f9f547d40e6053e23d5debd975a33d1a8542293867a0f6e791",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          409.0,
+          0.0
+        ],
+        [
+          409.0,
+          263.0
+        ],
+        [
+          0.0,
+          263.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d696c6ff00ea438bad395f3b00b0535c28b064f7204776c9cebe55ff8dd6b9cd",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          638.0,
+          0.0
+        ],
+        [
+          638.0,
+          1011.0
+        ],
+        [
+          0.0,
+          1011.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d83fdccfbd6a6a1369dce34c4b2dbae8fe67995d7feaefbebb78b25e1f2f582d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          133.0,
+          0.0
+        ],
+        [
+          133.0,
+          210.0
+        ],
+        [
+          0.0,
+          210.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d92d71d2b1258a459d74e84d116a316c5181bf7f5cd1f969e430632a93e7bcd9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          294.0
+        ],
+        [
+          0.0,
+          294.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "d9891094bf57b879f1deac8b5f6303351de3fa7b53943e23a5208a8bbc8ce997",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          300.0,
+          0.0
+        ],
+        [
+          300.0,
+          191.0
+        ],
+        [
+          0.0,
+          191.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "db1176e44a3ca0b775eded4a55438e27bfb6e21aeb85fbb46850245c46794d53",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          409.0,
+          0.0
+        ],
+        [
+          409.0,
+          263.0
+        ],
+        [
+          0.0,
+          263.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "db272c12149280f1c5ecba7fefad24a73bef475896becf382cef420bf0b1dde2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          647.0,
+          0.0
+        ],
+        [
+          647.0,
+          1021.0
+        ],
+        [
+          0.0,
+          1021.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "db3224efcc423559ca7e8240e596efad08818b6d1baa5ce228c608f18db4a5ee",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          275.0,
+          0.0
+        ],
+        [
+          275.0,
+          180.0
+        ],
+        [
+          0.0,
+          180.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "dd3bfe3d554008aee597e8de660697de0a473f786c641bfd24fc364c7545cff7",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1177.0,
+          0.0
+        ],
+        [
+          1177.0,
+          745.0
+        ],
+        [
+          0.0,
+          745.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "de11a16e09453aee1f382d5ba995952ff313e4694336a1caae186ca89c6d8e21",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          506.0,
+          0.0
+        ],
+        [
+          506.0,
+          321.0
+        ],
+        [
+          0.0,
+          321.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "de532d98fd2e714fa581beb673e8eb00719e9737422210f103f126f9dfc478fd",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          300.0,
+          0.0
+        ],
+        [
+          300.0,
+          188.0
+        ],
+        [
+          0.0,
+          188.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e1180499f2410a60a53f1db7d35e4142ae55c98b86f1641d804a059f0e668cd3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          309.0,
+          0.0
+        ],
+        [
+          309.0,
+          195.0
+        ],
+        [
+          0.0,
+          195.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e1b5f50084a0288c5c8e10539da1fe6525c88617cb269885e5543a4cd2979ca5",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          652.0,
+          0.0
+        ],
+        [
+          652.0,
+          1027.0
+        ],
+        [
+          0.0,
+          1027.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e1ee7c96404e5ca6fd294ac28e3a49cfa5429f217d1d2629fdfd34e453dd4a98",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          486.0,
+          0.0
+        ],
+        [
+          486.0,
+          310.0
+        ],
+        [
+          0.0,
+          310.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e2220fe60bb783b29bdac80bab8299424e3a3b98a84c76679943dbd7f3f8baec",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          537.0,
+          0.0
+        ],
+        [
+          537.0,
+          347.0
+        ],
+        [
+          0.0,
+          347.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e2925e6c81ac08f129a58fc703d6a16b1d93ce3a6a16b6939f4bb354d6f9743a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          235.0,
+          0.0
+        ],
+        [
+          235.0,
+          364.0
+        ],
+        [
+          0.0,
+          364.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e2ee17f5d104ea88ae84d28fcdfc4b094d886596f4aa03f5f214edc0b25f4cd5",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1013.0,
+          0.0
+        ],
+        [
+          1013.0,
+          638.0
+        ],
+        [
+          0.0,
+          638.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e325922e53985aab2efbf436c731b05552949fb81c84f92d9b29a1c80a0c87d2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          600.0,
+          0.0
+        ],
+        [
+          600.0,
+          375.0
+        ],
+        [
+          0.0,
+          375.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e3e98823d70e0ce885495cc6146b562675e0d43018a67f30e770349499f3e1b3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          647.0,
+          0.0
+        ],
+        [
+          647.0,
+          1021.0
+        ],
+        [
+          0.0,
+          1021.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e3ff4be64272167f2dc12b41af470cbe3b4e5835c93b82f92278ff5bd06695b8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          286.0
+        ],
+        [
+          0.0,
+          286.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e5580ba7b163de355af0aa884e664ef1db86506ffda4a7d6f80a7ed385aee7d1",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          294.0,
+          0.0
+        ],
+        [
+          294.0,
+          450.0
+        ],
+        [
+          0.0,
+          450.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e5c28e3ffc2514dd9ed9d1e58751dad1964a784dc21ab211132915a3b4ac0be3",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          246.0,
+          0.0
+        ],
+        [
+          246.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e5ca21b44d2bee7c5e03ebe17015ec8e33b9c6ea06806b924e5e28117edd763a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          283.0,
+          0.0
+        ],
+        [
+          283.0,
+          443.0
+        ],
+        [
+          0.0,
+          443.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e71bebef7824ef400c4cc7ef90623f44ffa96b738acabf3b086f0a4db92f3a3d",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1021.0,
+          0.0
+        ],
+        [
+          1021.0,
+          647.0
+        ],
+        [
+          0.0,
+          647.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "e82b93cb774e8b2374c93ac43a97f9c53030e496704d39414adfb4de2d15f350",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1010.0,
+          0.0
+        ],
+        [
+          1010.0,
+          632.0
+        ],
+        [
+          0.0,
+          632.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "ea822fb58012def3f3b188a8f6fc07d635d582a84b405017ff476a5f76cf283b",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          258.0,
+          0.0
+        ],
+        [
+          258.0,
+          407.0
+        ],
+        [
+          0.0,
+          407.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "eb003b786bc0a6c15a127e352765a880ea3ef913d5b86e1aa4386b728fbeb794",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1021.0,
+          0.0
+        ],
+        [
+          1021.0,
+          647.0
+        ],
+        [
+          0.0,
+          647.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "ec404c8c3eef903edc54544dc99f98d322c0442abb27c973dd73e3fec756fe31",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "ecfa0c9df7b1af654a03d5fb7cd671e41ff8abf612619404a24fa00b06afaf4f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          163.0,
+          0.0
+        ],
+        [
+          163.0,
+          255.0
+        ],
+        [
+          0.0,
+          255.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "ed1e6272c44c61eff4c375715ff7fd8d85c8529d08ed95861bf1235a8b8a1785",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          318.0,
+          0.0
+        ],
+        [
+          318.0,
+          505.0
+        ],
+        [
+          0.0,
+          505.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "ed5d0d6d023f6098c99f5cae9b0e38fede140279b4c9797019715572102f0c96",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          164.0,
+          0.0
+        ],
+        [
+          164.0,
+          253.0
+        ],
+        [
+          0.0,
+          253.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "ee06d54f4385ad71a783660f2b866b729ffd94ffd2f047b3d6360ccbe10cabb8",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          387.0,
+          0.0
+        ],
+        [
+          387.0,
+          612.0
+        ],
+        [
+          0.0,
+          612.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "efdd0cbce6bee5f41f6caae3cf6d2d7d7575c3072828cb986992937b60c130ca",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          247.0,
+          0.0
+        ],
+        [
+          247.0,
+          156.0
+        ],
+        [
+          0.0,
+          156.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f030b86a275ded1cd3e9be39d59f2152c451e2f5393c90b4f633e20e83b0dc70",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          263.0,
+          0.0
+        ],
+        [
+          263.0,
+          409.0
+        ],
+        [
+          0.0,
+          409.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f06a0355bd6187a4cb47eed25077c3382fa8efd04ad333143e7d919e5de483ad",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          638.0,
+          0.0
+        ],
+        [
+          638.0,
+          1011.0
+        ],
+        [
+          0.0,
+          1011.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f0e721c574fa50314d5aa0c62b0f8a970c60e04267a10633d73e988f341ea64f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          284.0
+        ],
+        [
+          0.0,
+          284.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f1d552ae0a4a970041408c876c2e321f71e38be09856242b07f85208a21a5a42",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          349.0,
+          0.0
+        ],
+        [
+          349.0,
+          220.0
+        ],
+        [
+          0.0,
+          220.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f1f1ce749eae7072f0d403341eca3ad7e7ce5f3b2136adc19cf74182003ee2fa",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          849.0,
+          0.0
+        ],
+        [
+          849.0,
+          1283.0
+        ],
+        [
+          0.0,
+          1283.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f23380e4bfecbf4c58df3c3e817fc8a88661bb4b4aae26877ddba50bea8117a2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1180.0,
+          0.0
+        ],
+        [
+          1180.0,
+          764.0
+        ],
+        [
+          0.0,
+          764.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f3e593108ed726f9bcfc6a76da26f7b6d85c7bdd8f092b6a3b4842fadc733e03",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          304.0,
+          0.0
+        ],
+        [
+          304.0,
+          192.0
+        ],
+        [
+          0.0,
+          192.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f481102b9759b7de53a625fd9218b173b6123f33c33faa49ba1e6655998fb706",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          588.0,
+          0.0
+        ],
+        [
+          588.0,
+          934.0
+        ],
+        [
+          0.0,
+          934.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f539fa83291d716cdd8ec609c1ae58df83bbdc05b4ded6739bc00bdfd65c13d0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          326.0,
+          0.0
+        ],
+        [
+          326.0,
+          479.0
+        ],
+        [
+          0.0,
+          479.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f695c270c436cd071692a02647083c0b02761dab10749ffde6e8e92e74c709c0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          225.0,
+          0.0
+        ],
+        [
+          225.0,
+          372.0
+        ],
+        [
+          0.0,
+          372.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f6ceba5f2511902ab53a61ffd287baf26bc857b6204a2810ef413da65e8804a2",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          721.0,
+          0.0
+        ],
+        [
+          721.0,
+          473.0
+        ],
+        [
+          0.0,
+          473.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f7a1e53a4680a2e060b4522200ab54f79b7c9dc35681bd1ac1c4ea442b0972fa",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          450.0,
+          0.0
+        ],
+        [
+          450.0,
+          294.0
+        ],
+        [
+          0.0,
+          294.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f81bdb9c51199765e646f52145c5905b3ab26ea3b0d953a6d0676cfb35982a95",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          407.0,
+          0.0
+        ],
+        [
+          407.0,
+          262.0
+        ],
+        [
+          0.0,
+          262.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f84b2fc076fec4075004f2d9fb6f31f2043c22368536bfb98b87a9d1e793d7a9",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1344.0,
+          0.0
+        ],
+        [
+          1344.0,
+          851.0
+        ],
+        [
+          0.0,
+          851.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f8ef0c0c8d2d9b75463ea7361448e15f92b5398096d63d7809add6ba12f11ac5",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          164.0,
+          0.0
+        ],
+        [
+          164.0,
+          253.0
+        ],
+        [
+          0.0,
+          253.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "f9ead2bb77d45da7fe2f372f8a4058a4f0c3099b11554c5527d9ca90f5c924bb",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          164.0,
+          0.0
+        ],
+        [
+          164.0,
+          253.0
+        ],
+        [
+          0.0,
+          253.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "fa52258a61d440505fc58ef909d525573cab52283b50ff2095cf797e82e25f4f",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1021.0,
+          0.0
+        ],
+        [
+          1021.0,
+          647.0
+        ],
+        [
+          0.0,
+          647.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "faa7e2c5aac2f28e8dbb29066ba6075b240c9a3cc1fc13546299e85957bd4ee0",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          325.0,
+          0.0
+        ],
+        [
+          325.0,
+          510.0
+        ],
+        [
+          0.0,
+          510.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "face9ded4dd089c6f98fb01bcf0f5ca6f3ea0e07903c3f4a18efdd6e78485529",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          316.0,
+          0.0
+        ],
+        [
+          316.0,
+          202.0
+        ],
+        [
+          0.0,
+          202.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "fb896fce783a234a6cae06e6b0b3c155273592e8b92bbcd2e9641b06aa09eddb",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1021.0,
+          0.0
+        ],
+        [
+          1021.0,
+          647.0
+        ],
+        [
+          0.0,
+          647.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "fc87471222ab6a394ad6c2db5b80a264a0e1896296e86937325bc7d0e4cac232",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          391.0,
+          0.0
+        ],
+        [
+          391.0,
+          244.0
+        ],
+        [
+          0.0,
+          244.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "fe86cc0654fa84e2c0971ef9afc8c4fe7da591fede498bad5d1891f2eaafe98a",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          403.0,
+          0.0
+        ],
+        [
+          403.0,
+          257.0
+        ],
+        [
+          0.0,
+          257.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    },
+    {
+      "original_asset_sha256": "ff94b487884bad2a1f13e6a943881df40a63ed8d93cb4eb949513423a41c6c18",
+      "corners": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          617.0,
+          0.0
+        ],
+        [
+          617.0,
+          413.0
+        ],
+        [
+          0.0,
+          413.0
+        ]
+      ],
+      "basis": "visual_native_extent"
+    }
+  ]
+}
