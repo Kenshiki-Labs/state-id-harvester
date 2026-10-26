@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ImageViewer from "./ImageViewer";
+import knowledgeData from "../../public/data/knowledge.json";
+import { knowledgeForSource, requestedReferenceIndex, type KnowledgeCatalog } from "../lib/knowledge-model";
+const publishedKnowledge = (knowledgeData as KnowledgeCatalog).documents;
 import type { Source } from "../lib/catalog-model";
 import { browserImageUrl, type GalleryState, type PublicSpecimen } from "../lib/specimens";
 
@@ -21,7 +24,7 @@ function ReferenceCard({ item, source, number, name, onOpen }: Readonly<{ item: 
       {failed ? <span className="reference-image-failure">Image unavailable. Open the viewer to try again.</span> : <img src={url} alt={`${name} source reference ${number}; research specimen, review pending`} loading="lazy" decoding="async" onError={() => setFailedUrls((previous) => previous.includes(url) ? previous : [...previous, url])} />}
       <span className="reference-open">View image <span aria-hidden="true">⤢</span></span>
     </button>
-    <figcaption><strong>Reference {String(number).padStart(2, "0")}</strong><span className="reference-status">{referenceStatus(normalized, normalizedFailed, item.state)}</span>
+    <figcaption><strong>Reference {String(number).padStart(2, "0")}</strong><span className="reference-status">{referenceStatus(normalized, normalizedFailed, item.state)}</span>{knowledgeForSource(publishedKnowledge, item.source_sha256).length > 0 && <button className="reference-guidance-link" type="button" onClick={onOpen}>Inspect image + source guidance ↗</button>}
       <details className="reference-provenance"><summary>Image provenance</summary>
         {source ? <p><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} ↗</a><br/><span>{source.hostname}</span></p> : <p>Source publication fingerprint retained. A matching citation is not available in this source index.</p>}
         <dl><dt>Collection</dt><dd>{item.state}</dd><dt>Reference ID</dt><dd>{item.id}</dd><dt>Source SHA-256</dt><dd>{item.source_sha256}</dd><dt>Reference PNG SHA-256</dt><dd>{normalization?.asset_sha256 ?? item.asset_sha256}</dd>{normalization && <><dt>Original image SHA-256</dt><dd>{item.asset_sha256}</dd><dt>Geometry basis</dt><dd>{normalization.boundary_basis === "visual_native_extent" ? "Native image extent (approximate)" : "Visually identified card corners"}</dd><dt>Canonical card grid</dt><dd>{normalization.width_px} × {normalization.height_px} px</dd></>}</dl>
@@ -38,6 +41,13 @@ function GalleryContent({ gallery, items, name, sources, onOpen }: Readonly<{ ga
 export default function SpecimenGallery({ state, name, sources, gallery }: Readonly<{ state: string; name: string; sources: Source[]; gallery: GalleryState }>) {
   const [selected, setSelected] = useState<number | null>(null);
   const items = gallery.items.filter((item) => item.state === state);
+  const requestHandled = useRef(false);
+  useEffect(() => {
+    if (gallery.loading || gallery.error || requestHandled.current) return;
+    requestHandled.current = true;
+    const requested = requestedReferenceIndex(items, window.location.search);
+    if (requested !== null) setSelected(requested);
+  }, [gallery.loading, gallery.error, items]);
   return <section className="reference-gallery" aria-label={`${name} reference images`} aria-busy={gallery.loading}>
     <div className="reference-gallery-heading"><h2>Reference images</h2>{!gallery.loading && !gallery.error && <span>{items.length} available</span>}</div>
     <GalleryContent gallery={gallery} items={items} name={name} sources={sources} onOpen={setSelected} />

@@ -22,6 +22,7 @@ export interface KnowledgeDocument {
   statement_count: number;
   interpretation_status: "unreviewed";
   statements: readonly KnowledgeStatement[];
+  references?: readonly { id: string; state: string; asset_sha256: string; source_page?: number }[];
 }
 export interface KnowledgeCatalog {
   schema_version: 1;
@@ -94,4 +95,41 @@ export function sourcePageUrl(value: string | null, page?: number): string | nul
   } catch {
     return null;
   }
+}
+
+
+export function knowledgeForSource(
+  documents: readonly KnowledgeDocument[], sourceSha256: string,
+): KnowledgeDocument[] {
+  return documents.filter((document) => document.source_sha256 === sourceSha256);
+}
+export function referenceContextUrl(document: KnowledgeDocument): string | null {
+  const reference = document.references?.[0];
+  if (!reference || !/^[A-Z]{2}$|^US_FED$/.test(reference.state)
+    || !/^[a-zA-Z0-9_-]{1,150}$/.test(reference.id)
+    || !/^[a-f0-9]{64}$/.test(document.source_sha256)) return null;
+  const collection = reference.state === "US_FED" ? "federal" : reference.state.toLowerCase();
+  return `/catalog/${collection}?source=${document.source_sha256}&reference=${reference.id}`;
+}
+export function requestedReferenceIndex(
+  items: readonly { id: string; source_sha256: string }[], search: string,
+): number | null {
+  const params = new URLSearchParams(search);
+  const source = params.get("source");
+  const reference = params.get("reference");
+  if (!source || !/^[a-f0-9]{64}$/.test(source)) return null;
+  const index = items.findIndex((item) => item.source_sha256 === source
+    && (!reference || item.id === reference));
+  return index < 0 ? null : index;
+}
+
+
+export function statementsByImagePage(
+  statements: readonly KnowledgeStatement[], page: number | undefined,
+): { samePage: KnowledgeStatement[]; broader: KnowledgeStatement[] } {
+  const knownPage = page !== undefined && Number.isSafeInteger(page) && page > 0;
+  return {
+    samePage: knownPage ? statements.filter((statement) => statement.evidence.some((item) => item.page_number === page)) : [],
+    broader: statements.filter((statement) => !knownPage || !statement.evidence.some((item) => item.page_number === page)),
+  };
 }

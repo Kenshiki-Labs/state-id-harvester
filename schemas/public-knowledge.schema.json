@@ -379,6 +379,14 @@
           ],
           "title": "Publisher"
         },
+        "references": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/PublicReference"
+          },
+          "title": "References",
+          "type": "array"
+        },
         "roles": {
           "items": {
             "enum": [
@@ -491,6 +499,52 @@
         "url"
       ],
       "title": "PublicEvidence",
+      "type": "object"
+    },
+    "PublicReference": {
+      "additionalProperties": false,
+      "properties": {
+        "asset_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Asset Sha256",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[A-Za-z0-9_-]{1,150}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "source_page": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Page"
+        },
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "state": {
+          "pattern": "^(?:[A-Z]{2}|US_FED)$",
+          "title": "State",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "state",
+        "source_sha256",
+        "asset_sha256"
+      ],
+      "title": "PublicReference",
       "type": "object"
     },
     "PublicStatement": {

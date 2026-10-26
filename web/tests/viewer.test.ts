@@ -51,3 +51,41 @@ describe("normalized image viewer", () => {
     expect(render(0)).toContain("Original reference · review pending");
   });
 });
+
+describe("paired source guidance in the image viewer", () => {
+  const document = {
+    source_sha256: item.source_sha256, title: "Same PDF, multiple designs", publisher: null,
+    collection: "Washington", source_url: "https://agency.gov/guide.pdf", roles: ["issuer_design_reference"],
+    statement_count: 1, interpretation_status: "unreviewed" as const,
+    statements: [{
+      statement_id: "k1", domain: "credential_design_security", kind: "assertion",
+      subject: "2018 enhanced design only", content: { name: "UV portrait", presence: "present" },
+      conditions: ["Enhanced variant"], exceptions: ["Legacy card excluded"],
+      effective_wording: "Beginning 2018", interpretation_status: "unreviewed" as const,
+      evidence: [{ page_number: 3, url: "https://agency.gov/guide.pdf" }],
+    }],
+  };
+  const paired = (source_sha256 = item.source_sha256) => renderToStaticMarkup(createElement(ImageViewer, {
+    items: [{ ...item, source_sha256 }], index: 0, name: "Washington", knowledge: [document],
+    onNavigate: () => {}, onClose: () => {},
+  }));
+  it("keeps the reference image beside explicitly source-level, qualified knowledge", () => {
+    const html = paired();
+    expect(html).toContain("viewer-body-paired");
+    expect(html).toContain('class="viewer-canvas"');
+    expect(html).toContain("Read this card in context.");
+    expect(html).toContain("Guidance from the same PDF");
+    expect(html).toContain("2018 enhanced design only");
+    expect(html).toContain("Enhanced variant");
+    expect(html).toContain("Legacy card excluded");
+    expect(html).toContain("Beginning 2018");
+    expect(html).toContain("Unreviewed interpretations");
+    expect(html).toContain('href="https://agency.gov/guide.pdf#page=3"');
+  });
+  it("does not attach another PDF’s guidance to a same-state image", () => {
+    const html = paired("c".repeat(64));
+    expect(html).not.toContain("viewer-body-paired");
+    expect(html).not.toContain("UV portrait");
+    expect(html).toContain("viewer-canvas");
+  });
+});

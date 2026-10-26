@@ -163,7 +163,10 @@ SOURCE_KEYS = re.compile(
     r'"(?:raw_text|ocr_text|image_data|raw_stream|font_outlines|text_blocks|data_uri)"\s*:',
     re.IGNORECASE,
 )
-PUBLIC_SPECIMEN_PATH = re.compile(r"/v1/specimens/(?:[A-Z]{2}|US_FED)/[A-Za-z0-9_-]{1,150}")
+PUBLIC_SPECIMEN_PATH = re.compile(
+    r"/v1/specimens/(?:[A-Z]{2}|US_FED)/[A-Za-z0-9_-]{1,150}"
+    r"(?:\?view=(?:thumbnail|display)&v=[a-f0-9]{64})?"
+)
 PUBLIC_STATE_ARTWORK_PATHS = {f"/artwork/states/{code}.svg" for code in STATE_DOMAINS}
 
 

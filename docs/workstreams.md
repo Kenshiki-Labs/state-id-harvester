@@ -106,7 +106,12 @@ No Docling, Unstructured, OCR or new harvesting sweep is active.
 ## Public knowledge viewer release
 
 The first eight grounded records are exported through an explicit strict public
-projection to `/knowledge`. Search and domain filters expose normalized statements,
+projection. The collection image viewer keeps each selected card beside guidance
+from its exact source publication, prioritizing claims citing the image’s PDF page.
+All eight publications link to 63 existing reference images. Subject/design/side
+applicability remains unreviewed; publication matching does not establish it.
+The `/knowledge` index links directly into this paired inspection view.
+Search and domain filters expose normalized statements,
 subject scopes, conditions, exceptions, historical publication wording, and PDF
 page citations. Every interpretation remains unreviewed. Native quote packets,
 source originals, and private storage paths stay in private storage.
@@ -114,10 +119,13 @@ source originals, and private storage paths stay in private storage.
 Regenerate the viewer payload with:
 
 ```sh
-.venv/bin/python scripts/export_public_knowledge.py <selected-records.json ...> \
-  --native-packets output/domain-classification/native-text
+.venv/bin/python scripts/export_public_knowledge.py <selected-output/knowledge-records.json ...>
 ```
 
+The exporter reads only digest-named records inside `output/knowledge`, using fixed
+managed catalog, specimen/page metadata, and public-output paths. Its specimen and
+normalization indexes are saved public API snapshots; page metadata is retained in
+`output/knowledge/reference-pages.json` with a private provenance receipt.
 The export validates each selected record against its native packet; public JSON
 is separately checked against the strict public projection schema by the publication
 guard. This first release does not claim complete extraction of the corpus.

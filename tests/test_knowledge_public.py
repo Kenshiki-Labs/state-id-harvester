@@ -235,3 +235,206 @@ def test_missing_safe_alias_yields_explicit_null_citation_instead_of_private_lin
     doc = project_document(load_knowledge(json.dumps(raw).encode()), "Example")
     assert doc.source_url is None
     assert all(e.url is None for e in doc.statements[0].evidence)
+
+
+@pytest.fixture
+def public_exporter():
+    import importlib.util
+    from pathlib import Path
+
+    script = Path(__file__).resolve().parents[1] / "scripts" / "export_public_knowledge.py"
+    spec = importlib.util.spec_from_file_location("public_knowledge_exporter_test", script)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_managed_record_allows_existing_digest_named_record(public_exporter, tmp_path):
+    root = tmp_path / "workspace"
+    path = root / "output" / "knowledge" / "run" / (SHA + ".json")
+    path.parent.mkdir(parents=True)
+    path.write_text("{}")
+    assert public_exporter.managed_record(path, root) == path.resolve()
+
+
+@pytest.mark.parametrize("escape", ["absolute", "traversal"])
+def test_managed_record_rejects_existing_file_outside_managed_knowledge(
+    public_exporter, tmp_path, escape
+):
+    root = tmp_path / "workspace"
+    allowed = root / "output" / "knowledge"
+    allowed.mkdir(parents=True)
+    outside = root / "output" / "unrelated" / (SHA + ".json")
+    outside.parent.mkdir()
+    outside.write_text("do not read this unrelated record")
+    candidate = outside if escape == "absolute" else allowed / ".." / "unrelated" / outside.name
+    with pytest.raises(ValueError):
+        public_exporter.managed_record(candidate, root)
+
+
+def test_managed_record_rejects_symlink_file_escape(public_exporter, tmp_path):
+    root = tmp_path / "workspace"
+    allowed = root / "output" / "knowledge"
+    allowed.mkdir(parents=True)
+    outside = tmp_path / "private-record.json"
+    outside.write_text("do not read this private record")
+    candidate = allowed / (SHA + ".json")
+    candidate.symlink_to(outside)
+    with pytest.raises(ValueError):
+        public_exporter.managed_record(candidate, root)
+
+
+def test_managed_record_rejects_symlink_parent_escape(public_exporter, tmp_path):
+    root = tmp_path / "workspace"
+    allowed = root / "output" / "knowledge"
+    allowed.mkdir(parents=True)
+    outside = tmp_path / "private-run"
+    outside.mkdir()
+    (outside / (SHA + ".json")).write_text("{}")
+    link = allowed / "run"
+    link.symlink_to(outside, target_is_directory=True)
+    with pytest.raises(ValueError):
+        public_exporter.managed_record(link / (SHA + ".json"), root)
+
+
+@pytest.mark.parametrize("filename", ["record.json", "a.json", "g" * 64 + ".json", SHA + ".txt"])
+def test_managed_record_rejects_wrong_record_filename(public_exporter, tmp_path, filename):
+    root = tmp_path / "workspace"
+    path = root / "output" / "knowledge" / filename
+    path.parent.mkdir(parents=True)
+    path.write_text("{}")
+    with pytest.raises(ValueError):
+        public_exporter.managed_record(path, root)
+
+
+def test_managed_record_rejects_missing_record(public_exporter, tmp_path):
+    root = tmp_path / "workspace"
+    allowed = root / "output" / "knowledge"
+    allowed.mkdir(parents=True)
+    with pytest.raises((ValueError, FileNotFoundError)):
+        public_exporter.managed_record(allowed / (SHA + ".json"), root)
+
+
+def test_managed_record_rejects_directory_disguised_as_record(public_exporter, tmp_path):
+    root = tmp_path / "workspace"
+    path = root / "output" / "knowledge" / (SHA + ".json")
+    path.mkdir(parents=True)
+    with pytest.raises(ValueError):
+        public_exporter.managed_record(path, root)
+
+
+def test_managed_record_rejects_symlink_even_when_target_stays_managed(public_exporter, tmp_path):
+    root = tmp_path / "workspace"
+    allowed = root / "output" / "knowledge"
+    allowed.mkdir(parents=True)
+    target = allowed / ("b" * 64 + ".json")
+    target.write_text("{}")
+    link = allowed / (SHA + ".json")
+    link.symlink_to(target)
+    with pytest.raises(ValueError):
+        public_exporter.managed_record(link, root)
+
+
+def test_managed_record_rejects_symlinked_knowledge_root(public_exporter, tmp_path):
+    root = tmp_path / "workspace"
+    (root / "output").mkdir(parents=True)
+    relocated = root / "relocated-knowledge"
+    relocated.mkdir()
+    (relocated / (SHA + ".json")).write_text("{}")
+    (root / "output" / "knowledge").symlink_to(relocated, target_is_directory=True)
+    with pytest.raises(ValueError):
+        public_exporter.managed_record(root / "output" / "knowledge" / (SHA + ".json"), root)
+
+
+def reference_payload():
+    return {
+        "id": "specimen_front-01",
+        "state": "WA",
+        "source_sha256": SHA,
+        "asset_sha256": "b" * 64,
+        "source_page": 2,
+    }
+
+
+def test_exact_matching_reference_images_survive_projection():
+    from state_id_harvester.knowledge_public import PublicReference
+
+    reference = PublicReference.model_validate_json(json.dumps(reference_payload()))
+    projected = project_document(
+        load_knowledge(json.dumps(private_record()).encode()), "Example", (reference,)
+    )
+    assert projected.references == (reference,)
+    assert projected.references[0].source_page == 2
+    assert projected.references[0].source_sha256 == projected.source_sha256
+    assert json.loads(projected.model_dump_json())["references"] == [reference_payload()]
+
+
+def test_reference_images_default_to_empty_without_inventing_association():
+    doc = public_payload()["documents"][0]
+    assert doc["references"] == []
+
+
+def test_reference_from_another_source_cannot_attach_to_public_document():
+    data = public_payload()
+    reference = reference_payload()
+    reference["source_sha256"] = "c" * 64
+    data["documents"][0]["references"] = [reference]
+    with pytest.raises(ValidationError):
+        admit(data)
+
+
+def test_duplicate_state_id_reference_rejected_even_with_different_asset_hash():
+    data = public_payload()
+    first = reference_payload()
+    second = dict(first, asset_sha256="c" * 64, source_page=3)
+    data["documents"][0]["references"] = [first, second]
+    with pytest.raises(ValidationError):
+        admit(data)
+
+
+@pytest.mark.parametrize(
+    "field,value",
+    [
+        ("id", ""),
+        ("id", "../secret"),
+        ("id", "/private/path"),
+        ("id", "x" * 151),
+        ("id", True),
+        ("id", 42),
+        ("state", "wa"),
+        ("state", "WASHINGTON"),
+        ("state", "W"),
+        ("state", True),
+        ("source_sha256", "a" * 63),
+        ("source_sha256", "g" * 64),
+        ("source_sha256", True),
+        ("source_sha256", 42),
+        ("asset_sha256", "A" * 64),
+        ("asset_sha256", "../asset"),
+        ("asset_sha256", None),
+        ("asset_sha256", 42),
+        ("source_page", 0),
+        ("source_page", -1),
+        ("source_page", "2"),
+        ("source_page", True),
+        ("source_page", 2.0),
+    ],
+)
+def test_invalid_reference_identifiers_hashes_and_page_types_rejected(field, value):
+    data = public_payload()
+    reference = reference_payload()
+    reference[field] = value
+    data["documents"][0]["references"] = [reference]
+    with pytest.raises(ValidationError):
+        admit(data)
+
+
+@pytest.mark.parametrize("state", ["WA", "US_FED"])
+def test_valid_reference_state_and_unknown_source_page_are_retained(state):
+    data = public_payload()
+    reference = dict(reference_payload(), state=state, source_page=None)
+    data["documents"][0]["references"] = [reference]
+    accepted = admit(data).documents[0].references[0]
+    assert accepted.state == state
+    assert accepted.source_page is None

@@ -17,6 +17,7 @@ from .knowledge import (
     Role,
     StatementContent,
     Text,
+    unique_ids,
 )
 
 
@@ -57,6 +58,14 @@ class PublicStatement(KnowledgeRecord):
         return self
 
 
+class PublicReference(KnowledgeRecord):
+    source_page: PositiveInt | None = None
+    id: Annotated[str, Field(pattern=r"^[A-Za-z0-9_-]{1,150}$")]
+    state: Annotated[str, Field(pattern=r"^(?:[A-Z]{2}|US_FED)$")]
+    source_sha256: Digest
+    asset_sha256: Digest
+
+
 class PublicDocument(KnowledgeRecord):
     source_sha256: Digest
     title: Text
@@ -66,6 +75,7 @@ class PublicDocument(KnowledgeRecord):
     collection: Text
     source_url: HttpUrl | None
     roles: tuple[Role, ...]
+    references: tuple[PublicReference, ...] = ()
     statement_count: Annotated[int, Field(strict=True, ge=0)]
     statements: tuple[PublicStatement, ...]
     interpretation_status: Literal["unreviewed"] = "unreviewed"
@@ -79,6 +89,9 @@ class PublicDocument(KnowledgeRecord):
     def accurate_count(self) -> Self:
         if self.statement_count != len(self.statements):
             raise ValueError("Public statement count mismatch")
+        unique_ids(tuple(f"{ref.state}/{ref.id}" for ref in self.references))
+        if any(ref.source_sha256 != self.source_sha256 for ref in self.references):
+            raise ValueError("Reference image source mismatch")
         base = str(self.source_url).split("#")[0] if self.source_url else None
         for statement in self.statements:
             for citation in statement.evidence:
@@ -100,7 +113,9 @@ class PublicKnowledge(KnowledgeRecord):
         return self
 
 
-def project_document(record: DocumentKnowledge, collection: str) -> PublicDocument:
+def project_document(
+    record: DocumentKnowledge, collection: str, references: tuple[PublicReference, ...] = ()
+) -> PublicDocument:
     """Allowlist fields from a grounded record; no source quote can be copied by default."""
     source_url = next(
         (
@@ -166,6 +181,7 @@ def project_document(record: DocumentKnowledge, collection: str) -> PublicDocume
         collection=collection,
         source_url=source_url,
         roles=record.source.roles,
+        references=references,
         statement_count=len(statements),
         statements=tuple(statements),
     )

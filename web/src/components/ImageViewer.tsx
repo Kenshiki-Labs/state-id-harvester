@@ -1,4 +1,7 @@
 import { useCallback, useEffect, useId, useRef, useState } from "react";
+import knowledgeData from "../../public/data/knowledge.json";
+import CardKnowledge from "./CardKnowledge";
+import { knowledgeForSource, type KnowledgeCatalog, type KnowledgeDocument } from "../lib/knowledge-model";
 import { browserImageUrl, normalizationUrl, specimenUrl, type PublicSpecimen } from "../lib/specimens";
 
 function ViewerImage({ url, name, number }: Readonly<{ url: string; name: string; number: number }>) {
@@ -13,7 +16,7 @@ function ViewerImage({ url, name, number }: Readonly<{ url: string; name: string
 }
 function keepDialogFocus(event: KeyboardEvent, dialog: HTMLDialogElement) {
   if (event.key !== "Tab") return;
-  const controls = Array.from(dialog.querySelectorAll<HTMLElement>("button:not(:disabled), a[href]"))
+  const controls = Array.from(dialog.querySelectorAll<HTMLElement>("button:not(:disabled), a[href], summary"))
     .filter((element) => element.getClientRects().length > 0);
   const first = controls[0], last = controls.at(-1);
   if (event.shiftKey && document.activeElement === first) {
@@ -25,13 +28,15 @@ function keepDialogFocus(event: KeyboardEvent, dialog: HTMLDialogElement) {
   }
 }
 const zoomLevels = [0, 1, 1.5, 2, 3, 4];
-export default function ImageViewer({ items, index, name, onNavigate, onClose }: Readonly<{ items: PublicSpecimen[]; index: number; name: string; onNavigate: (index: number) => void; onClose: () => void }>) {
+const publishedKnowledge = (knowledgeData as KnowledgeCatalog).documents;
+export default function ImageViewer({ items, index, name, onNavigate, onClose, knowledge = publishedKnowledge }: Readonly<{ items: PublicSpecimen[]; index: number; name: string; onNavigate: (index: number) => void; onClose: () => void; knowledge?: readonly KnowledgeDocument[] }>) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const title = useId();
   const caption = useId();
   const [zoom, setZoom] = useState(0);
   const item = items[index];
+  const guidance = item ? knowledgeForSource(knowledge, item.source_sha256) : [];
   const identity = item ? `${item.state}/${item.id}` : "";
   const [originalSelection, setOriginalSelection] = useState<string | null>(null);
   const normalized = Boolean(item?.normalization) && originalSelection !== identity;
@@ -97,7 +102,10 @@ export default function ImageViewer({ items, index, name, onNavigate, onClose }:
       {item.normalization && <fieldset className="viewer-variants" aria-label="Image version"><button type="button" aria-pressed={normalized} onClick={() => { setOriginalSelection(null); changeZoom(0); }}>ID-1</button><button type="button" aria-pressed={!normalized} onClick={() => { setOriginalSelection(identity); changeZoom(0); }}>Original</button></fieldset>}
       <div className="viewer-zoom"><button type="button" aria-label="Zoom out" disabled={zoom === 0} onClick={() => changeZoom(zoom - 1)}>−</button><output aria-live="polite">{zoom === 0 ? "Fit" : `${zoomLevels[zoom] * 100}%`}</output><button type="button" aria-label="Zoom in" disabled={zoom === zoomLevels.length - 1} onClick={() => changeZoom(zoom + 1)}>+</button><button type="button" disabled={zoom === 0} onClick={() => changeZoom(0)}>Fit</button></div>
     </div>
-    <div ref={canvasRef} className="viewer-canvas" data-zoom={zoomLevels[zoom]}><ViewerImage key={imageUrl} url={imageUrl} name={name} number={index + 1} /></div>
+    <div className={`viewer-body${guidance.length ? " viewer-body-paired" : ""}`}>
+      <div ref={canvasRef} className="viewer-canvas" data-zoom={zoomLevels[zoom]}><ViewerImage key={imageUrl} url={imageUrl} name={name} number={index + 1} /></div>
+      {guidance.length > 0 && <CardKnowledge documents={guidance} reference={item} />}
+    </div>
     <footer className="viewer-footer"><p id={caption}>{normalized ? "ID-1 normalized" : "Original reference"} · review pending</p><a href={fullImageUrl} download={`${item.state}-${item.id}${normalized ? "-id1" : ""}.png`}>Download PNG ↓</a></footer>
   </dialog>;
 }

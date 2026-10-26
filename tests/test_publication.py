@@ -643,3 +643,24 @@ def test_state_artwork_does_not_allow_active_image_attributes_or_embedded_raster
     artwork.parent.mkdir(parents=True)
     artwork.write_text('<svg data-cadastre-diagram="independent"><image href="private.png"/></svg>')
     assert guard.inspect_public_tree(tmp_path)
+
+
+@pytest.mark.parametrize("view", ["thumbnail", "display"])
+def test_public_guard_accepts_fixed_browser_profiles(view):
+    url = f"/v1/specimens/WA/sp_example?view={view}&v={'a' * 64}"
+    assert not guard.has_unapproved_html_image(f'<img src="{url}" alt="">')
+
+
+@pytest.mark.parametrize(
+    "query",
+    [
+        "view=original&v=" + "a" * 64,
+        "view=thumbnail&v=bad",
+        "view=thumbnail&v=" + "a" * 64 + "&url=https://other.test/private.png",
+        "view=thumbnail&v=" + "a" * 64 + "&view=display",
+    ],
+)
+def test_public_guard_rejects_arbitrary_browser_image_queries(query):
+    assert guard.has_unapproved_html_image(
+        f'<img src="/v1/specimens/WA/sp_example?{query}" alt="">'
+    )

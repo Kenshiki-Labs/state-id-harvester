@@ -97,3 +97,49 @@ describe("knowledge library rendering", () => {
     expect(one).toContain("<summary>");
   });
 });
+
+// A shared publication is the join boundary; a state name is never sufficient.
+describe("card and knowledge source pairing", () => {
+  it("pairs only exact PDF bytes, regardless of collection/title similarity", async () => {
+    const { knowledgeForSource } = await import("../src/lib/knowledge-model");
+    expect(knowledgeForSource([document, second], document.source_sha256)).toEqual([document]);
+    expect(knowledgeForSource([document], "c".repeat(64))).toEqual([]);
+    expect(knowledgeForSource([document], "WA")).toEqual([]);
+  });
+  it("creates card-context links for exact source references and rejects malformed identities", async () => {
+    const { referenceContextUrl } = await import("../src/lib/knowledge-model");
+    const paired = { ...document, references: [{ id: "sample_01", state: "WA", asset_sha256: "b".repeat(64) }] };
+    expect(referenceContextUrl(paired)).toBe(`/catalog/wa?source=${document.source_sha256}&reference=sample_01`);
+    expect(referenceContextUrl({ ...paired, references: [{ ...paired.references[0], state: "US_FED" }] })).toContain("/catalog/federal?");
+    expect(referenceContextUrl(document)).toBeNull();
+    expect(referenceContextUrl({ ...paired, references: [{ ...paired.references[0], id: "../private" }] })).toBeNull();
+    expect(referenceContextUrl({ ...paired, source_sha256: "unverified" })).toBeNull();
+  });
+  it("opens a requested image only when reference ID and source hash both match", async () => {
+    const { requestedReferenceIndex } = await import("../src/lib/knowledge-model");
+    const items = [{ id: "one", source_sha256: document.source_sha256 }, { id: "two", source_sha256: second.source_sha256 }];
+    expect(requestedReferenceIndex(items, `?source=${document.source_sha256}&reference=one`)).toBe(0);
+    expect(requestedReferenceIndex(items, `?source=${document.source_sha256}`)).toBe(0);
+    expect(requestedReferenceIndex(items, `?source=${document.source_sha256}&reference=two`)).toBeNull();
+    expect(requestedReferenceIndex(items, "?reference=one")).toBeNull();
+    expect(requestedReferenceIndex(items, "?source=bad")).toBeNull();
+  });
+  it("shows a representative image and a direct inspection link beside source knowledge", () => {
+    const paired = { ...document, references: [{ id: "sample_01", state: "WA", asset_sha256: "b".repeat(64) }] };
+    const html = renderToStaticMarkup(createElement(KnowledgeLibrary, { documents: [paired] }));
+    expect(html).toContain(`href="/catalog/wa?source=${document.source_sha256}&amp;reference=sample_01"`);
+    expect(html).toContain("/v1/specimens/WA/sample_01?view=thumbnail");
+    expect(html).toContain("Inspect card with source guidance");
+  });
+});
+
+describe("image-page evidence scope", () => {
+  it("prioritizes exact physical PDF page citations and keeps broader claims separate", async () => {
+    const { statementsByImagePage } = await import("../src/lib/knowledge-model");
+    const elsewhere = { ...issuance, evidence: [{ page_number: 4, url: null }] };
+    expect(statementsByImagePage([feature, elsewhere], 2)).toEqual({ samePage: [feature], broader: [elsewhere] });
+    expect(statementsByImagePage([feature], 3)).toEqual({ samePage: [], broader: [feature] });
+    expect(statementsByImagePage([feature], undefined)).toEqual({ samePage: [], broader: [feature] });
+    expect(statementsByImagePage([feature], -1)).toEqual({ samePage: [], broader: [feature] });
+  });
+});
