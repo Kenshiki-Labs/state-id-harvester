@@ -1,0 +1,8 @@
+# Branch pruning, shared from Kenshiki-Labs/ci (its RUNBOOK section 11): deletes branches whose work has
+# landed, and fails on abandoned or stale ones until someone finishes or deletes them.
+name: branch-hygiene
+on: { push: { branches: [dev, main] }, schedule: [{ cron: "17 6 * * *" }], workflow_dispatch: {} }
+permissions: { contents: write, pull-requests: read }
+jobs:
+  prune:
+    uses: Kenshiki-Labs/ci/.github/workflows/branch-hygiene.yml@main
