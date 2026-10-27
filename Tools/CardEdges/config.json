@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "parameters": {
+    "PFmode": false,
+    "EdgeDetectionOperator": 0,
+    "GradientThresholdValue": 20,
+    "AnchorThresholdValue": 0,
+    "ScanInterval": 1,
+    "MinPathLength": 3,
+    "Sigma": 1.0,
+    "SumFlag": true,
+    "NFAValidation": false,
+    "MinLineLength": -1,
+    "MaxDistanceBetweenTwoLines": 6.0,
+    "LineFitErrorThreshold": 1.0,
+    "MaxErrorThreshold": 1.3
+  }
+}

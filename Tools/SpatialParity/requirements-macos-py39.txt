@@ -1,0 +1,5 @@
+# Reuse the contrib wheel; installing the non-contrib wheel beside it corrupts cv2 ownership.
+-r ../CardEdges/requirements-macos-py39.txt
+# Existing desktop boundary helper imports these even for explicit seed-mask replay.
+rasterio==1.4.3
+shapely==2.0.7
