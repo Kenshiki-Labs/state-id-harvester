@@ -28,7 +28,11 @@ green CI run. It stops at the repository: the harvest workflow and publication a
   steps move, unchanged and in order, into scripts/check-python.sh and scripts/check-web.sh;
   CONTRIBUTING.md names npm run check. Verified with `npm run check` in a clean clone.
 
+- 178dc32: Validate also runs on pushes to dev (it ran only on main), so work pushed to dev gets the same
+  CI run; verified by the push's own run.
+
 ## Review
 
 - 0114607 reviewed: each CI step now exists once, in the two scripts; the workflow keeps only setup and
   artifact uploads.
+- 178dc32 reviewed: one trigger branch added; no step changed.
