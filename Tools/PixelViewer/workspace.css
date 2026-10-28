@@ -1,0 +1,21 @@
+[hidden]{display:none!important}
+body.organized{height:100vh;display:flex;flex-direction:column;overflow:hidden}
+.organized header{padding:12px 20px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;flex:none}
+.organized header h1{margin:0;font-size:22px}.organized header p{margin:0;font-size:12px}.organized header p:nth-of-type(2){margin-left:auto}.organized #status{font-size:12px}
+#workspace-tabs{display:flex;margin:0;padding:0 20px;gap:4px;background:#19272b;border-bottom:1px solid #385057;flex:none}
+#workspace-tabs button{border:0;border-radius:0;padding:12px 22px;background:transparent;color:#a9bec4;border-bottom:3px solid transparent}
+#workspace-tabs button[aria-selected=true]{color:#76dfca;border-bottom-color:#76dfca;background:#203638}
+#active-layer-legend{display:flex;align-items:center;gap:8px;padding:9px 20px;min-height:40px;flex-wrap:wrap;font-size:11px;background:#121f23;flex:none}
+#active-layer-legend>span:first-child{color:#9dafb4;text-transform:uppercase;letter-spacing:.08em}.layer-chip{padding:3px 7px;border-left:3px solid #d4ad59;background:#243438;border-radius:3px}
+#quick-layer-controls{display:flex;flex-wrap:wrap;gap:12px 24px;padding:10px 20px;background:#203638;border-bottom:1px solid #385057;flex:none}#quick-layer-controls label{display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer}#quick-layer-controls input{width:16px;height:16px;accent-color:#76dfca}
+#workspace-shell{display:grid;grid-template-columns:minmax(0,1fr) 370px;min-height:0;flex:1}
+.organized main{min-height:0;overflow:hidden;align-items:stretch;padding:12px;gap:12px;grid-template-columns:1fr 1fr}
+.organized .panel{display:flex;flex-direction:column;min-height:0}.organized canvas{height:100%;min-height:0;flex:1}.organized .panel .bar{padding:10px;gap:6px;font-size:12px;min-height:92px;align-content:start}.organized .panel button{font-size:12px;padding:5px 8px}.organized .panel output{display:none}
+#workspace-tools{overflow:auto;padding:18px;background:#19272b;border-left:1px solid #385057;min-height:0;scrollbar-gutter:stable}
+[data-workspace-panel][hidden]{display:none!important}.tool-group{padding:0 0 18px;margin:0 0 18px;border-bottom:1px solid #385057}.tool-group h2,#workspace-tools .dataset h2{font-size:16px;margin:0 0 12px}.tool-group h3{font-size:12px;color:#9fb9bc;text-transform:uppercase;margin:18px 0 8px}.tool-group p{font-size:13px;line-height:1.55}.tool-group label,#measurements-panel label{display:block;margin:10px 0;line-height:1.5;font-size:13px}.tool-group a,#workspace-tools .dataset a{display:block;margin:9px 0;font-size:13px}.tool-group button{margin:4px 4px 8px 0}.tool-group div,.tool-group span{line-height:1.6;font-size:13px;overflow-wrap:anywhere}.pixel-readout{white-space:pre-line;font:12px/1.8 ui-monospace,monospace!important;background:#10191c;padding:12px;border-radius:6px}.basis-note{color:#9fb9bc}
+#workspace-tools .dataset{padding:0;margin:0 0 20px;border:0;background:none;border-radius:0;font-size:13px}#workspace-tools pre{max-height:260px;font-size:11px}#workspace-tools footer{padding:0;font-size:12px;line-height:1.6}#workspace-tools input[type=number]{width:100px}select,input[type=number]{background:#10191c;color:#e7eeee;border:1px solid #607980;padding:5px;border-radius:4px;max-width:100%}#workspace-tools #measure-model-details{line-height:1.7}
+@media(max-width:1050px){#workspace-shell{grid-template-columns:minmax(0,1fr) 310px}.organized main{grid-template-columns:1fr;overflow:auto}.organized .panel{min-height:370px}.organized canvas{min-height:260px}.organized header p:nth-of-type(2){display:none}}
+@media(max-width:650px){body.organized{height:auto;overflow:auto}#workspace-shell{display:flex;flex-direction:column}.organized main{height:650px;flex:none;grid-template-columns:1fr 1fr}.organized .panel{min-height:0}#workspace-tools{max-height:65vh;border-top:1px solid #385057}#workspace-tabs{padding:0}#workspace-tabs button{padding:12px 10px;flex:1}#active-layer-legend{padding:8px}}
+
+#analysis-summary{padding:8px 20px;background:#14272c;font-size:13px;flex:none}
+.capability{padding:10px 0;border-bottom:1px solid #385057}.capability strong{display:block}.capability .available{color:#76dfca}.capability .unavailable{color:#ffbf8a}

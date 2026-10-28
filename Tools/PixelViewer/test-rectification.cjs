@@ -1,0 +1,14 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const app=fs.readFileSync(require('path').join(__dirname,'app.js'),'utf8');
+const elements={'rectified-contour':{},'rectified-title':{}};
+const saved={name:'saved'},derived={name:'boundary'};
+const view={replaceImage(img){this.img=img},setPoint(p){this.point=p}};
+const context=vm.createContext({activeRectification:'saved',geometry:{outputPixelsPerMillimeter:2,sourceToCardMillimeters:[1,0,0,0,1,0,0,0,1],cardMillimetersToSource:[1,0,0,0,1,0,0,0,1]},rectification:{img:derived,manifest:{transforms:{sourceToRectified:[2,0,4,0,2,6,0,0,1],rectifiedToSource:[.5,0,-2,0,.5,-3,0,0,1]}}},savedRectifiedImage:saved,views:{original:{point:[10,20]},rectified:view},document:{getElementById:id=>elements[id]}});
+vm.runInContext(app.slice(app.indexOf('function project('),app.indexOf('class View')),context);
+vm.runInContext(app.slice(app.indexOf('function switchRectification('),app.indexOf('\nfunction status()')),context);
+assert.deepEqual(Array.from(context.linked('original',10,20)),[20,40]);
+context.switchRectification('boundary');assert.equal(view.img,derived);assert.deepEqual(Array.from(view.point),[24,46]);assert.equal(elements['rectified-contour'].disabled,false);
+assert.deepEqual(Array.from(context.linked('rectified',24,46)),[10,20]);
+context.switchRectification('saved');assert.equal(view.img,saved);assert.deepEqual(Array.from(view.point),[20,40]);assert.equal(elements['rectified-contour'].disabled,true);
+assert.throws(()=>context.switchRectification('missing'),/unavailable/);
+console.log('Rectification switching preserves source anchor and swaps padded transforms with raster');
