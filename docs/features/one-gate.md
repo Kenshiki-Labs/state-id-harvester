@@ -31,8 +31,13 @@ green CI run. It stops at the repository: the harvest workflow and publication a
 - 178dc32: Validate also runs on pushes to dev (it ran only on main), so work pushed to dev gets the same
   CI run; verified by the push's own run.
 
+- 793c26a: remove .github/workflows/branch-hygiene.yml. This public repository cannot call private
+  Kenshiki-Labs/ci's reusable workflow, so every run since 43fa467 failed before it started; branches
+  here are pruned by hand.
+
 ## Review
 
 - 0114607 reviewed: each CI step now exists once, in the two scripts; the workflow keeps only setup and
   artifact uploads.
 - 178dc32 reviewed: one trigger branch added; no step changed.
+- 793c26a reviewed: one workflow file deleted; nothing in the gate referenced it.
