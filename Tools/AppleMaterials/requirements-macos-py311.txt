@@ -2,7 +2,7 @@
 torch==2.14.0
 numpy==2.4.6
 pillow==12.3.0
-filelock==3.32.6
+filelock==4.2.1
 typing_extensions==4.16.0
 setuptools==82.0.0
 sympy==1.14.0
