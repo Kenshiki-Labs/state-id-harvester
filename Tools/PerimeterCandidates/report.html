@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>ID Cadastral · Perimeter candidates</title>
+<style>body{font:16px system-ui;margin:24px;background:#142127;color:#e1edf2}a{color:#7ee0db}button,input,select{font:inherit}canvas{width:100%;border:1px solid #617078;touch-action:none}pre{white-space:pre-wrap;overflow-wrap:anywhere}#info{max-height:45vh;overflow:auto}label{margin-right:1em}</style>
+<h1>ID Cadastral · Perimeter candidates</h1><a href="/">Back to capture</a>
+<p>All four sides · Native source coordinates · Physical selection unresolved</p>
+<p>Scroll to zoom, drag to pan. Choose a candidate to inspect its retained source points. Colors distinguish sides, not confidence. The search area comes from the captured quadrilateral.</p>
+<label>Side <select id="side"><option value="all">All</option><option value="0">Top</option><option value="1">Right</option><option value="2">Bottom</option><option value="3">Left</option></select></label>
+<label>Candidate <input id="candidate" type="number" min="0" placeholder="All"></label><button id="reset">Reset view</button>
+<p id="status">Loading verified dataset…</p><canvas id="map" width="1400" height="900"></canvas>
+<pre id="info"></pre><details><summary>Whole-perimeter relationships</summary><pre id="relations"></pre></details>
+<details><summary>Surrounding-image evidence</summary><p>Download contains every assessed scan and adjacent transition pair, with source coordinates.</p><a href="/perimeter/evidence.json" download>Download evidence JSON</a></details>
+<a href="/perimeter/manifest.json">Manifest</a> · <a href="/perimeter/candidates.json" download>Candidates JSON</a>
+<script src="/perimeter-report.js"></script></html>

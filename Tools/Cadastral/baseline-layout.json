@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "environments": {
+    "geometry": "geotiff-env/bin/python",
+    "edges": "edge-env/bin/python",
+    "apple": "apple-dms-env/bin/python"
+  },
+  "packages": {
+    "boundary": "boundary-production-v1",
+    "rectification": "rectification-v1",
+    "edges": "edge-candidates-v1",
+    "topology": "topology-v2",
+    "measurements": "measurements-v1",
+    "measurement-models": "measurement-models-v1",
+    "perimeter": "perimeter-candidates-v2",
+    "assembly": "perimeter-assembly-v1",
+    "path-assessment": "path-assessment-v2",
+    "working-area": "interior-working-v1",
+    "scores": "apple-material-scores-v1",
+    "separation": "surface-separation-v1"
+  }
+}

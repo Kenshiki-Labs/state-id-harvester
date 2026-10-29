@@ -1,0 +1,11 @@
+{
+  "name": "state-id-harvester-gate",
+  "private": true,
+  "description": "Gate entry points only: npm run check is the whole gate, and CI's python and web jobs call the same scripts.",
+  "scripts": {
+    "check": "npm run check:sdlc && npm run check:python && npm run check:web",
+    "check:sdlc": "[ -n \"$CI\" ] || npx --yes --package @kenshiki/config@1.3.0 kenshiki-config sdlc check --range origin/dev...HEAD",
+    "check:python": "bash scripts/check-python.sh",
+    "check:web": "bash scripts/check-web.sh"
+  }
+}

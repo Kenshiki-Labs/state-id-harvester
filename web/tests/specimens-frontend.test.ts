@@ -13,7 +13,7 @@ describe("public image metadata boundary", () => {
   it("accepts state and federal references while stripping private storage fields", () => {
     const items = parseSpecimens({ specimens: [{ ...specimen, key: "private/object.png", unexpected: "ignored" }, { ...specimen, state: "US_FED" }] });
     expect(items).toEqual(ready.items);
-    expect(specimenUrl(items[0])).toBe("/v1/specimens/WA/reference_01");
+    expect(specimenUrl(items[0])).toBe("https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/reference_01");
   });
   it.each([null, {}, { specimens: {} }, { specimens: [specimen, specimen] }])("rejects unavailable or ambiguous index %j", (value) => { expect(() => parseSpecimens(value)).toThrow(); });
   it("bounds metadata response size", () => { expect(() => parseSpecimens({ specimens: new Array(10001).fill(specimen) })).toThrow(); });
@@ -22,7 +22,7 @@ describe("public image metadata boundary", () => {
     const signal = new AbortController().signal;
     const transport = vi.fn(async () => Response.json({ specimens: [specimen] })) as unknown as typeof fetch;
     expect(await loadSpecimens(signal, transport)).toEqual([specimen]);
-    expect(transport).toHaveBeenCalledWith("/v1/specimens", { signal, credentials: "omit" });
+    expect(transport).toHaveBeenCalledWith("https://gateway.kenshikilabs.com/services/cadastre/v1/specimens", { signal, credentials: "omit", redirect: "error" });
   });
   it("propagates failed HTTP and malformed responses instead of inventing an empty gallery", async () => {
     for (const response of [new Response("private diagnostics", { status: 503 }), Response.json({ specimens: [{ ...specimen, id: "../secret" }] })]) {
@@ -33,10 +33,10 @@ describe("public image metadata boundary", () => {
 describe("public gallery rendering", () => {
   it("limits images to the selected collection, opens a dialog and escapes source titles", () => {
     const html = render(ready, [{ title: '<script>alert("source")</script>', url: "https://agency.gov/guide.pdf", hostname: "agency.gov", relevance: "candidate", sha256: specimen.source_sha256 }]);
-    expect(html).toContain('src="/v1/specimens/WA/reference_01?view=thumbnail&amp;v=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"');
+    expect(html).toContain('src="https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/reference_01?view=thumbnail&amp;v=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"');
     expect(html).toContain('aria-haspopup="dialog"');
-    expect(html).not.toContain('href="/v1/specimens/');
-    expect(html).not.toContain("/v1/specimens/US_FED/");
+    expect(html).not.toContain('href="https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/');
+    expect(html).not.toContain("https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/US_FED/");
     expect(html).toContain('target="_blank" rel="noopener noreferrer"');
     expect(html).toContain('alt="Washington source reference 1; research specimen, review pending"');
     expect(html).toContain("&lt;script&gt;");
@@ -44,7 +44,7 @@ describe("public gallery rendering", () => {
     expect(html).toContain(specimen.source_sha256);
     expect(html).toContain(specimen.asset_sha256);
     expect(html).toContain('href="https://agency.gov/guide.pdf"');
-    expect(render(ready, [], "US_FED")).toContain('src="/v1/specimens/US_FED/reference_01?view=thumbnail&amp;v=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"');
+    expect(render(ready, [], "US_FED")).toContain('src="https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/US_FED/reference_01?view=thumbnail&amp;v=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"');
   });
   it("shows loading and retrieval errors without stale images or false coverage counts", () => {
     const loading = render({ ...ready, loading: true });
@@ -71,9 +71,9 @@ describe("ID-1 display identity boundary", () => {
   const normalized = { ...specimen, asset_sha256: "c".repeat(64), original_reference_sha256: specimen.asset_sha256, canonical_asset_sha256: "d".repeat(64), width_px: 4280, height_px: 2699, boundary_basis: "visual_native_extent" as const };
   it("builds bounded browser variants keyed by the exact reference PNG hash", () => {
     const item = { ...specimen, normalization: normalized };
-    expect(browserImageUrl(item, "thumbnail")).toBe(`/v1/specimens/WA/reference_01?view=thumbnail&v=${specimen.asset_sha256}`);
-    expect(browserImageUrl(item, "display", true)).toBe(`/v1/id1-normalizations/WA/reference_01?view=display&v=${normalized.asset_sha256}`);
-    expect(browserImageUrl(specimen, "display", true)).toBe(`/v1/specimens/WA/reference_01?view=display&v=${specimen.asset_sha256}`);
+    expect(browserImageUrl(item, "thumbnail")).toBe(`https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/reference_01?view=thumbnail&v=${specimen.asset_sha256}`);
+    expect(browserImageUrl(item, "display", true)).toBe(`https://gateway.kenshikilabs.com/services/cadastre/v1/id1-normalizations/WA/reference_01?view=display&v=${normalized.asset_sha256}`);
+    expect(browserImageUrl(specimen, "display", true)).toBe(`https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/reference_01?view=display&v=${specimen.asset_sha256}`);
     expect(browserImageUrl(item, "thumbnail", true)).not.toContain(normalized.canonical_asset_sha256);
   });
   it("joins only the exact original identity and defaults its thumbnail to ID-1", () => {
@@ -81,7 +81,7 @@ describe("ID-1 display identity boundary", () => {
     expect(rows[0].normalization).toEqual(normalized);
     expect(rows[0].asset_sha256).toBe(specimen.asset_sha256);
     const html = render({ ...ready, items: rows, normalizationStatus: "ready" });
-    expect(html).toContain('src="/v1/id1-normalizations/WA/reference_01?view=thumbnail&amp;v=cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"');
+    expect(html).toContain('src="https://gateway.kenshikilabs.com/services/cadastre/v1/id1-normalizations/WA/reference_01?view=thumbnail&amp;v=cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"');
     expect(html).toContain("ID-1 normalized");
     expect(html).toContain(`<dt>Reference PNG SHA-256</dt><dd>${normalized.asset_sha256}</dd>`);
     expect(html).toContain(`<dt>Original image SHA-256</dt><dd>${specimen.asset_sha256}</dd>`);
@@ -111,16 +111,16 @@ describe("ID-1 display identity boundary", () => {
   it("retains selected collection filtering for normalized references", () => {
     const items = joinNormalizations([specimen, { ...specimen, state: "OR" }], [normalized]);
     const html = render({ ...ready, items }, [], "OR");
-    expect(html).toContain('src="/v1/specimens/OR/reference_01?view=thumbnail&amp;v=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"');
-    expect(html).not.toContain("/v1/id1-normalizations/WA/");
+    expect(html).toContain('src="https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/OR/reference_01?view=thumbnail&amp;v=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"');
+    expect(html).not.toContain("https://gateway.kenshikilabs.com/services/cadastre/v1/id1-normalizations/WA/");
   });
   it("shows originals with an honest message if normalization retrieval fails", async () => {
     expect(render({ ...ready, normalizationStatus: "unavailable" })).toContain("Original references remain available");
-    expect(render({ ...ready, normalizationStatus: "unavailable" })).toContain('src="/v1/specimens/WA/reference_01?view=thumbnail&amp;v=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"');
+    expect(render({ ...ready, normalizationStatus: "unavailable" })).toContain('src="https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/reference_01?view=thumbnail&amp;v=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"');
     const transport = vi.fn(async () => Response.json({ specimens: [normalized] })) as unknown as typeof fetch;
     const signal = new AbortController().signal;
     expect(await loadNormalizations(signal, transport)).toEqual([normalized]);
-    expect(transport).toHaveBeenCalledWith("/v1/id1-normalizations", { signal, credentials: "omit" });
+    expect(transport).toHaveBeenCalledWith("https://gateway.kenshikilabs.com/services/cadastre/v1/id1-normalizations", { signal, credentials: "omit", redirect: "error" });
     await expect(loadNormalizations(signal, (async () => new Response(null, { status: 404 })) as typeof fetch)).rejects.toThrow();
   });
 });

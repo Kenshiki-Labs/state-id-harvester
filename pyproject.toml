@@ -33,6 +33,9 @@ packages = ["src/state_id_harvester"]
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+# Tools/ is imported host tooling kept unchanged from its source commit (Tools/README.md
+# "Source provenance") and runs on Python 3.9, so this package's py312 lint does not apply to it.
+extend-exclude = ["Tools"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "ASYNC"]

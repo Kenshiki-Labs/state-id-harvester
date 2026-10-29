@@ -1,0 +1,21 @@
+{
+  "schema": "credential_scene_task_v1",
+  "classes": [
+    {"id": 0, "key": "unresolved", "label": "Unresolved", "definition": "Insufficient evidence to assign another scene class."},
+    {"id": 1, "key": "physical_credential", "label": "Physical credential", "definition": "The presented credential body, including its printing, portrait and protective surface; authenticity is not asserted."},
+    {"id": 2, "key": "paper_reproduction", "label": "Paper reproduction", "definition": "A printed or photocopied representation of a credential."},
+    {"id": 3, "key": "screen_reproduction", "label": "Screen reproduction", "definition": "The display area presenting a credential image on a monitor, phone or tablet."},
+    {"id": 4, "key": "supporting_surface", "label": "Supporting surface", "definition": "Visible surroundings supporting the presented document, irrespective of material."},
+    {"id": 5, "key": "occluder", "label": "Occluder", "definition": "An object such as a finger covering the presented document."}
+  ],
+  "attributes": [
+    {"key": "shadow", "label": "Shadow"},
+    {"key": "glare", "label": "Glare"},
+    {"key": "blur", "label": "Blur"}
+  ],
+  "attribute_states": ["unassessed", "absent", "present"],
+  "coordinates": "source_pixel",
+  "unlabeled_value": 255,
+  "task_model_status": "not_trained",
+  "material_to_task_mapping": null
+}

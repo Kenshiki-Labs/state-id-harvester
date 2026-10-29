@@ -10,14 +10,15 @@ record why the source is useful. Legacy official hosts require an explicit revie
 A dead or robots-blocked link is an outcome to report, not a reason to evade access controls.
 
 ```sh
-uv sync --locked --dev
-uv run ruff check .
-uv run ruff format --check .
-uv run mypy src
-uv run pytest -q
-uv run python scripts/export_schemas.py --check
-uv build
+npm run check
 ```
+
+That is the whole gate, and CI's python and web jobs run its two halves (`.github/workflows/ci.yml`),
+so a green local run is a green CI run. `npm run check:python` (`scripts/check-python.sh`) runs ruff,
+the format check, mypy, pytest with coverage, the schema and publication checks and the build;
+`npm run check:web` (`scripts/check-web.sh`) runs the web app's check, types, tests, build, the
+bundled publication check and the runtime audit. Both use uv from PATH, or install the CI pin (0.13.5) once into
+`~/.cache/kenshiki/uv-0.13.5`.
 
 When changing models, regenerate schemas with `uv run python scripts/export_schemas.py`.
 For extractor changes, include mechanical regression tests and inspect affected live-source

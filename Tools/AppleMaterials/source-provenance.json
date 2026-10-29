@@ -1,0 +1,9 @@
+{
+  "upstream_commit": "a379a63e9435e32134a465eb31ecb0aefebed985",
+  "repository": "https://github.com/apple/ml-dms-dataset",
+  "artifacts": {
+    "inference.py": "79d098786031e64b0ab1cfc1436977702774ebc6b70070bee055da07a388f430",
+    "taxonomy.json": "5fb9f5b6d81b800468db78532a9284f060ddc2e2a44b8214658be797029439ea",
+    "DMS46_v1.pt": "4261c0d88922c48116c4f5c4d5a04f6be25077d5b6840b2ff7f0aa068b5d9421"
+  }
+}
