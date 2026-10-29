@@ -49,10 +49,17 @@ administrative automation must have a reviewed ingress before backend public acc
 
 ## Changes
 
-- Pending source checkpoint: canonical public catalog transport, CSP, narrow backend CORS and
+- 5cddbec5e3352c7192bbeac567e80c3f28a72404: canonical public catalog transport, CSP, narrow backend CORS and
   cross-origin download behavior. Existing data, supplier, approval and storage policies retained.
+- Required `npm run check` passed on this source before commit:673Python tests,311web tests in11files,
+  both type checks, coverage,59-page build, both publication scans and runtime audit. The worktree
+  held only this task's changes during the run. Log:`/tmp/kenshiki-cadastre-edge-final-check.log`.
 
 ## Review
 
-- Independent exact-source review pending. Source tests and deployment/device/browser acceptance
-  are separate evidence levels; no production acceptance is asserted by this document.
+- 5cddbec5e3352c7192bbeac567e80c3f28a72404 reviewed by independent `client_routes`: full source,
+  contracts, changed tests and publication guard read; no remaining blocking finding. The final
+  guard, test and publication-document hashes were reread and matched the committed bytes.
+  The exact canonical-prefix migration retains every old negative case and adds host/port/path,
+  query and active-attribute counterexamples. Source tests and production browser acceptance are
+  separate evidence levels; no production acceptance is asserted by this document.
