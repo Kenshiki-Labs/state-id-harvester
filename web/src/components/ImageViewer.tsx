@@ -106,6 +106,6 @@ export default function ImageViewer({ items, index, name, onNavigate, onClose, k
       <div ref={canvasRef} className="viewer-canvas" data-zoom={zoomLevels[zoom]}><ViewerImage key={imageUrl} url={imageUrl} name={name} number={index + 1} /></div>
       {guidance.length > 0 && <CardKnowledge documents={guidance} reference={item} />}
     </div>
-    <footer className="viewer-footer"><p id={caption}>{normalized ? "ID-1 normalized" : "Original reference"} · review pending</p><a href={fullImageUrl} download={`${item.state}-${item.id}${normalized ? "-id1" : ""}.png`}>Download PNG ↓</a></footer>
+    <footer className="viewer-footer"><p id={caption}>{normalized ? "ID-1 normalized" : "Original reference"} · review pending</p><a href={`${fullImageUrl}?download=1`} download={`${item.state}-${item.id}${normalized ? "-id1" : ""}.png`}>Download PNG ↓</a></footer>
   </dialog>;
 }

@@ -16,9 +16,9 @@ describe("image viewer boundaries", () => {
     expect(html).toContain("aria-describedby=");
     expect(html).toContain("&lt;img");
     expect(html).not.toContain("<img src=x");
-    expect(html).toContain('href="/v1/specimens/WA/reference_01" download="WA-reference_01.png"');
+    expect(html).toContain('href="https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/reference_01?download=1" download="WA-reference_01.png"');
     expect(html).not.toContain('target="_blank"');
-    expect(html).toContain(`src="/v1/specimens/WA/reference_01?view=display&amp;v=${item.asset_sha256}"`);
+    expect(html).toContain(`src="https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/reference_01?view=display&amp;v=${item.asset_sha256}"`);
     expect(html).toContain('aria-label="Close image viewer"');
   });
   it("disables paging at each boundary and starts in fitted mode", () => {
@@ -36,14 +36,14 @@ describe("normalized image viewer", () => {
   const normalization = { ...item, asset_sha256: "c".repeat(64), original_reference_sha256: item.asset_sha256, canonical_asset_sha256: "d".repeat(64), width_px: 4280, height_px: 2699, boundary_basis: "visual_card_corners" as const };
   it("defaults normalized display and download to the matching ID-1 endpoint with an original control inside the modal", () => {
     const html = renderToStaticMarkup(createElement(ImageViewer, { items: [{ ...item, normalization }], index: 0, name: "Washington", onNavigate: () => {}, onClose: () => {} }));
-    expect(html).toContain('src="/v1/id1-normalizations/WA/reference_01?view=display&amp;v=cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"');
-    expect(html).toContain('href="/v1/id1-normalizations/WA/reference_01" download="WA-reference_01-id1.png"');
+    expect(html).toContain('src="https://gateway.kenshikilabs.com/services/cadastre/v1/id1-normalizations/WA/reference_01?view=display&amp;v=cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"');
+    expect(html).toContain('href="https://gateway.kenshikilabs.com/services/cadastre/v1/id1-normalizations/WA/reference_01?download=1" download="WA-reference_01-id1.png"');
     expect(html).toContain('aria-label="Image version"');
     expect(html).toContain('aria-pressed="true">ID-1</button>');
     expect(html).toContain('aria-pressed="false">Original</button>');
     expect(html).toContain("ID-1 normalized · review pending");
-    expect(html).not.toContain('<a href="/v1/id1-normalizations/WA/reference_01?view=display');
-    expect(html).not.toContain('src="/v1/id1-normalizations/WA/reference_01"');
+    expect(html).not.toContain('<a href="https://gateway.kenshikilabs.com/services/cadastre/v1/id1-normalizations/WA/reference_01?view=display');
+    expect(html).not.toContain('src="https://gateway.kenshikilabs.com/services/cadastre/v1/id1-normalizations/WA/reference_01"');
     expect(html).not.toContain('target="_blank"');
   });
   it("does not offer a misleading ID-1 control for originals", () => {

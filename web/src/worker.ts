@@ -12,6 +12,7 @@ import {
 import { validatePngHeader } from "./core/png";
 import { id1NormalizationIndex } from "./core/id1-normalizations";
 import { timingSafeEqual } from "node:crypto";
+import { catalogCors } from "./catalog-cors";
 
 const encoder = new TextEncoder();
 const JSON_LIMIT = 16 * 1024;
@@ -374,7 +375,7 @@ async function specimenImage(
       "Content-Type": "image/png",
       "Content-Length": String(asset.size),
       "Cache-Control": "public, max-age=300",
-      "Content-Disposition": `inline; filename="${entry.state}-${entry.id}.png"`,
+      "Content-Disposition": `${new URL(request.url).searchParams.get("download") === "1" ? "attachment" : "inline"}; filename="${entry.state}-${entry.id}${new URL(request.url).pathname.startsWith("/v1/id1-normalizations/") ? "-id1" : ""}.png"`,
       ETag: `"${entry.asset_sha256}"`,
     },
   });
@@ -804,7 +805,7 @@ export default {
       const path = new URL(request.url).pathname;
       if (path === "/health") return headers(json({ ok: true }));
       if (/^\/(v1|admin|internal)(\/|$)/.test(path))
-        return headers(await apiRoute(request, env, path));
+        return catalogCors(request, headers(await apiRoute(request, env, path)));
       if (!["GET", "HEAD"].includes(request.method))
         throw new PolicyError("method_not_allowed", 405);
       if (path === "/access" || path === "/access/")
@@ -815,7 +816,7 @@ export default {
         error instanceof PolicyError
           ? error
           : new PolicyError("service_unavailable", 503);
-      return headers(json({ error: { code: failure.code } }, failure.status));
+      return catalogCors(request, headers(json({ error: { code: failure.code } }, failure.status)));
     }
   },
 } satisfies ExportedHandler<Env>;

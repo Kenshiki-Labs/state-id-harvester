@@ -120,6 +120,52 @@ def test_public_guard_allows_only_worker_resolved_reference_images(
     assert guard.inspect_public_tree(tmp_path) == []
 
 
+@pytest.mark.parametrize("state", ["WA", "MI", "US_FED"])
+@pytest.mark.parametrize("view", [None, "thumbnail", "display"])
+def test_public_guard_allows_the_same_indexed_reference_through_canonical_edge(state, view):
+    url = f"https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/{state}/reference_01"
+    if view:
+        url += f"?view={view}&v={'a' * 64}"
+    assert not guard.has_unapproved_html_image(f'<img src="{url}" alt="Marked reference">')
+
+
+@pytest.mark.parametrize(
+    "url",
+    [
+        "http://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/reference_01",
+        "//gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/reference_01",
+        "https://gateway.kenshikilabs.com.attacker.invalid/services/cadastre/v1/specimens/WA/a",
+        "https://sub.gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/a",
+        "https://gateway.kenshikilabs.com:443/services/cadastre/v1/specimens/WA/a",
+        "https://gateway.kenshikilabs.com/v1/specimens/WA/a",
+        "https://gateway.kenshikilabs.com/services/cadastre//v1/specimens/WA/a",
+        "https://attacker.invalid/services/cadastre/v1/specimens/WA/a",
+        "https://user:secret@gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/a",
+        "https://gateway.kenshikilabs.com/services/identity/v1/specimens/WA/a",
+        "https://gateway.kenshikilabs.com/services/cadastre/internal/objects/snapshots/raw",
+        "https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/../raw",
+        "https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/%2e%2e",
+        "https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/a%2fraw",
+        "https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/a?key=private",
+        "https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/a#private",
+        "https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/a.pdf",
+        "https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/a?view=display&v=bad",
+        "https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/a?view=display&v="
+        + "a" * 64
+        + "&v="
+        + "a" * 64,
+    ],
+)
+def test_canonical_transport_does_not_expand_public_image_authority(url):
+    assert guard.has_unapproved_html_image(f'<img src="{url}" alt="">')
+
+
+def test_canonical_reference_does_not_admit_active_or_alternate_image_attributes():
+    url = "https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/reference_01"
+    for attribute in ['onerror="alert(1)"', 'srcset="/original.png 2x"', 'src="/original.png"']:
+        assert guard.has_unapproved_html_image(f'<img src="{url}" {attribute}>')
+
+
 @pytest.mark.parametrize(
     "markup",
     [

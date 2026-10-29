@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { JURISDICTIONS, object } from "./catalog-model";
+import { catalogApiUrl } from "../core/edge-catalog";
+import { catalogFetch } from "./catalog-transport";
 
 export interface PublicSpecimen {
   id: string;
@@ -25,10 +27,10 @@ export function parseSpecimens(input: unknown): PublicSpecimen[] {
   });
 }
 export function specimenUrl(item: PublicSpecimen): string {
-  return `/v1/specimens/${encodeURIComponent(item.state)}/${encodeURIComponent(item.id)}`;
+  return catalogApiUrl(`/v1/specimens/${encodeURIComponent(item.state)}/${encodeURIComponent(item.id)}`);
 }
 export async function loadSpecimens(signal: AbortSignal, transport: typeof fetch = fetch) {
-  const response = await transport("/v1/specimens", { signal, credentials: "omit" });
+  const response = await catalogFetch("/v1/specimens", signal, transport);
   if (!response.ok) throw new Error("Image index unavailable");
   return parseSpecimens(await response.json());
 }
@@ -57,7 +59,7 @@ export function joinNormalizations(items: PublicSpecimen[], normalizations: ID1N
   });
 }
 export function normalizationUrl(item: PublicSpecimen): string {
-  return `/v1/id1-normalizations/${encodeURIComponent(item.state)}/${encodeURIComponent(item.id)}`;
+  return catalogApiUrl(`/v1/id1-normalizations/${encodeURIComponent(item.state)}/${encodeURIComponent(item.id)}`);
 }
 export function browserImageUrl(item: PublicSpecimen, view: "thumbnail" | "display", normalized = false): string {
   const normalization = normalized ? item.normalization : undefined;
@@ -66,7 +68,7 @@ export function browserImageUrl(item: PublicSpecimen, view: "thumbnail" | "displ
   return `${url}?view=${view}&v=${fingerprint}`;
 }
 export async function loadNormalizations(signal: AbortSignal, transport: typeof fetch = fetch): Promise<ID1Normalization[]> {
-  const response = await transport("/v1/id1-normalizations", { signal, credentials: "omit" });
+  const response = await catalogFetch("/v1/id1-normalizations", signal, transport);
   if (!response.ok) throw new Error("Normalization index unavailable");
   return parseNormalizations(await response.json());
 }
