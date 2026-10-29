@@ -128,7 +128,7 @@ describe("card and knowledge source pairing", () => {
     const paired = { ...document, references: [{ id: "sample_01", state: "WA", asset_sha256: "b".repeat(64) }] };
     const html = renderToStaticMarkup(createElement(KnowledgeLibrary, { documents: [paired] }));
     expect(html).toContain(`href="/catalog/wa?source=${document.source_sha256}&amp;reference=sample_01"`);
-    expect(html).toContain("/v1/specimens/WA/sample_01?view=thumbnail");
+    expect(html).toContain("https://gateway.kenshikilabs.com/services/cadastre/v1/specimens/WA/sample_01?view=thumbnail");
     expect(html).toContain("Inspect card with source guidance");
   });
 });

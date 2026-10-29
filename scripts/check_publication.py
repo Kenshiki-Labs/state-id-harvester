@@ -164,6 +164,9 @@ SOURCE_KEYS = re.compile(
     re.IGNORECASE,
 )
 PUBLIC_SPECIMEN_PATH = re.compile(
+    # Approved canonical-ingress transport for the same indexed, marked references.
+    # This admits no other host, service, private object or image-query shape.
+    r"(?:https://gateway\.kenshikilabs\.com/services/cadastre)?"
     r"/v1/specimens/(?:[A-Z]{2}|US_FED)/[A-Za-z0-9_-]{1,150}"
     r"(?:\?view=(?:thumbnail|display)&v=[a-f0-9]{64})?"
 )

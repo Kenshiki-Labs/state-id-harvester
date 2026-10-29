@@ -86,6 +86,28 @@ beforeEach(async () => {
 });
 
 describe("bounded browser image transformations", () => {
+  it("preserves verified PNG bytes with CORS and an attachment filename for a cross-origin download", async () => {
+    const response = await worker.fetch(new Request(`${origin}${path()}?download=1`, {
+      headers: { Origin: origin },
+    }), testEnv);
+    expect(response.status).toBe(200);
+    expect(response.headers.get("Access-Control-Allow-Origin")).toBe(origin);
+    expect(response.headers.has("Access-Control-Allow-Credentials")).toBe(false);
+    expect(response.headers.get("Content-Disposition")).toBe(`attachment; filename="IL-${entry.id}.png"`);
+    expect(new Uint8Array(await response.arrayBuffer())).toEqual(png);
+    const ordinary = await call(path());
+    expect(ordinary.headers.get("Content-Disposition")).toBe(`inline; filename="IL-${entry.id}.png"`);
+    await ordinary.body?.cancel();
+  });
+
+  it("keeps failed reference reads observable through the same narrow CORS policy", async () => {
+    const response = await worker.fetch(new Request(`${origin}/v1/specimens/IL/not_indexed`, {
+      headers: { Origin: origin },
+    }), testEnv);
+    expect(response.status).toBe(404);
+    expect(response.headers.get("Access-Control-Allow-Origin")).toBe(origin);
+    expect(await response.json()).toEqual({ error: { code: "not_found" } });
+  });
   it.each([
     ["thumbnail", 640, 82],
     ["display", 1600, 90],

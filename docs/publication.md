@@ -24,9 +24,11 @@ extraction payloads, unsafe SVG content and symlinks. Every SVG must declare
 `data-cadastre-diagram="independent"` or `"reviewed-geometry"`; review remains necessary
 to establish that declaration. This is a publication boundary check, not a legal ruling.
 For built Astro output, `--bundled` permits imported brand WOFF2 fonts in `_astro/`.
-HTML image elements may point only to the exact same-origin
-`/v1/specimens/{STATE|US_FED}/{id}` route. Static source images, alternate image
-sources, external images, and embedded image payloads remain excluded.
+HTML image elements may point only to the exact `/v1/specimens/{STATE|US_FED}/{id}`
+route, either relative during migration or through the canonical
+`https://gateway.kenshikilabs.com/services/cadastre` prefix. Fixed thumbnail/display
+variants retain their exact asset-hash query. Other external hosts and services, static
+source images, alternate image sources and embedded image payloads remain excluded.
 
 ## Protected storage and public reference delivery
 

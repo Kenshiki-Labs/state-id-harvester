@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { catalogApiUrl } from "../core/edge-catalog";
 import {
   domainLabels, filterKnowledge, readableLabel, referenceContextUrl, sourcePageUrl, statementFields,
   type KnowledgeDocument, type KnowledgeStatement,
@@ -40,7 +41,7 @@ export default function KnowledgeLibrary({ documents }: Readonly<{ documents: re
       const reference = document.references?.[0];
       return <article className="knowledge-document" key={document.source_sha256}>
         <div className="knowledge-document-meta"><span>{document.collection}</span><span>{document.roles.map(readableLabel).join(" · ")}</span><span className="knowledge-review">Unreviewed interpretation</span></div>
-        {context && reference && <a className="knowledge-reference-preview" href={context} aria-label={`Inspect reference image with guidance from ${document.title}`}><img src={`/v1/specimens/${reference.state}/${reference.id}?view=thumbnail&v=${reference.asset_sha256}`} alt="Reference image extracted from this source publication" loading="lazy" decoding="async"/><span>Inspect card with source guidance <span aria-hidden="true">↗</span></span></a>}
+        {context && reference && <a className="knowledge-reference-preview" href={context} aria-label={`Inspect reference image with guidance from ${document.title}`}><img src={`${catalogApiUrl(`/v1/specimens/${reference.state}/${reference.id}`)}?view=thumbnail&v=${reference.asset_sha256}`} alt="Reference image extracted from this source publication" loading="lazy" decoding="async"/><span>Inspect card with source guidance <span aria-hidden="true">↗</span></span></a>}
         <h2>{document.title}</h2>
         <div className="knowledge-document-source">{document.publisher && <span>{document.publisher}</span>}{document.stated_edition && <span>Edition: {document.stated_edition}</span>}{document.publication_date_wording && <span>Published: {document.publication_date_wording}</span>}{source && <a href={source} target="_blank" rel="noopener noreferrer">Read source publication <span aria-hidden="true">↗</span></a>}</div>
         <details className="knowledge-document-details"><summary>Explore {document.statements.length} {document.statements.length === 1 ? "statement" : "statements"}<span aria-hidden="true">＋</span></summary><ol className="knowledge-statements">{document.statements.map((statement) => <KnowledgeStatementView key={statement.statement_id} statement={statement} />)}</ol></details>
