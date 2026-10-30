@@ -23,3 +23,4 @@ web/.astro/
 .coverage
 coverage.xml
 web/coverage/
+.stage-local/

@@ -72,5 +72,60 @@
         "period": 60
       }
     }
-  ]
+  ],
+  "env": {
+    "stage": {
+      "name": "kenshiki-cadastre-stage",
+      "workers_dev": false,
+      "preview_urls": false,
+      "routes": [],
+      "vars": {
+        "CADASTRE_DEPLOYMENT_ENVIRONMENT": "stage",
+        "PUBLIC_ORIGIN": "https://cadastre-stage.kenshikilabs.com"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "cadastre-access-stage",
+          "database_id": "3a0417b4-d8e8-4325-84a9-4387eda0a6b3",
+          "migrations_dir": "./migrations"
+        }
+      ],
+      "r2_buckets": [
+        {
+          "binding": "VAULT",
+          "bucket_name": "cadastre-specimens-stage"
+        }
+      ],
+      "images": {
+        "binding": "IMAGES"
+      },
+      "ratelimits": [
+        {
+          "name": "RATE_LIMITER",
+          "namespace_id": "2001",
+          "simple": {
+            "limit": 10,
+            "period": 60
+          }
+        },
+        {
+          "name": "INGEST_LIMITER",
+          "namespace_id": "2002",
+          "simple": {
+            "limit": 120,
+            "period": 60
+          }
+        },
+        {
+          "name": "PUBLIC_READ_LIMITER",
+          "namespace_id": "2003",
+          "simple": {
+            "limit": 300,
+            "period": 60
+          }
+        }
+      ]
+    }
+  }
 }

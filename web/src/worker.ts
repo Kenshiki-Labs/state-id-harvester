@@ -13,6 +13,7 @@ import { validatePngHeader } from "./core/png";
 import { id1NormalizationIndex } from "./core/id1-normalizations";
 import { timingSafeEqual } from "node:crypto";
 import { catalogCors } from "./catalog-cors";
+import { cadastreDeployment, type CadastreDeployment, type CadastreEnv } from "./deployment";
 
 const encoder = new TextEncoder();
 const JSON_LIMIT = 16 * 1024;
@@ -37,7 +38,7 @@ function secureEqual(left: string, right: string): boolean {
     timingSafeEqual(encoder.encode(left), encoder.encode(right))
   );
 }
-async function sign(env: Env, value: string): Promise<string> {
+async function sign(env: CadastreEnv, value: string): Promise<string> {
   if (!env.CADASTRE_TRACE_KEY || env.CADASTRE_TRACE_KEY.length < 24)
     throw new PolicyError("service_unavailable", 503);
   const key = await crypto.subtle.importKey(
@@ -98,7 +99,7 @@ async function bodyJson(request: Request): Promise<Record<string, unknown>> {
     throw new PolicyError("invalid_json");
   }
 }
-function sameOrigin(request: Request, env: Env): void {
+function sameOrigin(request: Request, env: CadastreEnv): void {
   if (
     request.headers.get("Origin") !== env.PUBLIC_ORIGIN ||
     new URL(request.url).origin !== env.PUBLIC_ORIGIN
@@ -116,7 +117,7 @@ async function bearer(request: Request, expected: string): Promise<void> {
     throw new PolicyError("unauthorized", 401);
 }
 async function audit(
-  env: Env,
+  env: CadastreEnv,
   event: string,
   requestId: string | null,
   keyId: string | null = null,
@@ -144,7 +145,7 @@ interface ApplicationRow {
   claimed_at: string | null;
 }
 async function application(
-  env: Env,
+  env: CadastreEnv,
   requestId: string,
   body: Record<string, unknown>,
 ): Promise<ApplicationRow> {
@@ -158,7 +159,7 @@ async function application(
 }
 async function createApplication(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
 ): Promise<Response> {
   const applicant = validateApplication(await bodyJson(request));
   const requestId = id(),
@@ -230,7 +231,7 @@ function hasDomainProof(
     return fragments.length > 0 && fragments.join("") === row.domain_challenge;
   });
 }
-async function verifyDomain(env: Env, row: ApplicationRow): Promise<Response> {
+async function verifyDomain(env: CadastreEnv, row: ApplicationRow): Promise<Response> {
   if (row.status === "rejected") throw new PolicyError("request_rejected", 403);
   const endpoint = new URL("https://cloudflare-dns.com/dns-query");
   endpoint.searchParams.set(
@@ -270,7 +271,7 @@ async function verifyDomain(env: Env, row: ApplicationRow): Promise<Response> {
     approval_granted: false,
   });
 }
-async function claimKey(env: Env, row: ApplicationRow): Promise<Response> {
+async function claimKey(env: CadastreEnv, row: ApplicationRow): Promise<Response> {
   if (
     row.status !== "approved" ||
     !row.domain_verified_at ||
@@ -282,7 +283,7 @@ async function claimKey(env: Env, row: ApplicationRow): Promise<Response> {
   const keyId = randomHex(12),
     timestamp = now(),
     expires = new Date(Date.now() + 30 * 86400 * 1000).toISOString();
-  const token = `kl_live_${keyId}_${base64url(crypto.getRandomValues(new Uint8Array(32)))}`;
+  const token = `${cadastreDeployment(env).keyPrefix}${keyId}_${base64url(crypto.getRandomValues(new Uint8Array(32)))}`;
   const results = await env.DB.batch([
     env.DB.prepare(
       `INSERT OR IGNORE INTO api_keys(id,request_id,key_hash,created_at,expires_at) SELECT ?,id,?,?,? FROM access_requests WHERE id=? AND status='approved' AND domain_verified_at IS NOT NULL AND claimed_at IS NULL AND aup_version=? AND aup_hash=?`,
@@ -320,7 +321,7 @@ function matchesSpecimen(asset: R2ObjectBody, entry: Specimen): boolean {
 }
 async function specimens(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
   path: string,
 ): Promise<Response> {
   const object = await env.VAULT.get("indexes/specimens.json");
@@ -359,7 +360,7 @@ async function specimens(
 }
 async function specimenImage(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
   entry: Specimen,
 ): Promise<Response> {
   const view = browserView(request, entry);
@@ -430,7 +431,7 @@ function browserHeaders(
 }
 async function browserImage(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
   entry: Specimen,
   asset: R2ObjectBody,
   view: BrowserView,
@@ -446,7 +447,7 @@ async function browserImage(
     transform: TRANSFORM_VERSION,
   }).toString();
   const cacheKey = new Request(cacheUrl, { method: "GET" });
-  const cache = await caches.open("cadastre-browser-images");
+  const cache = await caches.open(cadastreDeployment(env).imageCache);
   const cached = await cache.match(cacheKey);
   if (cached) {
     await asset.body.cancel();
@@ -483,7 +484,7 @@ async function browserImage(
   }
 }
 async function publicIndex(
-  env: Env,
+  env: CadastreEnv,
   key: string,
   optional = false,
 ): Promise<unknown> {
@@ -502,7 +503,7 @@ async function publicIndex(
 }
 async function id1Normalizations(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
   path: string,
 ): Promise<Response> {
   let index;
@@ -541,7 +542,7 @@ async function id1Normalizations(
 }
 async function reviewApplication(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
   requestId: string,
   action: string,
 ): Promise<Response> {
@@ -596,7 +597,7 @@ async function reviewApplication(
 }
 async function revokeKey(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
   keyId: string,
 ): Promise<Response> {
   const body = await bodyJson(request),
@@ -626,7 +627,7 @@ async function revokeKey(
 }
 async function admin(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
   path: string,
 ): Promise<Response> {
   await bearer(request, env.CADASTRE_ADMIN_KEY_HASH);
@@ -669,7 +670,7 @@ function uploadParameters(request: Request, key: string) {
 }
 async function uploadObject(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
   key: string,
 ): Promise<Response> {
   const { body, length, checksum, contentType, reference, sourceSha } =
@@ -695,7 +696,7 @@ async function uploadObject(
 }
 async function internal(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
   path: string,
 ): Promise<Response> {
   await bearer(request, env.CADASTRE_INGEST_KEY_HASH);
@@ -740,7 +741,7 @@ function headers(response: Response): Response {
 }
 async function accessRoute(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
   path: string,
 ): Promise<Response> {
   sameOrigin(request, env);
@@ -762,7 +763,7 @@ async function accessRoute(
 }
 async function apiRoute(
   request: Request,
-  env: Env,
+  env: CadastreEnv,
   path: string,
 ): Promise<Response> {
   let category = "public";
@@ -800,12 +801,16 @@ async function apiRoute(
   throw new PolicyError("not_found", 404);
 }
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: CadastreEnv): Promise<Response> {
+    let profile: CadastreDeployment | null = null;
     try {
+      profile = cadastreDeployment(env);
+      if (new URL(request.url).origin !== profile.origin)
+        throw new PolicyError("origin_denied", 403);
       const path = new URL(request.url).pathname;
       if (path === "/health") return headers(json({ ok: true }));
       if (/^\/(v1|admin|internal)(\/|$)/.test(path))
-        return catalogCors(request, headers(await apiRoute(request, env, path)));
+        return catalogCors(request, headers(await apiRoute(request, env, path)), profile);
       if (!["GET", "HEAD"].includes(request.method))
         throw new PolicyError("method_not_allowed", 405);
       if (path === "/access" || path === "/access/")
@@ -816,7 +821,8 @@ export default {
         error instanceof PolicyError
           ? error
           : new PolicyError("service_unavailable", 503);
-      return catalogCors(request, headers(json({ error: { code: failure.code } }, failure.status)));
+      const response = headers(json({ error: { code: failure.code } }, failure.status));
+      return profile ? catalogCors(request, response, profile) : response;
     }
   },
-} satisfies ExportedHandler<Env>;
+} satisfies ExportedHandler<CadastreEnv>;
