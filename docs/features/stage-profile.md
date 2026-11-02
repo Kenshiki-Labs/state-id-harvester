@@ -13,6 +13,40 @@ needs the catalog. It does not create a Stage website, publish reference data,
 seed an access approval or prove deployment. The production static website keeps
 its existing transport. See [operating boundaries](../stage-profile.md).
 
+`python -m scripts.stage_release plan --revision SHA` describes the separate Stage
+release. `upload --revision SHA --output NEW_DIRECTORY` consumes a bounded JSON
+object `{preflight, secrets}` from a private regular file on stdin. It requires
+clean `main` at the exact published SHA, full `npm run check`, exact Stage resource
+declarations, a complete remote migration ledger and schema matching the locally
+replayed migration, the Stage bucket and a successful complete API inventory
+proving the Worker remains absent. No remote SQL is applied. Only tracked source
+is archived; the archive is stamped and rebuilt with pinned dependencies, leaving
+the checkout unchanged. The three independent Stage secrets are uploaded atomically
+from a temporary file with mode 0600 and are not printed or copied to evidence receipts.
+The schema comparison includes all application objects, excluding SQLite internal
+objects and the platform metadata tables `d1_migrations` and `_cf_KV`. Extra
+application objects are refused. Checks and asset builds receive no provider
+credentials or ambient execution overrides. The source tar and stamped build
+module are retained outside the checkout for review.
+
+The captured preflight schema is `kenshiki.cadastre-stage-preflight.v1`, with
+accountId, workerName, sourceRevision, configSha256, migrationsSha256, kind `absent`,
+versionId `null`, observedAt. Initial observation must be fresh; live absence and
+resource checks are repeated after the full gate. This executor is for the first
+deployment only; it refuses to replace any existing Worker. `CLOUDFLARE_API_TOKEN`
+must authorize the exact account; no API host or Worker name is caller-selectable.
+
+The new Stage-only `GET /__build` exposes only a random 32-character hexadecimal deployment token,
+with no-store caching. Unstamped source returns 503; production retains the prior
+asset routing at that path. Upload records an attempt before mutation and remains
+`uploaded-pending-private-verification` after version readback. The separate `verify`
+command consumes `{upload, probe}` on stdin and compares the common
+`kenshiki.stage-private-probe.v1` remote binding observation, exact account/Worker,
+source/config/version/build/origin and private exposure with no service bindings.
+It rejects observations preceding upload or older than five minutes. This is
+captured-evidence validation, not a manufactured live probe. Reference vault
+publication, supplier behavior and app enrollment remain separate acceptance.
+
 ## Test plan
 
 Run `npm run check` before integration. Its SDLC, Python and web checks remain
@@ -42,6 +76,10 @@ Full publication and browser-image regressions remain part of the complete gate.
   empty/malformed/non-object/deeply nested/oversized inputs, production-resource
   evidence and the rejected legacy filename option. Invalid content must not be
   echoed or produce a traceback.
+- Release regressions cover private bounded input, secret shape, exact resources,
+  complete inventory absence, schema drift and pending migration refusal. Mocked
+  command orchestration proves failed gates never upload. Build-probe tests keep
+  production routing intact and reject unstamped, wrong-origin or non-GET requests.
 
 ## Changes
 
@@ -100,8 +138,9 @@ Full publication and browser-image regressions remain part of the complete gate.
   requires environment-specific bindings and secrets; storage and rate limits are
   declared separately. Captured evidence checks names/identity, not live schema
   contents, applied migration hashes or published-reference acceptance.
-- Remaining release limits: `web/package.json` exposes raw Wrangler deployment,
-  not an immutable-source Stage release orchestrator. `scripts/vault_sync.py`
+- The new uncommitted Stage release executor requires independent review and full
+  gates; `web/package.json` retains the unchanged production deployment command.
+  `scripts/vault_sync.py`
   defaults to the production origin and accepts only an HTTPS origin, not the
   Gateway service path. Publishing into the private Stage vault needs a reviewed
   Stage ingress/tooling path before use. No publication or deployment occurred.

@@ -14,6 +14,7 @@ import { id1NormalizationIndex } from "./core/id1-normalizations";
 import { timingSafeEqual } from "node:crypto";
 import { catalogCors } from "./catalog-cors";
 import { cadastreDeployment, type CadastreDeployment, type CadastreEnv } from "./deployment";
+import { stageBuildResponse } from "./stage-build";
 
 const encoder = new TextEncoder();
 const JSON_LIMIT = 16 * 1024;
@@ -808,6 +809,10 @@ export default {
       if (new URL(request.url).origin !== profile.origin)
         throw new PolicyError("origin_denied", 403);
       const path = new URL(request.url).pathname;
+      if (profile.name === "stage" && path === "/__build") {
+        if (request.method !== "GET") throw new PolicyError("method_not_allowed", 405);
+        return headers(stageBuildResponse());
+      }
       if (path === "/health") return headers(json({ ok: true }));
       if (/^\/(v1|admin|internal)(\/|$)/.test(path))
         return catalogCors(request, headers(await apiRoute(request, env, path)), profile);
