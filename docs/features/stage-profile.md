@@ -38,9 +38,20 @@ Full publication and browser-image regressions remain part of the complete gate.
   matching Worker hashes, distinct trace material and restrictive permissions.
 - A missing specimen index remains `catalog_unavailable`; an empty bucket must
   not be reported as a working reference-data service.
+- Exercise the offline CLI with valid stdin content, the byte-limit boundary,
+  empty/malformed/non-object/deeply nested/oversized inputs, production-resource
+  evidence and the rejected legacy filename option. Invalid content must not be
+  echoed or produce a traceback.
 
 ## Changes
 
+- Sonar cleanup: the offline checker now validates at most 64 KiB of supplied
+  UTF-8 JSON on stdin instead of opening a caller-selected evidence filename.
+  This preserves receipt custody outside the repository and existing Stage
+  identity checks while removing filename authority and the optional-path
+  dereference. The documented CLI invocation changes accordingly. Profile
+  selection uses explicit branches with the same production defaults and
+  unknown-profile refusal; the test import assertions are separate.
 - `49cbcead0ca12c844dd6e43cd4b9cc8741568796`: added the deployment profile,
   Worker origin boundary, selected CORS/key/cache identities, isolated Wrangler
   environment and generated binding types, offline setup tooling and tests.

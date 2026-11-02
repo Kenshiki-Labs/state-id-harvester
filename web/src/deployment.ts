@@ -29,9 +29,15 @@ export function cadastreDeployment(
   env: Pick<CadastreEnv, "CADASTRE_DEPLOYMENT_ENVIRONMENT" | "PUBLIC_ORIGIN">,
 ): CadastreDeployment {
   const name = env.CADASTRE_DEPLOYMENT_ENVIRONMENT;
-  const profile = name === "stage" ? STAGE_CADASTRE
-    : name === undefined || name === "production" ? PRODUCTION_CADASTRE : null;
-  if (!profile || env.PUBLIC_ORIGIN !== profile.origin)
+  let profile: CadastreDeployment;
+  if (name === "stage") {
+    profile = STAGE_CADASTRE;
+  } else if (name === undefined || name === "production") {
+    profile = PRODUCTION_CADASTRE;
+  } else {
+    throw new PolicyError("deployment_profile_unavailable", 503);
+  }
+  if (env.PUBLIC_ORIGIN !== profile.origin)
     throw new PolicyError("deployment_profile_unavailable", 503);
   return profile;
 }

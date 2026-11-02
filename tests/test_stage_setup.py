@@ -5,11 +5,14 @@ import importlib.util
 import json
 import shutil
 import stat
+import subprocess
+import sys
 
 import pytest
 
 spec = importlib.util.spec_from_file_location("cadastre_stage_setup", "scripts/stage_setup.py")
-assert spec and spec.loader
+assert spec is not None
+assert spec.loader is not None
 setup = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(setup)
 
@@ -100,3 +103,89 @@ def test_private_fresh_keys_match_worker_hashes_and_cannot_be_overwritten(checko
     assert all(stat.S_IMODE(path.stat().st_mode) == 0o600 for path in directory.iterdir())
     with pytest.raises(FileExistsError):
         setup.generate_secrets(checkout)
+
+
+@pytest.fixture
+def cli_evidence():
+    plan = setup.plan()
+    return {
+        "schema": "kenshiki.stage-infrastructure-evidence.v1",
+        "environment": "stage",
+        "account_id": plan["account_id"],
+        "worker_name": plan["worker_name"],
+        "database": {
+            "name": plan["database"]["database_name"],
+            "uuid": plan["database"]["database_id"],
+        },
+        "bucket_names": [plan["bucket"]],
+        "applied_migrations": [item["name"] for item in plan["migrations"]],
+        "secret_names": plan["secret_names"],
+    }
+
+
+def run_check(payload, *args):
+    return subprocess.run(
+        [sys.executable, str(setup.ROOT / "scripts/stage_setup.py"), "check", *args],
+        input=payload,
+        capture_output=True,
+        check=False,
+        timeout=10,
+    )
+
+
+@pytest.mark.parametrize("pad_to_limit", [False, True])
+def test_cli_validates_supplied_content_without_claiming_live_acceptance(
+    cli_evidence, pad_to_limit
+):
+    payload = json.dumps(cli_evidence).encode()
+    if pad_to_limit:
+        payload = payload.ljust(setup.MAX_EVIDENCE_BYTES, b" ")
+    result = run_check(payload)
+    assert result.returncode == 0
+    assert b"live service acceptance is unverified" in result.stdout
+    assert result.stderr == b""
+
+
+@pytest.mark.parametrize(
+    "payload",
+    [
+        b"",
+        b" ",
+        b'{"private_marker":',
+        b"\xff",
+        b"null",
+        b"[]",
+        b'"private_marker"',
+        b" " * (setup.MAX_EVIDENCE_BYTES + 1),
+        b"[" * 2000 + b"]" * 2000,
+    ],
+)
+def test_cli_rejects_invalid_content_without_echoing_it(payload):
+    result = run_check(payload)
+    assert result.returncode == 2
+    assert result.stdout == b""
+    assert b"private_marker" not in result.stderr
+    assert b"Traceback" not in result.stderr
+
+
+def test_cli_keeps_stage_resource_validation(cli_evidence):
+    cli_evidence["bucket_names"] = ["cadastre-specimens"]
+    result = run_check(json.dumps(cli_evidence).encode())
+    assert result.returncode == 2
+    assert b"Captured Stage resource or migration evidence mismatch" in result.stderr
+
+
+def test_cli_refuses_valid_json_over_the_byte_limit(cli_evidence):
+    payload = json.dumps(cli_evidence).encode().ljust(setup.MAX_EVIDENCE_BYTES + 1, b" ")
+    result = run_check(payload)
+    assert result.returncode == 2
+    assert b"1 to 65536 bytes" in result.stderr
+
+
+def test_cli_refuses_legacy_filename_even_with_valid_content(tmp_path, cli_evidence):
+    evidence = tmp_path / "evidence.json"
+    evidence.write_text(json.dumps(cli_evidence))
+    result = run_check(json.dumps(cli_evidence).encode(), "--evidence", str(evidence))
+    assert result.returncode == 2
+    assert b"unrecognized arguments: --evidence" in result.stderr
+    assert result.stdout == b""

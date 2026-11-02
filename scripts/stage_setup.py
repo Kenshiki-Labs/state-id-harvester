@@ -8,7 +8,9 @@ import hashlib
 import json
 import os
 import secrets
+import sys
 from pathlib import Path
+from typing import BinaryIO
 from uuid import UUID
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,6 +19,7 @@ WORKER = "kenshiki-cadastre-stage"
 DATABASE = "cadastre-access-stage"
 BUCKET = "cadastre-specimens-stage"
 SECRET_NAMES = {"CADASTRE_ADMIN_KEY_HASH", "CADASTRE_INGEST_KEY_HASH", "CADASTRE_TRACE_KEY"}
+MAX_EVIDENCE_BYTES = 64 * 1024
 
 
 def configuration(root: Path = ROOT, *, ready: bool = False) -> dict:
@@ -168,10 +171,23 @@ def generate_secrets(root: Path = ROOT) -> None:
     )
 
 
+def read_evidence(stream: BinaryIO) -> dict:
+    """Accept bounded content, never a caller-selected filename."""
+    payload = stream.read(MAX_EVIDENCE_BYTES + 1)
+    if not payload or len(payload) > MAX_EVIDENCE_BYTES:
+        raise ValueError("Stage evidence must contain 1 to 65536 bytes on stdin")
+    try:
+        evidence = json.loads(payload.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError, RecursionError):
+        raise ValueError("Stage evidence must be a UTF-8 JSON object") from None
+    if not isinstance(evidence, dict):
+        raise ValueError("Stage evidence must be a UTF-8 JSON object")
+    return evidence
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=("plan", "check", "secrets"))
-    parser.add_argument("--evidence", type=Path)
     args = parser.parse_args()
     if args.command == "plan":
         print(json.dumps(plan(), indent=2, sort_keys=True))
@@ -179,9 +195,12 @@ def main() -> None:
         generate_secrets()
         print("Fresh Stage operator keys and Worker hashes written under .stage-local.")
     else:
-        if args.evidence is None:
-            parser.error("check requires --evidence")
-        check_evidence(json.loads(args.evidence.read_text()))
+        if sys.stdin.isatty():
+            parser.error("check requires a Stage evidence JSON object on stdin")
+        try:
+            check_evidence(read_evidence(sys.stdin.buffer))
+        except ValueError as error:
+            parser.error(str(error))
         print(
             "Stage configuration and captured infrastructure evidence agree; "
             "live service acceptance is unverified."

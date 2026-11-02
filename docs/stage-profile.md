@@ -41,8 +41,14 @@ bearer keys; `worker-secrets.json` contains their SHA-256 hashes and an independ
 trace HMAC key. Only the latter file belongs in Worker secrets. Neither file is
 committable. Coordinate the generation once; never copy production credentials.
 
-`scripts/stage_setup.py check --evidence <file>` validates recorded resource and
-secret-name evidence against the current Stage config. The schema is
+`.venv/bin/python scripts/stage_setup.py check < evidence.json` validates recorded
+resource and secret-name evidence against the current Stage config. The caller
+supplies UTF-8 JSON content on stdin, limited to 64 KiB; the CLI never opens an
+evidence filename selected by an argument. The former `--evidence` option is
+rejected. Keep the source receipt at its existing custody location and explicitly
+redirect that file or pipe its content; do not copy it into the repository.
+Empty, malformed, oversized and non-object inputs fail without echoing content.
+The schema is
 `kenshiki.stage-infrastructure-evidence.v1`, with `environment`, `account_id`,
 `worker_name`, `database` (`name`, `uuid`), `bucket_names`, ordered
 `applied_migrations`, and `secret_names`. Missing resources, production reuse,
