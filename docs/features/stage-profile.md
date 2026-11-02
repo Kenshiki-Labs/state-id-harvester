@@ -27,7 +27,20 @@ The schema comparison includes all application objects, excluding SQLite interna
 objects and the platform metadata tables `d1_migrations` and `_cf_KV`. Extra
 application objects are refused. Checks and asset builds receive no provider
 credentials or ambient execution overrides. The source tar and stamped build
-module are retained outside the checkout for review.
+module are retained outside the checkout for review. Schema replay reads the
+same immutable Git archive used for the build, not the mutable checkout.
+
+Both `upload` and `verify` confine `--output` to the OS account's protected
+`~/.kenshiki/stage-releases/cadastre` directory. Relative output names are resolved
+there; absolute names must be beneath it. For example, upload uses `--output run-1`
+and verification uses `--output run-1/verified.json`. The root comes from the POSIX
+account database, not an environment override. Each custody directory must belong
+to the account and exclude group/other access; the account home must not be writable
+by group/others. Directory descriptors and no-follow opens prevent symlink traversal,
+and exclusive creation prevents replacement of existing runs or receipts. `..`,
+sibling prefixes, destinations outside custody and destinations inside the source
+checkout are refused. These rules apply to every retained log, archive and receipt.
+This local release tool supports the existing macOS/Linux host environment.
 
 The captured preflight schema is `kenshiki.cadastre-stage-preflight.v1`, with
 accountId, workerName, sourceRevision, configSha256, migrationsSha256, kind `absent`,
@@ -80,9 +93,22 @@ Full publication and browser-image regressions remain part of the complete gate.
   complete inventory absence, schema drift and pending migration refusal. Mocked
   command orchestration proves failed gates never upload. Build-probe tests keep
   production routing intact and reject unstamped, wrong-origin or non-GET requests.
+- Exercise both output entry points against traversal, absolute escapes, sibling
+  prefixes, symlinked roots/parents/files, foreign owners, permissive directories,
+  existing destinations and overridden HOME. Validate a real verify CLI invocation
+  inside temporary protected custody; it performs no provider operation.
 
 ## Changes
 
+- Constrain release evidence to protected OS-account custody for both upload and
+  verification. All output opens are exclusive, no-follow and descriptor-relative;
+  no old evidence is deleted or chmodded. Derive the expected schema from the
+  validated Git archive. The existing release requirements, DDL and production
+  routing are unchanged.
+- Independent source-flow review classified the published S3649, S2083 and S8705
+  reports as false positives: trusted migration programs, fixed-path file content,
+  and a strictly validated full Git revision respectively. Those classifications
+  do not waive the separate S8707 output-boundary defect; this patch repairs it.
 - Sonar cleanup: the offline checker now validates at most 64 KiB of supplied
   UTF-8 JSON on stdin instead of opening a caller-selected evidence filename.
   This preserves receipt custody outside the repository and existing Stage

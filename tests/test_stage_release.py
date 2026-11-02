@@ -3,6 +3,7 @@
 import importlib
 import io
 import json
+import os
 import subprocess
 import sys
 import tarfile
@@ -20,6 +21,14 @@ finally:
 REVISION = "a" * 40
 VERSION = "11111111-2222-4333-8444-555555555555"
 NOW = datetime(2026, 11, 2, tzinfo=UTC)
+
+
+@pytest.fixture
+def custody(monkeypatch, tmp_path):
+    home = tmp_path / "home"
+    home.mkdir(mode=0o700)
+    monkeypatch.setattr(release, "account_home", lambda: home)
+    return home.joinpath(*release.EVIDENCE_PARTS)
 
 
 def uploaded():
@@ -82,8 +91,11 @@ def test_probe_accepts_only_matching_remote_stage_observation():
     ],
 )
 def test_probe_refuses_wrong_target_build_and_simulation(field, value):
+    candidate = {**probe(), field: value}
+    original = uploaded()
+    timestamp = NOW.timestamp()
     with pytest.raises(ValueError):
-        release.validate_probe({**probe(), field: value}, uploaded(), NOW.timestamp())
+        release.validate_probe(candidate, original, timestamp)
 
 
 def test_private_stdin_bounded_regular_file_and_error_omits_contents(tmp_path):
@@ -96,8 +108,9 @@ def test_private_stdin_bounded_regular_file_and_error_omits_contents(tmp_path):
     with path.open("rb") as stream, pytest.raises(ValueError, match="private"):
         release.read_input(stream, private=True)
     for data in (b"", b"x" * (1024 * 1024 + 1), b"synthetic-sensitive", b"[]"):
+        stream = io.BytesIO(data)
         with pytest.raises(ValueError) as error:
-            release.read_input(io.BytesIO(data))
+            release.read_input(stream)
         assert "synthetic-sensitive" not in str(error.value)
 
 
@@ -147,7 +160,8 @@ def test_absence_requires_successful_complete_inventory(monkeypatch, status, bod
 
     class Connection:
         def __init__(self, host, timeout):
-            assert host == "api.cloudflare.com" and timeout == 30
+            assert host == "api.cloudflare.com"
+            assert timeout == 30
 
         def request(self, method, path, headers):
             assert method == "GET"
@@ -166,7 +180,7 @@ def test_absence_requires_successful_complete_inventory(monkeypatch, status, bod
 
 
 @pytest.mark.parametrize("failure", [None, "gate", "ledger", "schema", "bucket", "exists"])
-def test_upload_orchestration_is_closed_and_never_calls_production(monkeypatch, tmp_path, failure):
+def test_upload_orchestration_is_closed_and_never_calls_production(monkeypatch, custody, failure):
     planned = release.plan(REVISION)
     evidence = {
         "preflight": {
@@ -191,10 +205,20 @@ def test_upload_orchestration_is_closed_and_never_calls_production(monkeypatch, 
     archive = io.BytesIO()
     with tarfile.open(fileobj=archive, mode="w") as bundle:
         bundle.add(release.ROOT / "web/src/stage-build.ts", arcname="web/src/stage-build.ts")
+        bundle.add(release.ROOT / "web/migrations", arcname="web/migrations")
     calls = []
+    schema_roots = []
+    real_expected_schema = release.expected_schema
+
+    def snapshot_schema(root=release.ROOT):
+        schema_roots.append(root)
+        return real_expected_schema(root)
+
+    monkeypatch.setattr(release, "expected_schema", snapshot_schema)
 
     def gate(argv, **kwargs):
-        assert argv == ["npm", "run", "check"] and "CI" not in kwargs["env"]
+        assert argv == ["npm", "run", "check"]
+        assert "CI" not in kwargs["env"]
         assert "CLOUDFLARE_API_TOKEN" not in kwargs["env"]
         return subprocess.CompletedProcess(argv, 1 if failure == "gate" else 0)
 
@@ -215,7 +239,8 @@ def test_upload_orchestration_is_closed_and_never_calls_production(monkeypatch, 
             assert "CLOUDFLARE_API_TOKEN" not in kwargs["env"]
             return b""
         assert argv[-2:] == ["--env", "stage"]
-        assert "apply" not in argv and "production" not in argv
+        assert "apply" not in argv
+        assert "production" not in argv
         if argv[1] == "deploy":
             return f"Current Version ID: {VERSION}\n".encode()
         if argv[1:3] == ["d1", "info"]:
@@ -228,7 +253,7 @@ def test_upload_orchestration_is_closed_and_never_calls_production(monkeypatch, 
                     else [{"name": item["name"]} for item in planned["migrations"]]
                 )
             else:
-                rows = [] if failure == "schema" else release.expected_schema()
+                rows = [] if failure == "schema" else real_expected_schema()
             value = [{"success": True, "results": rows}]
         elif argv[1:3] == ["r2", "bucket"]:
             value = {"name": "production" if failure == "bucket" else release.setup.BUCKET}
@@ -242,14 +267,17 @@ def test_upload_orchestration_is_closed_and_never_calls_production(monkeypatch, 
         return json.dumps(value).encode()
 
     monkeypatch.setattr(release, "command", mocked)
+    output = Path("run")
     if failure:
         with pytest.raises(ValueError):
-            release.upload(REVISION, evidence, tmp_path / "output")
+            release.upload(REVISION, evidence, output)
         assert not any("--secrets-file" in call for call in calls)
     else:
-        receipt = release.upload(REVISION, evidence, tmp_path / "output")
+        receipt = release.upload(REVISION, evidence, output)
         assert receipt["state"] == "uploaded-pending-private-verification"
         assert len([call for call in calls if "--secrets-file" in call]) == 1
+        assert len(schema_roots) == 1
+        assert schema_roots[0] != release.ROOT
 
 
 def test_gate_environment_omits_ambient_credentials():
@@ -318,3 +346,132 @@ def test_git_provenance_commands_do_not_inherit_repository_overrides(monkeypatch
     release.validate_source(release.source_state(), REVISION)
     release.command(["git", "archive", REVISION])
     assert len(calls) == 5
+
+
+def test_custody_ignores_environment_home(monkeypatch):
+    expected = Path(release.pwd.getpwuid(os.getuid()).pw_dir).resolve(strict=True)
+    monkeypatch.setenv("HOME", "/untrusted/home")
+    assert release.account_home() == expected
+
+
+def test_upload_directory_and_verify_file_share_private_custody(custody):
+    directory = release.create_evidence_directory(Path("run"))
+    assert directory == custody / "run"
+    assert directory.stat().st_mode & 0o077 == 0
+    release.write_json(directory / "verified.json", {"state": "private-build-verified"})
+    receipt = directory / "verified.json"
+    assert receipt.stat().st_mode & 0o077 == 0
+    original = receipt.read_bytes()
+    with pytest.raises(FileExistsError):
+        release.write_json(receipt, {"replacement": True})
+    assert receipt.read_bytes() == original
+    with pytest.raises(FileExistsError):
+        release.create_evidence_directory(directory)
+
+
+@pytest.mark.parametrize("path", ["../escape", "run/../../escape", "/tmp/escape", "."])
+def test_both_output_operations_reject_escape(custody, path):
+    candidate = Path(path)
+    with pytest.raises(ValueError):
+        release.create_evidence_directory(candidate)
+    with pytest.raises(ValueError):
+        release.write_json(candidate, {})
+    assert not custody.exists()
+
+
+def test_sibling_prefix_and_source_custody_are_rejected(custody):
+    sibling = custody.with_name(custody.name + "-untrusted") / "run"
+    with pytest.raises(ValueError):
+        release.create_evidence_directory(sibling)
+    source = custody.parent
+    output = Path("run")
+    with pytest.raises(ValueError):
+        release.create_evidence_directory(output, source)
+    nested_source = custody / "run"
+    with pytest.raises(ValueError):
+        release.create_evidence_directory(output, nested_source)
+    assert not custody.exists()
+
+
+def test_symlink_components_and_final_targets_are_never_followed(custody, tmp_path):
+    directory = release.create_evidence_directory(Path("run"))
+    outside = tmp_path / "outside"
+    outside.mkdir(mode=0o700)
+    link = custody / "linked"
+    link.symlink_to(outside, target_is_directory=True)
+    with pytest.raises(OSError):
+        release.create_evidence_directory(link / "new")
+    with pytest.raises(OSError):
+        release.write_json(link / "receipt.json", {})
+    final = directory / "receipt.json"
+    victim = outside / "victim.json"
+    victim.write_text("unchanged")
+    final.symlink_to(victim)
+    with pytest.raises(FileExistsError):
+        release.write_json(final, {})
+    assert victim.read_text() == "unchanged"
+    assert sorted(p.name for p in outside.iterdir()) == ["victim.json"]
+
+
+def test_insecure_or_foreign_custody_is_refused(custody, monkeypatch):
+    directory = release.create_evidence_directory(Path("run"))
+    directory.chmod(0o755)
+    with pytest.raises(ValueError):
+        release.write_json(directory / "receipt.json", {})
+    directory.chmod(0o700)
+    monkeypatch.setattr(release.os, "getuid", lambda: os.stat(directory).st_uid + 1)
+    with pytest.raises(ValueError):
+        release.write_json(directory / "receipt.json", {})
+
+
+def test_protected_root_cannot_be_a_symlink(custody, tmp_path):
+    outside = tmp_path / "outside"
+    outside.mkdir(mode=0o700)
+    home = custody.parents[2]
+    (home / ".kenshiki").symlink_to(outside, target_is_directory=True)
+    output = Path("run")
+    with pytest.raises(OSError):
+        release.create_evidence_directory(output)
+    assert not list(outside.iterdir())
+
+
+@pytest.mark.parametrize("output", ["run/verified.json", "../escape.json", "/tmp/escape.json"])
+def test_verify_cli_uses_the_same_output_boundary(custody, monkeypatch, output):
+    release.create_evidence_directory(Path("run"))
+    uploaded_at = datetime.now(UTC).isoformat()
+    evidence = {
+        "upload": {**uploaded(), "uploadedAt": uploaded_at},
+        "probe": {**probe(), "observedAt": uploaded_at},
+    }
+    stream = io.TextIOWrapper(io.BytesIO(json.dumps(evidence).encode()))
+    monkeypatch.setattr(sys, "stdin", stream)
+    monkeypatch.setattr(
+        sys, "argv", ["stage_release.py", "verify", "--revision", REVISION, "--output", output]
+    )
+    if output == "run/verified.json":
+        release.main()
+        receipt = json.loads((custody / output).read_text())
+        assert receipt["state"] == "private-build-verified"
+    else:
+        with pytest.raises(ValueError):
+            release.main()
+        assert not list((custody / "run").iterdir())
+
+
+def test_parent_substitution_after_admission_cannot_redirect_write(custody, tmp_path, monkeypatch):
+    directory = release.create_evidence_directory(Path("run"))
+    moved = custody / "retained-run"
+    outside = tmp_path / "outside"
+    outside.mkdir(mode=0o700)
+    real_open = os.open
+
+    def substitute(path, flags, *args, **kwargs):
+        if path == "receipt.json":
+            directory.rename(moved)
+            directory.symlink_to(outside, target_is_directory=True)
+        return real_open(path, flags, *args, **kwargs)
+
+    monkeypatch.setattr(release.os, "open", substitute)
+    release.write_json(directory / "receipt.json", {"retained": True})
+    assert not list(outside.iterdir())
+    assert json.loads((moved / "receipt.json").read_text()) == {"retained": True}

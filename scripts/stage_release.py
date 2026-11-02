@@ -10,6 +10,7 @@ import http.client
 import io
 import json
 import os
+import pwd
 import re
 import secrets
 import sqlite3
@@ -18,12 +19,15 @@ import subprocess
 import sys
 import tarfile
 import tempfile
+from contextlib import ExitStack, contextmanager
 from datetime import UTC, datetime
 from pathlib import Path
 
 from scripts import stage_setup as setup
 
 ROOT = setup.ROOT
+WRANGLER_CONFIG = "web/wrangler.jsonc"
+EVIDENCE_PARTS = (".kenshiki", "stage-releases", "cadastre")
 DATABASE_ID = "3a0417b4-d8e8-4325-84a9-4387eda0a6b3"
 ORIGIN = "https://cadastre-stage.kenshikilabs.com"
 UUID = re.compile(r"[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}")
@@ -38,10 +42,84 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def account_home():
+    # OS account custody, never a caller-controlled HOME or output-root override.
+    return Path(pwd.getpwuid(os.getuid()).pw_dir).resolve(strict=True)
+
+
+@contextmanager
+def private_directory(path, *, parent=None, create=False, home=False):
+    if create:
+        try:
+            os.mkdir(path, mode=0o700, dir_fd=parent)
+        except FileExistsError:
+            pass  # Existing custody is admitted below, never chmodded or replaced.
+    descriptor = os.open(path, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=parent)
+    try:
+        metadata = os.fstat(descriptor)
+        forbidden = 0o022 if home else 0o077
+        require(
+            stat.S_ISDIR(metadata.st_mode)
+            and metadata.st_uid == os.getuid()
+            and metadata.st_mode & forbidden == 0,
+            "Evidence directories must belong to this account and be private",
+        )
+        yield descriptor
+    finally:
+        os.close(descriptor)
+
+
+@contextmanager
+def evidence_parent(output, source_root=ROOT):
+    home = account_home()
+    base = home.joinpath(*EVIDENCE_PARTS)
+    output = Path(output)
+    candidate = output if output.is_absolute() else base / output
+    require(candidate.is_relative_to(base) and candidate != base, "Output is outside Stage custody")
+    relative = candidate.relative_to(base)
+    require(".." not in relative.parts, "Output traversal is forbidden")
+    require(
+        source_root.resolve() not in (base, candidate)
+        and source_root.resolve() not in base.parents
+        and source_root.resolve() not in candidate.parents,
+        "Evidence custody must be outside source checkout",
+    )
+    # Walk from a trusted home descriptor. Every component is opened without
+    # following links; writes remain relative to the admitted parent descriptor.
+    with ExitStack() as stack:
+        descriptor = stack.enter_context(private_directory(home, home=True))
+        for part in EVIDENCE_PARTS:
+            descriptor = stack.enter_context(
+                private_directory(part, parent=descriptor, create=True)
+            )
+        for part in relative.parts[:-1]:
+            descriptor = stack.enter_context(private_directory(part, parent=descriptor))
+        yield descriptor, relative.name, candidate
+
+
+def create_evidence_directory(output, source_root=ROOT):
+    with evidence_parent(output, source_root) as (parent, name, candidate):
+        os.mkdir(name, mode=0o700, dir_fd=parent)
+        return candidate
+
+
+@contextmanager
+def evidence_file(path):
+    with evidence_parent(path) as (parent, name, _candidate):
+        descriptor = os.open(
+            name, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o600, dir_fd=parent
+        )
+        with os.fdopen(descriptor, "wb") as stream:
+            yield stream
+
+
+def write_bytes(path, data):
+    with evidence_file(path) as stream:
+        stream.write(data)
+
+
 def write_json(path, value):
-    with path.open("x", encoding="utf-8") as stream:
-        json.dump(value, stream, indent=2, sort_keys=True)
-        stream.write("\n")
+    write_bytes(path, (json.dumps(value, indent=2, sort_keys=True) + "\n").encode())
 
 
 def release_environment(environment, provider=False):
@@ -80,7 +158,7 @@ def read_input(stream, *, private=False):
 
 def configuration(root=ROOT):
     stage = setup.configuration(root, ready=True)
-    raw = json.loads((root / "web/wrangler.jsonc").read_text())
+    raw = json.loads((root / WRANGLER_CONFIG).read_text())
     require(
         set(raw)
         == {
@@ -159,7 +237,7 @@ def plan(revision, root=ROOT):
         "accountId": setup.ACCOUNT,
         "workerName": setup.WORKER,
         "sourceRevision": revision,
-        "configSha256": digest((root / "web/wrangler.jsonc").read_bytes()),
+        "configSha256": digest((root / WRANGLER_CONFIG).read_bytes()),
         "migrationsSha256": digest(json.dumps(migrations, sort_keys=True).encode()),
         "migrations": migrations,
         "services": [],
@@ -358,13 +436,9 @@ def upload(revision, evidence, output, root=ROOT):
         "Ambient account conflicts with Stage",
     )
     require(bool(os.environ.get("CLOUDFLARE_API_TOKEN")), "Explicit deployment API token required")
-    require(
-        root.resolve() not in output.resolve().parents and root.resolve() != output.resolve(),
-        "Evidence directory must be outside source checkout",
-    )
-    output.mkdir(mode=0o700)
+    output = create_evidence_directory(output, root)
     env = release_environment(os.environ, provider=True)
-    with (output / "check.log").open("xb") as log:
+    with evidence_file(output / "check.log") as log:
         result = subprocess.run(
             ["npm", "run", "check"],
             cwd=root,
@@ -381,7 +455,7 @@ def upload(revision, evidence, output, root=ROOT):
     with tempfile.TemporaryDirectory(prefix="cadastre-stage-") as directory:
         snapshot = Path(directory)
         archive = command(["git", "archive", "--format=tar", revision], root)
-        (output / "source.tar").write_bytes(archive)
+        write_bytes(output / "source.tar", archive)
         with tarfile.open(fileobj=io.BytesIO(archive)) as bundle:
             bundle.extractall(snapshot, filter="data")
         stamp = snapshot / "web/src/stage-build.ts"
@@ -392,12 +466,12 @@ def upload(revision, evidence, output, root=ROOT):
                 'export const STAGE_BUILD = "dev";', f'export const STAGE_BUILD = "{build}";'
             )
         )
-        (output / "stamped-stage-build.ts").write_bytes(stamp.read_bytes())
+        write_bytes(output / "stamped-stage-build.ts", stamp.read_bytes())
         build_env = release_environment(os.environ)
         command(["npm", "ci", "--prefix", "web", "--ignore-scripts"], snapshot, env=build_env)
         command(["npm", "run", "build", "--prefix", "web"], snapshot, env=build_env)
         cli = [str(snapshot / "web/node_modules/.bin/wrangler")]
-        scope = ["--config", str(snapshot / "web/wrangler.jsonc"), "--env", "stage"]
+        scope = ["--config", str(snapshot / WRANGLER_CONFIG), "--env", "stage"]
         count = 0
 
         def wrangler(*args):
@@ -413,8 +487,9 @@ def upload(revision, evidence, output, root=ROOT):
             write_json(output / f"remote-{count}.json", retained)
             return data
 
-        (output / "dry-run.log").write_bytes(
-            command(cli + ["deploy", "--strict", "--dry-run"] + scope, snapshot, env=build_env)
+        write_bytes(
+            output / "dry-run.log",
+            command(cli + ["deploy", "--strict", "--dry-run"] + scope, snapshot, env=build_env),
         )
         info = wrangler("d1", "info", setup.DATABASE, "--json")
         require(
@@ -438,7 +513,7 @@ def upload(revision, evidence, output, root=ROOT):
             == [{"name": item["name"]} for item in release["migrations"]],
             "Pending or extra migrations; Stage release never applies SQL",
         )
-        expected = expected_schema(root)
+        expected = expected_schema(snapshot)
         schema = wrangler(
             "d1",
             "execute",
@@ -474,7 +549,7 @@ def upload(revision, evidence, output, root=ROOT):
             snapshot,
             env=env,
         )
-        (output / "upload.log").write_bytes(data)
+        write_bytes(output / "upload.log", data)
         version = uploaded_version(data)
         deployments = wrangler("deployments", "list", "--json")
         require(isinstance(deployments, list) and bool(deployments), "Missing deployment inventory")
