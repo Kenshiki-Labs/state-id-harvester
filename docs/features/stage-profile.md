@@ -133,6 +133,19 @@ Full publication and browser-image regressions remain part of the complete gate.
 
 ## Review
 
+- `ed70f187fe84e3f9d07efaf13edddd06827e630f`: full three-file review verified
+  the exact parent, committed paths and SHA256 hashes against the owner-approved
+  checkpoint and the prior independent source review. The committed tree was
+  clean; no blocking finding. Both output paths share private OS-account custody,
+  descriptor-relative no-follow traversal and exclusive creation. The parent
+  substitution regression retains the write under the admitted directory.
+  Schema replay uses the same validated Git archive as the build; production
+  routing, configuration, migration bytes and gates are unchanged.
+  Simplification/SOLID/DRY: one custody boundary serves all evidence writes, while
+  existing resource and probe validators retain their responsibilities. The
+  identical precommit source passed 52 focused release tests and the full gate
+  (748 Python and 328 web tests). The final committed-range gate and hosted Sonar
+  reanalysis remain required. No deployment or enrollment acceptance is claimed.
 - `efc88e34bf354756fae1213bae1c493cfdbb1c86`: independent full-file review
   verified the parent and all six committed paths and blob hashes against the
   owner-approved checkpoint. No blocking finding. The separate release executor
