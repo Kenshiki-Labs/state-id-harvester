@@ -69,6 +69,18 @@ Full publication and browser-image regressions remain part of the complete gate.
 
 ## Review
 
+- `1e3d88947a75053ac5acb52a2c82757b8c6eff54`: independent review on
+  2026-11-02 read all five cleanup files in full and verified their committed
+  hashes against the approved checkpoint. The committed tree was clean; no
+  material findings. Simplification/SOLID/DRY: bounded content parsing has one
+  owner, `check_evidence` remains the resource validator, and explicit profile
+  branches preserve the existing defaults without a second policy. Security:
+  stdin has a 64 KiB limit, invalid JSON/encoding/recursion errors omit input,
+  an object is required, and the old filename argument is rejected. Production
+  defaults and origin refusal are unchanged. The identical precommit bytes
+  passed 23 focused Python tests, 8 Worker tests and the full `npm run check`
+  (696 Python and 319 web tests); the independent reviewer also ran the 23
+  Python tests. Hosted Sonar reanalysis remains required after publication.
 - `49cbcead0ca12c844dd6e43cd4b9cc8741568796` reviewed in full: `.gitignore`,
   `docs/stage-profile.md`, `scripts/stage_setup.py`, `tests/test_stage_setup.py`,
   `web/src/catalog-cors.ts`, `web/src/deployment.ts`, `web/src/worker.ts`,
