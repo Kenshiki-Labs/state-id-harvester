@@ -135,5 +135,6 @@ allowlist, following the existing local material viewer's ownership boundary. It
 adds no imaging algorithm or dependency. `Tools/TemporalEvidence/serve.py` and its
 three presentation assets are the removal seam.
 
-Temporal checks reuse the configured geometry environment when `--baseline` is supplied.
-The standalone `--group temporal` lane uses the invoking Python environment.
+Temporal checks always use the invoking Python environment, with or without `--baseline`:
+TemporalEvidence needs Python 3.11 (`Tools/TemporalEvidence/requirements-macos-py311.txt`),
+not the Python 3.9 geometry environment.

@@ -29,7 +29,8 @@ def main():
         parser.error('--baseline is required for spatial checks')
     environments = (load_layout(args.baseline, args.config)['environments']
                     if args.baseline is not None else {})
-    environments['temporal'] = environments.get('geometry', sys.executable)
+    # TemporalEvidence runs on Python 3.11 (Pillow 13), not the Python 3.9 geometry environment.
+    environments['temporal'] = sys.executable
     commands = []
     for group, directories in SUITES.items():
         if args.group not in ('all', group):

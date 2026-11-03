@@ -9,8 +9,9 @@ promote them to `observed`.
 
 ## Run
 
-Use the existing Cadastral geometry environment (NumPy 2.0.2, Pillow 11.3.0)
-or install `requirements-macos-py39.txt` in a local Python environment. No network
+Install `requirements-macos-py311.txt` (NumPy 2.0.2, Pillow 13.0.0) in a local
+Python 3.11 environment. Pillow 13 requires Python 3.11, so this tool no longer
+shares the Python 3.9 Cadastral geometry environment. No network
 is used by analysis or viewing. macOS is required for atomic package publication.
 
 ```sh
@@ -84,9 +85,9 @@ phone retention policy and does not delete existing recordings.
 ## Implementation sources and removal seam
 
 Uses Python standard-library JSON/hashlib/fractions/plistlib, existing NumPy and
-Pillow dependencies, and `Tools/CardBoundary/publication.py`. NumPy/Pillow pins
-match the existing spatial tool environment; no new dependency or model. License
-and dependency inventory remains in the spatial environment's pinned requirements.
+Pillow dependencies, and `Tools/CardBoundary/publication.py`. The NumPy pin
+matches the spatial tool environment; Pillow is 13.0.0 for its security fixes.
+No new dependency or model. Both pins are in `requirements-macos-py311.txt`.
 Only a custom adapter for the repository-specific encrypted-export graph, timing
 and review schemas is new.
 

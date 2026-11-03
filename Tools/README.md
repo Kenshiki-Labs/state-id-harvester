@@ -15,7 +15,8 @@ Washington dataset under ignored `output/cadastral-local-20261026/`. Its
 
 Source provenance: the baseline tools were restored from `kenshiki-identity-sdk`
 commit `da7f9de18bb6f3eb9af345263d3f9a8fa962741b`, then updated only for the
-OpenCV 5 dependency pin. The SDK import originally identified capture-stack
+OpenCV 5 dependency pin and for TemporalEvidence's move to Python 3.11 with
+Pillow 13.0.0 (security fixes). The SDK import originally identified capture-stack
 commit `5e4e1090254e7527bbb8365f6a0921ea6dd1e78d`. Imported third-party notices,
 source, and tests remain with the tools. Historical result descriptions in the
 individual READMEs are not new validation results.

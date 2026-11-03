@@ -18,7 +18,7 @@ class LaunchTests(unittest.TestCase):
         self.assertTrue(command[1].endswith('Tools/TemporalEvidence/serve.py'))
         self.assertEqual(command[2:], ['--report', '/example/report', '--port', '8781'])
 
-    def test_temporal_checks_use_configured_environment_when_baseline_supplied(self):
+    def test_temporal_checks_use_invoking_python_even_when_baseline_supplied(self):
         with tempfile.TemporaryDirectory() as temp:
             command = [sys.executable, str(Path(__file__).with_name('check.py')),
                        '--group', 'temporal', '--print-only']
@@ -26,8 +26,7 @@ class LaunchTests(unittest.TestCase):
             self.assertEqual(shlex.split(standalone.stdout)[0], sys.executable)
             configured = subprocess.run(command + ['--baseline', temp],
                                         check=True, capture_output=True, text=True)
-            self.assertEqual(shlex.split(configured.stdout)[0],
-                             str(Path(temp).resolve()/'geotiff-env/bin/python'))
+            self.assertEqual(shlex.split(configured.stdout)[0], sys.executable)
 
     def separation_fixture(self, base, hash_html=False):
         layout = load_layout(base, Path(__file__).with_name('baseline-layout.json'))
