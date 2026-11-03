@@ -4,14 +4,16 @@
 
 Security updates to the pinned dependencies of the local host tools under `Tools/`, which run on the
 operator's Mac outside the gate (`pyproject.toml` excludes `Tools/`). This record covers filelock 4.2.1
-for AppleMaterials (Dependabot #7) and Pillow 13.0.0 for TemporalEvidence (Dependabot #6, superseded).
-It stops there: the other Python 3.9 tool manifests and AppleMaterials keep their Pillow pins, and their
-open Pillow alerts remain.
+for AppleMaterials (Dependabot #7), Pillow 13.0.0 for TemporalEvidence (Dependabot #6, superseded) and
+Pillow 13.0.0 for AppleMaterials. It stops there: the other Python 3.9 tool manifests keep Pillow 11.3.0,
+and their open Pillow alerts remain.
 
 ## Test plan
 
 - filelock: resolve `Tools/AppleMaterials/requirements-macos-py311.txt` with pip on Python 3.11
   (`pip install --dry-run --only-binary=:all: -r ...`); it must resolve with torch 2.14.0 and exit 0.
+- AppleMaterials Pillow: install that manifest in a fresh Python 3.11 environment; it installs, and
+  `python -m unittest discover -s Tools/AppleMaterials -p 'test_*.py'` passes.
 - TemporalEvidence: in a fresh Python 3.11 environment with `requirements-macos-py311.txt` installed,
   `python -m unittest discover -s Tools/TemporalEvidence -p 'test_*.py'` passes, and
   `python Tools/Cadastral/check.py --group temporal` runs the same suite and exits 0.
@@ -38,9 +40,14 @@ open Pillow alerts remain.
   temporal check lane uses the invoking Python, matching `launch.py`'s temporal viewer; READMEs and
   the pyproject comment updated. Verified on Python 3.11.15: TemporalEvidence 45 tests pass,
   `check.py --group temporal` passes, Cadastral `test_launch` 9 tests pass.
+- 9a1c90c: AppleMaterials Pillow 12.3.0 to 13.0.0, fixing its open Pillow advisories; it already runs on
+  Python 3.11. Verified on Python 3.11.15 with the full manifest installed (torch 2.14.0, NumPy 2.4.6,
+  filelock 4.2.1): AppleMaterials 26 tests pass.
 
 ## Review
 
 - ba45284 reviewed: one assignment in `check.py` replaces the geometry fallback; the guard test keeps
   both cases and changes only the expected interpreter. No duplicated logic added; the README pointers
   name the one manifest.
+- 9a1c90c reviewed: one pin changed; no code or call site changed. AppleMaterials uses only
+  `Image.open`, `fromarray` (no `mode` argument), `blend`, `thumbnail` and `save`.
