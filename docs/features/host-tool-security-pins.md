@@ -5,7 +5,7 @@
 Security updates to the pinned dependencies of the local host tools under `Tools/`, which run on the
 operator's Mac outside the gate (`pyproject.toml` excludes `Tools/`). This record covers filelock 4.2.1
 for AppleMaterials (Dependabot #7), Pillow 13.0.0 for TemporalEvidence (Dependabot #6, superseded) and
-Pillow 13.0.0 for AppleMaterials. It stops there: the other Python 3.9 tool manifests keep Pillow 11.3.0,
+Pillow 13.0.0 and setuptools 84.1.0 for AppleMaterials. It stops there: the other Python 3.9 tool manifests keep Pillow 11.3.0,
 and their open Pillow alerts remain.
 
 ## Test plan
@@ -43,6 +43,9 @@ and their open Pillow alerts remain.
 - 9a1c90c: AppleMaterials Pillow 12.3.0 to 13.0.0, fixing its open Pillow advisories; it already runs on
   Python 3.11. Verified on Python 3.11.15 with the full manifest installed (torch 2.14.0, NumPy 2.4.6,
   filelock 4.2.1): AppleMaterials 26 tests pass.
+- 74811af: AppleMaterials setuptools 82.0.0 to 84.1.0, fixing its two open setuptools advisories
+  (requires Python >=3.10). Verified on Python 3.11.15: the manifest installs with torch 2.14.0,
+  `pip check` finds no broken requirements, AppleMaterials 26 tests pass.
 
 ## Review
 
@@ -51,3 +54,4 @@ and their open Pillow alerts remain.
   name the one manifest.
 - 9a1c90c reviewed: one pin changed; no code or call site changed. AppleMaterials uses only
   `Image.open`, `fromarray` (no `mode` argument), `blend`, `thumbnail` and `save`.
+- 74811af reviewed: one pin changed; no code changed.
