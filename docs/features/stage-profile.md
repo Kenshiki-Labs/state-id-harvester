@@ -1,0 +1,197 @@
+# Isolated Cadastre Stage profile
+
+## Feature
+
+Cadastre has an explicit private Stage API profile beside the production backend.
+The profile selects its logical origin, issued-key prefix and image-cache name.
+Wrangler declares separate D1, R2 and rate-limit resources. Unknown profiles,
+mismatched configured origins and cross-profile requests fail before routing.
+Existing administrative and ingestion bearer authorization remains in force.
+
+This prepares a shared Stage backend; it does not establish that pulse-gov-demo
+needs the catalog. It does not create a Stage website, publish reference data,
+seed an access approval or prove deployment. The production static website keeps
+its existing transport. See [operating boundaries](../stage-profile.md).
+
+`python -m scripts.stage_release plan --revision SHA` describes the separate Stage
+release. `upload --revision SHA --output NEW_DIRECTORY` consumes a bounded JSON
+object `{preflight, secrets}` from a private regular file on stdin. It requires
+clean `main` at the exact published SHA, full `npm run check`, exact Stage resource
+declarations, a complete remote migration ledger and schema matching the locally
+replayed migration, the Stage bucket and a successful complete API inventory
+proving the Worker remains absent. No remote SQL is applied. Only tracked source
+is archived; the archive is stamped and rebuilt with pinned dependencies, leaving
+the checkout unchanged. The three independent Stage secrets are uploaded atomically
+from a temporary file with mode 0600 and are not printed or copied to evidence receipts.
+The schema comparison includes all application objects, excluding SQLite internal
+objects and the platform metadata tables `d1_migrations` and `_cf_KV`. Extra
+application objects are refused. Checks and asset builds receive no provider
+credentials or ambient execution overrides. The source tar and stamped build
+module are retained outside the checkout for review. Schema replay reads the
+same immutable Git archive used for the build, not the mutable checkout.
+
+Both `upload` and `verify` confine `--output` to the OS account's protected
+`~/.kenshiki/stage-releases/cadastre` directory. Relative output names are resolved
+there; absolute names must be beneath it. For example, upload uses `--output run-1`
+and verification uses `--output run-1/verified.json`. The root comes from the POSIX
+account database, not an environment override. Each custody directory must belong
+to the account and exclude group/other access; the account home must not be writable
+by group/others. Directory descriptors and no-follow opens prevent symlink traversal,
+and exclusive creation prevents replacement of existing runs or receipts. `..`,
+sibling prefixes, destinations outside custody and destinations inside the source
+checkout are refused. These rules apply to every retained log, archive and receipt.
+This local release tool supports the existing macOS/Linux host environment.
+
+The captured preflight schema is `kenshiki.cadastre-stage-preflight.v1`, with
+accountId, workerName, sourceRevision, configSha256, migrationsSha256, kind `absent`,
+versionId `null`, observedAt. Initial observation must be fresh; live absence and
+resource checks are repeated after the full gate. This executor is for the first
+deployment only; it refuses to replace any existing Worker. `CLOUDFLARE_API_TOKEN`
+must authorize the exact account; no API host or Worker name is caller-selectable.
+
+The new Stage-only `GET /__build` exposes only a random 32-character hexadecimal deployment token,
+with no-store caching. Unstamped source returns 503; production retains the prior
+asset routing at that path. Upload records an attempt before mutation and remains
+`uploaded-pending-private-verification` after version readback. The separate `verify`
+command consumes `{upload, probe}` on stdin and compares the common
+`kenshiki.stage-private-probe.v1` remote binding observation, exact account/Worker,
+source/config/version/build/origin and private exposure with no service bindings.
+It rejects observations preceding upload or older than five minutes. This is
+captured-evidence validation, not a manufactured live probe. Reference vault
+publication, supplier behavior and app enrollment remain separate acceptance.
+
+## Test plan
+
+Run `npm run check` before integration. Its SDLC, Python and web checks remain
+unchanged: lint, type checking, tests/coverage, schema comparison, publication
+guards, builds and runtime dependency audit. CI validates pull requests and
+pushes to `dev`/`main`; a feature-branch push alone starts no workflow.
+
+Focused review commands are `.venv/bin/pytest -q tests/test_stage_setup.py` at the
+repository root and `npm test -- --run tests/stage-deployment.test.ts` in `web`.
+These exercise offline resource/key handling and the Worker profile boundary.
+Full publication and browser-image regressions remain part of the complete gate.
+
+### Adversarial
+
+- Reject unknown/missing Stage selection with a Stage origin, production origin
+  under Stage selection, arbitrary configured origins and cross-profile requests.
+- Keep administrative requests unauthorized without the existing bearer secret.
+  Public GET/HEAD catalog CORS is restricted to the selected browser origin and
+  does not grant credentialed access.
+- Refuse production bucket/database reuse, production rate-limit namespaces,
+  public Stage exposure, incomplete migration ledgers and missing secret names.
+- Refuse overwriting private key files. Verify independent admin/ingest keys,
+  matching Worker hashes, distinct trace material and restrictive permissions.
+- A missing specimen index remains `catalog_unavailable`; an empty bucket must
+  not be reported as a working reference-data service.
+- Exercise the offline CLI with valid stdin content, the byte-limit boundary,
+  empty/malformed/non-object/deeply nested/oversized inputs, production-resource
+  evidence and the rejected legacy filename option. Invalid content must not be
+  echoed or produce a traceback.
+- Release regressions cover private bounded input, secret shape, exact resources,
+  complete inventory absence, schema drift and pending migration refusal. Mocked
+  command orchestration proves failed gates never upload. Build-probe tests keep
+  production routing intact and reject unstamped, wrong-origin or non-GET requests.
+- Exercise both output entry points against traversal, absolute escapes, sibling
+  prefixes, symlinked roots/parents/files, foreign owners, permissive directories,
+  existing destinations and overridden HOME. Validate a real verify CLI invocation
+  inside temporary protected custody; it performs no provider operation.
+
+## Changes
+
+- Constrain release evidence to protected OS-account custody for both upload and
+  verification. All output opens are exclusive, no-follow and descriptor-relative;
+  no old evidence is deleted or chmodded. Derive the expected schema from the
+  validated Git archive. The existing release requirements, DDL and production
+  routing are unchanged.
+- Independent source-flow review classified the published S3649, S2083 and S8705
+  reports as false positives: trusted migration programs, fixed-path file content,
+  and a strictly validated full Git revision respectively. Those classifications
+  do not waive the separate S8707 output-boundary defect; this patch repairs it.
+- Sonar cleanup: the offline checker now validates at most 64 KiB of supplied
+  UTF-8 JSON on stdin instead of opening a caller-selected evidence filename.
+  This preserves receipt custody outside the repository and existing Stage
+  identity checks while removing filename authority and the optional-path
+  dereference. The documented CLI invocation changes accordingly. Profile
+  selection uses explicit branches with the same production defaults and
+  unknown-profile refusal; the test import assertions are separate.
+- `49cbcead0ca12c844dd6e43cd4b9cc8741568796`: added the deployment profile,
+  Worker origin boundary, selected CORS/key/cache identities, isolated Wrangler
+  environment and generated binding types, offline setup tooling and tests.
+  No migration, reference-data, dependency or production website bytes changed.
+- Review on 2026-11-02 read all 10 changed files in full and compared the runtime
+  delta with `origin/dev`. The tree was clean at that code tip. Focused tests
+  passed: **9 Python tests and 8 Worker tests**. `git diff --check origin/dev...HEAD`
+  passed. These are local tests, not live resource or app acceptance.
+- `npm run check:sdlc` failed on that committed tip because the code commit lacked
+  a `docs/features/*.md` record. This document supplies the feature/review record
+  without changing the gate. Its committed-range check remains blocked until an
+  authorized commit includes this record. The required `npm run check` was also
+  run and exited 1 at the same first SDLC step, before its Python and web gates.
+  No gate was bypassed.
+
+## Review
+
+- `ed70f187fe84e3f9d07efaf13edddd06827e630f`: full three-file review verified
+  the exact parent, committed paths and SHA256 hashes against the owner-approved
+  checkpoint and the prior independent source review. The committed tree was
+  clean; no blocking finding. Both output paths share private OS-account custody,
+  descriptor-relative no-follow traversal and exclusive creation. The parent
+  substitution regression retains the write under the admitted directory.
+  Schema replay uses the same validated Git archive as the build; production
+  routing, configuration, migration bytes and gates are unchanged.
+  Simplification/SOLID/DRY: one custody boundary serves all evidence writes, while
+  existing resource and probe validators retain their responsibilities. The
+  identical precommit source passed 52 focused release tests and the full gate
+  (748 Python and 328 web tests). The final committed-range gate and hosted Sonar
+  reanalysis remain required. No deployment or enrollment acceptance is claimed.
+- `efc88e34bf354756fae1213bae1c493cfdbb1c86`: independent full-file review
+  verified the parent and all six committed paths and blob hashes against the
+  owner-approved checkpoint. No blocking finding. The separate release executor
+  reuses setup validation, and the Stage build response is isolated from
+  production routing. Full schema inventory, complete Worker absence evidence,
+  and exact upload/private-probe identity fail closed. No gate or production
+  deployment path was weakened. Simplification/SOLID/DRY: setup validation remains
+  shared, release orchestration owns deployment evidence, and the small Stage
+  build responder keeps that behavior separate from existing application routes.
+  The identical source passed 734 Python and 328 web tests before commit. The
+  final committed-range full gate and hosted checks remain pending. No deployment,
+  catalog publication, device behavior or enrollment acceptance is claimed.
+- `1e3d88947a75053ac5acb52a2c82757b8c6eff54`: independent review on
+  2026-11-02 read all five cleanup files in full and verified their committed
+  hashes against the approved checkpoint. The committed tree was clean; no
+  material findings. Simplification/SOLID/DRY: bounded content parsing has one
+  owner, `check_evidence` remains the resource validator, and explicit profile
+  branches preserve the existing defaults without a second policy. Security:
+  stdin has a 64 KiB limit, invalid JSON/encoding/recursion errors omit input,
+  an object is required, and the old filename argument is rejected. Production
+  defaults and origin refusal are unchanged. The identical precommit bytes
+  passed 23 focused Python tests, 8 Worker tests and the full `npm run check`
+  (696 Python and 319 web tests); the independent reviewer also ran the 23
+  Python tests. Hosted Sonar reanalysis remains required after publication.
+- `49cbcead0ca12c844dd6e43cd4b9cc8741568796` reviewed in full: `.gitignore`,
+  `docs/stage-profile.md`, `scripts/stage_setup.py`, `tests/test_stage_setup.py`,
+  `web/src/catalog-cors.ts`, `web/src/deployment.ts`, `web/src/worker.ts`,
+  `web/tests/stage-deployment.test.ts`, `web/worker-configuration.d.ts` and
+  `web/wrangler.jsonc`. No blocking runtime finding in this delta.
+- Simplification/SOLID: the profile owns deployment identity, setup tooling owns
+  offline resource checks, and existing Worker functions retain storage and
+  authorization responsibilities. A separate Stage router would duplicate those
+  responsibilities without improving this change.
+- DRY: key issuance, CORS and image caching use the same selected profile. Repeated
+  profile resolution in internal helpers is small and side-effect free; threading
+  another parameter through every handler is not required. No unrelated refactor
+  was included.
+- Security: unknown/mixed profiles fail closed; admin/ingest hashes, trace key,
+  request/audit tables and reference vault stay separate from production.
+  Cloudflare's [environment contract](https://developers.cloudflare.com/workers/wrangler/environments/)
+  requires environment-specific bindings and secrets; storage and rate limits are
+  declared separately. Captured evidence checks names/identity, not live schema
+  contents, applied migration hashes or published-reference acceptance.
+- The new uncommitted Stage release executor requires independent review and full
+  gates; `web/package.json` retains the unchanged production deployment command.
+  `scripts/vault_sync.py`
+  defaults to the production origin and accepts only an HTTPS origin, not the
+  Gateway service path. Publishing into the private Stage vault needs a reviewed
+  Stage ingress/tooling path before use. No publication or deployment occurred.
