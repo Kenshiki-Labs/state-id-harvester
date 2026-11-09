@@ -47,7 +47,7 @@ Source collection and reviewed design coverage are separate.
 | South Carolina (SC) | 12 | 10 | 0 |
 | South Dakota (SD) | 2 | 2 | 0 |
 | Tennessee (TN) | 4 | 4 | 0 |
-| Texas (TX) | 3 | 3 | 0 |
+| Texas (TX) | 5 | 3 | 0 |
 | Utah (UT) | 3 | 3 | 0 |
 | Virginia (VA) | 1 | 1 | 0 |
 | Vermont (VT) | 3 | 3 | 0 |

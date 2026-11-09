@@ -1,0 +1,206 @@
+{
+  "$defs": {
+    "Artifact": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "pattern": "^snapshots/knowledge/v1/(sources|native-packets|documents|registry-projections)/[a-f0-9]{64}\\.(pdf|json)$",
+          "title": "Key",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "sources",
+            "native-packets",
+            "documents",
+            "registry-projections"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": 1,
+          "maximum": 1,
+          "minimum": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "size_bytes": {
+          "minimum": 1,
+          "title": "Size Bytes",
+          "type": "integer"
+        },
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "key",
+        "sha256",
+        "size_bytes",
+        "source_sha256"
+      ],
+      "title": "Artifact",
+      "type": "object"
+    },
+    "RegistryProjection": {
+      "additionalProperties": false,
+      "properties": {
+        "media_type": {
+          "const": "application/pdf",
+          "title": "Media Type",
+          "type": "string"
+        },
+        "native_packet_key": {
+          "pattern": "^snapshots/knowledge/v1/(sources|native-packets|documents|registry-projections)/[a-f0-9]{64}\\.(pdf|json)$",
+          "title": "Native Packet Key",
+          "type": "string"
+        },
+        "page_count": {
+          "minimum": 1,
+          "title": "Page Count",
+          "type": "integer"
+        },
+        "processing": {
+          "enum": [
+            "native_text",
+            "image_only"
+          ],
+          "title": "Processing",
+          "type": "string"
+        },
+        "record_key": {
+          "pattern": "^snapshots/knowledge/v1/(sources|native-packets|documents|registry-projections)/[a-f0-9]{64}\\.(pdf|json)$",
+          "title": "Record Key",
+          "type": "string"
+        },
+        "record_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Record Sha256",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "unreviewed",
+          "default": "unreviewed",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "roles": {
+          "items": {
+            "enum": [
+              "technical_standard",
+              "legislation_regulation",
+              "issuer_design_reference",
+              "verification_training",
+              "issuance_guidance",
+              "design_announcement",
+              "operational_manual",
+              "unresolved"
+            ],
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Roles",
+          "type": "array"
+        },
+        "schema_version": {
+          "default": 1,
+          "maximum": 1,
+          "minimum": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "section_count": {
+          "minimum": 0,
+          "title": "Section Count",
+          "type": "integer"
+        },
+        "source_key": {
+          "pattern": "^snapshots/knowledge/v1/(sources|native-packets|documents|registry-projections)/[a-f0-9]{64}\\.(pdf|json)$",
+          "title": "Source Key",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "statement_count": {
+          "minimum": 0,
+          "title": "Statement Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "source_sha256",
+        "record_sha256",
+        "source_key",
+        "native_packet_key",
+        "record_key",
+        "media_type",
+        "processing",
+        "page_count",
+        "roles",
+        "section_count",
+        "statement_count"
+      ],
+      "title": "RegistryProjection",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "artifacts": {
+      "items": {
+        "$ref": "#/$defs/Artifact"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "title": "Artifacts",
+      "type": "array"
+    },
+    "pointer_key": {
+      "const": "indexes/knowledge.json",
+      "default": "indexes/knowledge.json",
+      "title": "Pointer Key",
+      "type": "string"
+    },
+    "pointer_published": {
+      "const": false,
+      "default": false,
+      "title": "Pointer Published",
+      "type": "boolean"
+    },
+    "registry_projection": {
+      "$ref": "#/$defs/RegistryProjection"
+    },
+    "schema_version": {
+      "default": 1,
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "source_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Source Sha256",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_sha256",
+    "artifacts",
+    "registry_projection"
+  ],
+  "title": "PreparedManifest",
+  "type": "object"
+}
