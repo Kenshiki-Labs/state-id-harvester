@@ -45,3 +45,4 @@ green CI run. It stops at the repository: the harvest workflow and publication a
   artifact uploads.
 - 178dc32 reviewed: one trigger branch added; no step changed.
 - 793c26a reviewed: one workflow file deleted; nothing in the gate referenced it.
+- 45cc5ec reviewed: one script deleted and its one call removed; nothing else referenced `check:sdlc`.
