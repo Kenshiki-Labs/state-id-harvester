@@ -34,6 +34,10 @@ green CI run. It stops at the repository: the harvest workflow and publication a
 - 793c26a: remove .github/workflows/branch-hygiene.yml. This public repository cannot call private
   Kenshiki-Labs/ci's reusable workflow, so every run since 43fa467 failed before it started; branches
   here are pruned by hand.
+- `check:sdlc` is removed and the check no longer calls it (owner, 2026-11-13). The shared SDLC step
+  checks only pull requests into `main` since Kenshiki-Labs/ci f1efaee, so earlier entries here that
+  describe a local or per-push documentation check no longer apply. Verified with the repository's
+  check before commit.
 
 ## Review
 
