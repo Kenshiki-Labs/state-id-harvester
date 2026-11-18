@@ -37,7 +37,8 @@ def load_rectifier(path: Path) -> Any:
         Path.cwd().resolve(),
         Path(tempfile.gettempdir()).resolve(),
         (Path.cwd().resolve().parent / "releases").resolve(),
-        (Path.cwd().resolve().parent / "kenshiki-identity-sdk").resolve(),
+        # The identity SDK is folded into kenshiki-sdks (fa19022a, owner 2026-11-18).
+        (Path.cwd().resolve().parent / "kenshiki-sdks" / "kenshiki-identity-sdk").resolve(),
     ]
     if not any(path.is_relative_to(root) for root in roots):
         raise ValueError("Retained rectifier is outside the managed host tools")
